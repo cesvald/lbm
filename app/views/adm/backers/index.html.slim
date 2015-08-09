@@ -31,13 +31,13 @@
               | &nbsp;
               = text_field_tag 'between_values[ends_at]', (params[:between_values][:ends_at] if params[:between_values].present?), class: 'input-small'
             .input
-              = label_tag :between_created_at, t('.created_at')
+              = label_tag :between_created_at, 'Creadas entre'
               = text_field_tag 'between_created_at[start_at]', (params[:between_created_at][:start_at] if params[:between_created_at].present?), class: 'input-small'
               | &nbsp;
               | &nbsp;
               = text_field_tag 'between_created_at[ends_at]', (params[:between_created_at][:ends_at] if params[:between_created_at].present?), class: 'input-small'
             .input
-              = label_tag :between_confirmed_at, t('.confirmed_at')
+              = label_tag :between_confirmed_at, 'Confirmadas entre'
               = text_field_tag 'between_confirmed_at[start_at]', (params[:between_confirmed_at][:start_at] if params[:between_confirmed_at].present?), class: 'input-small'
               | &nbsp;
               | &nbsp;
@@ -49,17 +49,20 @@
               = label_tag :by_payment_method, t('.by_payment_method')
               = select_tag :by_payment_method, options_for_select(Backer.select("DISTINCT payment_method").map(&:payment_method), params[:by_payment_method]), include_blank: true
             .input
-              = label_tag :by_channel, t('.by_channel')
-              = select_tag :by_channel, options_for_select(Channel.select("DISTINCT name").map(&:name), params[:by_channel]), include_blank: true
-            .input
               = label_tag :by_key, t('.key')
               = text_field_tag :by_key, params[:by_key]
+            .input
+              = label_tag :user_name_contains, t('.user')
+              = text_field_tag :user_name_contains, params[:user_name_contains]
             .input
               = label_tag :project_name_contains, t('.project')
               = text_field_tag :project_name_contains, params[:project_name_contains]
             .input
-              = label_tag :user_name_contains, t('.user')
-              = text_field_tag :user_name_contains, params[:user_name_contains]
+              = label_tag :by_project_state, 'Estado del proyecto'
+              = select_tag :by_project_state, options_for_select(Project.select("DISTINCT state").map(&:state), params[:by_project_state]), include_blank: true
+            .input
+              = label_tag :by_channel, 'Canal'
+              = select_tag :by_channel, options_from_collection_for_select(Channel.all, 'id', 'name', params[:by_channel]), include_blank: true
             .bootstrap-twitter
               .input.submit
                 = submit_tag t('.submit'), class: 'btn btn-success'
@@ -103,6 +106,8 @@
                 th= t('.info')
                 th Id
                 th= t('.project')
+                th Estado del proyecto
+                th= t('.channel')
                 th Fecha
                 th= t('.value')
                 th % LBM
@@ -198,6 +203,8 @@
                     = link_to project_by_slug_path(permalink: backer.project.permalink) do
                       = image_tag backer.project.display_image, class: 'project_img'
                     .project_id=backer.project.id
+                  td= backer.project.state
+                  td= backer.project.channels_string
                   td= l((backer.confirmed? ? backer.confirmed_at : backer.created_at).to_date)
                   td= best_in_place [:adm, backer], :value, method: :put, type: :input
                   td= backer.project.actual_platform_fee

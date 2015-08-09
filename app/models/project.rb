@@ -399,6 +399,10 @@ class Project < ActiveRecord::Base
     self.backers.confirmed.matchfunding.where(matchfunding_channel_id: channel.id).sum(:value)
   end
 
+  def channels_string
+    channels.map(&:name).join(', ')
+  end
+  
   private
   def self.get_routes
     routes = Rails.application.routes.routes.map do |r|

@@ -19,9 +19,10 @@ class Backer < ActiveRecord::Base
   scope :by_payment_method, ->(payment_method) { where(payment_method: payment_method) }
   scope :by_key, ->(key) { where(key: key) }
   scope :by_user_id, ->(user_id) { where(user_id: user_id) }
+  scope :by_project_state, ->(state) { joins(:project).where("projects.state = ?", state)}
   scope :user_name_contains, ->(term) { joins(:user).where("unaccent(upper(users.name)) LIKE ('%'||unaccent(upper(?))||'%')", term) }
   scope :project_name_contains, ->(term) { joins(:project).where("unaccent(upper(projects.name)) LIKE ('%'||unaccent(upper(?))||'%')", term) }
-  scope :by_channel,  ->(channel) { joins(project: :channels).where("unaccent(upper(channels.name)) LIKE ('%'||unaccent(upper(?))||'%')", channel) }
+  scope :by_channel,  ->(channel_id) { where("backers.project_id IN (SELECT DISTINCT project_id FROM channels_projects WHERE channel_id = #{channel_id})") }
   scope :anonymous, where(anonymous: true)
   scope :credits, where(credits: true)
   scope :requested_refund, where(state: 'requested_refund')
@@ -77,27 +78,13 @@ class Backer < ActiveRecord::Base
   end
 
   def self.between_created_at(start_at, ends_at)
-    if start_at.present? && ends_at.present?
-      where("created_at BETWEEN ? AND ?", start_at + " 00:00:00", ends_at + " 23:59:59")
-    elsif start_at.present? && !ends_at.present?
-      where("created_at BETWEEN ? AND '#{DateTime.now.end_of_day}'", start_at + " 00:00:00")
-    elsif !start_at.present? && ends_at.present?
-      where("created_at BETWEEN '2013-01-01 00:00:00' AND ?", ends_at + " 23:59:59")
-    else
-      return scoped
-    end
+    return scoped unless start_at.present? && ends_at.present?
+    where("created_at between to_date(?, 'dd/mm/yyyy') and to_date(?, 'dd/mm/yyyy')", start_at, ends_at)
   end
 
   def self.between_confirmed_at(start_at, ends_at)
-    if start_at.present? && ends_at.present?
-      where("confirmed_at BETWEEN ? AND ?", start_at + " 00:00:00", ends_at + " 23:59:59")
-    elsif start_at.present? && !ends_at.present?
-      where("confirmed_at BETWEEN ? AND '#{DateTime.now.end_of_day}'", start_at + " 00:00:00")
-    elsif !start_at.present? && ends_at.present?
-      where("created_at BETWEEN '2013-01-01 00:00:00' AND ?", ends_at + " 23:59:59")
-    else
-      return scoped
-    end
+    return scoped unless start_at.present? && ends_at.present?
+    where("confirmed_at between to_date(?, 'dd/mm/yyyy') and to_date(?, 'dd/mm/yyyy')", start_at, ends_at)
   end
 
   def self.state_names
