@@ -17,6 +17,15 @@ class Adm::ProjectsController < Adm::BaseController
     end
   end
 
+  def index
+    index! do |format|
+      format.html
+      format.xlsx do
+        @projects = end_of_association_chain.order("projects.created_at DESC")
+      end
+    end
+  end
+
   def destroy
     @project = Project.find params[:id]
     if @project.can_push_to_trash?

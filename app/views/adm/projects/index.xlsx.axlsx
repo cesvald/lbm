@@ -1,0 +1,29 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Colaboradores") do |sheet|
+  sheet.add_row([
+    "Título",
+    "Categoría",
+    "Identiricación de Usuario",
+    "Meta",
+    "Alcanzado",
+    "Colaboraciones",
+    "¿Recomendado?",
+    "Va en vivo",
+    "Expira a las",
+    "Estado"
+  ])
+  @projects.each do |project|
+    sheet.add_row([
+      project.name,
+      project.category,
+      project.user_id,
+      project.goal,
+      "#{project.display_pledged} (#{project.progress}%)",
+      project.total_backers,
+      project.recommended,
+      (project.online_date.strftime('%d/%m/%Y') if project.online_date),
+      project.display_expires_at,
+      project.state
+    ])
+  end
+end

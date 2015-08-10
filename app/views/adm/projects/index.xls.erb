@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Proyectos">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Título</Data></Cell>
+        <Cell><Data ss:Type="String">Categoría</Data></Cell>
+        <Cell><Data ss:Type="String">Identiricación de Usuario</Data></Cell>
+        <Cell><Data ss:Type="String">Meta</Data></Cell>
+        <Cell><Data ss:Type="String">Alcanzado</Data></Cell>
+        <Cell><Data ss:Type="String">Colaboraciones</Data></Cell>
+        <Cell><Data ss:Type="String">¿Recomendado?</Data></Cell>
+        <Cell><Data ss:Type="String">Va en vivo</Data></Cell>
+        <Cell><Data ss:Type="String">Expira a las</Data></Cell>
+        <Cell><Data ss:Type="String">Estado</Data></Cell>
+      </Row>
+    <% @projects.each do |project| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= project.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= project.category %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= project.user_id %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= project.goal %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= project.display_pledged (project.progress) %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= project.project.total_backers %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= project.recommended %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= project.online_date.strftime('%d/%m/%Y') if project.online_date %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= project.display_expires_at %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= project.state %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

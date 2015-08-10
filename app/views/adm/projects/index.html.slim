@@ -50,6 +50,11 @@
                 strong= @projects.count
                 = pluralize_without_number(@projects.count, t('project_singular'), t('project_plural')).downcase
       .clearfix
+      br
+      .bootstrap-twitter.input
+        .submit
+          = link_to "Download Excel", adm_projects_path({format: "xlsx"}.merge(params)), class: 'btn btn-success'
+      br
     .data-table
       = paginate @projects
       - if @projects.empty?
