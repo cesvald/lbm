@@ -48,7 +48,7 @@
         <Cell><Data ss:Type="String">¿Créditos usados?</Data></Cell>
         <Cell><Data ss:Type="String">Estado</Data></Cell>
       </Row>
-    <% @backers.joins(:project, :user, :reward).each do |backer| %>
+    <% @backers.includes(:project, :user, :reward, :payment_notifications).each do |backer| %>
       <Row>
         <Cell><Data ss:Type="Number"><%= backer.id %></Data></Cell>
         <Cell><Data ss:Type="String"><%= backer.project.name %></Data></Cell>

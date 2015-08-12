@@ -269,12 +269,12 @@ class Backer < ActiveRecord::Base
     self.update_attributes({ payment_method: 'PayULatam' })
   end
 
-  def platform_fee
-    (self.value * self.project.actual_platform_fee).round(2)
+  def platform_fee(catarse_fee = ::Configuration[:catarse_fee].to_f)
+    (self.value * self.project.actual_platform_fee(catarse_fee)).round(2)
   end
 
-  def subtotal
-    self.value - self.platform_fee
+  def subtotal(catarse_fee = ::Configuration[:catarse_fee].to_f)
+    self.value - self.platform_fee(catarse_fee)
   end
 
   def display_payment_method
@@ -326,9 +326,9 @@ class Backer < ActiveRecord::Base
     self.value * 0.05 + 900.0
   end
 
-  def g2c_fee
+  def g2c_fee(g2c_fee = ::Configuration[:g2c_fee].to_f)
     return unless self.converted_value && self.paypal_fee
-    (::Configuration[:g2c_fee].to_f * (self.converted_value - self.paypal_fee)).round(2)
+    (g2c_fee * (self.converted_value - self.paypal_fee)).round(2)
   end
 
   def display_g2c_fee
@@ -340,10 +340,10 @@ class Backer < ActiveRecord::Base
     (self.value * self.project.actual_credits_fee).round(2)
   end
 
-  def total_fee
+  def total_fee(g2c_fee = ::Configuration[:g2c_fee].to_f)
     if self.display_payment_method == "PayPal"
-      return unless self.paypal_fee && self.g2c_fee && self.conversion_fee
-      ((self.paypal_fee + self.g2c_fee) * self.conversion_fee).round(2)
+      return unless self.paypal_fee && self.g2c_fee(g2c_fee) && self.conversion_fee
+      ((self.paypal_fee + self.g2c_fee(g2c_fee)) * self.conversion_fee).round(2)
     elsif self.display_payment_method == "PayULatam"
       self.payulatam_fee
     elsif self.credits?
@@ -404,12 +404,12 @@ class Backer < ActiveRecord::Base
     (self.tax_refund || 0) + (self.value_reserve || 0)
   end
 
-  def total_costs
-    (self.total_fee || 0) + (self.iva_payulatam_fee || 0)
+  def total_costs(g2c_fee = ::Configuration[:g2c_fee].to_f)
+    (self.total_fee(g2c_fee) || 0) + (self.iva_payulatam_fee || 0)
   end
 
-  def net_platform_fee
-    self.platform_fee - self.total_costs
+  def net_platform_fee(g2c_fee = ::Configuration[:g2c_fee].to_f, catarse_fee = ::Configuration[:catarse_fee])
+    self.platform_fee(catarse_fee) - self.total_costs(g2c_fee)
   end
 
   def payer_document
