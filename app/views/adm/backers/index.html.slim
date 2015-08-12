@@ -152,7 +152,7 @@
                 th= t('.state')
                 th= t('.action')
             tbody
-              - @backers.includes(:project, :user, :reward).each do |backer|
+              - @backers.joins(:project, :user, :reward, :payment_notifications).each do |backer|
                 tr id=backer.id class=cycle("even", "odd")
                   td
                     .bootstrap-twitter

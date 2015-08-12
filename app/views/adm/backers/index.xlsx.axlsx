@@ -44,7 +44,7 @@ wb.add_worksheet(name: "Colaboradores") do |sheet|
     "Canal matchfunding",
     "Estado"
   ])
-  @backers.each do |backer|
+  Backer.includes(:project, :user, :reward, :payment_notifications).each do |backer|
     sheet.add_row([
       backer.id,
       backer.project.name,
