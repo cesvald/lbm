@@ -22,7 +22,7 @@ class Adm::FinancialsController < Adm::BaseController
       format.csv do
         csv_string = CSV.generate do |csv|
           # header row
-          csv << ["name", "moip", "goal", "reached", "moip_tax", "catarse_fee", "repass_value","expires_at", "backer_report", "state"]
+          csv << ["name", "moip", "goal", "reached", "moip_tax", "catarse_fee", "repass_value","expires_at", "total_backers", "backer_report", "state"]
           # data rows
           projects.each do |project|
             catarse_fee = ::Configuration[:catarse_fee].to_f * project.pledged
@@ -33,9 +33,10 @@ class Adm::FinancialsController < Adm::BaseController
                     "#{view_context.number_to_currency project.total_payment_service_fee, unit: 'COP', precision: 2, delimiter: '.'}",
                     "#{view_context.number_to_currency catarse_fee, unit: 'COP', precision: 2, delimiter: '.' } (#{view_context.number_to_currency project.pledged - catarse_fee, unit: 'COP', precision: 0, delimiter: '.'})",
                     "#{view_context.number_to_currency project.pledged*0.87, unit: 'COP', precision: 2, delimiter: '.'}",
-                     "#{project.display_expires_at if project.display_expires_at.present?} (#{I18n.l(8.weekdays_from(project.expires_at).to_date) if project.display_expires_at.present?})",
-                     "#{adm_reports_backer_reports_url(project_id: project.id, format: :csv)}",
-                     project.state
+                    "#{project.display_expires_at if project.display_expires_at.present?} (#{I18n.l(8.weekdays_from(project.expires_at).to_date) if project.display_expires_at.present?})",
+                    project.total_backers,
+                    "#{adm_reports_backer_reports_url(project_id: project.id, format: :csv)}",
+                    project.state
             ]
           end
         end

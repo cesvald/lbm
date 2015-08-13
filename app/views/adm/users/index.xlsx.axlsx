@@ -1,0 +1,19 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Colaboradores") do |sheet|
+  sheet.add_row([
+    "Id",
+    "Usuario",
+    "Email",
+    "Total de Colaboraciones",
+    "Créditos"
+  ])
+  for user in @users do
+    sheet.add_row([
+      user.id,
+      user.name,
+      user.email,
+      (user.user_total ? user.user_total.sum : 0),
+      user.credits
+    ])
+  end
+end

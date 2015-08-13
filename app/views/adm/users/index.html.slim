@@ -30,6 +30,11 @@
               = check_box_tag :has_credits, true, params[:has_credits].present?
               = f.label :has_credits, t('.credits')
       .clearfix
+      br
+      .bootstrap-twitter.input
+        .submit
+          = link_to "Download Excel", adm_users_path({format: "xlsx"}.merge(params)), class: 'btn btn-success'
+      br
     .data-table
       h2
         strong= "#{@total_users} "

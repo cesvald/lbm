@@ -1,5 +1,5 @@
 wb = xlsx_package.workbook
-wb.add_worksheet(name: "Colaboradores") do |sheet|
+wb.add_worksheet(name: "Proyectos") do |sheet|
   sheet.add_row([
     "Título",
     "Categoría",

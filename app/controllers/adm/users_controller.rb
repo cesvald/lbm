@@ -6,7 +6,17 @@ class Adm::UsersController < Adm::BaseController
 
   has_scope :by_id, :by_name, :by_email, :by_payer_email, :by_key, :has_credits, :has_credits_difference, only: :index
 
+  def index
+    index! do |format|
+      format.html
+      format.xlsx do
+        @users = end_of_association_chain.order_by('coalesce(user_totals.sum, 0) DESC').includes(:user_total)
+      end
+    end
+  end
+
   protected
+
   def set_totals
     totals = end_of_association_chain.backer_totals
     @total_users = totals[:users].to_i

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Colaboradores">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Id</Data></Cell>
+        <Cell><Data ss:Type="String">Usuario</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
+        <Cell><Data ss:Type="String">Total de Colaboraciones</Data></Cell>
+        <Cell><Data ss:Type="String">Créditos</Data></Cell>
+      </Row>
+    <% for user in @users do %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= user.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.name %></Data></Cell>
+        <Cell><Data ss:Type="Date"><%= user.email %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.user_total ? user.user_total.sum : 0 %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.credits %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
