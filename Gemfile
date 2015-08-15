@@ -97,7 +97,7 @@ gem 'web_translate_it'
 gem 'i18n_viz'
 
 # Payment
-gem 'activemerchant', '>= 1.17.0', require: 'active_merchant'
+gem 'activemerchant', '1.36.0', require: 'active_merchant'
 gem 'httpclient',     '>= 2.2.5'
 
 group :production do

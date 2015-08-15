@@ -478,7 +478,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
-  activemerchant (>= 1.17.0)
+  activemerchant (= 1.36.0)
   auto_html (= 1.4.2)
   axlsx_rails
   best_in_place
@@ -557,3 +557,6 @@ DEPENDENCIES
   video_info (>= 1.1.1)
   web_translate_it
   weekdays
+
+BUNDLED WITH
+   1.10.6

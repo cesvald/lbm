@@ -6,8 +6,7 @@ class Configuration < ActiveRecord::Base
   end
   
   def self.update_paypal_conversion!
-    page = Nokogiri::HTML(HTTParty.get("http://www.superfinanciera.gov.co/Cifras/informacion/diarios/tcrm/tcrm.htm").body)
-    
+    page = Nokogiri::HTML(open("https://www.superfinanciera.gov.co/TRMdesagregada/index.jsp"))
     mean = 0
     volatility = 0
 
@@ -16,13 +15,12 @@ class Configuration < ActiveRecord::Base
       variable = variable.text.strip if variable
       value = row.search("td")[2]
       value = value.text.strip if value
-      if variable == 'Promedio Ponderado de Venta'
+      if variable == 'Promedio ponderado de venta'
         mean = value.gsub(',', '').to_f
-      elsif variable == 'Volatilidad de la TCRM (%)'
+      elsif variable == 'Volatilidad de la tcrm %'
         volatility = value.gsub('%', '').to_f / 100
       end
     end
-    
     if mean != 0 && volatility != 0
       conversion = ((mean - mean * volatility) * 100).round.to_f / 100
       Configuration[:paypal_currency] = "USD"
