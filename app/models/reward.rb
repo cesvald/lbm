@@ -79,7 +79,7 @@ class Reward < ActiveRecord::Base
   end
 
   def converted_minimum
-    conversion = 2900.00
+    conversion = Configuration[:paypal_conversion].to_f
     return nil unless conversion > 0
     (minimum_value / conversion * 100).round.to_f / 100
   end
