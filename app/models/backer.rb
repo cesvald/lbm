@@ -355,6 +355,7 @@ class Backer < ActiveRecord::Base
     if self.display_payment_method == "PayULatam"
       self.payment_notifications.each do |notification|
         return "Baloto" if notification.extra_data["payment_method"] == "35"
+        return "PSE" if notification.extra_data["payment_method_name"] == "PSE"
         return notification.extra_data["franchise"] if notification.extra_data["franchise"].present?
       end
     end
