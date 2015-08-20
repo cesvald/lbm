@@ -58,10 +58,10 @@
               = label_tag :project_name_contains, t('.project')
               = text_field_tag :project_name_contains, params[:project_name_contains]
             .input
-              = label_tag :by_project_state, t('.project_state')
+              = label_tag :by_project_state, 'Estado del proyecto'
               = select_tag :by_project_state, options_for_select(Project.select("DISTINCT state").map(&:state), params[:by_project_state]), include_blank: true
             .input
-              = label_tag :by_channel, t('.channel')
+              = label_tag :by_channel, 'Canal'
               = select_tag :by_channel, options_from_collection_for_select(Channel.all, 'id', 'name', params[:by_channel]), include_blank: true
             .bootstrap-twitter
               .input.submit

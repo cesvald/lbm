@@ -142,6 +142,7 @@ es:
         total_users: Usuarios
         user: Usuario
         value: Valor
+        project_state: "Estado do projeto"
     statistics:
       index:
         menu: Estadísticas
