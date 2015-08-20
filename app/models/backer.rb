@@ -270,7 +270,7 @@ class Backer < ActiveRecord::Base
   end
 
   def platform_fee
-    self.value * self.project.catarse_fee
+    self.value * self.project.actual_platform_fee
   end
 
   def subtotal
