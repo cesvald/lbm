@@ -72,7 +72,7 @@
                   td= project.display_goal
                   td= project.display_pledged
                   td= number_to_currency project.total_payment_service_fee, unit: 'COP', precision: 2, delimiter: '.'
-                  - catarse_fee = Configuration[:catarse_fee].to_f * project.pledged
+                  - catarse_fee = project.actual_platform_fee
                   td
                     = number_to_currency catarse_fee, unit: 'COP', precision: 2, delimiter: '.'
                   td

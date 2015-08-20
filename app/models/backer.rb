@@ -269,12 +269,12 @@ class Backer < ActiveRecord::Base
     self.update_attributes({ payment_method: 'PayULatam' })
   end
 
-  def platform_fee(catarse_fee = ::Configuration[:catarse_fee].to_f)
-    (self.value * self.project.actual_platform_fee(catarse_fee)).round(2)
+  def platform_fee
+    self.value * self.project.catarse_fee
   end
 
-  def subtotal(catarse_fee = ::Configuration[:catarse_fee].to_f)
-    self.value - self.platform_fee(catarse_fee)
+  def subtotal
+    self.value - self.platform_fee
   end
 
   def display_payment_method
@@ -421,8 +421,8 @@ class Backer < ActiveRecord::Base
     (self.total_fee(g2c_fee) || 0) + (self.iva_payulatam_fee || 0)
   end
 
-  def net_platform_fee(g2c_fee = ::Configuration[:g2c_fee].to_f, catarse_fee = ::Configuration[:catarse_fee].to_f)
-    self.platform_fee(catarse_fee) - self.total_costs(g2c_fee)
+  def net_platform_fee(g2c_fee = ::Configuration[:g2c_fee].to_f)
+    self.platform_fee - self.total_costs(g2c_fee)
   end
 
   def payer_document

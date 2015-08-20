@@ -20,7 +20,6 @@ class Adm::BackersController < Adm::BaseController
     index! do |format|
       format.html
       format.xlsx do
-        @catarse_fee = ::Configuration[:catarse_fee].to_f
         @g2c_fee = ::Configuration[:g2c_fee].to_f
         @backers = end_of_association_chain.not_deleted.order("backers.created_at DESC")
       end

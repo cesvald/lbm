@@ -387,8 +387,8 @@ class Project < ActiveRecord::Base
     channels.first ? :project_received_channel : :project_received
   end
 
-  def actual_platform_fee(catarse_fee = ::Configuration[:catarse_fee].to_f)
-    self.platform_fee || catarse_fee 
+  def actual_platform_fee
+    self.platform_fee || self.catarse_fee
   end
   
   def actual_credits_fee

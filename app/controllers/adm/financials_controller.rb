@@ -25,7 +25,7 @@ class Adm::FinancialsController < Adm::BaseController
           csv << ["name", "moip", "goal", "reached", "moip_tax", "catarse_fee", "repass_value","expires_at", "total_backers", "backer_report", "state"]
           # data rows
           projects.each do |project|
-            catarse_fee = ::Configuration[:catarse_fee].to_f * project.pledged
+            catarse_fee = project.actual_platform_fee * project.pledged
             csv << [project.name,
                     project.user.moip_login,
                     project.display_goal,
