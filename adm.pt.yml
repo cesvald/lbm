@@ -59,15 +59,15 @@ pt:
     channels:
       index:
         menu: Canais
-        title: Gerenciamento de Canais
+        title: "Gerenciamento de Canais"
         total_channels: canais
-        no_channels: Nenhum canal encontrado.
+        no_channels: "Nenhum canal encontrado."
         id: Id
         name: Nome
         permalink: Permalink
         edit: Editar
         destroy: Apagar
-        new: Novo canal
+        new: "Novo canal"
     actions:
       confirm: Confirmar
     users:
@@ -90,8 +90,8 @@ pt:
         value: Valor
         payer_email: "Email do pagamento"
         provider: Provedor
-        add_to_channel: Nomear trustee do canal
-        remove_from_channel: Desnomear trustee do canal
+        add_to_channel: "Nomear trustee do canal"
+        remove_from_channel: "Desnomear trustee do canal"
     backers:
       messages:
         successful:
@@ -142,8 +142,6 @@ pt:
         total_users: usuários
         user: Usuário
         value: Valor
-        project_state: "Estado do projeto"
-        channel: "Canal"
     statistics:
       index:
         menu: Estatísticas

@@ -1,0 +1,1068 @@
+es:
+  failure_title: "Bienvenido a LittleBigMoney"
+  uservoice_gadget:
+    user:
+      name: Usuario
+      location: "Ciudad, Departamento/Provincia"
+      confirmed_backers: "Colaboración confirmada"
+      created_projects: "Creación de proyectos"
+  current_update: "Modificación "
+  "no": "No"
+  "yes": Sí
+  or: o
+  site:
+    title: "Primera plataforma en la región de crowdfunding para el desarrollo de proyectos con impacto social y ambiental"
+    meta_title: "%{title} · %{company_name}"
+    description: "LittleBigMoney es una herramienta diferente – y colaborativa – para que tu proyecto salga del papel!"
+    keywords: "littlebigmoney, crowdfunding, project, community, open source, financiación colectiva, donar, ayudar, colaborar, apoyar"
+  login:
+    forgot_password:
+      welcome: "Restablecer contraseña"
+      label: "Ingresa tu email para cambiar tu contraseña"
+      submit: Reestablecer
+    welcome: "Que bueno tenerte de vuelta! :)"
+    submit: Entra
+    register: Regístrate!
+    no_account_html: "¿Aún no tienes cuenta? <strong>%{link}</strong>"
+    remember_me: Recuérdame
+    submit_facebook: "Ingresa usando tu cuenta de Facebook"
+    placeholder:
+      email: email
+      password: Contraseña
+  backer_report_to_project_owner:
+    reward_description: "Descripción de la recompensa"
+    confirmed_at: "Fecha de confirmación de pago"
+    value: "Valor colaboración"
+    service_fee: "Tarifa LittleBigMoney"
+    user_email: LittleBig-email
+    user_name: "Nombre del colaborador"
+    payer_email: "Email método de pago"
+    payment_method: "Método de pago"
+    address_street: Dirección
+    address_complement: Teléfono
+    address_number: Número
+    address_neighbourhood: "Código Postal"
+    address_city: Ciudad
+    address_state: Departamento
+    address_zip_code: País
+    anonymous: Anónimo
+  edit_project: "Modificar proyecto"
+  days: días
+  controllers:
+    rewards:
+      create:
+        notice: "Recompensa incluida con éxito!"
+        alert: "Oops! No fue posible incluir la recompensa."
+  facebook_locale: es_CO
+  newsletter_ok_header: "Registro realizado!"
+  newsletter_ok_body: "Tu email ha sido registrado con éxito, gracias!"
+  newsletter_error_header: "Oops! algo sucedió."
+  newsletter_error_body: "Tu email no fue registrado, intenta de nuevo!"
+  newsletter_subscribe: Suscribirse
+  views:
+    pagination:
+      next: Próximo
+      last: Último
+      truncate: "..."
+  statistics:
+    backers:
+      subtitle: Colaboradores
+    goal:
+      subtitle: "De %{total} solicitados"
+  project_by: "Proyecto por"
+  tell_about_this_back: "Cuenta al mundo sobre tu apoyo!"
+  share_my_backs: "Echa un vistazo al proyecto "
+  tell_about_this_project: "Cuéntale al mundo sobre tu proyecto!"
+  share_my_projects: "Echa un vistazo al proyecto "
+  count_backed_projects: "Has colaborado con %{total} proyectos"
+  footer:
+    titles:
+      info: "Información útil"
+      opendata: "Que buenas estadísticas"
+      social: "¿Te gustó LittleBigMoney?"
+      blog: "Entradas recientes"
+      newsletter: "Regístrate en nuestro newsletter"
+    stats:
+      backers: Colaboradores
+      backs: Colaboraciones
+      total_backed: "Total de colaboraciones"
+      users: Usuarios
+      funded_projects: "Proyectos Exitosos"
+      active_projects: "Proyectos activos"
+    links:
+      how_works: "¿Cómo funciona?"
+      faq: F.A.Q./Ayuda
+      about: "¿Quiénes somos?"
+      terms: "Términos de uso"
+      policy: "Políticas de privacidad"
+      terms_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245482"
+      policy_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245484"
+      contact: Contacto
+      twitter: "Síguenos en @%{twitter}"
+      facebook: "Encuéntranos en Facebook"
+  main:
+    links:
+      selected: "Explora proyectos destacados"
+      expiring: "Explora proyectos en la recta final"
+      recents: "Explora proyectos recientes"
+      successful: "Explora proyectos exitosos"
+      near: "Explora proyectos cercanos a ti"
+      channel_projects: "Conozca el canal %{name}"
+  sidebar:
+    titles:
+      blog: LittleBig-Blog
+      facebook: "¿Qué tal un like a nuestra página de Facebook?"
+      newsletter: "¿Te gustaría recibir nuestras LittleBig-News?"
+      faq: "¿Tienes alguna duda?"
+      schedule: Calendario
+    buttons:
+      newsletter: Enviar
+  sections:
+    near:
+      title: "Proyectos cercanos a ti"
+    selection:
+      title: "Proyectos destacados"
+    expiring:
+      title: "En la recta final"
+    recents:
+      title: Reciente
+    successful:
+      title: Exitosos
+    partners:
+      title: "Con el apoyo de"
+    channels:
+      title: Canales
+  accept_terms_html: "He leído y estoy de acuerdo %{link}."
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              not_found: "Tu email no esta registrado, por favor verifica la dirección o crea un nueva cuenta"
+        project:
+          attributes:
+            permalink:
+              invalid: "URL del proyecto inválida"
+    attributes:
+      unsubscribe:
+        update: "Recibir actualizaciones del proyecto"
+      backer:
+        value: Valor
+      project:
+        category: Categoría
+        expires_at: "Plazo máximo"
+        online_days: "Días del proyecto"
+        headline: Eslogan
+        image_url: "URL de la imagen"
+        name: Nombre
+        user_id: "Identificación de Usuario"
+        video_url: "URL del vídeo"
+        permalink: "URL del proyecto"
+        more_links: "¿Dónde podemos conocer más sobre tu proyecto?"
+        how_know: "¿Cómo conociste sobre LittleBigMoney?"
+      reward:
+        description: Descripción
+        maximum_backers: "Máximo de colaboradores"
+        minimum_value: "Valor mínimo:"
+      user:
+        moip_login: "Medios de Pago"
+        moip_login_hint: "(cómo crear una cuenta)"
+        address_city: Ciudad
+        address_complement: Teléfono
+        address_neighbourhood: "Código Postal"
+        address_number: Barrio
+        address_state: Departamento/Provincia
+        address_street: Dirección
+        address_zip_code: País
+        cpf: "Cédula / NIT "
+        cpf_hint_title: "El recibo será emitido con este documento"
+        cpf_hint: (?)
+        state_inscription: RUT
+        current_password: "contraseña actual"
+        email: email
+        full_name: "Nombre completo / Razón Social"
+        bio: "¿Quién eres?"
+        name: Apodo
+        id: Identificación
+        password: Contraseña
+        password_confirmation: "Confirmación de contraseña"
+        phone_number: Celular
+      channel:
+        permalink: Subdominio
+        name: Nombre
+        description: Descripción
+        email: Email
+        twitter: Twitter
+        facebook: Facebook
+        website: "Sitio web"
+        image: "URL de la imagen del canal"
+        video_url: "URL del vídeo del canal"
+        how_it_works: "Como funciona el canal?"
+        banner_url: "URL del banner para proyectos"
+        banner_top_url: "URL del banner de arriba"
+        banner_bottom_url: "URL del banner de abajo"
+        matchfunding_factor: "Factor para matchfunding"
+        matchfunding_percentage: "% para matchfunding"
+        matchfunding_user: "Id de usuário para aportes de matchfunding"
+        matchfunding_user_id: "Id de usuário para aportes de matchfunding"
+        matchfunding_maximum: "Presupuesto máximo para matchfunding"
+        matchfunding_maximum_per_project: "Presupuesto máximo para matchfunding por proyecto"
+        show_drafts: "Mostrar borradores"
+        receive_projects: "Recibe proyectos"
+        legend: "Texto para el formulario de nuevo proyecto"
+        group_subdomains: "Subdominios para consolidar en el canal"
+        finish_once_reached_goal: "Finalizar proyectos apenas alcancen la meta"
+        background_color: "Color de fondo del canal"
+        banner_background_color: "Color de fondo de los banners"
+        project_background_color: "Color de fondo de los banners de proyecto"
+        confirm_backer_email_paragraph: "Párrafo para email de confirmación de aporte"
+        home_page: "Mostrar en el home"
+    models:
+      backer: Colaborador
+      category: Categoría
+      project: Proyecto
+      reward: Recompensa
+      channel: Canal
+  backer:
+    display_confirmed_at: "%{time_ago} atrás"
+    reward_must_be_from_project: "Debe ser del mismo proyecto"
+    should_not_back_if_maximum_backers_been_reached: "Has alcanzado el número máximo de colaboradores"
+    value_must_be_at_least_rewards_value: "debe ser al menos %{minimum_value} para la recompensa seleccionada"
+    project_should_be_online: "No puedes apoyar a un proyecto que no esta listado"
+  project_plural: Proyectos
+  backer_plural: Colaboradores
+  backer_singular: Colaborador
+  project_singular: Proyecto
+  click_here: "haz clic aquí"
+  clicking_here: "Haz clic aquí"
+  click_term: "Términos de Uso"
+  comment:
+    display_time: "%{time_ago} atrás"
+  credits:
+    modal:
+      title: "¿Aún quieres un reembolso de tu colaboración?"
+      text: "Conoce más sobre el proceso de reembolso de LittleBigMoney:"
+      link: "Mira como funcionan los reembolsos"
+      link_url: ~
+      reject_btn: "Quiero conservar mis créditos"
+      accept_btn: "Sí, deseo solicitar el reembolso de mi colaboración"
+    index:
+      back_date: "Fecha de apoyo"
+      current_credits_html: "Tu saldo actual es <span id=\"current_credits\">%{credits}</span> en créditos."
+      important_html: "Para saber el reglamento de funcionamiento de reembolso, <a href='http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos' target='_blank'>haz click aquí</a>. Cualquier duda, puedes entrar a  <a href='http://suporte.catarse.me' target='_blank'> Soporte</a>."
+      project: Proyecto
+      refund_expration_date: "Plazo para reembolso"
+      refunded: "Solicitud de reembolso exitosa. Nuestro equipo se comunicará contigo en los próximos dos días hábiles. "
+      insufficient_credits: "No tienes los créditos suficientes para solicitar este reembolso."
+      refunds_title: "Pagos que pueden ser reembolsados"
+      request_refund: ¿Reembolso?
+      requested_refund: "Reembolso solicitado"
+      status: Estado
+      title: "Mis créditos"
+      value: valor
+    refund:
+      cannot_refund: "Esta colaboración no puede ser reembolsada"
+      error: "Oops! Algo sucedió al pedir tu reembolso."
+      no_credits: "No tienes los créditos suficientes para realizar esta colaboración."
+      refunded: "Esta colaboración ya fue reembolsada."
+      requested_refund: "Ya habías solicitado un reembolso para esta colaboración."
+    title: "Mis créditos"
+  credits_mailer:
+    request_refund_from:
+      subject: "Requerimiento de reembolso para el proyecto %{name}"
+      subject_html: "El usuario %{name} solicitó el reembolso de la colaboración %{backer_key} al proyecto %{backer_project} por un monto de %{backer_value} realizado por %{backer_payment_service} la pasarela de pagos."
+      user_name: Usuario
+      user_email: LittleBig-email
+      payer_email: "email de pago"
+      payer_name: "Nombre usado en el método de pago"
+      project: Proyecto
+      backer_key: "Clave de colaboración"
+      payment_id: "Identificación de pago"
+      backer_value: Valor
+      payment_method: "Método de pago"
+      payment_choice: "Elección de pago"
+      created_at: "Creado el"
+  curated_pages:
+    index:
+      title: "Páginas curadas"
+    show:
+      backed: "Total de colaboraciones"
+      reached: Alcanzado
+  error: "Oops! algo sucedió. Por  favor intenta de nuevo."
+  explore:
+    index:
+      near: "Proyectos cercanos a ti"
+      categories: Categorías
+      expiring: "Cuenta regresiva"
+      quick_explore: "Búsqueda Rápida"
+      recent: Reciente
+      recommended: Recomendaciones
+      subtitle: "Explora los proyectos, encuentra aquellos que te inspiran y apóyalos para que sean una realidad!"
+      successful: Exitosos
+      title: "Descubre proyectos increíbles!"
+    title: "Explora los proyectos"
+    project:
+      empty: "Oops, no encontramos ningún proyecto con lo que buscas. ¿Qué tal intentar con otras palabras? :)"
+  formtastic:
+    hints:
+      backer:
+        credits: "Tienes <strong>%{credits}</strong> en créditos y puedes apoyar hasta este valor sim necesitae realizar un nuevo pago."
+        value: "Tu escoges el valor ;) a partir de 25.000 COP está genial!"
+      project:
+        video_url_edit: "Pega aquí la URL de tu video de Vimeo."
+        about: "Cuéntanos un poco sobre tu historia y lo que será de ella al terminar. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
+        history: "Describe en un párrafo cómo y por qué nace tu emprendimiento y los momentos más importantes para su desarrollo."
+        cause: "Cuéntanos un poco sobre la causa que mueve tu proyecto. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
+        description: "Cuéntanos un poco sobre lo que consiste tu proyecto. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
+        impact: "Cuéntanos un poco sobre el impacto que tendría tu proyecto en el desarrollo económico o social de tu comunidad o región. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
+        budget: "Cuéntanos como vas a gastar el dinero que recaudes. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
+        implementation: "Cuéntanos un poco sobre cuánto tiempo necesitas para implementar tu proyecto. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
+        category: "Antes de enviar tu proyecto, explora e inspírate con otros que han pasado por el sitio."
+        expires_at: "Finalmente, escoge el tiempo que quieres que dure tu campaña. De nuevo, ésta es una decisión estratégica: si escoges mucho tiempo, las personas perderán el interés en medio del camino; si escoges poco tiempo es posible que no logres tu meta."
+        online_days: "Finalmente, escoge el tiempo que quieres que dure tu campaña. De nuevo, ésta es una decisión estratégica: si escoges mucho tiempo, las personas perderán el interés en medio del camino; si escoges poco tiempo es posible que no logres tu meta."
+        goal: "Es importante recordar que la gran parte de los aportes, vienen de personas cercanas a ti (amigos, familia, conocidos, etc):  </a> De este modo puedes definir el valor que quieres recolectar a través de LittleBigMoney. Es fundamental pensar la capacidad que tienes de movilizar por lo menos 50% del valor dentro de tu red de contactos."
+        headline: "Resume tu proyecto en 140 caracteres. Esta frase será el primer contacto de las personas con tu proyecto incluso antes de ver el video. Se creativo, transparente y directo :)"
+        name: "Sé lo más concreto posible. Deja las explicaciones para el video y la descripción."
+        uploaded_image: "Aquí puedes subir una imagen (.jpg) de tamaño 512x400."
+        video_url: "Pega la URL de un video de <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a>. Recomendamos Vimeo pues tiene una mejor resolución y no tienen publicidad. Tod para que tu proyecto se vea mucho mejor! <strong>Realiza tu video lo mejor que puedas y y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un video de otro, es el video. Mira ;)"
+        more_links: "¿Qué canales usarás para promocionar la idea de tu proyecto? Puedes Nombralos aquí (facebook/twitter/blog/sitio web) entre más tengas, te puede ayudar más."
+        first_backers: "Para que tu campaña tenga éxito, es fundamental que traigas a tus redes de contactos más cercanas. Por eso, cuéntanos quiénes crees que serán tus primeros 20 colaboradores"
+      reward:
+        description: "Describe tu recompensa de una forma que despierte el interés de las personas para aportar a tu proyecto. No te de miedo pedir!"
+        maximum_backers: "Si tu recompensa es limitada, cuéntanos el máximo de colaboradores."
+        minimum_value: "Este es el valor mínimo de colaboración para escoger esta recompensa."
+        days_to_delivery: "Total de días para enviar la recompensa."
+    labels:
+      backer:
+        anonymous: "Quiero que mi colaboración sea anónima."
+        credits: "Quiero usar mis créditos para aportar a esto."
+        reward: "Selecciona tu recompensa"
+        value: "¿De cuánto quieres que sea tu colaboración?"
+      comment:
+        comment: "¿Qué piensas de este proyecto?"
+      project:
+        permalink: "URL del proyecto"
+        online_days: "Días online"
+        category: Categoría
+        about: "¿Quién eres, que haces y cual tu experiencia en el negocio?"
+        history: "¿Cuál es la historia de tu emprendimiento?"
+        cause: "¿Cuál es la causa que mueve tu proyecto? ¿Cuál es el problema que busca resolver?"
+        description: "¿En qué consiste tu Proyecto?"
+        impact: "¿Qué impacto tendría tu proyecto en el desarrollo económico o social de tu comunidad o región?"
+        budget: "¿Cómo gastarás el dinero que necesitas para tu proyecto?"
+        implementation: "¿Cuánto tiempo necesitas para implementar tu proyecto?"
+        expires_at: "¿Cuál es la fecha límite para alcanzar tu meta?"
+        goal: "¿Cuánto esperas reunir? (usa solo números)"
+        name: "Nombre de tu proyecto"
+        video_url: Video
+        headline: "Frase de motivación"
+        uploaded_image: "thumbnail del proyecto"
+        more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
+        first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
+        how_know: "¿Cómo conociste LittleBigMoney?"
+      reward:
+        days_to_delivery: "Días de entrega"
+        maximum_backers: "Máximo de colaboradores (opcional)"
+    optional: " (Opcional)"
+  found_plural: Encontrados
+  found_singular: Encontrado
+  here: aquí
+  i_backed: "Yo colaboré con este proyecto %{name} en @LBigMoney"
+  i_just_backed: "Acabo de apoyar el proyecto %{name} en @LbigMoney"
+  layouts:
+    login:
+      login_with_facebook: "Registrate con tu cuenta de Facebook"
+      remember_me: "Recuérdame y manntenme infomado."
+    header:
+      blog: LittleBig-Blog
+      help: Ayuda
+      faq: FAQ
+      signup: Registro
+      signin: Ingreso
+      explore: Explora
+      invest: "Inversión (Próximamente)"
+      submit_project: Envía
+      how_it_works: "Cómo funciona"
+      welcome_html: "Bienvenido <span class='user_name'>%{name}</span>"
+      profile: "Mi perfil"
+      account: "Mi cuenta"
+    user:
+      logout: Salir
+      my_credits: "Mis créditos"
+  not_informed: "No informado"
+  notify_locale: "Identificamos tu idioma por el buscador. Si prefieres otro por favor, haz clic en la bandera que prefieres."
+  on_the_spot:
+    cancel: Cancelar
+    ok: Aceptar
+    tooltip: "Haz clic para editar"
+  passwords:
+    edit:
+      label_new_password: "Nueva contraseña"
+      submit: "Cambiar contraseña"
+      title: "Restaurar Contraseña"
+      site_title: "Cambiar contraseña"
+      subtitle: "Solicitud para restaurar contraseña. Ingresa tu nueva contraseña haciendo clic en \"Cambiar contraseña\". Si no realizaste esta solicitud para restaurar la contraseña, salta esta página y tu contraseña será la misma."
+    email:
+      content_html: " <p>Alguien ha solicitado un enlace para cambiar la contraseña, podrás cambiarla usando el enlace.</p><p>%{link}</p><p>Si no solicitaste  esto, por favor ignora este mensaje.</p><p>Tu contraseña no cambiará hasta que ingreses al enlace y crees una nueva.</p> "
+      title: "Instrucciones para reestablecer la contraseña"
+    new:
+      submit: "Enviar instrucciones para cambiar mi contraseña"
+      title: "¿Olvidaste tu Contraseña?"
+      site_title: "Recuperar Contraseña"
+  project:
+    start:
+      email_subject: "Tu proyecto ha sido recibido por el equipo LittleBigMoney"
+      email_text: "Muchas gracias por confiar en LittleBigMoney y enviarnos tu proyecto :) <br><br>Antes que nada, queríamos recordarte como funcionan los pasos de selección de los proyectos en LittleBigMoney. Es muy fácil, son 4 pasos: <br><br> 1 - Acabamos de recibir ese lindo formulario que llenaste; <br><br> 2 - Tu respuesta estará lista en 4 días hábiles. Así que no te despegues de la pantalla. <br><br> 3 - Cuando el proyecto esté revisado, te enviaremos un link especial para que puedas registrar tu proyecto inmediatamente; <br><br> 4 - Una vez nos hayas avisado, autorizaremos el proyecto para que esté disponible y todos los seres humanos del mundo puedan conocerte y apoyar tu idea (en caso de que ellos quieran no?).  <br><br> <strong>Una información importante</strong>: Si olvidaste llenar algo de este formulario, no te preocupes, puedes adicionar nueva información (o cambiar alguna de ellas) así el equipo de soporte podrá estar en contacto contigo, ok?  <br><br> Por eso vale la pena conocer los proyectos que se encuentran al aire (<a href='%{explore_link}' style='color: #f57421 !important;'>%{explore_link}</a>) y si te gusta alguno de ellos, Apoya! Esa es la mejor manera de mostrar que crees en la cultura del financiamiento colaborativa en Colombia al fomentar el ecosistema que se está formando al rededor de LittleBigMoney. Además, también te puedes inspirar para tu propio proyecto.  <br> Mantén el contacto para saber de nuestras novedades en<a href='%{facebook}' style='color: #f57421 !important;'>Facebook</a> y en <a href='%{twitter}' style='color: #f57421 !important;'>Twitter</a> y conoce más de LittleBigMoney en nuestro Blog<a href='%{blog}' style='color: #f57421 !important;'>blog</a>.  <br> Si tienes alguna duda, nos puedes contactar en: %{email}"
+      notification_text: "Tu proyecto ha sido recibido por el equipo LittleBigMoney"
+    finish:
+      successful:
+        email_subject: "Súper! El proyecto %{project_name} fue exitoso en LittleBigMoney!"
+        email_text: "El proyecto %{project_link}, con el que colaboraste, fue financiado con éxito en LittleBigMoney! Es hora de celebrar que el proyecto /<br><br>O te tuvo incluido, %{project_total_backers} maravillosos colaboradores, alcanzaron %{project_pleged} y lograron %{project_process}% la meta de esta recolección =D<br><br>Ahh, una información importante: al equipo de LittleBigMoney le lleva hasta 3 hábiles para pasar la lista de contacto de todos los colaboradores del proyecto. Por esto, el microempresario estará en contacto contigo para darte las gracias y hablarte sobre las recompensas solo de aquí en unos días vale?<br><br>mientras tanto cuéntale a todo el mundo sobre esta buena noticia!<br><br><div style='text-align:center;'>%{facebook_button}%{twitter_button}</div><br><br>Si quieres entrar en contacro con %{project_owner_name}, Microempresari@ del proyecto, manda un email para %{project_owner_email}.<br><br>Si tienes alguna otra duda, entra en nuestro FAQ: <a href='http://www.catarse.me/faq' style='color: #008800;'>www.catarse.me/faq</a> ou mande um email para o <a href='mail_to:contato@catarse.me' style='color: #008800;'>contato@catarse.me</a><br>"
+        facebook_text: "Súper! El proyecto '%{name}', en el que colaboré, ha sido exitoso en LittleBigMoney!"
+        notification_text: "Súper! El proyecto '%{link}', en el que colaboraste, ha sido exitoso! Pasa la bola!"
+        reward_notification_text: "Dentro de Poco, %{link} se contactará contigo para enviarte tu recompensa. Que la disfrutes!"
+        twitter_text: "Súper! El proyecto '%{name}', en que colaboré fue exitoso en @LBigMoney! %{short_url}"
+      unsuccessful:
+        email_subject: "No hubo suficiente colaboración en el proyecto %{project_name}"
+        email_text: "Desafortunadamente el proyecto %{project_link} en el que colaboraste, no alcanzó su meta y no ha tenido éxito en LittleBigMoney. <br><br>En este caso, recibiste <strong>%{value}</strong> en créditos para apoyar otros proyectos. puedes conocer más proyectos de %{project_category} %{explore_category_link}.<br><br>Caso prefira, você pode pedir o reembolso do seu dinheiro %{credits_link}. Recuerda que tu registro en la plataforma fue hecho a través de <b>%{user_provider}.</b> Es por él que debes entrar para accesar a tu cuenta. Si tienes alguna dificultad en este proceso, envía un email para (financeiro@catarse.me) con el asunto \"Reembolso - problema en el ingreso\".<br><br>(Caso você prefira solicitar o reembolso, só para lembrar, como constam nos %{link_to_term} do LittleBigMoney, que se o apoio foi feito com cartão de crédito, o valor será estornado na próxima fatura do cartão. Se o apoio foi feito através de transferência bancária ou boleto, enviaremos um email com os procedimentos necessários para poder devolver o valor para você.<br><br>Se, por qualquer motivos, quiser entrar em contato com %{project_owner_name}, realizador do projeto, mande um email para %{project_owner_email}.<br><br>Se tiver alguma outra dúvida, acesse nosso FAQ ou mande um email para o financeiro@catarse.me.<br>"
+        notification_text: "Recibiste %{value} en créditos para apoyar otros projetos. Caso prefira, você pode pedir seu dinheiro de volta %{link}."
+        unsuccessful_text: "El proyecto %{link} no tuvo suficiente colaboración. Suerte para la próxima!"
+    video_regex_validation: "solo URLs de Vimeo son permitidas"
+    display_status:
+      expired: finalizado
+      rejected: Rechazado
+      failed: "Sin éxito"
+      successful: Exitoso
+      reached_goal: financiado
+      waiting_confirmation: "Un momentico"
+      waiting_funds: "Un momentico"
+      not_reached_goal: "Un momentico"
+  projects:
+    index:
+      vimeo_video_id: 97187346
+      what_is_html: "<strong>LittleBigMoney</strong> plataforma de crowdfunding para el desarrollo de proyectos con impacto social y ambiental"
+      banner_image_1: "http://s29.postimg.org/iow717xmv/Banners_cerdo_ESP.png"
+      banner_image_2: "http://s29.postimg.org/vdqhkw3rb/Banners_ecuacion_ESP.png"
+      banner_image_3: ~
+      banner_image_4: ~
+      banner_image_5: ~
+      banner_image_6: ~
+      banner_image_7: ~
+      banner_image_8: ~
+      banner_image_9: ~
+      banner_image_10: ~
+      slogan_donate: "Una pequeña colaboración, una gran ayuda"
+      slogan_invest: "(Próximamente) crece con nuevos emprendedores"
+    box:
+      by: de
+    admin_fields:
+      title: "Campos Administrador"
+    back_project:
+      display_status:
+        reached_goal: "Este proyecto tendrá éxito y recibirá el dinero el %{date}"
+        not_reached_goal: "Este proyecto sólo tendrá éxito si se recaudan al menos %{goal} hasta el %{date}"
+        failed: "Este proyecto no alcanzo la meta de %{goal} antes del %{date} y por lo tanto no fue financiado"
+        rejected: "Este proyecto no fue aceptado"
+        successful: "Este proyecto fue financiado con éxito el %{date}"
+        waiting_funds: "Esperando confirmación de los pagos para saber si el proyecto fue financiado."
+        draft: "Este proyecto esta en borrador y no esta disponible para colaboraciones aún."
+      reached_of: Alcanzado
+      submit: "Quiero aportar"
+    backer:
+      anonymous_backer: "Colaborador anónimo"
+      anonymous_description: "Prefiero permanecer anónimo"
+      no_reward: "Este colaborador no escogió recompensa"
+    backers:
+      review:
+        error: "Oops! Hubo un error mientras se registraba la colaboración. Por favor intenta de nuevo."
+        payulatam: "Pago nacional - PayU Latam"
+        payulatam_title: "Vas a ser redirigido a la página de PayU Latam para completar el pago."
+        lbm_gift_cards: "Gift Card"
+        lbm_gift_cards_info:
+          title: "Gift Card"
+          coupon: "Código del cupo"
+          accept_terms_html: "He leido y estoy de acuerdo con los <a href='http://soporte.littlebigmoney.org/knowledgebase/articles/245482-t%C3%A9rminos-de-uso-espa%C3%B1ol'>términos de uso para Gift Cards</a>."
+          submit: "Usar Gift Card"
+          success: "Pago con Gift Card realizado con éxito!"
+          error: "Oops! Hubo un error mientras se registraba tu pago con Gift Card. Por favor intenta de nuevo."
+          error_duplicate: "Este Gift Card ya fue utilizado."
+          error_value: "Este cupo no es del valor informado. Por favor, informa el valor exacto del cupo."
+          error_coupon: "Gift Card no encontrado."
+        payroll: "Pago por nómina"
+        payroll_info:
+          title: "Pago por nómina"
+          companies: "Fundación Capital, Color al cuadrado, Global Giving"
+          company_name: "Convenio empresarial"
+          employee_id: "Número de identificación (obligatorio)"
+          accept_terms_html: "He leido y estoy de acuerdo con los <a href='http://soporte.littlebigmoney.org/knowledgebase/articles/245482-t%C3%A9rminos-de-uso-espa%C3%B1ol'>términos de uso para pago por nómina</a>."
+          submit: "Pagar por nómina"
+          success: "Pago por nómina exitoso. Dentro de poco confirmaremos tu aporte con el convenio empresarial."
+          error: "Oops! Hubo un error mientras se registraba tu pago por nómina. Por favor intenta de nuevo."
+        paypal: "Pago internacional - PayPal"
+        international:
+          section_title: "Vas a ser redirigido a la página de PayPal para completar el pago."
+          user_document_label: "Documento (solamente números) opcional"
+          button: "Ir a PayPal"
+      show:
+        error: "Oops! Sólo puedes ingresar a esta página después de apoyar un proyecto."
+        moip_message: "Tu transacción fue \"autorizada.\" El código de PayU es \"%{code}\".<br>Si tienes alguna pregunta sobre esta transacción, contacta a PayU directamente."
+        header_subtitle: "Sin tu colaboración este proyecto no tendría éxito. Bienvenido al equipo!"
+        header_title: "Gracias! :)"
+        text_subtitle: "Cuéntale a todos sobre esto!"
+        recommended_projects: "También puedes aportar a estos proyectos:"
+        text_title_html: "Ahora eres parte del equipo! Haz todo lo posible para cumplir la meta %{link}"
+        title: Gracias
+      checkout:
+        no_credits: "No tienes suficiente crédito para aportar a este proyecto."
+        paypal_cancel: "Tu pago en PayPal fue anulado. Por favor, intenta de nuevo."
+        paypal_description: "Colaboración para el proyecto %{project_name} con el valor de %{value}"
+        paypal_error: "Oops! Algo sucedió con el envío de tu pago para PayPal. Por favor, intenta de nuevo."
+        paypal_currency: USD
+        paypal_conversion: "1830.00"
+        payulatam_submit: "Ir a PayU Latam"
+        payulatam_description: "Colaboración para el proyecto %{project_name} con el valor de %{value}"
+        payulatam_error: "Oops! Algo sucedió con el envío de tu pago para PayU Latam. Por favor, intenta de nuevo."
+        success: "Tu colaboración fue exitosa. Muchas gracias!"
+      new:
+        cannot_back: "No es posible aportar a este proyecto ahora. Qué tal si aportas a otros proyectos."
+        header:
+          subtitle: "Estas a unos pasos de hacer la diferencia y convertirte en parte de este proyecto."
+          title: ¡Sí!
+        no_reward: "Gracias. Sólo quiero ayudar al proyecto."
+        submit: "Revisar y realizar el pago"
+        title: "Colabora con %{name}"
+        anonymous_warning_html: "<strong>¿Seguro deseas que tu aporte sea anónimo?</strong> Dejar tu aporte público aumenta tu reputación y suma en nuestro rango de colaboradores. <br/><br/>Por otra parte, el valor de tu aporte no será compartido con nadie más que el dueño del proyecto. Sólo el administrador podrá acceder a esta información, con independencia de que tu aporte sea público o anónimo."
+        back_faq:
+          title: "Quiero aportar y lo quiero hacer ahora"
+          question_1: "¿Cómo puedo aportar a este proyecto?"
+          question_2: "¿Cuándo se valida el pago?"
+          question_3: "¿Recibo mi dinero de vuelta si el proyecto no tiene éxito?"
+          question_4: "Qué pasa si no quiero créditos de LittleBigMoney"
+          question_5: "Si el proyecto es financiado ¿cómo recibo mi recompensa?"
+          answer_1_html: "Seleccione el valor y la recompensa deseada! Luego haz clic en \"Revisar y hacer el pago\", serás enviado a la página siguiente para completar el pago."
+          answer_2_html: "Una vez que PayU o Paypal confirman la transacción (tarjeta el mismo día, Baloto se demora hasta 4 días para confirmar). Si el proyecto no logra %{goal} hasta %{expires_at} tu obtienes el dinero en forma de créditos de LittleBigMoney para aportar a otros proyectos."
+          answer_3_html: "Si! recibirás de vuelta el 100% de lo que pagaste en forma de créditos para apoyar otros proyectos de LittleBigMoney."
+          answer_4_html: "No hay problema! Solo tienes que entrar a la pestaña %{link}, dentro de los 60 días después de tu apoyo y solicitar una devolución de cargo. Si pagaste con tarjeta de crédito, se hará el reembolso en la próxima factura. El costo de esta transacción será cargado a tu tarjeta de crédito."
+          answer_5_html: "Cuando tu recompensa este lista, %{link} vamos a contactarte para enviarla o entregarla."
+      create:
+        brazil_address_title: "Completa los espacios si la transacción fue realizada en Colombia"
+        credits_notice_html: "Esta colaboración será pagada con tus créditos. Después de la confirmación recibirás <strong>%{credits}</strong> en créditos para apoyar otros proyectos."
+        live_in_brazil: "Si vives en Colombia, por favor marca el recuadro"
+        error: "Oops! Hubo un error mientras se registraba la colaboración. Por favor intenta de nuevo."
+        international:
+          description: "Puedes usar PayPal para realizar pagos internacionales"
+          important_html: "<p>PayPal esta destinado para pagos internacionales. Esto es porque tienes solo 60 días para recibir un eventual reembolso de PayPal sin pagar recargos.</p><p>En caso de que realices el pago por PayU, tu debes solicitar el reembolso.</p><p>Si esto no es posible, no te preocupes siempre vamos a devolver tu dinero. Si el reembolso de PayPal es hecho 60 días después, debes pagar un recargo a PayPal de aproximadamente 6% por transacción.</p>"
+          submit: "Realizar el pago con PayPal"
+          title: "¿Quieres realizar un pago internacional?"
+        review_with_reward_html: "Vas a aportar <strong>%{value}</strong> y recibir la siguiente recompensa:"
+        review_without_reward_html: "Vas a aportar <strong>%{value}</strong> pero no quieres ninguna recompensa por esto."
+        submit:
+          credits: "Confirmar apoyo con créditos"
+          moip: "Realizar el pago por medio de PayU"
+        subtitle: "Este es el último paso para hacer la diferencia y ser parte de este proyecto."
+        title: "Completa y revisa tu información"
+        choose_payment: "¿Cómo quieres pagar?"
+        choose_payment_subtitle: "Selecciona un tipo de pago"
+        choose_credit_card: PayPal
+        choose_boleto: "Pagos de Colombia"
+        cpf: "Para continuar indica la opción:"
+        payment_card: "Pago con trajeta"
+        owner_card: "Datos del tarjetahabiente"
+        number_card: "Datos de la tarjeta"
+        payment_boleto: "Pago por Baloto"
+        select_boleto: "Para continuar, por favor seleccione:"
+        payment_account: "Pago con débito o directo (próximamente)"
+        select_account: "Serás redireccionado a la página web de tu banco:"
+        you_are_about_html: "Estás muy cerca de ser parte del grupo que hace todo lo posible para que %{link} tenga éxito."
+        pay_with: "Pagar con"
+    create:
+      success: "Tu proyecto fue creado exitosamente! Te contactaremos próximamente. Muchas gracias!"
+    form:
+      permalink_hint: "Usa una URL simple. Tus colaboradores deben recordar esta dirección fácilmente para compartir tu proyecto."
+      important_html: "Recuerda que la comisión de LittleBigMoney es del 14%, si el proyecto tiene éxito."
+      add_reward: "Agregar recomepensa"
+      project_warning:
+        content_html: "¿Quieres aumentar las posibilidades de tener éxito? Asegúrate de revisar este %{link}"
+        help_link: "nuestra guía"
+      rewards_description: "Creemos que la mejor forma de inspirar a las personas para aportar a tu proyecto es ofreciendo recompensas muy buenas, creativas y sencillas. A los colaboradores les gustan las cosas exclusivas que les permiten conocer más sobre la vida y entorno tuyo. Tomate tu tiempo para ofrecer recompensas creativas para tus colaboradores."
+      rewards_title: Recompensas
+      submit: "Enviar proyecto"
+    index_header:
+      subtitle: "Colabora con la financiación de un proyecto, se parte de algo nuevo y GRANDE. Promueve un cambio colectivo! Tu eres la pieza que falta en estas historias."
+      subtitle_html: "Colabora con la financiación de un proyecto, se parte de algo nuevo y GRANDE.<br/>Promueve un cambio colectivo! Tu eres la pieza que falta en estas historias."
+      title: "Convierte lo que crees en una realidad"
+    recommended_header:
+      suggest_for_you: "Sugerido para ti"
+      highlight_project: "Proyectos destacados"
+      guidelines: "¿Cómo funciona?"
+      guidelines_subtitle: "Aprende sobre LittleBigMoney"
+    pending:
+      can_finish: ¿Terminaste?
+      finished: ¿Terminaste?
+      home_page: "Página principal"
+      id: Identificación
+      name: Nombre
+      no_projects: "No se encontraron proyectos"
+      order: Orden
+      project: Proyecto
+      slug: Slug
+      recommended: Recomendados
+      rejected: rechazada
+      submit: buscar
+      title: "Administración de proyecto"
+      user: Usuario
+      visible: "Siempre visible"
+    pending_backers:
+      anonymous: ¿anónimo?
+      confirmed: ¿confirmado?
+      credits: "¿Créditos usados?"
+      id: Identificación
+      key: Clave
+      no_backers: "Ningún colaborador encontrado."
+      project: Proyecto
+      refunded: "Colaboración reembolsada!"
+      requested_refund: ¿Reembolso?
+      reward: Recompensa
+      submit: buscar
+      title: "Administración de colaboraciones"
+      total_backed: "Total de colaboraciones"
+      total_backers: Colaboradores
+      total_backs: Colaboraciones
+      total_users: Usuarios
+      user: Usuario
+      value: Valor
+    project:
+      backed: Colaboraciones
+      reached: Alcanzado
+    project_backers:
+      empty: "Este proyecto necesita más entusiasmo. ¿Qué tal que si eres el primero en realizar un aporte?"
+    project_header:
+      subtitle_html: "Un proyecto de %{link} en"
+      without_city: "Un proyecto en %{category_name}, por %{author}"
+      with_city: "Un proyecto en %{category_name}, en %{city} por %{author}"
+    project_updates:
+      empty: "Aún no te tenemos novedades, pero muy pronto las habrán. No te las pierdas!"
+      submit: "Enviar actualización…"
+      comment: "Actualizar texto"
+      exclusive: "Sólo visible para colaboradores"
+      title: "Título para la actualización"
+      destroy: "Eliminar actualización"
+      destroy_confirmation: "¿Quieres eliminar la actualización?"
+      alert: "Te recordamos que todo post de novedades irá directamente al email de tus colaboradores. Por eso, revisa bien tus textos antes de enviarlos."
+    warnings:
+      minimize: "(Minimizar la información)"
+      support: "central de soporte"
+      support_html: "Tus preguntas y comentarios son muy importantes para nosotros. Te invitamos a que nos escribas durante el proceso %{link}."
+      draft:
+        alert: "ATENCIÓN! Este proyecto aún no se encuentra al aire. Te invitamos a que veas el borrador"
+        paragraph_1_html: "Este proyecto se encuentra en la fase de borrador, eso significa que la información no es definitiva hasta que se encuentre al aire. Por eso aprovecha y curiosea el video, la descripción y las recompensas. <strong>deja tu comentario o tu retroalimentación a este proyecto</strong>."
+        paragraph_2_html: "<strong>recuerda que</strong> LittleBigMoney es una plataforma que evalua y revisa la viabilidad y consistencia del proyecto durante todo su proceso. El proyecto será evaluado por el equipo de LittleBigMoney para que sea subido o no en caso de no cumplir con el perfil de la plataforma."
+      rejected:
+        alert: "ATENCIÓN! Este proyecto fue rechazado"
+        paragraph_1_html: "Este proyecto no cumple con el perfil de esta plataforma."
+      online:
+        alert: "Tu proyecto se encuentra al aire"
+        paragraph_1_html: "Ya todo está listo! Es hora de divulgar tu proyecto."
+        paragraph_2_html: "En general los proyectos exitosos tienen dos picos de recaudo. El primero se encuentra en la primera semana y el otro es en la recta final. Si tu proyecto no tiene un esquema similar, es bueno evaluar tu estrategia de divulgación. Puedes guiarte con nuestros consejos de <a href='https://docs.google.com/a/catarse.me/document/d/14l3tS-x3wHhYV1xalRugl9tpgcaG9ot7RCvmth-ApH8/edit' target='_blank'>COMO PROMOVER MI PROYECTO</a>. Recuerda que tus colaboradores se encuentran (en su gran mayoría) en tu propia red de contactos. Divulga lo más que puedas desde el comienzo hasta el final del plazo, y habla con las personas para que hagan su aporte y se sientan identificados para que muevan tu idea por las redes. Recuerda, no tengas miedo a pedir!"
+        info:
+          title: "Información importante"
+          item_1: "Los aportes pueden demorar hasta 3 días hábiles para que sean confirmados en la plataforma"
+          item_2: "Todo lo que es publicado en la pestaña de Actualizaciones es enviado para el correo de sus colaboradores."
+          item_3: "En la pestaña de Colaboradores podrás subir la lista de las personas que han hecho aportes a tu proyecto"
+          item_4: "En la pestaña de Edición puedes incluir fotos, videos e imágenes en la descripción."
+      waiting_funds:
+        alert: "Se acabó el tiempo!"
+        paragraph_1_html: "Después de que acabe el tiempo, tu proyecto estará esperando la confirmación de los aportes de última hora durante los 3 siguientes días hábiles."
+        paragraph_2_html: "En el caso de que tu proyecto alcance la meta, la transferencia del dinero será de la siguiente forma: El microempresario recibirá una transferencia bancaria de parte de Fundación Capital, para lo cual deberá realizar los trámites correspondientes que serán informados en su momento por el aliado local."
+        paragraph_3_html: "Todo el dinero será transferido a los colaboradores en forma de créditos. En un primer momento en forma de créditos para aportar a otros proyectos en LittleBigMoney, en todo caso recibirás un correo electrónico con instrucciones sobre cómo solicitar la reversión."
+        paragraph_4_html: "En caso de que tu proyecto recoja por lo menos el 30% de la meta, tendrá la posibilidad de ir al aire por segunda vez. Sin embargo estará sujeto a revisión del equipo de LittleBigMoney"
+      successful:
+        alert: "Felicitaciones! Tu proyecto fue exitoso :D"
+        paragraph_1_html: "La buena comunicación es la llave para cerrar muy bien tu campaña. Usa la pestaña de Actualizaciones para compartir informaciones sobre el desarrollo del proyecto y la entrega de las recompensas."
+        paragraph_2_html: "Las últimas semanas representan mucho, el contacto y la aproximación con tu público es definitivo al tener en medio asuntos como cariño, expectativa, confianza y dinero. Este es el momento de agradecer a tus colaboradores, hacer real tu proyecto y entregar tus recompensas!"
+        paragraph_3_html: "<strong>Recuerda que</strong> la transferencia del dinero será de la siguiente forma: El microempresario recibirá una transferencia bancaria de parte de Fundación Capital, para lo cual deberá realizar los trámites correspondientes que serán informados en su momento por el aliado local."
+      failed:
+        alert: "Este proyecto no alcanzo la meta :("
+        paragraph_1_html: "Todo el dinero será transferido a los colaboradores en forma de créditos. En un primer momento en forma de créditos para aportar a otros proyectos en LittleBigMoney, en todo caso recibirás un correo electrónico con instrucciones sobre cómo solicitar la reversión."
+    formatting_tips:
+      title: "Recomendaciones de formato"
+      media_html: "Si pegas la URL de una imagen, un video de Vimeo o Youtube, aparecerán en la descripción del proyecto. Inténtalo!"
+      link_html: "Al pegar una URL cualquiera, se volverá un link. Por ejemplo, http://meulink.com cambiará <a href=\"http://www.meulink.com.br\">http://www.meulink.com.br</a>"
+      link_text_html: "Si quisieras pegar un texto en el link, solo tienes que usar el siguiente formato: \"texto que quieras\": :http://sua.url. Por ejemplo, \"mi link\":http://milink.com cambiará <a href=\"http://www.milink.com.br\">mi link</a>."
+      bold_html: "Puedes poner tus textos en negrilla usando dos asteriscos (**) antes y después del texto que quieras editar. Por ejemplo **mi texto en negrilla** aparecerá como <strong>mi texto en negrilla</strong>."
+      italic_html: "Puedes poner tus textos en cursiva usando un guión de piso (_) ates y después del texto que quieras editar. Por ejemplo, _mi texto en cursiva_ aparecerá como <i>mi texto en cursiva</i>."
+    rewards:
+      reward_title: "Para %{minimum} o más"
+      reward_deliver_time: "Tiempo de entrega estimado: %{prevision}"
+      backs_to_confirm:
+        one: "1 colaboración esperando confirmación."
+        other: "%{count} colaboraciones esperando confirmación."
+      title: "Colabora y recibe"
+      versions: "Ver la versión anterior"
+      updated_at: "Última modificación"
+    send_mail:
+      success: "Tu proyecto fue creado exitosamente! Te contactaremos próximamente. Muchas gracias!"
+    show:
+      rejected: "Este proyecto no se ajusta <a href='https://docs.google.com/document/d/1Heh9LlvoSoD0lUfbmV5WlISJ3nqmGpEQiw15TBuCn-0/edit' target='_blank'> a nuestro criterio de selección.</a>"
+      waiting: "Este proyecto esta esperando aprobación, pronto te contaremos si irá al aire en LittleBigMoney ;)"
+      waiting_owner: "Para editar la información del proyecto, haz clic en \"editar proyecto.\" Puedes editar las recompensas en la columna de recompensas."
+      about_title: "El proyecto"
+      no_rewards_warning_title: "Crea aquí tus recompensas"
+      no_rewards_warning: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
+      guide_html: ~
+      reports:
+        no_backs: "Este proyecto no tiene colaboradores aún."
+        link_reports: "Descarga el reporte de "
+        all_backers: "Todos los colaboradores"
+        all_backers_without_reward: "Todos los colaboradores que no seleccionaron recompensa"
+        link_reward: "Descarga el reporte de los colaboradores que seleccionaron recompensa "
+      menu:
+        about: Sobre
+        backers: Colaboradores
+        comments: Comentarios
+        updates: Actualizaciones
+        edit: Editar
+        reports: Informes
+        add_reward: "Agregar recompensas"
+      share:
+        embed: "Incrustar código"
+        embed_title: "Incrustar código del proyecto en tu sitio web"
+        link: Enlace
+        link_title: "Compartir el enlace"
+        take_a_look: "Echa un vistazo al proyecto"
+        title: "Se parte y promociona este proyecto"
+    new:
+      subtitle: "Es la hora de hacerlo realidad! Queremos saber del potencial de tu empresa y de tu proyecto"
+      title: "Envía tu proyecto"
+      introduction_html: "Completa el siguiente formulario, danos buena información! Entre más información recibimos <br/>mejor completamos tu proyecto y más rápido irá al irá en la plataforma."
+      permalink_important: "Trata de no usar subrayado, guión etc."
+      permalink_hint: "Hazlo simple. Tus colaboradores deben poder recordar la URL de tu proyecto ; )"
+      important_html: "Ten en cuenta que el descuento total será de aproximadamente el 14% sobre el valor recogido, si logras completar el monto solicitado. Divide tu presupuesto final por 0.8492 para hallar el monto total que vas a solicitar."
+      about: "Describe tu proyecto utilizando esta guía!"
+      how_much_you_need: "¿Cuánto dinero quieres recaudar?"
+      how_much_hint_html: "Es importante recodar que la mayoría del dinero que recolectes vendrá de personas cercanas a ti (familiares, amigos y/o conocidos):<a href='%{href}' target='_blank'>Clickhere!</a> Por esta razón ten en cuenta que cuando calcules el monto total a solicitar en LittleBigMoney, debes tener al menos la capacidad de recolectar el 50% del mismo entre tu red."
+      how_much_important: "Ten en cuenta que la comisión cargada por LittleBigMoney es del 14% si logras completar el monto solicitado. Divide tu presupuesto final por 0,87 para hallar el monto a ser descontado."
+      days: "¿En cuántos días?"
+      days_hint: "En promedio los proyectos están al aire por 40 días."
+      days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
+      about_hint: "Cuéntanos sobre ¿qué quieres hacer? ¿cuánto necesitas y para qué? Se breve y puntual, pero no olvides darnos información que motive a los colaboradores. Después de todo, es tu creación y ellos necesitan conocer tu pasión!"
+      about_important: "Está información te servirá después para el perfil en linea. ¡Úsala! :D"
+      history_important: "Está información te servirá para el perfil en linea ¡Úsala! :D Cuéntanos lo que te hace diferente de otros emprendimientos"
+      cause_important: "Esta pregunta es clave para que veamos que causa hay atrás de tu emprendimiento o proyecto. Está información te servirá para el perfil en linea úsala :D"
+      description_important: "Está información te servirá después para el perfil en linea. ¡Úsala! :D"
+      impact_important: "Está información te servirá después para el perfil en linea. ¡Úsala! :D"
+      budget_important: "Indica el costo de cada rubro. Ej. Valor Total: 7'160.000  (i) Registro INVIMA: 3'160.000; (ii) Plan de mercadeo: 4'000.000, etc."
+      implementation_important: "Los proyectos de más de 8 meses creemos que son muy largos, trata de planear algo muy concreto!"
+      contact: "Deja tu email para que te podamos contactar"
+      links: "¿Dónde podemos conocer más sobre tu proyecto?"
+      links_important: "Estos enlaces nos ayudan a conocer más sobre ti"
+      links_hint: "Déjanos todos los enlaces que tienes, así podemos saber más sobre ti y tu proyecto. No tiene que ser algo formal o elegante, sólo unos enlaces útiles."
+      category: Categoría
+      tags_hint: "Antes de enviar tu proyecto, explora e inspírate con otros que han pasado por el sitio."
+      tags_important: "Revisa otros proyectos de tu categoría <a href='%{href}' target='_blank'>aquí</a>."
+      video: "¿Ya tienes un video? envía la URL!"
+      video_hint: "enlace de vimeo"
+      video_important: "Pega aquí la URL de tu video de Vimeo!"
+      how_know_important: "Súper! Llegamos a la última pregunta."
+      more_links_important: "Los medios sociales ayudan a que se difunda tu causa! Si tienes una comunidad online, es hora de juntarla para que ayude en tu proyecto."
+      first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."
+      online_days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
+      headline_important: "Se trata de una breve descripción del proyecto, 140 caracteres como máximo!"
+      name_important: "No excedas los 50 caracteres"
+      social: "Red de financiamiento"
+      facebook_hint: "http://facebook.com/__________"
+      twitter_hint: "http:// twitter.com/____________"
+      social_important: "Los medios sociales ayudan a que se difunda tu causa! Si tienes una comunidad online, es hora de juntarla para que ayude en tu proyecto."
+      know_us_via: "¿Cómo supiste sobre LittleBigMoney?"
+      knowus_important: "Súper! Llegamos a la última pregunta."
+      how_works: "¿Cómo tienes planeado movilizar a los colaboradores para recaudar el dinero?"
+      project_warning:
+        content_html: "¿Quieres aumentar las posibilidades de tener éxito? Asegúrate de revisar este %{link}"
+        help_link: "nuestra guía"
+      rewards: "¿Qué tipo de recompensas quieres ofrecer?"
+      rewards_hint: "Creemos que la mejor forma de inspirar a las personas para aportar a tu proyecto es ofreciendo recompensas muy buenas, creativas y sencillas. A los colaboradores les gustan las cosas exclusivas que les permiten conocer más sobre la vida y entorno tuyo. Tomate tu tiempo para ofrecer recompensas creativas para tus colaboradores."
+      rewards_important: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
+      submit: "Enviar el proyecto"
+      send_project: "Quiero enviar mi proyecto."
+      legend_html: "Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.<br><br>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.<br><br><b>Es muy importante:</b><i>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. Esperamos entiendas que si tu proyecto no cumple con el <a href='https://docs.google.com/a/catarse.me/document/d/1wLDS2lphQ6monovg9rEaTIDcxBD3FRZV9dfGKmajyj8/edit' target='_blank' >perfil</a>, podrá ser no aprobado por nuestro equipo.</i>"
+    twitter:
+      take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
+    video_embed:
+      a_project_by_html: "Un proyecto de %{link} en"
+  projects_mailer:
+    start_project_email:
+      subject: "Enviado por %{name}"
+      subject_html: "Enviado por %{link}"
+  registrations:
+    new:
+      site_title: Registro
+      submit: Registro
+      title: "Regístrate usando tu email"
+  remaining_plural: restantes
+  remaining_singular: restante
+  remove: Borrar
+  require_admin: "Debes ser administrador para realizar esta acción."
+  require_login: "Debes estar conectado para realizar esta acción"
+  require_permission: "No tienes permiso para realizar esta acción."
+  reward:
+    display_remaining: "%{remaining} de %{maximum} disponible"
+    dont_want: "No quiero una recompensa"
+    international: "<em> (%{value})</em>"
+    limited: Limitado
+    sold_out: Agotado
+  sessions:
+    auth:
+      success: "Ingreso exitoso. Bienvenid@, %{name}!"
+    destroy:
+      success: "Salida exitosa. Nos vemos!"
+    failure:
+      error: "Oops! Algo sucedió en tu ingreso. Por favor intenta de nuevo"
+  static:
+    faq:
+      title: "Preguntas Frecuentes"
+    guidelines_start:
+      accept: "Leí y entendí cómo funciona LittleBigMoney."
+      explore_curious: "Estoy curioseando!"
+      explore_projects: "Quiero explorar los proyectos."
+      submit: "Siguiente paso!"
+      send_project: "Quiero enviar mi proyecto."
+      subtitle: "Entérate, paso a paso, cómo hacer viable tu proyecto a través de LittleBigMoney"
+      title: "¿Cómo funciona LittleBigMoney?"
+      introduction: "LittleBigMoney es una herramienta diferente – y colaborativa – para impulsar tu idea y sacar tu proyecto del papel"
+      legend_html: "Presta atención a los pasos e instructivos de la plataforma, y decide si <br>LittleBigMoney es la alternativa adecuada para financiar tu proyecto o idea"
+      title_one: "Envía tu proyecto"
+      step_one: "Los proyectos son acciones concretas! Tenemos los brazos abiertos para recibir iniciativas de todo tipo: grandes, pequeñas, divertidas, tradicionales, innovadoras, comunitarias... Nos gustan aquellos proyectos que requieren poco dinero, pero que generan un gran impacto en sus comunidades"
+      title_two: Revisar
+      step_two: "Una vez recibido tu proyecto, este será revisado por nuestro equipo. El objetivo es dar recomendaciones, para <strong>aumentar las posibilidades de éxito de tu proyecto.</strong> Recuerda que nuestro fin es que tu proyecto tenga éxito. Nosotros sólo ganamos cuando tu ganas!"
+      title_three: "¿Listo para salir al aire?"
+      step_three: "Una vez tu proyecto está listo, podrá salir al aire, y ejecutar la campaña de promoción. Durante este tiempo debes estar muy atento al perfil de tu proyecto, estar muy atento a las actualizaciones y solicitudes de información, así como atraer a tantas personas como puedas para que tu proyecto alcance la meta de recaudación"
+      title_four: "Cumple tu meta"
+      step_four: "Durante tu campaña en línea, tienes la oportunidad de repensar el monto solicitado y las actividades, siempre y cuando informes a tu público sobre estos cambios. Si al final tu proyecto no llega a la meta, el dinero recogido regresará a tus aportantes. Alcanzar el 100% del recaudo, garantiza a tus aportantes que podrás ejecutar un proyecto realizable"
+      title_requirements: "Requisitos para enviar proyectos"
+      creative: "Ideas creativas y realizables"
+      colective: "Impacto y beneficios colectivos"
+      nonprofit: "Recompensas no financieras"
+      donation: "No apoyamos proyectos personales o sin resultados claros"
+      video: "Hacer un video"
+      more_questions: "listo! pero cuéntame un poco más de LittleBigMoney..."
+      title_magic: "Nuestra fórmula mágica"
+      magic: "Creemos que propiciar encuentros entre personas que compartan intereses al rededor de un proyecto, es la mejor forma de volverlos realidad e incrementar su potencial. Por eso, utiliza LittleBigMoney como un canal para generar una red con un objetivo COMÚN."
+      title_money: "¿De dónde viene el dinero que hace posible la realización de los proyectos?"
+      money: "Al menos un 50% vendrá de tu red de contactos. LittleBigMoney es un medio que te permite aproximarte a personas afines a tus ideas y trabajo, para que así puedas generar una red de colaboradores a través de la divulgación en redes sociales, periódicos, revistas, blogs y claro tus sitios de reunión favoritos."
+      title_work: "¿Hay que dedicarle mucho tiempo?"
+      work: "Si mucho! En internet no hay \"dinero fácil\". Tendrás que trabajar bastante antes, durante y después del periodo de duración de tu proyecto. Aunque no es posible saber cómo será el resultado de estos esfuerzos hasta el final de la campaña en línea. Este proceso te será útil para perfeccionar tu proyecto y fortalecer una red de personas que creen en tu trabajo."
+      title_costs: "¿Qué costo tiene usar LittleBigMoney?"
+      costs: "Registrarse, enviar un proyecto y realizar una colaboración no tiene costo alguno. Cuando tu proyecto cumple la meta, LittleBigMoney cobra una comisión del 6%. Adicionalmente los medios de pago cobran una comisión entre el 5% y 7% sobre el total de los fondos movilizados, esta variación de la tasa corresponde al número de transacciones locales e internacionales realizadas, así como la tasa de cambio."
+      why: "¿Por qué LittleBigMoney?"
+      intro: "Antes que nada, es relevante que sepas el por qué de esta nueva alternativa de financiación y la importancia del colectivo como fuente de colaboración:"
+      why_one: "Poca intermediación y bajo riesgo financiero; sin intereses, sin acciones, y una promoción al aire sin costo alguno. Pero sobre todo, con mucha emoción y diversión."
+      why_two: "Un gran esfuerzo en la comunicación de tu proyecto puede expandir rápidamente tus ideas hacia mucha gente, mejorando tus propuestas, y fortaleciendo tu red de colaboradores."
+      why_three: "Ampliando tu red y cercanías, tu campaña puede abrir puertas para nuevos proyectos, además de nuevas ideas, aliados y conexiones inesperadas."
+    guidelines_tips:
+      title: "Ya casi!"
+      subtitle: "Antes de que envíes tu proyecto, vale la pena revisar algunos puntos importantes."
+      introduction_html: "Sabemos quieres estar rápidamente al aire con tu proyecto, <br> pero antes piensa unas respuestas sobre las siguientes preguntas"
+      legend_html: "Tener claridad en estas respuestas con seguridad ayudarán mucho <br> en la estructuración de tu proyecto, aumentando tus posibilidades de tener un financiamiento exitoso"
+      title_one: "¿Qué te inspiró a hacer este proyecto?"
+      tip_one: "Las personas sólo se logran conectar con un proyecto cuando perciben la importancia de una causa para la sociedad o para la persona que lidera la campaña. Por eso, es importante tener claro lo que te inspira y tus motivaciones, y describe esto en la formulación del proyecto."
+      title_two: "¿Cuál es el foco?"
+      tip_two: "LittleBigMoney es una excelente herramienta para darle un empujón a tus ideas o para incrementar tu desarrollo como micriempresari@. Definir objetivamente a donde quieres llegar es una de las mejores formas de movilizar personas. Eso incluye conocer bien el público que será beneficiado por tu iniciativa."
+      title_three: "¿Cuál es tu meta?"
+      tip_three: "Calcula todos los costos del proyecto y los envíos de las recompensas. También ten en cuenta tu habilidad para atraer a personas en orden de definir tu meta financiera."
+      title_four: "¿Cuál es el plazo para recaudar la totalidad del dinero?"
+      tip_four: "El plazo máximo son 90 días, pero recuerda: Debes dedicar intensamente tiempo y esfuerzo, antes y durante el periodo de la campaña, si quieres tener éxito. No subestimes esta etapa, es importante mantener un entusiasmo para no sentir cansancio en medio del camino, por eso nosotros te recomendamos plazos de 45 o 60 días, igual es tu decisión!"
+      title_five: "¿Has pensado acerca de las recompensas de tus proyectos?"
+      tip_five: "Las recompensas son promesas que estás haciendo de forma pública. Es importante que consideres tu capacidad de poder cumplir con ellas. Piensa en la facilidad de entrega. Aquí valen recompensas que tengan un valor más simbólico y/o inmaterial como: archivos para desacargar, información interesante, productos tuyos, besos y abrazos"
+      title_six: "¿Ya está listo tu video?"
+      tip_six: "Tu video es la carta de presentación de tu proyecto. Generalmente es el primer contacto con posibles colaboradores, por eso recomendamos tener especial cuidado en el guión (especialmente en los primeros 30 segundos), en el audio y la calidad de la imagen (HD es recomendado)."
+      title_seven: "¿Cómo vas a movilizar tu red?"
+      tip_seven: "Es importante planear estratégicamente la movilización de las redes, tanto antes como durante del plazo de la finalización del proyecto. Recomendamos distribuir tu trabajo semanalmente con tu red según la proximidad que logres con tu colaboradores."
+      title_eight: "¿Cómo será usado el dinero?"
+      tip_eight: "Abre tu presupuesto para que todos sepan un poco más de cómo serán usados los aportes y colaboraciones. La TRANSPARENCIA lo es todo en este proyecto. Puedes incluir un link para una hoja de cálculo de GOOGLE DOCS, y de esta forma se puede descargar tu plan de fortalecimiento."
+      explore_curious: "Estoy curioseando!"
+      explore_projects: "Quiero explorar los proyectos."
+      submit: "Siguiente paso!"
+      send_project: "Quiero enviar mi proyecto"
+      guide: "Descarga aquí una guía completa con todos los tips para hacer tu proyecto en LittleBigMoney."
+      guide_url: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit?usp=sharing"
+    guidelines_backers:
+      title: "Quiero aportar a este proyecto!"
+      subtitle: "Entiende paso a paso como aportar a un proyecto de LittleBigMoney."
+      introduction: "LittleBigMoney es una excelente forma de hacer parte de causas en las que creas"
+      legend_html: "Creemos que hacer parte de un proyecto son ese tipo de cosas que no sabemos porqué, pero nos hace sentir muy bien!"
+      title_one: "Explora el proyecto"
+      step_one: "Para entender un proyecto primero  mira el video, lee la descripción, y luego navega por los links. Si consideras que ese proyecto merece salir del papel, sigue adelante!"
+      title_two: "Decide cuánto quieres aportar"
+      step_two: "Una buena forma de decidir con cuánto quieres aportar es observar las recompensas que l@s microempresari@s ofrecen a cambio de tu aporte."
+      title_three: "Haz efectivo tu aporte"
+      step_three: "Llena tus datos y revísalos. Luego, decide cuál es el método de pago que se acomoda más a ti.<br/></br><a href='https://docs.google.com/document/d/1clhFsbWPZiVZeAZNf3g0pj58CFIHAsBGieNVlG5JPBM/edit' target='_blank'>Haz clic acá para saber más sobre los medios de pago</a>"
+      title_four: "Pasa la bola!"
+      step_four: "Ahora haces parte de la comunidad de est@ microempresari@. Pasa la bola de este proyecto por tus redes sociales y espera las novedades y el aviso en la recta final."
+      title_requirements: "Recuerda: en LittleBigMoney es \"todo o nada\""
+      sucessfull_title: "Si el proyecto logra o supera los aportes requeridos"
+      sucessfull: "El proyecto ha sido exitoso! Su microempresari@ recibirá el dinero y se pondrá en contacto con sus colaboradores."
+      not_sucess_title: "Si el proyecto no tiene tantos aportes..."
+      not_sucess: "Recibes el valor de tu aporte integralmente en forma de créditos (para apoyar otro proyecto), según las reglas de los <a href='%{terms}' target='_blank'>terminos de uso</a>."
+      title_not_funded: "Si el proyecto no cumple la meta, ¿cómo uso mis créditos?"
+      not_funded: "Recibirás tus créditos en tu perfil de LittleBigMoney. En el momento que quieras escoger otro proyecto al que quieras aportar, en la ventana de selección de recompensas, tendrás un campo para utilizar tu crédito."
+      more_questions: "Muero por apoyar un proyecto, ¿hay algo más que deba saber?"
+      title_backer: "¿Cómo se que mi aporte fue exitoso?"
+      backer: "Recibirás un email de confirmación. Tu aporte quedará registrado en la pestaña de COLABORADORES del proyecto que apoyaste."
+      title_rewards: "Si el proyecto es exitoso, ¿cómo obtengo mi recompensa?"
+      rewards: "Es compromiso del microempresario del proyecto entrar en contacto y organizar contigo como será la entrega de la recompensa escogida. Si eso no sucede, envíale un mail cobrando! Si aún así no responde... nos puedes contactar, que nosotros le tiramos las orejas! :)"
+      title_credits: "Si el proyecto no cumple la meta, ¿cómo uso mis créditos?"
+      credits: "Recibirás tus créditos en tu perfil de LittleBigMoney. En el momento que quieras aportar tus créditos a otro proyecto, en la ventana de selección de recompensas tendrás un campo para utilizar tu crédito."
+      title_money: "¿Qué pasa si no quiero usar mis créditos?"
+      money: "No hay problema! solo debes entrar a tu perfil (Mis créditos) y solicitar un reembolso cumpliendo con los términos de uso. También puedes enviar un correo a littlebigmoney@fundacioncapital.org con tu solicitud."
+      other_backers: "¿PUEDO COLABORAR DE OTRAS FORMAS?"
+      intro: "Conoce otras formas de colaborar con el proyecto en que crees"
+      other_one: "Trae otros dos amigos para que  como tú aporten al proyecto"
+      other_two: "Cuéntale a todo el mundo lo increíble que es el proyecto con el que colaboraste en LittleBigMoney y anímalos para que aporten."
+      other_three: "¿Tienes un amigo periodista? Puedes recomendarle que escriba en Blog."
+      other_four: "Puedes hacer un video de apoyo al proyecto como el que hicieron ellos: http://vimeo.com/46233018"
+      other_five: "Envía un email al microempresari@ preguntando cómo puedes ayudr aún más."
+      submit: "ESTOY CURIOSEANDO!"
+      send_project: "Quiero enviar un proyecto"
+      explore_curious: "ME APUNTO!"
+      explore_projects: "Quiero aportar a este proyecto!"
+    guidelines:
+      title: "Cómo funciona"
+      subtitle: "Conoce un poco más de LittleBigMoney"
+      introduction_html: "LittleBigMoney es un espacio de colaboración entre individuos, <br>que juntos permiten la realización de proyectos con impacto social o ambiental."
+      legend_html: |-
+          Bienvenidos a este tu espacio! Un lugar hecho para ustedes, donde con pequeños aportes puedes lograr GRANDES resultados. <br><br> Hoy podemos ayudar y contribuir en el crecimiento de muchas micro-empresas, que contribuyen en el crecimiento de tu país, y el fortalecimiento económico de muchas comunidades. 
+          LittleBigMoney es una alternativa que conecta a miles de personas con muchos de sueños de muchos micro-empresarios, y cada uno sea parte de una comunidad en la que las pequeñas cosas se hacen GRANDES.
+      submit: "ENVIAR TU PROYECTO"
+      send_project: "Entérate cómo subir tu proyecto"
+      explore_curious: "APORTAR A UN PROYECTO"
+      explore_projects: "cómo apoyar con un proyecto"
+    about:
+      title: "¿Quiénes somos?"
+      subtitle: "Conoce a las pequeñas personas que hacen grandes cosas! <3"
+      introduction: "¿Quiénes son? ¿Qúe comen? ¿Cómo trabajan en red? Todo eso lo podrás ver ahora en Quiénes Somos."
+      name_one: "Yves Moury"
+      image_one: "http://s22.postimg.org/6mrb6hi5d/yves_wp.jpg"
+      place_one: Bélgica
+      title_one: "Presidente y Director Ejecutivo"
+      text_one: "Economista e Ingeniero de Gestión por la Universidad de Lovaina en Bélgica, y Posgraduado en Antropología Social y Cultural, Administración, Banca e Informática, y Finanzas para el Desarrollo por la misma universidad. Su experiencia de más de 25 años en desarrollo internacional y reducción de la pobreza incluye consultorías e investigaciones para agencias y organizaciones internacionales como BID, Unión Europea, FIDA, ONUDI, OIT y PNUD, y con entidades públicas y privadas, corporaciones financieras y universidades en Europa, África, Asia y América Latina."
+      name_two: "Franz Gomez"
+      image_two: "http://s22.postimg.org/gszwph2jl/franz_gomez_wp.jpg"
+      place_two: Bolivia
+      title_two: "Director de Inclusión Financiera"
+      text_two: "Economista graduado de la Universidad Mayor de San Andrés, Bolivia. Tiene un Master en Economía y un Doctorado (Ph.D.) en Desarrollo Económico en la Universidad Estatal de Ohio, Estados Unidos. Es especialista en microfinanzas y finanzas rurales, con amplia experiencia en asesoramiento técnico a entidades gubernamentales e instituciones financieras para el diseño e implementación de políticas de inclusión financiera y protección social. Ha trabajado como consultor e investigador en varios países en América Latina y el Caribe, Europa y Asia."
+      name_three: "Paula Rodriguez Rueda"
+      image_three: "http://s23.postimg.org/n736tzinv/paula_wp.jpg"
+      place_three: Colombia
+      title_three: "Coordinadora de Proyecto"
+      text_three: "Es Master en Relaciones Internacionales de la Universidad Javeriana en Bogotá y en Public Management del SDA Bocconi School of Management de Italia. Ha trabajado con el sector público colombiano abriendo mercados exteriores a pequeñas y medianas empresas colombianas, y también con empresas privadas prestadoras de servicios públicos, apoyando el diseño de nuevo proyectos de inversión y licitaciones públicas."
+      name_four: "María Antonia Hoyos"
+      image_four: "http://s22.postimg.org/s6mg0od29/tona_wp.jpg"
+      place_four: Colombia
+      title_four: "Oficial de Operaciones"
+      text_four: "Profesional en Gobierno y Relaciones Internacionales, con énfasis en Gestión Pública de la Universidad Externado de Colombia. Experiencia en Gerencia y Formulación de proyectos sociales, Fundraising y gestión de Asistencia Técnica Internacional para pequeñas y medianas empresas colombianas. Trabajó en la Fundación CINEP/Programa por la Paz como Profesional Junior de la Gerencia de Proyectos y realizó un año de pasantía en la Dirección de Cooperación y Convenios de PROEXPORT."
+      name_five: "Veruschka Zilveti"
+      image_five: "http://s22.postimg.org/bgb2bcen5/veru_wp.jpg"
+      place_five: Bolivia
+      title_five: "Coordinadora de Proyecto"
+      text_five: "Economista por la Universidad Católica de Bolivia, con un Posgrado en Gestión y Organización de Entidades Non-Profit. Cuenta con amplia experiencia en proyectos de desarrollo rural y en el trabajo con comunidades rurales. En el FIDA trabajó durante 8 años analizando estrategias de reducción de la pobreza y herramientas para el fortalecimiento el acceso a mercados de emprendimientos rurales."
+      name_six: "Javier Felipe Hidalgo"
+      image_six: "http://s22.postimg.org/wh13w9i5d/javier_wp.jpg"
+      place_six: Colombia
+      title_six: "Oficial de Comunicaciones"
+      text_six: "Comunicador social y periodista con énfasis en la gestión de la comunicación empresarial de la Universidad Externado de Colombia. Experiencia en manejo y creación de comunidades en redes y creación de estratégias de comunicación organizacional. Trabajó como voluntario en la fundación CISV de Colombia como entrenador de liderazgo en educación experiencial y realizó labores de fotografía en la Corporación Coral y Orquestal de Colombia."
+      name_seven: ""
+      image_seven: ""
+      place_seven: Bogotá
+      title_seven: ""
+      text_seven: ""
+      name_eight: ""
+      image_eight: ""
+      place_eight: Bogotá
+      title_eight: ""
+      text_eight: ""
+    privacy:
+      title: "Políticas de Privacidad"
+    terms:
+      title: "Término de uso"
+  terms: "Términos de uso"
+  user:
+    backs_text_one: "Solamente colaboró con este proyecto hasta ahora"
+    backs_text_two: "Colaboró con este y un proyecto más"
+    backs_text_many: "Colaboró con este y %{total} proyectos más"
+    no_name: "Sin nombre"
+    google_account: "Cuenta Google"
+  users:
+    set_email:
+      site_title: "Define tu email"
+      title: "Define tu email"
+      submit: "Grabar mi email y continuar"
+    show:
+      attention: Atención
+      tabs:
+        backed_projects: "Total de colaboraciones"
+        created_projects: "Proyectos creados"
+        comments: Comentarios
+        credits: Créditos
+        settings: Ajustes
+        unsubscribes: Notificaciones
+      user_social:
+        email: "Envíame un correo"
+        facebook: "Perfil de Facebook"
+        twitter: "Perfil en Facebook"
+    backs:
+      anonymous: "Colaboración anónima"
+      no_backs: "%{name} no has colaborado a ningún proyecto. Pero sabemos que es sólo cuestión de tiempo! :)"
+      no_backs_current_user_html: "No has colaborado a ningún proyecto aún. ¿Qué tal si <a href=\"/\">lo haces ya</a>?"
+      no_reward: "No seleccionaste recompensa"
+      title: "Proyectos con los que %{name} ha colaborado"
+      title_current_user: "Proyecto con los que he colaborado"
+      your_reward: "Tu recompensa"
+    unsubscribes:
+      title: "Selecciona los proyectos de los que deseas recibir notificaciones:"
+      updates: "Quiero recibir notificaciones de las actualizaciones"
+    current_user_fields:
+      cpf_hint_url: ~
+      moip_login_hint_url: ~
+      my_facebook: "Integrar con mi cuenta de Facebook"
+      bio_limit: "Sólo 140 caracteres"
+      updated: "Tu información fue actualizada"
+      update_social_info: "Actualizar información"
+      social_info: "Información de contacto"
+      twitter: "twitter (@usuario)"
+      facebook_link: "Perfil de Facebook (enlace completo)"
+      other_link: "Página web (blog, site, etc)"
+      change_password: "Cambiar mi contraseña"
+      current_password_hint: "<i>Necesitamos tu contraseña actual para confirmar los cambios.</i>"
+      email_hint: "Tu email sólo será utilizado para comunicaciones que te enviaremos desde LittleBigMoney. No será visible en tu perfil y lo daremos al microempresario para que pueda entregarte la recompensa."
+      email_tooltip: "Haz clic aquí para completar tu email..."
+      gravatar_hint_html: "¿Quieres cambiar tu foto? Utiliza el %{link} con tu email.  Es tan sencillo como enviar una imagen y funciona para otros sitios también ;)"
+      local_avatar: "Mi Avatar"
+      submit_text: "Selecciona tu imagen"
+      submit: Enviar
+      my_data: "Mi perfil"
+      newsletter: "Quiero recibir noticias de LittleBigMoney por email"
+      password_hint: "<i>Deja en blanco si no quieres hacer cambios.</i>"
+    header:
+      bio_tooltip: "Cuéntanos más sobre ti haciendo clic aquí..."
+      name_tooltip: "Haz clic aquí para agregar tu nombre"
+    projects:
+      here: aquí
+      no_projects: "%{name} no ha iniciado ningún proyecto en LittleBigMoney. Esperamos que la inspiración llegue pronto!"
+      no_projects_current_user_html: "No has enviado ningún proyecto a LittleBigMoney. Deja que llegue la inspiración y %{link} para empezar!"
+      title: "Proyectos de %{name}"
+      title_current_user: "Mis Proyectos"
+  users_mailer:
+    notification_email:
+      alt: "Debes habilitar la opción \"ver imágenes\" para ver este mensaje."
+      forward: "Reenviar a mis amigos"
+      hello: Hola
+      intro: "Si estás recibiendo este mensaje es porque te registraste en LittleBigMoney!"
+      mailee: "Mensaje enviado por SendGrid"
+      salutation: "Un fuerte abrazo,"
+      signature: "Equipo de LittleBigMoney"
+      unsubscribe: "Cancelar Suscripción"
+      unsubscribe_long: "Si ya no quieres recibir mas de estos emails"
+      weblink: "Ver en la página web"
+      whitelist: "Añadir contacto"
+      whitelist_long: "Agrega nuestra dirección de email a tus contactos"
