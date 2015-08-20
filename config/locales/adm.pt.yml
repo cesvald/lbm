@@ -142,6 +142,8 @@ pt:
         total_users: usuários
         user: Usuário
         value: Valor
+        project_state: "Estado do projeto"
+        channel: "Canal"
     statistics:
       index:
         menu: Estatísticas

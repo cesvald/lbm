@@ -322,8 +322,20 @@ class Backer < ActiveRecord::Base
 
   def payulatam_fee
     return unless self.display_payment_method == "PayULatam"
-    return 2750.0 if self.value < 37000.0
-    self.value * 0.05 + 900.0
+    if self.created_at < Date.parse('01-05-2015')
+      return 2750.0 if self.value < 37000.0
+      self.value * 0.05 + 900.0
+    else
+      if self.value < 30000
+        if self.payed_with == "PSE"
+          return self.value * 0.06
+        else
+          return self.value * 0.06 + 500.0
+        end
+      else
+        self.value * 0.0349 + 900.0
+      end
+    end
   end
 
   def g2c_fee(g2c_fee = ::Configuration[:g2c_fee].to_f)
