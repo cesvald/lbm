@@ -8,8 +8,11 @@ class ProjectObserver < ActiveRecord::Observer
     end
   end
 
+  def before_create(project)
+    project.catarse_fee = Configuration[:catarse_fee]
+  end
+  
   def after_create(project)
-    project.catarse_fee = ::Configuration[:catarse_fee]
     if (user = project.new_draft_recipient)
       Notification.create_notification_once(project.new_draft_project_notification_type,
                                             user,
