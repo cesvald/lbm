@@ -142,6 +142,8 @@ en:
         total_users: Users
         user: User
         value: Value
+        project_state: ~
+        channel: ~
     statistics:
       index:
         menu: Statistics

@@ -481,7 +481,7 @@ es:
         lbm_gift_cards: "Gift Card"
         lbm_gift_cards_info:
           title: "Gift Card"
-          coupon: "Código del cupo"
+          coupon: "Código del cupo (Sólo minúsculas y números)"
           accept_terms_html: "He leido y estoy de acuerdo con los <a href='http://soporte.littlebigmoney.org/knowledgebase/articles/245482-t%C3%A9rminos-de-uso-espa%C3%B1ol'>términos de uso para Gift Cards</a>."
           submit: "Usar Gift Card"
           success: "Pago con Gift Card realizado con éxito!"

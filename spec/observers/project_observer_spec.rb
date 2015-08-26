@@ -28,6 +28,17 @@ describe ProjectObserver do
     backer_unsuccessful
   end
 
+  describe "before_create" do
+    before do
+      ProjectObserver.any_instance.should_receive(:before_create).and_call_original
+      ::Configuration[:catarse_fee] = '0.14'
+    end
+    let(:project){ create(:project, video_url: 'http://vimeo.com/11198435', state: 'draft')}
+    it "should has catarse_fee value" do
+      project.catarse_fee.should_not be_nil
+    end
+  end
+
   describe "after_create" do
     before do
       ProjectObserver.any_instance.should_receive(:after_create).and_call_original

@@ -142,6 +142,8 @@ es:
         total_users: Usuarios
         user: Usuario
         value: Valor
+        project_state: ~
+        channel: ~
     statistics:
       index:
         menu: Estadísticas
