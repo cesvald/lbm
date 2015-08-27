@@ -375,7 +375,7 @@ class Project < ActiveRecord::Base
   end
 
   def new_draft_recipient
-    email = (channels.first.email rescue nil) || ::Configuration[:email_projects]
+    email = ::Configuration[:email_projects]
     User.where(email: email).first
   end
 
