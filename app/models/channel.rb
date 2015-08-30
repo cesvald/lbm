@@ -42,4 +42,7 @@ class Channel < ActiveRecord::Base
     Channel.where(permalink: subdomains)
   end
 
+  def parent_channel
+    Channel.where("group_subdomains LIKE ?", "%#{self.permalink}%").first
+  end
 end

@@ -13,7 +13,11 @@
       p.description   = truncate(@profile.description, length: 210)
       - if @profile.receive_projects?
         strong.headline = t('channels.projects.see_how_it_works')
-        p.buttons       = link_to t('channels.projects.how_it_works'), channels_about_path, class: [:ch_button, :ch_button_ok, :ch_button_green], title: t('channels.accessibility.how_it_works') 
+        p.buttons       = link_to t('channels.projects.how_it_works'), channels_about_path, class: [:ch_button, :ch_button_ok, :ch_button_green], title: t('channels.accessibility.how_it_works')
+      - elsif @profile.parent_channel.nil? && !@profile.group_channels.present?
+          p.buttons       = link_to t('channels.back_home'), Configuration[:base_url], class: [:ch_button, :ch_button_ok, :ch_button_green]
+      - elsif !@profile.parent_channel.nil?
+          p.buttons       = link_to t('channels.back_home'), root_url(subdomain: @profile.parent_channel.permalink), class: [:ch_button, :ch_button_ok, :ch_button_green]
     .clearfix
 
 - if @profile.banner_top_url.present?

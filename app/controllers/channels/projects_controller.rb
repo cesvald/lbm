@@ -18,5 +18,3 @@ class Channels::ProjectsController < ProjectsController
 
     end
 end
-
-

@@ -10,6 +10,7 @@ es:
     unfollow: "Dejar de seguir"
     subscribed: "%{count} siguiendo el canal"
     curator: Curador
+    back_home: "Volver al Home"
     adm:
       menu: "Moderación de Canal"
     projects:
