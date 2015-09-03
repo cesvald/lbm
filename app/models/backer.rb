@@ -290,6 +290,8 @@ class Backer < ActiveRecord::Base
       else
         "Libranza"
       end
+    elsif self.payment_method == "LbmGiftCard"
+      "#{self.payment_method} ( #{self.payment_id} )"
     else
       self.payment_method
     end
