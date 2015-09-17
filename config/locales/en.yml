@@ -489,6 +489,7 @@ en:
           error_duplicate: ~
           error_value: ~
           error_coupon: ~
+          error_expired: "This Gift Card has expired"
         payroll: ~
         payroll_info:
           title: ~

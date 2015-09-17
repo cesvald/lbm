@@ -489,6 +489,7 @@ pt:
           error_duplicate: "Este Gift Card já foi utilizado."
           error_value: "Este Gift Card não é deste valor informado."
           error_coupon: "Gift Card não encontrado."
+          error_expired: "Este Gift Card expirou"
         payroll: "Pagamento em folha"
         payroll_info:
           title: "Pagamento em folha"
