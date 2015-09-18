@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: git://github.com/cesvald/catarse_lbm_gift_cards.git
-  revision: e65e5badc0a7d7e4ee4c6c6753981086526ae7de
-  branch: test
+  revision: 0e87dd8d364ea8a0cc2878865113ea949a317457
+  ref: 0e87dd8d364ea8a0cc2878865113ea949a317457
   specs:
     catarse_lbm_gift_cards (0.0.2)
       rails (~> 3.2.6)
