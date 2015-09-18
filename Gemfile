@@ -44,9 +44,9 @@ gem 'catarse_payulatam', git: 'git://github.com/danielweinmann/catarse_payulatam
 
 # gem 'catarse_lbm_gift_cards', path: '../catarse_lbm_gift_cards'
   # gem for testing
-    gem 'catarse_lbm_gift_cards', git: 'git://github.com/cesvald/catarse_lbm_gift_cards.git',  branch: 'test'
+  #  gem 'catarse_lbm_gift_cards', git: 'git://github.com/cesvald/catarse_lbm_gift_cards.git',  branch: 'test'
   # gem for production
-    #gem 'catarse_lbm_gift_cards', git: 'git://github.com/cesvald/catarse_lbm_gift_cards.git',  ref: '81971ba30796449914fac7346b16a5f34be1d76b'
+    gem 'catarse_lbm_gift_cards', git: 'git://github.com/cesvald/catarse_lbm_gift_cards.git',  ref: '0e87dd8d364ea8a0cc2878865113ea949a317457'
 
 # Decorators
 gem 'draper'
