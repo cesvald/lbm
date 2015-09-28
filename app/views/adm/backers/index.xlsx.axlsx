@@ -9,7 +9,7 @@ wb.add_worksheet(name: "Colaboraciones") do |sheet|
     "Fee LBM",
     "Subtotal",
     "Pasarela",
-    "Código",
+    "Código"
     "Clave",
     "Medio",
     "TRM",
@@ -55,7 +55,7 @@ wb.add_worksheet(name: "Colaboraciones") do |sheet|
       backer.platform_fee,
       backer.subtotal,
       backer.display_payment_method,
-      backer.display_code,
+      backer.display_code
       backer.key,
       backer.payed_with,
       backer.conversion_fee,
