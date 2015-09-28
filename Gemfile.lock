@@ -273,6 +273,7 @@ GEM
       i18n (~> 0.6.0)
     multi_json (1.11.2)
     multipart-post (1.2.0)
+    net-http-persistent (2.9.4)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.8)
@@ -328,6 +329,10 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rack-timeout (0.0.4)
+    rack-wwwhisper (1.1.9)
+      addressable (~> 2.0)
+      net-http-persistent
+      rack (~> 1.0)
     rails (3.2.12)
       actionmailer (= 3.2.12)
       actionpack (= 3.2.12)
@@ -534,6 +539,7 @@ DEPENDENCIES
   quiet_assets
   rack-mini-profiler
   rack-timeout
+  rack-wwwhisper (~> 1.0)
   rails (= 3.2.12)
   rails_autolink (~> 1.0.7)
   ranked-model

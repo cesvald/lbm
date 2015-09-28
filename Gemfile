@@ -171,3 +171,5 @@ gem 'rails_autolink', '~> 1.0.7'
 
 # TODO: Take a look on dependencies
 gem "RedCloth"
+
+gem 'rack-wwwhisper', '~> 1.0'
