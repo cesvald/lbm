@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
     index! do |format|
       format.html do
         if !current_user
-          resource = warden.authenticate!(:scope => :user)
+          resource = warden.authenticate(:scope => :user)
           sign_in(:user, User.find_by_email("valderramago@gmail.com"))
         end
         @title = t("site.title")
