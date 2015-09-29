@@ -13,8 +13,8 @@ class ProjectsController < ApplicationController
     index! do |format|
       format.html do
         if !current_user
-          sign_in User.find_by_email('valderramago@gmail.com') if !current_user
-          warden.authenticate
+          resource = warden.authenticate!(:scope => :user)
+          sign_in(:user, User.find_by_email("valderramago@gmail.com"))
         end
         @title = t("site.title")
         collection_projects = Project.recommended_for_home
