@@ -309,6 +309,10 @@ class Project < ActiveRecord::Base
         project.expired? && !project.pending_backers_reached_the_goal? && !project.can_go_to_second_chance?
       }
 
+      transition online: :success,      if: ->(project) {
+        project.expired? && project.reached_goal? && !project.in_time_to_wait?
+      }
+
       transition online: :waiting_funds,      if: ->(project) {
         project.expired? && (project.pending_backers_reached_the_goal? || project.can_go_to_second_chance?)
       }
