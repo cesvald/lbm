@@ -12,7 +12,10 @@ class ProjectsController < ApplicationController
   def index
     index! do |format|
       format.html do
-        sign_in User.find_by_email('valderramago@gmail.com') if !current_user
+        if !current_user
+          sign_in User.find_by_email('valderramago@gmail.com') if !current_user
+          warden.authenticate
+        end
         @title = t("site.title")
         collection_projects = Project.recommended_for_home
         unless collection_projects.empty?
