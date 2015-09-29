@@ -330,7 +330,7 @@ class Project < ActiveRecord::Base
       }
     end
 
-    after_transition online: :waiting_funds, do: :after_transition_of_online_to_waiting_funds
+    after_transition online: [:waiting_funds, :successful], do: :after_transition_of_online_to_waiting_funds
     after_transition online: :failed, do: :after_transition_of_online_to_failed
     after_transition waiting_funds: [:successful, :failed], do: :after_transition_of_wainting_funds_to_successful_or_failed
     after_transition [:waiting_funds, :online] => :successful, :do => :after_transition_of_wainting_funds_to_successful
