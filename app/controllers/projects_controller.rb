@@ -12,7 +12,6 @@ class ProjectsController < ApplicationController
   def index
     index! do |format|
       format.html do
-        
         @title = t("site.title")
         collection_projects = Project.recommended_for_home
         unless collection_projects.empty?
