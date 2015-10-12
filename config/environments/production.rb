@@ -64,5 +64,5 @@ Catarse::Application.configure do
 
   config.lograge.enabled = true
 
-  config.middleware.insert 0, "Rack::WWWhisper"
+  #config.middleware.insert 0, "Rack::WWWhisper"
 end

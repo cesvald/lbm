@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   respond_to :html, except: [:backers]
   respond_to :json, only: [:index, :show, :backers, :update]
   skip_before_filter :detect_locale, only: [:backers]
-
+  
   def index
     index! do |format|
       format.html do

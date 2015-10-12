@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/catarse/catarse_mailchimp
-  revision: 45dc426a68e97e2e2490ee058b7033c70b5a83d4
-  ref: 45dc426
-  specs:
-    catarse_mailchimp (0.0.1)
-      mailchimp
-      supermodel
-
-GIT
   remote: git://github.com/cesvald/catarse_lbm_gift_cards.git
   revision: 0e87dd8d364ea8a0cc2878865113ea949a317457
   ref: 0e87dd8d364ea8a0cc2878865113ea949a317457
@@ -16,7 +7,16 @@ GIT
       rails (~> 3.2.6)
 
 GIT
-  remote: git://github.com/danielweinmann/catarse_paypal_express.git
+  remote: git://github.com/cesvald/catarse_mailchimp.git
+  revision: 45dc426a68e97e2e2490ee058b7033c70b5a83d4
+  ref: 45dc426
+  specs:
+    catarse_mailchimp (0.0.1)
+      mailchimp
+      supermodel
+
+GIT
+  remote: git://github.com/cesvald/catarse_paypal_express.git
   revision: e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff
   ref: e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff
   specs:
@@ -24,23 +24,6 @@ GIT
       activemerchant (>= 1.17.0)
       rails (~> 3.2.6)
       slim-rails
-
-GIT
-  remote: git://github.com/danielweinmann/catarse_payulatam.git
-  revision: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
-  ref: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
-  specs:
-    catarse_payulatam (0.1.11)
-      payulatam
-      rails (~> 3.2.6)
-
-GIT
-  remote: git://github.com/danielweinmann/payulatam.git
-  revision: e87c399c90a3650e74698c13481a446359508e67
-  ref: e87c399c90a3650e74698c13481a446359508e67
-  specs:
-    payulatam (0.0.2)
-      hashie
 
 GIT
   remote: git://github.com/ncri/validation_reflection.git
@@ -495,7 +478,6 @@ DEPENDENCIES
   catarse_lbm_gift_cards!
   catarse_mailchimp!
   catarse_paypal_express!
-  catarse_payulatam!
   chartkick
   coffee-rails
   compass-960-plugin
@@ -532,7 +514,6 @@ DEPENDENCIES
   omniauth-facebook (= 1.4.0)
   omniauth-twitter
   paper_trail (~> 2.7.1)
-  payulatam!
   pg
   pg_search
   postgres-copy
