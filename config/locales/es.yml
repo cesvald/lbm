@@ -477,7 +477,9 @@ es:
       review:
         error: "Oops! Hubo un error mientras se registraba la colaboración. Por favor intenta de nuevo."
         payulatam: "Pago nacional - PayU Latam"
+        mercadopago: "Pago nacional - MercadoPago"
         payulatam_title: "Vas a ser redirigido a la página de PayU Latam para completar el pago."
+        mercadopago_title: "Vas a ser redirigido a la página de MercadoPago para completar el pago."
         lbm_gift_cards: "Gift Card"
         lbm_gift_cards_info:
           title: "Gift Card"
@@ -524,6 +526,9 @@ es:
         payulatam_submit: "Ir a PayU Latam"
         payulatam_description: "Colaboración para el proyecto %{project_name} con el valor de %{value}"
         payulatam_error: "Oops! Algo sucedió con el envío de tu pago para PayU Latam. Por favor, intenta de nuevo."
+        mercadopago_submit: "Ir a MercadoPago"
+        mercadopago_description: "Colaboración para el proyecto %{project_name} con el valor de %{value}"
+        mercadopago_error: "Oops! Algo sucedió con el envío de tu pago para MercadoPago. Por favor, intenta de nuevo."
         success: "Tu colaboración fue exitosa. Muchas gracias!"
       new:
         cannot_back: "No es posible aportar a este proyecto ahora. Qué tal si aportas a otros proyectos."

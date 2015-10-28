@@ -78,6 +78,7 @@ RSpec.configure do |config|
     Configuration[:base_domain] = 'localhost'
     Configuration[:support_forum] = 'http://suporte.catarse.me'
     ::Configuration['email_contact'] = 'foo@bar.com'
+    ::Configuration[:partial_goal] = '500000'
   end
 
   def mock_tumblr method=:two

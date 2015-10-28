@@ -31,7 +31,7 @@ describe Project do
   end
 
   describe '.state_names' do
-    let(:states) { [:draft, :rejected, :online, :successful, :waiting_funds, :failed] }
+    let(:states) { [:draft, :rejected, :online, :partial_successful, :successful, :waiting_funds, :failed] }
 
     subject { Project.state_names }
 
@@ -145,7 +145,7 @@ describe Project do
       @project_01 = create(:project, online_days: -1, goal: 300000, state: 'online')
       @project_02 = create(:project, online_days: 5, goal: 300000, state: 'online')
       @project_03 = create(:project, online_days: -7, goal: 300000, state: 'online')
-      backer = create(:backer, project: @project_03, value: 3000000, state: 'confirmed')
+      backer = create(:backer, project: @project_03, value: 300000, state: 'confirmed')
       @project_03.update_attributes state: 'waiting_funds'
       pending_backer = create(:backer, project: @project_01, value: 340000, state: 'waiting_confirmation')
       @project_04 = create(:project, online_days: -7, goal: 300000, state: 'waiting_funds')
@@ -573,20 +573,20 @@ describe Project do
 
   end
 
-  describe '#pending_backers_reached_the_goal?' do
-    let(:project) { create(:project, goal: 200000) }
+  describe '#pending_backers_reached_the_partial_goal?' do
+    let(:project) { create(:project, goal: 800000) }
 
     before { project.stub(:pleged) { 100000 } }
 
-    subject { project.pending_backers_reached_the_goal? }
+    subject { project.pending_backers_reached_the_partial_goal? }
 
-    context 'when reached the goal with pending backers' do
-      before { 2.times { create(:backer, project: project, value: 120000, state: 'waiting_confirmation') } }
+    context 'when reached the partial goal with pending backers' do
+      before { 2.times { create(:backer, project: project, value: 320000, state: 'waiting_confirmation') } }
 
       it { should be_true }
     end
 
-    context 'when dont reached the goal with pending backers' do
+    context 'when dont reached the partial goal with pending backers' do
       before { 2.times { create(:backer, project: project, value: 30000, state: 'waiting_confirmation') } }
 
       it { should be_false }
@@ -605,7 +605,7 @@ describe Project do
 
     context "when project does belong to a channel" do
       let(:project) { channel_project }
-      it{ should == user }
+      it{ should == @user }
     end
   end
 
@@ -725,16 +725,6 @@ describe Project do
         its(:failed?) { should be_true }
       end
 
-      context 'when project is expired and the sum of the pending backers and confirmed backers reached 30% of the goal' do
-        before do
-          create(:backer, value: 100000, project: main_project, created_at: 2.days.ago)
-          create(:backer, value: 9_000_000, project: main_project, state: 'waiting_confirmation')
-          main_project.finish
-        end
-
-        its(:waiting_funds?) { should be_false }
-      end
-
       context 'when project is expired and have recent backers without confirmation' do
         before do
           create(:backer, value: 30_000_000, project: subject, state: 'waiting_confirmation')
@@ -747,7 +737,7 @@ describe Project do
       context 'when project already hit the goal and passed the waiting_funds time' do
         before do
           main_project.update_attributes state: 'waiting_funds'
-          subject.stub(:pending_backers_reached_the_goal?).and_return(true)
+          subject.stub(:pending_backers_reached_the_partial_goal?).and_return(true)
           subject.stub(:reached_goal?).and_return(true)
           subject.online_date = 2.weeks.ago
           subject.online_days = 0
@@ -758,7 +748,7 @@ describe Project do
 
       context 'when project already hit the goal and still is in the waiting_funds time' do
         before do
-          subject.stub(:pending_backers_reached_the_goal?).and_return(true)
+          subject.stub(:pending_backers_reached_the_partial_goal?).and_return(true)
           subject.stub(:reached_goal?).and_return(true)
           create(:backer, project: main_project, user: user, value: 25000, state: 'waiting_confirmation')
           main_project.update_attributes state: 'waiting_funds'

@@ -477,7 +477,9 @@ en:
       review:
         error: "Ooops. There was an error while registering your support. Please try again."
         payulatam: "National payment - PayU Latam"
+        mercadopago: "National payment - MercadoPago"
         payulatam_title: "You will be redirected to the PayU Latam page to complete the payment."
+        mercadopago_title: "You will be redirected to the MercadoPago page to complete the payment."
         lbm_gift_cards: ~
         lbm_gift_cards_info:
           title: ~
@@ -524,6 +526,9 @@ en:
         payulatam_submit: "Go to PayU Latam"
         payulatam_description: "Support for the project %{project_name} with the value of %{value}"
         payulatam_error: "Oops! Something happened with sending your payment to PayU Latam. Please try again."
+        mercadopago_submit: "Go to MercadoPago"
+        mercadopago_description: "Support for the project %{project_name} with the value of %{value}"
+        mercadopago_error: "Oops! Something happened with sending your payment to MercadoPago. Please try again."
         success: "Your support was successful. Thanks a lot!"
       new:
         cannot_back: "It's not possible to support this project right now. Please, support other projects."

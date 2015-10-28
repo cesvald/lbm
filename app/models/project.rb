@@ -172,6 +172,10 @@ class Project < ActiveRecord::Base
     rewards.sort_asc.where(id: backers.confirmed.select('DISTINCT(reward_id)'))
   end
 
+  def reached_partial_goal?
+    pledged >= ::Configuration[:partial_goal].to_f
+  end
+
   def reached_goal?
     pledged >= goal
   end
@@ -263,7 +267,14 @@ class Project < ActiveRecord::Base
   end
 
   def pending_backers_reached_the_goal?
+    puts backers.in_time_to_confirm.sum(&:value)
+    puts pledged
+    puts "come on !!!!!"
     (pledged + backers.in_time_to_confirm.sum(&:value)) >= goal
+  end
+
+  def pending_backers_reached_the_partial_goal?
+    (pledged + backers.in_time_to_confirm.sum(&:value)) >= ::Configuration[:partial_goal].to_f
   end
 
   def can_go_to_second_chance?
@@ -283,6 +294,7 @@ class Project < ActiveRecord::Base
     state :draft, value: 'draft'
     state :rejected, value: 'rejected'
     state :online, value: 'online'
+    state :partial_successful, value: 'partial_successful'
     state :successful, value: 'successful'
     state :waiting_funds, value: 'waiting_funds'
     state :failed, value: 'failed'
@@ -306,23 +318,31 @@ class Project < ActiveRecord::Base
 
     event :finish do
       transition online: :failed,             if: ->(project) {
-        project.expired? && !project.pending_backers_reached_the_goal? && !project.can_go_to_second_chance?
+        project.expired? && !project.pending_backers_reached_the_partial_goal? && !project.pending_backers_reached_the_goal? && !project.can_go_to_second_chance?
       }
 
       transition online: :successful,      if: ->(project) {
         project.expired? && project.reached_goal? && !project.in_time_to_wait?
       }
 
+      transition online: :partial_successful, if: ->(project) {
+        project.expired? && !project.reached_goal? && project.reached_partial_goal? && !project.in_time_to_wait?
+      }
+
       transition online: :waiting_funds,      if: ->(project) {
-        project.expired? && (project.pending_backers_reached_the_goal? || project.can_go_to_second_chance?)
+        project.expired? && (project.pending_backers_reached_the_partial_goal? || project.pending_backers_reached_the_goal? || project.can_go_to_second_chance?)
       }
 
       transition waiting_funds: :successful,  if: ->(project) {
         project.reached_goal? && !project.in_time_to_wait?
       }
 
+      transition waiting_funds: :partial_successful,  if: ->(project) {
+        !project.reached_goal? && project.reached_partial_goal? && !project.in_time_to_wait?
+      }
+
       transition waiting_funds: :failed,      if: ->(project) {
-        project.expired? && !project.reached_goal? && !project.in_time_to_wait? && !project.can_go_to_second_chance?
+        project.expired? && !project.reached_partial_goal? && !project.in_time_to_wait? && !project.can_go_to_second_chance?
       }
 
       transition waiting_funds: :waiting_funds,      if: ->(project) {
