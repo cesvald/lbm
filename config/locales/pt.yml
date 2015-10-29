@@ -433,6 +433,7 @@ pt:
       expired: finalizado
       rejected: rejeitado
       failed: "não financiado"
+      partial_successful: "parcialmente financiado"
       successful: financiado
       reached_goal: financiado
       waiting_confirmation: aguardando
@@ -464,6 +465,7 @@ pt:
         not_reached_goal: "Este projeto só será financiado se pelo menos %{goal} forem atingidos até %{date}"
         failed: "Este projeto não atingiu o mínimo de %{goal} até %{date} e não foi financiado"
         rejected: "Este projeto foi rejeitado"
+        partial_successful: "Este projeto foi parcialmente bem-sucedido e foi parcialmente financiado em %{date}"
         successful: "Este projeto foi bem-sucedido e foi financiado em %{date}"
         waiting_funds: "Aguardando a confirmação de boletos para saber se este projeto será financiado."
         draft: "Esse projeto é apenas um rascunho e ainda não está aberto para receber apoios."
@@ -683,6 +685,11 @@ pt:
         paragraph_2_html: "Caso seu projeto atinja a meta, o repasse do dinheiro acontecerá da seguinte forma: o pagamento será feito em até 5 dias úteis após o prazo de encerramento do projeto. Assim que você receber o dinheiro na sua Conta Para Vendedores no MoIP e solicitar o saque, levarão no máximo 4 dias úteis para o dinheiro chegar na sua conta corrente."
         paragraph_3_html: "Caso seu projeto não atinja a meta, todo dinheiro será devolvido aos apoiadores. A principio eles receberão de volta o valor da contribuição na forma de créditos para apoiar outros projetos na plataforma e receberão um e-mail com instruções sobre como pedir o estorno."
         paragraph_4_html: "Caso o seu projeto tenha atingido pelo menos 30% da meta financeira você está apto a solicitar a uma 2ª Chance."
+      partial_successful:
+        alert: "Parabéns! Seu projeto foi parcialmente bem sucedido =D"
+        paragraph_1_html: "Comunicação é a chave de ouro pra fechar essa campanha ;) use a Aba de Novidades para compartilhar informações sobre o desenvolvimento do projeto e a entrega de recompensas."
+        paragraph_2_html: "As últimas semanas representaram uma troca, um contato e uma aproximação entre você e seu público, envolvendo assuntos delicados como carinho, expectativa, confiança e dinheiro. Agora é hora de agradecer seus apoiadores, realizar o projeto e entregar as recompensas!!"
+        paragraph_3_html: "<strong>Lembrando que</strong> o repasse do dinheiro acontecerá da seguinte forma: o pagamento será feito em até 5 dias úteis após o prazo de encerramento do projeto. Assim que você receber o dinheiro na sua Conta Para Vendedores no MoIP e solicitar o saque, levarão no máximo 4 dias úteis para o dinheiro chegar na sua conta corrente."
       successful:
         alert: "Parabéns! Seu projeto foi bem sucedido =D"
         paragraph_1_html: "Comunicação é a chave de ouro pra fechar essa campanha ;) use a Aba de Novidades para compartilhar informações sobre o desenvolvimento do projeto e a entrega de recompensas."

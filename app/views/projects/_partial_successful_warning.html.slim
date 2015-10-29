@@ -1,0 +1,18 @@
+br
+#project_warning.bootstrap-alert
+  .alert.alert-warning
+    i= t('projects.warnings.partial_successful.alert')
+    #toggle_warning
+      = link_to t('projects.warnings.minimize'), '#'
+    #project_warning_text
+      br/
+      = t('projects.warnings.partial_successful.paragraph_1_html')
+      br/
+      br/
+      = t('projects.warnings.partial_successful.paragraph_2_html')
+      br/
+      br/
+      = t('projects.warnings.partial_successful.paragraph_3_html')
+      br/
+      br/
+      = t('projects.warnings.support_html', link: link_to(t('projects.warnings.support'), Configuration[:support_forum], target: '_blank'))

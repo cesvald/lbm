@@ -433,6 +433,7 @@ en:
       expired: expired
       rejected: Rejected
       failed: "not funded"
+      partial_successful: ~
       successful: funded
       reached_goal: funded
       waiting_confirmation: waiting
@@ -464,6 +465,7 @@ en:
         not_reached_goal: "This project will only be successful if it collects at least %{goal} until %{date}"
         failed: "This project didn't reach the goal of %{goal} before %{date} and wasn't supported"
         rejected: "This project wasn't accepted"
+        partial_successful: ~
         successful: "This project was successful and was funded on %{date}"
         waiting_funds: "Waiting for payment confirmation to know if the project will be supported."
         draft: "This project is in draft mode and is not open to supporters yet."
@@ -683,6 +685,11 @@ en:
         paragraph_2_html: "In the event that your project reaches its goal, the money transfer will be as follows: The microentrepreneur will receive a bank transfer from Fundación Capital, for which he must make the appropriate arrangements informed by the local ally."
         paragraph_3_html: "All the money will be transferred to the supporters in the form of credits. At first, these credits can support other projects in LittleBigMoney. In any case, you will receive an email with instructions on how to ask for a refund."
         paragraph_4_html: "In case your project collects at least 30% of its goal, it will have the possibility to go on online for a second time. However it will be reviewed by the LittleBigMoney team"
+      partial_successful:
+        alert: ~
+        paragraph_1_html: ~
+        paragraph_2_html: ~
+        paragraph_3_html: ~
       successful:
         alert: "Congratulations! Your project was successful :D"
         paragraph_1_html: "Good communication is key in your campaign. Use the Updates tab to share information about the project development and rewards delivery."

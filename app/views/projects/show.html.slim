@@ -34,7 +34,10 @@
 
     - if @project.waiting_funds? && can?(:update, @project)
       = render "waiting_funds_warning"
-
+    
+    - if @project.partial_successful? && can?(:update, @project)
+      = render "partial_successful_warning"
+      
     - if @project.successful? && can?(:update, @project)
       = render "successful_warning"
 

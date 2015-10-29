@@ -433,6 +433,7 @@ es:
       expired: finalizado
       rejected: Rechazado
       failed: "Sin éxito"
+      partial_successful: "parcialmente financiado"
       successful: Exitoso
       reached_goal: financiado
       waiting_confirmation: "Un momentico"
@@ -464,6 +465,7 @@ es:
         not_reached_goal: "Este proyecto sólo tendrá éxito si se recaudan al menos %{goal} hasta el %{date}"
         failed: "Este proyecto no alcanzo la meta de %{goal} antes del %{date} y por lo tanto no fue financiado"
         rejected: "Este proyecto no fue aceptado"
+        partial_successful: "Este proyecto fue financiado parcialmente con éxito el %{date}"
         successful: "Este proyecto fue financiado con éxito el %{date}"
         waiting_funds: "Esperando confirmación de los pagos para saber si el proyecto fue financiado."
         draft: "Este proyecto esta en borrador y no esta disponible para colaboraciones aún."
@@ -683,6 +685,11 @@ es:
         paragraph_2_html: "En el caso de que tu proyecto alcance la meta, la transferencia del dinero será de la siguiente forma: El microempresario recibirá una transferencia bancaria de parte de Fundación Capital, para lo cual deberá realizar los trámites correspondientes que serán informados en su momento por el aliado local."
         paragraph_3_html: "Todo el dinero será transferido a los colaboradores en forma de créditos. En un primer momento en forma de créditos para aportar a otros proyectos en LittleBigMoney, en todo caso recibirás un correo electrónico con instrucciones sobre cómo solicitar la reversión."
         paragraph_4_html: "En caso de que tu proyecto recoja por lo menos el 30% de la meta, tendrá la posibilidad de ir al aire por segunda vez. Sin embargo estará sujeto a revisión del equipo de LittleBigMoney"
+      partial_successful:
+        alert: "Felicitaciones! Tu proyecto fue parcialmente exitoso :D"
+        paragraph_1_html: "La buena comunicación es la llave para cerrar muy bien tu campaña. Usa la pestaña de Actualizaciones para compartir informaciones sobre el desarrollo del proyecto y la entrega de las recompensas."
+        paragraph_2_html: "Las últimas semanas representan mucho, el contacto y la aproximación con tu público es definitivo al tener en medio asuntos como cariño, expectativa, confianza y dinero. Este es el momento de agradecer a tus colaboradores, hacer real tu proyecto y entregar tus recompensas!"
+        paragraph_3_html: "<strong>Recuerda que</strong> la transferencia del dinero será de la siguiente forma: El microempresario recibirá una transferencia bancaria de parte de Fundación Capital, para lo cual deberá realizar los trámites correspondientes que serán informados en su momento por el aliado local."
       successful:
         alert: "Felicitaciones! Tu proyecto fue exitoso :D"
         paragraph_1_html: "La buena comunicación es la llave para cerrar muy bien tu campaña. Usa la pestaña de Actualizaciones para compartir informaciones sobre el desarrollo del proyecto y la entrega de las recompensas."

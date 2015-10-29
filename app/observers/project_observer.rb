@@ -94,7 +94,8 @@ class ProjectObserver < ActiveRecord::Observer
       ),
       project.user,
       {project_id: project.id, user_id: project.user.id},
-      project: project)
+      project: project
+    )
 
     if (user = User.where(email: ::Configuration[:email_payments]).first)
       Notification.create_notification_once(:adm_project_deadline,

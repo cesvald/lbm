@@ -19,7 +19,7 @@ class Adm::ProjectsController < Adm::BaseController
 
   def finish
     @project = Project.find params[:id]
-    if @project.online? && @project.reached_goal?
+    if @project.online? && (@project.reached_goal? || @project.reached_partial_goal?)
       @project.update_attributes online_days: ((Time.now - @project.online_date).to_i / (24 * 60 * 60) - 1), original_online_days: @project.online_days
       @project.finish
     end

@@ -13,6 +13,8 @@ script type="text/template" id="project_template"
       a href="<%= url %>"
         |<% if(successful) { %>
         = image_tag "successful.#{I18n.locale}.png"
+        |<% } else if(partial_successful) { %>
+        = image_tag "partial_successful.#{I18n.locale}.png"
         |<% } else if(waiting_funds) { %>
         = image_tag "waiting_confirmation.#{I18n.locale}.png"
         |<% } else { %>

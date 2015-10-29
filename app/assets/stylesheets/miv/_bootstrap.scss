@@ -717,11 +717,17 @@ pre code {
 .label-success {
   background-color: #468847;
 }
+.label-partial-success {
+  background-color: #0F558E;
+}
 .label-online {
   background-color: $dark_green;
 }
 .label-success:hover {
   background-color: #356635;
+}
+.label-partial-success:hover {
+  background-color: #062036;
 }
 .label-info {
   background-color: #3a87ad;

@@ -39,8 +39,8 @@
  end
 
 [
-  'confirm_backer','payment_slip','project_success','backer_project_successful',
-  'backer_project_unsuccessful','project_received', 'project_received_channel', 'updates','project_unsuccessful',
+  'confirm_backer','payment_slip','project_success', 'project_partial_success', 'backer_project_successful',
+  'backer_project_unsuccessful', 'backer_project_partial_successful', 'project_received', 'project_received_channel', 'updates','project_unsuccessful',
   'project_visible','processing_payment','new_draft_project', 'new_draft_channel', 'project_rejected',
   'pending_backer_project_unsuccessful', 'project_owner_backer_confirmed', 'adm_project_deadline',
   'project_in_wainting_funds', 'credits_warning', 'backer_confirmed_after_project_was_closed', 
