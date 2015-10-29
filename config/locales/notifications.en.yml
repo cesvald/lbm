@@ -36,6 +36,10 @@ en:
       subject: "Project successful: Some important information"
       header: "Project successful"
       text_html: ~
+    project_partial_success:
+      subject: ~
+      header: ~
+      text_html: ~
     project_unsuccessful:
       subject: "Your project was not successfully supported, but we would like your feedback :)"
       header: "Your project was not successfully supported :("
@@ -43,6 +47,10 @@ en:
     backer_project_successful:
       subject: "Hooray! The project %{project_name} was successful in LittleBigMoney"
       header: "Hooray! The project you supported was successful in LittleBigMoney"
+      text_html: ~
+    backer_project_partial_successful:
+      subject: ~
+      header: ~
       text_html: ~
     backer_project_unsuccessful:
       subject: "The project %{project_name} did not reach the expected support - Some useful information"

@@ -7,6 +7,7 @@ describe ProjectObserver do
   let(:project_in_wainting_funds){ create(:notification_type, name: 'project_in_wainting_funds') }
   let(:adm_project_deadline){ create(:notification_type, name: 'adm_project_deadline') }
   let(:project_success){ create(:notification_type, name: 'project_success') }
+  let(:project_partial_success){ create(:notification_type, name: 'project_partial_success') }
   let(:backer_successful){ create(:notification_type, name: 'backer_project_successful') }
   let(:backer_unsuccessful){ create(:notification_type, name: 'backer_project_unsuccessful') }
   let(:pending_backer_unsuccessful){ create(:notification_type, name: 'pending_backer_project_unsuccessful') }
@@ -91,14 +92,25 @@ describe ProjectObserver do
 
   describe "#notify_owner_that_project_is_waiting_funds" do
     let(:user) { create(:user) }
-    let(:project) { create(:project, user: user, goal: 100000, online_days: -2, state: 'online') }
+    let(:project) { create(:project, user: user, goal: 1000000, online_days: -2, state: 'online') }
 
-    before do
-      create(:backer, project: project, value: 200000, state: 'confirmed')
-      Notification.should_receive(:create_notification_once).with(:project_in_wainting_funds, project.user, {project_id: project.id}, {project: project})
+    context 'when project reached the goal' do
+      before do
+        create(:backer, project: project, value: 2000000, state: 'waiting_confirmation')
+        Notification.should_receive(:create_notification_once).with(:project_in_wainting_funds, project.user, {project_id: project.id}, {project: project})
+      end
+
+      it("should notify the project owner"){ project.finish }
     end
 
-    it("should notify the project owner"){ project.finish }
+    context 'when project reached the partial goal' do
+      before do
+        create(:backer, project: project, value: Configuration[:partial_goal], state: 'waiting_confirmation')
+        Notification.should_receive(:create_notification_once).with(:project_in_wainting_funds, project.user, {project_id: project.id}, {project: project})
+      end
+
+      it("should notify the project owner"){ project.finish }
+    end
   end
 
   describe "sync with mailchimp" do
@@ -135,6 +147,20 @@ describe ProjectObserver do
   end
 
   describe "notify_backers" do
+
+    context "when project is partial successful" do
+      let(:project){ create(:project, goal: 3_000_000, online_days: -7, state: 'online') }
+      let(:backer){ create(:backer, key: 'should be updated', payment_method: 'should be updated', state: 'confirmed', confirmed_at: Time.now, value: Configuration[:partial_goal], project: project) }
+
+      before do
+        backer
+        project.update_attributes state: 'waiting_funds'
+        Notification.should_receive(:create_notification_once).at_least(:once)
+        backer.save!
+        project.finish!
+      end
+      it("should notify the project backers"){ subject }
+    end
 
     context "when project is successful" do
       let(:project){ create(:project, goal: 30000, online_days: -7, state: 'online') }
@@ -179,6 +205,24 @@ describe ProjectObserver do
       it("should notify the project backers and owner"){ subject }
     end
 
+  end
+
+  describe '#notify_owner_that_project_is_partial_successful' do
+    let(:project){ create(:project, goal: 3_000_000, online_days: -7, state: 'waiting_funds') }
+
+    before do
+      ::Configuration[:facebook_url] = 'http://facebook.com/foo'
+      ::Configuration[:blog_url] = 'http://blog.com/foo'
+      project.stub(:reached_partial_goal?).and_return(true)
+      project.stub(:reached_goal?).and_return(false)
+      project.stub(:in_time_to_wait?).and_return(false)
+      project_partial_success
+      project.finish
+    end
+
+    it "should create notification for project owner" do
+      Notification.where(user_id: project.user.id, notification_type_id: project_partial_success.id, project_id: project.id).first.should_not be_nil
+    end
   end
 
   describe '#notify_owner_that_project_is_successful' do

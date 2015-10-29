@@ -34,24 +34,6 @@ class ProjectObserver < ActiveRecord::Observer
       project: project)
   end
 
-  def notify_owner_that_project_is_successful(project)
-    Notification.create_notification_once(:project_success,
-      project.user,
-      {project_id: project.id},
-      project: project)
-  end
-
-  def notify_admin_that_project_reached_deadline(project)
-    if (user = User.where(email: ::Configuration[:email_payments]).first)
-      Notification.create_notification_once(:adm_project_deadline,
-        user,
-        {project_id: project.id},
-        project: project,
-        from: ::Configuration[:email_system],
-        project_name: project.name)
-    end
-  end
-
   def notify_owner_that_project_is_rejected(project)
     Notification.create_notification_once(:project_rejected,
       project.user,
@@ -70,7 +52,16 @@ class ProjectObserver < ActiveRecord::Observer
     project.backers.confirmed.each do |backer|
       unless backer.notified_finish
         Notification.create_notification_once(
-          (project.successful? ? :backer_project_successful : :backer_project_unsuccessful),
+          (
+            case project.state
+            when 'successful'
+              :backer_project_successful
+            when 'failed'
+              :backer_project_unsuccessful
+            when 'partial_successful'
+              :backer_project_partial_successful
+            end
+          ),
           backer.user,
           {backer_id: backer.id},
           backer: backer,
@@ -89,12 +80,30 @@ class ProjectObserver < ActiveRecord::Observer
           {backer: backer, project: project, project_name: project.name })
       end
     end
-
-    Notification.create_notification_once(:project_unsuccessful,
+    
+    Notification.create_notification_once(
+      (
+        case project.state
+        when 'successful'
+          :project_success
+        when 'failed'
+          :project_unsuccessful
+        when 'partial_successful'
+          :project_partial_success
+        end
+      ),
       project.user,
       {project_id: project.id, user_id: project.user.id},
-      project: project) unless project.successful?
+      project: project)
 
+    if (user = User.where(email: ::Configuration[:email_payments]).first)
+      Notification.create_notification_once(:adm_project_deadline,
+        user,
+        {project_id: project.id},
+        project: project,
+        from: ::Configuration[:email_system],
+        project_name: project.name)
+    end
   end
 
   def sync_with_mailchimp(project)

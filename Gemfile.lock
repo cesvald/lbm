@@ -26,6 +26,23 @@ GIT
       slim-rails
 
 GIT
+  remote: git://github.com/danielweinmann/catarse_payulatam.git
+  revision: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
+  ref: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
+  specs:
+    catarse_payulatam (0.1.11)
+      payulatam
+      rails (~> 3.2.6)
+
+GIT
+  remote: git://github.com/danielweinmann/payulatam.git
+  revision: e87c399c90a3650e74698c13481a446359508e67
+  ref: e87c399c90a3650e74698c13481a446359508e67
+  specs:
+    payulatam (0.0.2)
+      hashie
+
+GIT
   remote: git://github.com/ncri/validation_reflection.git
   revision: 60320e6beb088808fd625a8d958dbd0d2661d494
   specs:
@@ -478,6 +495,7 @@ DEPENDENCIES
   catarse_lbm_gift_cards!
   catarse_mailchimp!
   catarse_paypal_express!
+  catarse_payulatam!
   chartkick
   coffee-rails
   compass-960-plugin
@@ -514,6 +532,7 @@ DEPENDENCIES
   omniauth-facebook (= 1.4.0)
   omniauth-twitter
   paper_trail (~> 2.7.1)
+  payulatam!
   pg
   pg_search
   postgres-copy

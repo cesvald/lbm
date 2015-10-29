@@ -70,6 +70,7 @@ describe Project do
       @project_01 = create(:project, state: 'online')
       @project_02 = create(:project, state: 'failed')
       @project_03 = create(:project, state: 'successful')
+      @project_04 = create(:project, state: 'partial_successful')
     end
 
     context 'get all projects that is online' do
@@ -88,6 +89,12 @@ describe Project do
       subject { Project.by_state('successful') }
 
       it { should == [@project_03] }
+    end
+
+    context 'get all projects that is partial_successful' do
+      subject { Project.by_state('partial_successful') }
+
+      it { should == [@project_04] }
     end
   end
 
@@ -149,11 +156,14 @@ describe Project do
       @project_03.update_attributes state: 'waiting_funds'
       pending_backer = create(:backer, project: @project_01, value: 340000, state: 'waiting_confirmation')
       @project_04 = create(:project, online_days: -7, goal: 300000, state: 'waiting_funds')
+      @project_05 = create(:project, online_days: -7, goal: 800000, state: 'online')
+      backer = create(:backer, project: @project_05, value: 500000, state: 'confirmed')
       Project.finish_projects!
       @project_01.reload
       @project_02.reload
       @project_03.reload
       @project_04.reload
+      @project_05.reload
     end
 
 
@@ -171,6 +181,10 @@ describe Project do
 
     it 'should change state to failed when project already in waiting funds and not reached the goal' do
       @project_04.failed?.should be_true
+    end
+
+    it 'should change state to partial_successful when project is online and reached the minimum goal' do
+      @project_05.partial_successful?.should be_true
     end
   end
 
@@ -320,6 +334,22 @@ describe Project do
     end
 
     context "when sum of all backers don't hit the goal" do
+      it { should be_false }
+    end
+  end
+
+  describe '#reached_partial_goal?' do
+    let(:project) { create(:project, goal: 3000000)}
+    subject { project.reached_partial_goal? }
+
+    context 'when sum of all backers hit the partial goal' do
+      before do
+        create(:backer, value: ::Configuration[:partial_goal], project: project)
+      end
+      it { should be_true }
+    end
+
+    context "when sum of all backers don't hit the partial goal" do
       it { should be_false }
     end
   end
@@ -725,6 +755,15 @@ describe Project do
         its(:failed?) { should be_true }
       end
 
+      context 'when project is expired and the sum of the waiting backers reached the partial goal' do
+        before do
+          create(:backer, value: ::Configuration[:partial_goal], project: main_project, state: 'waiting_confirmation')
+          main_project.finish
+        end
+
+        its(:waiting_funds?) { should be_true}
+      end
+
       context 'when project is expired and have recent backers without confirmation' do
         before do
           create(:backer, value: 30_000_000, project: subject, state: 'waiting_confirmation')
@@ -732,6 +771,18 @@ describe Project do
         end
 
         its(:waiting_funds?) { should be_true }
+      end
+
+      context 'when project already hit the partial goal and passed the waiting_funds time' do
+        before do
+          main_project.update_attributes state: 'waiting_funds'
+          subject.stub(:pending_backers_reached_the_partial_goal?).and_return(true)
+          subject.stub(:reached_partial_goal?).and_return(true)
+          subject.online_date = 2.weeks.ago
+          subject.online_days = 0
+          subject.finish
+        end
+        its(:partial_successful?) { should be_true }
       end
 
       context 'when project already hit the goal and passed the waiting_funds time' do
@@ -744,6 +795,17 @@ describe Project do
           subject.finish
         end
         its(:successful?) { should be_true }
+      end
+
+      context 'when project already hit the partial goal and still is in the waiting_funds time' do
+        before do
+          subject.stub(:pending_backers_reached_the_partial_goal?).and_return(true)
+          subject.stub(:reached_partial_goal?).and_return(true)
+          create(:backer, project: main_project, user: user, value: 25000, state: 'waiting_confirmation')
+          main_project.update_attributes state: 'waiting_funds'
+          subject.finish
+        end
+        its(:partial_successful?) { should be_false }
       end
 
       context 'when project already hit the goal and still is in the waiting_funds time' do
