@@ -114,7 +114,11 @@
                             = link_to approve_adm_project_path(project), method: :put do
                               i.icon-ok
                               = t('.approve')
-
+                        - if project.can_review?
+                          li
+                            = link_to show_review_adm_project_path(project), method: :get do
+                              i.icon-ok
+                              = t('.review')
                         - if project.can_reject?
                           li
                             = link_to reject_adm_project_path(project), method: :put  do

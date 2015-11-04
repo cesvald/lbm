@@ -34,6 +34,13 @@ class ProjectObserver < ActiveRecord::Observer
       project: project)
   end
 
+  def notify_owner_project_review(project)
+    Notification.create_notification_once(:project_review,
+      project.user,
+      {project_id: project.id},
+      project: project)
+  end
+
   def notify_owner_that_project_is_successful(project)
     Notification.create_notification_once(:project_success,
       project.user,

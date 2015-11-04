@@ -26,6 +26,23 @@ GIT
       slim-rails
 
 GIT
+  remote: git://github.com/cesvald/catarse_payulatam.git
+  revision: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
+  ref: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
+  specs:
+    catarse_payulatam (0.1.11)
+      payulatam
+      rails (~> 3.2.6)
+
+GIT
+  remote: git://github.com/cesvald/payulatam.git
+  revision: e87c399c90a3650e74698c13481a446359508e67
+  ref: e87c399c90a3650e74698c13481a446359508e67
+  specs:
+    payulatam (0.0.2)
+      hashie
+
+GIT
   remote: git://github.com/ncri/validation_reflection.git
   revision: 60320e6beb088808fd625a8d958dbd0d2661d494
   specs:
@@ -199,7 +216,9 @@ GEM
     formtastic (2.1.1)
       actionpack (~> 3.0)
     fssm (0.2.10)
-    has_scope (0.5.1)
+    has_scope (0.6.0)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     hashie (2.0.5)
     heroku-deflater (0.5.1)
       rack (>= 1.4.5)
@@ -212,9 +231,11 @@ GEM
     httpclient (2.3.4.1)
     i18n (0.6.11)
     i18n_viz (0.3.2)
-    inherited_resources (1.3.1)
-      has_scope (~> 0.5.0)
-      responders (~> 0.6)
+    inherited_resources (1.6.0)
+      actionpack (>= 3.2, < 5)
+      has_scope (~> 0.6.0.rc)
+      railties (>= 3.2, < 5)
+      responders
     initjs (1.0.0)
       jquery-rails
       rails (>= 3.1)
@@ -478,6 +499,7 @@ DEPENDENCIES
   catarse_lbm_gift_cards!
   catarse_mailchimp!
   catarse_paypal_express!
+  catarse_payulatam!
   chartkick
   coffee-rails
   compass-960-plugin
@@ -494,13 +516,13 @@ DEPENDENCIES
   fog (>= 1.3.1)
   foreman
   formtastic (~> 2.1.1)
-  has_scope
+  has_scope (= 0.6.0)
   heroku-deflater (>= 0.4.1)
   http_accept_language
   httparty (~> 0.6.1)
   httpclient (>= 2.2.5)
   i18n_viz
-  inherited_resources (= 1.3.1)
+  inherited_resources (= 1.6.0)
   initjs
   jasmine
   jquery-rails
@@ -514,6 +536,7 @@ DEPENDENCIES
   omniauth-facebook (= 1.4.0)
   omniauth-twitter
   paper_trail (~> 2.7.1)
+  payulatam!
   pg
   pg_search
   postgres-copy
