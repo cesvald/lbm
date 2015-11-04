@@ -290,6 +290,7 @@ class Project < ActiveRecord::Base
   #NOTE: state machine things
   state_machine :state, initial: :draft do
     state :draft, value: 'draft'
+    state :reviewed, value: 'reviewed'
     state :rejected, value: 'rejected'
     state :online, value: 'online'
     state :partial_successful, value: 'partial_successful'
@@ -303,15 +304,19 @@ class Project < ActiveRecord::Base
     end
 
     event :push_to_trash do
-      transition [:draft, :rejected] => :deleted
+      transition [:draft, :reviewed, :rejected] => :deleted
+    end
+
+    event :review do
+      transition :draft => :reviewed
     end
 
     event :reject do
-      transition draft: :rejected
+      transition [:draft, :reviewed] => :rejected
     end
 
     event :approve do
-      transition draft: :online
+      transition [:draft, :reviewed] => :online
     end
 
     event :finish do
@@ -350,14 +355,18 @@ class Project < ActiveRecord::Base
 
     after_transition online: :waiting_funds, do: :after_transition_of_online_to_waiting_funds
     after_transition [:waiting_funds, :online] => [:successful, :failed, :partial_successful], do: :after_transition_of_wainting_funds_to_successful_or_failed
-    after_transition draft: :online, do: :after_transition_of_draft_to_online
-    after_transition draft: :rejected, do: :after_transition_of_draft_to_rejected
-    after_transition [:draft, :rejected] => :deleted, :do => :after_transition_of_draft_or_rejected_to_deleted
+    after_transition [:draft, :reviewed] => :online, do: :after_transition_of_draft_to_online
+    after_transition [:draft, :reviewed] => :rejected, do: :after_transition_of_draft_to_rejected
+    after_transition [:draft, :reviewed, :rejected] => :deleted, :do => :after_transition_of_draft_or_rejected_to_deleted
     after_transition any => [:failed, :successful], :do => :after_transition_of_any_to_failed_or_successful
   end
 
   def after_transition_of_draft_or_rejected_to_deleted
     update_attributes({ permalink: "deleted_project_#{id}"})
+  end
+
+  def after_transition_of_draft_to_reviewed
+    notify_observers :notify_owner_project_review
   end
 
   def after_transition_of_online_to_waiting_funds

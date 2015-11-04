@@ -31,7 +31,7 @@ describe Project do
   end
 
   describe '.state_names' do
-    let(:states) { [:draft, :rejected, :online, :partial_successful, :successful, :waiting_funds, :failed] }
+    let(:states) { [:draft, :rejected, :online, :partial_successful, :successful, :waiting_funds, :failed, :reviewed] }
 
     subject { Project.state_names }
 
@@ -71,6 +71,7 @@ describe Project do
       @project_02 = create(:project, state: 'failed')
       @project_03 = create(:project, state: 'successful')
       @project_04 = create(:project, state: 'partial_successful')
+      @project_05 = create(:project, state: 'reviewed')
     end
 
     context 'get all projects that is online' do
@@ -91,10 +92,17 @@ describe Project do
       it { should == [@project_03] }
     end
 
+
     context 'get all projects that is partial_successful' do
       subject { Project.by_state('partial_successful') }
 
       it { should == [@project_04] }
+    end
+
+    context 'get all projects that is reviewed' do
+      subject { Project.by_state('reviewed') }
+
+      it { should == [@project_05] }
     end
   end
 
@@ -675,6 +683,15 @@ describe Project do
       end
     end
 
+    describe '#reviewed?' do
+      subject do
+        project.should_receive(:after_transition_of_draft_to_reviewed)
+        project.review
+        project
+      end
+      its(:reviewed?){should be_true}
+    end
+
     describe '.push_to_draft' do
       subject do
         project.reject
@@ -689,6 +706,7 @@ describe Project do
       before do
         project.reject
       end
+      
       context 'when project is not accepted' do
         it { should be_true }
       end
@@ -700,7 +718,17 @@ describe Project do
         project.reject
         project
       end
-      its(:rejected?){ should be_true }
+      
+      context 'when project is in draft' do
+        its(:rejected?){ should be_true }  
+      end
+      
+      context 'when project is reviewed' do
+        before do
+          project.review
+        end
+        its(:rejected?){ should be_true }
+      end
     end
 
     describe '#push_to_trash' do
@@ -721,11 +749,24 @@ describe Project do
         project.approve
         project
       end
-      its(:online?){ should be_true }
-      it('should call after transition method to notify the project owner'){ subject }
-      it 'should persist the date of approvation' do
-        project.approve
-        project.online_date.should_not be_nil
+      context 'when project is in draft' do
+        its(:online?){ should be_true }
+        it('should call after transition method to notify the project owner'){ subject }
+        it 'should persist the date of approvation' do
+          project.approve
+          project.online_date.should_not be_nil
+        end
+      end
+      context 'when project is reviewed' do
+        before do
+          project.review
+        end
+        its(:online?){ should be_true }
+        it('should call after transition method to notify the project owner'){ subject }
+        it 'should persist the date of approvation' do
+          project.approve
+          project.online_date.should_not be_nil
+        end
       end
     end
 

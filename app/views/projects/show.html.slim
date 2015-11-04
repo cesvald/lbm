@@ -23,7 +23,7 @@
 #page_content
   .container
 
-    - if @project.draft?
+    - if @project.draft? || @project.reviewed?
       = render "draft_warning"
 
     - if @project.rejected?
@@ -90,7 +90,7 @@
       .clearfix
     .sidebar
       .info
-        - unless @channel && @channel.show_drafts? && @project.draft?
+        - unless @channel && @channel.show_drafts? && (@project.draft? || @project.reviewed?)
           #statistics
             .statistics
               .item.backers
@@ -100,7 +100,7 @@
                 p= @project.display_pledged
                 em= t('statistics.goal.subtitle', total: @project.display_goal).html_safe
               .item.time
-                - if @project.draft? || @project.rejected?
+                - if @project.draft? || @project.rejected? || @project.reviewed?
                   p= @project.online_days
                   em #{@project.online_days} #{pluralize_without_number(@project.online_days, I18n.t('datetime.prompts.day').downcase)} #{pluralize_without_number(@project.online_days, t('remaining_singular'), t('remaining_plural'))}
                 - else

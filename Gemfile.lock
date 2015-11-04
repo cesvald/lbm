@@ -26,7 +26,7 @@ GIT
       slim-rails
 
 GIT
-  remote: git://github.com/danielweinmann/catarse_payulatam.git
+  remote: git://github.com/cesvald/catarse_payulatam.git
   revision: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
   ref: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
   specs:
@@ -35,7 +35,7 @@ GIT
       rails (~> 3.2.6)
 
 GIT
-  remote: git://github.com/danielweinmann/payulatam.git
+  remote: git://github.com/cesvald/payulatam.git
   revision: e87c399c90a3650e74698c13481a446359508e67
   ref: e87c399c90a3650e74698c13481a446359508e67
   specs:

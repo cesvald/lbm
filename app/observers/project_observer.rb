@@ -34,6 +34,31 @@ class ProjectObserver < ActiveRecord::Observer
       project: project)
   end
 
+  def notify_owner_project_review(project)
+    Notification.create_notification_once(:project_review,
+      project.user,
+      {project_id: project.id},
+      project: project)
+  end
+
+  def notify_owner_that_project_is_successful(project)
+    Notification.create_notification_once(:project_success,
+      project.user,
+      {project_id: project.id},
+      project: project)
+  end
+
+  def notify_admin_that_project_reached_deadline(project)
+    if (user = User.where(email: ::Configuration[:email_payments]).first)
+      Notification.create_notification_once(:adm_project_deadline,
+        user,
+        {project_id: project.id},
+        project: project,
+        from: ::Configuration[:email_system],
+        project_name: project.name)
+    end
+  end
+
   def notify_owner_that_project_is_rejected(project)
     Notification.create_notification_once(:project_rejected,
       project.user,
