@@ -46,7 +46,7 @@ class Adm::ProjectsController < Adm::BaseController
       @project.review
       flash[:notice] = t('adm.projects.index.project_reviewed')
     end
-    #redirect_to adm_projects_path
+    redirect_to adm_projects_path
   end
 
   def destroy
