@@ -1,5 +1,3 @@
 - project = @notification.project
 
 = t('notifications.project_review.text_html', name: project.user.display_name, project_link: link_to(project.name, project_by_slug_url(permalink: project.permalink)))
-
-= render "email_footer"
