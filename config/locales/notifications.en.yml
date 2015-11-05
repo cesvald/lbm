@@ -4,6 +4,8 @@ en:
     signature_html: "A big hug,<br/>The LittleBigMoney team"
     reward_html: "Reward selected:%{description}</strong>"
     no_reward_html: "<strong>No reward selected</strong>"
+    reminder_updates: ~
+    no_reminder_updates: ~
     backer_canceled_after_confirmed:
       subject: "The support was canceled after confirmation"
       header: "The support was canceled after confirmation"

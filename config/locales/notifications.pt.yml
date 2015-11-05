@@ -4,6 +4,8 @@ pt:
     signature_html: "Um grande abraço,<br/>Equipe do LittleBigMoney"
     reward_html: "Recompensa selecionada: <strong>%{description}</strong>"
     no_reward_html: "<strong>Nenhuma recompensa selecionada</strong>"
+    reminder_updates: "No dejes de subir actualizaciones para los donantes de tu proyecto. Es muy importante que lo hagas a modo de evidencia de la inversión de los recursos recaudados y para que sirva de inspiración para otros emprendedores y donantes en LittleBigMoney."
+    no_reminder_updates: "Além disso, notamos que você não ter ido alterações de doadores para o seu projeto. É muito importante que tudo o que evidência por meio de aplicação de recursos coletados e para servir como inspiração para outros empresários e doadores LittleBigMoney. Se você não carregou suas atualizações que você não sabe como, leia as <a href='https://drive.google.com/open?id=0B9aoGFLdMpHNNDlveDlBRGkzN28'>“Instruções para atualizações de upload.”</a>"
     backer_canceled_after_confirmed:
       subject: "Apoio cancelado após ser confirmado"
       header: "Apoio cancelado após ser confirmado"
