@@ -2,5 +2,5 @@
 -if project.updates.present? && !project.updates.empty?
   - updates = t('notifications.reminder_updates')
 -else
-  - updates = t('notifications.no_reminder_updates')
-= t('notifications.reminder_rewards_and_impact.text_html', project_user: project.user.display_name, updates: updates)
+  - updates = raw t('notifications.no_reminder_updates', link: link_to('Formulario de actualizaciones', 'https://drive.google.com/open?id=0B9aoGFLdMpHNNDlveDlBRGkzN28'))
+= raw t('notifications.reminder_rewards_and_impact.text_html', project_user: project.user.display_name, updates: updates)

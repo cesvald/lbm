@@ -35,7 +35,7 @@ class ProjectObserver < ActiveRecord::Observer
   end
 
   def notify_owner_project_review(project)
-    Notification.create_notification(:project_review,
+    Notification.create_notification(:reminder_rewards_and_impact,
       project.user,
       project: project)
   end
