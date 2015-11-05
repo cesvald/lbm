@@ -1,0 +1,6 @@
+- project = @notification.project
+-if project.updates.present? && !project.updates.empty?
+  - updates = t('notifications.reminder_updates')
+-else
+  - updates = t('notifications.no_reminder_updates')
+= t('notifications.reminder_rewards_and_impact.text_html', project_user: project.user.display_name, updates: updates)

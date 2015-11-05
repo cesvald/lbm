@@ -75,6 +75,10 @@ en:
       subject: "Your project is now online at LittleBigMoney"
       header: "Now it's a reality"
       text_html: ~
+    project_review:
+      subject: ~
+      header: ~
+      text_html: ~
     project_rejected:
       subject: "Your project does not match the profile that LittleBigMoney is looking for now"
       header: "Your project was not accepted :("
@@ -106,3 +110,11 @@ en:
       subject: "Temporary password for LittleBigMoney"
       header: "Log in to change your password"
       text_html: "As you registered in LittleBigMoney via Facebook, we are sending you a temporary password so you can access with you email address too.<br/><br/>Login can be made using the following information: <br/><br/>Email:%{email}<br/>Temporary password:%{password}<br/><br/>Remember that you can continue accesing LittleBigMoney using your Facebook account. <br/><br/>To change your temporary password%{link}."
+    reminder_rewards:
+      subject: ~
+      header: ~
+      text_html: ~
+    reminder_rewards_and_impact:
+      subject: ~
+      header: ~
+      text_html: ~

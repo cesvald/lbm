@@ -35,6 +35,20 @@ class Adm::ProjectsController < Adm::BaseController
     end
   end
 
+  def show_review
+    @project = Project.find params[:id]
+    render "review"
+  end
+
+  def review
+    @project = Project.find params[:id]
+    if @project.can_review?
+      @project.review
+      flash[:notice] = t('adm.projects.index.project_reviewed')
+    end
+    #redirect_to adm_projects_path
+  end
+
   def destroy
     @project = Project.find params[:id]
     if @project.can_push_to_trash?

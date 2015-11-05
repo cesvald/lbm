@@ -1,5 +1,6 @@
 [data-controller-class="adm::backerscontroller"][data-action="index"],
 [data-controller-class="adm::projectscontroller"][data-action="index"],
+[data-controller-class="adm::projectscontroller"][data-action="show_review"],
 [data-controller-class="adm::financialscontroller"][data-action="index"],
 [data-controller-class="adm::userscontroller"][data-action="index"],
 [data-controller-class="adm::statisticscontroller"][data-action="index"],
@@ -68,6 +69,7 @@
           color: rgba(black, 0.3)
         a
           color: $carrot
+      
       .table
         thead
           th
@@ -91,6 +93,12 @@
                   width: 50px
                 &.user_img
                   width: 30px
+      
+      #review_form
+        textarea
+          width: 75%
+        input
+          margin-bottom: 40px
   .bootstrap-twitter .btn-group .btn
     float: right
   .btn-group .dropdown-menu

@@ -56,6 +56,12 @@ pt:
         order_asc: "Menor meta"
         order_desc: "Maior meta"
         order_created_at: "Data de envio"
+        project_reviewed: "La revisión ha sido enviada al emprendedor"
+      review:
+        send_review_title: "Postar avaliação"
+        send_review: "Postar avaliação"
+        review_description: "Adiciona comentários relevantes para a revisão do projeto"
+        comments: "comentários"
     channels:
       index:
         menu: Canais

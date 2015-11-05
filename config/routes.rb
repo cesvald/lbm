@@ -133,6 +133,9 @@ Catarse::Application.routes.draw do
         put 'reject'
         put 'push_to_draft'
         put 'finish'
+        get 'show_review'
+        put 'review'
+        get 'test'
       end
     end
 

@@ -35,9 +35,8 @@ class ProjectObserver < ActiveRecord::Observer
   end
 
   def notify_owner_project_review(project)
-    Notification.create_notification_once(:project_review,
+    Notification.create_notification(:project_review,
       project.user,
-      {project_id: project.id},
       project: project)
   end
 
@@ -130,6 +129,20 @@ class ProjectObserver < ActiveRecord::Observer
         from: ::Configuration[:email_system],
         project_name: project.name)
     end
+  end
+
+  def remind_owner_rewards(project)
+    Notification.create_notification_once(:reminder_rewards,
+        project.user,
+        {project_id: project.id},
+        project: project)
+  end
+
+  def remind_owner_rewards_and_impact(project)
+    Notification.create_notification_once(:reminder_rewards_and_impact,
+        project.user,
+        {project_id: project.id},
+        project: project)
   end
 
   def sync_with_mailchimp(project)

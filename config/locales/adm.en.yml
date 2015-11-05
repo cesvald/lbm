@@ -56,6 +56,12 @@ en:
         order_asc: "Lowest goal"
         order_desc: "Highest goal"
         order_created_at: "Submission date"
+        project_reviewed: ~
+      review:
+        send_review_title: ~
+        send_review: ~
+        review_description: ~
+        comments: ~
     channels:
       index:
         menu: ~

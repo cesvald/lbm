@@ -31,7 +31,7 @@ describe Project do
   end
 
   describe '.state_names' do
-    let(:states) { [:draft, :rejected, :online, :partial_successful, :successful, :waiting_funds, :failed, :reviewed] }
+    let(:states) { [:draft, :reviewed, :rejected, :online, :partial_successful, :successful, :waiting_funds, :failed] }
 
     subject { Project.state_names }
 
@@ -194,6 +194,15 @@ describe Project do
     it 'should change state to partial_successful when project is online and reached the minimum goal' do
       @project_05.partial_successful?.should be_true
     end
+  end
+
+  describe '.send_reminders!' do
+    subject { Project.send_reminders! }
+    before do
+      @project_01 = create(:project, online_days: -31, goal: 300000, state: 'successful')
+      @project_02 = create(:project, online_days: 5, goal: 300000, state: 'online')
+    end
+    it {should == [@project_01]}
   end
 
   describe ".backed_by" do

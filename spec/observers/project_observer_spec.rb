@@ -113,6 +113,28 @@ describe ProjectObserver do
     end
   end
 
+  describe "#remind_owner_rewards" do
+    let(:user) { create(:user) }
+    let(:project) { create(:project, user: user, online_days: -30, goal: 300000, state: 'successful') }
+    before do
+      project
+      Notification.should_receive(:create_notification_once).with(:reminder_rewards, project.user, {project_id: project.id}, project: project)
+    end
+
+    it("should remind the project owner"){ Project.send_reminders! }
+  end
+
+  describe "#remind_owner_rewards_and_impact" do
+    let(:user) { create(:user) }
+    let(:project) { create(:project, user: user, online_days: -90, goal: 300000, state: 'successful') }
+    before do
+      project
+      Notification.should_receive(:create_notification_once).with(:reminder_rewards_and_impact, project.user, {project_id: project.id}, project: project)
+    end
+
+    it("should remind the project owner"){ Project.send_reminders! }
+  end
+
   describe "sync with mailchimp" do
     before do
       Configuration[:mailchimp_successful_projects_list] = 'OwnerListId'

@@ -56,6 +56,12 @@ es:
         order_asc: "Meta más baja"
         order_desc: "Meta más alta"
         order_created_at: "Fecha de envío"
+        project_reviewed: "La revisión ha sido enviada al emprendedor"
+      review:
+        send_review_title: "Enviar revisión"
+        send_review: "Enviar revisión"
+        review_description: "Adiciona los comentarios pertinentes a la revisión del proyecto"
+        comments: Comentarios
     channels:
       index:
         menu: Canales

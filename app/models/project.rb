@@ -130,6 +130,16 @@ class Project < ActiveRecord::Base
     end
   end
 
+  def self.send_reminders!
+    self.between_expires_at((Time.now - 33.days).strftime("%d/%m/%Y"), (Time.now - 27.days).strftime("%d/%m/%Y")).each do |project|
+      project.remind_rewards
+    end
+
+    self.between_expires_at((Time.now - 93.days).strftime("%d/%m/%Y"), (Time.now - 87.days).strftime("%d/%m/%Y")).each do |project|
+      project.remind_rewards_and_impact
+    end
+  end
+
   def self.state_names
     self.state_machine.states.map do |state|
       state.name if state.name != :deleted
@@ -308,7 +318,7 @@ class Project < ActiveRecord::Base
     end
 
     event :review do
-      transition :draft => :reviewed
+      transition [:draft, :reviewed] => :reviewed
     end
 
     event :reject do
@@ -355,6 +365,7 @@ class Project < ActiveRecord::Base
 
     after_transition online: :waiting_funds, do: :after_transition_of_online_to_waiting_funds
     after_transition [:waiting_funds, :online] => [:successful, :failed, :partial_successful], do: :after_transition_of_wainting_funds_to_successful_or_failed
+    after_transition [:draft, :reviewed] => :reviewed, do: :after_transition_of_draft_to_reviewed
     after_transition [:draft, :reviewed] => :online, do: :after_transition_of_draft_to_online
     after_transition [:draft, :reviewed] => :rejected, do: :after_transition_of_draft_to_rejected
     after_transition [:draft, :reviewed, :rejected] => :deleted, :do => :after_transition_of_draft_or_rejected_to_deleted
@@ -419,6 +430,14 @@ class Project < ActiveRecord::Base
     channels.map(&:name).join(', ')
   end
   
+  def remind_rewards
+    notify_observers :remind_owner_rewards
+  end
+
+  def remind_rewards_and_impact
+    notify_observers :remind_owner_rewards_and_impact
+  end
+
   private
   def self.get_routes
     routes = Rails.application.routes.routes.map do |r|
