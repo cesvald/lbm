@@ -57,6 +57,8 @@ en:
         order_desc: "Highest goal"
         order_created_at: "Submission date"
         project_reviewed: ~
+        finish: ~
+        review: ~
       review:
         send_review_title: ~
         send_review: ~
