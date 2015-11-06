@@ -358,6 +358,12 @@ es:
         video_url: Video
         headline: "Frase de motivación"
         uploaded_image: "thumbnail del proyecto"
+        identification_file: Cédula
+        rut_file: RUT
+        comercial_file: "Cámara de Comercio"
+        bank_certificate_file: "Certificación Bancaria"
+        agreement_file: "Acuerdo con el emprendedor"
+        disbursement_request_file: "Solicitud de desembolso"
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
@@ -724,6 +730,9 @@ es:
       no_rewards_warning_title: "Crea aquí tus recompensas"
       no_rewards_warning: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
       guide_html: ~
+      download: "Descargar documento"
+      not_uploaded: "Seleccione un archivo y oprima el botón \"Actualizar documentos\""
+      update_documents: "Actualizar documentos"
       reports:
         no_backs: "Este proyecto no tiene colaboradores aún."
         link_reports: "Descarga el reporte de "
@@ -738,6 +747,7 @@ es:
         edit: Editar
         reports: Informes
         add_reward: "Agregar recompensas"
+        documents: Documentos
       share:
         embed: "Incrustar código"
         embed_title: "Incrustar código del proyecto en tu sitio web"

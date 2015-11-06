@@ -358,6 +358,12 @@ pt:
         video_url: Vídeo
         headline: "Frase de efeito *"
         uploaded_image: "Thumbnail do projeto"
+        identification_file: "Cartão de cidadania"
+        rut_file: "RUT"
+        comercial_file: "Câmara de comércio"
+        bank_certificate_file: "Certificado Bancário"
+        agreement_file: "Acordo com a empresário"
+        disbursement_request_file: "Pedido de desembolso"
         more_links: "Lista de Links relacionados a seu projeto *"
         first_backers: "Lista com os primeiros apoiadores *"
         how_know: "Como você conheceu o LittleBigMoney? *"
@@ -724,6 +730,9 @@ pt:
       no_rewards_warning_title: "Crie aqui suas recompensas"
       no_rewards_warning: "Não viaje! Pense em como irá entregá-las e coloque tudo isso no orçamento. Prometeu?! CUMPRA! :D"
       guide_html: "Para saber tudo sobre como estruturar o seu projeto, baixe o <a href='http://catarse.me/guia_realizadores.pdf' target='_blank'>Guia Completo</a>."
+      download: "Baixar documento"
+      not_uploaded: "Nenhum documento disponível"
+      update_documents: "Actualizar documentos"
       reports:
         no_backs: "Seu projeto ainda não tem nenhum apoio."
         link_reports: "Baixar relatório de "
@@ -738,6 +747,7 @@ pt:
         edit: Edição
         reports: Relatórios
         add_reward: "Adicionar recompensa"
+        documents: Documentos
       share:
         embed: embed
         embed_title: "Incorpore este projeto no seu site"

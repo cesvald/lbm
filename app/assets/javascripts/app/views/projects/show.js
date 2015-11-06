@@ -1,7 +1,7 @@
 CATARSE.ProjectsShowView = Backbone.View.extend({
 
   initialize: function() {
-    _.bindAll(this, "bestInPlaceEvents", "showUpRewardEditForm", "showUpNewRewardForm","render", "BackerView", "BackersView", "about", "updates", "edit", "reports", "backers", "comments", "embed", "isValid", "backWithReward")
+    _.bindAll(this, "bestInPlaceEvents", "showUpRewardEditForm", "showUpNewRewardForm","render", "BackerView", "BackersView", "about", "updates", "edit", "reports", "documents", "backers", "comments", "embed", "isValid", "backWithReward")
     CATARSE.router.route("", "index", this.about)
     CATARSE.router.route("about", "about", this.about)
     CATARSE.router.route("updates", "updates", this.updates)
@@ -9,6 +9,7 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     CATARSE.router.route("backers", "backers", this.backers)
     CATARSE.router.route("edit", "edit", this.edit)
     CATARSE.router.route("reports", "reports", this.reports)
+    CATARSE.router.route("documents", "documents", this.documents)
     CATARSE.router.route("comments", "comments", this.comments)
     CATARSE.router.route("embed", "embed", this.embed)
     $('#project_warning .alert-warning #toggle_warning').click(function() {
@@ -170,6 +171,10 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
 
   reports: function() {
     this.selectItem("reports")
+  },
+
+  documents: function() {
+    this.selectItem("documents")
   },
 
   backers: function() {

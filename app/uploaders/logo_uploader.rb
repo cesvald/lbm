@@ -10,7 +10,7 @@ class LogoUploader < CarrierWave::Uploader::Base
   version :thumb_avatar, if: :is_user?
 
   def extension_white_list
-    %w(jpg jpeg gif png) unless mounted_as == :video_thumbnail
+    %w(jpg jpeg gif png) unless mounted_as == :video_thumbnail || mounted_as == :identification_file || mounted_as == :rut_file || mounted_as == :comercial_file || mounted_as == :bank_certificate_file || mounted_as == :agreement_file || mounted_as == :disbursement_request_file
   end
 
   def self.choose_storage

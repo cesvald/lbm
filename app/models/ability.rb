@@ -19,7 +19,15 @@ class Ability
     can :create, :projects if current_user.persisted?
 
     can :update, :projects, [:about, :video_url, :uploaded_image, :headline ] do |project|
-      project.user == current_user && ( project.online? || project.waiting_funds? || project.successful? || project.failed? )
+      project.user == current_user && ( project.online? || project.waiting_funds? || project.successful? || project.failed? || project.partial_successful?)
+    end
+
+    can :update, :projects, [:identification_file, :rut_file, :comercial_file, :bank_certificate_file] do |project|
+      project.user == current_user && ( project.successful? || project.partial_successful? )
+    end
+
+    can :update, :projects, [:agreement_file, :disbursement_request_file] do |project|
+      current_user.admin && ( project.successful? || project.partial_successful? ) && project.identification_file.present? && project.rut_file.present? && project.comercial_file.present? && project.bank_certificate_file.present?
     end
 
     can :update, :projects do |project|

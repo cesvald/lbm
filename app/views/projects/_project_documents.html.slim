@@ -1,0 +1,22 @@
+/.bootstrap-twitter
+  /.alert.alert-info
+    /p
+      /= t('projects.show.documents_guide_html')
+.bootstrap-form
+  = semantic_form_for @project do |form|
+    = form.inputs do
+      - if can? :update, @project, :identification_file
+        = form.input :identification_file, as: :file, required: false, hint: (@project.identification_file.present? ? link_to(t('projects.show.download'), @project.identification_file.url) : t('projects.show.not_uploaded') )
+      - if can? :update, @project, :rut_file
+        = form.input :rut_file, as: :file, required: false, hint: (@project.rut_file.present? ? link_to(t('projects.show.download'), @project.rut_file.url) : t('projects.show.not_uploaded') )
+      - if can? :update, @project, :comercial_file
+        = form.input :comercial_file, as: :file, required: false, hint: (@project.comercial_file.present? ? link_to(t('projects.show.download'), @project.comercial_file.url) : t('projects.show.not_uploaded') )
+      - if can? :update, @project, :bank_certificate_file
+        = form.input :bank_certificate_file, as: :file, required: false, hint: (@project.bank_certificate_file.present? ? link_to(t('projects.show.download'), @project.bank_certificate_file.url) : t('projects.show.not_uploaded') )
+      - if can? :update, @project, :agreement_file
+        = form.input :agreement_file, as: :file, required: false, hint: (@project.agreement_file.present? ? link_to(t('projects.show.download'), @project.agreement_file.url) : t('projects.show.not_uploaded') )
+      - if can? :update, @project, :disbursement_request_file
+        = form.input :disbursement_request_file, as: :file, required: false, hint: (@project.disbursement_request_file.present? ? link_to(t('projects.show.download'), @project.disbursement_request_file.url) : t('projects.show.not_uploaded') )
+      .clearfix
+      .form-actions.bootstrap-twitter
+        = form.submit t('projects.show.update_documents'), class: 'btn'

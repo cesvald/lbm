@@ -358,6 +358,12 @@ en:
         video_url: Video
         headline: "Motivational phrase"
         uploaded_image: "project thumbnail"
+        identification_file: ~
+        rut_file: ~
+        comercial_file: ~
+        bank_certificate_file: ~
+        agreement_file: ~
+        disbursement_request_file: ~
         more_links: "List of project related links"
         first_backers: "List of people who could be your first supporters"
         how_know: "How did you get to know LittleBigMoney?"
@@ -724,6 +730,9 @@ en:
       no_rewards_warning_title: "Create your rewards here"
       no_rewards_warning: "Don't go nuts! Think about how you're going to deliver them and include those costs in your budget. People are putting their trust in you, don't kid around with that!"
       guide_html: ~
+      download: ~
+      not_uploaded: ~
+      update_documents: ~
       reports:
         no_backs: "This project doesn't have supporters yet."
         link_reports: "Download report of "
@@ -738,6 +747,7 @@ en:
         edit: Edit
         reports: Reports
         add_reward: "Add Rewards"
+        documents: ~
       share:
         embed: embed
         embed_title: "Embed this project on your site"

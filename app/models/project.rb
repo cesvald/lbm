@@ -5,8 +5,17 @@ class Project < ActiveRecord::Base
   include PgSearch
   extend CatarseAutoHtml
 
+  #images
   mount_uploader :uploaded_image, LogoUploader
   mount_uploader :video_thumbnail, LogoUploader
+
+  #files
+  mount_uploader :identification_file, LogoUploader
+  mount_uploader :rut_file, LogoUploader
+  mount_uploader :comercial_file, LogoUploader
+  mount_uploader :bank_certificate_file, LogoUploader
+  mount_uploader :agreement_file, LogoUploader
+  mount_uploader :disbursement_request_file, LogoUploader
 
   delegate :display_status, :display_progress, :display_image, :display_expires_at,
     :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :progress_bar, :successful_flag,
