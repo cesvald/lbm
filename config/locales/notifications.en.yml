@@ -6,6 +6,7 @@ en:
     no_reward_html: "<strong>No reward selected</strong>"
     reminder_updates: ~
     no_reminder_updates: ~
+    review_comments: ~
     backer_canceled_after_confirmed:
       subject: "The support was canceled after confirmation"
       header: "The support was canceled after confirmation"

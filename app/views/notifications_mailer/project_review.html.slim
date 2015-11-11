@@ -1,3 +1,7 @@
 - project = @notification.project
-
-= t('notifications.project_review.text_html', name: project.user.display_name, project_link: link_to(project.name, project_by_slug_url(permalink: project.permalink)))
+- if @notification.mail_params.has_key?(:review_comments) && !@notification.mail_params[:review_comments].empty?
+	- review_comments = @notification.mail_params[:review_comments]
+- else
+	- review_comments = ""
+/= raw t('notifications.review_comments', review_comments: review_comments)
+= raw t('notifications.project_review.text_html', name: project.user.display_name, project_link: link_to(project.name, project_by_slug_url(permalink: project.permalink)), review_comments: review_comments)
