@@ -1,6 +1,11 @@
 .media
+  = image_tag @project.display_video_thumbnail, class: 'project_full_image hide'
   .video
     iframe src="#{@project.display_video_embed_url}" width="640" height="430" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+  .pictures
+    .picture_wrapper style="background-image:url('#{@project.display_video_thumbnail}')" class="project_picture"
+    - @project.pictures.each do |picture|
+      .picture_wrapper style="background-image:url('#{picture.picture.project_picture.url}')" class="project_picture"
   .social
     #project_share
       #facebook_share= render_facebook_like href: project_by_slug_url(@project.permalink, locale: I18n.locale)

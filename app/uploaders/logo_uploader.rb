@@ -3,6 +3,7 @@
 class LogoUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
+  version :project_picture, if: :is_picture? || :is_project?
   version :project_thumb, if: :is_project?
   version :project_thumb_small, if: :is_project?
   version :project_thumb_facebook, if: :is_project?
@@ -55,6 +56,11 @@ class LogoUploader < CarrierWave::Uploader::Base
     process convert: :png
   end
 
+  version :project_picture do
+    process resize_to_fit: [640,0]
+    process convert: :png
+  end
+
   protected
 
   def is_project? picture
@@ -65,4 +71,7 @@ class LogoUploader < CarrierWave::Uploader::Base
     model.class.name == 'User'
   end
 
+  def is_picture? picture
+    model.class.name == 'Picture'
+  end
 end

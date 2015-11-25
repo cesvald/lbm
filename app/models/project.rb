@@ -18,7 +18,7 @@ class Project < ActiveRecord::Base
   mount_uploader :disbursement_request_file, LogoUploader
 
   delegate :display_status, :display_progress, :display_image, :display_expires_at,
-    :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :progress_bar, :successful_flag,
+    :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :progress_bar, :successful_flag,
     to: :decorator
 
   schema_associations
@@ -27,11 +27,12 @@ class Project < ActiveRecord::Base
   has_many :rewards, dependent: :destroy
   has_many :updates, dependent: :destroy
   has_many :notifications, dependent: :destroy
-
+  has_many :pictures, dependent: :destroy
   has_and_belongs_to_many :channels
 
   has_one :project_total
   accepts_nested_attributes_for :rewards
+  accepts_nested_attributes_for :pictures
 
   catarse_auto_html_for field: :about, video_width: 600, video_height: 403
   catarse_auto_html_for field: :history, video_width: 600, video_height: 403
@@ -240,7 +241,9 @@ class Project < ActiveRecord::Base
   end
 
   def download_video_thumbnail
-    self.video_thumbnail = open(self.video.thumbnail_large) if self.video_url.present? && self.video
+    if !self.video_thumbnail.present?
+      self.video_thumbnail = open(self.video.thumbnail_large) if self.video_url.present? && self.video
+    end
   rescue OpenURI::HTTPError => e
     Rails.logger.info "-----> #{e.inspect}"
   rescue TypeError => e

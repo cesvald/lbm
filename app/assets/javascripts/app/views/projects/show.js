@@ -49,7 +49,23 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     "click #rewards .clickable_owner span.avaliable": "backWithReward",
     "click .add_new_reward": "showUpNewRewardForm",
     "click a.edit_reward": "showUpRewardEditForm",
-    "click .updated_reward span":"showUpDescriptionVersioning"
+    "click .updated_reward span":"showUpDescriptionVersioning",
+    "click .project_picture":"showPicture"
+  },
+
+  showPicture: function(e) {
+    var index = $('.pictures div').index(e.target)
+    if(index == 0){
+      $('.video').removeClass('hide');
+      $('.project_full_image').addClass('hide');
+    }
+    else{
+      var url = $(e.target).css('background-image').replace('url(','').replace(')','');
+      $('.video').addClass('hide');
+      $('.project_full_image').attr('src', url)
+      $('.project_full_image').removeClass('hide');
+
+    }
   },
 
   showUpDescriptionVersioning: function(e) {

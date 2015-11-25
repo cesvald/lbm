@@ -33,6 +33,10 @@ class ProjectDecorator < Draper::Decorator
     end
   end
 
+  def display_video_thumbnail(version = 'project_picture')
+      source.video.thumbnail_large
+  end
+
   def display_video_embed_url
     if source.video_embed_url
       "#{source.video_embed_url}?title=0&byline=0&portrait=0&autoplay=0"

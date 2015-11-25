@@ -3,6 +3,7 @@ class ProjectObserver < ActiveRecord::Observer
 
   def after_validation(project)
     if project.video_url.present? && project.video_url_changed?
+      puts 'downloading video thumbnail'
       project.download_video_thumbnail
       project.update_video_embed_url
     end

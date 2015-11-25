@@ -6,11 +6,7 @@ es:
     no_reward_html: "<strong>Ninguna recompensa seleccionada</strong>"
     reminder_updates: "No dejes de subir actualizaciones para los donantes de tu proyecto. Es muy importante que lo hagas a modo de evidencia de la inversión de los recursos recaudados y para que sirva de inspiración para otros emprendedores y donantes en LittleBigMoney."
     no_reminder_updates: "Adicional a esto, hemos notado que no has subido actualizaciones a los donantes de tu proyecto. Es muy importante que lo hagas a modo de evidencia de la inversión de los recursos recaudados y para que sirva de inspiración para otros emprendedores y donantes en LittleBigMoney. Si no has subido tus actualizaciones porque no sabes cómo, lee el <a href='https://drive.google.com/open?id=0B9aoGFLdMpHNNDlveDlBRGkzN28'>“Instructivo para subir actualizaciones”</a>."
-<<<<<<< HEAD
-    review_comments: "<b>IV) Comentarios adicionales::</b><br/><br/>"
-=======
     review_comments: "<b>IV) Comentarios adicionales:</b><br/>%{review_comments}<br/><br/>"
->>>>>>> aet
     backer_canceled_after_confirmed:
       subject: "El aporte fue cancelado después de la confirmación"
       header: "El aporte fue cancelado después de la confirmación"

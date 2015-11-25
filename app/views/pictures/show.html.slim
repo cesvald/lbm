@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Project:
+  = @picture.project_id
+p
+  strong Picture:
+  = @picture.picture
+
+= link_to 'Edit', edit_picture_path(@picture)
+'|
+= link_to 'Back', pictures_path

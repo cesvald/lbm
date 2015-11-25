@@ -2,6 +2,9 @@ require 'sidekiq/web'
 
 Catarse::Application.routes.draw do
 
+  resources :pictures
+
+
   match '/thank_you' => "static#thank_you"
 
   devise_for :users, path: '', 

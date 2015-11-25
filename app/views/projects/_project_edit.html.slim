@@ -19,6 +19,10 @@
       - if can? :update, @project, :uploaded_image
         = form.input :uploaded_image, as: :file, required: false,
           hint: (@project.uploaded_image.present? ? image_tag(@project.uploaded_image.project_thumb.url, size: '220x172') : t('formtastic.hints.project.uploaded_image') )
+      - if can? :update, @project, :pictures
+        = form.semantic_fields_for :pictures, @pictures do |picture|      
+          = picture.input :picture, as: :file, input_html: {multiple: true}, required: false,
+          hint: (@project.pictures.empty? ? 'No images uploaded' : 'Hay ' + @project.pictures.size.to_s + ' imágenes del proyecto')
       - if can? :update, @project, :online_days
         = form.input :online_days, as: :number, required: false
       - if can? :update, @project, :goal

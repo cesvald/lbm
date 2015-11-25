@@ -60,10 +60,30 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    update! do |success, failure|
-      success.html{ return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') }
-      failure.html{ return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') }
+    if @project.save! params[:project]
+      if params[:project][:pictures_attributes].present?
+        @project.pictures.delete_all
+        params[:project][:pictures_attributes]['0']['picture'].each do |picture|
+          @picture = @project.pictures.create!(:picture => picture)
+        end
+      end
+      return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
     end
+    #update! do |success, failure|
+    #  success.html{ 
+        #@project.pictures.delete_all
+        #puts 'the size is'
+        #params[:project][:pictures_attributes]['0']['picture'].size
+        #params[:project][:pictures_attributes]['0']['picture'].each do |picture|
+        #  puts 'the pitcure is '
+        #  puts picture
+          #puts picture
+          #@picture = @project.pictures.create!(:picture => picture)
+        #end
+        #return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') 
+    #  }
+    #  failure.html{ return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') }
+    #end
   end
 
   def show
@@ -86,6 +106,7 @@ class ProjectsController < ApplicationController
         end
         @update = @project.updates.where(id: params[:update_id]).first if params[:update_id].present?
         @channel = Channel.find_by_permalink(request.subdomain) if request.subdomain.present?
+        @pictures = @project.pictures.build
       }
     rescue ActiveRecord::RecordNotFound
       return render_404
