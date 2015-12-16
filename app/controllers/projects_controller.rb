@@ -60,30 +60,23 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    #if @project.save! params[:project]
-    #  if params[:project][:pictures_attributes].present?
-    #    @project.pictures.delete_all
-    #    params[:project][:pictures_attributes]['0']['picture'].each do |picture|
-    #      @picture = @project.pictures.create!(:picture => picture)
-    #    end
-    #  end
-    #  if params[:project][:identification_file].present? || params[:project][:rut_file].present? || params[:project][:comercial_file].present? || params[:project][:bank_certificate_file].present?
-    #    return redirect_to project_by_slug_path(@project.permalink, anchor: 'documents')
-    #  else
-    #    return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
-    #  end
-    #end
     update! do |success, failure|
       success.html{ 
-        if params[:project][:pictures_attributes].present?
+        if params[:pictures].present?
           @project.pictures.delete_all
-          params[:project][:pictures_attributes]['0']['picture'].each do |picture|
+          params[:pictures][:picture].each do |picture|
             @picture = @project.pictures.create!(:picture => picture)
           end
         end
-        return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') 
+        if params[:project][:identification_file].present? || params[:project][:rut_file].present? || params[:project][:comercial_file].present? || params[:project][:bank_certificate_file].present?
+          return redirect_to project_by_slug_path(@project.permalink, anchor: 'documents')
+        else
+          return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
+        end
       }
-      failure.html{ return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') }
+      failure.html{
+        return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
+      }
     end
   end
 

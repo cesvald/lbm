@@ -60,7 +60,7 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
       $('.project_full_image').addClass('hide');
     }
     else{
-      var url = $(e.target).css('background-image').replace('url(','').replace(')','');
+      var url = $(e.target).css('background-image').replace('url(','').replace(')','').replace(/\"/g,'');
       $('.video').addClass('hide');
       $('.project_full_image').attr('src', url)
       $('.project_full_image').removeClass('hide');
