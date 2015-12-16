@@ -38,8 +38,20 @@ class ProjectDecorator < Draper::Decorator
   end
 
   def display_video_embed_url
-    if source.video_embed_url
-      "#{source.video_embed_url}?title=0&byline=0&portrait=0&autoplay=0"
+    if source.video.present?
+      if source.video.instance_of? VideoInfo::Providers::Vimeo
+        if source.video_embed_url
+          "#{source.video_embed_url}?title=0&byline=0&portrait=0&autoplay=0"
+        end
+      elsif source.video.instance_of? VideoInfo::Providers::Youtube
+        if source.video_url[/youtu\.be\/([^\?]*)/]
+          youtube_id = $1
+        else
+          source.video_url[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
+          youtube_id = $5
+        end
+        "https://www.youtube.com/embed/#{ youtube_id }"
+      end
     end
   end
 
