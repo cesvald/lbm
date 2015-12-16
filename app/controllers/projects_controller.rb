@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   load_and_authorize_resource only: [ :new, :create, :update, :destroy ]
 
   inherit_resources
-  has_scope :pg_search, :by_category_id, :recent, :expiring, :successful, :recommended, :not_expired, :near_of
+  has_scope :pg_search, :by_category_id, :recent, :expiring, :successful, :partial_successful, :recommended, :not_expired, :near_of
   respond_to :html, except: [:backers]
   respond_to :json, only: [:index, :show, :backers, :update]
   skip_before_filter :detect_locale, only: [:backers]
@@ -60,30 +60,31 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if @project.save! params[:project]
-      if params[:project][:pictures_attributes].present?
-        @project.pictures.delete_all
-        params[:project][:pictures_attributes]['0']['picture'].each do |picture|
-          @picture = @project.pictures.create!(:picture => picture)
-        end
-      end
-      return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
-    end
-    #update! do |success, failure|
-    #  success.html{ 
-        #@project.pictures.delete_all
-        #puts 'the size is'
-        #params[:project][:pictures_attributes]['0']['picture'].size
-        #params[:project][:pictures_attributes]['0']['picture'].each do |picture|
-        #  puts 'the pitcure is '
-        #  puts picture
-          #puts picture
-          #@picture = @project.pictures.create!(:picture => picture)
-        #end
-        #return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') 
-    #  }
-    #  failure.html{ return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') }
+    #if @project.save! params[:project]
+    #  if params[:project][:pictures_attributes].present?
+    #    @project.pictures.delete_all
+    #    params[:project][:pictures_attributes]['0']['picture'].each do |picture|
+    #      @picture = @project.pictures.create!(:picture => picture)
+    #    end
+    #  end
+    #  if params[:project][:identification_file].present? || params[:project][:rut_file].present? || params[:project][:comercial_file].present? || params[:project][:bank_certificate_file].present?
+    #    return redirect_to project_by_slug_path(@project.permalink, anchor: 'documents')
+    #  else
+    #    return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
+    #  end
     #end
+    update! do |success, failure|
+      success.html{ 
+        if params[:project][:pictures_attributes].present?
+          @project.pictures.delete_all
+          params[:project][:pictures_attributes]['0']['picture'].each do |picture|
+            @picture = @project.pictures.create!(:picture => picture)
+          end
+        end
+        return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') 
+      }
+      failure.html{ return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit') }
+    end
   end
 
   def show

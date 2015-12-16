@@ -18,7 +18,7 @@
 
     .sidebar
       .content
-        - unless @recommended.empty? and @expiring.empty? and @recent.empty? and @successful.empty?
+        - unless @recommended.empty? and @expiring.empty? and @recent.empty? and @successful.empty? and @partial_successful.empty?
           section.highlights
             h2= t('.quick_explore')
             ul#explore_quick
@@ -38,6 +38,10 @@
                 li.no_margin
                   a href='#successful'
                     = t('.successful')
+              - unless @partial_successful.empty?
+                li.no_margin
+                  a href='#partial_successful'
+                    = t('.partial_successful')
               - if current_user
                 li.no_margin
                   a href="#near"

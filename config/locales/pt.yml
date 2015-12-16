@@ -300,6 +300,7 @@ pt:
       recommended: Recomendados
       subtitle: "Explore os projetos, encontre aqueles que mexem com seu coração, e faça acontecer!"
       successful: Bem-sucedidos
+      partial_successful: "Parcialmente bem sucedido"
       title: "Encontre projetos incríveis"
     title: "Explore os projetos"
     project:

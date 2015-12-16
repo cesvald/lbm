@@ -1,13 +1,14 @@
 CATARSE.ExploreIndexView = Backbone.View.extend({
 
   initialize: function() {
-    _.bindAll(this, "render", "near", "ProjectView", "ProjectsView", "initializeView", "recommended", "expiring", "recent", "successful", "category", "search", "updateSearch")
+    _.bindAll(this, "render", "near", "ProjectView", "ProjectsView", "initializeView", "recommended", "expiring", "recent", "successful", "partial_successful", "category", "search", "updateSearch")
     CATARSE.router.route(":name", "category", this.category)
     CATARSE.router.route("near", "near", this.near)
     CATARSE.router.route("recommended", "recommended", this.recommended)
     CATARSE.router.route("expiring", "expiring", this.expiring)
     CATARSE.router.route("recent", "recent", this.recent)
     CATARSE.router.route("successful", "successful", this.successful)
+    CATARSE.router.route("partial_successful", "partial_successful", this.partial_successful)
     CATARSE.router.route("search/*search", "search", this.search)
     CATARSE.router.route("", "index", this.index)
     this.render()
@@ -100,6 +101,14 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     this.selectItem("successful")
     this.initializeView({
       successful: true
+    })
+  },
+
+  partial_successful: function(){
+    this.replaceTitleBy("partial_successful")
+    this.selectItem("partial_successful")
+    this.initializeView({
+      partial_successful: true
     })
   },
 

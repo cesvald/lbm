@@ -3,7 +3,7 @@ ul
   li
     .bootstrap-twitter
       .alert.alert-info
-        p
+        p.first-report
           = t('projects.show.reports.link_reports')
           = link_to t('projects.show.reports.all_backers'), reports_backer_reports_for_project_owners_path(project_id: @project.id, format: :csv)
   li

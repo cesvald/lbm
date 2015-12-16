@@ -82,6 +82,7 @@ class Project < ActiveRecord::Base
   scope :recent, where("current_timestamp - projects.online_date <= '30 days'::interval")
   scope :successful, where(state: 'successful')
   scope :online, where(state: 'online')
+  scope :partial_successful, where(state: 'partial_successful')
   scope :recommended_for_home, ->{
     includes(:user, :category, :project_total).
     recommended.

@@ -38,7 +38,7 @@ class ProjectObserver < ActiveRecord::Observer
   def notify_owner_project_review(project)
     Notification.create_notification(:project_review,
       project.user,
-      {project: project, review_comments: project.review_comments})
+      {project: project, review_comments: project.review_comments, from: Configuration[:email_projects]})
   end
 
   def notify_owner_that_project_is_successful(project)
@@ -135,14 +135,14 @@ class ProjectObserver < ActiveRecord::Observer
   def remind_owner_rewards(project)
     Notification.create_notification_once(:reminder_rewards,
         project.user,
-        {project_id: project.id},
+        {project_id: project.id, from: Configuration[:email_projects]},
         project: project)
   end
 
   def remind_owner_rewards_and_impact(project)
     Notification.create_notification_once(:reminder_rewards_and_impact,
         project.user,
-        {project_id: project.id},
+        {project_id: project.id, from: Configuration[:email_projects]},
         project: project)
   end
 

@@ -300,6 +300,7 @@ es:
       recommended: Recomendaciones
       subtitle: "Explora los proyectos, encuentra aquellos que te inspiran y apóyalos para que sean una realidad!"
       successful: Exitosos
+      partial_successful: "Parcialmente exitosos"
       title: "Descubre proyectos increíbles!"
     title: "Explora los proyectos"
     project:
@@ -310,7 +311,7 @@ es:
         credits: "Tienes <strong>%{credits}</strong> en créditos y puedes apoyar hasta este valor sim necesitae realizar un nuevo pago."
         value: "Tu escoges el valor ;) a partir de 25.000 COP está genial!"
       project:
-        video_url_edit: "Pega aquí la URL de tu video de Vimeo."
+        video_url_edit: "Pega aquí la URL de tu video de Vimeo o Youtube."
         about: "Cuéntanos un poco sobre tu historia y lo que será de ella al terminar. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
         history: "Describe en un párrafo cómo y por qué nace tu emprendimiento y los momentos más importantes para su desarrollo."
         cause: "Cuéntanos un poco sobre la causa que mueve tu proyecto. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
@@ -325,7 +326,7 @@ es:
         headline: "Resume tu proyecto en 140 caracteres. Esta frase será el primer contacto de las personas con tu proyecto incluso antes de ver el video. Se creativo, transparente y directo :)"
         name: "Sé lo más concreto posible. Deja las explicaciones para el video y la descripción."
         uploaded_image: "Aquí puedes subir una imagen (.jpg) de tamaño 512x400."
-        video_url: "Pega la URL de un video de <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a>. Recomendamos Vimeo pues tiene una mejor resolución y no tienen publicidad. Tod para que tu proyecto se vea mucho mejor! <strong>Realiza tu video lo mejor que puedas y y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un video de otro, es el video. Mira ;)"
+        video_url: "Pega la URL de un video de Vimeo o Youtube. <strong>Realiza tu video lo mejor que puedas y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un proyecto de otro, es el video. Mira ;)"
         more_links: "¿Qué canales usarás para promocionar la idea de tu proyecto? Puedes Nombralos aquí (facebook/twitter/blog/sitio web) entre más tengas, te puede ayudar más."
         first_backers: "Para que tu campaña tenga éxito, es fundamental que traigas a tus redes de contactos más cercanas. Por eso, cuéntanos quiénes crees que serán tus primeros 20 colaboradores"
       reward:
@@ -419,7 +420,7 @@ es:
   project:
     start:
       email_subject: "Tu proyecto ha sido recibido por el equipo LittleBigMoney"
-      email_text: "Muchas gracias por confiar en LittleBigMoney y enviarnos tu proyecto :) <br><br>Antes que nada, queríamos recordarte como funcionan los pasos de selección de los proyectos en LittleBigMoney. Es muy fácil, son 4 pasos: <br><br> 1 - Acabamos de recibir ese lindo formulario que llenaste; <br><br> 2 - Tu respuesta estará lista en 4 días hábiles. Así que no te despegues de la pantalla. <br><br> 3 - Cuando el proyecto esté revisado, te enviaremos un link especial para que puedas registrar tu proyecto inmediatamente; <br><br> 4 - Una vez nos hayas avisado, autorizaremos el proyecto para que esté disponible y todos los seres humanos del mundo puedan conocerte y apoyar tu idea (en caso de que ellos quieran no?).  <br><br> <strong>Una información importante</strong>: Si olvidaste llenar algo de este formulario, no te preocupes, puedes adicionar nueva información (o cambiar alguna de ellas) así el equipo de soporte podrá estar en contacto contigo, ok?  <br><br> Por eso vale la pena conocer los proyectos que se encuentran al aire (<a href='%{explore_link}' style='color: #f57421 !important;'>%{explore_link}</a>) y si te gusta alguno de ellos, Apoya! Esa es la mejor manera de mostrar que crees en la cultura del financiamiento colaborativa en Colombia al fomentar el ecosistema que se está formando al rededor de LittleBigMoney. Además, también te puedes inspirar para tu propio proyecto.  <br> Mantén el contacto para saber de nuestras novedades en<a href='%{facebook}' style='color: #f57421 !important;'>Facebook</a> y en <a href='%{twitter}' style='color: #f57421 !important;'>Twitter</a> y conoce más de LittleBigMoney en nuestro Blog<a href='%{blog}' style='color: #f57421 !important;'>blog</a>.  <br> Si tienes alguna duda, nos puedes contactar en: %{email}"
+      email_text: "Muchas gracias por confiar en LittleBigMoney y enviarnos tu proyecto :) <br><br>Antes que nada, queríamos recordarte como funcionan los pasos de selección de los proyectos en LittleBigMoney. Es muy fácil, son 4 pasos: <br><br> 1 - Acabamos de recibir ese lindo formulario que llenaste; <br><br> 2 - Tu respuesta estará lista en 4 días hábiles. Así que no te despegues de la pantalla. <br><br> 3 - Cuando el proyecto esté revisado, te enviaremos un link especial para que puedas registrar tu proyecto inmediatamente; <br><br> 4 - Una vez nos hayas avisado, autorizaremos el proyecto para que esté disponible y todos los seres humanos del mundo puedan conocerte y apoyar tu idea (en caso de que ellos quieran no?).  <br><br> <strong>Una información importante</strong>: Si olvidaste llenar algo de este formulario, no te preocupes, puedes adicionar nueva información (o cambiar alguna de ellas) así el equipo de soporte podrá estar en contacto contigo, ok?  <br><br> Por eso vale la pena conocer los proyectos que se encuentran al aire (<a href='%{explore_link}' style='color: #f57421 !important;'>%{explore_link}</a>)  y si te gusta alguno de ellos, Apoya! Esa es la mejor manera de mostrar que crees en la cultura del financiamiento colaborativa en Colombia al fomentar el ecosistema que se está formando al rededor de LittleBigMoney. Además, también te puedes inspirar para tu propio proyecto.  <br> Mantén el contacto para saber de nuestras novedades en<a href='%{facebook}' style='color: #f57421 !important;'>Facebook</a> y en <a href='%{twitter}' style='color: #f57421 !important;'>Twitter</a> y conoce más de LittleBigMoney en nuestro Blog<a href='%{blog}' style='color: #f57421 !important;'>blog</a>.  <br> Si tienes alguna duda, nos puedes contactar en: %{email}"
       notification_text: "Tu proyecto ha sido recibido por el equipo LittleBigMoney"
     finish:
       successful:
@@ -434,7 +435,7 @@ es:
         email_text: "Desafortunadamente el proyecto %{project_link} en el que colaboraste, no alcanzó su meta y no ha tenido éxito en LittleBigMoney. <br><br>En este caso, recibiste <strong>%{value}</strong> en créditos para apoyar otros proyectos. puedes conocer más proyectos de %{project_category} %{explore_category_link}.<br><br>Caso prefira, você pode pedir o reembolso do seu dinheiro %{credits_link}. Recuerda que tu registro en la plataforma fue hecho a través de <b>%{user_provider}.</b> Es por él que debes entrar para accesar a tu cuenta. Si tienes alguna dificultad en este proceso, envía un email para (financeiro@catarse.me) con el asunto \"Reembolso - problema en el ingreso\".<br><br>(Caso você prefira solicitar o reembolso, só para lembrar, como constam nos %{link_to_term} do LittleBigMoney, que se o apoio foi feito com cartão de crédito, o valor será estornado na próxima fatura do cartão. Se o apoio foi feito através de transferência bancária ou boleto, enviaremos um email com os procedimentos necessários para poder devolver o valor para você.<br><br>Se, por qualquer motivos, quiser entrar em contato com %{project_owner_name}, realizador do projeto, mande um email para %{project_owner_email}.<br><br>Se tiver alguma outra dúvida, acesse nosso FAQ ou mande um email para o financeiro@catarse.me.<br>"
         notification_text: "Recibiste %{value} en créditos para apoyar otros projetos. Caso prefira, você pode pedir seu dinheiro de volta %{link}."
         unsuccessful_text: "El proyecto %{link} no tuvo suficiente colaboración. Suerte para la próxima!"
-    video_regex_validation: "solo URLs de Vimeo son permitidas"
+    video_regex_validation: "solo URLs de Vimeo o Youtube son permitidas"
     display_status:
       expired: finalizado
       rejected: Rechazado
@@ -469,7 +470,7 @@ es:
       display_status:
         reached_goal: "Este proyecto tendrá éxito y recibirá el dinero el %{date}"
         not_reached_goal: "Este proyecto sólo tendrá éxito si se recaudan al menos %{goal} hasta el %{date}"
-        failed: "Este proyecto no alcanzo la meta de %{goal} antes del %{date} y por lo tanto no fue financiado"
+        failed: "No alcanzo la meta de %{goal} antes del %{date} y por lo tanto no fue financiado"
         rejected: "Este proyecto no fue aceptado"
         partial_successful: "Este proyecto fue financiado parcialmente con éxito el %{date}"
         successful: "Este proyecto fue financiado con éxito el %{date}"
@@ -785,8 +786,8 @@ es:
       tags_hint: "Antes de enviar tu proyecto, explora e inspírate con otros que han pasado por el sitio."
       tags_important: "Revisa otros proyectos de tu categoría <a href='%{href}' target='_blank'>aquí</a>."
       video: "¿Ya tienes un video? envía la URL!"
-      video_hint: "enlace de vimeo"
-      video_important: "Pega aquí la URL de tu video de Vimeo!"
+      video_hint: "enlace de Vimeo o Youtube"
+      video_important: "Pega aquí la URL de tu video de Vimeo o Youtube!"
       how_know_important: "Súper! Llegamos a la última pregunta."
       more_links_important: "Los medios sociales ayudan a que se difunda tu causa! Si tienes una comunidad online, es hora de juntarla para que ayude en tu proyecto."
       first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."

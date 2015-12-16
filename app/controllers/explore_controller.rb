@@ -9,6 +9,7 @@ class ExploreController < ApplicationController
     @expiring = Project.visible.expiring.limit(3)
     @recent = Project.visible.recent.not_expired.limit(3).order('created_at DESC')
     @successful = Project.visible.successful.limit(3)
+    @partial_successful = Project.visible.partial_successful.limit(3)
   end
 
 end
