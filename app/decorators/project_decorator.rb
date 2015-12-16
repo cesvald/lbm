@@ -34,7 +34,19 @@ class ProjectDecorator < Draper::Decorator
   end
 
   def display_video_thumbnail(version = 'project_picture')
-    source.video.thumbnail_large if source.video
+    if source.video.present?
+      if source.video.instance_of? VideoInfo::Providers::Vimeo
+        source.video.thumbnail_large
+      elsif source.video.instance_of? VideoInfo::Providers::Youtube
+        if source.video_url[/youtu\.be\/([^\?]*)/]
+          youtube_id = $1
+        else
+          source.video_url[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
+          youtube_id = $5
+        end
+        "http://img.youtube.com/vi/#{ youtube_id }/sddefault.jpg"
+      end
+    end
   end
 
   def display_video_embed_url
