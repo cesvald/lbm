@@ -462,6 +462,10 @@ es:
       banner_image_10: ~
       slogan_donate: "Una pequeña colaboración, una gran ayuda"
       slogan_invest: "(Próximamente) crece con nuevos emprendedores"
+    update:
+      success: "Tu proyecto fue actualizado exitosamente!"
+    update_documents:
+      success: "Los documentos fueron actualizados exitosamente!"
     box:
       by: de
     admin_fields:

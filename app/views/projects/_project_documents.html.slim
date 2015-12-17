@@ -6,9 +6,9 @@
   = semantic_form_for @project do |form|
     = form.inputs do
       - if can? :update, @project, :identification_file
-        = form.input :identification_file, as: :file, required: false, hint: (@project.identification_file.present? ? link_to(t('projects.show.download'), @project.identification_file.url) : t('projects.show.not_uploaded') )
+        = form.input :identification_file, as: :file, required: false, hint: (@project.identification_file.present? ? link_to(t('projects.show.download'), @project.identification_file.url, class: 'download_link') : t('projects.show.not_uploaded') )
       - if can? :update, @project, :rut_file
-        = form.input :rut_file, as: :file, required: false, hint: (@project.rut_file.present? ? link_to(t('projects.show.download'), @project.rut_file.url) : t('projects.show.not_uploaded') )
+        = form.input :rut_file, as: :file, required: false, hint: (@project.rut_file.present? ? link_to(t('projects.show.download', class: 'download_link'), @project.rut_file.url) : t('projects.show.not_uploaded') )
       - if can? :update, @project, :comercial_file
         = form.input :comercial_file, as: :file, required: false, hint: (@project.comercial_file.present? ? link_to(t('projects.show.download'), @project.comercial_file.url) : t('projects.show.not_uploaded') )
       - if can? :update, @project, :bank_certificate_file

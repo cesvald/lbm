@@ -462,6 +462,10 @@ en:
       banner_image_10: ~
       slogan_donate: "A little donation, a big help"
       slogan_invest: "Grow with new entrepreneurs (soon)"
+    update:
+      success: ~
+    update_documents:
+      success: ~
     box:
       by: by
     admin_fields:

@@ -69,8 +69,10 @@ class ProjectsController < ApplicationController
           end
         end
         if params[:project][:identification_file].present? || params[:project][:rut_file].present? || params[:project][:comercial_file].present? || params[:project][:bank_certificate_file].present?
+          flash[:notice] = I18n.t('projects.update_documents.success')
           return redirect_to project_by_slug_path(@project.permalink, anchor: 'documents')
         else
+          flash[:notice] = I18n.t('projects.update.success')
           return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
         end
       }
