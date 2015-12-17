@@ -359,6 +359,7 @@ en:
         video_url: Video
         headline: "Motivational phrase"
         uploaded_image: "project thumbnail"
+        picture: ~
         identification_file: ~
         rut_file: ~
         comercial_file: ~

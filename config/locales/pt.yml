@@ -359,8 +359,9 @@ pt:
         video_url: Vídeo
         headline: "Frase de efeito *"
         uploaded_image: "Thumbnail do projeto"
+        picture: "Imágenes del proyecto"
         identification_file: "Cartão de cidadania"
-        rut_file: "RUT"
+        rut_file: RUT
         comercial_file: "Câmara de comércio"
         bank_certificate_file: "Certificado Bancário"
         agreement_file: "Acordo com a empresário"

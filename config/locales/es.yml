@@ -359,6 +359,7 @@ es:
         video_url: Video
         headline: "Frase de motivación"
         uploaded_image: "thumbnail del proyecto"
+        picture: "Imágenes del proyecto"
         identification_file: Cédula
         rut_file: RUT
         comercial_file: "Cámara de Comercio"
