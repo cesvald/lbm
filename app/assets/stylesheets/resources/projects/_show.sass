@@ -609,8 +609,8 @@
             width: 100%
             p.inline-hints
               .download_link
-                color: blue
-                +icon($icon_check_mark, $navy)
+                &:before
+                  content: url($images_path+"tick_16.png")
         textarea, input[type='text']
           width: 70%
         label

@@ -414,6 +414,14 @@ class Project < ActiveRecord::Base
     notify_observers :notify_owner_that_project_is_online
   end
 
+  def notify_admin_documents_ready
+    notify_observers :notify_adm_documents_ready
+  end
+
+  def notify_owner_disbursment_documents
+    notify_observers :notify_owner_disbursment_documents
+  end
+
   def new_draft_recipient
     email = ::Configuration[:email_projects]
     User.where(email: email).first

@@ -73,6 +73,22 @@ class ProjectObserver < ActiveRecord::Observer
       project: project)
   end
 
+  def notify_admin_documents_ready(project)
+    if (user = User.where(email: ::Configuration[:"email_projects"]).first)
+      Notification.create_notification_once(:adm_documents_ready,
+        user,
+        {project_id: project.id},
+        project: project)
+    end
+  end
+
+  def notify_owner_disbursment_documents(project)
+    Notification.create_notification_once(:owner_disbursment_documents,
+      project.user,
+      {project_id: project.id},
+      project: project)
+  end
+
   def notify_users(project)
     project.backers.confirmed.each do |backer|
       unless backer.notified_finish

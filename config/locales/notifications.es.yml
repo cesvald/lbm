@@ -7,6 +7,8 @@ es:
     reminder_updates: "No dejes de subir actualizaciones para los donantes de tu proyecto. Es muy importante que lo hagas a modo de evidencia de la inversión de los recursos recaudados y para que sirva de inspiración para otros emprendedores y donantes en LittleBigMoney."
     no_reminder_updates: "Adicional a esto, hemos notado que no has subido actualizaciones a los donantes de tu proyecto. Es muy importante que lo hagas a modo de evidencia de la inversión de los recursos recaudados y para que sirva de inspiración para otros emprendedores y donantes en LittleBigMoney. Si no has subido tus actualizaciones porque no sabes cómo, lee el <a href='https://drive.google.com/open?id=0B9aoGFLdMpHNNDlveDlBRGkzN28'>“Instructivo para subir actualizaciones”</a>."
     review_comments: "<b>Finalmente lo más importante:</b><br/><span style='color: #f57421'>%{review_comments}</span><br/><br/>"
+    agreement_file: "Acuerdo con el emprendedor"
+    disbursement_request_file: "Solicitud de desembolso"
     backer_canceled_after_confirmed:
       subject: "El aporte fue cancelado después de la confirmación"
       header: "El aporte fue cancelado después de la confirmación"
@@ -101,6 +103,10 @@ es:
       subject: "Se acabo el tiempo de publicación para el proyecto %{project_name}"
       header: "El plazo para el proyecto se cumplió"
       text_html: "El proyecto %{link} acaba de cumplir la fecha límite"
+    adm_documents_ready:
+      subject: "El emprendedor ha actualizado los documentos para la solicitud de desembolso"
+      header: "Documentos de desembolso actualizados"
+      text_html: "El proyecto %{link} tiene los documentos actualizados, suba el acuerdo y la solicitud de desembolso a través de la plataforma y un email será enviado al emprendedor solicitándole que los firme"
     credits_warning:
       subject: "Tienes %{amount} COP de crédito en LittleBigMoney"
       header: "¿Qué tal apoyar un nuevo proyecto?"
@@ -121,3 +127,7 @@ es:
       subject: "Recordatorio de actualizaciones, envío de recompensas y medición de impacto"
       header: "Recuerda actualizar tu proyecto y realizar la medición de impacto"
       text_html: "Hola %{project_user},<br/><br/><center>Recibe un cordial saludo, actualmente estamos realizando un monitoreo de proyectos exitosos de la plataforma, y nos gustaría contar con tu ayuda para analizar dos aspectos importantes:</center><br/><b>1. Recompensas:</b> Como bien sabes, nuestro sistema solicita a todos los emprendedores ofrecer y enviar recompensas a sus donantes. Por ello, te invitamos a que nos confirmes si éstas ya fueron enviadas completando el siguiente <a href='http://goo.gl/forms/EGfBNdgJuE'>“Formulario de Seguimiento a Recompensas”</a><br/><br/><b>2. Impacto:</b> Todos los proyectos subidos a la plataforma de LittleBigMoney tienen impacto social o ambiental, por ello quisiéramos tu ayuda para poder medir tus acciones. Te invitamos a que nos ayudes a diligenciar el siguiente <a href='http://goo.gl/forms/hLfIpxjfv1'>“Formulario de Impacto”</a><br/><br/>%{updates}<br/><br/>Nos interesará mucho saber de ti y tener noticias sobre el avance de tu proyecto. Así que comunícate con nosotros si tienes comentarios adicionales, dudas, preguntas que no quedaron claras o quizás si quieres subir un nuevo proyecto. Escríbenos a: <a href='mailto:littlebigmoney@fundacioncapital.org'> littlebigmoney@fundacioncapital.org</a><br/><br/>Esperamos que puedas responder a mi solicitud con prontitud.<br/><br/>Saludos,<br/><br/>Equipo LittleBigMoney"
+    owner_disbursment_documents:
+      subject: "Documentos a firmar para el desembolso"
+      header: "Documentos a firmar para el desembolso"
+      text_html: "Por favor firme los siguientes documentos y responda a este email adjuntando los documentos firmados para poder realizar el depósito del dinero: %{link_agreement_file}, %{link_disbursement_request_file}"
