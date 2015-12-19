@@ -1,5 +1,6 @@
 # coding: utf-8
 class ProjectsController < ApplicationController
+
   include ActionView::Helpers::DateHelper
   load_and_authorize_resource only: [ :new, :create, :update, :destroy ]
 
@@ -68,7 +69,14 @@ class ProjectsController < ApplicationController
             @picture = @project.pictures.create!(:picture => picture)
           end
         end
-        if params[:project][:identification_file].present? || params[:project][:rut_file].present? || params[:project][:comercial_file].present? || params[:project][:bank_certificate_file].present?
+        if params[:project][:identification_file].present? || params[:project][:rut_file].present? || params[:project][:comercial_file].present? || params[:project][:bank_certificate_file].present? || params[:project][:agreement_file].present? || params[:project][:disbursement_request_file].present? ||
+          resource
+          if @project.identification_file.present? && @project.rut_file.present? && @project.comercial_file.present? && @project.bank_certificate_file.present?
+            @project.notify_admin_documents_ready
+          end
+          if @project.agreement_file.present? && @project.disbursement_request_file.present?
+            @project.notify_owner_disbursment_documents
+          end
           flash[:notice] = I18n.t('projects.update_documents.success')
           return redirect_to project_by_slug_path(@project.permalink, anchor: 'documents')
         else
