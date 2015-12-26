@@ -9,8 +9,12 @@ class Projects::BackersController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: [:create], if: -> { params[:access_token].present? }
 
   def update_info
-    resource.update_attributes(params[:backer])
-    render json: {message: 'updated'}
+    if !resource.pending?
+      render json: {message: 'invalid'}
+    else
+      resource.update_attributes(params[:backer])
+      render json: {message: 'updated'}
+    end
   end
 
   def index
