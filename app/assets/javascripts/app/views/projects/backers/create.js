@@ -85,22 +85,29 @@ CATARSE.ReviewForm = Backbone.View.extend({
     }
 
     if(all_ok){
-      this.updateCurrentBackerInfo();
-      $('#user_submit').attr('disabled', false)
-      if($('#back_with_credits').length < 1) {
-        if(this.allOkToMoIP() && this.liveInBrazil()) {
-          $('nav#payment_menu a#moip').show();
-          $('nav#payment_menu a#moip').addClass('enabled');
-          $('#moip_payment').show();
-          $('.tab_container #payment_menu a.enabled:first').trigger('click')
-        } else {
-          $('nav#payment_menu a#moip').hide();
-          $('nav#payment_menu a#moip').removeClass('enabled');
-          $('#moip_payment').hide();
-          $('.tab_container #payment_menu a.enabled:first').trigger('click')
+      self = this;
+      this.updateCurrentBackerInfo(function(data){
+        if(data.message == 'updated'){
+          $('#user_submit').attr('disabled', false)
+          if($('#back_with_credits').length < 1) {
+            if(self.allOkToMoIP() && self.liveInBrazil()) {
+              $('nav#payment_menu a#moip').show();
+              $('nav#payment_menu a#moip').addClass('enabled');
+              $('#moip_payment').show();
+              $('.tab_container #payment_menu a.enabled:first').trigger('click')
+            } else {
+              $('nav#payment_menu a#moip').hide();
+              $('nav#payment_menu a#moip').removeClass('enabled');
+              $('#moip_payment').hide();
+              $('.tab_container #payment_menu a.enabled:first').trigger('click')
+            }
+            $('#payment.hide').show();
+          }
         }
-        $('#payment.hide').show();
-      }
+        else{
+          window.history.back();
+        }
+      })
     } else {
       $('#payment.hide').hide();
       if($('#back_with_credits').length < 1) {
@@ -190,7 +197,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
     var can_submit_to_moip = true;
   },
 
-  updateCurrentBackerInfo: function() {
+  updateCurrentBackerInfo: function(callback) {
     var backer_id = $('input#backer_id').val();
     var project_id = $('input#project_id').val();
     var backer_data = {
@@ -205,8 +212,12 @@ CATARSE.ReviewForm = Backbone.View.extend({
       address_state: $('#user_address_state').val(),
       address_phone_number: $('#user_phone_number').val()
     }
-    $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {
-      backer: backer_data
+    var is_payment_selected = $('#payment.hide').is(':visible');
+    if(!is_payment_selected){
+      backer_data.payment_method = "PayULatam";
+    }
+    $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
+      callback(data);
     });
   }
 });

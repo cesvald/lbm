@@ -29,6 +29,7 @@ GIT
   remote: git://github.com/cesvald/catarse_payulatam.git
   revision: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
   ref: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
+if required
   specs:
     catarse_payulatam (0.1.11)
       payulatam
