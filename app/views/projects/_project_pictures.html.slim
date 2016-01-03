@@ -1,0 +1,13 @@
+/.bootstrap-twitter
+  /.alert.alert-info
+    /p
+      /= t('projects.show.documents_guide_html')
+.bootstrap-form
+  = semantic_form_for [@project, @project.pictures.build], :html => {:class => 'pictures-upload'} do |form|
+    = form.input :project_id, as: :hidden, :input_html => { :value => @project.id, :class => 'hidden-input-type' }
+    = form.inputs do
+      = form.input :picture, as: :file, required: true, hint: t('projects.show.not_uploaded')
+.bootstrap-twitter#project_pictures_container
+  - @pictures.each do |picture|
+    = render picture, project: @project
+#picture-template.hide

@@ -369,6 +369,8 @@ pt:
         more_links: "Lista de Links relacionados a seu projeto *"
         first_backers: "Lista com os primeiros apoiadores *"
         how_know: "Como você conheceu o LittleBigMoney? *"
+      picture:
+        picture: "Imagen"
       reward:
         days_to_delivery: "Previsão de entrega"
         maximum_backers: "Máximo de apoiadores (opcional)"
@@ -739,6 +741,12 @@ pt:
       download: "Baixar documento"
       not_uploaded: "Nenhum documento disponível"
       update_documents: "Actualizar documentos"
+      add_picture: "Agregar imagen"
+      pictures:
+        delete: "Eliminar"
+        error: "Hubo un error adicionando la imagen"
+      documents:
+        almost_done: "Casi listo"
       reports:
         no_backs: "Seu projeto ainda não tem nenhum apoio."
         link_reports: "Baixar relatório de "
@@ -754,6 +762,7 @@ pt:
         reports: Relatórios
         add_reward: "Adicionar recompensa"
         documents: Documentos
+        pictures: Imagenes
       share:
         embed: embed
         embed_title: "Incorpore este projeto no seu site"

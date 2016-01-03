@@ -2,9 +2,6 @@ require 'sidekiq/web'
 
 Catarse::Application.routes.draw do
 
-  resources :pictures
-
-
   match '/thank_you' => "static#thank_you"
 
   devise_for :users, path: '', 
@@ -78,6 +75,7 @@ Catarse::Application.routes.draw do
 
   resources :projects do
     resources :updates, only: [ :index, :create, :destroy ]
+    resources :pictures, only: [ :index, :create, :destroy ]
     resources :rewards, only: [ :index, :create, :update, :destroy ] do
       member do
         post 'sort'

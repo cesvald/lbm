@@ -1,0 +1,6 @@
+.project_picture_wrapper
+  .delete_picture_btn
+    = link_to [project, picture], method: :delete do
+      i.icon-trash
+      span =t('projects.show.pictures.delete')
+  = image_tag picture.picture_url.to_s

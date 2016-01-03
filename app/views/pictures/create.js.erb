@@ -1,0 +1,6 @@
+<% if @picture.new_record? %>
+	alert("<%= j t('projects.show.pictures.error') %>");
+<% else %>
+	$('#project_pictures_container').prepend("<%= j render(@picture, project: @picture.project) %>");
+	$('#picture_picture_input .inline-hints').html("<%= j t('projects.show.not_uploaded') %>");
+<% end %>

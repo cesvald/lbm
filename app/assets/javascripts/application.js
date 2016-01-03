@@ -25,3 +25,5 @@
 //= require ./init.js
 //= require i18n_viz
 //= require catarse_lbm_gift_cards
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl

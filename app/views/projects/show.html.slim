@@ -73,6 +73,8 @@
             = t('.menu.edit')
           = link_to '#reports', id: 'reports_link' do
             = t('.menu.reports')
+          = link_to '#pictures', id: 'pictures_link' do
+            = t('.menu.pictures')
         - if can? :update, @project, :identification_file
           = link_to '#documents', id: 'documents_link' do
             = t('.menu.documents')
@@ -81,6 +83,7 @@
         - if can? :update, @project
           #project_reports.content.hide= render 'project_reports'
           #project_edit.content.hide= render 'project_edit'
+          #project_pictures.content.hide= render 'project_pictures'
           #project_documents.content.hide= render 'project_documents'
         #project_updates.content.hide= render 'project_updates'
         .media_content_backers

@@ -210,7 +210,28 @@
             text-decoration: none
             &:hover
               color: $carrot
-
+      #project_pictures
+        .project_picture_wrapper
+          float: left
+          max-width: 100%
+          border: solid 1px
+          padding: 10px
+          padding-top: 5px
+          margin-top: 20px
+          img
+            max-width: 100%
+            display: block
+            clear: both
+          .delete_picture_btn
+            font-family: 'icomoon'
+            content: attr(data-icon)
+            float: right
+            margin-bottom: 5px
+            span
+              font-family: Futura, "Trebuchet MS", Arial, sans-serif
+              font-size: 13px
+            i
+              margin-top: 2px
       .media_content_backers
         ul.collection_list
           margin-top: 20px
@@ -577,7 +598,7 @@
                 text-indent: 20px
                 padding: 0px
                 margin-right: 20px
-    #project_edit, #project_reports, #project_documents
+    #project_edit, #project_reports, #project_documents, #project_pictures
       .bootstrap-twitter
         a
           color: $carrot
@@ -600,6 +621,8 @@
           width: 92%
           +border-radius (0)
       .bootstrap-form
+        li
+          list-style-type: none
         .inputs
           li.input
             margin-bottom: 20px
@@ -608,9 +631,23 @@
             padding: 25px 0
             width: 100%
             p.inline-hints
+              .bar
+                height: 18px
+                background-color: #F57421
+                +border-radius(8px)
+                width: 0%
+                .counter
+                  margin-left: 15px
+                  color: white
+                  font-weight: bold
               .download_link
                 &:before
                   content: url($images_path+"tick_16.png")
+          li.input.hidden-input-type
+            margin-bottom: 0px
+            border-bottom: none
+            padding: 0px
+            width: 0px
         textarea, input[type='text']
           width: 70%
         label
@@ -690,6 +727,9 @@
             background: $carrot url($images_path+"icon_refreshproject.png") 10px 9px no-repeat
             &:hover
               background-color: $darkcarrot
+          .btn.btn-no-icon
+            background: #f57421
+            padding: 0 15px 0 15px
     #project_updates
       width: 620px
       .bootstrap-form

@@ -162,6 +162,7 @@ group :assets do
   gem 'uglifier'
   gem 'semantic-mixins', '~> 0.1.9'
   gem 'compass-960-plugin'
+  gem 'jquery-fileupload-rails'
 end
 
 

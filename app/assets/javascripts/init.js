@@ -35,3 +35,29 @@ jQuery(function () {
   exec( controllerClass, controllerName, action );
   exec_filter('finish');
 });
+
+$.fn.fileuploadDone = function (attrs) {
+  dataType = 'json';
+  if('dataType' in attrs)  dataType = attrs.dataType
+  this.fileupload({
+      dataType: dataType,
+      add: function (e, data) {
+        data.context = $('#progress-bar').clone().removeClass('hide');
+        attrs.formObject.find('.inline-hints').html(data.context)
+        data.submit();
+      },
+      progress: function (e, data) {
+        progress = parseInt(data._progress.loaded / data._progress.total * 100, 10);
+        data.context.css('width', progress + '%');
+        if(progress == 100){
+          data.context.find('.counter').html(data.context.find('.almost-done').html());
+        }
+        else{
+          data.context.find('.counter').html(progress + '%');
+        }
+      },
+      done: function (e, data) {
+        if('callbacks' in attrs && 'done' in attrs.callbacks) attrs.callbacks.done(data);
+      }
+  });
+};

@@ -1,7 +1,7 @@
 CATARSE.ProjectsShowView = Backbone.View.extend({
 
   initialize: function() {
-    _.bindAll(this, "bestInPlaceEvents", "showUpRewardEditForm", "showUpNewRewardForm","render", "BackerView", "BackersView", "about", "updates", "edit", "reports", "documents", "backers", "comments", "embed", "isValid", "backWithReward")
+    _.bindAll(this, "bestInPlaceEvents", "showUpRewardEditForm", "showUpNewRewardForm","render", "BackerView", "BackersView", "about", "updates", "edit", "reports", "pictures", "documents", "backers", "comments", "embed", "isValid", "backWithReward")
     CATARSE.router.route("", "index", this.about)
     CATARSE.router.route("about", "about", this.about)
     CATARSE.router.route("updates", "updates", this.updates)
@@ -11,10 +11,32 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     CATARSE.router.route("reports", "reports", this.reports)
     CATARSE.router.route("documents", "documents", this.documents)
     CATARSE.router.route("comments", "comments", this.comments)
+    CATARSE.router.route("pictures", "pictures", this.pictures)
     CATARSE.router.route("embed", "embed", this.embed)
     $('#project_warning .alert-warning #toggle_warning').click(function() {
       $('#project_warning_text').slideToggle(1000);
       return false;
+    });
+    $('.documents-upload').each(function(){
+      (function(item){
+        item.fileuploadDone({
+          callbacks:{
+            done: function(data){
+              item.find('.inline-hints').html('<a href="' +data._response.result.url+ '" class="download_link">' +data.context.find('.download-message').html()+ '</a>');
+            }
+          },
+          formObject: item
+        })
+      })($(this))
+    });
+
+    $('.pictures-upload').each(function(){
+      (function(item){
+        item.fileuploadDone({
+          dataType: 'script',
+          formObject: item
+        })
+      })($(this))
     });
 
     this.$('a.destroy_update').live('ajax:beforeSend', function(event, data){
@@ -191,6 +213,10 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
 
   documents: function() {
     this.selectItem("documents")
+  },
+
+  pictures: function() {
+    this.selectItem("pictures")
   },
 
   backers: function() {
