@@ -369,6 +369,8 @@ en:
         more_links: "List of project related links"
         first_backers: "List of people who could be your first supporters"
         how_know: "How did you get to know LittleBigMoney?"
+      picture:
+        picture: ~
       reward:
         days_to_delivery: "Delivery days"
         maximum_backers: "Supporters maximum (optional)"
@@ -739,6 +741,12 @@ en:
       download: ~
       not_uploaded: ~
       update_documents: ~
+      add_picture: ~
+      pictures:
+        delete: ~
+        error: ~
+      documents:
+        almost_done: ~
       reports:
         no_backs: "This project doesn't have supporters yet."
         link_reports: "Download report of "
@@ -754,6 +762,7 @@ en:
         reports: Reports
         add_reward: "Add Rewards"
         documents: ~
+        pictures: ~
       share:
         embed: embed
         embed_title: "Embed this project on your site"

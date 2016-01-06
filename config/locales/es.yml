@@ -370,7 +370,7 @@ es:
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
       picture:
-        picture: "Imagen"
+        picture: Imagen
       reward:
         days_to_delivery: "Días de entrega"
         maximum_backers: "Máximo de colaboradores (opcional)"
@@ -743,7 +743,7 @@ es:
       update_documents: "Actualizar documentos"
       add_picture: "Agregar imagen"
       pictures:
-        delete: "Eliminar"
+        delete: Eliminar
         error: "Hubo un error adicionando la imagen"
       documents:
         almost_done: "Casi listo"
@@ -1009,11 +1009,11 @@ es:
       place_six: Colombia
       title_six: "Oficial de Comunicaciones"
       text_six: "Comunicador social y periodista con énfasis en la gestión de la comunicación empresarial de la Universidad Externado de Colombia. Experiencia en manejo y creación de comunidades en redes y creación de estratégias de comunicación organizacional. Trabajó como voluntario en la fundación CISV de Colombia como entrenador de liderazgo en educación experiencial y realizó labores de fotografía en la Corporación Coral y Orquestal de Colombia."
-      name_seven: ""
+      name_seven: ~
       image_seven: ""
       place_seven: Bogotá
       title_seven: ""
-      text_seven: ""
+      text_seven: ~
       name_eight: ""
       image_eight: ""
       place_eight: Bogotá

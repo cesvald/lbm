@@ -101,6 +101,10 @@ en:
       subject: "The project %{project_name} has reached its deadline for publishing"
       header: "The project reached its deadline"
       text_html: ~
+    adm_documents_ready:
+      subject: ~
+      header: ~
+      text_html: ~
     credits_warning:
       subject: "You have %{amount} COP in credits on LittleBigMoney"
       header: "Why not support another project?"

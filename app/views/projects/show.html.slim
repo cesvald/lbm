@@ -57,6 +57,8 @@
       nav#project_menu
         = link_to '#about', id: 'about_link', class: 'selected' do
           = t('.menu.about')
+        = link_to '#pictures', id: 'pictures_link' do
+            = t('.menu.pictures')
         = link_to '#updates', id: 'updates_link' do
           = t('.menu.updates')
           span.count=" (#{@updates.count})"
@@ -73,8 +75,6 @@
             = t('.menu.edit')
           = link_to '#reports', id: 'reports_link' do
             = t('.menu.reports')
-          = link_to '#pictures', id: 'pictures_link' do
-            = t('.menu.pictures')
         - if can? :update, @project, :identification_file
           = link_to '#documents', id: 'documents_link' do
             = t('.menu.documents')
