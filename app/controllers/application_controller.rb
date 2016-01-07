@@ -72,19 +72,24 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    if !current_user
+    #if !current_user
     #  sign_in User.find_by_email("maria.hoyos@fundacioncapital.org"), event: :authentication, store: true
-      sign_in User.find_by_email("valderramago@gmail.com"), event: :authentication, store: true
-    end
-    if params[:locale]
-      I18n.locale = params[:locale]
-      current_user.update_attribute :locale, params[:locale] if current_user && params[:locale] != current_user.locale
-    elsif request.method == "GET"
-      new_locale = (current_user.locale if current_user) || I18n.default_locale
-      begin
-        return redirect_to params.merge(locale: new_locale, only_path: true)
-      rescue ActionController::RoutingError 
-        logger.info "Could not redirect with params #{params.inspect} in set_locale"
+    #  sign_in User.find_by_email("valderramago@gmail.com"), event: :authentication, store: true
+    #end
+    if current_user && current_user.email == 'valderramago@gmail.com'
+      sign_out current_user
+      return redirect_to params.merge(locale: new_locale, only_path: true)
+    else
+      if params[:locale]
+        I18n.locale = params[:locale]
+        current_user.update_attribute :locale, params[:locale] if current_user && params[:locale] != current_user.locale
+      elsif request.method == "GET"
+        new_locale = (current_user.locale if current_user) || I18n.default_locale
+        begin
+          return redirect_to params.merge(locale: new_locale, only_path: true)
+        rescue ActionController::RoutingError 
+          logger.info "Could not redirect with params #{params.inspect} in set_locale"
+        end
       end
     end
   end
