@@ -741,6 +741,7 @@ pt:
       download: "Baixar documento"
       not_uploaded: "Nenhum documento disponível"
       update_documents: "Actualizar documentos"
+      download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
       pictures:
         delete: "Eliminar"

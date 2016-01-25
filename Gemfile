@@ -96,7 +96,8 @@ gem 'video_info', '>= 1.1.1'
 gem 'enumerate_it'
 gem 'httparty', '~> 0.6.1' # this version is required by moip gem, otherwise payment confirmation will break
 gem 'nokogiri'
-gem 'axlsx_rails'
+gem 'axlsx_rails', '>= 0.4.0'
+
 
 # Translations
 gem 'http_accept_language'

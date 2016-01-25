@@ -741,6 +741,7 @@ es:
       download: "Descargar documento"
       not_uploaded: "El archivo será subido al ser seleccionado"
       update_documents: "Actualizar documentos"
+      download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
       pictures:
         delete: Eliminar

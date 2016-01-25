@@ -95,6 +95,7 @@ Catarse::Application.routes.draw do
       put 'pay'
       get 'embed'
       get 'video_embed'
+      get 'documents'
     end
   end
   

@@ -10,6 +10,9 @@ class ProjectsController < ApplicationController
   respond_to :json, only: [:index, :show, :backers, :update]
   skip_before_filter :detect_locale, only: [:backers]
   
+  require 'rubygems'
+  require 'zip'
+
   def index
     index! do |format|
       format.html do
@@ -147,6 +150,39 @@ class ProjectsController < ApplicationController
     rewards.each do |r|
       rewards.delete(r[0]) unless Reward.new(r[1]).valid?
     end
+  end
+
+   def documents
+    @project = Project.find params[:id]
+    zip_dir = 'private/zip_files'
+    zip_path = File.join(zip_dir, "#{@project.id}_#{Date.today.to_s}.zip")
+    File.delete(zip_path) if File.exist?(zip_path)
+    FileUtils.mkdir_p('private') unless File.directory?('private')
+    FileUtils.mkdir_p('private/zip_files') unless File.directory?('private/zip_files')
+    Zip::File.open(zip_path, Zip::File::CREATE) do |zipfile|
+      if @project.identification_file.present?
+        zipfile.get_output_stream(@project.identification_file_identifier) { |os| os.write @project.identification_file.file.read }
+      end
+      if @project.rut_file.present?
+        zipfile.get_output_stream(@project.rut_file_identifier) { |os| os.write @project.rut_file.file.read }
+      end
+      if @project.comercial_file.present?
+        zipfile.get_output_stream(@project.comercial_file_identifier) { |os| os.write @project.comercial_file.file.read }
+      end
+      if @project.bank_certificate_file.present?
+        zipfile.get_output_stream(@project.bank_certificate_file_identifier) { |os| os.write @project.bank_certificate_file.file.read }
+      end
+      if @project.agreement_file.present?
+        zipfile.get_output_stream(@project.agreement_file_identifier) { |os| os.write @project.agreement_file.file.read }
+      end
+      if @project.disbursement_request_file.present?
+        zipfile.get_output_stream(@project.disbursement_request_file_identifier) { |os| os.write @project.disbursement_request_file.file.read }
+      end
+    end
+    File.open(zip_path, 'r') do |f|
+      send_data f.read, type: "application/zip"
+    end
+    File.delete(zip_path)
   end
 
   protected
