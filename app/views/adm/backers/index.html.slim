@@ -63,6 +63,9 @@
             .input
               = label_tag :by_channel, t('.channel')
               = select_tag :by_channel, options_from_collection_for_select(Channel.all, 'id', 'name', params[:by_channel]), include_blank: true
+            .input
+              = label_tag :is_matchfunding, t('.is_matchfunding')
+              = select_tag :is_matchfunding, options_for_select([['', ''],['No', '0'],['Yes', '1']], params[:is_matchfunding])
             .bootstrap-twitter
               .input.submit
                 = submit_tag t('.submit'), class: 'btn btn-success'
@@ -73,7 +76,6 @@
             .input.check
               = check_box_tag :credits, :on, params[:credits]
               = label_tag :credits, t('.credits')
-
             .input.check
               = check_box_tag :pending_to_refund, :on, params[:pending_to_refund]
               = label_tag :pending_to_refund, t('.pending_to_refund')
