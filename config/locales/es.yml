@@ -205,7 +205,7 @@ es:
         matchfunding_factor: "Factor para matchfunding"
         matchfunding_percentage: "% para matchfunding"
         matchfunding_user: "Id de usuário para aportes de matchfunding"
-        matchfunding_user_id: "Id de usuário para aportes de matchfunding"
+        matchfunding_user_id: "Id de usuário para aportes de matchfunding (por defecto: id del usuario littlebigmoney@fundacioncapital.org)"
         matchfunding_maximum: "Presupuesto máximo para matchfunding"
         matchfunding_maximum_per_project: "Presupuesto máximo para matchfunding por proyecto"
         show_drafts: "Mostrar borradores"

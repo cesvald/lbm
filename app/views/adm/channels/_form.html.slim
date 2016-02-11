@@ -22,7 +22,7 @@
           = form.input :legend, as: :text, input_html: {style: "width: 99%;"}
           = form.input :confirm_backer_email_paragraph, as: :text, input_html: {style: "width: 99%;"}
           = form.input :matchfunding_factor, as: :string
-          = form.input :matchfunding_user_id, as: :string
+          = form.input :matchfunding_user_id, as: :string, input_html: {value: "#{User.where(email: 'littlebigmoney@fundacioncapital.org').first.id}"}
           = form.input :matchfunding_maximum, as: :string
           = form.input :matchfunding_maximum_per_project, as: :string
           = form.input :group_subdomains, as: :string, input_html: {style: "width: 50%;"}
