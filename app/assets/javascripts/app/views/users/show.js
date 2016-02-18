@@ -30,12 +30,13 @@ CATARSE.UsersShowView = Backbone.View.extend({
         $("button:contains('OK')").attr('disabled', true)
       }
     })
-
   },
 
   events: {
     'change #subscribed_check':'toggleProjects',
     'click .subscribed_projects li label input':'toggleCheckboxes',
+    'click .certification_check':'check_for_certification',
+    'submit #certificate_form':'send_certificate_request'
   },
 
   toggleCheckboxes: function(e) {
@@ -46,6 +47,15 @@ CATARSE.UsersShowView = Backbone.View.extend({
     checked = this.toggleCheckboxes()
     checked ? this.$(".subscribed_projects li label").removeClass('disabled') :
       this.$(".subscribed_projects li label").addClass('disabled')
+  },
+
+  check_for_certification: function(e){
+    if (!$(e.target).hasClass('selected')){
+      $(e.target).addClass('selected')
+    }
+    else{
+      $(e.target).removeClass('selected')
+    }
   },
 
   BackView: CATARSE.ModelView.extend({
@@ -96,7 +106,7 @@ CATARSE.UsersShowView = Backbone.View.extend({
       modelView: this.BackView,
       collection: this.user.backs,
       loading: this.$("#loading"),
-      el: this.$("#user_backed_projects")
+      el: this.$("#user_backers")
     })
   },
 
@@ -137,6 +147,21 @@ CATARSE.UsersShowView = Backbone.View.extend({
     var link = this.$("#user_profile_menu #" + item + "_link")
     link.parent().children().removeClass('selected')
     link.addClass('selected')
+  },
+
+  send_certificate_request: function(){
+    var toCertify = $('.check_certify.selected');
+    if(toCertify.length == 0){
+      alert('Please, select at least one backer to certify')
+      return false
+    }
+    else{
+      toCertify.each(function(){
+        var value = $(this).data('id')
+        $('<input/>').attr({type: 'hidden', name: 'backer[]', value: value}).appendTo('#certificate_form')
+      })
+      return true
+    }
   }
 
 })

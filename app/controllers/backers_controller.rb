@@ -27,6 +27,13 @@ class BackersController < ApplicationController
     # render json: {status: status, credits: current_user.reload.display_credits}
   end
 
+  def certificate_request
+    @backers = Backer.find(params[:backer])
+    @rut = params[:rut]
+    @cc = params[:cc]
+    render "index.html"
+  end
+
   protected
   def collection
     @backs = end_of_association_chain.available_to_count.order("confirmed_at DESC")

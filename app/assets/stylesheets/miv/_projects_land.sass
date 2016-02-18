@@ -1,7 +1,9 @@
 .small_project_land
   +grid(16)
 .project_land
-  +grid(16)
+  +grid(16.3)
+  margin-left: 0px
+  margin-right: 0px
 .project_land,.small_project_land
   &.with_alpha
     +alpha
@@ -91,7 +93,7 @@
     +grid(3)
     +omega
   .back_info
-    +grid(4)
+    +grid(3.5)
   .back_info,.small_back_info
     +alpha
     border-left: 1px rgba(white, 0.5) solid
@@ -129,13 +131,14 @@
     margin-left: 30px
     .bootstrap-twitter
       margin-top: 10px
-  .tell_about
+  .tell_about, .certification_check
     +grid(2)
     // +alpha
     height: 175px
     border-left: 1px rgba(white, 0.5) solid
     padding-left: 5px
-    margin-left: 30px
+    margin-left: 0px
+    margin-right: 0px
     p
       padding-top: 10px
       width: 130px
@@ -155,3 +158,31 @@
           &:hover
             img
               +scale(1.1)
+  .certification_check
+    +grid(1.6)
+    .check_certify
+      width: 50px
+      height: 50px
+      border: solid 1px
+      background-color: white
+      border-radius: 10px
+      margin-left: 13px
+      margin-top: 20px
+      +transition(all, 0.5s)
+      &:hover        
+        +scale(1.1)
+        background-image: url($images_path+"tick_black_64.png")
+        background-repeat: no-repeat
+        background-size: 32px 32px
+        background-position: center center
+        background-color: rgba(0, 0, 0, 0.2)
+        &.selected
+          +scale(1)
+          background-color: rgb(255, 255, 255)
+    .check_certify.selected
+      background-image: url($images_path+"tick_black_64.png")
+      background-repeat: no-repeat
+      background-size: 32px 32px
+      background-position: center center
+        
+

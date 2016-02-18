@@ -62,6 +62,11 @@ script type="text/template" id="user_back_template"
             | <% description = (reward['description']).replace(/"/g,'&quot;') %>
             p(title="<%= description %>") <%= jQuery.trim(reward['description']).substring(0, 75).trim(this) + "..."%>
           |<% } %>
+      .certification_check
+        p= t('certify_this_donation')
+        ul
+          li
+            .check_certify[data-id="<%= id %>"]
       .tell_about
         p= t('tell_about_this_back')
         ul

@@ -49,6 +49,11 @@
       .clearfix
       #user_profile_content
         #user_backed_projects.content
+          .certificate_container
+            = form_tag certificate_request_user_backers_path(current_user), method: :get, id: 'certificate_form' do
+              = submit_tag "Certify"
+            p Notice: Please, fill all the personal information fields, these are required to request a certification, the your name and last name must be complete. The information will be reviewd to accept your request
+          #user_backers
         #user_created_projects.content
         - if can? :manage, @user
           #user_unsubscribes.content.hide

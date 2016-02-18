@@ -108,6 +108,9 @@ Catarse::Application.routes.draw do
       member do
         match :request_refund
       end
+      collection do
+        get :certificate_request
+      end
     end
 
     resources :unsubscribes, only: [:create]
