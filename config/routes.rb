@@ -110,6 +110,7 @@ Catarse::Application.routes.draw do
       end
       collection do
         get :certificate_request
+        post :confirm_certificate_request
       end
     end
 

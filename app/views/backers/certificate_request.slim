@@ -1,0 +1,47 @@
+#main_content
+	#page_content
+		.container
+			.start_container
+				h3#title
+					= t('users.backs.certify_request.title')
+				.bootstrap-form
+					.clearfix
+						= form_tag confirm_certificate_request_user_backers_path(@user), :multipart => true do
+							= hidden_field_tag "backer[]", @backer_param
+							p.description= t('users.backs.certify_request.description2')
+							.input
+							  = label_tag "user[full_name]", t('activerecord.attributes.user.full_name')
+							  = text_field_tag "user[full_name]", @user.full_name
+							.input
+							  = label_tag "user[cpf]", t('activerecord.attributes.user.cpf')
+							  = text_field_tag "user[cpf]", @user.cpf
+							.input
+							  = label_tag "user[state_inscription]", t('activerecord.attributes.user.state_inscription')
+							  = text_field_tag "user[state_inscription]", @user.state_inscription
+
+							p.description= t('users.backs.certify_request.description3')
+							.input
+								= label_tag "cpf_file", t('users.backs.cpf_file')
+								= file_field_tag :cpf_file
+							.input
+								= label_tag "state_inscription_file", t('users.backs.state_inscription_file')
+								= file_field_tag :state_inscription_file
+
+							h4#backs_title= t('users.backs.certify_request.backs_to_certify')
+							.bootstrap-twitter
+								table.table.table-striped
+									thead
+										tr
+											th= t('users.backs.project_name')
+											th= t('users.backs.project_owner')
+											th= t('activerecord.attributes.backer.confirmed_at')
+											th= t('activerecord.attributes.backer.value')
+									tbody
+										- @backers.each do |backer|
+											tr
+												td= backer.project.name
+												td= backer.project.user.full_name
+												td= backer.confirmed_at.to_date
+												td= backer.display_value
+
+								= submit_tag t('users.backs.certify_request.send_request')

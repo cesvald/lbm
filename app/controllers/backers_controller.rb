@@ -28,10 +28,38 @@ class BackersController < ApplicationController
   end
 
   def certificate_request
-    @backers = Backer.find(params[:backer])
-    @rut = params[:rut]
-    @cc = params[:cc]
-    render "index.html"
+    @user = User.find(params[:user_id])
+    if params[:backer].blank?
+      flash[:failure] = I18n.t('users.backs.certify_request.not_backers')
+      redirect_to @user
+    else
+      @backers = Backer.find(params[:backer])
+      @backer_param = params[:backer]
+    end
+  end
+
+  def confirm_certificate_request
+    @user = User.find(params[:user_id])
+    if params[:user][:cpf].blank? || params[:user][:full_name].blank? || params[:user][:state_inscription].blank?
+      flash[:failure] = I18n.t('users.backs.certify_request.field_mandatory')
+      redirect_to action: :certificate_request, params: params
+    else
+      @user.update_attributes(params[:user])
+      if params[:cpf_file].blank? || params[:state_inscription_file].blank?
+        flash[:failure] = I18n.t('users.backs.certify_request.file_mandatory')
+        redirect_to action: :certificate_request, params: params
+      else
+        @backers = Backer.find(params[:backer])
+        if params[:backer].blank?
+          flash[:failure] = I18n.t('users.backs.certify_request.backers_mandatory')
+          redirect_to action: :certificate_request, params: params
+        else
+          BackersMailer.request_certify(@user, @backers, params[:cpf_file], params[:state_inscription_file]).deliver
+          flash[:success] = I18n.t('users.backs.certify_request.success')
+          redirect_to @user
+        end
+      end
+    end
   end
 
   protected

@@ -150,6 +150,7 @@ es:
         update: "Recibir actualizaciones del proyecto"
       backer:
         value: Valor
+        confirmed_at: "Fecha de colaboración"
       project:
         category: Categoría
         expires_at: "Plazo máximo"
@@ -1044,7 +1045,7 @@ es:
         created_projects: "Proyectos creados"
         comments: Comentarios
         credits: Créditos
-        settings: Ajustes
+        settings: Información Personal
         unsubscribes: Notificaciones
       user_social:
         email: "Envíame un correo"
@@ -1058,6 +1059,25 @@ es:
       title: "Proyectos con los que %{name} ha colaborado"
       title_current_user: "Proyecto con los que he colaborado"
       your_reward: "Tu recompensa"
+      project_owner: "Proyecto por"
+      project_name: "Nombre del proyecto"
+      cpf_file: "Cédula"
+      state_inscription_file: "RUT"
+      user_id: "Id del Usuario"
+      certify_request:
+        submit: "Certificar colaboraciones"
+        hint: "Seleccione al menos una colaboración para certificar"
+        title: "Solicitud de certificado de colaboraciones"
+        description2: "Valide o complete la siguiente información de su perfil, es necesaria para enviar la solicitud"
+        description3: "Es necesario un archivo de su cédula y otro del rut para validar su certificado"
+        backs_to_certify: "Colaboraciones a certificar"
+        send_request: "Enviar solicitud"
+        field_mandatory: "Todos los campos del perfil son necesario para enviar la solicitud"
+        file_mandatory: "El archivo de la cédula y del RUT son necesesarios para enviar la solicitud"
+        not_backers: "Seleccione por lo menos una colaboración para certificar"
+        success: "La solicitud ha sido enviada exitosamente, pronto recibirá una respuesta"
+        subject: "Solicitud de certificación de donaciones"
+        mail_body: "Por favor encuentre a continuación la información del usuario quien solicita el certificado, la lista de colaboraciones a certificar, y como archivos adjuntos la cédula y el RUT"
     unsubscribes:
       title: "Selecciona los proyectos de los que deseas recibir notificaciones:"
       updates: "Quiero recibir notificaciones de las actualizaciones"

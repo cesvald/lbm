@@ -151,17 +151,11 @@ CATARSE.UsersShowView = Backbone.View.extend({
 
   send_certificate_request: function(){
     var toCertify = $('.check_certify.selected');
-    if(toCertify.length == 0){
-      alert('Please, select at least one backer to certify')
-      return false
-    }
-    else{
-      toCertify.each(function(){
-        var value = $(this).data('id')
-        $('<input/>').attr({type: 'hidden', name: 'backer[]', value: value}).appendTo('#certificate_form')
-      })
-      return true
-    }
+    toCertify.each(function(){
+      var value = $(this).data('id')
+      $('<input/>').attr({type: 'hidden', name: 'backer[]', value: value}).appendTo('#certificate_form')
+    })
+    return true
   }
 
 })
