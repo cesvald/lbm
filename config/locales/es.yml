@@ -151,6 +151,7 @@ es:
       backer:
         value: Valor
         confirmed_at: "Fecha de colaboración"
+        key: Clave
       project:
         category: Categoría
         expires_at: "Plazo máximo"

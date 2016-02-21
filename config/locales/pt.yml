@@ -151,6 +151,7 @@ pt:
       backer:
         value: Valor
         confirmed_at: "Data de colaboração"
+        key: Clave
       project:
         category: Categoria
         expires_at: Prazo
@@ -1061,6 +1062,7 @@ pt:
       project_name: "Nome do projeto"
       cpf_file: "Cédula"
       state_inscription_file: "RUT"
+      user_id: "Id do Usuario"
       certify_request:
         submit: "Certificar colaborações"
         hint: "Selecione uma colaboração para certificar"
@@ -1070,12 +1072,12 @@ pt:
         description3: "Um registro de seu cartão é necessária e outra rotina para validar seu certificado"
         backs_to_certify: "Colaborações de Certificação"
         send_request: "Enviar aplicação"
-        field_mandatory: "Todos los campos del perfil son necesario para enviar la solicitud"
-        file_mandatory: "El archivo de la cédula y del RUT son necesesarios para enviar la solicitud"
-        not_backers: "Seleccione por lo menos una colaboración para certificar"
-        success: "La solicitud ha sido enviada exitosamente, pronto recibirá una respuesta"
-        subject: "Solicitud de certificación de donaciones"
-        mail_body: 'Por favor encuentre a continuación la información del usuario quien solicita el certificado, la lista de colaboraciones y certificar y adjunto la cédula y el RUT'
+        field_mandatory: "Todos os campos do perfil são obrigados a enviar o pedido"
+        file_mandatory: "O cartão de arquivo e RUT é necessário para enviar o pedido"
+        not_backers: "Selecione pelo menos uma parceria para certificar"
+        success: "A solicitação foi enviada com sucesso em breve receber uma resposta"
+        subject: "Pedido de certificação de doações"
+        mail_body: 'Veja abaixo as informações que o usuário que solicitou o certificado, a lista de colaborações e certificar e anexado ao certificado e RUT'
     unsubscribes:
       title: "Escolha de quais projetos você deseja receber notificações:"
       updates: "Eu quero receber atualizações dos projetos"

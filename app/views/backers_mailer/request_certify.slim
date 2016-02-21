@@ -25,6 +25,7 @@
 					th= t('users.backs.project_owner')
 					th= t('activerecord.attributes.backer.confirmed_at')
 					th= t('activerecord.attributes.backer.value')
+					th= t('activerecord.attributes.backer.key')
 			tbody
 				- @backers.each do |backer|
 					tr
@@ -32,3 +33,4 @@
 						td= backer.project.user.full_name
 						td= backer.confirmed_at.to_date
 						td= backer.display_value
+						td= backer.key
