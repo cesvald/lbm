@@ -58,15 +58,16 @@ class Project < ActiveRecord::Base
   scope :by_id, ->(id) { where(id: id) }
   scope :by_permalink, ->(p) { where("lower(permalink) = lower(?)", p) }
   scope :by_category_id, ->(id) { where(category_id: id) }
+  scope :by_user_email, ->(email) { joins(:user).where("users.email = ?", email)}
   scope :name_contains, ->(term) { where("unaccent(upper(name)) LIKE ('%'||unaccent(upper(?))||'%')", term) }
-  scope :user_name_contains, ->(term) { joins(:user).where("unaccent(upper(users.name)) LIKE ('%'||unaccent(upper(?))||'%')", term) }
+  scope :user_name_contains, ->(term) { joins(:user).where("unaccent(upper(users.full_name)) LIKE ('%'||unaccent(upper(?))||'%')", term) }
   scope :order_table, ->(sort) {
     if sort == 'desc'
       order('goal desc')
     elsif sort == 'asc'
       order('goal asc')
     else
-      order('created_at desc')
+      order('projects.created_at desc')
     end
   }
 

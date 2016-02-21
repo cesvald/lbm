@@ -7,7 +7,8 @@
 				.bootstrap-form
 					.clearfix
 						= form_tag confirm_certificate_request_user_backers_path(@user), :multipart => true do
-							= hidden_field_tag "backer[]", @backer_param
+							- @backers.each do |backer|
+								= hidden_field_tag "backer[]", backer.id
 							p.description= t('users.backs.certify_request.description2')
 							.input
 							  = label_tag "user[full_name]", t('activerecord.attributes.user.full_name')

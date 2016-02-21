@@ -34,7 +34,6 @@ class BackersController < ApplicationController
       redirect_to @user
     else
       @backers = Backer.find(params[:backer])
-      @backer_param = params[:backer]
     end
   end
 

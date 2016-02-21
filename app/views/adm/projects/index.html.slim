@@ -31,7 +31,9 @@
             .input
               = label_tag :user_name_contains, t('.user')
               = text_field_tag :user_name_contains, params[:user_name_contains]
-
+            .input
+              = label_tag :by_user_email, t('.activerecord.attributes.user.email')
+              = text_field_tag :by_user_email, params[:by_user_email]
             .input
               = label_tag :by_channel, t('.by_channel')
               = select_tag :by_channel, options_from_collection_for_select(Channel.all, 'id', 'name', params[:by_channel]), include_blank: true
@@ -68,6 +70,8 @@
                   = t('.name')
                 th= t('.category')
                 th= t('.user_id')
+                th= t('.activerecord.attributes.user.email')
+                th= t('.activerecord.attributes.user.full_name')
                 th= t('.goal')
                 th= t('.pledged')
                 th= t('.total_backs')
@@ -82,6 +86,8 @@
                   td= link_to project.name, project_by_slug_path(permalink: project.permalink)
                   td= project.category
                   td= best_in_place [:adm, project], :user_id, method: :put, type: :input
+                  td= project.user.email
+                  td= project.user.full_name
                   td= best_in_place [:adm, project], :goal, method: :put, type: :input, display_as: :display_goal
                   td= "#{project.display_pledged} (#{project.progress}%)"
                   td= project.total_backers
