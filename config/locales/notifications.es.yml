@@ -104,7 +104,7 @@ es:
     adm_documents_ready:
       subject: "El emprendedor ha actualizado los documentos para la solicitud de desembolso"
       header: "Documentos de desembolso actualizados"
-      text_html: "El proyecto %{link} tiene los documentos actualizados, suba el acuerdo y la solicitud de desembolso a través de la plataforma y un email será enviado al emprendedor solicitándole que los firme"
+      text_html: "El proyecto %{link} tiene los documentos actualizados, ya puede enviar un correo con el acuerdo y la solicitud de desembolso"
     credits_warning:
       subject: "Tienes %{amount} COP de crédito en LittleBigMoney"
       header: "¿Qué tal apoyar un nuevo proyecto?"

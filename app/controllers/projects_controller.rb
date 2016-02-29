@@ -69,18 +69,14 @@ class ProjectsController < ApplicationController
         return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
       }
       success.json{
-        if @project.identification_file.present? && @project.rut_file.present? && @project.comercial_file.present? && @project.bank_certificate_file.present?
+        if @project.identification_file.present? && @project.rut_file.present? && @project.comercial_file.present? && @project.bank_certificate_file.present? && @project.banking_data_file.present?
           @project.notify_admin_documents_ready
-        end
-        if @project.agreement_file.present? && @project.disbursement_request_file.present?
-          @project.notify_owner_disbursment_documents
         end
         msg = { :url => @project.identification_file.url } if params[:project][:identification_file].present?
         msg = { :url => @project.rut_file.url } if params[:project][:rut_file].present?
         msg = { :url => @project.comercial_file.url } if params[:project][:comercial_file].present?
         msg = { :url => @project.bank_certificate_file.url } if params[:project][:bank_certificate_file].present?
-        msg = { :url => @project.agreement_file.url } if params[:project][:agreement_file].present?
-        msg = { :url => @project.disbursement_request_file.url } if params[:project][:disbursement_request_file].present?
+        msg = { :url => @project.banking_data_file.url } if params[:project][:banking_data_file].present?
         render :json => msg
       }
       failure.html{

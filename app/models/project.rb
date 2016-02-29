@@ -14,8 +14,7 @@ class Project < ActiveRecord::Base
   mount_uploader :rut_file, DocumentUploader
   mount_uploader :comercial_file, DocumentUploader
   mount_uploader :bank_certificate_file, DocumentUploader
-  mount_uploader :agreement_file, DocumentUploader
-  mount_uploader :disbursement_request_file, DocumentUploader
+  mount_uploader :banking_data_file, DocumentUploader
 
   delegate :display_status, :display_progress, :display_image, :display_expires_at,
     :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :progress_bar, :successful_flag,
@@ -416,11 +415,7 @@ class Project < ActiveRecord::Base
   end
 
   def notify_admin_documents_ready
-    notify_observers :notify_adm_documents_ready
-  end
-
-  def notify_owner_disbursment_documents
-    notify_observers :notify_owner_disbursment_documents
+    notify_observers :notify_admin_documents_ready
   end
 
   def new_draft_recipient

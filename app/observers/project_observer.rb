@@ -82,13 +82,6 @@ class ProjectObserver < ActiveRecord::Observer
     end
   end
 
-  def notify_owner_disbursment_documents(project)
-    Notification.create_notification_once(:owner_disbursment_documents,
-      project.user,
-      {project_id: project.id},
-      project: project)
-  end
-
   def notify_users(project)
     project.backers.confirmed.each do |backer|
       unless backer.notified_finish

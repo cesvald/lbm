@@ -26,7 +26,7 @@ class Ability
       picture.project.user == current_user
     end
 
-    can :update, :projects, [:identification_file, :rut_file, :comercial_file, :bank_certificate_file] do |project|
+    can :update, :projects, [:identification_file, :rut_file, :comercial_file, :bank_certificate_file, :banking_data_file] do |project|
       project.user == current_user && ( project.successful? || project.partial_successful? )
     end
 
