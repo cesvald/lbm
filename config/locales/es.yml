@@ -367,8 +367,7 @@ es:
         rut_file: RUT
         comercial_file: "Cámara de Comercio"
         bank_certificate_file: "Certificación Bancaria"
-        agreement_file: "Acuerdo con el emprendedor"
-        disbursement_request_file: "Solicitud de desembolso"
+        banking_data_file: "Formato de datos bancarios"
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
@@ -743,6 +742,7 @@ es:
       guide_html: ~
       download: "Descargar documento"
       not_uploaded: "El archivo será subido al ser seleccionado"
+      banking_format_link: "Por favor diligencie el siguiente formato y súbalo en este campo: <a href= 'https://docs.google.com/spreadsheets/d/1FWqI1XetwduEogPuWN0YVa30jthrblllcGugEhgInO4/export?format=xlsx' target='_blank'> Formato de datos bancarios </a>"
       update_documents: "Actualizar documentos"
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"

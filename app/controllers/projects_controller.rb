@@ -168,15 +168,12 @@ class ProjectsController < ApplicationController
       if @project.bank_certificate_file.present?
         zipfile.get_output_stream(@project.bank_certificate_file_identifier) { |os| os.write @project.bank_certificate_file.file.read }
       end
-      if @project.agreement_file.present?
-        zipfile.get_output_stream(@project.agreement_file_identifier) { |os| os.write @project.agreement_file.file.read }
-      end
-      if @project.disbursement_request_file.present?
-        zipfile.get_output_stream(@project.disbursement_request_file_identifier) { |os| os.write @project.disbursement_request_file.file.read }
+      if @project.banking_data_file.present?
+        zipfile.get_output_stream(@project.banking_data_file_identifier) { |os| os.write @project.banking_data_file.file.read }
       end
     end
     File.open(zip_path, 'r') do |f|
-      send_data f.read, type: "application/zip"
+      send_data f.read, type: "application/zip",  filename: "#{@project.name}.zip"
     end
     File.delete(zip_path)
   end

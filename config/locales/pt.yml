@@ -367,8 +367,7 @@ pt:
         rut_file: RUT
         comercial_file: "Câmara de comércio"
         bank_certificate_file: "Certificado Bancário"
-        agreement_file: "Acordo com a empresário"
-        disbursement_request_file: "Pedido de desembolso"
+        banking_format_file: "Formato de dados bancário"
         more_links: "Lista de Links relacionados a seu projeto *"
         first_backers: "Lista com os primeiros apoiadores *"
         how_know: "Como você conheceu o LittleBigMoney? *"
@@ -743,6 +742,7 @@ pt:
       guide_html: "Para saber tudo sobre como estruturar o seu projeto, baixe o <a href='http://catarse.me/guia_realizadores.pdf' target='_blank'>Guia Completo</a>."
       download: "Baixar documento"
       not_uploaded: "Nenhum documento disponível"
+      banking_format_link: "Por favor preencha o seguinte formulário e enviá neste campo: <a href= 'https://docs.google.com/spreadsheets/d/1FWqI1XetwduEogPuWN0YVa30jthrblllcGugEhgInO4/export?format=xlsx' target='_blank'> Formato de datos bancarios </a>"
       update_documents: "Actualizar documentos"
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"

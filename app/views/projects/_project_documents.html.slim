@@ -22,7 +22,7 @@
   = semantic_form_for @project, :html => {:class => 'documents-upload'} do |form|
     = form.inputs do
       - if can? :update, @project, :banking_data_file
-        = form.input :banking_data_file, as: :file, required: false, hint: (@project.banking_data_file.present? ? link_to(t('projects.show.download'), @project.banking_data_file.url, class: 'download_link') : t('projects.show.not_uploaded') )
+        = form.input :banking_data_file, as: :file, required: false, hint: (@project.banking_data_file.present? ? link_to(t('projects.show.download'), @project.banking_data_file.url, class: 'download_link') : t('projects.show.banking_format_link').html_safe )
   - if can? :update, @project, :disbursement_request_file
     .bootstrap-twitter
       = button_to t("projects.show.download_all_documents"), documents_project_path(@project), target: :_blank, class: 'btn', method: :get
