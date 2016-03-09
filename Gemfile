@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # For heroku
 ruby '2.2.4'
 
-gem 'rails',    '3.2.13'
+gem 'rails',    '3.2.22'
 gem 'sidekiq',  '~> 2.13.0'
 gem 'sinatra', require: false # required by sidekiq web interface mounted on /sidekiq
 
@@ -87,7 +87,7 @@ gem 'rmagick'
 # Other Tools
 gem 'ranked-model'
 gem 'feedzirra'
-gem 'curb', '0.7.18'
+gem 'curb', '0.9.1'
 gem 'validation_reflection',      git: 'git://github.com/ncri/validation_reflection.git'
 gem 'inherited_resources',        '1.6.0'
 gem 'has_scope', '0.6.0'
@@ -153,6 +153,7 @@ group :test do
   gem 'jasmine'
   gem 'coveralls', require: false
   gem "selenium-webdriver", "~> 2.34.0"
+  gem 'test-unit'
 end
 
 
@@ -179,4 +180,4 @@ gem 'rails_autolink', '~> 1.0.7'
 # TODO: Take a look on dependencies
 gem "RedCloth"
 
-gem 'rack-wwwhisper', '~> 1.0'
+#gem 'rack-wwwhisper', '~> 1.0'
