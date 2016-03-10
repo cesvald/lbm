@@ -1,4 +1,7 @@
 es:
+  locale:
+    es: Español
+    en: Ingles
   failure_title: "Bienvenido a LittleBigMoney"
   uservoice_gadget:
     user:
@@ -390,8 +393,8 @@ es:
       blog: LittleBig-Blog
       help: Ayuda
       faq: FAQ
-      signup: Registro
-      signin: Ingreso
+      signup: Regístrate
+      signin: Ingresa
       explore: Explora
       invest: "Inversión (Próximamente)"
       submit_project: Envía

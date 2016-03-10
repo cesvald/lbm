@@ -137,7 +137,7 @@ group :development do
   gem 'foreman'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'rack-mini-profiler'
+  #gem 'rack-mini-profiler'
 end
 
 group :test, :development do

@@ -1,13 +1,13 @@
-#header_wrapper
-  #menu_wrapper
-    nav.menu
-      /= link_to t('layouts.header.help'), Configuration[:support_forum], target: :_blank, id: 'guidelines_header_modal' if Configuration[:support_forum].present?
-      /= link_to t('layouts.header.blog'), Configuration['blog_url'], target: :_blank, class: 'blog' if Configuration['blog_url'].present?
+#header_container
+  #header_wrapper
+    #header
+      /= render 'layouts/announcement'
+      = link_to image_tag("lbm/LBM-Header.png"), Configuration[:base_url], :class => 'logo', :title => Configuration[:company_name]
+      = render 'layouts/locales'
       - if current_user
         = t('layouts.header.welcome_html', name: current_user.name)
         |  |
         = link_to '#', class: 'my_profile_link' do
-          /= image_tag(current_user.display_image, :size => "30x30", :class => 'profile_picture')
           span.current_user_name= t('layouts.header.account')
           = image_tag('dropdown.png', :class => 'dropdown_arrow')
         ul.dropdown.user
@@ -27,19 +27,38 @@
           li.divider
           li= link_to t('layouts.user.logout'), destroy_user_session_path, method: :delete
       - else
-        = link_to t('layouts.header.signup'), new_user_registration_path
-        | |
-        = link_to t('layouts.header.signin'), new_user_session_path
-  #header
-    /= render 'layouts/announcement'
-    = link_to "Home", Configuration[:base_url], :class => 'logo', :title => Configuration[:company_name]
-    nav.actions
-      = link_to t('layouts.header.explore'), explore_path, :class => 'explore'
-      /= link_to t('layouts.header.invest'), "#", :class => 'invest'
-      = link_to t('layouts.header.submit_project'), guidelines_start_path, :class =>  'submit_project'
-      = link_to t('layouts.header.how_it_works'), guidelines_path, :class => 'how_it_works'
-    .search
-      = form_tag explore_path(:anchor => "search"), :method => 'GET', :class=>'search_input' do
-        = text_field_tag :search, nil, autocomplete: "off"
-        = submit_tag
-    .clearfix
+        #session_options
+          = render 'layouts/session_options'
+      /nav.actions
+       / = link_to t('layouts.header.explore'), explore_path, :class => 'explore'
+        /= link_to t('layouts.header.invest'), "#", :class => 'invest'
+        /= link_to t('layouts.header.submit_project'), guidelines_start_path, :class =>  'submit_project'
+        /= link_to t('layouts.header.how_it_works'), guidelines_path, :class => 'how_it_works'
+      /.search
+      /  = form_tag explore_path(:anchor => "search"), :method => 'GET', :class=>'search_input' do
+      /    = text_field_tag :search, nil, autocomplete: "off"
+      /    = submit_tag
+      .clearfix
+  #subheader-wrapper
+    #subheader
+      .image_link
+        = link_to image_tag("lbm/subheader_1.png"), guidelines_start_path
+        .text_link
+          span Crea una 
+          span.font_lt Campaña
+      .image_link
+        = link_to image_tag("lbm/subheader_2.png"), explore_path
+        .text_link
+          span Dona a 
+          span.font_lt Proyectos
+      .separator
+      .image_link
+        = link_to image_tag("lbm/subheader_3.png"), explore_path
+        .text_link.color_darkblue.font_size_19
+          span Guías & 
+          span.font_lt Herramientas
+      .image_link
+        = link_to image_tag("lbm/subheader_4.png", class: "margin_right_-6"), explore_path
+        .text_link.color_darkblue.font_size_15.text_center
+          span Como funciona 
+          span.font_lt LittleBigMoney

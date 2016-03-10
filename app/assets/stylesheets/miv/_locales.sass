@@ -1,25 +1,30 @@
-@-webkit-keyframes pulse
-  0%
-    +box-shadow(rgba(0,132,185,.2), 0px, 0px, 12px)
-  50%
-    +box-shadow(rgba(0,132,185,.9), 0px, 0px, 12px)
-  100%
-    +box-shadow(rgba(0,132,185,.2), 0px, 0px, 12px)
-
 #locales
-  position: fixed
-  top: 50%
-  right: 0
-  margin-top: -94px
-  z-index: 450
-  background-color: $warmgray
-  background: rgba($warmgray, .5)
-  +border-top-left-radius(6px)
-  +border-bottom-left-radius(6px)
-  padding: 5px
-  padding-bottom: 0
-  +transition(all,0.3s)
-  &.notify
-    -webkit-animation: pulse 1.5s infinite ease-in-out
-  img
-    width: 32px
+  #locale-content
+    font-family: "Futura Std"
+    font-weight: 200
+    background-color: $carrot
+    +border-bottom-left-radius(10px)
+    +border-bottom-right-radius(10px)
+    padding: 5px
+    display: inline-block
+    color: white
+    position: absolute
+    top: 0px
+    right: 74px
+    height: 16px
+    a
+      text-decoration: none
+      color: white
+    .locale-world
+      width: 17px
+      height: 17px
+      vertical-align: bottom
+    .locale-arrow
+      width: 10px
+      height: 10px
+    li
+      padding-left: 10px
+      padding-right: 10px
+      .locale-link
+        padding-left: 5px
+        padding-right: 5px
