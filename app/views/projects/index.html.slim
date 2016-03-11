@@ -1,9 +1,51 @@
 / Temporaly using channels banner
-  = render partial: 'recommended_header'
-= render partial: 'channels/projects/banner'
+/= render partial: 'recommended_header'
+/ = render partial: 'channels/projects/banner'
 #page_content
   .container
     .main
+      .bootstrap-twitter
+        #banners_carousel.carousel.slide data-ride="carousel" data-interval="10000" data-pause="none"
+          /! Indicators
+          ol.carousel-indicators
+            li.active data-slide-to="0" data-target="#banners_carousel" 
+            li data-slide-to="1" data-target="#banners_carousel" 
+            li data-slide-to="2" data-target="#banners_carousel" 
+          /! Wrapper for slides
+          .carousel-inner role="listbox"
+            .item.active.first
+              = image_tag("lbm/banner_1.png")
+              = link_to "Conoce más", root_path
+            .item.second
+              = image_tag("lbm/banner_2.png")
+              = link_to "Conoce más", root_path
+            .item.third
+              = image_tag("lbm/banner_3.png")
+              = link_to "Conoce más", root_path
+          /! Controls
+          a.left.carousel-control data-slide="prev" href="#banners_carousel" role="button" 
+            span.glyphicon.glyphicon-chevron-left aria-hidden="true" 
+            span.sr-only Previous
+          a.right.carousel-control data-slide="next" href="#banners_carousel" role="button" 
+            span.glyphicon.glyphicon-chevron-right aria-hidden="true" 
+            span.sr-only Next
+      .paragraph
+        span.color_carrot { 
+        span.color_darkblue Mas de 
+        span.color_carrot = "#{Project.successful.size} "
+        span.color_darkblue Proyectos exitosos 
+        span.color_oceanblue & 
+        span.color_darkblue cientos de personas cumpliendo sus metas 
+        span.color_carrot }
+      - unless @categories.empty?
+        p.categories_title
+          = t('sections.category.title')
+        .categories_container
+          .categories_wrapper
+            - @categories.each_with_index do |category, index|
+              .category_circle
+                = link_to image_tag("lbm/category_#{category}.png"), "#{category.to_s.parameterize}"
+                p.category_name = category
       /- if current_user && @projects_near.present?
         .near_projects.list
           .list_title
@@ -136,19 +178,19 @@
         .clear_link
           hr
 
-    .sidebar
-      .content
-        .blog
-          h2= t('sidebar.titles.blog')
-          ul.posts
-            - blog_posts.each do |post|
-              li
-                h6
-                  = link_to post.url, target: '__blank' do
-                    = truncate(post.title, length: 80)
-                p.author= "#{t('projects.box.by')} LittleBigMoney"
-                = link_to post.url, target: '_blank', class: 'resume' do
-                  = truncate(strip_tags(post.summary), length: 130)
+    /.sidebar
+    /  .content
+    /    .blog
+    /      h2= t('sidebar.titles.blog')
+    /      ul.posts
+    /        - blog_posts.each do |post|
+    /          li
+    /            h6
+    /              = link_to post.url, target: '__blank' do
+    /                = truncate(post.title, length: 80)
+    /            p.author= "#{t('projects.box.by')} LittleBigMoney"
+    /            = link_to post.url, target: '_blank', class: 'resume' do
+    /              = truncate(strip_tags(post.summary), length: 130)
 
         .twitter
           a class="twitter-timeline" href="https://twitter.com/#{Configuration['twitter_username']}" data-widget-id="407724007530577920"= Configuration['twitter_username']

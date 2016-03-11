@@ -1,4 +1,97 @@
 [data-namespace="null"][data-controller="projects"][data-action="index"]
+  .carousel
+    .carousel-indicators
+      li
+        margin-left: 5px
+    .carousel-inner
+      .item
+        img
+          width: 100%
+        &.first
+          a
+            top: 313px
+            left: 537px
+        &.second
+          a
+            top: 328px
+            left: 564px
+        &.third
+          a
+            top: 328px
+            left: 435px
+        a
+          position: absolute
+          color: $darkblue
+          font-family: "Futura Std"
+          font-weight: 700
+          font-size: 24px
+          text-decoration: none
+          padding: 10px 15px
+          border-radius: 10px
+          background-color: rgba(277, 277,277, 0.7)
+  .paragraph
+    width: 100%
+    text-align: center
+    font-size: 21px
+    font-fammily: "Futura LT"
+    font-weight: 400
+    margin-top: 20px
+    margin-bottom: 40px
+    .color_carrot
+      color: $carrot
+      font-size: 34px
+    .color_darkblue
+      color: $darkblue
+    .color_oceanblue
+      color: $oceanblue
+      font-size: 33px
+  .categories_title
+    text-align: center
+    font-size: 26px
+    font-family: "Futura Std"
+    font-weight: 200
+    color: $darkblue
+  .categories_container
+    background: url($images_lbm_path+"category-background.jpg")
+    padding-top: 35px
+    padding-bottom: 50px
+    .categories_wrapper
+      width: 783px
+      margin: 0px auto
+      .category_circle
+        display: inline-block
+        margin-right: 20px
+        margin-top: 10px
+        margin-bottom: 20px
+        border-radius: 50%
+        width: 136.5px
+        height: 136.5px
+        background-color: white
+        position: relative
+        transition: .5s background-color
+        &:hover
+          background-color: #49B3E0
+          img
+            opacity: 0.2
+          .category_name
+            opacity: 1
+        img
+          width: 100%
+          transition: .5s opacity
+          cursor: pointer
+        .category_name
+          width: 136.5px
+          text-align: center
+          margin-top: -77px
+          font-size: 17px
+          font-family: "Futura LT"
+          font-weight: 400
+          color: #163861
+          position: absolute
+          top: 134px
+          opacity: 0
+          transition: .5s opacity
+          cursor: pointer
   .channel_banner
     +grid-container
     +grid-system(16)

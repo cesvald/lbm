@@ -119,6 +119,8 @@ pt:
     buttons:
       newsletter: assinar
   sections:
+    category:
+      title: "Explora nuestros proyectos por Categorías"
     near:
       title: "Próximos a mim"
     selection:

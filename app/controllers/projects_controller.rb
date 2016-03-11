@@ -39,6 +39,7 @@ class ProjectsController < ApplicationController
         @successful = Project.successful_for_home(project_ids)
         @banner_image = ""
         @banner_image = I18n.t("projects.index.banner_image_#{1 + Random.rand(9)}", :default => "") while @banner_image.empty?
+        @categories = Category.with_projects.order("name_#{I18n.locale}").all
       end
 
       format.json do

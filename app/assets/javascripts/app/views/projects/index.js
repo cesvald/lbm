@@ -22,6 +22,12 @@ CATARSE.projects.index = Backbone.View.extend({
 
     // Fetching the latest tweets
     this.fetchLatestTweets();
+    $('.carousel-inner .item.first img').load(function(){
+      $('.carousel').height($('.carousel-inner .item.first').height())
+    })
+      
+    var carousel = $('.carousel').carousel()
+    console.log(carousel);
   },
 
   populateTwitterBlock: function(data) {

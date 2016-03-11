@@ -122,6 +122,8 @@ es:
     buttons:
       newsletter: Enviar
   sections:
+    category:
+      title: "Explora nuestros proyectos por Categorías"
     near:
       title: "Proyectos cercanos a ti"
     selection:

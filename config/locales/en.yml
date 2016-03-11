@@ -118,6 +118,8 @@ en:
     buttons:
       newsletter: Submit
   sections:
+    category:
+      title: "Explore our projects by Categories"
     near:
       title: "near me"
     selection:
