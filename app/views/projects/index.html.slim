@@ -32,9 +32,9 @@
       .paragraph
         span.color_carrot { 
         span.color_darkblue Mas de 
-        span.color_carrot = "#{Project.successful.size} "
+        span.color_carrot = "#{Project.successful.count + Project.partial_successful.count} "
         span.color_darkblue Proyectos exitosos 
-        span.color_oceanblue & 
+        span.color_oceanblue_letter & 
         span.color_darkblue cientos de personas cumpliendo sus metas 
         span.color_carrot }
       - unless @categories.empty?
@@ -46,137 +46,79 @@
               .category_circle
                 = link_to image_tag("lbm/category_#{category}.png"), "#{category.to_s.parameterize}"
                 p.category_name = category
-      /- if current_user && @projects_near.present?
-        .near_projects.list
-          .list_title
-            .title
-              h2= t('sections.near.title')
-          .projects
-            - @projects_near.each_with_index do |item,i|
-              == render 'project', project: item, custom_class: ((@projects_near.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-          .explore_link
-            hr
-            = link_to t('main.links.near'), explore_path(anchor: :near)
-      .selected_projects.list
-        .list_title
-          .title
-            h2= t('sections.selection.title')
-        .projects
-          = render partial: 'project', locals: {project: @first_project, custom_class: 'first' } if @first_project
-          = render partial: 'project', locals: {project: @second_project } if @second_project
-          = render partial: 'project', locals: {project: @third_project, custom_class: 'last' } if @third_project
-        .explore_link
-          hr
-          = link_to t('main.links.selected'), explore_path(anchor: :recommended)
 
-      / - if @channel && !@channel_projects.empty?
-        .list_title
-          .title
-            h2= @channel.name
-        .projects
-          - @channel_projects.each_with_index do |item,i|
-            == render 'project', project: item, custom_class: ((@channel_projects.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
+      .title
+        = image_tag "lbm/recent_icon.png", class: "icon"
+        h2= t('sections.recents.title').html_safe
+      .explore_link
+        = link_to t('main.links.view_all'), explore_path(anchor: :recent)
+      .projects
+        - @recent.each_with_index do |item,i|
+          == render 'project', project: item, custom_class: ((@recent.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
+      
+      .expiring_wrapper
+        .title
+          = image_tag "lbm/expiring_icon.png", class: "icon"
+          h2= t('sections.expiring.title').html_safe
         .explore_link
-          hr
-          = link_to t('main.links.channel_projects', name: @channel.name), root_url(subdomain: @channel.permalink)
-
-      - unless @expiring.empty?
-        .list_title
-          .title
-            h2= t('sections.expiring.title')
+          = link_to t('main.links.view_all'), explore_path(anchor: :expiring)
         .projects
           - @expiring.each_with_index do |item,i|
             == render 'project', project: item, custom_class: ((@expiring.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-        .explore_link
-          hr
-          = link_to t('main.links.expiring'), explore_path(anchor: :expiring)
+      
+      .title
+        = image_tag "lbm/channels_icon.png", class: "icon"
+        h2= t('sections.channels.title').html_safe
+      .explore_link
+        = link_to t('main.links.view_all'), root_path
+      .channels
+        #channels-swiper.swiper-container
+          .swiper-wrapper
+            - @channels.each do |channel|
+              == render 'channels/channel', channel: channel
+        #channels-swiper-button-prev.swiper-button-prev
+        #channels-swiper-button-next.swiper-button-next
 
-      - unless @recent.empty?
-        .list_title
-          .title
-            h2= t('sections.recents.title')
-        .projects
-          - @recent.each_with_index do |item,i|
-            == render 'project', project: item, custom_class: ((@recent.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-        .explore_link
-          hr
-          = link_to t('main.links.recents'), explore_path(anchor: :recent)
-
-      - unless @successful.empty?
-        .successful_projects.list
-          .list_title
-            .title
-              h2= t('sections.successful.title')
-          .projects
-            - @successful.each_with_index do |item,i|
-              == render 'project', project: item, custom_class: ((@successful.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-          .explore_link
-            hr
-            = link_to t('main.links.successful'), explore_path(anchor: :successful)
-
-      / .channels.list
-      /   .list_title
-      /     .title
-      /       h2= t('sections.channels.title')
-      /   .projects
-      /     - Channel.home_page.each do |channel|
-      /       a.first href=root_url(subdomain: channel.permalink) target="_blank"
-      /         = image_tag channel.image
-      /   .clear_link
-      /     hr
-
-      - Channel.home_page.each do |channel|
-        .channel.list
-          .list_title
-            .title
-              h2= channel.name
-          .projects
-            - if channel.group_subdomains.present?
-              - length = channel.group_channels.length
-              - length = 3 if channel.group_channels.length > 3
-              - i = 0
-              - channel.group_channels.each do |grouped_channel|
-                - break if (i+1) > length
-                .group_channels
-                  - random_project = grouped_channel.projects.visible.sample(1).first
-                  - if random_project
-                    == render 'project', project: random_project, custom_class: ((length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-                - i += 1
-            - else
-              - channel_projects = channel.projects.visible.order("random()").limit(3)
-              - channel_projects.each_with_index do |item, i|
-                == render 'project', project: item, custom_class: ((channel_projects.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-          .explore_link
-            hr
-            = link_to t('main.links.channel_projects', name: channel.name), root_url(subdomain: channel.permalink)
-
-      .allies.list
-        .list_title
-          .title
-            h2= t('sections.partners.title')
-        .projects
-          a.first href="http://www.culturaemedellin.gov.co/sites/CulturaE/ciudade/Paginas/default.aspx" target="_blank"
-            = image_tag "allies/ciudad_e.png"
-          a href="http://givetocolombia.org/" target="_blank"
-            = image_tag "allies/give_to_colombia.png"
-          a.last href="http://www.dps.gov.co/" target="_blank"
-            = image_tag "allies/dps.png"
-          a.first href="http://www.ccmpc.org.co/Default.aspx" target="_blank"
-            = image_tag "allies/camara_manizales.png"
-          a href="http://www.globalgiving.org/" target="_blank"
-            = image_tag "allies/global_giving.png"
-          a.last href="http://www.fordfoundation.org/" target="_blank"
-            = image_tag "allies/ford_foundation.png"
-          a.first href="http://www.theappdate.com/es/" target="_blank"
-            = image_tag "allies/theappdate.png"
-          a href="http://bogota.impacthub.net/" target="_blank"
-            = image_tag "allies/impact_hub.png"
-          a.last href="http://colombia.laspaginasverdes.com/" target="_blank"
-            = image_tag "allies/lpv.png"
-          a.first href="http://www.emocioncreativa.com/" target="_blank"
-            = image_tag "allies/ec.png"
-        .clear_link
-          hr
+      = image_tag "lbm/banner_footer.png", class: "banner_footer"
+      
+      .allies_title
+        = image_tag "lbm/channels_icon.png", class: "icon"
+        h2= t('sections.partners.title').html_safe
+      .allies
+        #allies-swipper.swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              a.first href="http://www.culturaemedellin.gov.co/sites/CulturaE/ciudade/Paginas/default.aspx" target="_blank"
+                = image_tag "allies/ciudad_e.png"
+            .swiper-slide
+              a href="http://givetocolombia.org/" target="_blank"
+                = image_tag "allies/give_to_colombia.png"
+            .swiper-slide
+              a.last href="http://www.dps.gov.co/" target="_blank"
+                = image_tag "allies/dps.png"
+            .swiper-slide
+              a.first href="http://www.ccmpc.org.co/Default.aspx" target="_blank"
+                = image_tag "allies/camara_manizales.png"
+            .swiper-slide
+              a href="http://www.globalgiving.org/" target="_blank"
+                = image_tag "allies/global_giving.png"
+            .swiper-slide
+              a.last href="http://www.fordfoundation.org/" target="_blank"
+                = image_tag "allies/ford_foundation.png"
+            .swiper-slide
+              a.first href="http://www.theappdate.com/es/" target="_blank"
+                = image_tag "allies/theappdate.png"
+            .swiper-slide
+              a href="http://bogota.impacthub.net/" target="_blank"
+                = image_tag "allies/impact_hub.png"
+            .swiper-slide
+              a.last href="http://colombia.laspaginasverdes.com/" target="_blank"
+                = image_tag "allies/lpv.png"
+            .swiper-slide
+              a.first href="http://www.emocioncreativa.com/" target="_blank"
+                = image_tag "allies/ec.png"
+        #allies-swiper-button-prev.swiper-button-prev
+        #allies-swiper-button-next.swiper-button-next
 
     /.sidebar
     /  .content

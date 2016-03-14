@@ -1,32 +1,77 @@
-#locales
-  #locale-content
+#locale-container
+  display: inline-block
+  position: fixed
+  top: 0px
+  left: 3%
+  z-index: 30
+  &:hover
+    #main-locale:before
+      height: 28px
+  #main-locale
     font-family: "Futura Std"
     font-weight: 200
     font-size: 14px
+    margin-bottom: 0px
+    width: 100.5px
+    height: 28px
     background-color: $carrot
     +border-bottom-left-radius(15px)
     +border-bottom-right-radius(15px)
-    padding: 5px 9px
+    padding: 4px 9px
     display: inline-block
     color: white
-    position: absolute
-    top: 0px
-    right: 74px
-    height: 33px
-    a
-      text-decoration: none
-      color: white
+    cursor: pointer
+    &:before
+      content: ""
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 100.5px
+      height: 0px
+      background: rgba(255,255,255,0.5)
+      +border-bottom-left-radius(15px)
+      +border-bottom-right-radius(15px)
+      transition: all 0.3s ease
+    span
+      display: inline-block
+      margin: 0 5px
+      cursor: pointer
     .locale-world
       width: 17px
       height: 17px
       vertical-align: sub
+      cursor: pointer
     .locale-arrow
       width: 10px
       height: 10px
       vertical-align: initial
-    li
-      padding-left: 10px
-      padding-right: 10px
-      .locale-link
-        padding-left: 5px
-        padding-right: 5px
+      cursor: pointer
+  #locale-list
+    width: 76px
+    margin-right: 13px
+    background-color: $carrot
+    +border-bottom-left-radius(15px)
+    +border-bottom-right-radius(15px)
+    display: inline-block
+    position: absolute
+    top: 28px
+    right: 3%
+    cursor: pointer
+    display: none
+    a
+      font-family: "Futura Std"
+      font-weight: 200
+      font-size: 14px
+      color: white
+      text-decoration: none
+      &:last-child
+        +border-bottom-left-radius(15px)
+        +border-bottom-right-radius(15px)
+        .locale-option
+          +border-bottom-left-radius(15px)
+          +border-bottom-right-radius(15px)
+      .locale-option
+        text-align: center
+        background-color: rgba(255,255,255,0.5)
+        &:hover
+          background-color: $carrot

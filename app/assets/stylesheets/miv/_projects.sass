@@ -1,24 +1,14 @@
 div.project
-  +grid(4)
-  width: 218px
-  background-color: white
-  border: 1px solid darken($lightgray, 10%)
-  +border-top-left-radius(5px)
-  +transition(all, 0.3s)
-  height: 413px
-  overflow: hidden
+  width: 310px
+  margin-right: 5%
+  display: inline-block
+  +box-shadow($grafiti 0 0 28px -6px)
+  background-color: $carrot
+  margin-bottom: 14px
   &.first
     +alpha
   &.last
     +omega
-  // +alpha
-  // &.without_omega
-  //   +omega
-  &:hover
-    +box-shadow(rgba(black, 0.3) 0px 0px 4px)
-  .status_image
-    position: absolute
-    z-index: 100
   .success_slice
     width: 110px
     height: 110px
@@ -27,79 +17,136 @@ div.project
     &.pt
       background: image-url("redesign/success_pt110x110.png") left top no-repeat
   .box
-    .project_content
-      padding: 5px
-      border-bottom: 1px rgba(white, 0.2) solid
-    .black_box
-      text-transform: uppercase
-      text-align: right
-      position: absolute
-      background-color: $mediumlightgray
-      background-color: rgba(140, 140, 140, 0.9)
-      height: 16px
-      overflow: hidden
-      margin-top: 140px
-      margin-left: 4px
-      padding: 7px 5px 1px 0
-      color: white
-      font-size: 11px
-      width: 205px
+    position: relative
     .cover
-      width: 210px
-      height: 164px
+      width: 100%
+      height: 180px
       overflow: hidden
-      margin-bottom: 8px
-      margin-left: 4px
-      margin-top: 4px
+      cursor: pointer
+      &:before
+        content: ""
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 0px
+        background: rgba(3, 57, 100, 0.5)
+        transition: all 0.3s ease
+      &:hover:before
+        height: 180px
+      .mark
+        position: absolute
+        width: 42%
+        top: 0px
+        right: 0px
+        height: 23%
+        background-color: transparent
       img
-        width: 210px
-        height: 164px
+        width: 100%
+        height: 100%
         vertical-align: middle
-    h4
-      font-size: 14px
-      color: $blue
-      padding: 5px 0 10px 3px
-      font-weight: 700
+
+    .project_title
+      padding-right: 20px
       height: 18px
       overflow: hidden
-      margin-bottom: 3px
-      a
-        color: $carrot
-        border-left: 2px solid $carrot
-        padding-left: 4px
-        font-weight: 700
-        font-size: 14px
-        text-decoration: none
-        &:hover
-          color: $darkcarrot
-    .author, .where, .description
-      padding-left: 3px
-      color: black
-      font-size: 11px
-      height: 11px
-      overflow: hidden
-      +opacity(0.7)
-    .description
-      overflow: hidden
-      line-height: 120%
-      font-size: 13px
-      padding: 10px 0 15px 3px
-      height: 62px
-      +opacity(0.5)
-    .where
-      padding: 10px 0
-    .status_bar
-      background-color: white
-      width: 202px
-      height: 10px
-      overflow: hidden
-      border: 1px $minimal_gryn solid
-      +border-radius(5px)
-      .progress
-        +border-radius(4px)
-        background-color: $lightnavy
-        height: 10px
+      height: 35px
+      h4
+        font-size: 17px
+        color: white
+        font-family: 'Futura LT'
+        font-weight: 400
+        text-align: right
         overflow: hidden
+        line-height: 144%
+        margin-top: 7px
+    .project_info
+      background-color: white
+      padding: 10px
+      padding-bottom: 10px
+      height: 125px
+      .author
+        color: $darkblue
+        font-size: 12px
+        overflow: hidden
+        font-family: 'Futura Std'
+        font-weight: 700
+        height: 17px
+        margin-bottom: 0px
+      .description
+        color: $darkblue
+        font-size: 11px
+        overflow: hidden
+        font-family: 'Futura Std'
+        font-weight: 200
+        line-height: 120%
+        height: 77px
+        margin-bottom: 0px
+      .status_bar
+        display: inline-block
+        width: 88%
+        background-color: $lightgreen
+        height: 15px
+        overflow: hidden
+        +border-radius(18px)
+        .progress
+          +border-radius(18px)
+          background-color: $darkgreen
+          height: 15px
+          overflow: hidden
+          margin-bottom: 0px
+      .progress_percent
+        font-size: 10px
+        color: $darkgreen
+        font-family: 'Futura'
+        font-weight: 400
+        vertical-align: top
+    
+    .project_status
+      height: 70px
+      padding-top: 9px
+      color: white
+      td
+        vertical-align: bottom
+      .category_wrapper
+        text-align: center
+        display: inline-block
+        width: 33%
+        img
+          height: 34px
+      .pledged_wrapper
+        width: 33%
+        text-align: center
+        display: inline-block
+        span, p
+          font-family: 'Futura'
+          font-weight: 400
+        span
+          font-size: 12px
+        p
+          font-size: 15px
+        .project_category
+          font-size: 14px
+          font-family: 'Futura Std'
+          font-weight: 200
+      .time_wrapper
+        width: 33%
+        text-align: center
+        display: inline-block
+        img
+          width: 21px
+          vertical-align: baseline
+        .time_number
+          font-size: 31px
+          font-family: 'Futura Std'
+          font-weight: 700
+          display: inline
+          line-height: 10px
+        .time_text
+          font-size: 11px
+          font-family: 'Futura Std'
+          font-weight: 200
+
     .info_bar
       background: $lightgray
       float: left

@@ -90,6 +90,15 @@ pt:
       users: Usuários
       funded_projects: "Projetos bem-sucedidos"
       active_projects: "Projetos no ar agora"
+    contact:
+      address_label: "Dirección"
+      address: "Calle 102 # 45A-36 Bogotá, Colombia"
+      tel_label: "Tel"
+      tel: "+ 57 1 602 5530"
+      schedule_label: "Horario"
+      schedule: "L-V de 9:00 am a 6:00 pm"
+      email_label: "Correo"
+      email: "littlebigmoney@fundacioncapital.org"
     links:
       how_works: Ajuda
       faq: FAQ/Ajuda
@@ -101,6 +110,8 @@ pt:
       contact: Contato
       twitter: "Siga-nos no @%{twitter}"
       facebook: "Encontre-nos no Facebook"
+      our_team: "Nuestro Equipo"
+      work_with_us: "Trabaja Con Nosotros"
   main:
     links:
       selected: "explore mais projetos selecionados"

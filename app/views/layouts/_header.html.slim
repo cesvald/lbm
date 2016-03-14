@@ -5,30 +5,9 @@
       = link_to image_tag("lbm/LBM-Header.png"), Configuration[:base_url], :class => 'logo', :title => Configuration[:company_name]
       = render 'layouts/locales'
       - if current_user
-        = t('layouts.header.welcome_html', name: current_user.name)
-        |  |
-        = link_to '#', class: 'my_profile_link' do
-          span.current_user_name= t('layouts.header.account')
-          = image_tag('dropdown.png', :class => 'dropdown_arrow')
-        ul.dropdown.user
-          li= link_to t('layouts.header.profile'), current_user
-          li
-            = link_to t('layouts.user.my_credits'), user_path(current_user, anchor: 'credits')
-            span.small
-              | (#{current_user.display_credits})
-          - if current_user.admin? or current_user.trustee?
-            li.divider
-          - if current_user.admin?
-            - for menu, path in Adm::BaseController.menu do
-              li= link_to menu, path
-          - if current_user.trustee?
-            - for menu, path in Channels::Adm::ProjectsController.menu do
-              li.channel_trustee= link_to menu, path
-          li.divider
-          li= link_to t('layouts.user.logout'), destroy_user_session_path, method: :delete
+        = render 'layouts/account_options'
       - else
-        #session_options
-          = render 'layouts/session_options'
+        = render 'layouts/session_options'
       /nav.actions
        / = link_to t('layouts.header.explore'), explore_path, :class => 'explore'
         /= link_to t('layouts.header.invest'), "#", :class => 'invest'
@@ -39,26 +18,29 @@
       /    = text_field_tag :search, nil, autocomplete: "off"
       /    = submit_tag
       .clearfix
-  #subheader-wrapper
-    #subheader
-      .image_link
-        = link_to image_tag("lbm/subheader_1.png"), guidelines_start_path
-        .text_link
-          span Crea una 
-          span.font_lt Campaña
-      .image_link
-        = link_to image_tag("lbm/subheader_2.png"), explore_path
-        .text_link
-          span Dona a 
-          span.font_lt Proyectos
-      .separator
-      .image_link
-        = link_to image_tag("lbm/subheader_3.png"), explore_path
-        .text_link.color_darkblue.font_size_19
-          span Guías & 
-          span.font_lt Herramientas
-      .image_link
-        = link_to image_tag("lbm/subheader_4.png", class: "margin_right_-6"), explore_path
-        .text_link.color_darkblue.font_size_15.text_center
-          span Como funciona 
-          span.font_lt LittleBigMoney
+      #subheader
+        .image_link
+          = link_to guidelines_start_path do
+            = image_tag("lbm/subheader_1.png")
+            .text_link
+              span Crea una 
+              span.font_lt Campaña
+        .image_link
+          = link_to explore_path do
+            = image_tag("lbm/subheader_2.png")
+            .text_link
+              span Dona a 
+              span.font_lt Proyectos
+        .separator
+        .image_link
+          = link_to explore_path do
+            = image_tag("lbm/subheader_3.png")
+            .text_link.color_darkblue.font_size_19
+              span Guías & 
+              span.font_lt Herramientas
+        .image_link
+          = link_to explore_path do
+            = image_tag("lbm/subheader_4.png", class: "margin_right_-6")
+            .text_link.color_darkblue.font_size_15.text_center
+              span Como funciona 
+              span.font_lt LittleBigMoney

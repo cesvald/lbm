@@ -22,12 +22,27 @@ CATARSE.projects.index = Backbone.View.extend({
 
     // Fetching the latest tweets
     this.fetchLatestTweets();
-    $('.carousel-inner .item.first img').load(function(){
-      $('.carousel').height($('.carousel-inner .item.first').height())
+    
+    var mySwiper = new Swiper ('#channels-swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: false,
+      nextButton: '#channels-swiper-button-next',
+      prevButton: '#channels-swiper-button-prev',
+      slidesPerView: 'auto',
+      slidesPerGroup: 2,
+      spaceBetween: 20,
     })
-      
-    var carousel = $('.carousel').carousel()
-    console.log(carousel);
+
+    new Swiper ('#allies-swipper', {
+      direction: 'horizontal',
+      loop: false,
+      nextButton: '#allies-swiper-button-next',
+      prevButton: '#allies-swiper-button-prev',
+      slidesPerView: 'auto',
+      slidesPerGroup: 3,
+      spaceBetween: 10,
+    })
   },
 
   populateTwitterBlock: function(data) {

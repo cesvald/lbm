@@ -93,6 +93,15 @@ es:
       users: Usuarios
       funded_projects: "Proyectos Exitosos"
       active_projects: "Proyectos activos"
+    contact:
+      address_label: "Dirección"
+      address: "Calle 102 # 45A-36 Bogotá, Colombia"
+      tel_label: "Tel"
+      tel: "+ 57 1 602 5530"
+      schedule_label: "Horario"
+      schedule: "L-V de 9:00 am a 6:00 pm"
+      email_label: "Correo"
+      email: "littlebigmoney@fundacioncapital.org"
     links:
       how_works: "¿Cómo funciona?"
       faq: F.A.Q./Ayuda
@@ -102,8 +111,10 @@ es:
       terms_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245482"
       policy_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245484"
       contact: Contacto
-      twitter: "Síguenos en @%{twitter}"
-      facebook: "Encuéntranos en Facebook"
+      twitter: "<p class='social_follow'>Síguenos en Twitter</p> <p class='social_user'>@%{twitter}</p>"
+      facebook: "<p class='social_follow'>Síguenos en Facebook</p> <p class='social_user'>@littlebigmoney</p>"
+      our_team: "Nuestro Equipo"
+      work_with_us: "Trabaja Con Nosotros"
   main:
     links:
       selected: "Explora proyectos destacados"
@@ -112,6 +123,7 @@ es:
       successful: "Explora proyectos exitosos"
       near: "Explora proyectos cercanos a ti"
       channel_projects: "Conozca el canal %{name}"
+      view_all: "Ver Todos"
   sidebar:
     titles:
       blog: LittleBig-Blog
@@ -129,15 +141,15 @@ es:
     selection:
       title: "Proyectos destacados"
     expiring:
-      title: "En la recta final"
+      title: "Proyectos en <span class='font_futuraLT_medium'> recta final </span>"
     recents:
-      title: Reciente
+      title: "Proyectos <span class='font_futuraLT_medium'> Recientes </span>"
     successful:
       title: Exitosos
     partners:
-      title: "Con el apoyo de"
+      title: "Con el <p class='allies_text'>apoyo de</p>"
     channels:
-      title: Canales
+      title: "Conoce nuestros <span class='font_futuraLT_medium'> Canales </span>"
   accept_terms_html: "He leído y estoy de acuerdo %{link}."
   activerecord:
     errors:
@@ -401,12 +413,12 @@ es:
       invest: "Inversión (Próximamente)"
       submit_project: Envía
       how_it_works: "Cómo funciona"
-      welcome_html: "Bienvenido <span class='user_name'>%{name}</span>"
+      welcome_html: "Bienvenid@ <span class='user_name'>%{name}</span>"
       profile: "Mi perfil"
-      account: "Mi cuenta"
+      account: "Tu cuenta"
     user:
-      logout: Salir
-      my_credits: "Mis créditos"
+      logout: Cerrar Sesión
+      my_credits: "Mis créditos "
   not_informed: "No informado"
   notify_locale: "Identificamos tu idioma por el buscador. Si prefieres otro por favor, haz clic en la bandera que prefieres."
   on_the_spot:
@@ -477,7 +489,7 @@ es:
     update_documents:
       success: "Los documentos fueron actualizados exitosamente!"
     box:
-      by: de
+      by: "De:"
     admin_fields:
       title: "Campos Administrador"
     back_project:
@@ -662,7 +674,7 @@ es:
       user: Usuario
       value: Valor
     project:
-      backed: Colaboraciones
+      backed: Recaudado
       reached: Alcanzado
     project_backers:
       empty: "Este proyecto necesita más entusiasmo. ¿Qué tal que si eres el primero en realizar un aporte?"

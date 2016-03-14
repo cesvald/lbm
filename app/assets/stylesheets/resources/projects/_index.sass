@@ -1,5 +1,6 @@
 [data-namespace="null"][data-controller="projects"][data-action="index"]
   .carousel
+    margin-top: 20px
     .carousel-indicators
       li
         margin-left: 5px
@@ -9,16 +10,18 @@
           width: 100%
         &.first
           a
-            top: 313px
-            left: 537px
+            top: 65%
+            left: 50%
+            margin-left: -26px
         &.second
           a
-            top: 328px
-            left: 564px
+            top: 65%
+            left: 56%
         &.third
           a
-            top: 328px
-            left: 435px
+            top: 65%
+            left: 50%
+            margin-left: -80px
         a
           position: absolute
           color: $darkblue
@@ -29,6 +32,10 @@
           padding: 10px 15px
           border-radius: 10px
           background-color: rgba(277, 277,277, 0.7)
+          transition: all, 0.3s, ease
+          &:hover
+            color: rgba(277, 277,277, 0.7)
+            background-color: $darkblue
   .paragraph
     width: 100%
     text-align: center
@@ -42,8 +49,8 @@
       font-size: 34px
     .color_darkblue
       color: $darkblue
-    .color_oceanblue
-      color: $oceanblue
+    .color_oceanblue_letter
+      color: $oceanblue_letter
       font-size: 33px
   .categories_title
     text-align: center
@@ -52,9 +59,11 @@
     font-weight: 200
     color: $darkblue
   .categories_container
-    background: url($images_lbm_path+"category-background.jpg")
+    background: url($images_lbm_path+"background_blue.png")
     padding-top: 35px
     padding-bottom: 50px
+    margin-bottom: 50px
+
     .categories_wrapper
       width: 783px
       margin: 0px auto
@@ -92,117 +101,38 @@
           opacity: 0
           transition: .5s opacity
           cursor: pointer
-  .channel_banner
-    +grid-container
-    +grid-system(16)
+  .expiring_wrapper
+    background: url($images_lbm_path+"background_blue.png")
+    width: 100%
     overflow: hidden
-    padding-top: 40px
-    margin-bottom: 20px
-    .center_content
-      +grid(16)
-    .banner
-      background: $carrot
-      padding: 10px
-      +clearfix
-      img
-        float: left
-        width: 412px
-      iframe
-        float: right
-    .text
-      margin-top: 40px
-      h1
-        font-size: 2.2em
-        font-weight: bold
-        margin: 2em 0 0.5em 0
-      h2
-        +grid(14)
-        +grid-prefix(1)
-        +grid-suffix(1)
-        +alpha
-        +omega
-        font-size: 18px
-        line-height: 24px
-        text-transform: uppercase
-        text-align: center
-        font-weight: bold
-        color: $mediumlightgray
-        strong
-          color: $mediumgray
-      .donate, .invest
-        +grid(8)
-        text-align: center
-        margin-top: 60px
-        .slogan
-          margin: 40px 0
-          padding: 30px 0
-          background: white
-          text-transform: uppercase
-          font-size: 13px
-          font-weight: bold
-      .donate
-        +alpha
-        .slogan
-          color: $carrot
-      .invest
-        +opacity(0.5)
-        +omega
-        .slogan
-          color: $brightblue
-      span
-        font-size: 1.3em
-        line-height: 1.5
-      .know_more_button
-        display: block
-        padding: .4em 0
-        width: 147px
-        margin-top: 1.8em
-    .picture
-      text-align: right
-      width: 50%
-      float: left
-  
+    margin-top: 35px
+    clear: both
+    padding-bottom: 43px
+    padding-top: 20px
+    margin-bottom: 40px
+  .banner_footer
+    width: 100%
   #page_content
     .container
-      padding-top: 0
+      padding: 0px
       background: transparent
       border: none
-    .explore_link
-      padding-top: 20px
-      padding-bottom: 30px
-      float: left
-      hr
-        +grid(8)
-        border: none
-        border-bottom: 1px rgba(black, 0.1) solid
-        +omega
-        padding-top: 2px
-      a
-        +grid(4)
-        +omega
-        font-size: 14px
-        color: $carrot
-        text-decoration: none
-        &:hover
-          color: $darkcarrot
-    .clear_link
-      float: left
-      margin-bottom: 60px
-      hr
-        +grid(12)
-        +alpha
-        +omega
-        border: 1px solid transparent
-  .allies, .channels
-    +grid(12)
-    +alpha
-    +omega
+  .allies
+    width: 70%
+    display: inline-block
+    position: relative
+    margin-left: 56px
+    margin-right: 38px
+    .swiper-slide
+      width: 200px
+    #allies-swiper-button-prev, #allies-swiper-button-next
+      top: 61%
+    #allies-swiper-button-prev
+      left: -45px
+    #allies-swiper-button-next
+      right: -37px
     a
       display: block
-      +grid(4)
-      +border-radius(4px)
-      background: white
-      text-align: center
       +opacity(0.8)
       padding: 20px 0
       margin-bottom: 20px
@@ -216,13 +146,5 @@
       img
         max-height: 80px
         max-width: 200px
-  .group_channels
-    .project
-      .channel_image
-        background-color: $lightblue
-        text-align: center
-        a
-          display: block
-          padding: 1em 0
-        img
-          height: 142px
+        border-right: solid 1px #AAAAAA
+        padding-right: 5px

@@ -22,14 +22,13 @@ script type="text/template" id="project_template"
         |<% } %>
     | <% } %>
     .box
-      p.black_box <%=  category['name_' + CATARSE.locale] %>
+      /p.black_box <%=  category['name_' + CATARSE.locale] %>
       .cover
         a href="<%= url %>"
           img src="<%= image %>" itemprop="image"
       .project_content
         h4
-          a href="<%= url %>" itemprop="url"
-            | <%= name %>
+          | <%= name %>
         p.author
           = "#{t('projects.box.by')} "
           span[itemprop="author"] <%= user['name'] %>

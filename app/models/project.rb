@@ -98,14 +98,15 @@ class Project < ActiveRecord::Base
                                      WHEN 'successful' THEN 3
                                      WHEN 'failed' THEN 4
                                      END ASC, online_date DESC, created_at DESC, id DESC") }
-  scope :expiring_for_home, ->(exclude_ids){
-    includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.expiring.order("projects.expires_at, random()").limit(3)
+  scope :expiring_for_home, ->(){
+    includes(:user, :category, :project_total).visible.expiring.order("projects.expires_at, random()").limit(3)
   }
-  scope :recent_for_home, ->(exclude_ids){
-    includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.recent.not_expiring.order('random()').limit(3)
+  scope :recent_for_home, ->(){
+    includes(:user, :category, :project_total).visible.recent.not_expiring.order('random()').limit(3)
   }
-  scope :successful_for_home, ->(exclude_ids){
-    includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.successful.order('random()').limit(3)
+  scope :successful_for_home, ->(){
+    #includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.successful.order('random()').limit(3)
+    includes(:user, :category, :project_total).visible.successful.order('random()').limit(3)
   }
   scope :backed_by, ->(user_id){
     where("id IN (SELECT project_id FROM backers b WHERE b.state = 'confirmed' AND b.user_id = ?)", user_id)

@@ -89,6 +89,15 @@ en:
       users: Users
       funded_projects: "Successful projects"
       active_projects: "Online projects"
+    contact:
+      address_label: "Address"
+      address: "Calle 102 # 45A-36 Bogotá, Colombia"
+      tel_label: "Tel"
+      tel: "+ 57 1 602 5530"
+      schedule_label: "Schedule"
+      schedule: "L-V from 9:00 am to 6:00 pm"
+      email_label: "Email"
+      email: "littlebigmoney@fundacioncapital.org"
     links:
       how_works: "How does it work?"
       faq: F.A.Q./Help
@@ -100,6 +109,8 @@ en:
       contact: Contact
       twitter: "Follow us @%{twitter}"
       facebook: "Find us on Facebook"
+      our_team: "Our Team"
+      work_with_us: "Work With Us"
   main:
     links:
       selected: "Explore recommended projects"

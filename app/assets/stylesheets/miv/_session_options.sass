@@ -1,15 +1,17 @@
-#session_options
+#session_options, #account_welcome
 	background: $oceanblue
+	border: solid 1px $oceanblue
 	display: inline-block
-	+border-radius(10px)
-	padding: 10px 15px
+	+border-radius(15px)
+	padding: 6px 15px
 	font-size: 21px
 	float: right
-	margin-top: -15px
-	margin-right: 74px
+	margin-top: 23px
 	font-family: "Futura Condensed"
 	font-weight: 400
-	#registration
+	transition: all 500ms ease
+
+	#registration, #welcome_message
 		display: inline
 		a
 			color: $darkblue
@@ -20,8 +22,77 @@
 		height: 18px
 		margin-left: 5px
 		margin-right: 8px
-	#login
+	#login, #account_options_btn
 		display: inline
+		color: white
 		a
 			color: white
 			text-decoration: none
+
+
+
+#account_options_container
+	position: fixed
+	right: 5%
+	top: 0px
+	&:hover
+		#account_welcome:before
+			height: 35px
+	#account_welcome
+		font-size: 17px
+		margin-top: 0px
+		padding-top: 3px
+		+border-top-left-radius(0px)
+		+border-top-right-radius(0px)
+		&:before
+			content: ""
+			position: absolute
+			top: 0px
+			left: 0px
+			width: 100%
+			height: 0px
+			background: rgba(255,255,255,0.5)
+			+border-radius(10px)
+			+border-top-left-radius(0px)
+			+border-top-right-radius(0px)
+			transition: all 0.3s ease
+		#separator
+			height: 16px
+
+		.bootstrap-twitter
+			display: inline
+			.glyphicon-triangle-bottom
+				font-size: 14px
+				margin-left: 7px
+	#account_options_list
+		background-color: $oceanblue
+		+border-radius(10px)
+		+border-top-left-radius(0px)
+		+border-top-right-radius(0px)
+		position: absolute
+		right: 0px
+		top: 28px
+		display: none
+		a
+			color: $darkblue
+			text-decoration: none
+			&:last-child
+				+border-bottom-left-radius(10px)
+				+border-bottom-right-radius(10px)
+				li
+					+border-bottom-left-radius(10px)
+					+border-bottom-right-radius(10px)
+					color: $carrot
+			&:first-child
+				li
+					padding-top: 7px
+			li
+				padding: 0px 7px
+				background: rgba(255,255,255,0.5)
+				font-family: "Futura Std"
+				font-weight: 200
+				font-size: 15px
+				&:hover
+					background-color: $oceanblue
+				.small
+					color: white

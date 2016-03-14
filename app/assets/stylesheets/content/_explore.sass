@@ -1,82 +1,82 @@
 [data-action="index"][data-controller="explore"]
   #page_content
-    margin-top: 30px
-    .container
-      .sidebar
-        margin-top: 123px
-        .content
-          padding-top: 10px
-        .search
+    margin-top: 30px  
+    .sidebar
+      margin-top: 123px
+      .content
+        padding-top: 10px
+      .search
+        margin-bottom: 20px
+        form
+          width: 195px
+          height: 22px
+          +border-radius(8px)
+          border: 1px $minimal_gryn solid
+          // +box-shadow(rgba(black, 0.1) 1px 1px 2px)
+          background: white
+          input[type="text"]
+            border: none
+            width: 165px
+            float: left
+            margin-left: 6px
+            margin-top: 3px
+            &:focus
+              outline: none
+          input[type="submit"]
+            background: url($images_path+"search_submit15x15.png") left top no-repeat
+            width: 15px
+            height: 15px
+            border: none
+            text-indent: -9999em
+            float: right
+            margin: 3px 5px 0 0px
+      section
+        h2
+          font-size: 13px
+          color: $mediumlightgray
+          margin-bottom: 10px
+          text-transform: uppercase
+          font-weight: 700
+        ul
           margin-bottom: 20px
-          form
-            width: 195px
-            height: 22px
-            +border-radius(8px)
-            border: 1px $minimal_gryn solid
-            // +box-shadow(rgba(black, 0.1) 1px 1px 2px)
-            background: white
-            input[type="text"]
-              border: none
-              width: 165px
-              float: left
-              margin-left: 6px
-              margin-top: 3px
-              &:focus
-                outline: none
-            input[type="submit"]
-              background: url($images_path+"search_submit15x15.png") left top no-repeat
-              width: 15px
-              height: 15px
-              border: none
-              text-indent: -9999em
-              float: right
-              margin: 3px 5px 0 0px
-        section
-          h2
-            font-size: 13px
-            color: $mediumlightgray
-            margin-bottom: 10px
-            text-transform: uppercase
-            font-weight: 700
-          ul
-            margin-bottom: 20px
+          li
+            margin-bottom: 5px
+            a
+              color: $mediumlightgray
+              font-size: 14px
+              display: block
+              padding: 6px 10px
+              text-decoration: none
+              +border-radius(5px)
+              &:hover, &.selected
+                background: rgba($carrot, 0.8)
+                color: white
+    .main
+      .section_header
+        display: block
+        color: $darkblue
+        margin-left: 10%
+        margin-top: 10px
+        h1
+          font-family: 'Futura Std'
+          font-weight: 700
+          font-size: 17px
+          line-height: 7px
+        h4
+          font-size: 17px
+          line-height: 20px
+          font-family: 'Futura Std'
+          font-weight: 200
+      #explore_results
+        .results
+          ul.collection_list
+            float: left
             li
-              margin-bottom: 5px
-              a
-                color: $mediumlightgray
-                font-size: 14px
-                display: block
-                padding: 6px 10px
-                text-decoration: none
-                +border-radius(5px)
-                &:hover, &.selected
-                  background: rgba($carrot, 0.8)
-                  color: white
-      .main
-        .section_header
-          +grid(16)
-          +alpha
-          display: block
-          height: 105px
-          h1
-            font-weight: 700
-            font-size: 20px
-            padding-bottom: 5px
-            span
-              color: $mediumgray
-          h4
-            font-size: 16px
-            line-height: 20px
-        #explore_results
-          .results
-            ul.collection_list
               float: left
-              li
-                float: left
-                margin-bottom: 20px
-                &.first
-                  .project
-                    +alpha
-                &.last
-                  .project
-                    +omega
+              margin-bottom: 20px
+              &.first
+                .project
+                  +alpha
+              &.last
+                .project
+                  +omega

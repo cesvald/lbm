@@ -1,0 +1,20 @@
+.swiper-slide.channel-slide
+	.channel
+		- if channel.banner_top_url.present?
+			= image_tag channel.banner_top_url, class: "top_image"
+		- else
+			= image_tag "project.png", class: "top_image"
+		.video
+			- if channel.video_url.present?
+				= image_tag channel.display_video_thumbnail
+			- elsif channel.image.present?
+				= image_tag channel.image, title: channel.name
+			- else
+				= image_tag "project.png", class: "top_image"
+		.footer
+			.description
+				= truncate(channel.description, length: 210)
+			.line
+			.statistics
+				p= "#{channel.display_pledged_total} #{t('channel.pledged')}"
+				p= "#{channel.projects_total} #{t('channel.projects')}"

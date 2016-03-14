@@ -44,17 +44,45 @@ html lang="#{I18n.locale}" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http:/
     #main_content[data-controller-class=controller.class.name.downcase data-controller-name=controller.controller_name.downcase data-action=controller.action_name.downcase data-locale="#{I18n.locale}" data-user="#{current_user.to_json}"]
       = yield
     #footer
-      .container.footer
-        .content
-          .info
-            ul
-              li= link_to "Home", root_path
-              li= link_to t('footer.links.about'), about_path
-              li= link_to t('layouts.header.how_it_works'), guidelines_path
-              li= link_to t('footer.links.faq'), Configuration[:support_forum], target: '_blank'
-              li= link_to t('footer.links.terms'), t('footer.links.terms_link')
-              li= link_to t('footer.links.policy'), t('footer.links.policy_link')
-              li= link_to t('footer.links.contact'), Configuration[:support_forum], target: '_blank'
+      .section_wrapper
+        .section
+          = image_tag "lbm/logo_footer.png", class: "logo_footer"
+        .section
+          = link_to t('footer.links.faq'), Configuration[:support_forum], target: '_blank'
+          = link_to "#{t('footer.links.terms')} /", t('footer.links.terms_link')
+          = link_to t('footer.links.policy'), t('footer.links.policy_link'), class: "close_link"
+          = link_to t('footer.links.our_team'), about_path
+          = link_to t('footer.links.work_with_us'), Configuration[:support_forum], target: '_blank'
+          /li= link_to t('layouts.header.how_it_works'), guidelines_path
+        .section.contact_section
+          .contact_title
+            = image_tag "lbm/location_icon.png", class: "location_icon"
+            span= t('footer.links.contact')
+          .contact_left
+            span.label= "#{t('footer.contact.address_label')}:"
+            span.text= t('footer.contact.address')
+            br
+            span.label= "#{t('footer.contact.tel_label')}:"
+            span.text= t('footer.contact.tel')
+          .contact_right
+            span.label= "#{t('footer.contact.schedule_label')}:"
+            span.text= t('footer.contact.schedule')
+            br
+            span.label= "#{t('footer.contact.email_label')}:"
+            span.text= t('footer.contact.email')
+        .section.social_section
+          .social_wrapper
+            = link_to ::Configuration[:facebook_url], target: :_blank do
+              = image_tag "lbm/footer_facebook.png", class: "facebook_icon"
+              = t('footer.links.facebook').html_safe
+          .social_wrapper
+            = link_to "https://twitter.com/#{::Configuration[:twitter_username]}", target: :_blank do
+              = image_tag "lbm/footer_twitter.png"
+              = t('footer.links.twitter', twitter: ::Configuration[:twitter_username]).html_safe
+      = image_tag 'lbm/footer.png', class: "footer"
+
+      /!
+        .container.footer
           .opendata
             ul
               li
@@ -81,10 +109,11 @@ html lang="#{I18n.locale}" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http:/
               = text_field_tag 'EMAIL', nil, placeholder: 'email@email.com', label: 'email'
               = submit_tag "#{t('newsletter_subscribe')}"
           .clearfix
-    #credits
-      .content
-        a href="http://www.fundacioncapital.org/" target="_blank"
-          = image_tag "catarse/logo-fundacion.png"
+    /!
+      #credits
+        .content
+          a href="http://www.fundacioncapital.org/" target="_blank"
+            = image_tag "catarse/logo-fundacion.png"
     = render '/layouts/uservoice'
     = render '/layouts/remarketing_analytics'
     = render '/layouts/conversion_analytics' if namespace == "projects" && controller_name == "backers" && action_name == "show"

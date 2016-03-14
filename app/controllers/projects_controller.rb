@@ -28,18 +28,23 @@ class ProjectsController < ApplicationController
           @first_project, @second_project, @third_project = collection_projects.all
         end
 
-        project_ids = collection_projects.map{|p| p.id }
-        project_ids << @recommended_projects.last.id if @recommended_projects
+        #project_ids = collection_projects.map{|p| p.id }
+        #project_ids << @recommended_projects.last.id if @recommended_projects
 
-        @projects_near = Project.online.near_of(current_user.address_state).order("random()").limit(3) if current_user
-        @channel = Channel.find_by_permalink("impacthub")
-        @channel_projects = @channel.projects.visible.order("random()").limit(3) if @channel
-        @expiring = Project.expiring_for_home(project_ids)
-        @recent = Project.recent_for_home(project_ids)
-        @successful = Project.successful_for_home(project_ids)
+        #@projects_near = Project.online.near_of(current_user.address_state).order("random()").limit(3) if current_user
+        #@channel = Channel.find_by_permalink("impacthub")
+        #@channel_projects = @channel.projects.visible.order("random()").limit(3) if @channel
+        
+        @expiring = Project.expiring_for_home()
+        @expiring = Project.successful_for_home() if @expiring.empty?
+        @recent = Project.recent_for_home()
+        @recent = Project.successful_for_home() if @recent.empty?
+
         @banner_image = ""
         @banner_image = I18n.t("projects.index.banner_image_#{1 + Random.rand(9)}", :default => "") while @banner_image.empty?
         @categories = Category.with_projects.order("name_#{I18n.locale}").all
+
+        @channels = Channel.not_receive_projects.order("RANDOM()").all
       end
 
       format.json do
