@@ -315,6 +315,7 @@ en:
       successful: Successful!
       partial_successful: ~
       title: "Discover amazing projects!"
+      search_by_word: "Search by key word"
     title: "Explore the projects"
     project:
       empty: "Hey, we didn't find any project with the text you searched. Wanna try some new words? :)"

@@ -24,28 +24,29 @@ script type="text/template" id="project_template"
             |&nbsp;
             span[itemprop="author"]
               | <%= user['name'] %>
-          p.description[itemprop="description"]= "\"<%= truncate(headline, length: 140) %>\""
+          p.description[itemprop="description"]
+           | <%= headline %> 
           .status_bar
             .progress style="width: <%= display_progress %>%;"
           |&nbsp;
           span.progress_percent= "<%= progress %>%"
         .project_status
           .category_wrapper
-            = image_tag("lbm/visual_<%= category %>.png")
+            img src="<%= visual_category_url %>"
             p.project_category
-             | <%= truncate(category, length: 14) %>
+             | <%= category_name %>
           .pledged_wrapper
             span
-              | <%= display_pledged %>
+              | <%= pledged %>
             p= t('projects.project.backed')
           .time_wrapper
-            | <%= if(in_time?) { %>
+            | <% if(in_time) { %>
               = image_tag "lbm/clock.png"
               span.time_number= time_to_go['time']
               p.time_text= "<%= time_to_go['unit'].capitalize %> <%= remaining_text %>"
-            | <% } %>
-            | <%= else { %>
-              h6= I18n.t("project.display_status. <%= display_status %>").capitalize
+            | <% } else { %>
+              h6
+                | <%= display_status_to_box %>
               p
-                | <%= project.display_expires_at %>
+                | <%= display_expires_at %>
             | <% } %>

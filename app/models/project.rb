@@ -16,7 +16,7 @@ class Project < ActiveRecord::Base
   mount_uploader :bank_certificate_file, DocumentUploader
   mount_uploader :banking_data_file, DocumentUploader
 
-  delegate :display_status, :display_progress, :display_image, :display_expires_at,
+  delegate :display_status, :display_progress, :display_image, :display_visual_category, :display_expires_at,
     :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :progress_bar, :successful_flag,
     to: :decorator
 
@@ -258,8 +258,9 @@ class Project < ActiveRecord::Base
       name: name,
       user: user,
       category: category,
+      category_name: category.to_s,
       image: display_image,
-      headline: headline,
+      headline: truncate(headline, length: 140),
       progress: progress,
       display_progress: display_progress,
       goal: display_goal,
@@ -270,6 +271,7 @@ class Project < ActiveRecord::Base
       video_url: video_url,
       embed_url: video_embed_url ? video_embed_url : (video ? video.embed_url : nil),
       url: Rails.application.routes.url_helpers.project_by_slug_path(permalink, locale: I18n.locale),
+      visual_category_url: display_visual_category,
       full_uri: Rails.application.routes.url_helpers.project_by_slug_url(permalink, locale: I18n.locale),
       expired: expired?,
       partial_successful: partial_successful?,
@@ -277,7 +279,7 @@ class Project < ActiveRecord::Base
       waiting_funds: waiting_funds?,
       failed: failed?,
       state: state,
-      display_status_to_box: display_status.blank? ? nil : I18n.t("project.display_status.#{display_status}"),
+      display_status_to_box: display_status.blank? ? nil : I18n.t("project.display_status.#{display_status}").capitalize,
       display_expires_at: display_expires_at,
       in_time: in_time?,
       permalink: permalink,

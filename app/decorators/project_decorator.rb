@@ -34,6 +34,10 @@ class ProjectDecorator < Draper::Decorator
     end
   end
 
+  def display_visual_category
+    image_path("lbm/visual_#{source.category}.png")
+  end
+
   def display_video_thumbnail(version = 'project_picture')
     if source.video.present?
       if source.video.instance_of? VideoInfo::Providers::Vimeo

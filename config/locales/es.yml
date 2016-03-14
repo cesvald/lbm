@@ -322,6 +322,7 @@ es:
       successful: Exitosos
       partial_successful: "Parcialmente exitosos"
       title: "Descubre proyectos increíbles!"
+      search_by_word: "Busca por palabra clave"
     title: "Explora los proyectos"
     project:
       empty: "Oops, no encontramos ningún proyecto con lo que buscas. ¿Qué tal intentar con otras palabras? :)"

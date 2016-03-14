@@ -151,7 +151,7 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
   },
 
   selectItem: function(name) {
-    this.selectedItem = $('.sidebar a[href=#' + name + ']')
+    this.selectedItem = $('.sidebar a[href="#' + name + '"]')
     $('.sidebar .selected').removeClass('selected')
     this.selectedItem.addClass('selected')
   },

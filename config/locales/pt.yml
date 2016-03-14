@@ -318,6 +318,7 @@ pt:
       successful: Bem-sucedidos
       partial_successful: "Parcialmente bem sucedido"
       title: "Encontre projetos incríveis"
+      search_by_word: "Busca por palabra clave"
     title: "Explore os projetos"
     project:
       empty: "Ei, não encontramos nenhum projeto com o texto que você procurou. Que tal experimentar com outras palavras? =D"
