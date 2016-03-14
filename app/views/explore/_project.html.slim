@@ -7,57 +7,45 @@ script type="text/template" id="projects_template"
 script type="text/template" id="project_template"
   .project[itemscope itemtype="http://schema.org/CreativeWork" class=(custom_class if defined?(custom_class))]
     meta[itemprop="dateCreated" content="<%= created_at %>"]
-
-    | <% if(expired) { %>
-    .status_image
-      a href="<%= url %>"
-        |<% if(successful) { %>
-        = image_tag "successful.#{I18n.locale}.png"
-        |<% } else if(partial_successful) { %>
-        = image_tag "partial_successful.#{I18n.locale}.png"
-        |<% } else if(waiting_funds) { %>
-        = image_tag "waiting_confirmation.#{I18n.locale}.png"
-        |<% } else { %>
-        = image_tag "not_successful.#{I18n.locale}.png"
-        |<% } %>
-    | <% } %>
     .box
-      /p.black_box <%=  category['name_' + CATARSE.locale] %>
       .cover
         a href="<%= url %>"
           img src="<%= image %>" itemprop="image"
+        | <% if(expired) { %>
+          = image_tag "lbm/mark_<%= state %>.png", class: "mark"
+        | <% } %>
       .project_content
-        h4
-          | <%= name %>
-        p.author
-          = "#{t('projects.box.by')} "
-          span[itemprop="author"] <%= user['name'] %>
-        p.description[itemprop="description"]
-          | <%= headline %>
-        p.where[itemprop="contentLocation"]
-          |<% if (user['city'] && user['city'].length > 0) { %>
-          | <%= user['city'] %>
-          |<% if (user['state'] && user['state'].length > 0) { %>
-          | /
-          | <%= user['state'] %>
-          |<% } %>
-          |<% } %>
-      .info_bar
-        .status_bar
-          .progress style="width: <%= display_progress %>%;"
-        ul
-          li
-            | <% if(in_time) { %>
-            h6 <%= time_to_go['time'] %> <%= time_to_go['unit'] %>
-            p <%= remaining_text %>
-            | <% } else { %>
-            h6 <%= display_status_to_box %>
-            p <%= display_expires_at %>
+        .project_title
+          h4
+            | <%= name %>
+        .project_info
+          p.author
+            = t('.by')
+            |&nbsp;
+            span[itemprop="author"]
+              | <%= user['name'] %>
+          p.description[itemprop="description"]= "\"<%= truncate(headline, length: 140) %>\""
+          .status_bar
+            .progress style="width: <%= display_progress %>%;"
+          |&nbsp;
+          span.progress_percent= "<%= progress %>%"
+        .project_status
+          .category_wrapper
+            = image_tag("lbm/visual_<%= category %>.png")
+            p.project_category
+             | <%= truncate(category, length: 14) %>
+          .pledged_wrapper
+            span
+              | <%= display_pledged %>
+            p= t('projects.project.backed')
+          .time_wrapper
+            | <%= if(in_time?) { %>
+              = image_tag "lbm/clock.png"
+              span.time_number= time_to_go['time']
+              p.time_text= "<%= time_to_go['unit'].capitalize %> <%= remaining_text %>"
             | <% } %>
-          li
-            h6 <%= pledged %>
-            p=t('projects.project.backed')
-
-          li
-            h6 <%= progress %> %
-            p= t('projects.project.reached')
+            | <%= else { %>
+              h6= I18n.t("project.display_status. <%= display_status %>").capitalize
+              p
+                | <%= project.display_expires_at %>
+            | <% } %>

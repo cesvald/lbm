@@ -276,6 +276,7 @@ class Project < ActiveRecord::Base
       successful: successful?,
       waiting_funds: waiting_funds?,
       failed: failed?,
+      state: state,
       display_status_to_box: display_status.blank? ? nil : I18n.t("project.display_status.#{display_status}"),
       display_expires_at: display_expires_at,
       in_time: in_time?,
