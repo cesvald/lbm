@@ -41,14 +41,12 @@ script type="text/template" id="project_template"
             p= t('projects.project.backed')
           .time_wrapper
             | <% if(in_time) { %>
-              = image_tag "lbm/clock.png"
-              span.time_number
-                | time_to_go['time']
-              p.time_text
-                | <%= time_to_go['unit'] %> <%= remaining_text %>
+            = image_tag "lbm/clock.png"
+            span.time_number
+              | time_to_go['time']
+            p.time_text
+              | <%= time_to_go['unit'] %> <%= remaining_text %>
             | <% } else { %>
-              h6
-                | <%= display_status_to_box %>
-              p
-                | <%= display_expires_at %>
+            h6 <%= display_status_to_box %>
+            p <%= display_expires_at %>
             | <% } %>
