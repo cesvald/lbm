@@ -27,6 +27,3 @@
 //= require catarse_lbm_gift_cards
 //= require jquery-fileupload/basic
 //= require jquery-fileupload/vendor/tmpl
-//= require ./lib/swiper/swiper.jquery.min.js
-//= require ./lib/headroom/headroom.js
-//= require ./lib/headroom/jQuery.headroom.js
