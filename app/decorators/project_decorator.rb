@@ -34,8 +34,8 @@ class ProjectDecorator < Draper::Decorator
     end
   end
 
-  def display_visual_category
-    image_path("lbm/visual_#{source.category}.png")
+  def display_icon_category
+    embedded_svg "lbm/#{source.category.icon_text}.svg"
   end
 
   def display_video_thumbnail(version = 'project_picture')

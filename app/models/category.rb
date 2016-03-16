@@ -16,6 +16,6 @@ class Category < ActiveRecord::Base
   end
 
   def icon_text
-    name_es
+    "icon_#{name_es}"
   end
 end
