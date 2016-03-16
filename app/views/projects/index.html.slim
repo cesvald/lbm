@@ -37,26 +37,18 @@
         span.color_oceanblue_letter & 
         span.color_darkblue cientos de personas cumpliendo sus metas 
         span.color_carrot }
-      - unless @categories.empty?
-        p.categories_title
-          = t('sections.category.title')
-        .categories_container
-          .categories_wrapper
-            - @categories.each_with_index do |category, index|
-              .category_circle
-                = link_to image_tag("lbm/category_#{category}.png"), "#{category.to_s.parameterize}"
-                p.category_name = category
 
-      .title
-        = image_tag "lbm/recent_icon.png", class: "icon"
-        h2= t('sections.recents.title').html_safe
-      .explore_link
-        = link_to t('main.links.view_all'), explore_path(anchor: :recent)
-      .projects
-        - @recent.each_with_index do |item,i|
-          == render 'project', project: item, custom_class: ((@recent.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
+      .block_container
+        .title
+          = image_tag "lbm/recent_icon.png", class: "icon"
+          h2= t('sections.recents.title').html_safe
+        .explore_link
+          = link_to t('main.links.view_all'), explore_path(anchor: :recent)
+        .projects
+          - @recent.each_with_index do |item,i|
+            == render 'project', project: item, custom_class: ((@recent.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
       
-      .expiring_wrapper
+      .block_container
         .title
           = image_tag "lbm/expiring_icon.png", class: "icon"
           h2= t('sections.expiring.title').html_safe
@@ -66,18 +58,29 @@
           - @expiring.each_with_index do |item,i|
             == render 'project', project: item, custom_class: ((@expiring.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
       
-      .title
-        = image_tag "lbm/channels_icon.png", class: "icon"
-        h2= t('sections.channels.title').html_safe
-      .explore_link
-        = link_to t('main.links.view_all'), root_path
-      .channels
-        #channels-swiper.swiper-container
-          .swiper-wrapper
-            - @channels.each do |channel|
-              == render 'channels/channel', channel: channel
-        #channels-swiper-button-prev.swiper-button-prev
-        #channels-swiper-button-next.swiper-button-next
+      - unless @categories.empty?
+        .categories_container.block_container
+          p.categories_title
+            = t('sections.category.title')
+          .categories_wrapper
+            - @categories.each_with_index do |category, index|
+              .category_circle
+                = embedded_svg "lbm/#{category.icon_text}.svg"
+                p.category_name = category
+                
+      .block_container
+        .title
+          = image_tag "lbm/channels_icon.png", class: "icon"
+          h2= t('sections.channels.title').html_safe
+        .explore_link
+          = link_to t('main.links.view_all'), root_path
+        .channels
+          #channels-swiper.swiper-container
+            .swiper-wrapper
+              - @channels.each do |channel|
+                == render 'channels/channel', channel: channel
+          #channels-swiper-button-prev.swiper-button-prev
+          #channels-swiper-button-next.swiper-button-next
 
       = image_tag "lbm/banner_footer.png", class: "banner_footer"
       

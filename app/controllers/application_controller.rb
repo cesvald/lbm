@@ -1,5 +1,6 @@
 # coding: utf-8
 require 'uservoice_sso'
+
 class ApplicationController < ActionController::Base
   layout :use_catarse_boostrap
   protect_from_forgery
@@ -17,8 +18,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts
-
+  helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg
+  
   before_filter :set_locale
   before_filter :force_http
 
@@ -63,6 +64,16 @@ class ApplicationController < ActionController::Base
     else
       @fb_admins << ids.to_i
     end
+  end
+
+  def embedded_svg filename, options={}
+    file = File.read(Rails.root.join('app', 'assets', 'images', filename))
+    doc = Nokogiri::HTML::DocumentFragment.parse file
+    svg = doc.at_css 'svg'
+    if options[:class].present?
+      svg['class'] = options[:class]
+    end
+    svg.to_html.html_safe
   end
 
   def namespace

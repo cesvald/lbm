@@ -29,9 +29,9 @@ CATARSE.projects.index = Backbone.View.extend({
       loop: false,
       nextButton: '#channels-swiper-button-next',
       prevButton: '#channels-swiper-button-prev',
-      slidesPerView: 'auto',
-      slidesPerGroup: 2,
-      spaceBetween: 20,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 20
     })
 
     new Swiper ('#allies-swipper', {

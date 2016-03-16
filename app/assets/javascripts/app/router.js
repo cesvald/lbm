@@ -43,21 +43,6 @@ CATARSE.Router = Backbone.Router.extend({
         $(this).find('a').css('color', registrationColor)
       }
     )
-
-    $('.image_link').hover(
-      function(){
-        var img = $(this).find('img')
-        var imgSrc = img.attr('src')
-        var newSrc = imgSrc.slice(0, imgSrc.indexOf('_') + 1) + 'active_' + imgSrc.slice(imgSrc.indexOf('_') + 1)
-        img.attr('src', newSrc)
-      },
-      function(){
-        var img = $(this).find('img')
-        var imgSrc = img.attr('src')
-        var newSrc = imgSrc.slice(0, imgSrc.indexOf('_')) + imgSrc.slice(imgSrc.lastIndexOf('_'))
-        img.attr('src', newSrc)
-      }
-    )
   },
   
   currentPath: function() {

@@ -1,6 +1,5 @@
 [data-namespace="null"][data-controller="projects"][data-action="index"]
   .carousel
-    margin-top: 20px
     .carousel-indicators
       li
         margin-left: 5px
@@ -40,7 +39,7 @@
     width: 100%
     text-align: center
     font-size: 21px
-    font-fammily: "Futura LT"
+    font-family: "Futura LT"
     font-weight: 400
     margin-top: 20px
     margin-bottom: 40px
@@ -52,17 +51,23 @@
     .color_oceanblue_letter
       color: $oceanblue_letter
       font-size: 33px
-  .categories_title
-    text-align: center
-    font-size: 26px
-    font-family: "Futura Std"
-    font-weight: 200
-    color: $darkblue
+  .block_container
+    width: 100%
+    overflow: hidden
+    margin-top: 20px
+    clear: both
+    padding-bottom: 43px
+    padding-top: 20px
+    &:nth-child(odd)
+      background: url($images_lbm_path+"background_blue.png")
   .categories_container
-    background: url($images_lbm_path+"background_blue.png")
-    padding-top: 35px
-    padding-bottom: 50px
-    margin-bottom: 50px
+    .categories_title
+      text-align: center
+      font-size: 26px
+      font-family: "Futura Std"
+      font-weight: 200
+      color: $darkblue
+      margin-bottom: 45px
 
     .categories_wrapper
       width: 783px
@@ -77,19 +82,22 @@
         height: 136.5px
         background-color: white
         position: relative
+        text-align: center
         transition: .5s background-color
         &:hover
           background-color: #49B3E0
-          img
+          svg
             opacity: 0.2
           .category_name
             opacity: 1
-        img
-          width: 100%
+        svg
+          width: 85%
           transition: .5s opacity
           cursor: pointer
+          fill: $darkblue
         .category_name
-          width: 136.5px
+          width: 80%
+          left: 10%
           text-align: center
           margin-top: -77px
           font-size: 17px
@@ -101,15 +109,28 @@
           opacity: 0
           transition: .5s opacity
           cursor: pointer
-  .expiring_wrapper
-    background: url($images_lbm_path+"background_blue.png")
-    width: 100%
-    overflow: hidden
-    margin-top: 35px
+  .projects
+    padding-top: 25px
+    padding-left: 10%
+    padding-right: 5%
     clear: both
-    padding-bottom: 43px
-    padding-top: 20px
-    margin-bottom: 40px
+    overflow: hidden
+  .channels
+    margin-top: 10px
+    margin-bottom: 45px
+    width: 100%
+    padding-left: 10%
+    padding-right: 10%
+    position: relative
+    clear: both
+    text-align: center
+    .swiper-container
+      width: 100%
+      height: 425px
+    #channels-swiper-button-prev
+      left: 3%
+    #channels-swiper-button-next
+      right: 3%
   .banner_footer
     width: 100%
   #page_content
@@ -146,5 +167,5 @@
       img
         max-height: 80px
         max-width: 200px
-        border-right: solid 1px #AAAAAA
+        border-right: solid 2px #AAAAAA
         padding-right: 5px

@@ -14,4 +14,8 @@ class Category < ActiveRecord::Base
   def to_s
     self.send('name_' + I18n.locale.to_s)
   end
+
+  def icon_text
+    name_es
+  end
 end
