@@ -17,7 +17,7 @@ class Project < ActiveRecord::Base
   mount_uploader :banking_data_file, DocumentUploader
 
   delegate :display_status, :display_progress, :display_image, :display_icon_category, :display_expires_at,
-    :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :progress_bar, :successful_flag,
+    :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :display_mark, :progress_bar, :successful_flag,
     to: :decorator
 
   schema_associations
@@ -259,6 +259,7 @@ class Project < ActiveRecord::Base
       user: user,
       category: category,
       category_name: category.to_s.length > 12 ? truncate(category.to_s, length: 12) : category.to_s,
+      mark_image: display_mark,
       image: display_image,
       headline: truncate(headline, length: 140),
       progress: progress,

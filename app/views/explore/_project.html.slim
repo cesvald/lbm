@@ -12,7 +12,7 @@ script type="text/template" id="project_template"
         a href="<%= url %>"
           img src="<%= image %>" itemprop="image"
         | <% if(expired) { %>
-          = image_tag "lbm/mark_<%= state %>.png", class: "mark"
+        | <%= mark_image %>
         | <% } %>
       .project_content
         .project_title

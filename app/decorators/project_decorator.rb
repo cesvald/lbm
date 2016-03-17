@@ -34,6 +34,10 @@ class ProjectDecorator < Draper::Decorator
     end
   end
 
+  def display_mark
+    image_tag "lbm/mark_#{source.state}.png", class: "mark"
+  end
+
   def display_icon_category
     embedded_svg "lbm/#{source.category.icon_text}.svg"
   end
