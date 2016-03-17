@@ -56,13 +56,13 @@
           &#explore_categories
             li
               margin-bottom: -16px
-              &:hover
-                a
-                  color: $carrot
-                svg
-                  fill: $carrot
           li
             padding-left: 34px
+            &:hover
+              a
+                color: $carrot
+              svg
+                fill: $carrot
             a
               color: $darkblue
               font-size: 17px
@@ -79,6 +79,7 @@
             svg
               width: 45px
               fill: $darkblue
+              margin-left: -10px
               +transition(fill, 0.3s)
             span
               vertical-align: top
@@ -127,3 +128,15 @@
                     +omega
                 .project
                   width: 260px
+                  .project_content
+                    .project_info
+                      .status_bar
+                        width: 87%
+                        .progress_percent
+                          margin-left: 4px
+                    .project_status
+                      .category_wrapper
+                        svg
+                          left: 20px
+                      .pledged_wrapper
+                        margin-top: -10px

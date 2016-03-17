@@ -22,7 +22,7 @@ CATARSE.projects.index = Backbone.View.extend({
 
     // Fetching the latest tweets
     this.fetchLatestTweets();
-    alert('here')
+    
     var mySwiper = new Swiper ('#channels-swiper', {
       // Optional parameters
       direction: 'horizontal',

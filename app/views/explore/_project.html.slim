@@ -43,7 +43,7 @@ script type="text/template" id="project_template"
             | <% if(in_time) { %>
             = image_tag "lbm/clock.png"
             span.time_number
-              | time_to_go['time']
+              | <%= time_to_go['time'] %>
             p.time_text
               | <%= time_to_go['unit'] %> <%= remaining_text %>
             | <% } else { %>

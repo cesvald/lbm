@@ -258,7 +258,7 @@ class Project < ActiveRecord::Base
       name: name,
       user: user,
       category: category,
-      category_name: category.to_s,
+      category_name: category.to_s.length > 12 ? truncate(category.to_s, length: 12) : category.to_s,
       image: display_image,
       headline: truncate(headline, length: 140),
       progress: progress,

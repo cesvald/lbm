@@ -1,5 +1,4 @@
 jQuery(function () {
-  alert('here')
   var body, controllerClass, controllerName, action;
 
   body = $('#main_content');
