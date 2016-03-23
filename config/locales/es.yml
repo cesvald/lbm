@@ -23,14 +23,15 @@ es:
       welcome: "Restablecer contraseña"
       label: "Ingresa tu email para cambiar tu contraseña"
       submit: Reestablecer
-    welcome: "Que bueno tenerte de vuelta! :)"
-    submit: Entra
-    register: Regístrate!
-    no_account_html: "¿Aún no tienes cuenta? <strong>%{link}</strong>"
-    remember_me: Recuérdame
-    submit_facebook: "Ingresa usando tu cuenta de Facebook"
+    welcome: "Ingresa a tu cuenta"
+    welcome_phrase: "Pequeños aportes que generan grandes resultados"
+    submit: Iniciar sesión
+    register: Regístrate aquí
+    no_account_html: "¿Eres nuevo en LittleBigMoney? <strong>%{link}</strong>"
+    remember_me: Recordarme
+    submit_facebook: "Inicia sesión desde facebook"
     placeholder:
-      email: email
+      email: Correo electrónico
       password: Contraseña
   backer_report_to_project_owner:
     reward_description: "Descripción de la recompensa"
@@ -859,6 +860,12 @@ es:
       site_title: Registro
       submit: Registro
       title: "Regístrate usando tu email"
+      welcome_phrase: "¡Súmate a esta gran comunidad!"
+      account: "¿Ya tienes cuenta en LittleBigMoney? <strong>%{link}</strong>"
+      login: "Ingresa aquí"
+      placeholder:
+        name: "Usuario"
+        password_confirmation: "Confirmación contraseña"
   remaining_plural: restantes
   remaining_singular: restante
   remove: Borrar

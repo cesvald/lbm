@@ -21,6 +21,7 @@ en:
       label: "Enter your email to change your password"
       submit: Reset
     welcome: "Welcome back! :)"
+    welcome_phrase: "Pequeños aportes que generan grandes resultados"
     submit: "Sign in"
     register: "Sign up!"
     no_account_html: "You don't have an account yet? <strong>%{link}</strong>"

@@ -11,10 +11,12 @@ CATARSE.Router = Backbone.Router.extend({
     )
     $('#account_options_container').hover(
       function(){
-        $('#account_options_list').slideToggle()
+        $('#account_options_list').slideToggle();
       }
     )
+
     $("#header_container").headroom();
+
     var sessionBackground = $('#session_options').css('background-color')
     var registrationColor = $('#registration a').css('color')
     var loginColor = $('#login a').css('color')

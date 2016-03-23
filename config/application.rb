@@ -15,7 +15,7 @@ module Catarse
     config.to_prepare do
       Devise::Mailer.layout "email" # email.haml or email.erb
     end
-    
+  
     config.active_record.schema_format = :sql
 
     # Since Rails 3.1, all folders inside app/ will be loaded automatically

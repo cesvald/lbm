@@ -21,6 +21,7 @@ pt:
       label: "Insira seu email para mudar a senha"
       submit: Redefinir
     welcome: "Bem vindo de volta!"
+    welcome_phrase: "Pequeños aportes que generan grandes resultados"
     submit: "Fazer login"
     register: Cadastre-se!
     no_account_html: "Não tem conta? <strong>%{link}</strong>"
