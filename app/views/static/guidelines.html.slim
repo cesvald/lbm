@@ -1,22 +1,132 @@
 = content_for :title, t('.title')
 #main_content[data-controller="static"]
   #page_content
-    .container
-      .static_default
-        .title
-          h1.start= t('.title')
-          h2.start= t('.subtitle')
-          h3.start= t('.introduction_html')
-          p.start= t('.legend_html')
+    .bootstrap-twitter
+      .row.welcome-container
+        .col-xs-12
+          h2.title= t('.title')
+          h3.subtitle= t('.subtitle').html_safe
+      hr.separator
+      .row.illustration-container
+        .col-xs-12
+          .illustration
+          .illustration
+          .illustration
 
-        .bootstrap-form.center_form.start
-          = form_tag(guidelines_tips_path, :method => :get, :id => 'guidelines_form') do
-            fieldset
-              .bootstrap-twitter
-                .curious
-                  = link_to t('.explore_curious'), guidelines_backers_path, :class=>'btn_explore start'
-                  span.start = t('.explore_projects')
-                .send
-                  = link_to t('.submit'), guidelines_start_path, :class=>'btn_send start'
-                  span.start = t('.send_project')
-      .clearfix
+      .row.description-container.container.container-with-icon
+        .col-xs-12
+          = image_tag "lbm/lbm-logo.png", class: "container-icon"
+          .content-wrapper
+            p= t('.description_paragraph_1')
+            p.enphasis= t('.description_paragraph_2')
+
+      .row.send-project-container.container
+        .col-xs-12
+          .row
+            .col-xs-12
+              = image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
+              p.send-project-title= t('static.guidelines.send_project_title')
+              = image_tag 'lbm/plain-icon.png', class: "plain-icon"
+              .send-project-points
+                .project-point= t('static.guidelines.project_send.phrase_1')
+                .project-point= t('static.guidelines.project_send.phrase_2')
+                .project-point= t('static.guidelines.project_send.phrase_3')
+                .project-point= t('static.guidelines.project_send.phrase_4')
+                .project-point= t('static.guidelines.project_send.phrase_5')
+
+      .row.network-container.container.container-with-icon
+        .col-xs-12
+          =image_tag 'lbm/blue-megaphone-icon.png', class: "container-icon"
+          .content-wrapper
+            h2.container-title= t('static.guidelines.network_title')
+            p.description= t('static.guidelines.network_description').html_safe
+
+      .row.budget-container.container.container-with-icon
+        .col-xs-12
+          =image_tag 'lbm/calculator-icon.png', class: "container-icon"
+          .content-wrapper
+            h2.container-title= t('static.guidelines.budget_title')
+            p.description= t('static.guidelines.budget_description').html_safe
+
+      .row.description-container.container.container-with-icon
+        .col-xs-12
+          =image_tag 'lbm/lbm-logo.png', class: "container-icon"
+          .content-wrapper
+            p= t('.description_end_paragraph_1')
+            p.enphasis= t('.description_end_paragraph_2')
+      .row.success-projects-container.container
+        .col-xs-6
+          .success-title-wrapper
+            = image_tag 'lbm/ocean-pig-icon.png', class: "title-icon"
+            h2.success-title= t('.success.title')
+          .content-wrapper
+            p.subtitle= t('static.guidelines.success.how_works')
+            p.explanation= t('static.guidelines.success.how_work_explanation')
+            p.subtitle= t('static.guidelines.success.take_into_account')
+            p.explanation= t('static.guidelines.success.take_into_account_explanation')
+            p.subtitle= t('static.guidelines.success.project_use')
+            p.explanation= t('static.guidelines.success.project_use_explanation')
+        .col-xs-6
+          .partialsuccess-title-wrapper
+            h2.partial-success-title= t('static.guidelines.partial_success.title')
+            = image_tag 'lbm/clock-money-icon.png', class: "title-icon"
+          .content-wrapper.partial
+            p.subtitle= t('static.guidelines.partial_success.how_works')
+            p.explanation= t('static.guidelines.partial_success.how_work_explanation')
+            p.subtitle= t('static.guidelines.partial_success.take_into_account')
+            p.explanation= t('static.guidelines.partial_success.take_into_account_explanation')
+            p.subtitle= t('static.guidelines.partial_success.project_use')
+            p.explanation= t('static.guidelines.partial_success.project_use_explanation')
+      
+      .row.more-title-container
+        .col-xs-12
+          = image_tag 'lbm/lbm-logo.png', class: "lbm-logo"
+          p.more-title= t('static.guidelines.more_title')
+      .row.more-container
+        .col-xs-4.col-xs-offset-1.col-more
+          p.subtitle= t('static.guidelines.lbm_objective_title')
+          p.explanation= t('static.guidelines.lbm_objective_explanation')
+          = image_tag 'lbm/pig-icon.png', class: "more-icon"
+          p.subtitle= t('static.guidelines.money_come_title')
+          p.explanation= t('static.guidelines.moeny_come_explanation')
+          = image_tag 'lbm/blue-clock-icon.png', class: "more-icon"
+          p.subtitle= t('static.guidelines.time_dedication_title')
+          p.explanation= t('static.guidelines.time_dedication_explanation')
+          = image_tag 'lbm/money-icon.png', class: "more-icon"
+          p.subtitle= t('static.guidelines.cost_title')
+          p.explanation= t('static.guidelines.cost_description')
+        .col-xs-4.col-xs-offset-1.col-more
+          p.more-title= t('static.guidelines.why_title')
+          p.reason-number 1
+          p.reason-text= t('static.guidelines.reason_1')
+          p.reason-number 2
+          p.reason-text= t('static.guidelines.reason_2')
+          p.reason-number 3
+          p.reason-text= t('static.guidelines.reason_3')
+      .row.rol-container
+        .col-xs-12
+          h2.rol-title= t('static.guidelines.rol_play')
+          = link_to t('static.guidelines.new_project'), new_project_path, class: "new-project-btn"
+          = link_to t('static.guidelines.back_project'), explore_path, class: "back-project-btn"
+      .row.tools-container.container
+        .col-xs-10.col-xs-offset-1
+          .tool-wrapper
+              = image_tag "lbm/for-backers-icon.png", class: "tool-icon"
+              .tool-text
+                = t('static.guidelines.all_for_backers').html_safe
+          .tool-wrapper
+              = image_tag "lbm/about-project-icon.png", class: "tool-icon"
+              .tool-text
+                = t('static.guidelines.about_project').html_safe
+          .tool-wrapper
+              = image_tag "lbm/after-project-icon.png", class: "tool-icon"
+              .tool-text
+                = t('static.guidelines.after_project').html_safe
+          .tool-wrapper
+              = image_tag "lbm/venture-course-icon.png", class: "tool-icon"
+              .tool-text
+                = t('static.guidelines.venture_course').html_safe
+          .tool-wrapper
+              = image_tag "lbm/about-crowdfunding-icon.png", class: "tool-icon"
+              .tool-text
+                = t('static.guidelines.about_crowdfunding').html_safe
