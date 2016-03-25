@@ -32,27 +32,27 @@
               - unless @recommended.empty?
                 li
                   a href='#recommended'
-                    = t('.recommended')
+                    span= t('.recommended')
               - unless @expiring.empty?
                 li.no_margin
                   a href='#expiring'
-                    = t('.expiring')
+                    span= t('.expiring')
               - unless @recent.empty?
                 li
                   a href='#recent'
-                    = t('.recent')
+                    span= t('.recent')
               - unless @successful.empty?
                 li.no_margin
                   a href='#successful'
-                    = t('.successful')
+                    span= t('.successful')
               - unless @partial_successful.empty?
                 li.no_margin
                   a href='#partial_successful'
-                    = t('.partial_successful')
+                    span= t('.partial_successful')
               - if current_user
                 li.no_margin
                   a href="#near"
-                    = t('.near')
+                    span= t('.near')
 
         - unless @categories.empty?
           section.categories

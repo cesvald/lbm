@@ -35,10 +35,10 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     if(this.$('.section_header .replaced_header')) {
       this.$('.section_header .replaced_header').remove();
     }
-    this.$('.section_header .original_title').fadeOut(300, function() {
-      $('.section_header').append('<div class="replaced_header"></div>');
-      $('.section_header .replaced_header').html('<h1><span>Explore</span> / '+ search +'</h1>');
-    })
+    
+    $('.section_header').append('<div class="replaced_header"></div>');
+    $('.section_header .replaced_header').html('<h1><span>Explore</span> / '+ search +'</h1>');
+    
     this.selectItem("")
     this.initializeView({
       pg_search: search
@@ -135,7 +135,6 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     if(this.$('.section_header .replaced_header')) {
       this.$('.section_header .replaced_header').fadeOut(300, function(){
         $(this).remove();
-        $('.section_header .original_title').fadeIn(300);
       });
     }
   },
@@ -144,10 +143,8 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     if(this.$('.section_header .replaced_header')) {
       this.$('.section_header .replaced_header').remove();
     }
-    this.$('.section_header .original_title').fadeOut(300, function() {
-      $('.section_header').append('<div class="replaced_header"></div>');
-      $('.section_header .replaced_header').html('<h1><span>Explore</span> '+$('.sidebar a[href=#' + name + ']').text()+'</h1>');
-    })
+    $('.section_header').append('<div class="replaced_header"></div>');
+    $('.section_header .replaced_header').html('<h1><span>Explore</span> '+ $('.sidebar a[href="#' + name + '"] span').text()+'</h1>');
   },
 
   selectItem: function(name) {

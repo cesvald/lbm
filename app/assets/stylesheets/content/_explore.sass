@@ -41,6 +41,12 @@
             float: right
             margin: 3px 5px 0 0px
       section
+        &.highlights
+          ul
+            li
+              a
+                span
+                  line-height: normal
         h2
           font-size: 17px
           font-family: 'Futura Std'
@@ -101,42 +107,40 @@
         line-height: 20px
         font-family: 'Futura Std'
         font-weight: 200
+      .replaced_header
+        margin-top: 45px
     .main-content
       background: url($images_lbm_path+"background_blue.png")
       overflow: hidden
       padding-top: 30px
       .main
-        width: 75%
+        width: 76%
         float: left
         #explore_results
           .results
             ul.collection_list
+              text-align: center
               padding-top: 25px
-              padding-left: 5%
-              padding-right: 5%
               clear: both
               overflow: hidden
               li
-                margin-right: 3%
+                margin-right: 2%
+                margin-left: 2%
                 display: inline-block
                 margin-bottom: 14px
-                &.first
-                  .project
-                    +alpha
-                &.last
-                  .project
-                    +omega
                 .project
                   width: 260px
+                  margin-right: 0px
+                  margin-left: 0px
                   .project_content
                     .project_info
                       .status_bar
                         width: 87%
-                        .progress_percent
-                          margin-left: 4px
+                      .progress_percent
+                        margin-left: 4px
                     .project_status
                       .category_wrapper
                         svg
-                          left: 20px
+                          left: 30px
                       .pledged_wrapper
                         margin-top: -10px
