@@ -19,6 +19,11 @@ class Channel < ActiveRecord::Base
 
   scope :home_page, ->() { where("home_page").order('random()') }
   scope :not_receive_projects, -> { where(receive_projects: false) }
+  scope :other_channels, ->(exclude_ids){
+    not_receive_projects.where("coalesce(id NOT IN (?), true)", exclude_ids).order('random()')
+  }
+
+
   delegate :display_pledged_total, :display_video_thumbnail, to: :decorator
 
   catarse_auto_html_for field: :how_it_works, video_width: 600, video_height: 403

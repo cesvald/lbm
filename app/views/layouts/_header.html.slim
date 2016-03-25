@@ -13,33 +13,33 @@
       /  = form_tag explore_path(:anchor => "search"), :method => 'GET', :class=>'search_input' do
       /    = text_field_tag :search, nil, autocomplete: "off"
       /    = submit_tag
-      
-      #subheader
-        .image_link
-          = link_to guidelines_start_path do
-            = embedded_svg "lbm/header_1.svg"
-            .text_link
-              span Crea una 
-              span.font_lt Campaña
-        .image_link
-          = link_to explore_path do
-            = embedded_svg "lbm/header_2.svg"
-            .text_link
-              span Dona a 
-              span.font_lt Proyectos
-        .separator
-        .image_link
-          = link_to explore_path do
-            = embedded_svg "lbm/header_3.svg", class:"svg_darkblue"
-            .text_link.color_darkblue.font_size_19
-              span Guías & 
-              span.font_lt Herramientas
-        .image_link
-          = link_to guidelines_path do
-            = embedded_svg "lbm/header_4.svg", class: "svg_darkblue"
-            .text_link.color_darkblue.font_size_15.text_center.margin_left_3
-              span Como funciona 
-              span.font_lt LittleBigMoney
+      - if request.subdomain.blank?
+        #subheader
+          .image_link
+            = link_to guidelines_start_path do
+              = embedded_svg "lbm/header_1.svg"
+              .text_link
+                span Crea una 
+                span.font_lt Campaña
+          .image_link
+            = link_to explore_path do
+              = embedded_svg "lbm/header_2.svg"
+              .text_link
+                span Dona a 
+                span.font_lt Proyectos
+          .separator
+          .image_link
+            = link_to explore_path do
+              = embedded_svg "lbm/header_3.svg", class:"svg_darkblue"
+              .text_link.color_darkblue.font_size_19
+                span Guías & 
+                span.font_lt Herramientas
+          .image_link
+            = link_to guidelines_path do
+              = embedded_svg "lbm/header_4.svg", class: "svg_darkblue"
+              .text_link.color_darkblue.font_size_15.text_center.margin_left_3
+                span Como funciona 
+                span.font_lt LittleBigMoney
       - if current_user
         = render 'layouts/account_options'
       - else

@@ -1,14 +1,13 @@
 div.project
   width: 310px
-  margin-right: 5%
+  margin-right: 2%
+  margin-left: 2%
   display: inline-block
   +box-shadow($grafiti 0 0 28px -6px)
   background-color: $carrot
   margin-bottom: 14px
-  &.first
-    +alpha
-  &.last
-    +omega
+  &.belongs-channel
+    background-color: $oceanblue
   .success_slice
     width: 110px
     height: 110px
@@ -18,6 +17,8 @@ div.project
       background: image-url("redesign/success_pt110x110.png") left top no-repeat
   .box
     position: relative
+    .link
+      display: block
     .cover
       width: 100%
       height: 180px

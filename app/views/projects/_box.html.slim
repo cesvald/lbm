@@ -1,9 +1,9 @@
-.project[itemscope itemtype="http://schema.org/CreativeWork" class=(custom_class if defined?(custom_class))]
+.project[itemscope itemtype="http://schema.org/CreativeWork" class=("belongs-channel" if project.channels.present?)]
   meta[itemprop="dateCreated" content=project.created_at.to_date]
   .box
     /p.black_box= project.category
-    .cover
-      = link_to project, target: ( defined?(embed_link) ? '__blank' : '' ) do
+    = link_to project, class: 'link' do
+      .cover
         = image_tag project.display_image, itemprop: 'image'
         - if project.expired?
           = image_tag "lbm/mark_#{project.state}.png", class: "mark"

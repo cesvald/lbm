@@ -151,6 +151,12 @@ es:
       title: "Con el <p class='allies_text'>apoyo de</p>"
     channels:
       title: "Conoce nuestros <span class='font_futuraLT_medium'> Canales </span>"
+    sub_channels:
+      title: "Conoce nuestros Sub-<span class='font_futuraLT_medium'>Canales</span>"
+    other_channels:
+      title: "Descubre otros <span class='font_futuraLT_medium'>Canales</span>"
+    projects_sub_channel:
+      title: "Projectos <span class='font_futuraLT_medium'>de %{channel}</span>"
   accept_terms_html: "He leído y estoy de acuerdo %{link}."
   activerecord:
     errors:

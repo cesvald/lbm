@@ -38,7 +38,10 @@ class ProjectsController < ApplicationController
         @expiring = Project.expiring_for_home()
         @expiring = Project.successful_for_home() if @expiring.empty?
         @recent = Project.recent_for_home()
-        @recent = Project.successful_for_home() if @recent.empty?
+        if @recent.empty?
+          project_ids = @expiring.map{|p| p.id }
+          @recent = Project.successful_for_home_excluding(project_ids)
+        end
 
         @banner_image = ""
         @banner_image = I18n.t("projects.index.banner_image_#{1 + Random.rand(9)}", :default => "") while @banner_image.empty?

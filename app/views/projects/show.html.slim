@@ -22,6 +22,9 @@
 
 #page_content
   .container
+    - if !@channel.nil? && @channel.banner_top_url.present?
+      .banner
+        = image_tag @channel.banner_top_url
 
     - if @project.draft? || @project.reviewed?
       = render "draft_warning"
@@ -43,7 +46,7 @@
 
     - if @project.failed? && can?(:update, @project)
       = render "failed_warning"
-
+    
     #project_description[data-project=@project.to_json]
     .project_image
       = image_tag @project.display_image('project_thumb_small')

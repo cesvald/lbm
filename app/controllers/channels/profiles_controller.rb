@@ -1,6 +1,6 @@
 class Channels::ProfilesController < Channels::BaseController
   inherit_resources
-  defaults resource_class: Channel, finder: :find_by_permalink! 
+  defaults resource_class: Channel, finder: :find_by_permalink!
   actions :show
   custom_actions resource: [:how_it_works]
 
@@ -8,6 +8,11 @@ class Channels::ProfilesController < Channels::BaseController
 
   def show
     show! do
+      if @profile.group_channels.present?
+        channel_ids = @profile.group_channels.map{|p| p.id }
+        channel_ids << @profile.id
+        @other_channels = Channel.other_channels(channel_ids)
+      end
       @projects = @profile.projects.visible_or_draft
       @projects = @projects.visible unless @profile.show_drafts?
     end

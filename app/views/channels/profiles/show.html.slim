@@ -1,82 +1,98 @@
 = content_for :title, @profile.name
-
-#page_content.presentation style=("background-color: #{@profile.background_color};" if @profile.background_color.present?)
-  .container
-    .video
-      .padding
-        - if @profile.video_url.present?
-          = content_tag(:iframe, nil, src: @profile.video_url)
-        - else
-          = image_tag @profile.image, title: @profile.name
-    .about
-      h1              = @profile.name
-      p.description   = truncate(@profile.description, length: 210)
-      - if @profile.receive_projects?
-        strong.headline = t('channels.projects.see_how_it_works')
-        p.buttons       = link_to t('channels.projects.how_it_works'), channels_about_path, class: [:ch_button, :ch_button_ok, :ch_button_green], title: t('channels.accessibility.how_it_works')
-      - elsif @profile.parent_channel.nil? && !@profile.group_channels.present?
-          p.buttons       = link_to t('channels.back_home'), Configuration[:base_url], class: [:ch_button, :ch_button_ok, :ch_button_green]
-      - elsif !@profile.parent_channel.nil?
-          p.buttons       = link_to t('channels.back_home'), root_url(subdomain: @profile.parent_channel.permalink), class: [:ch_button, :ch_button_ok, :ch_button_green]
-    .clearfix
-
-- if @profile.banner_top_url.present?
-  #page_content.banner style=("background-color: #{@profile.banner_background_color};" if @profile.banner_background_color.present?)
-    .container
+#page_content class=("sub-channel-page" if !@profile.parent_channel.nil?)
+  - if @profile.banner_top_url.present?
+    .banner
       = image_tag @profile.banner_top_url
-
-- if @profile.group_channels.present?
-
-  #page_content.projects.group_channels style=("background-color: #{@profile.background_color};" if @profile.background_color.present?)
-    .container
-      ol.projects_list
-        - @profile.group_channels.each do |channel|
-          li.project
-            .channel_image style=("background-color: #{@profile.project_background_color};" if @profile.project_background_color.present?)
-              = link_to root_url(subdomain: channel.permalink) do
-                = image_tag channel.image, title: channel.name
-            - random_project = channel.projects.visible.sample(1).first
-            - if random_project
-              = render partial: 'channels/projects/project', locals: { project: random_project }
-
-- else
-
-  #page_content.projects style=("background-color: #{@profile.background_color};" if @profile.background_color.present?)
-    .container
-      .channel
-        .info
+  .bootstrap-twitter.container.main-info-container
+    .row
+      .col-xs-12
+        .video
           .padding
             - if @profile.video_url.present?
-              .image  = image_tag @profile.image, title: @profile.name
-            h3      = @profile.name
-            span    = t('channels.curator')
-            .social
-              = link_to '', @profile.twitter, title: t('channels.accessibility.link_to_twitter'), class: [:"icon-twitter"], target: :_blank if @profile.twitter
-              = link_to '', @profile.facebook, title: t('channels.accessibility.link_to_facebook'), class: [:"icon-facebook"], target: :_blank if @profile.facebook
-              = link_to '', @profile.website, title: t('channels.accessibility.link_to_website'), class: [:"icon-earth"], target: :_blank if @profile.website
-
-          hr
-          .mail
-            = mail_to @profile.email, t('channels.send_a_email'), class: ["icon-mail"], title: t('channels.send_a_email') 
-        .subscription
-          hr.before_subscribe
-          - subscription = current_user.channels_subscribers.where(channel_id: resource.id).first rescue nil
-          - if subscription
-            = link_to channels_channels_subscriber_path(subscription.id), {method: :delete, class: [:ch_button, :ch_button_ok, :ch_button_unsubscribe, :ch_button_gray, :subscribe]} do
-              .following= t('channels.following')
-              .stop_following= t('channels.unfollow')
+              = content_tag(:iframe, nil, src: @profile.video_url)
+            - else
+              = image_tag @profile.image, title: @profile.name
+        .about
+          - if !@profile.parent_channel.nil?
+            #sub-channels-swiper.swiper-container
+              .swiper-wrapper
+                .swiper-slide.sub-channel-slide
+                  .sub-channel
+                    = image_tag @profile.image, title: @profile.name
+                - @profile.parent_channel.group_channels.each do |sub_channel|
+                  - if sub_channel.id != @profile.id
+                    .swiper-slide.sub-channel-slide
+                      .sub-channel
+                        = image_tag sub_channel.image, title: sub_channel.name
+            #sub-channels-swiper-button-prev.swiper-button-prev
+            #sub-channels-swiper-button-next.swiper-button-next
+            
           - else
-            = link_to t('channels.follow'), channels_channels_subscribers_path, method: :post, class: [:ch_button, :ch_button_ok, :ch_button_pink, :subscribe], title: t('channels.follow')
-          .subscribes_count[title=t('channels.subscribed', count: @profile.channels_subscribers.size)]
-            = resource.channels_subscribers.size
+            p.description   = truncate(@profile.description, length: 210)
+          - if @profile.receive_projects?
+            strong.headline = t('channels.projects.see_how_it_works')
+            p.buttons       = link_to t('channels.projects.how_it_works'), channels_about_path, class: [:ch_button, :ch_button_ok, :ch_button_green], title: t('channels.accessibility.how_it_works')
 
-      ol.projects_list
-        = content_tag_for(:li, @projects) do |project|
-          = render partial: 'channels/projects/project', locals: { project: project }
+  - if @profile.group_channels.present?
+    .group-channels
+      .container.sub-channel-container
+        .title
+          = image_tag "lbm/channels_icon.png", class: "icon"
+          h2= t('sections.sub_channels.title').html_safe
+        ol.projects_list
+          - @profile.group_channels.each do |channel|
+            = render 'channels/subchannel', channel: channel
+      .container.other-channel-container
+        .title
+          = image_tag "lbm/channels_icon.png", class: "icon"
+          h2= t('sections.other_channels.title').html_safe
+        .explore_link
+          = link_to t('main.links.view_all'), root_path
+        .channels
+          #channels-swiper.swiper-container
+            .swiper-wrapper
+              - @other_channels.each do |channel|
+                = render 'channels/channel', channel: channel
+          #channels-swiper-button-prev.swiper-button-prev
+          #channels-swiper-button-next.swiper-button-next
+  - else
+    .projects
+      .container
+        /!
+          .channel
+            .info
+              .padding
+                - if @profile.video_url.present?
+                  .image  = image_tag @profile.image, title: @profile.name
+                h3      = @profile.name
+                span    = t('channels.curator')
+                .social
+                  = link_to '', @profile.twitter, title: t('channels.accessibility.link_to_twitter'), class: [:"icon-twitter"], target: :_blank if @profile.twitter
+                  = link_to '', @profile.facebook, title: t('channels.accessibility.link_to_facebook'), class: [:"icon-facebook"], target: :_blank if @profile.facebook
+                  = link_to '', @profile.website, title: t('channels.accessibility.link_to_website'), class: [:"icon-earth"], target: :_blank if @profile.website
 
-- if @profile.banner_bottom_url.present?
-  #page_content.banner style=("background-color: #{@profile.banner_background_color};" if @profile.banner_background_color.present?)
-    .container
-      = image_tag @profile.banner_bottom_url
+              hr
+              .mail
+                = mail_to @profile.email, t('channels.send_a_email'), class: ["icon-mail"], title: t('channels.send_a_email') 
+            .subscription
+              hr.before_subscribe
+              - subscription = current_user.channels_subscribers.where(channel_id: resource.id).first rescue nil
+              - if subscription
+                = link_to channels_channels_subscriber_path(subscription.id), {method: :delete, class: [:ch_button, :ch_button_ok, :ch_button_unsubscribe, :ch_button_gray, :subscribe]} do
+                  .following= t('channels.following')
+                  .stop_following= t('channels.unfollow')
+              - else
+                = link_to t('channels.follow'), channels_channels_subscribers_path, method: :post, class: [:ch_button, :ch_button_ok, :ch_button_pink, :subscribe], title: t('channels.follow')
+              .subscribes_count[title=t('channels.subscribed', count: @profile.channels_subscribers.size)]
+                = resource.channels_subscribers.size
+        .title
+          = image_tag "lbm/recent_icon.png", class: "icon"
+          h2= t('sections.projects_sub_channel.title', channel: @profile.name).html_safe
+        .project-list
+          - @projects.each do |project|
+            = render partial: 'projects/project', locals: { project: project }
+
+  - if @profile.banner_bottom_url.present?
+    = image_tag @profile.banner_bottom_url, class: "banner-bottom"
 
 = render 'footer'
