@@ -23,7 +23,8 @@
                   - if sub_channel.id != @profile.id
                     .swiper-slide.sub-channel-slide
                       .sub-channel
-                        = image_tag sub_channel.image, title: sub_channel.name
+                        = link_to root_url(subdomain: sub_channel.permalink), class: 'link' do
+                          = image_tag sub_channel.image, title: sub_channel.name
             #sub-channels-swiper-button-prev.swiper-button-prev
             #sub-channels-swiper-button-next.swiper-button-next
             
