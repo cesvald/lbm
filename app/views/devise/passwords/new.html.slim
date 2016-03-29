@@ -1,20 +1,13 @@
 = content_for :title, t('.site_title')
-
-.row
-  .large-2.large-centered.columns
-    .text-center.login-logo= image_tag 'catarse_bootstrap/logo_icon_catarse.png'
-.row
-  .large-7.large-centered.columns
-    .login-box
-      h2.text-center= t 'login.forgot_password.welcome'
-      hr
-
-      .large-14.large-centered.columns
+.bootstrap-twitter
+  .row
+    .col-xs-6.col-xs-offset-3
+      .title-wrapper
+        h2= t 'login.forgot_password.welcome'
+      = render 'devise/shared/alert'
+      .form-container
         = form_for(resource, as: resource_name, url: password_path(resource_name)) do |f|
-          = render 'devise/shared/alert'
-          p
-            = f.label :email, t('login.forgot_password.label')
-            = f.text_field :email, class: [:login, :email], required: true
-
-          .large-10.columns.large-centered
-            = f.submit t('login.forgot_password.submit'), class: [:button, :success, 'large-16', 'columns']
+          .form-group
+            = f.text_field :email, class: "form-control", required: true, placeholder: t('login.placeholder.email')
+          .input-wrapper
+            = f.submit t('login.forgot_password.submit'), class: [:button, :success]

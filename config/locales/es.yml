@@ -20,7 +20,7 @@ es:
     keywords: "littlebigmoney, crowdfunding, project, community, open source, financiación colectiva, donar, ayudar, colaborar, apoyar"
   login:
     forgot_password:
-      welcome: "Restablecer contraseña"
+      welcome: "Restablecer Contraseña"
       label: "Ingresa tu email para cambiar tu contraseña"
       submit: Reestablecer
     welcome: "Ingresa a tu cuenta"
