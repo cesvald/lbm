@@ -788,6 +788,7 @@ en:
     new:
       subtitle: "The time to make it happen is now! We really want to know what you're up to"
       title: "Submit your project"
+      leyend_title: "TEN EN CUENTA QUE:"
       introduction_html: "Complete the form below, give us good information! The more information we receive <br/>the better and faster your project will go to the platform."
       permalink_important: "Try not to use underline, hyphen etc."
       permalink_hint: "Go simple. Your supporters should be able to remember the URL to your project ;)"

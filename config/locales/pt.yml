@@ -792,6 +792,7 @@ pt:
     new:
       subtitle: "A hora de montar o seu projeto é agora. Estamos loucos para saber o que você está aprontando..."
       title: "Agooora sim! Envie seu projeto, campeão."
+      leyend_title: "TEN EN CUENTA QUE:"
       introduction_html: "Preencha o formulário abaixo da forma mais completa objetiva, pois quanto mais <br/>completo nós recebermos o seu projeto, mais rápido ele entrará na plataforma online."
       permalink_important: "Tente não usar Underline, hífen e etc."
       permalink_hint: "Simplifique a URL do seu projeto. Imagine que seu apoiador precisará lembrar do endereço para divulgar o projeto no bar."

@@ -157,7 +157,7 @@ es:
       title: "Descubre otros <span class='font_futuraLT_medium'>Canales</span>"
     projects_sub_channel:
       title: "Projectos <span class='font_futuraLT_medium'>de %{channel}</span>"
-  accept_terms_html: "He leído y estoy de acuerdo %{link}."
+  accept_terms_html: "He leído y estoy de acuerdo con los %{link}."
   activerecord:
     errors:
       models:
@@ -801,7 +801,8 @@ es:
         title: "Se parte y promociona este proyecto"
     new:
       subtitle: "Es la hora de hacerlo realidad! Queremos saber del potencial de tu empresa y de tu proyecto"
-      title: "Envía tu proyecto"
+      title: "¡AHORA, ENVÍA TU PROYECTO!"
+      legend_title: "TEN EN CUENTA QUE:"
       introduction_html: "Completa el siguiente formulario, danos buena información! Entre más información recibimos <br/>mejor completamos tu proyecto y más rápido irá al irá en la plataforma."
       permalink_important: "Trata de no usar subrayado, guión etc."
       permalink_hint: "Hazlo simple. Tus colaboradores deben poder recordar la URL de tu proyecto ; )"
@@ -850,9 +851,9 @@ es:
       rewards: "¿Qué tipo de recompensas quieres ofrecer?"
       rewards_hint: "Creemos que la mejor forma de inspirar a las personas para aportar a tu proyecto es ofreciendo recompensas muy buenas, creativas y sencillas. A los colaboradores les gustan las cosas exclusivas que les permiten conocer más sobre la vida y entorno tuyo. Tomate tu tiempo para ofrecer recompensas creativas para tus colaboradores."
       rewards_important: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
-      submit: "Enviar el proyecto"
+      submit: "Enviar tu proyecto!"
       send_project: "Quiero enviar mi proyecto."
-      legend_html: "Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.<br><br>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.<br><br><b>Es muy importante:</b><i>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. Esperamos entiendas que si tu proyecto no cumple con el <a href='https://docs.google.com/a/catarse.me/document/d/1wLDS2lphQ6monovg9rEaTIDcxBD3FRZV9dfGKmajyj8/edit' target='_blank' >perfil</a>, podrá ser no aprobado por nuestro equipo.</i>"
+      legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>Es muy importante:LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el <a href='https://docs.google.com/a/catarse.me/document/d/1wLDS2lphQ6monovg9rEaTIDcxBD3FRZV9dfGKmajyj8/edit' target='_blank' >perfil</a>, podrá ser no aprobado por nuestro equipo.</span></p>"
     twitter:
       take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
     video_embed:
