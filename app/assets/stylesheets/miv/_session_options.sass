@@ -13,6 +13,7 @@
 
 	#registration, #welcome_message
 		display: inline
+		color: $darkblue
 		a
 			color: $darkblue
 			text-decoration: none
@@ -32,9 +33,9 @@
 
 
 #account_options_container
-	position: fixed
+	position: absolute
 	right: 5%
-	top: 0px
+	bottom: 14px
 	&:hover
 		#account_welcome:before
 			height: 35px
@@ -42,8 +43,6 @@
 		font-size: 17px
 		margin-top: 0px
 		padding-top: 3px
-		+border-top-left-radius(0px)
-		+border-top-right-radius(0px)
 		&:before
 			content: ""
 			position: absolute
