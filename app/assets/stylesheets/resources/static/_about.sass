@@ -1,105 +1,110 @@
 [data-controller="static"][data-action="about"]
   #page_content
     .container
+      background-image: url($images_lbm_path + 'background-icons.png')
+      background-size: 100%
+      margin: 150px 0px
       .static_default
-        +grid(16)
-        padding-top: 15px
-        .title
-          +grid(16)
-          +alpha
-          padding-bottom: 40px
-          h1
-            color: $carrot
-            font-style: italic
-            letter-spacing: -4px
-            font-size: 68px
-            padding: 180px 0 0
+        float: none
+        margin-left: 0px
+        display: block
+        .main-title-wrapper
+          text-align: center
+          position: relative
+          top: -25px
+          .main-title
+            color: white
+            font-family: 'Futura LT'
+            font-weight: 400
+            font-size: 28px
+            padding: 3px 30px
             text-align: center
-            margin: 40px auto 0
-            background: url($images_path+'icon_about.png') center top no-repeat
-          h2
-            color: #333333
-            font-size: 14px
-            padding: 0px
-            border: none
-            text-align: center
-            margin-top: 10px
-          h3
-            color: #5B5B5B
-            font-style: italic
+            background: $oceanblue
+            border-radius: 10px
+            display: inline-block
+        .subtitle-wrapper
+          text-align: center
+          .subtitle
+            color: $darkblue
+            font-family: 'Futura Std'
+            font-weight: 200
             font-size: 21px
-            line-height: 28px
-            margin: 50px auto 0
+            border-bottom: solid 2px $oceanblue
             text-align: center
-            width: 55%
+            margin-top: 20px
+            display: inline-block
+            padding: 0 50px
+            padding-bottom: 20px
+            margin-bottom: 10px
         ul.team
-          float: left
           width: 100%
-          margin-top: 20px
+          margin-top: 40px
           margin-bottom: 40px
-          li.first, li.second
-            border-top: 1px dotted #CCCCCC
-            background: #F7F7F7
-            border-bottom: 1px dotted #CCCCCC            
+          width: 810px
+          position: relative
+          left: 50%
+          margin-left: -405px
+          li
             float: left
-            margin-left: -20px
-            padding: 40px 0 40px 40px
-            width: 100%
-            ul
-              li
-                float: left
-                margin-right: 50px
+            margin: 20px 30px
+            position: relative
+            .member-wrapper
+              border-radius: 50%
+              width: 210px
+              height: 210px
+              border-radius: 50%
+              display: table-cell
+              vertical-align: middle
+              text-align: center
+              &:hover
+                .member-name
+                  color: white
+                &:after
+                  background: rgba($oceanblue, 0.6)
+                  +box-shadow($oceanblue 10px 10px 18px -9px)
+              .member-name
+                font-size: 32px
+                font-family: 'Futura Std'
+                font-weight: 200
+                color: transparent
+                display: inline-block
+                width: 153px
                 position: relative
-                width: 20%
-                img
-                  width: 183px
-                .flagCity
-                  color: white
-                  font-style: italic
-                  font-size: 14px
-                  height: 22px
-                  padding-left: 10px
-                  padding-top: 9px
-                  position: absolute
-                  right: 10px
-                  text-align: center
-                  top: -10px
-                  width: 120px
-                  background: url($images_path+'flagCity.png') left top no-repeat
-                  .city
-                    background: $carrot
-                    margin-left: -1px
-                    margin-top: -10px
-                    width: 130px
-                    padding: 9px 0
-                .flagname
-                  height: 41px
-                  position: absolute
-                  top: 150px
-                  width: 11px
-                  left: -11px
-                  background: url($images_path+'flagName.png') left top no-repeat
-                .name
-                  background: $lightnavy
-                  font-style: italic
-                  color: white
-                  font-size: 16px
-                  height: 14px
-                  left: 0
-                  padding: 7px 10px 10px 4px
-                  position: absolute
-                  top: 150px
-                p, span
-                  color: #666666
-                  font-size: 12px
-                  line-height: 18px
-                span
-                  font-style: italic
-                  font-size: 15px
-                  margin: 10px 0
-                  display: block
-              li.last
-                margin-right: 0px    
-          li.second
-            border: none
-            background: none
+                z-index: 2
+                top: 10px
+                transition: .3s color
+              &:after
+                content: ''
+                position: absolute
+                top: 0px
+                left: 0px
+                width: 210px
+                height: 210px
+                z-index: 1
+                background: transparent
+                border-radius: 50%
+                transition: .3s all
+              img
+                width: 210px
+                height: 210px
+                border-radius: 50%
+                position: absolute
+                top: 0px
+                left: 0px
+            .member-title
+              color: white
+              font-size: 14px
+              font-family: 'Futura Std'
+              font-weight: 200
+              background-image: url($images_lbm_path + 'member-name-tag.png')
+              background-size: 100%
+              padding: 5px 22px
+              position: relative
+              left: 50px
+              top: -30px
+              width: 160px
+              display: inline-block
+              text-align: center
+              z-index: 1
+          li.last
+            margin-right: 0px 
