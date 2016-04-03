@@ -25,4 +25,6 @@ class StaticController < ApplicationController
     return render 'sitemap'
   end
 
+  def tools
+  end
 end

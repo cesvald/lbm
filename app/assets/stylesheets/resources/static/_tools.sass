@@ -1,0 +1,134 @@
+[data-controller="static"][data-action="tools"]
+	#page_content
+		text-align: center
+		padding-top: 50px
+		.tool-icon
+			width: 62px
+			fill: $carrot
+			margin-right: 30px
+		.tool-header-title
+			font-family: 'Futura Std'
+			font-weight: 200
+			font-size: 34px
+			color: $darkblue
+			vertical-align: top
+			width: 122px
+			line-height: 38px
+			display: inline-block
+			.tool-header-title-bold
+				font-family: 'Futura LT'
+				font-weight: 400
+				font-size: 29px
+		.separator
+			height: 1px
+			background-color: $mediumgray
+			width: 70%
+			margin-bottom: 50px
+		.tools-icon-container
+			margin-top: 20px
+			text-align: center
+			width: 1056px
+			position: relative
+			left: 50%
+			margin-left: -528px
+			padding-bottom: 20px
+			.pointer
+				width: 50px
+				position: absolute
+				bottom: -55px
+				left: 0px
+			.tool-icon-wrapper
+				padding: 10px 25px
+				display: table-cell
+				cursor: pointer
+				&:nth-child(5)
+					padding-right: 0px
+				&:last-child
+					border-right: none
+					padding-left: 0px
+				.tool-icon
+					height: 41px
+					stroke: $carrot
+					fill: $carrot
+					margin-right: 0px
+					+transition(all, 0.3s)
+				.tool-text
+					display: inline-block
+					vertical-align: top
+					font-family: 'Futura Std'
+					font-weight: 200
+					font-size: 21px
+					color: $darkblue
+					line-height: 22px
+					text-align: left
+					cursor: pointer
+					+transition(all, 0.3s)
+					.enfasis
+						font-family: 'Futura LT'
+						font-weight: 400
+						font-size: 19px
+						margin-bottom: 0px
+				&.active
+					.tool-icon
+						stroke: $oceanblue
+						fill: $oceanblue
+					.tool-text
+						color: $oceanblue
+				&:hover
+					.tool-icon
+						stroke: $oceanblue
+						fill: $oceanblue
+					.tool-text
+						color: $oceanblue
+		#main-tools-container
+			padding: 100px 100px
+			background-image: url($images_lbm_path +  '/background-icons.png')
+			background-size: 100%
+			+box-shadow(rgba(black, 0.4) 0 7px 5px -5px inset, rgba(black, 0.4) 0 -7px 5px -5px inset)
+			.tools-container
+				display: none
+				.tools-description
+					position: relative
+					width: 1056px
+					left: 50%
+					margin-left: -528px
+					font-family: 'Futura LT'
+					font-weight: 400
+					font-size: 16px
+					color: $darkgray
+					margin-bottom: 50px
+					text-align: left
+				.tools-wrapper
+					width: 1056px
+					background: white
+					padding: 50px
+					position: relative
+					left: 50%
+					margin-left: -528px
+					+box-shadow(rgba(black, 0.4) 0 0 5px 0)
+					overflow: hidden
+					.tool-element
+						width: 190px
+						padding: 10px 20px
+						float: left
+						.tool-image
+							width: 90.6px
+						.tool-link
+							display: inline-block
+							&:hover
+								text-decoration: none
+						.tool-title
+							font-family: 'Futura Std'
+							font-weight: 200
+							font-size: 19px
+							color: $darkblue
+							margin-top: 5px
+							&:before
+								content: ""
+								width: 11.5px
+								height: 11.5px
+								border-radius: 50%
+								background-color: #DF7722
+								left: -3px
+								position: relative
+								display: inline-block

@@ -17,8 +17,8 @@ jQuery(function () {
         ns = ns[name];
       }
     });
-
     if ( ns && controllerName && controllerName !== "" ) {
+      console.log(ns[controllerName])
       if(ns[controllerName] && _.isFunction(ns[controllerName][action])) {
         var view = window.view = new ns[controllerName][action]();
       }

@@ -1,0 +1,36 @@
+#all-allies
+  .allies
+    width: 70%
+    display: inline-block
+    position: relative
+    margin-left: 56px
+    margin-right: 38px
+    .swiper-slide
+      width: 200px
+      &:last-child
+        a
+          img
+            border-right: none
+    #allies-swiper-button-prev, #allies-swiper-button-next
+      top: 61%
+    #allies-swiper-button-prev
+      left: -45px
+    #allies-swiper-button-next
+      right: -37px
+    a
+      display: block
+      +opacity(0.8)
+      padding: 20px 0
+      margin-bottom: 20px
+      height: 80px
+      &:hover
+        +opacity(1)
+      &.first
+        +alpha
+      &.last
+        +omega
+      img
+        max-height: 80px
+        max-width: 200px
+        border-right: solid 2px #AAAAAA
+        padding-right: 5px

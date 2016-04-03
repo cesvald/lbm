@@ -1,0 +1,96 @@
+#page_content
+	= embedded_svg "lbm/header_3.svg", class:"tool-icon"
+	span.tool-header-title
+		| Guías & 
+		span.tool-header-title-bold
+			| Herramientas
+	hr.separator
+	.tools-icon-container
+		= image_tag 'lbm/tool-pointer.png', class: 'pointer'
+		=link_to "#for-backers", class:"tool-icon-wrapper", id:"option-for-backers" do
+			= embedded_svg "lbm/for-backers-icon.svg", class: "tool-icon"
+			.tool-text
+			  = t('static.guidelines.all_for_backers').html_safe
+		=link_to "#about-project", class:"tool-icon-wrapper", id:"option-about-project" do
+		  = embedded_svg "lbm/about-project-icon.svg", class: "tool-icon"
+		  .tool-text
+		    = t('static.guidelines.about_project').html_safe
+		=link_to "#after-project", class:"tool-icon-wrapper", id:"option-after-project" do
+		  = embedded_svg "lbm/after-project-icon.svg", class: "tool-icon"
+		  .tool-text
+		    = t('static.guidelines.after_project').html_safe
+		=link_to "#venture-course", class:"tool-icon-wrapper", id:"option-venture-course" do
+		  = embedded_svg "lbm/venture-course-icon.svg", class: "tool-icon"
+		  .tool-text
+		    = t('static.guidelines.venture_course').html_safe
+		=link_to "#about-crowdfunding", class:"tool-icon-wrapper", id:"option-about-crowdfunding" do
+		  = embedded_svg "lbm/about-crowdfunding-icon.svg", class: "tool-icon"
+		  .tool-text
+		    = t('static.guidelines.about_crowdfunding').html_safe
+	#main-tools-container
+		#container-for-backers.tools-container.active
+			p.tools-description= t('static.tools.for_backers.description')
+			.tools-wrapper
+				- for i in 1..6
+					- if t(".for_backers.tool_#{i}.title", default: "").present?
+						.tool-element
+							= link_to t(".for_backers.tool_#{i}.link", default: "#"), class: "tool-link" do
+								- if t(".for_backers.tool_#{i}.image", default: "").present?
+									= image_tag t(".for_backers.tool_#{i}.image"), class: 'tool-image'
+								- else
+									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
+								p.tool-title= t(".for_backers.tool_#{i}.title")
+					
+		#container-about-project.tools-container
+			p.tools-description= t('static.tools.about_project.description')
+			.tools-wrapper
+				- for i in 1..6
+					- if t(".about_project.tool_#{i}.title", default: "").present?
+						.tool-element
+							= link_to t(".about_project.tool_#{i}.link", default: "#"), class: "tool-link" do
+								- if t(".about_project.tool_#{i}.image", default: "").present?
+									= image_tag t(".about_project.tool_#{i}.image"), class: 'tool-image'
+								- else
+									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
+								p.tool-title= t(".about_project.tool_#{i}.title")
+		
+		#container-after-project.tools-container
+			p.tools-description= t('static.tools.after_project.description')
+			.tools-wrapper
+				- for i in 1..6
+					- if t(".after_project.tool_#{i}.title", default: "").present?
+						.tool-element
+							= link_to t(".after_project.tool_#{i}.link", default: "#"), class: "tool-link" do
+								- if t(".after_project.tool_#{i}.image", default: "").present?
+									= image_tag t(".after_project.tool_#{i}.image"), class: 'tool-image'
+								- else
+									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
+								p.tool-title= t(".after_project.tool_#{i}.title")
+
+		#container-venture-course.tools-container
+			p.tools-description= t('static.tools.venture_course.description')
+			.tools-wrapper
+				- for i in 1..6
+					- if t(".venture_course.tool_#{i}.title", default: "").present?
+						.tool-element
+							= link_to t(".venture_course.tool_#{i}.link", default: "#"), class: "tool-link" do
+								- if t(".venture_course.tool_#{i}.image", default: "").present?
+									= image_tag t(".venture_course.tool_#{i}.image"), class: 'tool-image'
+								- else
+									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
+								p.tool-title= t(".venture_course.tool_#{i}.title")
+
+		#container-about-crowdfunding.tools-container
+			p.tools-description= t('static.tools.about_crowdfunding.description')
+			.tools-wrapper
+				- for i in 1..6
+					- if t(".about_crowdfunding.tool_#{i}.title", default: "").present?
+						.tool-element
+							= link_to t(".about_crowdfunding.tool_#{i}.link", default: "#"), class: "tool-link" do
+								- if t(".about_crowdfunding.tool_#{i}.image", default: "").present?
+									= image_tag t(".about_crowdfunding.tool_#{i}.image"), class: 'tool-image'
+								- else
+									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
+								p.tool-title= t(".about_crowdfunding.tool_#{i}.title")
+
+	= render 'layouts/allies'

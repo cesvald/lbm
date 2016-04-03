@@ -1091,6 +1091,107 @@ en:
       place_eight: ~
       title_eight: ~
       text_eight: ~
+    tools:
+      for_backers:
+        description: 'Descripción de las herramientas para donantes'
+        tool_1:
+          title: 'Todo para donantes.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_2:
+          title: 'Todo para donantes.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_3:
+          title: 'Todo para donantes.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_4:
+          title: 'Todo para donantes.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_5:
+          title: 'Todo para donantes.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_6:
+          title: 'Todo para donantes.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+      about_project:
+        description: 'Descripción de las herramientas sobre projectos'
+        tool_1:
+          title: 'Todo sobre tu campaña.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_2:
+          title:
+          link:
+        tool_3:
+          title:
+          link:
+        tool_4:
+          title:
+          link:
+        tool_5:
+          title:
+          link:
+        tool_6:
+          title:
+          link:
+      after_project:
+        description: 'Descripción de las herramientas después de tu campaña'
+        tool_1:
+          title: 'Después de tu campaña.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_2:
+          title:
+          link:
+        tool_3:
+          title:
+          link:
+        tool_4:
+          title:
+          link:
+        tool_5:
+          title:
+          link:
+        tool_6:
+          title:
+          link:
+      venture_course:
+        description: 'Descripción de las herramientas del curso en empredimiento'
+        tool_1:
+          title: 'Curso en emprendimiento.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_2:
+          title:
+          link:
+        tool_3:
+          title:
+          link:
+        tool_4:
+          title:
+          link:
+        tool_5:
+          title:
+          link:
+        tool_6:
+          title:
+          link:
+      about_crowdfunding:
+        description: 'Descripción de las herramientas todo sobre CrowdFunding'
+        tool_1:
+          title: 'Todo sobre CrowdFunding.pdf'
+          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+        tool_2:
+          title:
+          link:
+        tool_3:
+          title:
+          link:
+        tool_4:
+          title:
+          link:
+        tool_5:
+          title:
+          link:
+        tool_6:
+          title:
+          link:
     privacy:
       title: "Privacy Policy"
     terms:
