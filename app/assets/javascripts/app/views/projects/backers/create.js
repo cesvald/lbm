@@ -101,7 +101,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
               $('#moip_payment').hide();
               $('.tab_container #payment_menu a.enabled:first').trigger('click')
             }
-            $('#payment.hide').show();
+            $('#payment').show();
           }
         }
         else{
@@ -109,7 +109,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
         }
       })
     } else {
-      $('#payment.hide').hide();
+      $('#payment').hide();
       if($('#back_with_credits').length < 1) {
         $('#user_submit').attr('disabled', true)
       }
@@ -195,6 +195,16 @@ CATARSE.ReviewForm = Backbone.View.extend({
     }
 
     var can_submit_to_moip = true;
+
+    new Swiper ('#allies-swipper', {
+      direction: 'horizontal',
+      loop: false,
+      nextButton: '#allies-swiper-button-next',
+      prevButton: '#allies-swiper-button-prev',
+      slidesPerView: 'auto',
+      slidesPerGroup: 3,
+      spaceBetween: 10,
+    })
   },
 
   updateCurrentBackerInfo: function(callback) {
@@ -212,7 +222,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
       address_state: $('#user_address_state').val(),
       address_phone_number: $('#user_phone_number').val()
     }
-    var is_payment_selected = $('#payment.hide').is(':visible');
+    var is_payment_selected = $('#payment').is(':visible');
     if(!is_payment_selected){
       backer_data.payment_method = "PayULatam";
     }

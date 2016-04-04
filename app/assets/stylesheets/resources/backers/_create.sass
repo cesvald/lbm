@@ -9,6 +9,27 @@
     padding-bottom: 15px
   div#payment
     display: none
+    .payment-title
+      .title-wrapper
+        h1
+          font-family: 'Futura Std'
+          font-weight: 200
+          font-size: 34px
+          color: $carrot
+          display: inline-block
+          margin: 0px 25px
+          margin-top: 20px
+      .subtitle
+        font-family: 'Futura LT'
+        font-weight: 400
+        font-size: 14px
+        color: $darkgray
+        margin-top: 0px
+        text-transform: uppercase
+      .bill-icon
+        width: 69px
+      .puzzle-icon
+        width: 52px
     p
       font-size: 14px
       margin-top: 20px
@@ -122,61 +143,87 @@
   #page_content
     .container
       #project_review
-        +grid(16)
-        padding-top: 15px
+        padding-top: 30px
         padding-bottom: 30px
-        .title
-          +grid(16)
-          +alpha
-          clear: both
-          padding-top: 40px
-          padding-bottom: 30px
-          h1
-            font-size: 24px
-            padding: 5px 0
-          h2
-            color: $mediumgray
-            font-size: 14px
-            padding-bottom: 15px
-            border-bottom: 1px dotted #CCCCCC
-        .project_info
-          float: left
-          //padding-bottom: 40px
-          #project_image
-            float: left
-            margin-right: 20px
-          h1
-            text-transform: none
-            float: left
-            width: 650px
-            font-size: 24px
-            line-height: 120%
-            padding-bottom: 30px
-            padding-top: 10px
+        text-align: center
+        .welcome-message-wrapper
+          display: inline-block
+          padding: 0 50px
+          padding-bottom: 25px
+          .welcome-icon
+            width: 44.7px
+            vertical-align: sub
+          .welcome-message
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 27px
+            color: $darkblue
+            display: inline-block
+            margin-left: 18px
+            width: 564px
+            text-align: center
             a
+              font-family: 'Futura Std'
+              font-weight: 700
               color: $carrot
-              text-decoration: none
-          #review_text
-            padding-right: 20px
-            float: left
-            width: 640px  
-            .review_content 
-              font-size: 18px
-              line-height: 24px
-              width: 265px 
-              float: left  
-              margin-top: 20px   
-              strong
-                font-size: 18px
-                font-weight: bold
-            .reward
-              float: right
-              font-style: italic
-              font-size: 16px
-              line-height: 21px
-              padding: 20px 20px 40px 60px
-              width: 280px
-              background: url($images_path+'gift-reward.png') left top no-repeat #F0F0F0
+        .project-info-wrapper
+          display: table
+          position: relative
+          left: 50%
+          margin-left: -390px
+          padding: 50px 0px
+          border-top: solid 2px $mediumgray
+          border-bottom: solid 2px $mediumgray
+          .project_info
+            display: table-row
+            .review-wrapper
+              width: 300px
+              display: table-cell
+              vertical-align: top
+              #review_text
+                .review_content 
+                  font-family: 'Futura Std'
+                  font-weight: 200
+                  font-size: 22px
+                  color: $oceanblue
+                  strong
+                    font-size: 18px
+                    font-weight: bold
+                .reward
+                  font-family: 'Futura LT'
+                  font-weight: 400
+                  font-size: 16px
+                  color: $darkgray
+                  background: url($images_lbm_path+"background_blue.png")
+                  margin-top: 20px
+                  padding: 10px
+                  height: 198px
+          #project_image
+            display: table-cell
+            margin-right: 20px
+            height: 280px
+            width: 460px
+            padding-left: 30px
+        .review-title
+          text-align: center
+          margin-top: 20px
+          h1
+            background: $oceanblue
+            border-radius: 10px
+            padding: 5px 20px
+            color: white
+            display: inline-block
+            font-family: 'Futura LT'
+            font-weight: 400
+            font-size: 32px
+            text-transform: uppercase
+          h2
+            color: $carrot
+            font-size: 18px
+            font-family: 'Futura LT'
+            font-weight: 400
+            display: block
+            margin-top: 5px
         #credits_notice
           font-size: 16px
           strong
@@ -200,7 +247,8 @@
               padding-top: 10px
               label
         #review_form
-          width: 940px
+          display: inline-block
+          margin-top: 20px
           &.dont_align
             margin: 0 !important
           li
@@ -208,11 +256,15 @@
             margin-right: 20px
             margin-bottom: 10px
             input, select#user_address_state
-              height: 25px
               //@include background(linear-gradient(top bottom, #F3F3F3, #FFF))
-            label
+            .label
+              font-family: 'Futura Std'
+              font-weight: 200
+              font-size: 22px
+              color: $darkblue
+              text-align: left
             &#user_full_name_input
-              width: 410px
+              width: 425px
               input[type="text"]
                 width: 99%
             &#user_phone_number_input
@@ -248,14 +300,25 @@
             &#user_address_state_input
               margin-bottom: 20px
           abbr
-            color: $carrot
-        .accept_terms
-          margin-top: 20px
-          padding-bottom: 20px
-          input
-            float: left
-            margin-right: 10px
-            margin-top: 2px
+            color: $darkblue
+        .submit
+          margin-top: 30px
+          width: 80%
+          margin-left: 10%
+          padding-bottom: 30px
+          border-bottom: solid 1px $darkgray
+          .accept_terms
+            input
+              font-size: 20px
+            label
+              font-family: 'Futura Std'
+              font-weight: 200
+              font-size: 22px
+              color: black
+              margin-left: 10px
+              display: inline-block
+              a
+                color: $oceanblue
         .tab_container
           padding-top: 20px
           margin-bottom:  20px
@@ -344,6 +407,7 @@
           text-transform: uppercase
   .payments_type
     float: left
+    min-height: 264px
   #paypal_payment
     h3
       font-weight: normal

@@ -13,13 +13,13 @@ CATARSE.UsersShowView = Backbone.View.extend({
     this.render()
     this.toggleProjects();
 
-    $('input,textarea').live('keypress', function(e){
+    $('input,textarea').on('keypress', function(e){
       if (e.which == '13' && $("button:contains('OK')").attr('disabled')) {
         e.preventDefault();
       }
     })
 
-    $('#user_feed input').live('keyup', function(){
+    $('#user_feed input').on('keyup', function(){
       var value = $(this).val()
       var re = /^[a-z0-9\._-]+@([a-z0-9][a-z0-9-_]*[a-z0-9-_]\.)+([a-z-_]+\.)?([a-z-_]+)$/
       if(value.match(re)){

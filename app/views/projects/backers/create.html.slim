@@ -1,20 +1,24 @@
 #page_content
   .container
     #project_review data-thank-you-path=project_backer_path(project_id: @project.id, id: @backer.id)
-      .project_info
-        = image_tag @project.display_image, id: 'project_image', alt: @project.name, width: '250px'
-        h1= t('.you_are_about_html', link: link_to(@project.name, project_by_slug_path(permalink: @project.permalink)))
-        #review_text
-          - if @backer.reward
-            .review_content
-              = t('.review_with_reward_html', value: @backer.display_value)
-            .reward
-              = @backer.reward.description
-          - else
-            .review_content
-              = t('.review_without_reward_html', value: @backer.display_value)
+      .welcome-message-wrapper
+        = image_tag "lbm/hand-icon.png", class: "welcome-icon"
+        h1.welcome-message= t('.you_are_about_html', link: link_to(@project.name, project_by_slug_path(permalink: @project.permalink)))
+      .project-info-wrapper
+        .project_info
+          .review-wrapper
+            #review_text
+              - if @backer.reward
+                .review_content
+                  = t('.review_with_reward_html', value: @backer.display_value)
+                .reward
+                  = @backer.reward.description
+              - else
+                .review_content
+                  = t('.review_without_reward_html', value: @backer.display_value)
+          = image_tag @project.display_image, id: 'project_image', alt: @project.name, width: '250px'
       .clearfix
-      .title
+      .review-title
         h1= t('.title')
         h2= t('.subtitle')
       .clearfix
@@ -34,9 +38,9 @@
               fieldset.live_in_brazil.hide
                 = check_box_tag 'live_in_brazil', 'live', false
                 = label_tag 'live_in_brazil', t('.live_in_brazil'), class: 'inline'
-              = form.input :full_name, required: true, as: :string
+              = form.input :full_name, required: true, as: :string, input_html: {class: 'lbm-input'}
               /= form.input :cpf, as: :string, input_html: {autocomplete: 'off'}
-              = form.input :email, required: true, as: :string
+              = form.input :email, required: true, as: :string, input_html: {class: 'lbm-input'}
               fieldset.address_data
                 .title
                   h2
@@ -57,10 +61,13 @@
                 .bootstrap-twitter
                   = form.submit (@backer.credits ? t('.submit.credits') : t('.submit.moip')), disabled: true, class: 'btn', id: 'user_submit'
 
-        #payment.hide
-          .title
-            h1= t('.choose_payment')
-            h2= t('.choose_payment_subtitle')
+        #payment
+          .payment-title
+            .title-wrapper
+              = image_tag 'lbm/bill-icon.png', class: 'bill-icon'
+              h1= t('.choose_payment')
+              = image_tag 'lbm/puzzle-icon.png', class: 'puzzle-icon'
+            h2.subtitle= t('.choose_payment_subtitle')
 
           .tab_container
             nav#payment_menu
@@ -68,7 +75,7 @@
                 = link_to "##{engine[:name]}_payment", id: engine[:name], class: 'selected enabled' , :'data-target' => engine[:review_path].call(@backer) do
                   = t("projects.backers.review.#{engine[:name]}")
           - PaymentEngines.engines.each do |engine|
-            div[id="#{engine[:name]}_payment" class="payments_type hide"]
-    .clearfix
+            div[id="#{engine[:name]}_payment" class="payments_type"]
+  = render 'layouts/allies'
 = content_for :mouseflow do
   = render 'layouts/mouseflow'
