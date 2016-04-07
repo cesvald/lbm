@@ -9,5 +9,6 @@
       = form.input :picture, as: :file, required: true, hint: t('projects.show.not_uploaded')
 .bootstrap-twitter#project_pictures_container
   - @pictures.each do |picture|
-    = render picture, project: @project
+  	- if  picture.picture.project_picture.url.present?
+    	= render picture, project: @project
 #picture-template.hide

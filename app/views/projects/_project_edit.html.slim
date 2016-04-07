@@ -6,61 +6,62 @@
   = semantic_form_for @project do |form|
     = form.inputs do
       - if current_user.admin
-        = form.input :user_id
-        = form.input :permalink, as: :string
+        = form.input :user_id, input_html: {class: 'lbm-input'}
+        = form.input :permalink, as: :string, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :name
-        = form.input :name, as: :string, required: false
+        = form.input :name, as: :string, required: false, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :headline
-        = form.input :headline, as: :string, required: false
+        = form.input :headline, as: :string, required: false, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :category
-        = form.input :category, as: :select, required: false
+        = form.input :category, as: :select, required: false, input_html: {class: 'lbm-select'}
       - if can? :update, @project, :video_url
-        = form.input :video_url, as: :string, hint: t('formtastic.hints.project.video_url_edit'),required: false
+        = form.input :video_url, as: :string, hint: t('formtastic.hints.project.video_url_edit'),required: false, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :uploaded_image
-        = form.input :uploaded_image, as: :file, required: false,
+        = form.input :uploaded_image, as: :file, required: false, input_html: {class: 'lbm-input'},
           hint: (@project.uploaded_image.present? ? image_tag(@project.uploaded_image.project_thumb.url, size: '220x172') : t('formtastic.hints.project.uploaded_image') )
       - if can? :update, @project, :pictures
         = form.semantic_fields_for :pictures, @pictures do |picture|
           = picture.input :picture, as: :file, input_html: {multiple: true, name: "pictures[picture]"}, required: false, hint: (@project.pictures.empty? ? 'No images uploaded' : "Hay #{@project.pictures.size.to_s} imágenes del proyecto")
       - if can? :update, @project, :online_days
-        = form.input :online_days, as: :number, required: false
+        = form.input :online_days, as: :number, required: false, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :goal
-        = form.input :goal, as: :number, required: false, hint: t('formtastic.hints.project.goal').html_safe
+        = form.input :goal, as: :number, required: false, label: "#{t('formtastic.labels.project.goal')}".html_safe, hint: t('formtastic.hints.project.goal').html_safe, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :about
-        = form.input :about, required: false
+        = form.input :about, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :history
-        = form.input :history, required: false
+        = form.input :history, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :cause
-        = form.input :cause, required: false
+        = form.input :cause, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :description
-        = form.input :description, required: false
+        = form.input :description, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :impact
-        = form.input :impact, required: false
+        = form.input :impact, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :budget
-        = form.input :budget, required: false
+        = form.input :budget, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :implementation
-        = form.input :implementation, required: false
+        = form.input :implementation, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :more_links
-        = form.input :more_links, required: false
+        = form.input :more_links, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :first_backers
-        = form.input :first_backers, required: false
+        = form.input :first_backers, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :how_know
-        = form.input :how_know, required: false
+        = form.input :how_know, required: false, input_html: {class: 'lbm-textarea'}
       - if current_user && current_user.admin?
-        = form.input :platform_fee, required: false
-        = form.input :credits_fee, required: false
-      .tips
-        h3= t('projects.formatting_tips.title')
-        = image_tag "catarse/icon_media.png"
-        p= t('projects.formatting_tips.media_html') 
-        = image_tag "catarse/icon_url.png"
-        p= t('projects.formatting_tips.link_html')
-        = image_tag "catarse/icon_linktext.png"
-        p= t('projects.formatting_tips.link_text_html')
-        = image_tag "catarse/icon_bold.png"
-        p= t('projects.formatting_tips.bold_html')
-        = image_tag "catarse/icon_italic.png"
-        p= t('projects.formatting_tips.italic_html')            
-      .clearfix
+        = form.input :platform_fee, required: false, input_html: {class: 'lbm-input'}
+        = form.input :credits_fee, required: false, input_html: {class: 'lbm-input'}
+      /*
+        .tips
+          h3= t('projects.formatting_tips.title')
+          = image_tag "catarse/icon_media.png"
+          p= t('projects.formatting_tips.media_html') 
+          = image_tag "catarse/icon_url.png"
+          p= t('projects.formatting_tips.link_html')
+          = image_tag "catarse/icon_linktext.png"
+          p= t('projects.formatting_tips.link_text_html')
+          = image_tag "catarse/icon_bold.png"
+          p= t('projects.formatting_tips.bold_html')
+          = image_tag "catarse/icon_italic.png"
+          p= t('projects.formatting_tips.italic_html')            
+        .clearfix
       .form-actions.bootstrap-twitter
         = form.submit class: 'btn'

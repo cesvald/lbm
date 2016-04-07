@@ -25,31 +25,31 @@
     - if !@channel.nil? && @channel.banner_top_url.present?
       .banner
         = image_tag @channel.banner_top_url
+    /*
+      - if @project.draft? || @project.reviewed?
+        = render "draft_warning"
 
-    - if @project.draft? || @project.reviewed?
-      = render "draft_warning"
+      - if @project.rejected?
+        = render "rejected_warning"
 
-    - if @project.rejected?
-      = render "rejected_warning"
+      - if @project.online? && can?(:update, @project)
+        = render "online_warning"
 
-    - if @project.online? && can?(:update, @project)
-      = render "online_warning"
-
-    - if @project.waiting_funds? && can?(:update, @project)
-      = render "waiting_funds_warning"
-    
-    - if @project.partial_successful? && can?(:update, @project)
-      = render "partial_successful_warning"
+      - if @project.waiting_funds? && can?(:update, @project)
+        = render "waiting_funds_warning"
       
-    - if @project.successful? && can?(:update, @project)
-      = render "successful_warning"
+      - if @project.partial_successful? && can?(:update, @project)
+        = render "partial_successful_warning"
+        
+      - if @project.successful? && can?(:update, @project)
+        = render "successful_warning"
 
-    - if @project.failed? && can?(:update, @project)
-      = render "failed_warning"
+      - if @project.failed? && can?(:update, @project)
+        = render "failed_warning"
     
     #project_description[data-project=@project.to_json]
-    .project_image
-      = image_tag @project.display_image('project_thumb_small')
+    /.project_image
+    /  = image_tag @project.display_image('project_thumb_small')
     .section_header
       h1= @project.name
       h4
@@ -82,93 +82,70 @@
           = link_to '#documents', id: 'documents_link' do
             = t('.menu.documents')
     .main
+      .sidebar
+        .info
+          - unless @channel && @channel.show_drafts? && (@project.draft? || @project.reviewed?)
+            #statistics
+              .statistics
+                - if @project.online? && @project.in_time?
+                  #pledge
+                    = form_tag(new_project_backer_path(@project), method: :get, id: 'back_project_form') do
+                      fieldset
+                        = button_tag do
+                          = embedded_svg "lbm/puzzle-icon.svg", class: "puzzle-icon"
+                          p
+                            = t('projects.back_project.submit')
+                .statistic-wrapper
+                  = embedded_svg "lbm/money-icon.svg", class: "money-icon"
+                  p.description= @project.display_pledged
+                  em.subdescription= t('statistics.goal.subtitle', total: @project.display_goal).html_safe
+                .statistic-wrapper
+                  = embedded_svg "lbm/time-clock-icon.svg", class: "time-clock-icon"
+                  - if @project.draft? || @project.rejected? || @project.reviewed?
+                    p.time-remaining= @project.online_days
+                    em.description #{@project.online_days} #{pluralize_without_number(@project.online_days, I18n.t('datetime.prompts.day').downcase)} #{pluralize_without_number(@project.online_days, t('remaining_singular'), t('remaining_plural'))}
+                  - else
+                    p.time-remaining= @project.remaining_days
+                    em.description #{@project.time_to_go[:unit].capitalize} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
+                #condition[class="#{@project.display_status}"]
+                  p
+                    = t("projects.back_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
       #project_content
         - if can? :update, @project
-          #project_reports.content.hide= render 'project_reports'
-          #project_edit.content.hide= render 'project_edit'
-          #project_pictures.content.hide= render 'project_pictures'
-          #project_documents.content.hide= render 'project_documents'
-        #project_updates.content.hide= render 'project_updates'
+          #project_reports.content= render 'project_reports'
+          #project_edit.content= render 'project_edit'
+          #project_pictures.content= render 'project_pictures'
+          #project_documents.content= render 'project_documents'
+        #project_updates.content= render 'project_updates'
         .media_content_backers
-          #project_backers.content.hide
-        #project_comments.content.hide= render 'comments'
+          #project_backers.content
+        #project_comments.content= render 'comments'
         #project_about.content= render 'project_about'
 
         .clearfix
         #loading= image_tag "loading.gif"
       .clearfix
-    .sidebar
-      .info
-        - unless @channel && @channel.show_drafts? && (@project.draft? || @project.reviewed?)
-          #statistics
-            .statistics
-              .item.backers
-                p= @project.total_backers
-                em= t('statistics.backers.subtitle')
-              .item.goal
-                p= @project.display_pledged
-                em= t('statistics.goal.subtitle', total: @project.display_goal).html_safe
-              .item.time
-                - if @project.draft? || @project.rejected? || @project.reviewed?
-                  p= @project.online_days
-                  em #{@project.online_days} #{pluralize_without_number(@project.online_days, I18n.t('datetime.prompts.day').downcase)} #{pluralize_without_number(@project.online_days, t('remaining_singular'), t('remaining_plural'))}
-                - else
-                  p= @project.remaining_days
-                  em #{@project.time_to_go[:unit].capitalize} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
-
-            #condition[class="#{@project.display_status}"]
-              p
-                = t("projects.back_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
-            - if @project.online? && @project.in_time?
-              #pledge
-                = form_tag(new_project_backer_path(@project), method: :get, id: 'back_project_form') do
-                  fieldset
-                    = submit_tag t('projects.back_project.submit'), disabled: (not @project.online?)
-        #creator_profile
-          h3= t('project_by')
-          .avatar = @project.user.display_image_html width: 80, height: 80
-          .personal_info
-            p.name
-             = link_to @project.user.display_name, user_path(@project.user)
-            #bio
-              p= @project.user.bio
-          #city
-            p.backer= t('count_backed_projects', total: @project.user.total_backed_projects)
-            p.city
-              | #{@project.user.address_city}
-        .user_social
-          ul
-            - if @project.user.facebook_link
-              li
-                = link_to "Facebook", @project.user.facebook_link, target: '_blank', class: 'facebook'
-            - if @project.user.twitter
-              li
-                = link_to "Twitter", @project.user.twitter_link, target: '_blank', class: 'twitter'
-            - if @project.user.email
-              li
-                = mail_to @project.user.email, @project.user.email, target: '_blank', class: 'email'
-            - if @project.user.other_link
-              li.other
-                = link_to @project.user.other_link, @project.user.other_link, target: '_blank'
-
-        .clearfix
-        - if can?(:update, @project)
-          .bootstrap-twitter.bootstrap-form
-            .alert.alert-info
-              h4.alert-header= t('.no_rewards_warning_title')
-              p style="margin:0; padding:0;"
-                = t('.no_rewards_warning')
-            .clearfix
-            = link_to t('.menu.add_reward'), 'javascript:void(0);', class: 'btn btn-success pull-right add_new_reward'
-            .clearfix
-            .well.new_reward_content.hide
-              = semantic_form_for [@project, Reward.new] do |f|
-                = f.input :minimum_value
-                = f.input :description
-                = f.input :days_to_delivery
-                = f.input :maximum_backers
-                = f.submit class: 'btn'
-        #rewards= render 'project_rewards'
+      
+            
+        /*
+          .clearfix
+          - if can?(:update, @project)
+            .bootstrap-twitter.bootstrap-form
+              .alert.alert-info
+                h4.alert-header= t('.no_rewards_warning_title')
+                p style="margin:0; padding:0;"
+                  = t('.no_rewards_warning')
+              .clearfix
+              = link_to t('.menu.add_reward'), 'javascript:void(0);', class: 'btn btn-success pull-right add_new_reward'
+              .clearfix
+              .well.new_reward_content
+                = semantic_form_for [@project, Reward.new] do |f|
+                  = f.input :minimum_value
+                  = f.input :description
+                  = f.input :days_to_delivery
+                  = f.input :maximum_backers
+                  = f.submit class: 'btn'
+          #rewards= render 'project_rewards'
 
     .clearfix
 = render 'show_embed'

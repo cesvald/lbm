@@ -24,6 +24,11 @@
       color: rgba(black, 0.6)
       padding-bottom: 20px
   #page_content
+    #project_menu
+      position: relative
+      width: $page_width
+      margin-left: $less_half_width
+      left: 50%
     .banner
       margin-top: 30px
       padding: 0px 20%
@@ -112,17 +117,25 @@
         max-width: 90px
         max-height: 67px
     .section_header
-      +grid(14)
       padding-top:  40px
       padding-bottom: 40px
+      position: relative
+      margin-left: $less_half_width
+      left: 50%
+      width: $page_width
       h1
+        font-family: 'Futura Std'
         font-weight: 700
-        font-size: 24px
+        font-size: 20px
+        color: $darkblue
         padding: 5px 0
       h4
-        font-size: 16px
+        font-family: 'Futura Std'
+        font-weight: 200
+        font-size: 17px
+        color: $darkblue
         a
-          color: $carrot
+          color: $darkblue
           text-decoration: none
           &:hover
             text-decoration: underline
@@ -138,21 +151,42 @@
             text-decoration: none
             background: $navy
     .main
-      +grid(11)
       padding-bottom: 20px
+      width: $page_width
+      position: relative
+      left: 50%
+      margin-left: $less_half_width
       .media
+      .status_bar
+        margin-top: 20px
+        display: inline-block
+        width: 78%
+        background-color: $lightgreen
+        height: 31px
+        overflow: hidden
+        +border-radius(18px)
+        .progress
+          +border-radius(18px)
+          background-color: $darkgreen
+          height: 31px
+          overflow: hidden
+          margin-bottom: 0px
+      .status_text
+        font-size: 24px
+        line-height: 71px
+        font-family: 'Futura'
+        font-weight: 400
+        color: $darkgreen
+        margin-left: 20px
+        vertical-align: top
+      .carousel
+        margin-top: 30px
         width: 100%
-        float: left
-        .pictures
-          .project_picture
-            width: 40px
-            height: 40px
-            margin-left: 3px
-          .picture_wrapper
-            display: inline-block
-            background-size:     cover
-            background-repeat:   no-repeat
-            background-position: center center
+        height: 400px
+        .item
+          img
+            margin: 0 auto
+            height: 400px
         .social
           padding-top: 10px
           #facebook_share, #facebook_share iframe
@@ -191,7 +225,210 @@
                   padding: 1px 3px 1px 20px
                   text-align: center
                   background: url($images_path+'link_icon14x14.png') 6px 1px no-repeat
-
+      #creator_profile
+        margin-top: 40px
+        display: block
+        padding-bottom: 15px
+        display: table
+        .image-wrapper
+          display: table-cell
+          text-align: center
+          h3
+            color: $darkblue
+            text-transform: uppercase
+            font-size: 14px
+            font-family: 'Futura Std'
+            font-weight: 200
+            display: block
+          img
+            width: 138px
+            height: 138px
+            border-radius: 10px
+            border: solid 1px $oceanblue
+          a
+            color: $carrot
+            font-size: 17px
+            font-family: 'Futura Std'
+            font-weight: 200
+            display: block
+            margin-top: 5px
+        .social-wrapper
+          display: table-cell
+          width: 45px
+          vertical-align: middle
+          padding: 0 30px
+          img
+            width: 45px
+            height: 45px
+            display: block
+            margin: 10px 0px
+        .about-wrapper
+          display: table-cell
+          p
+            font-size: 17px
+            font-family: 'Futura Std'
+            font-weight: 200
+            color: $darkblue
+            position: relative
+            top: 25px
+          img
+            max-width: 90%
+        .personal_info
+          +grid(3)
+          +omega
+          margin-left: 0px
+          p.name
+            padding-bottom: 6px
+            a
+              font-weight: 700
+              font-size: 14px
+              color: $carrot
+              text-decoration: none
+              &:hover
+                text-decoration: underline
+          p
+            font-size: 12px
+            color: $ultra_gryn
+            line-height: 140%
+          #bio
+            +grid(5)
+            width: 190px
+            margin-right: 0px
+            +alpha
+            p
+              padding: 0px
+              font-size: 12px
+              color: $ultra_gryn
+              line-height: 130%
+        #city
+          +grid(5)
+          width: 190px
+          margin-top: 6px
+          margin-right: 0px
+          +alpha
+          p
+            padding: 10px 0
+            font-size: 12px
+            color: $ultra_gryn
+            line-height: 130%
+            &.backer
+              background: url($images_path+"backer_info.png") left 2px no-repeat
+              text-indent: 20px
+              padding: 0px
+            &.city
+              background: url($images_path+"backer_city.png") left 2px no-repeat
+              text-indent: 20px
+              padding: 0px
+              margin-right: 20px
+      #rewards
+        .box
+          background-image: url($images_lbm_path + 'background-icons.png')
+          background-size: 100%
+          width: 425px
+          padding: 20px
+          margin: 20px
+          min-height: 257px
+          float: left
+          +box-shadow(rgba(black, 0.4) 0 0 5px 2px)
+          &.sortable:hover
+            cursor: pointer
+          &.clickable:hover
+            background: rgba($carrot, 0.3)
+          .btn-danger
+            margin-top: 20px
+          .edit_reward
+            margin-right: -17px
+          h2
+            font-family: 'Futura Std'
+            font-weight: 700
+            font-size: 20px
+            color: $carrot
+            text-transform: uppercase
+            border-bottom: solid 2px $oceanblue
+            padding-bottom: 2px
+            margin-bottom: 10px
+          em
+            color: $darkblue
+            font-family: 'Futura Std'
+            font-weight: 700
+            font-size: 16px
+            text-transform: uppercase
+            display: block
+          p, .on_the_spot_editing
+            color: $darkblue
+            font-size: 15px
+            font-family: 'Futura Condensed'
+            font-weight: 400
+            a
+              color: $navy
+              text-decoration: none
+              &:hover
+                text-decoration: underline
+          .on_the_spot_editing
+            width: 100%
+            margin-left: 0px
+          .reward_deliver_at, .reward_updated_at
+            p
+              color: $darkblue
+              font-family: 'Futura Std'
+              font-weight: 700
+              font-size: 16px
+          .description_version
+            display: none
+            +box-shadow(rgba(black, 0.3) 2px 2px 4px)
+            +border-radius(4px)
+            width: 230px
+            min-height: 60px
+            padding: 30px
+            background: #fff8e5
+            position: absolute
+            margin: -140px 0 0 -340px
+            p
+              font-size: 13px
+              color: #444444
+          .maximum_backers
+            color: $darkblue
+            font-family: 'Futura Std'
+            font-weight: 700
+            font-size: 16px
+            &.in_time_to_confirm
+              margin-top: 10px
+      #project-history-wrapper
+        display: table
+        .text-wrapper
+          display: table-cell
+          vertical-align: top
+          padding: 0px 10px
+          width: 50%
+          p
+            font-family: 'Furuta Std'
+            font-weight: 200
+            font-size: 17px
+            color: $darkblue
+        .image-wrapper
+          display: table-cell
+          img
+            width: 100%
+      #information-container
+        margin-bottom: 40px
+        .information-wrapper
+          padding: 10px
+          padding-left: 30px
+          padding-right: 30px
+          &:nth-child(odd)
+            background: url($images_lbm_path + 'background_blue.png')
+            +box-shadow(rgba(black, 0.45) 0 15px 15px -15px)
+          h3, p
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 17px
+            color: $darkblue
+          h3
+            margin-bottom: 20px
+          img
+            width: 100%
+      .channel-banner
+        width: 100%
       #project_about
         .text
           width: 100%
@@ -215,7 +452,13 @@
             text-decoration: none
             &:hover
               color: $carrot
+        
       #project_pictures
+        .bootstrap-form
+          form
+            li
+              background: url($images_lbm_path + 'background_blue.png')
+              +box-shadow(rgba(black, 0.45) 0px 15px 15px -15px)
         .project_picture_wrapper
           float: left
           max-width: 100%
@@ -241,13 +484,14 @@
         ul.collection_list
           margin-top: 20px
           li
-            width: 286px
-            float: left
+            width: 338px
+            display: inline-block
             border-bottom: 1px #CCCCCC dotted
             min-height: 67px
             padding-right: 25px
             padding-bottom: 30px
             margin-bottom: 30px
+            min-height: 300px
             &:last-child
               margin-left: 1px
               padding-right: 0px
@@ -306,215 +550,99 @@
               .user_reward
                 font-size: 12px
     .sidebar
-      +grid(5)
+      +grid(3)
       +omega
       border: none
       padding-top: 15px
-      .user_social
-        +grid(3)
-        width: 100%
-        margin-left: 0px
-        margin-bottom: 40px
-        padding-bottom: 30px
-        border-bottom: 1px dotted #CCCCCC
-        li
-          +opacity(0.8)
-          float: left
-          margin-right: 5px
-          a
-            +transition(all, 0.5s)
-            display: block
-            text-indent: -9999em
-            height: 15px
-            font-size: 12px
-            &.email
-              width: auto
-              color: $carrot
-              margin-left: 5px
-              text-indent: 0px
-              text-decoration: none
-              padding-top: 1px
-              &:hover
-                text-decoration: underline
-            &.facebook
-              width: 16px
-              background: url($images_path+'social_icons.png') left -25px no-repeat
-            &.twitter
-              width: 16px
-              background: url($images_path+'social_icons.png') left -54px no-repeat
-      #rewards
-        .box
-          background: #F3F3F3
-          width: 225px
-          padding: 20px 20px 20px 35px
-          margin-bottom: 20px
-          border: 1px solid #EDEDED
-          //+transition(all, 0.3s)
-          &.sortable:hover
-            cursor: pointer
-          &.clickable:hover
-            background: rgba($carrot, 0.3)
-          .btn-danger
-            margin-top: 20px
-          .edit_reward
-            margin-right: -17px
-          h2
-            font-weight: 700
-            font-size: 18px
-            color: #444
-            text-transform: uppercase
-            padding-bottom: 5px
-            text-shadow: 1px 1px white
-          em
-            color: $_4d_gryn
-            font-weight: bold
-            font-size: 11px
-            padding: 3px 3px 10px 0
-            text-transform: uppercase
-            display: block
-            text-shadow: 1px 1px white
-          p, .on_the_spot_editing
-            color: #444
-            font-size: 12px
-            line-height: 18px
-            padding-bottom: 5px
-            a
-              color: $navy
-              text-decoration: none
-              &:hover
-                text-decoration: underline
-          .on_the_spot_editing
-            width: 100%
-            margin-left: 0px
-          .reward_deliver_at
-            p
-              color: $carrot
-          .reward_updated_at
-            p
-              color: $blue
-          .description_version
-            display: none
-            +box-shadow(rgba(black, 0.3) 2px 2px 4px)
-            +border-radius(4px)
-            width: 230px
-            min-height: 60px
-            padding: 30px
-            background: #fff8e5
-            position: absolute
-            margin: -140px 0 0 -340px
-            p
-              font-size: 13px
-              color: #444444
-          .maximum_backers
-            color: #4C525D
-            background: url($images_path+"back_statistics.gif") left top repeat-x
-            font-weight: 700
-            height: 51px
-            width: 282px
-            margin-left: -36px
-            font-size: 11px
-            text-indent: 30px
-            text-transform: uppercase
-            &.in_time_to_confirm
-              margin-top: 10px
-            .limited, .sold_out
-              font-size: 13px
-              margin-top: 12px
-              float: left
-              width: 100%
-              margin-bottom: 3px
-              text-shadow: 1px 1px white
-            .sold_out
-              color: #e6303c
-            .remaining
-              text-indent: 0
-              display: inline-block
-              margin-right: 10px
-              font-size: 11px
-              text-shadow: 1px 1px white
-            .pending
-              padding-top: 20px
-              color: $green
-            .updated_reward
-              padding-top: 20px
-              color: $carrot
-              span
-                cursor: pointer
+      float: right
       .info
-        #pledge
-          background: $lightgray
         .statistics
-          background: $lightgray
-          width: 240px
           float: left
-          padding: 20px 20px 0 20px
-          .item
-            font-size: 16px
+          width: 144px
+          #pledge
             margin-bottom: 20px
-            font-family: $headline-font
-            p
-              white-space: nowrap
+            button[type="submit"][disabled="disabled"]
+              +opacity(0.6)
+              background: $ultra_gryn
+            button[type="submit"]
+              display: block
+              margin: 0 auto
+              width: 144px
+              height: 144px
+              padding: 20px
+              background: $carrot
+              border: none
+              +border-radius(10px)
+              +transition(all, 0.5s)
+              text-transform: uppercase
+              font-family: 'Futura Std'
+              font-size: 18px
               font-weight: 700
-              font-size: 32px
-              color: $mediumgray
-              text-shadow: 1px 1px white
-            em
-              font-size: 14px
-              color: $mediumlightgray
-              text-shadow: 1px 1px white
-        #condition
-          background: url($images_path+"back_statistics.gif") left top repeat-x
-          width: 260px
-          height: 30px
-          float: left
-          padding: 11px 10px 10px
-          &.partial_successful
-            background: #14B5CC
-            p
               color: white
-              text-shadow: 1px 1px #00707F
-
-          &.successful
-            background: #64CB64
-            p
-              color: white
-              text-shadow: 1px 1px #349b34
-          &.failed
-            background: #CC1328
-            p
-              color: white
-              text-shadow: 1px 1px #ab242f
-          p
-            line-height: 130%
-            font-size: 12px
-            font-style: italic
-            color: #666666
-            text-shadow: 1px 1px white
-        #pledge
-          width: 280px
-          float: left
-          padding-top: 20px
-          padding-bottom: 20px
-          input[type="submit"][disabled="disabled"]
-            +opacity(0.6)
-            background: $ultra_gryn
-          input[type="submit"]
-            display: block
-            margin: 0 auto
-            background: $green
-            width: 245px
-            height: 55px
-            border: none
+              text-align: center
+              &:hover
+                +box-shadow(rgba(black, 0.3) 0 0 4px inset)
+              &:active
+                +box-shadow(rgba(black, 0.3) 0 0 10px inset)
+              .puzzle-icon
+                fill: white
+                width: 58px
+          .statistic-wrapper
+            width: 144px
+            height: 144px
+            padding: 15px
+            border: solid 2px $oceanblue
+            text-align: center
+            margin-bottom: 20px
             +border-radius(10px)
-            +transition(all, 0.5s)
-            text-transform: uppercase
-            font-weight: bold
-            font-size: 15px
+            .money-icon
+              width: 61px
+              fill: $oceanblue
+            .description
+              font-family: 'Futura Std'
+              font-weight: 700
+              font-size: 13px
+              color: $oceanblue
+              margin-top: 15px
+              margin-bottom: 0px
+              line-height: 10px
+            .subdescription
+              font-size: 13px
+              font-family: 'Futura Std'
+              font-weight: 700
+              color: $oceanblue
+            .time-clock-icon
+              width: 31px
+            .time-remaining
+              font-size: 60px
+              font-weight: 700
+              font-family: 'Futura Std'
+              color: $oceanblue
+              margin-bottom: 0px
+              line-height: 50px
+        #condition
+          float: left
+          padding: 13px 27px 0px
+          padding-right: 16px
+          color: $darkblue
+          background-size: 100%
+          background-repeat: no-repeat
+          &.partial_successful
+            background-image: url($images_lbm_path + 'status_partial_successful.png')
             color: white
-            &:hover
-              +box-shadow(rgba(black, 0.3) 0 0 4px inset)
-            &:active
-              +box-shadow(rgba(black, 0.3) 0 0 10px inset)
+          &.successful
+            background-image: url($images_lbm_path + 'status_successful.png')
+            color: white
+          &.failed
+            background-image: url($images_lbm_path + 'status_failed.png')
+            color: white
+          &.waiting_confirmation
+            background-image: url($images_lbm_path + 'status_waiting_confirmation.png')
+            color: white
+          p
+            font-family: 'Futura Std'
+            font-weight: 700
+            font-size: 11px
         .bootstrap-twitter
           .btn-primary
             background-image: -moz-linear-gradient(top, #64CB64, #51A553)
@@ -534,77 +662,10 @@
               font-size: 18px
               font-weight: normal
               text-shadow: 1px 1px white
-        #creator_profile
-          padding-top: 40px
-          float: left
-          padding-bottom: 15px
-          a
-            color: $ultra_gryn
-            text-decoration: none
-            &:hover
-              color: $carrot
-          h3
-            color: $warmgray
-            text-transform: uppercase
-            font-weight: 700
-            display: block
-            padding-bottom: 16px
-          .avatar
-            +grid(2)
-            width: 80px
-            +alpha
-            img
-              width: 80px
-              height: 80px
-          .personal_info
-            +grid(3)
-            +omega
-            margin-left: 0px
-            p.name
-              padding-bottom: 6px
-              a
-                font-weight: 700
-                font-size: 14px
-                color: $carrot
-                text-decoration: none
-                &:hover
-                  text-decoration: underline
-            p
-              font-size: 12px
-              color: $ultra_gryn
-              line-height: 140%
-            #bio
-              +grid(5)
-              width: 190px
-              margin-right: 0px
-              +alpha
-              p
-                padding: 0px
-                font-size: 12px
-                color: $ultra_gryn
-                line-height: 130%
-          #city
-            +grid(5)
-            width: 190px
-            margin-top: 6px
-            margin-right: 0px
-            +alpha
-            p
-              padding: 10px 0
-              font-size: 12px
-              color: $ultra_gryn
-              line-height: 130%
-              &.backer
-                background: url($images_path+"backer_info.png") left 2px no-repeat
-                text-indent: 20px
-                padding: 0px
-              &.city
-                background: url($images_path+"backer_city.png") left 2px no-repeat
-                text-indent: 20px
-                padding: 0px
-                margin-right: 20px
+        
     #project_edit, #project_reports, #project_documents, #project_pictures
       .bootstrap-twitter
+        +grid(14)
         a
           color: $carrot
         p
@@ -616,24 +677,30 @@
           p
             margin-bottom: 0
             padding-bottom: 0
-          background-color: #F7F7F7
-          border: 1px solid #EDEDED
-          color: #666666
+          background: transparent
+          border: none
+          color: $darkblue
           font-size: 13px
+          font-family: 'Futura Std'
+          font-weight: 400
           line-height: 21px
           height: 36px
           padding: 10px 10px 10px 40px
           width: 92%
           +border-radius (0)
       .bootstrap-form
+        +grid(14)
+        form
+          margin: 0px
+          &:nth-child(even)
+            background: url($images_lbm_path + 'background_blue.png')
+            +box-shadow(rgba(black, 0.45) 0px 15px 15px -15px)
         li
-          list-style-type: none
+          list-style-type: none          
         .inputs
           li.input
-            margin-bottom: 20px
             float: left
-            border-bottom: dotted 1px #CCCCCC
-            padding: 25px 0
+            padding: 50px 30px
             width: 100%
             p.inline-hints
               .bar
@@ -653,24 +720,29 @@
             border-bottom: none
             padding: 0px
             width: 0px
-        textarea, input[type='text']
-          width: 70%
+        textarea, input, select
+          width: 452px
         label
-          color: $carrot
+          color: $darkblue
           float: left
-          font-style: italic
-          font-size: 18px
+          font-size: 17px
+          font-family: 'Futura LT'
+          font-weight: 400
           line-height: 24px
-          text-align: center
-          width: 160px
+          width: 296px
           margin-right: 10px
+          text-align: left
+          padding-left: 0px
+          white-space: normal
         p.inline-hints
-          color: #777777
-          float: right
           margin-right: 20px
           font-size: 12px
+          font-family: 'Futura Std'
+          font-weight: 200
           line-height: 18px
-          width: 70%
+          width: 452px
+          margin-left: 316px
+          color: $darkblue
         li.project_category_input
           p.inline-hints
             float: left
@@ -716,25 +788,35 @@
           border: none
           padding: 0
           margin: 0
+          text-align: center
+          margin-top: 30px
           .btn
-            border: solid 1px $darkcarrot
+            width: 275px
+            line-height: 58px
+            background: $oceanblue
+            border: solid 1px $oceanblue
+            font-family: 'Futura LT'
+            font-weight: 400
+            font-size: 30px
             color: white
-            display: block
-            text-shadow: 1px 1px $darkcarrot
-            font-size: 12px
-            height: 46px
-            padding: 0 15px 0 45px
-            text-transform: uppercase
-            margin-top: 20px
-            margin-right: 10px
-            float: right
-            +border-radius (10px)
-            background: $carrot url($images_path+"icon_refreshproject.png") 10px 9px no-repeat
+            height: 62px
+            padding: 0px 0px 11px 0px
+            +border-radius(15px)
+            padding: 0px 10px
+            margin: 0 30px
+            +transition(all, 0.3s)
             &:hover
-              background-color: $darkcarrot
+              background-color: white
+              color: $oceanblue
           .btn.btn-no-icon
             background: #f57421
             padding: 0 15px 0 15px
+    #project_edit
+      .bootstrap-form
+        li
+          &:nth-child(even)
+            background: url($images_lbm_path + 'background_blue.png')
+            +box-shadow(rgba(black, 0.45) 0px 15px 15px -15px)
     #project_updates
       width: 620px
       .bootstrap-form
@@ -743,8 +825,10 @@
           width: 98%
           margin-bottom: 20px
         label
-          font-size: 15px
-          color: rgba(0, 0, 0, 0.8)
+          font-family: 'Futura LT'
+          font-weight: 400
+          font-size: 17px
+          color: $darkblue
         label, input#update_exclusive
           margin: 5px
           float: left

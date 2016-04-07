@@ -39,12 +39,12 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
       })($(this))
     });
 
-    this.$('a.destroy_update').live('ajax:beforeSend', function(event, data){
+    this.$('a.destroy_update').on('ajax:beforeSend', function(event, data){
       $(event.target).next('.deleting_update').show();
     });
 
     var that = this;
-    this.$('a.destroy_update').live('ajax:success', function(event, data){
+    this.$('a.destroy_update').on('ajax:success', function(event, data){
       var target = $('.updates_wrapper');
       target.html(data);
       that.$('a#updates_link .count').html(' (' + that.$('.updates_wrapper ul.collection_list > li').length + ')');

@@ -2,9 +2,9 @@
   .bootstrap-form
     = semantic_form_for [@project, Update.new(user_id: current_user.id)] do |form|
       = form.inputs do
-        = form.input :title, as: :string, label: t('projects.project_updates.title')
-        = form.input :comment, as: :text, label: t('projects.project_updates.comment'), input_html: {rows: 10}
-        = form.input :exclusive, label: t('projects.project_updates.exclusive')
+        = form.input :title, as: :string, label: t('projects.project_updates.title'), input_html: {class: 'lbm-input'}
+        = form.input :comment, as: :text, label: t('projects.project_updates.comment'), input_html: {rows: 10, class: 'lbm-textarea'}
+        = form.input :exclusive, label: t('projects.project_updates.exclusive'), input_html: {class: 'lbm-input'}
         .clearfix
         .bootstrap-twitter
           .alert.alert-info

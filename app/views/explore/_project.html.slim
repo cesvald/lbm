@@ -11,9 +11,9 @@ script type="text/template" id="project_template"
       a href="<%= url %>"
         .cover
           img src="<%= image %>" itemprop="image"
-        | <% if(expired) { %>
-        | <%= mark_image %>
-        | <% } %>
+          | <% if(expired) { %>
+          | <%= mark_image %>
+          | <% } %>
       .project_content
         .project_title
           h4

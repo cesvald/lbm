@@ -72,7 +72,7 @@ es:
     backers:
       subtitle: Colaboradores
     goal:
-      subtitle: "De %{total} solicitados"
+      subtitle: "Recaudados de %{total}"
   project_by: "Proyecto por"
   tell_about_this_back: "Cuenta al mundo sobre tu apoyo!"
   certify_this_donation: "Certificar esta colaboración"
@@ -510,7 +510,7 @@ es:
         successful: "Este proyecto fue financiado con éxito el %{date}"
         waiting_funds: "Esperando confirmación de los pagos para saber si el proyecto fue financiado."
         draft: "Este proyecto esta en borrador y no esta disponible para colaboraciones aún."
-      reached_of: Alcanzado
+      reached_of: alcanzado
       submit: "Quiero aportar"
     backer:
       anonymous_backer: "Colaborador anónimo"
@@ -1104,102 +1104,132 @@ es:
         description: 'Descripción de las herramientas para donantes'
         tool_1:
           title: 'Todo para donantes.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_2:
           title: 'Todo para donantes.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_3:
           title: 'Todo para donantes.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_4:
           title: 'Todo para donantes.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_5:
           title: 'Todo para donantes.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_6:
           title: 'Todo para donantes.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
       about_project:
         description: 'Descripción de las herramientas sobre projectos'
         tool_1:
           title: 'Todo sobre tu campaña.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_2:
           title:
           link:
+          image:
         tool_3:
           title:
           link:
+          image:
         tool_4:
           title:
           link:
+          image:
         tool_5:
           title:
           link:
+          image:
         tool_6:
           title:
           link:
+          image:
       after_project:
         description: 'Descripción de las herramientas después de tu campaña'
         tool_1:
           title: 'Después de tu campaña.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_2:
           title:
           link:
+          image:
         tool_3:
           title:
           link:
+          image:
         tool_4:
           title:
           link:
+          image:
         tool_5:
           title:
           link:
+          image:
         tool_6:
           title:
           link:
+          image:
       venture_course:
         description: 'Descripción de las herramientas del curso en empredimiento'
         tool_1:
           title: 'Curso en emprendimiento.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_2:
           title:
           link:
+          image:
         tool_3:
           title:
           link:
+          image:
         tool_4:
           title:
           link:
+          image:
         tool_5:
           title:
           link:
+          image:
         tool_6:
           title:
           link:
+          image:
       about_crowdfunding:
         description: 'Descripción de las herramientas todo sobre CrowdFunding'
         tool_1:
           title: 'Todo sobre CrowdFunding.pdf'
-          link: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          link:
+          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
         tool_2:
           title:
           link:
+          image:
         tool_3:
           title:
           link:
+          image:
         tool_4:
           title:
           link:
+          image:
         tool_5:
           title:
           link:
+          image:
         tool_6:
           title:
           link:
+          image:
     privacy:
       title: "Políticas de Privacidad"
     terms:
