@@ -22,8 +22,8 @@
 //= require ./app/views/paginated.js
 //= require ./app/collections/paginated.js
 //= require_tree ./app
+//= require jquery-fileupload/basic
+//= require jquery-fileupload/vendor/tmpl
 //= require ./init.js
 //= require i18n_viz
 //= require catarse_lbm_gift_cards
-//= require jquery-fileupload/basic
-//= require jquery-fileupload/vendor/tmpl
