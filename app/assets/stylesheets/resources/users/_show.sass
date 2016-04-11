@@ -27,7 +27,7 @@
         .avatar_wrapper
           +box-shadow(rgba(black, 0.4) 2px 2px 2px)
       .profile_title
-        +grid(9)
+        +grid(7)
         +omega
         h1
           font-size: 28px
@@ -60,26 +60,32 @@
     .tab_container
       padding-top: 20px
       margin-bottom:  20px
+      overflow: hidden
+      height: 45px
     #user_backed_projects
       ul.collection_list
         li
           margin-bottom: 30px
       #certificate_form
         input[type=submit]
-          background: $carrot
-          color: #FFFFFF
-          display: inline-block
-          font-size: 12px
-          height: 49px
-          text-transform: uppercase
-          width: 240px
-          border: 1px solid $darkcarrot
-          +border-radius(15px)
-          margin-bottom: 30px
-          margin-right: 10px
-          font-weight: bold
+          font-family: 'Futura LT'
+          font-weight: 400
+          font-size: 16px
+          color: white
+          padding: 5px 20px
+          background-color: $oceanblue
+          border-radius: 10px
+          border: solid 1px $oceanblue
+          display: inline
+          margin-right: 50px
+          cursor: pointer
+          margin-bottom: 20px
           &:hover
-            background: $darkcarrot
+            color: $oceanblue
+            background-color: white
+            text-decoration: none
+        span
+          color: $darkblue
     #user_created_projects
       width: 100%
       float: left
@@ -141,26 +147,22 @@
         .disabled
           color: gray
         form
+          label
+            font-family: "Futura LT"
+            font-weight: 400
+            font-size: 17px
+            color: $darkblue
+            text-align: left
+            padding: 0px
+            padding-left: 5px
           .bootstrap-twitter
             .btn
-              background-color: #F5F5F5
-              background-repeat: repeat-x
-              border-color: #CCCCCC #CCCCCC #B3B3B3
-              +border-radius (4px)
-              border-style: solid
-              border-width: 1px
-              color: #333333
-              cursor: pointer
-              display: inline-block
               font-size: 13px
               line-height: 18px
-              margin-bottom: 0
               padding: 4px 10px
-              text-align: center
-              vertical-align: middle
           .div
             float: left
-            width: 230px
+            width: 260px
           .inputs
             margin-bottom: 0px
             float: left
@@ -199,18 +201,12 @@
                 width: 320px
             li#user_address_complement_input, li#user_address_state_input
               margin-right: 0px
-          #user_submit
-            background: $carrot
-            color: #FFFFFF
-            display: block
-            font-size: 12px
-            height: 49px
-            text-transform: uppercase
-            width: 240px
-            border: 1px solid $darkcarrot
-            +border-radius(15px)
-            margin-bottom: 30px
+          .lbm-button
+            padding: 15px 30px
+            
           .socialmidia
+            .div
+              margin-right: 20px
             #user_newsletter_input, #user_email_input, #user_phone_number_input
               #user_newsletter
                 float: left
@@ -265,3 +261,8 @@
         display: block
       .btn
         margin-top: 23px
+      .bootstrap-form
+        .div
+          margin-right: 20px
+          label
+            padding-right: 5px

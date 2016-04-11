@@ -56,11 +56,11 @@
           #user_backers
         #user_created_projects.content
         - if can? :manage, @user
-          #user_unsubscribes.content.hide
+          #user_unsubscribes.content
             = render 'unsubscribes'
-          #user_settings.content.hide
+          #user_settings.content
             = render 'current_user_fields'
-          #user_credits.content.hide
+          #user_credits.content
             .current_credits
               p= t('credits.index.current_credits_html', credits: @user.display_credits)
 

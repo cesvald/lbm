@@ -571,9 +571,9 @@
               height: 144px
               padding: 20px
               background: $carrot
-              border: none
+              border: solid 1px $carrot
               +border-radius(10px)
-              +transition(all, 0.5s)
+              +transition(all, 0.3s)
               text-transform: uppercase
               font-family: 'Futura Std'
               font-size: 18px
@@ -581,12 +581,15 @@
               color: white
               text-align: center
               &:hover
-                +box-shadow(rgba(black, 0.3) 0 0 4px inset)
-              &:active
-                +box-shadow(rgba(black, 0.3) 0 0 10px inset)
+                color: $carrot
+                background: white
+                .puzzle-icon
+                  fill: $orange
               .puzzle-icon
                 fill: white
                 width: 58px
+                +transition(all, 0.3s)
+
           .statistic-wrapper
             width: 144px
             height: 144px
