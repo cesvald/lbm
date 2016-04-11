@@ -112,15 +112,15 @@
                     = t("projects.back_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
       #project_content
         - if can? :update, @project
-          #project_reports.content= render 'project_reports'
-          #project_edit.content= render 'project_edit'
-          #project_pictures.content= render 'project_pictures'
-          #project_documents.content= render 'project_documents'
-        #project_updates.content= render 'project_updates'
-        .media_content_backers
-          #project_backers.content
-        #project_comments.content= render 'comments'
-        #project_about.content= render 'project_about'
+          #project_reports.content.hide= render 'project_reports'
+          #project_edit.content.hide= render 'project_edit'
+          #project_pictures.content.hide= render 'project_pictures'
+          #project_documents.content.hide= render 'project_documents'
+        #project_updates.content.hide= render 'project_updates'
+        .media_content.hide_backers
+          #project_backers.content.hide
+        #project_comments.content.hide= render 'comments'
+        #project_about.content.hide= render 'project_about'
 
         .clearfix
         #loading= image_tag "loading.gif"
