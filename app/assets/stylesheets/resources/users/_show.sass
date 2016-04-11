@@ -68,22 +68,9 @@
           margin-bottom: 30px
       #certificate_form
         input[type=submit]
-          font-family: 'Futura LT'
-          font-weight: 400
           font-size: 16px
-          color: white
           padding: 5px 20px
-          background-color: $oceanblue
-          border-radius: 10px
-          border: solid 1px $oceanblue
-          display: inline
-          margin-right: 50px
-          cursor: pointer
           margin-bottom: 20px
-          &:hover
-            color: $oceanblue
-            background-color: white
-            text-decoration: none
         span
           color: $darkblue
     #user_created_projects
@@ -106,8 +93,9 @@
       .current_credits
         p
           font-size: 24px
+          font-family: 'Futura Std'
           font-weight: 700
-          color: $ultra_gryn
+          color: $darkblue
           padding-bottom: 5px
       #current_credits
         color: $carrot
@@ -115,10 +103,17 @@
         font-size: 20px
         padding-top: 14px
         padding-bottom: 10px
+        p
+          font-family: 'Futura Std'
+          font-weight: 200
+          color: $darkblue
       .table_content
         th
           font-weight: bold
           font-size: 16px
+          font-family: 'Futura Std'
+          font-weight: 700
+          color: $darkblue
         td
           font-size: 14px
           a
@@ -127,6 +122,14 @@
             +transition(all, 0.5s)
             &:hover
               text-decoration: underline
+      .bootstrap-alert
+        .alert.alert-info
+          background: transparent
+          color: $darkblue
+          font-family: 'Futura Std'
+          font-weight: 200
+          border: none
+          font-size: 17px
   #social_info
     margin-top: 20px
   #my_data, #social_info, #my_avatar, #change_password, #my_facebook
@@ -162,7 +165,7 @@
               padding: 4px 10px
           .div
             float: left
-            width: 260px
+            width: 288px
           .inputs
             margin-bottom: 0px
             float: left
@@ -194,13 +197,13 @@
               input#user_name
                 width: 130px
               input#user_cpf, input#user_state_inscription
-                width: 120px
+                width: 150px
               input#user_address_street
                 width: 450px
               input#user_full_name
                 width: 320px
             li#user_address_complement_input, li#user_address_state_input
-              margin-right: 0px
+              margin-right: 20px
           .lbm-button
             padding: 15px 30px
             
@@ -213,6 +216,7 @@
                 margin-right: 5px
               display: inline-block
               margin: 5px
+              width: 300px
             margin-bottom: 20px
   #my_avatar
     ul
