@@ -692,7 +692,7 @@ es:
       with_city: "Un proyecto en %{category_name}, en %{city} por %{author}"
     project_updates:
       empty: "Aún no te tenemos novedades, pero muy pronto las habrán. No te las pierdas!"
-      submit: "Enviar actualización…"
+      submit: "Enviar actualización"
       comment: "Actualizar texto"
       exclusive: "Sólo visible para colaboradores"
       title: "Título para la actualización"

@@ -71,23 +71,31 @@
           min-height: 67px
           .time
             float: left
-            color: $channel_text
+            color: $darkblue
+            font-family: 'Futura Std'
+            font-weight: 200
             font-size: 14px
             margin: 0 0 20px 0
           h3
             font-weight: bold
-            color: #444
+            color: $darkblue
+            font-family: 'Futura Std'
+            font-weight: 200
             font-size: 16px
             margin-bottom: 11px
           p
             padding: 5px 0 5px 0
             font-size: 14px
-            color: #444
+            color: $darkblue
+            font-family: 'Futura Std'
+            font-weight: 200
             line-height: 21px
           img
             max-width: 600px
           a
-            color: #444
+            color: $darkblue
+            font-family: 'Futura Std'
+            font-weight: 700
             text-decoration: none
             &:hover
               color: $carrot
@@ -156,6 +164,9 @@
       position: relative
       left: 50%
       margin-left: $less_half_width
+      #project_content
+        .content
+          overflow: hidden
       .media
       .status_bar
         margin-top: 20px
@@ -321,15 +332,19 @@
               padding: 0px
               margin-right: 20px
       #rewards
+        text-align: center
         .box
-          background-image: url($images_lbm_path + 'background-icons.png')
+          background-image: url($images_lbm_path + 'background-reward.png')
           background-size: 100%
-          width: 425px
-          padding: 20px
+          width: 350px
+          padding: 10px
           margin: 20px
-          min-height: 257px
-          float: left
+          display: inline-block
+          border-radius: 10px
           +box-shadow(rgba(black, 0.4) 0 0 5px 2px)
+          +transition(all, 0.3s)
+          &:hover
+            transform: scale(0.95)
           &.sortable:hover
             cursor: pointer
           &.clickable:hover
@@ -394,19 +409,7 @@
             &.in_time_to_confirm
               margin-top: 10px
       #project-history-wrapper
-        display: table
-        .text-wrapper
-          display: table-cell
-          vertical-align: top
-          padding: 0px 10px
-          width: 50%
-          p
-            font-family: 'Furuta Std'
-            font-weight: 200
-            font-size: 17px
-            color: $darkblue
         .image-wrapper
-          display: table-cell
           img
             width: 100%
       #information-container
@@ -455,6 +458,7 @@
         
       #project_pictures
         .bootstrap-form
+          margin: 0px
           form
             li
               background: url($images_lbm_path + 'background_blue.png')
@@ -482,16 +486,14 @@
               margin-top: 2px
       .media_content_backers
         ul.collection_list
-          margin-top: 20px
           li
-            width: 338px
+            width: 284px
             display: inline-block
             border-bottom: 1px #CCCCCC dotted
             min-height: 67px
             padding-right: 25px
-            padding-bottom: 30px
             margin-bottom: 30px
-            min-height: 300px
+            min-height: 275px
             &:last-child
               margin-left: 1px
               padding-right: 0px
@@ -502,7 +504,7 @@
               margin-right: 15px
             .back_info
               float: left
-              width: 200px
+              width: 174px
               #text
                 a, .anon
                   font-weight: 700
@@ -521,7 +523,6 @@
                 background: url($images_path+'confirmed_icon.png') left top no-repeat
               #backed
                 background: url($images_path+'backed_icon.png') left 4px no-repeat
-                width: 125px
                 line-height: 120%
                 text-indent: 0px
                 height: auto
@@ -534,7 +535,6 @@
               margin-top: 10px
               line-height: 120%
               float: left
-              width: 240px
               padding: 15px 15px 15px 40px
               background: url($images_path+'reward_box.png') left top no-repeat #F3F3F3
               .value
@@ -553,7 +553,6 @@
       +grid(3)
       +omega
       border: none
-      padding-top: 15px
       float: right
       .info
         .statistics
@@ -821,11 +820,11 @@
             background: url($images_lbm_path + 'background_blue.png')
             +box-shadow(rgba(black, 0.45) 0px 15px 15px -15px)
     #project_updates
-      width: 620px
       .bootstrap-form
         margin-top: 20px
+        width: 820px
         textarea, input#update_title
-          width: 98%
+          width: 100%
           margin-bottom: 20px
         label
           font-family: 'Futura LT'
@@ -836,22 +835,22 @@
           margin: 5px
           float: left
       .alert.alert-info
-        background-color: #F7F7F7
-        border: 1px solid #EDEDED
-        color: #666666
-        +border-radius (0px)
-        font-size: 13px
-        line-height: 21px
+        background-color: white
+        color: $darkblue
+        font-size: 14px
+        font-family: 'Futura Std'
+        font-weight: 200
         padding: 20px 10px 10px 20px
-
+        margin-top: 20px
       .tips
-        background: #F7F7F7
-        border: 1px solid #EDEDED
+        background: wait
+        border: 1px solid #bce8f1
         float: left
-        margin-right: 10px
         padding: 20px
-        width: 93%
-        color: #666666
+        width: 100%
+        color: $darkblue
+        font-weight: 200
+        font-family: 'Futura Std'
         h3
           border-bottom: 1px dotted #CCCCCC
           font-style: italic
@@ -884,20 +883,8 @@
         border: none
         padding: 0
         margin: 0
-        .btn
-          border: solid 1px $darkcarrot
-          color: white
-          display: block
-          text-shadow: 1px 1px $darkcarrot
-          font-size: 12px
-          height: 46px
-          padding: 0 15px 0 45px
-          text-transform: uppercase
-          margin-top: 10px
-          margin-right: 10px
-          float: left
-          +border-radius (10px)
-          background: $carrot url($images_path+"icon_refreshproject.png") 10px 9px no-repeat
-          &:hover
-            background-color: $darkcarrot
+        .lbm-button
+          padding-top: 15px
+          padding-bottom: 15px
+          margin-top: 40px
 

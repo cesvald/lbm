@@ -48,9 +48,6 @@ span.status_text ="#{@project.display_progress}% #{t('projects.back_project.reac
 #rewards= render 'project_rewards'
 
 #project-history-wrapper
-  .text-wrapper
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec aliquet nisi. Morbi iaculis nibh et nulla venenatis, et condimentum urna maximus. Duis sed massa vitae purus dignissim lobortis ut vel nisi. Donec eu varius erat. Aliquam erat volutpat. Suspendisse porttitor porttitor nibh, quis vulputate elit molestie et. Morbi magna velit, hendrerit ac pulvinar at, convallis vitae est. Praesent vel elit non quam facilisis luctus ut faucibus ex.
   .image-wrapper
     - @project.channels.each do |channel|
       - if channel.banner_top_url.present?

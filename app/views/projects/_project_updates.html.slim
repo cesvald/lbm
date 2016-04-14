@@ -23,7 +23,7 @@
           p= t('projects.formatting_tips.italic_html')            
       = form.actions do
         .bootstrap-twitter
-          = form.submit t('projects.project_updates.submit'), class: "btn", id: "update_submit"
+          = form.submit t('projects.project_updates.submit'), class: "lbm-button", id: "update_submit"
           .loading_updates.hide= image_tag "loading.gif"
 .updates_wrapper
   = render template: 'updates/index'

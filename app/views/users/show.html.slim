@@ -14,28 +14,29 @@
 #page_content
   .container
     #user_profile[data-user="#{@user.to_json}"]
-      .section_header
-        .profile_image
-          = @user.display_image_html
-        .profile_title
-          h1.profile
-              = @user.display_name
-          h4.bio
-              = @user.bio
-      .user_social
-        ul
-          - if can? :manage, @user
-            li.email
-              = mail_to @user.email, "Email", target: '_blank'
-          - if @user.facebook_link
-            li.facebook
-              = link_to t('.user_social.facebook'), @user.facebook_link, target: '_blank'
-          - if @user.twitter
-            li.twitter
-              = link_to t('.user_social.twitter'), @user.twitter_link, target: '_blank'
-          - if @user.other_link
-            li.other
-              = link_to @user.other_link, @user.other_link, target: '_blank'
+      #header-wrapper
+        .section_header
+          .profile_image
+            = @user.display_image_html
+          .profile_title
+            h1.profile
+                = @user.display_name
+            h4.bio
+                = @user.bio
+        .user_social
+          ul
+            - if can? :manage, @user
+              li.email
+                = mail_to @user.email, "Email", target: '_blank'
+            - if @user.facebook_link
+              li.facebook
+                = link_to t('.user_social.facebook'), @user.facebook_link, target: '_blank'
+            - if @user.twitter
+              li.twitter
+                = link_to t('.user_social.twitter'), @user.twitter_link, target: '_blank'
+            - if @user.other_link
+              li.other
+                = link_to @user.other_link, @user.other_link, target: '_blank'
 
       .tab_container
         nav#user_profile_menu
@@ -45,7 +46,7 @@
           - if can? :manage, @user
             = link_to t('.tabs.credits'), '#credits', id: 'credits_link'
             = link_to t('.tabs.settings'), '#settings', id: 'settings_link'
-            = link_to t('.tabs.unsubscribes'), '#unsubscribes', id: 'unsubscribes_link'
+            /= link_to t('.tabs.unsubscribes'), '#unsubscribes', id: 'unsubscribes_link'
       .clearfix
       #user_profile_content
         #user_backed_projects.content
@@ -56,8 +57,9 @@
           #user_backers
         #user_created_projects.content
         - if can? :manage, @user
-          #user_unsubscribes.content
-            = render 'unsubscribes'
+          /*
+            #user_unsubscribes.content
+              = render 'unsubscribes'
           #user_settings.content
             = render 'current_user_fields'
           #user_credits.content
