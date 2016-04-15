@@ -1,57 +1,66 @@
 - @rewards.each do |reward|
+  = semantic_form_for Backer.new, url: project_backers_path(reward.project), html: { id: 'backer_form' } do |form|
+    = form.inputs do
+      = hidden_field_tag 'credits', ("%0.0f" % current_user.credits)
+      = form.input :value, as: :hidden, required: false, label: false, input_html: {value: reward.minimum_value}
+      = hidden_field_tag '[backer][reward_id]', reward.id
+      = form.input :anonymous, as: :hidden, value: false
+      = form.submit t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe, disabled: ((not (@project.online? && @project.in_time?)) || reward.sold_out?), class: 'box', id: "backer_submit"
 
+    
+/*
   div[id="reward_#{reward.id}" data-update_url="#{sort_project_reward_path(@project, reward)}" class="box #{(can?(:update, reward) ? 'clickable_owner sortable' : '')} #{(@project.online? && !reward.sold_out? && !can?(:update, reward)  ? 'clickable'  : '' )}"]
-    - if can?(:update, @project)
-      .hide id="reward#{reward.id}Editor"
-        .bootstrap-form
-          = semantic_form_for [@project, reward] do |f|
-            - if can? :update, reward, :minimum_value
-              = f.input :minimum_value
-            - if can? :update, reward, :description
-              = f.input :description
-            - if can? :update, reward, :days_to_delivery
-              = f.input :days_to_delivery
-            - if can? :update, reward, :maximum_backers
-              = f.input :maximum_backers
-            .bootstrap-twitter
-              = f.submit class: 'btn'
+      - if can?(:update, @project)
+        .hide id="reward#{reward.id}Editor"
+          .bootstrap-form
+            = semantic_form_for [@project, reward] do |f|
+              - if can? :update, reward, :minimum_value
+                = f.input :minimum_value
+              - if can? :update, reward, :description
+                = f.input :description
+              - if can? :update, reward, :days_to_delivery
+                = f.input :days_to_delivery
+              - if can? :update, reward, :maximum_backers
+                = f.input :maximum_backers
+              .bootstrap-twitter
+                = f.submit class: 'btn'
 
-            .clearfix.bootstrap-twitter
-              = link_to [@project, reward], class: 'btn btn-danger', method: :delete, confirm: 'Are you sure?' do
-                i.icon-trash.icon-white
-      - if can?(:update, reward)
-        .bootstrap-twitter
-          = link_to "#reward#{reward.id}Editor", class: 'edit_reward btn btn-mini pull-right btn-primary' do
-            i.icon-pencil.icon-white
+              .clearfix.bootstrap-twitter
+                = link_to [@project, reward], class: 'btn btn-danger', method: :delete, confirm: 'Are you sure?' do
+                  i.icon-trash.icon-white
+        - if can?(:update, reward)
+          .bootstrap-twitter
+            = link_to "#reward#{reward.id}Editor", class: 'edit_reward btn btn-mini pull-right btn-primary' do
+              i.icon-pencil.icon-white
 
 
-    = hidden_field_tag 'url', "#{new_project_backer_path(@project)}/?reward_id=#{reward.id}"
-    h2= t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe
-    /*
-      em= pluralize(reward.backers.confirmed.count, t('backer_singular'), t('backer_plural'))
-      .clearfix
-      = reward.display_description
-      - if reward.maximum_backers
-        .maximum_backers.clearfix
-          - if reward.sold_out?
-            = t('reward.sold_out')
-          - else
-            = "#{t('reward.limited')}: #{reward.display_remaining}"
-        - in_time_to_confirm = reward.backers.in_time_to_confirm.count
-        - if in_time_to_confirm > 0
-          .maximum_backers.in_time_to_confirm.clearfix
-            = t('projects.rewards.backs_to_confirm', count: in_time_to_confirm)
+      = hidden_field_tag 'url', "#{new_project_backer_path(@project)}/?reward_id=#{reward.id}"
+      h2= t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe
+      /*
+        em= pluralize(reward.backers.confirmed.count, t('backer_singular'), t('backer_plural'))
         .clearfix
-      - if reward.days_to_delivery.present?
-        div class="reward_deliver_at"
-          p= "#{t('projects.rewards.reward_deliver_time', prevision: reward.display_deliver_prevision)}".html_safe
-      - if current_user && current_user.admin
-        div class="reward_updated_at"
-          p= "#{I18n.t('projects.rewards.updated_at')}: #{I18n.l(reward.updated_at.to_date)} #{@project.online_date.nil? ? '' : ((@project.online_date > reward.updated_at)? '(draft)' : '(online)')}"
-        - if reward.has_modification?
-          div class="description_version rewardVersioning#{reward.id}"
-            p= reward.last_description
-          .maximum_backers.in_time_to_confirm.clearfix
-            .updated_reward
-              span id="rewardVersioning#{reward.id}"
-                = t('projects.rewards.versions')
+        = reward.display_description
+        - if reward.maximum_backers
+          .maximum_backers.clearfix
+            - if reward.sold_out?
+              = t('reward.sold_out')
+            - else
+              = "#{t('reward.limited')}: #{reward.display_remaining}"
+          - in_time_to_confirm = reward.backers.in_time_to_confirm.count
+          - if in_time_to_confirm > 0
+            .maximum_backers.in_time_to_confirm.clearfix
+              = t('projects.rewards.backs_to_confirm', count: in_time_to_confirm)
+          .clearfix
+        - if reward.days_to_delivery.present?
+          div class="reward_deliver_at"
+            p= "#{t('projects.rewards.reward_deliver_time', prevision: reward.display_deliver_prevision)}".html_safe
+        - if current_user && current_user.admin
+          div class="reward_updated_at"
+            p= "#{I18n.t('projects.rewards.updated_at')}: #{I18n.l(reward.updated_at.to_date)} #{@project.online_date.nil? ? '' : ((@project.online_date > reward.updated_at)? '(draft)' : '(online)')}"
+          - if reward.has_modification?
+            div class="description_version rewardVersioning#{reward.id}"
+              p= reward.last_description
+            .maximum_backers.in_time_to_confirm.clearfix
+              .updated_reward
+                span id="rewardVersioning#{reward.id}"
+                  = t('projects.rewards.versions')
