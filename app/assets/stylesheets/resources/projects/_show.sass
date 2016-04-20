@@ -194,10 +194,24 @@
         margin-top: 30px
         width: 100%
         height: 400px
-        .item
-          img
-            margin: 0 auto
-            height: 400px
+        .carousel-inner
+          height: 100%
+          .item
+            vertical-align: middle
+            height: 100%
+            text-align: center
+            width: 100%
+            &:before
+              content: ''
+              display: inline-block
+              height: 100%
+              vertical-align: middle
+              margin-right: -0.25em
+            img
+              margin: 0 auto
+              max-height: 400px
+              display: inline-block
+              vertical-align: middle
         .social
           padding-top: 10px
           #facebook_share, #facebook_share iframe
@@ -471,7 +485,7 @@
         .bootstrap-form
           margin: 0px
           form
-            li
+            .inputs
               background: url($images_lbm_path + 'background_blue.png')
               +box-shadow(rgba(black, 0.45) 0px 15px 15px -15px)
         .project_picture_wrapper

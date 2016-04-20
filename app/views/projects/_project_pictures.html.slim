@@ -7,6 +7,7 @@
     = form.input :project_id, as: :hidden, :input_html => { :value => @project.id, :class => 'hidden-input-type' }
     = form.inputs do
       = form.input :picture, as: :file, required: true, hint: t('projects.show.not_uploaded')
+      = link_to t('projects.show.save_changes'), @project, class: "lbm-button"
 .bootstrap-twitter#project_pictures_container
   - @pictures.each do |picture|
   	- if  picture.picture.project_picture.url.present?
