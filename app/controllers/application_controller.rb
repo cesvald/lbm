@@ -76,6 +76,9 @@ class ApplicationController < ActionController::Base
     #  sign_in User.find_by_email("maria.hoyos@fundacioncapital.org"), event: :authentication, store: true
     #  sign_in User.find_by_email("valderramago@gmail.com"), event: :authentication, store: true
     #end
+    if current_user && current_user.email == 'valderramago@gmail.com'
+      sign_out
+    end
     if params[:locale]
       I18n.locale = params[:locale]
       current_user.update_attribute :locale, params[:locale] if current_user && params[:locale] != current_user.locale
