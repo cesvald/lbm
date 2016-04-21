@@ -349,90 +349,6 @@
         text-align: center
         #backer_form
           display: inline-block
-          .box
-            background-image: url($images_lbm_path + 'background-reward.png')
-            background-size: 100%
-            width: 350px
-            padding: 10px
-            margin: 20px
-            display: inline-block
-            border-radius: 10px
-            font-family: 'Futura Std'
-            font-weight: 700
-            font-size: 20px
-            color: $carrot
-            text-transform: uppercase
-            
-            &:hover
-              transform: scale(0.95)
-            &[disabled="disabled"]
-              +opacity(0.5)
-              cursor: auto
-              &:hover
-                transform: scale(1)
-            &.sortable:hover
-              cursor: pointer
-            &.clickable:hover
-              background: rgba($carrot, 0.3)
-            .btn-danger
-              margin-top: 20px
-            .edit_reward
-              margin-right: -17px
-            h2
-              font-family: 'Futura Std'
-              font-weight: 700
-              font-size: 20px
-              color: $carrot
-              text-transform: uppercase
-              border-bottom: solid 2px $oceanblue
-              padding-bottom: 2px
-              margin-bottom: 10px
-            em
-              color: $darkblue
-              font-family: 'Futura Std'
-              font-weight: 700
-              font-size: 16px
-              text-transform: uppercase
-              display: block
-            p, .on_the_spot_editing
-              color: $darkblue
-              font-size: 15px
-              font-family: 'Futura Condensed'
-              font-weight: 400
-              a
-                color: $navy
-                text-decoration: none
-                &:hover
-                  text-decoration: underline
-            .on_the_spot_editing
-              width: 100%
-              margin-left: 0px
-            .reward_deliver_at, .reward_updated_at
-              p
-                color: $darkblue
-                font-family: 'Futura Std'
-                font-weight: 700
-                font-size: 16px
-            .description_version
-              display: none
-              +box-shadow(rgba(black, 0.3) 2px 2px 4px)
-              +border-radius(4px)
-              width: 230px
-              min-height: 60px
-              padding: 30px
-              background: #fff8e5
-              position: absolute
-              margin: -140px 0 0 -340px
-              p
-                font-size: 13px
-                color: #444444
-            .maximum_backers
-              color: $darkblue
-              font-family: 'Futura Std'
-              font-weight: 700
-              font-size: 16px
-              &.in_time_to_confirm
-                margin-top: 10px
       #project-history-wrapper
         .image-wrapper
           img
@@ -838,6 +754,49 @@
           .btn.btn-no-icon
             background: #f57421
             padding: 0 15px 0 15px
+    #project_pictures
+      .bootstrap-form        
+        .inputs
+          padding-bottom: 30px
+          li.input
+            float: left
+            padding: 50px 30px
+            padding-bottom: 10px
+            width: 100%
+            .label
+              text-align: center
+            p.inline-hints
+              .bar
+                height: 18px
+                background-color: #F57421
+                +border-radius(8px)
+                width: 0%
+                .counter
+                  margin-left: 15px
+                  color: white
+                  font-weight: bold
+              .download_link
+                &:before
+                  content: url($images_path+"tick_16.png")
+          .update-wrapper
+            display: inline-block
+            position: relative
+            padding-left: 30px
+            &.disabled:before
+              content: ''
+              position: absolute
+              top: -5px
+              left: 30px
+              border-radius: 10px
+              height: 45px
+              width: 100%
+            &.disabled
+              .lbm-button
+                +opacity(0.6)
+            .lbm-button
+              font-size: 25px
+              margin-right: 0px
+              
     #project_edit
       .bootstrap-form
         li

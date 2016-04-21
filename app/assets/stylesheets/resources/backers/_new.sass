@@ -1,207 +1,143 @@
 [data-controller="backers"][data-namespace="projects"][data-action="new"]
   #page_content
     .container
-      .backer_content
-        +grid(16)
-        padding-top: 15px
-        padding-bottom: 40px
-        .title
-          +grid(16)
-          +alpha
-          width: 600px
-          padding-bottom: 40px
-          h1
-            font-size: 24px
-            padding: 5px 0
-          h2
-            color: $mediumgray
-            font-size: 14px
-            line-height: 20px
-            padding-bottom: 20px
-            border-bottom: 1px dotted #CCCCCC
-        #back_options
-          +grid(11)
-          +alpha
-          width: 600px
-          #backer_form
-            .simbol
-              float: left
-              width: 30px
-              margin-top: -50px
-              p
-                color: $carrot
-                font-size: 20px
-            .inline-hints
-              font-size: 14px
-              width: 180px
-              float: right
-              line-height: 18px
-              margin-top: 13px
-              margin-right: 7px
-            label
-              font-size: 18px
-              display: block
-              margin-bottom: 12px
-            input[type="text"]
-              height: 55px
-              width: 300px
-              font-size: 38px
-              padding-right: 20px
-              padding-left: 20px
+      #project_review
+        padding-top: 30px
+        padding-bottom: 30px
+        text-align: center
+        .welcome-message-wrapper
+          display: inline-block
+          padding: 0 50px
+          padding-bottom: 25px
+          .welcome-icon
+            width: 44.7px
+            vertical-align: sub
+          .welcome-message
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 27px
+            color: $darkblue
+            display: inline-block
+            margin-left: 18px
+            width: 564px
+            text-align: center
+            a
+              font-family: 'Futura Std'
               font-weight: 700
-              font-size: 28px
-              color: #666666
-              margin-left: 50px
-              @include border-radius(10px)
-            .alert-info
-              margin-top: 20px
-              label
-                font-weight: 700
-                input
-                  display: inline
-                  margin-right: 10px
-                  vertical-align: top
-              .inline-hints
-                strong
-                  font-weight: 700
-            #backer_reward_input
-              padding-left: 0 !important
-              legend
-                float: left
-                border-bottom: dotted 1px #ccc
-                margin-top: 40px
-                background: url($images_path+'gift.png') 10px top no-repeat
-                label
-                  padding-left: 50px
-                  color: $mediumgray
+              color: $carrot
+        .project-info-wrapper
+          display: table
+          position: relative
+          left: 50%
+          margin-left: -390px
+          padding: 50px 0px
+          padding-bottom: 0px
+          border-top: solid 2px $mediumgray
+          .project_info
+            display: table-row
+            .review-wrapper
+              width: 300px
+              display: table-cell
+              vertical-align: middle
+              #review_text
+                .review_content 
+                  font-family: 'Futura Std'
+                  font-weight: 200
                   font-size: 22px
-                  padding-top: 7px
-                  margin-bottom: 12px
-              ol
-                float: left
-                li.choice
-                  padding: 20px 10px 10px 30px
-                  margin-bottom: 25px
-                  margin-right: 10px
-                  @include border-radius(10px)
-                  border: solid 1px #ccc
-                  width: 500px
-                  background: #FCFCFC
-                  float: right
-                  cursor: pointer
-                  label
-                    margin-bottom: 5px
-                    input[type="radio"]
-                      margin-left: -64px
-                      margin-top: 12px
-                      float: left
-                  &.selected
-                    background: rgba($carrot, 0.2)
-                  .reward_minimum_value
-                    color: #666666
-                    font-size: 24px
-                    padding-bottom: 5px
-                  .reward_description
-                    font-size: 14px
-                    line-height: 18px
-            #backer_credits_input
-              .inline-hints
-                float: none
-                display: block
-                width: 80%
-            #backer_anonymous_input
-              margin: 0px
-              font-size: 14px
-              label
-                font-size: 16px
-                font-weight: 700
-                float: right
-                padding: 15px 16px
-                width: 510px
-                margin-right: 10px
-                background: #E8F8FD
-                +border-radius(10px)
-              input
-                display: inline
-                margin-right: 10px
-                vertical-align: top
-        .alert
-          background: #E8F8FD
-          +border-radius(10px)
-          color: $mediumgray
-          border: none
-          font-size: 14px
-          line-height: 18px
-          margin-bottom: 20px
-          margin-left: 48px
-          margin-top: 34px
-          padding: 20px 40px
-          width: 462px
-        #backer_submit
-          width: 300px
-          height: 55px
-          border-radius: 15px
-          @include box-shadow(0px)
-          margin: 12px auto 0px
-          float: none
-          border: none
-          display: block
-          background: $carrot
-          font-size: 15px
-          text-transform: uppercase
-        
-        #back_info
-          +grid(5)
-          float: right
-          margin-top: -80px
-          +omega          
-          .project_name
-            font-size: 18px
-            margin-bottom: 15px
-            a
-              color: $mediumgray              
-              text-decoration: none
-              @include transition(all, 0.5s)
-              &:hover
-                color: $darkcarrot
-          .project_owner
-            padding-top: 12px
-            padding-bottom: 8px
-            font-size: 14px
-            a
-              color: $carrot
-              text-decoration: none
-              @include transition(all, 0.5s)
-              &:hover
-                color: $darkcarrot
-          .project_expires_at
-            font-size: 14px
-            padding-bottom: 20px
-        .back_faq
-          margin-bottom: 20px
+                  color: $oceanblue
+                  strong
+                    font-size: 18px
+                    font-weight: bold
+                .reward
+                  font-family: 'Futura LT'
+                  font-weight: 400
+                  font-size: 16px
+                  color: $darkgray
+                  background: url($images_lbm_path+"background_blue.png")
+                  margin-top: 20px
+                  padding: 10px
+                  height: 198px
+          #project_image
+            display: table-cell
+            margin-right: 20px
+            height: 280px
+            width: 460px
+            padding-left: 30px
+        .review-title
+          text-align: center
+          margin-top: 20px
+          h1
+            background: $oceanblue
+            border-radius: 10px
+            padding: 5px 20px
+            color: white
+            display: inline-block
+            font-family: 'Futura LT'
+            font-weight: 400
+            font-size: 32px
+            text-transform: uppercase
           h2
-            border-bottom: 1px dotted #CCCCCC
+            color: $carrot
             font-size: 18px
-            margin-bottom: 20px
-            padding-bottom: 8px
-            margin-top: 30px
-          h3
-            font-size: 14px
-            padding-bottom: 15px
-            text-decoration: none
-            cursor: pointer
-            line-height: 21px
-            padding-left: 16px
-            @include transition(all, 0.5s)
-            background: url($images_path+'bullet-green.png') left 5px no-repeat 
-            &:hover
-              color: $carrot
-          p
-            padding-bottom: 30px
-            line-height: 18px
+            font-family: 'Futura LT'
+            font-weight: 400
+            display: block
+            margin-top: 5px
+        #credits_notice
+          font-size: 16px
+          strong
+            font-weight: 700
+            font-size: 20px
+      #new_backer
+        text-align: center
+        background: url($images_lbm_path+"background_blue.png")
+        padding: 20px 0px
+        .value-label
+          font-family: 'Futura Std'
+          font-weight: 200
+          font-size: 22px
+          color: $darkblue
+        #value-wrapper
+          margin-top: -15px
+          .puzzle-icon
+            width: 50px
+            fill: $carrot
+            transform: rotate(-30deg)
+            position: relative
+            left: -40px
+          #money-simbol
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 19px
+            color: $darkgray
+          #backer_value
+            width: 235px
+            background-color: white
+            margin: 0 15px
+          #value-hint
+            font-family: 'Futura LT'
+            font-weight: 400
             font-size: 12px
-            padding-left: 17px
-            color: rgba(black, 0.6)
-            a
-            &:hover
-              color: $carrot
+            color: $darkgray
+            text-align: left
+            vertical-align: middle
+            width: 158px
+            display: inline-block
+      #rewards-title
+        font-family: 'Futura Std'
+        font-weight: 200
+        font-size: 30px
+        color: $darkblue
+        margin-top: 30px
+        margin-bottom: 10px
+        text-align: center
+      #backer-submit
+        margin-top: 40px
+        padding: 20px 50px
+        &:disabled
+          +opacity(0.5)
+          cursor: default
+        &:disabled:hover
+          color: white
+          background: $oceanblue
+

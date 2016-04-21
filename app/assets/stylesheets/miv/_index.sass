@@ -12,6 +12,7 @@
 @import projects
 @import projects_land
 @import channels
+@import rewards
 @import all_allies
 @import embed
 @import tabs
@@ -108,13 +109,19 @@ input[type='submit'].lbm-button, a.lbm-button
   border-radius: 10px
   border: solid 1px $oceanblue
   display: inline
-  margin-right: 50px
   cursor: pointer
   transition: all 0.3s ease
   &:hover
     color: $oceanblue
     background-color: white
     text-decoration: none
+
+.centered_page_width
+  width: $page_width
+  position: relative
+  left: 50%
+  margin-left: $less_half_width
+  text-align: center
 
 .facebook_start
   margin-bottom: 40px !important

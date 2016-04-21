@@ -1,0 +1,88 @@
+.reward.box
+  background-image: url($images_lbm_path + 'background-reward.png')
+  background-size: 100%
+  width: 350px
+  padding: 10px
+  margin: 20px
+  display: inline-block
+  border-radius: 10px
+  font-family: 'Futura Std'
+  font-weight: 700
+  font-size: 20px
+  color: $carrot
+  text-align: left
+  border: none
+  cursor: pointer
+  min-height: 186px
+  vertical-align: top
+  +box-shadow(rgba(black, 0.4) 0px 0px 10px 0px)
+  +transition(box-shadow, 0.3s)
+  &.selected
+    +box-shadow(rgba($oceanblue, 1) 0px 0px 15px 0px)
+  &.button
+    min-height: auto
+  &.button:hover
+    transform: scale(0.95)
+  &.button[disabled="disabled"]
+    +opacity(0.5)
+    cursor: auto
+    &:hover
+      transform: scale(1)
+  h2
+    font-family: 'Futura Std'
+    font-weight: 700
+    font-size: 20px
+    color: $carrot
+    text-transform: uppercase
+    border-bottom: solid 2px $oceanblue
+    padding-bottom: 2px
+    margin-bottom: 10px
+  em
+    color: $darkblue
+    font-family: 'Futura Std'
+    font-weight: 700
+    font-size: 16px
+    text-transform: uppercase
+    display: block
+  .description-wrapper
+    height: 88px
+    overflow-y: scroll
+  p, .on_the_spot_editing
+    color: $darkblue
+    font-size: 15px
+    font-family: 'Futura Condensed'
+    font-weight: 400
+    a
+      color: $navy
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  .on_the_spot_editing
+    width: 100%
+    margin-left: 0px
+  .reward_deliver_at, .reward_updated_at
+    p
+      color: $darkblue
+      font-family: 'Futura Std'
+      font-weight: 700
+      font-size: 16px
+  .description_version
+    display: none
+    +box-shadow(rgba(black, 0.3) 2px 2px 4px)
+    +border-radius(4px)
+    width: 230px
+    min-height: 60px
+    padding: 30px
+    background: #fff8e5
+    position: absolute
+    margin: -140px 0 0 -340px
+    p
+      font-size: 13px
+      color: #444444
+  .maximum_backers
+    color: $darkblue
+    font-family: 'Futura Std'
+    font-weight: 700
+    font-size: 16px
+    &.in_time_to_confirm
+      margin-top: 10px

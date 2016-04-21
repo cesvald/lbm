@@ -5,7 +5,7 @@
       = form.input :value, as: :hidden, required: false, label: false, input_html: {value: reward.minimum_value}
       = hidden_field_tag '[backer][reward_id]', reward.id
       = form.input :anonymous, as: :hidden, value: false
-      = form.submit t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe, disabled: ((not (@project.online? && @project.in_time?)) || reward.sold_out?), class: 'box', id: "backer_submit"
+      = button_tag t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe, disabled: ((not (@project.online? && @project.in_time?)) || reward.sold_out?), class: 'box reward button', id: "backer_submit"
 
     
 /*

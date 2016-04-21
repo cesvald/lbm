@@ -1,56 +1,107 @@
+
 #page_content
   .container
-    .backer_content
-      .title
-        h1= t('.header.title')
-        h2= t('.header.subtitle')
-      #back_options.bootstrap-form
-        = semantic_form_for @backer, url: @create_url, html: { id: 'backer_form' } do |form|
-          = form.inputs do
-            = hidden_field_tag 'credits', ("%0.0f" % current_user.credits)
-            = form.label :value, t('formtastic.labels.backer.value')
-            - if current_user.credits >= 10
-              .bootstrap-alert
-                .alert.alert-info
-                  = form.input :credits, hint: t('formtastic.hints.backer.credits', credits: current_user.display_credits).html_safe
-              .clearfix
-            = form.input :value, required: false, as: :string, label: false,  input_html: { autocomplete: 'off' }
-            .simbol
-              p COP
-            - @rewards[0].id = 0
-            script
-              |var rewards = new Array();
-              - @rewards.each do |reward|
-                |rewards[#{reward.id || 0}] = #{reward.minimum_value};
-            = form.input :reward, as: :radio, collection: @rewards
-            = form.input :anonymous
-            #anonymous_warning.important.hide
-              .bootstrap-alert
-                .alert= t('.anonymous_warning_html')
-          = form.actions do
-            .bootstrap-twitter
-              = form.submit t('.submit'), disabled: true, class: 'btn btn-primary btn-large', id: "backer_submit"
-      #back_info
-        #project_info
-          .project_name= link_to @project.name, project_by_slug_path(permalink: @project.permalink)
-          = image_tag @project.display_image, alt: @project.name, class: 'project_image', width: 280
-          .project_owner por #{link_to @project.user.display_name, user_path(@project.user)}
-          .project_expires_at #{@project.time_to_go[:time]} #{@project.time_to_go[:unit]} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
+    #project_review    
+      .welcome-message-wrapper
+        = image_tag "lbm/hand-icon.png", class: "welcome-icon"
+        h1.welcome-message= t('projects.backers.create.you_are_about_html', link: link_to(@project.name, project_by_slug_path(permalink: @project.permalink)))
+      .project-info-wrapper
+        .project_info
+          .review-wrapper
+            #review_text
+              .reward
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacus erat, efficitur at condimentum eu, ultrices id metus. Praesent at aliquam quam. Morbi nunc massa, interdum eget libero ac, tincidunt bibendum elit. Pellentesque accumsan felis eu 
+          = image_tag @project.display_image, id: 'project_image', alt: @project.name, width: '250px'
+    .bootstrap-form
+      = form_for @backer, url: @create_url, id: 'backer_form' do |form|
+        = hidden_field_tag 'credits', ("%0.0f" % current_user.credits)
+        = form.hidden_field :reward_id, value: 0
+        = form.label :value, t('formtastic.labels.backer.value'), class: 'value-label'
+        - if current_user.credits >= 10
+          .bootstrap-alert
+            .alert.alert-info
+              = form.text_field :credits
+          .clearfix
+        #value-wrapper
+          = embedded_svg "lbm/puzzle-icon.svg", class: "puzzle-icon"
+          span#money-simbol COP
+          = form.text_field :value, required: false, autocomplete: 'off', class: 'lbm-input'
+          span#value-hint = t('formtastic.hints.backer.value')
+        #rewards-title= t('projects.form.rewards_title')
+        #rewards.centered_page_width
+          = render partial:'rewards/reward', collection: @rewards
+        = form.submit t('projects.backers.new.continue'), class:'lbm-button', disabled: true, id: 'backer-submit'
+      /*
+        .simbol
+          p COP
+        - @rewards[0].id = 0
+        script
+          |var rewards = new Array();
+          - @rewards.each do |reward|
+            |rewards[#{reward.id || 0}] = #{reward.minimum_value};
+        = form.input :reward, as: :radio, collection: @rewards
+        = form.input :anonymous
+        #anonymous_warning.important.hide
+          .bootstrap-alert
+            .alert= t('.anonymous_warning_html')
+      /*
+        = form.actions do
+          .bootstrap-twitter
+            = form.submit t('.submit'), disabled: true, class: 'btn btn-primary btn-large', id: "backer_submit"
+/*
+  #page_content
+    .container
+      .backer_content
+        .title
+          h1= t('.header.title')
+          h2= t('.header.subtitle')
+        #back_options.bootstrap-form
+          = semantic_form_for @backer, url: @create_url, html: { id: 'backer_form' } do |form|
+            = form.inputs do
+              = hidden_field_tag 'credits', ("%0.0f" % current_user.credits)
+              = form.label :value, t('formtastic.labels.backer.value')
+              - if current_user.credits >= 10
+                .bootstrap-alert
+                  .alert.alert-info
+                    = form.input :credits, hint: t('formtastic.hints.backer.credits', credits: current_user.display_credits).html_safe
+                .clearfix
+              = form.input :value, required: false, as: :string, label: false,  input_html: { autocomplete: 'off' }
+              .simbol
+                p COP
+              - @rewards[0].id = 0
+              script
+                |var rewards = new Array();
+                - @rewards.each do |reward|
+                  |rewards[#{reward.id || 0}] = #{reward.minimum_value};
+              = form.input :reward, as: :radio, collection: @rewards
+              = form.input :anonymous
+              #anonymous_warning.important.hide
+                .bootstrap-alert
+                  .alert= t('.anonymous_warning_html')
+            = form.actions do
+              .bootstrap-twitter
+                = form.submit t('.submit'), disabled: true, class: 'btn btn-primary btn-large', id: "backer_submit"
+        #back_info
+          #project_info
+            .project_name= link_to @project.name, project_by_slug_path(permalink: @project.permalink)
+            = image_tag @project.display_image, alt: @project.name, class: 'project_image', width: 280
+            .project_owner por #{link_to @project.user.display_name, user_path(@project.user)}
+            .project_expires_at #{@project.time_to_go[:time]} #{@project.time_to_go[:unit]} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
+          .clearfix
+          .back_faq
+            h2= t('.back_faq.title')
+            h3= t('.back_faq.question_1')
+            p= t('.back_faq.answer_1_html')
+            h3= t('.back_faq.question_2')
+            p= t('.back_faq.answer_2_html', goal: @project.display_goal, expires_at: @project.display_expires_at)
+            h3= t('.back_faq.question_3')
+            p= t('.back_faq.answer_3_html')
+            h3= t('.back_faq.question_4')
+            p= t('.back_faq.answer_4_html', link: link_to(t('credits.title'), user_path(current_user, anchor: :credits), :target => :_blank))
+            h3= t('.back_faq.question_5')
+            p= t('.back_faq.answer_5_html', link: link_to(@project.user.display_name, user_path(@project.user)))
         .clearfix
-        .back_faq
-          h2= t('.back_faq.title')
-          h3= t('.back_faq.question_1')
-          p= t('.back_faq.answer_1_html')
-          h3= t('.back_faq.question_2')
-          p= t('.back_faq.answer_2_html', goal: @project.display_goal, expires_at: @project.display_expires_at)
-          h3= t('.back_faq.question_3')
-          p= t('.back_faq.answer_3_html')
-          h3= t('.back_faq.question_4')
-          p= t('.back_faq.answer_4_html', link: link_to(t('credits.title'), user_path(current_user, anchor: :credits), :target => :_blank))
-          h3= t('.back_faq.question_5')
-          p= t('.back_faq.answer_5_html', link: link_to(@project.user.display_name, user_path(@project.user)))
       .clearfix
-    .clearfix
 
-= content_for :mouseflow do
-  = render 'layouts/mouseflow'
+  = content_for :mouseflow do
+    = render 'layouts/mouseflow'

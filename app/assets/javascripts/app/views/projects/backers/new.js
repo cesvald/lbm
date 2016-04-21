@@ -1,5 +1,7 @@
 CATARSE.BackersNewView = Backbone.View.extend({
+  rewards: [],
   initialize: function() {
+    var self = this
     var user_set = false
     $('input#backer_credits').change(function(event){
       if(event.currentTarget.checked) {
@@ -18,9 +20,9 @@ CATARSE.BackersNewView = Backbone.View.extend({
       if(!reward_ok())
         all_ok = false
       if(all_ok){
-        $('#backer_submit').attr('disabled', false)
+        $('#backer-submit').attr('disabled', false)
       } else {
-        $('#backer_submit').attr('disabled', true)
+        $('#backer-submit').attr('disabled', true)
       }
     }
     check_credits = function(){
@@ -34,19 +36,12 @@ CATARSE.BackersNewView = Backbone.View.extend({
       }
     }
     reward_ok = function(){
-      if(!$('input[type=radio]:checked').val())
-        return false
-      var reward = $('input[type=radio]:checked')
-      var id = /^backer_reward_id_(\d+)$/.exec(reward.attr('id'))
-      id = parseFloat(id[1])
-      var minimum = rewards[id]
-      if(minimum){
-        var value = $('#backer_value').val()
-        if(!(/^(\d+)$/.test(value)) || (parseInt(value) < minimum)){
-          return false
-        }
+      if($('#backer_reward_id').val() == $('.reward.selected').data('id')){
+        return true
       }
-      return true
+      else {
+        return false
+      }
     }
     value_ok = function(){
       var value = $('#backer_value').val()
@@ -59,43 +54,54 @@ CATARSE.BackersNewView = Backbone.View.extend({
         return false
       }
     }
-    $('input[type=radio]').click(function(){
-      var id = /^backer_reward_id_(\d+)$/.exec($(this).attr('id'))
-      id = parseFloat(id[1])
-      var minimum = rewards[id]
-      if( (minimum > $('#backer_value').val()) || !user_set){
-        $('#backer_value').val(parseInt(minimum))
+
+    $('.reward.available').each(function(){
+      self.rewards.push({id: $(this).data('id'), value: parseInt($(this).data('min-value'))})
+    })
+
+    $('.reward.available').click(function(){
+      var id = parseInt($(this).data('id'))
+      var minimum = parseInt($(this).data('min-value'))
+      if( (minimum > $('#backer_value').val()) || !user_set && id != 0){
+        $('#backer_value').val(minimum)
         user_set = false
       }
-      $('li.radio ol li').removeClass('selected')
-      $(this).parent().parent().addClass('selected')
+      $('#backer_reward_id').val(id)
+      $('.selected').removeClass('selected')
+      $(this).addClass('selected')
       everything_ok()
     })
+
     $('#backer_value').keyup(function(){
       user_set = true
-      var reward = $('input[type=radio]:checked')
-      if(reward.val()){
-        var id = /^backer_reward_id_(\d+)$/.exec(reward.attr('id'))
-        id = parseFloat(id[1])
-        var minimum = rewards[id]
-        if(minimum){
-          var value = $('#backer_value').val()
-          if(!(/^(\d+)$/.test(value)) || (parseInt(value) < minimum)){
-            $('#backer_reward_id_0').attr("checked", true)
-            $('li.choice').removeClass('selected')
-            $('#backer_reward_id_0').parent().parent().addClass('selected')
-          }
+      var value = parseInt($('#backer_value').val())
+      var found = false
+      for(i = self.rewards.length - 1; i >= 0 && !found; i--){
+        var reward = self.rewards[i]
+        console.log("try " + i)
+        console.log(reward.value)
+        console.log(value)
+        if(value >= reward.value){
+          $('.reward.selected').removeClass('selected')
+          $('.reward[data-id="' +reward.id+ '"]').addClass('selected')
+          $('#backer_reward_id').val(reward.id)
+          found = true
         }
       }
       everything_ok()
     })
+
+    $('.back_faq h3').click(function(event){
+      $(event.target).next('p').slideToggle('slow');
+    });
+
     $('#backer_value').numeric(false)
-    $('.sold_out').parent().find('input[type=radio]').attr('disabled', true)
-    if($('input[type=radio]:checked').length == 0)
-      $('#backer_reward_id_0').attr("checked", true)
+    
     if($('#backer_value').val())
       everything_ok()
+    
     $('#backer_value').focus()
+    
     $('#backer_anonymous').click(function(){
       if($(this).is(':checked')){
         $('#anonymous_warning').slideDown(200)
@@ -103,14 +109,6 @@ CATARSE.BackersNewView = Backbone.View.extend({
         $('#anonymous_warning').slideUp(200)
       }
     })
-    $('input[type=radio]:checked').parent().parent().addClass('selected')
-
-    // Colapse all faq texts
-    $('.back_faq p').hide();
-
-    $('.back_faq h3').click(function(event){
-      $(event.target).next('p').slideToggle('slow');
-    });
   }
 })
 

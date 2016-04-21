@@ -34,7 +34,15 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
       (function(item){
         item.fileuploadDone({
           dataType: 'script',
-          formObject: item
+          formObject: item,
+          callbacks: {
+            add: function(){
+              $('#project_pictures .update-wrapper').addClass('disabled')
+            },
+            done: function(){
+              $('#project_pictures .update-wrapper').removeClass('disabled')
+            }
+          }
         })
       })($(this))
     });

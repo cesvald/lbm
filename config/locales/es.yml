@@ -1,7 +1,4 @@
 es:
-  locale:
-    es: Español
-    en: Ingles
   failure_title: "Bienvenido a LittleBigMoney"
   uservoice_gadget:
     user:
@@ -25,13 +22,13 @@ es:
       submit: Reestablecer
     welcome: "Ingresa a tu cuenta"
     welcome_phrase: "Pequeños aportes que generan grandes resultados"
-    submit: Iniciar sesión
-    register: Regístrate aquí
+    submit: "Iniciar sesión"
+    register: "Regístrate aquí"
     no_account_html: "¿Eres nuevo en LittleBigMoney? <strong>%{link}</strong>"
     remember_me: Recordarme
     submit_facebook: "Inicia sesión desde facebook"
     placeholder:
-      email: Correo electrónico
+      email: "Correo electrónico"
       password: Contraseña
   backer_report_to_project_owner:
     reward_description: "Descripción de la recompensa"
@@ -72,7 +69,7 @@ es:
     backers:
       subtitle: Colaboradores
     goal:
-      subtitle: "Recaudados de %{total}"
+      subtitle: "De %{total} solicitados"
   project_by: "Proyecto por"
   tell_about_this_back: "Cuenta al mundo sobre tu apoyo!"
   certify_this_donation: "Certificar esta colaboración"
@@ -95,14 +92,14 @@ es:
       funded_projects: "Proyectos Exitosos"
       active_projects: "Proyectos activos"
     contact:
-      address_label: "Dirección"
+      address_label: Dirección
       address: "Calle 102 # 45A-36 Bogotá, Colombia"
-      tel_label: "Tel"
+      tel_label: Tel
       tel: "+ 57 1 602 5530"
-      schedule_label: "Horario"
+      schedule_label: Horario
       schedule: "L-V de 9:00 am a 6:00 pm"
-      email_label: "Correo"
-      email: "littlebigmoney@fundacioncapital.org"
+      email_label: Correo
+      email: littlebigmoney@fundacioncapital.org
     links:
       how_works: "¿Cómo funciona?"
       faq: F.A.Q./Ayuda
@@ -124,7 +121,6 @@ es:
       successful: "Explora proyectos exitosos"
       near: "Explora proyectos cercanos a ti"
       channel_projects: "Conozca el canal %{name}"
-      view_all: "Ver Todos"
   sidebar:
     titles:
       blog: LittleBig-Blog
@@ -151,12 +147,6 @@ es:
       title: "Con el <p class='allies_text'>apoyo de</p>"
     channels:
       title: "Conoce nuestros <span class='font_futuraLT_medium'> Canales </span>"
-    sub_channels:
-      title: "Conoce nuestros Sub-<span class='font_futuraLT_medium'>Canales</span>"
-    other_channels:
-      title: "Descubre otros <span class='font_futuraLT_medium'>Canales</span>"
-    projects_sub_channel:
-      title: "Projectos <span class='font_futuraLT_medium'>de %{channel}</span>"
   accept_terms_html: "He leído y estoy de acuerdo con los %{link}."
   activerecord:
     errors:
@@ -337,7 +327,7 @@ es:
     hints:
       backer:
         credits: "Tienes <strong>%{credits}</strong> en créditos y puedes apoyar hasta este valor sim necesitae realizar un nuevo pago."
-        value: "Tu escoges el valor ;) a partir de 25.000 COP está genial!"
+        value: "Tu escoges el valor a partir de 25.000 COP está genial!"
       project:
         video_url_edit: "Pega aquí la URL de tu video de Vimeo o Youtube."
         about: "Cuéntanos un poco sobre tu historia y lo que será de ella al terminar. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
@@ -373,7 +363,7 @@ es:
       project:
         permalink: "URL del proyecto"
         online_days: "Días online"
-        category: Categoría de tu proyecto
+        category: "Categoría de tu proyecto"
         about: "¿Quién eres, que haces y cual tu experiencia en el negocio?"
         history: "¿Cuál es la historia de tu emprendimiento?"
         cause: "¿Cuál es la causa que mueve tu proyecto? ¿Cuál es el problema que busca resolver?"
@@ -392,7 +382,7 @@ es:
         rut_file: RUT
         comercial_file: "Cámara de Comercio"
         bank_certificate_file: "Certificación Bancaria"
-        banking_data_file: "Formato de datos bancarios"
+        banking_format_file: ~
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
@@ -425,7 +415,7 @@ es:
       profile: "Mi perfil"
       account: "Tu cuenta"
     user:
-      logout: Cerrar Sesión
+      logout: "Cerrar Sesión"
       my_credits: "Mis créditos "
   not_informed: "No informado"
   notify_locale: "Identificamos tu idioma por el buscador. Si prefieres otro por favor, haz clic en la bandera que prefieres."
@@ -510,7 +500,7 @@ es:
         successful: "Este proyecto fue financiado con éxito el %{date}"
         waiting_funds: "Esperando confirmación de los pagos para saber si el proyecto fue financiado."
         draft: "Este proyecto esta en borrador y no esta disponible para colaboraciones aún."
-      reached_of: alcanzado
+      reached_of: Alcanzado
       submit: "Quiero aportar"
     backer:
       anonymous_backer: "Colaborador anónimo"
@@ -582,6 +572,7 @@ es:
         submit: "Revisar y realizar el pago"
         title: "Colabora con %{name}"
         anonymous_warning_html: "<strong>¿Seguro deseas que tu aporte sea anónimo?</strong> Dejar tu aporte público aumenta tu reputación y suma en nuestro rango de colaboradores. <br/><br/>Por otra parte, el valor de tu aporte no será compartido con nadie más que el dueño del proyecto. Sólo el administrador podrá acceder a esta información, con independencia de que tu aporte sea público o anónimo."
+        continue: "Continuar"
         back_faq:
           title: "Quiero aportar y lo quiero hacer ahora"
           question_1: "¿Cómo puedo aportar a este proyecto?"
@@ -692,7 +683,7 @@ es:
       with_city: "Un proyecto en %{category_name}, en %{city} por %{author}"
     project_updates:
       empty: "Aún no te tenemos novedades, pero muy pronto las habrán. No te las pierdas!"
-      submit: "Enviar actualización"
+      submit: "Enviar actualización…"
       comment: "Actualizar texto"
       exclusive: "Sólo visible para colaboradores"
       title: "Título para la actualización"
@@ -774,6 +765,7 @@ es:
       pictures:
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"
+        save_changes: "Save Changes"
       documents:
         almost_done: "Casi listo"
       reports:
@@ -802,7 +794,7 @@ es:
     new:
       subtitle: "Es la hora de hacerlo realidad! Queremos saber del potencial de tu empresa y de tu proyecto"
       title: "¡AHORA, ENVÍA TU PROYECTO!"
-      legend_title: "TEN EN CUENTA QUE:"
+      leyend_title: ~
       introduction_html: "Completa el siguiente formulario, danos buena información! Entre más información recibimos <br/>mejor completamos tu proyecto y más rápido irá al irá en la plataforma."
       permalink_important: "Trata de no usar guión o subrayado"
       permalink_hint: "Hazlo simple. Tus colaboradores deben poder recordar la URL de tu proyecto ; )"
@@ -867,12 +859,6 @@ es:
       site_title: Registro
       submit: Registro
       title: "Regístrate usando tu email"
-      welcome_phrase: "¡Súmate a esta gran comunidad!"
-      account: "¿Ya tienes cuenta en LittleBigMoney? <strong>%{link}</strong>"
-      login: "Ingresa aquí"
-      placeholder:
-        name: "Usuario"
-        password_confirmation: "Confirmación contraseña"
   remaining_plural: restantes
   remaining_singular: restante
   remove: Borrar
@@ -1007,11 +993,11 @@ es:
       description_paragraph_2: "Ya sea aportando o recibiendo puedes contribuir con el crecimiento de nuestro país."
       send_project_title: "¡Lo que debes tener en cuenta para enviar proyectos!"
       project_send:
-        phrase_1: "Ideas Creativas y Realizables"
+        phrase_1: "Ideas creativas y realizables"
         phrase_2: "Impacto y beneficios colectivos"
         phrase_3: "Recompensas no financieras"
         phrase_4: "No apoyamos proyectos personales o sin resultados claros"
-        phrase_5: "Ideas Creativas y Realizables"
+        phrase_5: "Ideas creativas y realizables"
       network_title: "Utiliza tus redes personales para movilizar tu proyecto"
       network_description: "Trabaja a diario por promocionar tu proyecto en todas las redes sociales <span class='color-carrot'>(facebook, instagram, twitter, etc)</span> y comparte tus ideas con amigos y conocidos para poder así alcanzar tu meta. No pierdas de vista esta recomendación, la promoción es vital para alcanzar tu meta."
       budget_title: "Uso de los recursos recaudados"
@@ -1101,135 +1087,135 @@ es:
       text_eight: ""
     tools:
       for_backers:
-        description: 'Descripción de las herramientas para donantes'
+        description: "Descripción de las herramientas para donantes"
         tool_1:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Antes de Subir tu proyecto.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_3:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_4:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_5:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_6:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
       about_project:
-        description: 'Descripción de las herramientas sobre projectos'
+        description: "Descripción de las herramientas sobre projectos"
         tool_1:
-          title: 'Todo sobre tu campaña.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo sobre tu campaña.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       after_project:
-        description: 'Descripción de las herramientas después de tu campaña'
+        description: "Descripción de las herramientas después de tu campaña"
         tool_1:
-          title: 'Después de tu campaña.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Después de tu campaña.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       venture_course:
-        description: 'Descripción de las herramientas del curso en empredimiento'
+        description: "Descripción de las herramientas del curso en empredimiento"
         tool_1:
-          title: 'Curso en emprendimiento.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Curso en emprendimiento.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       about_crowdfunding:
-        description: 'Descripción de las herramientas todo sobre CrowdFunding'
+        description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
-          title: 'Todo sobre CrowdFunding.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo sobre CrowdFunding.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
     privacy:
       title: "Políticas de Privacidad"
     terms:
@@ -1253,7 +1239,7 @@ es:
         created_projects: "Proyectos creados"
         comments: Comentarios
         credits: Créditos
-        settings: Información Personal
+        settings: "Información Personal"
         unsubscribes: Notificaciones
       user_social:
         email: "Envíame un correo"
@@ -1269,13 +1255,14 @@ es:
       your_reward: "Tu recompensa"
       project_owner: "Proyecto por"
       project_name: "Nombre del proyecto"
-      cpf_file: "Cédula"
-      state_inscription_file: "RUT"
+      cpf_file: Cédula
+      state_inscription_file: RUT
       user_id: "Id del Usuario"
       certify_request:
         submit: "Certificar colaboraciones"
         hint: "Seleccione al menos una colaboración para certificar"
         title: "Solicitud de certificado de colaboraciones"
+        description: ~
         description2: "Valide o complete la siguiente información de su perfil, es necesaria para enviar la solicitud"
         description3: "Es necesario un archivo de su cédula y otro del rut para validar su certificado"
         backs_to_certify: "Colaboraciones a certificar"

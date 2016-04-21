@@ -42,6 +42,7 @@ $.fn.fileuploadDone = function (attrs) {
   this.fileupload({
       dataType: dataType,
       add: function (e, data) {
+        if('callbacks' in attrs && 'add' in attrs.callbacks) attrs.callbacks.add();
         data.context = $('#progress-bar').clone().removeClass('hide');
         attrs.formObject.find('.inline-hints').html(data.context)
         data.submit();

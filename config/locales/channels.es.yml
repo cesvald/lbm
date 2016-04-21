@@ -1,7 +1,7 @@
 es:
   channel:
-    pledged: "Recaudado"
-    projects: "Campañas"
+    pledged: Recaudado
+    projects: Campañas
   channels_subscribers:
     created: "Ahora estas siguiendo el canal"
     deleted: "Yo no estas siguiendo este canal"

@@ -72,6 +72,7 @@ en:
       subtitle: "Of %{total} requested"
   project_by: "project by"
   tell_about_this_back: "Tell the world about your support!"
+  certify_this_donation: ~
   share_my_backs: "Check out the project! "
   tell_about_this_project: "Tell the world about your project!"
   share_my_projects: "Check out the project! "
@@ -91,14 +92,14 @@ en:
       funded_projects: "Successful projects"
       active_projects: "Online projects"
     contact:
-      address_label: "Address"
+      address_label: Address
       address: "Calle 102 # 45A-36 Bogotá, Colombia"
-      tel_label: "Tel"
+      tel_label: Tel
       tel: "+ 57 1 602 5530"
-      schedule_label: "Schedule"
+      schedule_label: Schedule
       schedule: "L-V from 9:00 am to 6:00 pm"
-      email_label: "Email"
-      email: "littlebigmoney@fundacioncapital.org"
+      email_label: Email
+      email: littlebigmoney@fundacioncapital.org
     links:
       how_works: "How does it work?"
       faq: F.A.Q./Help
@@ -163,6 +164,8 @@ en:
         update: "Receive project updates"
       backer:
         value: Value
+        confirmed_at: ~
+        key: ~
       project:
         category: Category
         expires_at: Deadline
@@ -379,8 +382,7 @@ en:
         rut_file: ~
         comercial_file: ~
         bank_certificate_file: ~
-        agreement_file: ~
-        disbursement_request_file: ~
+        banking_format_file: ~
         more_links: "List of project related links"
         first_backers: "List of people who could be your first supporters"
         how_know: "How did you get to know LittleBigMoney?"
@@ -498,7 +500,7 @@ en:
         successful: "This project was successful and was funded on %{date}"
         waiting_funds: "Waiting for payment confirmation to know if the project will be supported."
         draft: "This project is in draft mode and is not open to supporters yet."
-      reached_of: reached
+      reached_of: Reached
       submit: "I want to support"
     backer:
       anonymous_backer: "Anonymous supporter"
@@ -570,6 +572,7 @@ en:
         submit: "Review and proceed to checkout"
         title: "Support %{name}"
         anonymous_warning_html: "<strong>Are you sure you want your support to be anonymous?</strong>Showing your support in public increases your reputation and adds to our contributor's range. <br/><br/>Moreover, the value of your support will not be shared with anyone but the owner of the project. Only the administrator can access this information regardless of wheter your support is public or anonymous."
+        continue: "Continue"
         back_faq:
           title: "I want to support now"
           question_1: "How can I support this project?"
@@ -755,7 +758,9 @@ en:
       guide_html: ~
       download: ~
       not_uploaded: ~
+      banking_format_link: ~
       update_documents: ~
+      download_all_documents: ~
       add_picture: ~
       pictures:
         delete: ~
@@ -1093,135 +1098,135 @@ en:
       text_eight: ~
     tools:
       for_backers:
-        description: 'Descripción de las herramientas para donantes'
+        description: "Descripción de las herramientas para donantes"
         tool_1:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_3:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_4:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_5:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_6:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
       about_project:
-        description: 'Descripción de las herramientas sobre projectos'
+        description: "Descripción de las herramientas sobre projectos"
         tool_1:
-          title: 'Todo sobre tu campaña.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo sobre tu campaña.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       after_project:
-        description: 'Descripción de las herramientas después de tu campaña'
+        description: "Descripción de las herramientas después de tu campaña"
         tool_1:
-          title: 'Después de tu campaña.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Después de tu campaña.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       venture_course:
-        description: 'Descripción de las herramientas del curso en empredimiento'
+        description: "Descripción de las herramientas del curso en empredimiento"
         tool_1:
-          title: 'Curso en emprendimiento.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Curso en emprendimiento.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       about_crowdfunding:
-        description: 'Descripción de las herramientas todo sobre CrowdFunding'
+        description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
-          title: 'Todo sobre CrowdFunding.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo sobre CrowdFunding.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
     privacy:
       title: "Privacy Policy"
     terms:
@@ -1259,6 +1264,26 @@ en:
       title: "Projects that %{name} has supported"
       title_current_user: "Projects I've supported"
       your_reward: "Your reward"
+      project_owner: ~
+      project_name: ~
+      cpf_file: ~
+      state_inscription_file: ~
+      user_id: ~
+      certify_request:
+        submit: ~
+        hint: ~
+        title: ~
+        description: ~
+        description2: ~
+        description3: ~
+        backs_to_certify: ~
+        send_request: ~
+        field_mandatory: ~
+        file_mandatory: ~
+        not_backers: ~
+        success: ~
+        subject: ~
+        mail_body: ~
     unsubscribes:
       title: "Choose from which projects you want to receive update notifications:"
       updates: "I want to receive project updates"

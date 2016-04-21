@@ -572,6 +572,7 @@ pt:
         submit: "Revisar e realizar pagamento"
         title: "Apoie o %{name}"
         anonymous_warning_html: "<strong>Você tem certeza que quer que seu apoio seja anônimo?</strong> Deixar seu apoio público aumenta sua reputação e conta pontos para o nosso ranking de apoiadores.<br/><br/>Além disso, o valor do seu apoio não será divulgado para ninguém além do dono do projeto. Somente o proponente terá acesso a essa informação, independente se o seu investimento seja público ou anônimo."
+        continue: "Continuar"
         back_faq:
           title: "Quero apoiar, e agora?"
           question_1: "Como eu apoio este projeto?"
@@ -764,6 +765,7 @@ pt:
       pictures:
         delete: "Eliminar"
         error: "Hubo un error adicionando la imagen"
+        save_changes: "Guardar Cambios"
       documents:
         almost_done: "Casi listo"
       reports:
