@@ -13,7 +13,7 @@ es:
       text_html: "Proyecto: %{project_name}<br/> Clave de la colaboración:%{key}<br/>ID de medio de pago: %{payment_id}<br/><br/>Esta colaboración recibió una notificación de cancelación después de haber recibido una notificación de confirmación.<br/>Verifica en el portal de medio de pago el status real de la transacción, si logra constar la colaboración como confirmado, confirma en el la página de LittleBigMoney (adm/backers)"
     project_owner_backer_confirmed:
       subject: "Excelente! Otro nuevo colaborador apoyó tu proyecto"
-      header: "Un nuevo aporte fue rconfirmado recintemente para tu proyecto"
+      header: "Un nuevo aporte fue reconfirmado recintemente para tu proyecto"
       text_html: "Hola,<strong>%{name}</strong>!<br/><br/>El colaborador%{backer} acaba de aportar con tu proyecto!<br/><br/>Algunos datos sobre el aporte:<br/><br/><strong>Valor aportado:</strong>%{value}<br/>%{reward}<br/><strong>Email del colaborador:</strong>%{email}<br/><br/>Mira otros colaboradores aquí:%{backers_link}<br/><br/>Comparte tus novedades con ellos:%{updates_link}<br/><br/>Descarga tus reportes:%{reports_link}"
     confirm_backer:
       subject: "Gracias! Tu aporte para %{project_name} fue confirmado!"

@@ -30,6 +30,7 @@
         width: 69px
       .puzzle-icon
         width: 52px
+        transform: rotate(45deg)
     p
       font-size: 14px
       margin-top: 20px
@@ -145,7 +146,7 @@
     background-image: url($images_lbm_path + 'background-icons.png')
     background-size: 100%
     +box-shadow(rgba(black, 0.7) 0px -6px 7px -7px inset)
-    .payment-form
+    form, .payment-form
       display: inline-block
       margin: 0 20px
       vertical-align: top
@@ -168,14 +169,6 @@
           +transition(all, 0.3s)
   #page_content
     #anonymous-warning
-      +box-shadow(rgba(black, 0.4) 5px 5px 5px 0px)
-      .bootstrap-twitter
-        text-align: right
-        .badge
-          font-size: 16px
-          background: $oceanblue
-          padding: 5px 7px
-          cursor: pointer
       .anonymous-text
         font-family: 'Futura Std'
         font-weight: 700
@@ -183,7 +176,37 @@
         color: $darkblue
         line-height: 25px
         margin-bottom: 40px
-      
+    #giftcard-form
+      label
+        font-family: 'Futura Std'
+        font-weight: 700
+        font-size: 28px
+        color: $darkblue
+        &.inline
+          font-size: 25px
+          width: 80%
+          text-align: left
+          margin-left: 10px
+          a
+            color: $darkblue
+            text-decoration: underline
+      input[type="checkbox"]
+        font-size: 23px
+        vertical-align: top
+        margin-top: 13px
+      input[type="text"]
+        width: 90%
+        margin-bottom: 10px
+        margin-top: 20px
+        background-color: white
+      input[type="submit"]
+        margin-top: 20px
+        &[disabled="disabled"]
+          opacity: 0.6
+          &:hover
+            background: $oceanblue
+            color: white
+
     .container
       padding: 0px
       #project_review

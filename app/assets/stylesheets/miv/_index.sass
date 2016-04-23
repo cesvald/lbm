@@ -135,7 +135,7 @@ input[type='submit'].lbm-button, a.lbm-button, div.lbm-button
   #lbm-dialog-table
     display: table
     height: 100%
-    padding: 0px 20%
+    padding: 0px 10%
     #lbm-dialog-container
       display: table-row
       height: 100%
@@ -149,8 +149,16 @@ input[type='submit'].lbm-button, a.lbm-button, div.lbm-button
           background-image: url($images_lbm_path + 'background-icons.png')
           background-size: 100%
           background-color: #E9F2F9
-          .bootstrap-twitter
+          display: none
+          +box-shadow(rgba(black, 0.4) 5px 5px 5px 0px)
+          #close-dialog-wrapper
+            text-align: right
             margin-top: 0px
+            .badge
+              font-size: 16px
+              background: $oceanblue
+              padding: 5px 7px
+              cursor: pointer
 
 .facebook_start
   margin-bottom: 40px !important

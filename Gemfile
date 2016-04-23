@@ -29,15 +29,15 @@ gem 'schema_associations'
 gem 'chartkick'
 
 # Payment engine using Paypal
- gem 'catarse_paypal_express', git: 'git://github.com/cesvald/catarse_paypal_express.git',  ref: 'e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff'
-# gem 'catarse_paypal_express', git: 'git://github.com/cesvald/catarse_paypal_express.git',  branch: 'test'
+# gem 'catarse_paypal_express', git: 'git://github.com/cesvald/catarse_paypal_express.git',  ref: 'e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff'
+ gem 'catarse_paypal_express', git: 'git://github.com/cesvald/catarse_paypal_express.git',  branch: 'test'
 # gem 'catarse_paypal_express', path: '../catarse_paypal_express'
 
 # Payment engine using PayU Latam
 
 gem 'payulatam', git: 'git://github.com/cesvald/payulatam.git',  ref: 'e87c399c90a3650e74698c13481a446359508e67'
-gem 'catarse_payulatam', git: 'git://github.com/cesvald/catarse_payulatam.git',  ref: '8c270c8aa0994f28973b4098f34c3bccd83bcbff'
-#gem 'catarse_payulatam', git: 'git://github.com/cesvald/catarse_payulatam.git',  branch: 'test'
+#gem 'catarse_payulatam', git: 'git://github.com/cesvald/catarse_payulatam.git',  ref: '8c270c8aa0994f28973b4098f34c3bccd83bcbff'
+gem 'catarse_payulatam', git: 'git://github.com/cesvald/catarse_payulatam.git',  branch: 'test'
 # gem 'payulatam', path: '../payulatam'
 # gem 'catarse_payulatam', path: '../catarse_payulatam'
 
@@ -47,9 +47,9 @@ gem 'catarse_payulatam', git: 'git://github.com/cesvald/catarse_payulatam.git', 
 
 # gem 'catarse_lbm_gift_cards', path: '../catarse_lbm_gift_cards'
   # gem for testing
-  #  gem 'catarse_lbm_gift_cards', git: 'git://github.com/cesvald/catarse_lbm_gift_cards.git',  branch: 'test'
+    gem 'catarse_lbm_gift_cards', git: 'git://github.com/cesvald/catarse_lbm_gift_cards.git',  branch: 'test'
   # gem for production
-    gem 'catarse_lbm_gift_cards', git: 'git://github.com/cesvald/catarse_lbm_gift_cards.git',  ref: '0e87dd8d364ea8a0cc2878865113ea949a317457'
+  #gem 'catarse_lbm_gift_cards', git: 'git://github.com/cesvald/catarse_lbm_gift_cards.git',  ref: '0e87dd8d364ea8a0cc2878865113ea949a317457'
 
 # Payment engine using Mercadopago
 #gem 'catarse_mercadopago', git: 'git://github.com/cesvald/catarse_mercadopago.git',  ref: '473ff04967c05c346729e6e1cccc6204c967c07e'

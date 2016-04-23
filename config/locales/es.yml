@@ -516,9 +516,9 @@ es:
         lbm_gift_cards: "Gift Card"
         lbm_gift_cards_info:
           title: "Gift Card"
-          coupon: "Código del cupo (Sólo minúsculas y números)"
+          coupon: "Ingresa el código del cupo (Sólo minúsculas y números)"
           accept_terms_html: "He leido y estoy de acuerdo con los <a href='http://soporte.littlebigmoney.org/knowledgebase/articles/245482-t%C3%A9rminos-de-uso-espa%C3%B1ol'>términos de uso para Gift Cards</a>."
-          submit: "Usar Gift Card"
+          submit: "Donar"
           success: "Pago con Gift Card realizado con éxito!"
           error: "Oops! Hubo un error mientras se registraba tu pago con Gift Card. Por favor intenta de nuevo."
           error_duplicate: "Este Gift Card ya fue utilizado."
@@ -543,11 +543,11 @@ es:
       show:
         error: "Oops! Sólo puedes ingresar a esta página después de apoyar un proyecto."
         moip_message: "Tu transacción fue \"autorizada.\" El código de PayU es \"%{code}\".<br>Si tienes alguna pregunta sobre esta transacción, contacta a PayU directamente."
-        header_subtitle: "Sin tu colaboración este proyecto no tendría éxito. Bienvenido al equipo!"
-        header_title: "Gracias! :)"
+        header_subtitle: "Sin tu colaboración este proyecto no tendría éxito"
+        header_title: "¡Gracias!"
         text_subtitle: "Cuéntale a todos sobre esto!"
-        recommended_projects: "También puedes aportar a estos proyectos:"
-        text_title_html: "Ahora eres parte del equipo! Haz todo lo posible para cumplir la meta %{link}"
+        recommended_projects: "También puedes aportar a estos proyectos"
+        text_title_html: "<p class='exclamation'>¡Ahora eres parte del equipo!</p> Haz todo lo posible para cumplir la meta %{link}"
         title: Gracias
       checkout:
         no_credits: "No tienes suficiente crédito para aportar a este proyecto."

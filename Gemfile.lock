@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/cesvald/catarse_lbm_gift_cards.git
-  revision: 0e87dd8d364ea8a0cc2878865113ea949a317457
-  ref: 0e87dd8d364ea8a0cc2878865113ea949a317457
+  revision: 05772481a862d138e6cb83745808430ad1d911e4
+  branch: test
   specs:
     catarse_lbm_gift_cards (0.0.2)
       rails (~> 3.2.6)
@@ -17,8 +17,8 @@ GIT
 
 GIT
   remote: git://github.com/cesvald/catarse_paypal_express.git
-  revision: e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff
-  ref: e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff
+  revision: c856e4e3d1ec29d2a8c3e2898954dcf5306dd63a
+  branch: test
   specs:
     catarse_paypal_express (0.1.0)
       activemerchant (>= 1.17.0)
@@ -27,8 +27,8 @@ GIT
 
 GIT
   remote: git://github.com/cesvald/catarse_payulatam.git
-  revision: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
-  ref: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
+  revision: 1698b62abc627b8778f2c0fe0c8befe8db93e0e4
+  branch: test
   specs:
     catarse_payulatam (0.1.11)
       payulatam
@@ -228,7 +228,7 @@ GEM
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    hashie (2.0.5)
+    hashie (2.1.2)
     heroku-deflater (0.5.1)
       rack (>= 1.4.5)
     hike (1.2.3)
@@ -366,7 +366,7 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     raindrops (0.16.0)
-    rake (11.1.1)
+    rake (11.1.2)
     ranked-model (0.3)
       activerecord (>= 3.1.12)
     rb-fsevent (0.9.7)
@@ -475,7 +475,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     trollop (2.0)
-    tzinfo (0.3.46)
+    tzinfo (0.3.49)
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)

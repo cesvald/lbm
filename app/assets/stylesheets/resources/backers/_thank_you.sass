@@ -1,79 +1,120 @@
-#thank_you
-  margin: 30px 20px
-  margin-bottom: 0
-  text-align: center
-  .title
-    +grid(16)
-    +alpha
-    padding-bottom: 40px
-    text-align: left
-    position: relative
-    h1
-      color: $ultra_gryn
-      font-weight: 700
-      font-size: 24px
-      padding: 5px 0
-    h2
-      color: #333333
-      font-size: 14px
-      padding-bottom: 20px
-      border-bottom: 1px dotted #CCCCCC
-  .project_info
-    float: left
-    padding-bottom: 40px
-    #project_image
-      float: left
-      margin-right: 20px
-    h1
-      float: left
-      width: 650px
-      color: #333
-      font-weight: 700
-      font-size: 24px
-      line-height: 120%
-      padding-bottom: 20px
-      text-align: left
-      a
-        color: $carrot
-        text-decoration: none
-    #recommended_projects
-      float: left
-      text-align: left
-      h2
-        font-size: 18px
-        text-align: left
-        margin-bottom: 10px
-        margin-top: 10px
-    #review_text
-      padding-right: 20px
-      font-size: 14px
-      line-height: 18px
-      float: left
-      width: 380px
-      color: #333
-      text-align: left
-      strong
-        font-size: 18px
-        color: $carrot
-        font-weight: bold
-    .share
-      float: left
-      margin-top: 11px
+#page_content
+  #thank_you
+    .title
+      padding-bottom: 30px
+      float: none
+      display: block
+      border-bottom: 1px solid $mediumgray
+      margin-left: 0px
       margin-bottom: 30px
-      padding-right: 20px
-      height: 55px
-      background: #F0F0F0
-      h2
-        color: #333333
-        float: left
-        font-size: 16px
-        margin-left: 20px
-        margin-top: 20px
-        width: auto
-        margin-right: 10px
-      a
-        display: block
-        float: left
-        margin-right: 5px
-        margin-top: 8px
-
+      h1
+        font-family: 'Futura Std'
+        font-weight: 700
+        font-size: 32px
+        color: $oceanblue
+      .subtitle
+        margin-top: -30px
+        h2
+          font-family: 'Futura Std'
+          font-weight: 200
+          font-size: 27px
+          color: $darkblue
+          display: inline-block
+          margin: 0px 10px
+        .hand-icon
+          width: 35px
+          vertical-align: bottom
+          fill: $carrot
+        .puzzle-icon
+          width: 51px
+          vertical-align: bottom
+          fill: $carrot
+          transform: rotate(30deg)
+    .info-wrapper
+      display: table
+      height: 280px
+      width: 100%
+      .project_info
+        display: table-row
+        height: 100%
+        .image-wrapper
+          display: table-cell
+          height: 100%
+          vertical-align: middle
+          width: 60%
+          #project_image
+            width: 100%
+        .text-wrapper
+          display: table-cell
+          width: 40%
+          height: 100%
+          vertical-align: middle
+          text-align: center
+          background-image: url($images_lbm_path + 'background-icons.png')
+          background-size: 360%
+          padding: 0px 20px
+          h1
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 23px
+            color: $darkblue
+            .exclamation
+              color: $carrot
+              font-weight: 700
+            a
+              text-transform: uppercase
+              text-decoration: none
+    .review-wrapper
+      display: table
+      width: 100%
+      margin-top: 30px
+      margin-bottom: 20px
+      .review-info
+        display: table-row
+        #review_text
+          display: table-cell
+          font-family: 'Futura Std'
+          font-weight: 200
+          font-size: 17px
+          color: $darkblue
+          width: 60%
+        #share
+          background-color: $carrot
+          border-radius: 10px
+          display: table-cell
+          vertical-align: middle
+          width: 40%
+          padding-bottom: 7px
+          h2
+            font-family: 'Futura Std'
+            font-weight: 700
+            font-size: 18px
+            color: white
+            margin-right: 10px
+            display: inline-block
+            vertical-align: sub
+          img
+            width: 35px
+            height: 35px
+            margin: 0 5px
+    #recommended_projects
+      background: url($images_lbm_path + 'background_blue.png')
+      margin-top: 30px
+      padding-top: 25px
+      padding-bottom: 40px
+      .recommend-title
+        padding-left: 40px
+        text-align: left
+        margin-bottom: 20px
+        .icon
+          width: 29px
+          vertical-align: sub
+        h2
+          font-family: 'Futura Std'
+          font-weight: 200
+          font-size: 26px
+          color: $darkblue
+          margin-bottom: 30px
+          text-align: left
+          margin-left: 15px
+          display: inline-block

@@ -261,24 +261,34 @@ CATARSE.ReviewForm = Backbone.View.extend({
 
 CATARSE.BackersCreateView = Backbone.View.extend({
   events:{
-    'click .tab_container #payment_menu a' : 'onPaymentTabClick',
+    'click #gift-card-btn' : 'openGiftCardForm',
+    'click #close-giftcard-form' : 'closeGiftCardForm',
+    'click #catarse_lbm_gift_cards_form #accept_terms' : 'changeSubmitAvailability',
     'click #close-anonymous-warning': 'closeAnonymousWarning',
     'click #accept-anonymous-warning' : 'acceptAnonymousWarning',
   },
 
-  onPaymentTabClick: function(e){
-    $('.payments_type').hide();
-    $('.tab_container #payment_menu a').removeClass('selected');
-    e.preventDefault();
-    var reference = $(e.currentTarget).attr('href');
-    var remote_url = $(e.currentTarget).data('target');
-    $(e.currentTarget).addClass('selected');
-    $(reference).fadeIn(300);
-    if($('div', reference).length <= 0) {
+  openGiftCardForm: function(){
+    var remote_url = $('#lbm_gift_cards_payment').data('form');
+    if($('#catarse_lbm_gift_cards_form').size() == 0){
       $.get(remote_url, function(response){
-        $(reference).empty().html(response);
+        $('#giftcard-form').append(response)
+        $('#giftcard-form').show();
+        $('#lbm-dialog-transparency').fadeIn();
       });
     }
+    else{
+      $('#giftcard-form').show();
+      $('#lbm-dialog-transparency').fadeIn();
+    }
+  },
+
+  closeGiftCardForm: function() {
+    $('#lbm-dialog-transparency').fadeOut(function(){
+      $('#giftcard-form').hide();
+      $('#catarse_lbm_gift_cards_form #accept_terms').removeAttr('checked');
+      $("#catarse_lbm_gift_cards_form input[type=submit]").attr('disabled', 'disabled');
+    });
   },
 
   closeAnonymousWarning: function(){
@@ -304,6 +314,17 @@ CATARSE.BackersCreateView = Backbone.View.extend({
     $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
       callback(data);
     });
+  },
+
+  changeSubmitAvailability: function(event) {
+    submit = $("#catarse_lbm_gift_cards_form input[type=submit]")
+    if ($(event.target).is(':checked')) {
+      submit.attr('disabled', false)
+      submit.removeClass('disabled')
+    } else {
+      submit.attr('disabled', true)
+      submit.addClass('disabled')
+    }
   },
 
   initialize: function() {

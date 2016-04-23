@@ -1,14 +1,18 @@
 #page_content
   #lbm-dialog-transparency
-    #lbm-dialog-table
-      #lbm-dialog-container.centered_page_width
+    #lbm-dialog-table.centered_page_width
+      #lbm-dialog-container
         #dialog-wrapper
           #anonymous-warning.dialog-content
-            .bootstrap-twitter
+            .bootstrap-twitter#close-dialog-wrapper
               span#close-anonymous-warning.badge
                 | X
             p.anonymous-text= t('projects.backers.new.anonymous_warning_html')
             #accept-anonymous-warning.lbm-button = t('projects.backers.new.continue')
+          #giftcard-form.dialog-content
+            .bootstrap-twitter#close-dialog-wrapper
+              span#close-giftcard-form.badge
+                | X
   .container
     #project_review data-thank-you-path=project_backer_path(project_id: @project.id, id: @backer.id)
       .welcome-message-wrapper
@@ -95,7 +99,7 @@
                   = image_tag "lbm/giftcard-icon.png", class: "payment-icon"
             
             - PaymentEngines.engines.each do |engine|
-              div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path]}"]
+              div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path].call(@backer)}" data-form=(engine[:form_path].present? ? "#{engine[:form_path].call(@backer)}" : "asd")]
 
   = render 'layouts/allies'
 = content_for :mouseflow do
