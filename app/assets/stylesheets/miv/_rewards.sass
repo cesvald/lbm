@@ -1,5 +1,5 @@
 .reward.box
-  background-image: url($images_lbm_path + 'background-reward.png')
+  background-image: url($images_lbm_path + 'background-full-icons.png')
   background-size: 100%
   width: 350px
   padding: 10px
@@ -21,10 +21,11 @@
     +box-shadow(rgba($oceanblue, 1) 0px 0px 15px 0px)
   &.button
     min-height: auto
+    text-align: center
   &.button:hover
     transform: scale(0.95)
   &.button[disabled="disabled"]
-    +opacity(0.5)
+    +opacity(0.6)
     cursor: auto
     &:hover
       transform: scale(1)

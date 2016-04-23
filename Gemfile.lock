@@ -17,8 +17,8 @@ GIT
 
 GIT
   remote: git://github.com/cesvald/catarse_paypal_express.git
-  revision: e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff
-  ref: e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff
+  revision: 153acb22eaea8a56581a372e77aa3cb8c7a9e5ad
+  branch: test
   specs:
     catarse_paypal_express (0.1.0)
       activemerchant (>= 1.17.0)
@@ -27,8 +27,8 @@ GIT
 
 GIT
   remote: git://github.com/cesvald/catarse_payulatam.git
-  revision: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
-  ref: 8c270c8aa0994f28973b4098f34c3bccd83bcbff
+  revision: e5d1809f1afb179b30d8f28fbd8670d36ca4541b
+  branch: test
   specs:
     catarse_payulatam (0.1.11)
       payulatam

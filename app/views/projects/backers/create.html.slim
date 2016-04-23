@@ -1,4 +1,14 @@
 #page_content
+  #lbm-dialog-transparency
+    #lbm-dialog-table
+      #lbm-dialog-container.centered_page_width
+        #dialog-wrapper
+          #anonymous-warning.dialog-content
+            .bootstrap-twitter
+              span#close-anonymous-warning.badge
+                | X
+            p.anonymous-text= t('projects.backers.new.anonymous_warning_html')
+            #accept-anonymous-warning.lbm-button = t('projects.backers.new.continue')
   .container
     #project_review data-thank-you-path=project_backer_path(project_id: @project.id, id: @backer.id)
       .welcome-message-wrapper
@@ -53,7 +63,10 @@
                 = form.input :address_state, as: :select, collection: State.array, required: true
                 = form.input :phone_number, as: :string, input_html: {autocomplete: 'off'}, required: true
           .submit
-            fieldset.accept_terms
+            fieldset.anonymous-wrapper
+              = check_box_tag 'anonymous'
+              = label_tag 'anonymous', t('formtastic.labels.backer.anonymous'), class: 'inline'
+            .fieldset.accept_terms
               = check_box_tag 'accept'
               = label_tag 'accept', t('accept_terms_html', link: link_to(t('terms'), t('footer.links.terms_link'), target: :_blank)), class: 'inline'
             - if @backer.credits
@@ -69,13 +82,21 @@
               = image_tag 'lbm/puzzle-icon.png', class: 'puzzle-icon'
             h2.subtitle= t('.choose_payment_subtitle')
 
-          .tab_container
-            nav#payment_menu
-              - PaymentEngines.engines.each do |engine|
-                = link_to "##{engine[:name]}_payment", id: engine[:name], class: 'selected enabled' , :'data-target' => engine[:review_path].call(@backer) do
-                  = t("projects.backers.review.#{engine[:name]}")
-          - PaymentEngines.engines.each do |engine|
-            div[id="#{engine[:name]}_payment" class="payments_type"]
+          #payment-method-wrapper
+            /*
+              = form_tag current_user, class: "payment-form" do
+                .submit-wrapper
+                  = image_submit_tag "lbm/payu-icon.png", class: "payment-icon"
+              = form_tag current_user, class: "payment-form" do
+                .submit-wrapper
+                  = image_submit_tag "lbm/paypal-icon.png", class: "payment-icon"
+              .payment-form
+                .submit-wrapper
+                  = image_tag "lbm/giftcard-icon.png", class: "payment-icon"
+            
+            - PaymentEngines.engines.each do |engine|
+              div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path]}"]
+
   = render 'layouts/allies'
 = content_for :mouseflow do
   = render 'layouts/mouseflow'

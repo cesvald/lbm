@@ -139,6 +139,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
     'keyup input[type=text]' : 'everything_ok',
     'click #accept' : 'everything_ok',
     'click #live_in_brazil' : 'showUpAddressForm',
+    'click #anonymous' : 'checkAnonymous',
     'change select' : 'everything_ok',
     'keyup #user_address_zip_code' : 'onZipCodeKeyUp',
   },
@@ -229,12 +230,40 @@ CATARSE.ReviewForm = Backbone.View.extend({
     $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
       callback(data);
     });
+  },
+
+  checkAnonymous: function(event) {
+    isAnonymous = $(event.target).is(':checked')
+    if(isAnonymous){
+      this.showAnonymousWarning();
+    }
+    else{
+      this.updateAnonymous();
+    }
+  },
+
+  showAnonymousWarning: function(){
+    $('#anonymous-warning').show();
+    $('#lbm-dialog-transparency').fadeIn();
+  },
+
+  updateAnonymous: function(callback) {
+    var backer_id = $('input#backer_id').val();
+    var project_id = $('input#project_id').val();
+    var backer_data = {
+      anonymous: $('#anonymous').is(':checked')
+    }
+    $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
+      callback(data);
+    });
   }
 });
 
 CATARSE.BackersCreateView = Backbone.View.extend({
   events:{
-    'click .tab_container #payment_menu a' : 'onPaymentTabClick'
+    'click .tab_container #payment_menu a' : 'onPaymentTabClick',
+    'click #close-anonymous-warning': 'closeAnonymousWarning',
+    'click #accept-anonymous-warning' : 'acceptAnonymousWarning',
   },
 
   onPaymentTabClick: function(e){
@@ -252,10 +281,42 @@ CATARSE.BackersCreateView = Backbone.View.extend({
     }
   },
 
+  closeAnonymousWarning: function(){
+    $('#lbm-dialog-transparency').fadeOut(function(){
+      $('#anonymous-warning').hide();
+    });
+    $('#anonymous').removeAttr('checked')
+  },
+
+  acceptAnonymousWarning: function(){
+    $('#lbm-dialog-transparency').fadeOut(function(){
+      $('#anonymous-warning').hide();
+    });
+    this.updateAnonymous();
+  },
+
+  updateAnonymous: function(callback) {
+    var backer_id = $('input#backer_id').val();
+    var project_id = $('input#project_id').val();
+    var backer_data = {
+      anonymous: $('#anonymous').is(':checked')
+    }
+    $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
+      callback(data);
+    });
+  },
+
   initialize: function() {
     $('.payments_type').hide();
     $('.tab_container #payment_menu a').removeClass('selected');
-    this.$('.tab_container #payment_menu a.enabled:first').trigger('click')
+    this.$('.tab_container #payment_menu a.enabled:first').trigger('click');
     this.reviewForm = new CATARSE.ReviewForm();
+    $('.payments_type').each(function(){
+      var remote_url = $(this).data('target');
+      console.log(remote_url)
+      $.get(remote_url, function(response){
+        $('#payment-method-wrapper').append(response);
+      });
+    });
   }
 })

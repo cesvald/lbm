@@ -147,7 +147,7 @@ es:
       title: "Con el <p class='allies_text'>apoyo de</p>"
     channels:
       title: "Conoce nuestros <span class='font_futuraLT_medium'> Canales </span>"
-  accept_terms_html: "He leído y estoy de acuerdo con los %{link}."
+  accept_terms_html: "He leído y estoy de acuerdo %{link}."
   activerecord:
     errors:
       models:
@@ -354,7 +354,7 @@ es:
         days_to_delivery: "Total de días para enviar la recompensa."
     labels:
       backer:
-        anonymous: "Quiero que mi colaboración sea anónima."
+        anonymous: "Deseo hacer mi colaboración anónima."
         credits: "Quiero usar mis créditos para aportar a esto."
         reward: "Selecciona tu recompensa"
         value: "¿De cuánto quieres que sea tu colaboración?"

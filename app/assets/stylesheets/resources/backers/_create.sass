@@ -139,272 +139,327 @@
 
       .div + .div span
         margin-left: 60px!important
-
+  #payment-method-wrapper
+    margin-top: 20px
+    padding: 40px 0px
+    background-image: url($images_lbm_path + 'background-icons.png')
+    background-size: 100%
+    +box-shadow(rgba(black, 0.7) 0px -6px 7px -7px inset)
+    .payment-form
+      display: inline-block
+      margin: 0 20px
+      vertical-align: top
+      cursor: pointer
+      .submit-wrapper
+        display: inline-block
+        width: 129px
+        height: 129px
+        border-radius: 50%
+        &:hover
+          background-color: $oceanblue
+          .payment-icon
+            opacity: 0.6
+        .payment-icon
+          width: 129px
+          height: 129px
+          border-radius: 50%
+          +box-shadow(rgba(black, 0.4) 5px 5px 5px 0px)
+          margin: 0px
+          +transition(all, 0.3s)
   #page_content
+    #anonymous-warning
+      +box-shadow(rgba(black, 0.4) 5px 5px 5px 0px)
+      .bootstrap-twitter
+        text-align: right
+        .badge
+          font-size: 16px
+          background: $oceanblue
+          padding: 5px 7px
+          cursor: pointer
+      .anonymous-text
+        font-family: 'Futura Std'
+        font-weight: 700
+        font-size: 22px
+        color: $darkblue
+        line-height: 25px
+        margin-bottom: 40px
+      
     .container
+      padding: 0px
       #project_review
         padding-top: 30px
-        padding-bottom: 30px
         text-align: center
-        .welcome-message-wrapper
+      .welcome-message-wrapper
+        display: inline-block
+        padding: 0 50px
+        padding-bottom: 25px
+        .welcome-icon
+          width: 44.7px
+          vertical-align: sub
+        .welcome-message
+          font-family: 'Futura Std'
+          font-weight: 200
+          font-size: 27px
+          color: $darkblue
           display: inline-block
-          padding: 0 50px
-          padding-bottom: 25px
-          .welcome-icon
-            width: 44.7px
-            vertical-align: sub
-          .welcome-message
+          margin-left: 18px
+          width: 564px
+          text-align: center
+          a
+            font-family: 'Futura Std'
+            font-weight: 700
+            color: $carrot
+      .project-info-wrapper
+        display: table
+        position: relative
+        left: 50%
+        margin-left: -390px
+        padding: 50px 0px
+        border-top: solid 2px $mediumgray
+        border-bottom: solid 2px $mediumgray
+        .project_info
+          display: table-row
+          .review-wrapper
+            width: 300px
+            display: table-cell
+            vertical-align: top
+            #review_text
+              .review_content 
+                font-family: 'Futura Std'
+                font-weight: 200
+                font-size: 22px
+                color: $oceanblue
+                strong
+                  font-size: 18px
+                  font-weight: bold
+              .reward
+                font-family: 'Futura LT'
+                font-weight: 400
+                font-size: 16px
+                color: $darkgray
+                background: url($images_lbm_path+"background_blue.png")
+                margin-top: 20px
+                padding: 10px
+                height: 198px
+        #project_image
+          display: table-cell
+          margin-right: 20px
+          height: 280px
+          width: 460px
+          padding-left: 30px
+      .review-title
+        text-align: center
+        margin-top: 20px
+        h1
+          background: $oceanblue
+          border-radius: 10px
+          padding: 5px 20px
+          color: white
+          display: inline-block
+          font-family: 'Futura LT'
+          font-weight: 400
+          font-size: 32px
+          text-transform: uppercase
+        h2
+          color: $carrot
+          font-size: 18px
+          font-family: 'Futura LT'
+          font-weight: 400
+          display: block
+          margin-top: 5px
+      #credits_notice
+        font-size: 16px
+        strong
+          font-weight: 700
+          font-size: 20px
+      #international_payment
+        h1
+          font-size: 20px
+          text-align: center
+        a
+          color: $carrot
+        .international_important
+          padding-top: 15px
+          p
+            font-size: 13px
+            line-height: 130%
+            clear: both
+        form
+          padding-top: 15px
+          .bootstrap-twitter
+            padding-top: 10px
+            label
+      #review_form
+        display: inline-block
+        margin-top: 20px
+        &.dont_align
+          margin: 0 !important
+        li
+          float: left
+          margin-right: 20px
+          margin-bottom: 10px
+          input, select#user_address_state
+            //@include background(linear-gradient(top bottom, #F3F3F3, #FFF))
+          .label
             font-family: 'Futura Std'
             font-weight: 200
-            font-size: 27px
+            font-size: 22px
             color: $darkblue
-            display: inline-block
-            margin-left: 18px
-            width: 564px
-            text-align: center
-            a
-              font-family: 'Futura Std'
-              font-weight: 700
-              color: $carrot
-        .project-info-wrapper
-          display: table
-          position: relative
-          left: 50%
-          margin-left: -390px
-          padding: 50px 0px
-          border-top: solid 2px $mediumgray
-          border-bottom: solid 2px $mediumgray
-          .project_info
-            display: table-row
-            .review-wrapper
-              width: 300px
-              display: table-cell
-              vertical-align: top
-              #review_text
-                .review_content 
-                  font-family: 'Futura Std'
-                  font-weight: 200
-                  font-size: 22px
-                  color: $oceanblue
-                  strong
-                    font-size: 18px
-                    font-weight: bold
-                .reward
-                  font-family: 'Futura LT'
-                  font-weight: 400
-                  font-size: 16px
-                  color: $darkgray
-                  background: url($images_lbm_path+"background_blue.png")
-                  margin-top: 20px
-                  padding: 10px
-                  height: 198px
-          #project_image
-            display: table-cell
-            margin-right: 20px
-            height: 280px
-            width: 460px
-            padding-left: 30px
-        .review-title
-          text-align: center
-          margin-top: 20px
-          h1
-            background: $oceanblue
-            border-radius: 10px
-            padding: 5px 20px
-            color: white
-            display: inline-block
-            font-family: 'Futura LT'
-            font-weight: 400
-            font-size: 32px
-            text-transform: uppercase
-          h2
-            color: $carrot
-            font-size: 18px
-            font-family: 'Futura LT'
-            font-weight: 400
-            display: block
-            margin-top: 5px
-        #credits_notice
-          font-size: 16px
-          strong
+            text-align: left
+          &#user_full_name_input
+            width: 425px
+            input[type="text"]
+              width: 99%
+          &#user_phone_number_input
+            width: 220px
+            input[type="text"]
+              width: 100%
+          &#user_email_input
+            //clear: both
+            width: 490px
+            input[type="text"]
+              width: 100%
+          &#user_address_street_input
+            width: 410px
+            input[type="text"]
+              width: 99%
+          &#user_address_zip_code_input
+            clear: left
+            width: 200px
+            input[type="text"]
+              width: 100%
+          &#user_address_number_input
+            width: 90px
+            input[type="text"]
+              width: 99%
+          &#user_address_complement_input
+            width: 110px
+            input[type="text"]
+              width: 91%
+          &#user_address_neighbourhood_input
+            width: 250px
+            input[type="text"]
+              width: 100%
+          &#user_address_state_input
+            margin-bottom: 20px
+        abbr
+          color: $darkblue
+      .submit
+        margin-top: 30px
+        width: 80%
+        margin-left: 10%
+        padding-bottom: 30px
+        border-bottom: solid 1px $darkgray
+        .anonymous-wrapper
+          margin-bottom: 20px
+          input
+            font-size: 20px
+          label
+            font-family: 'Futura Std'
             font-weight: 700
-            font-size: 20px
-        #international_payment
-          h1
-            font-size: 20px
-            text-align: center
-          a
+            font-size: 22px
             color: $carrot
-          .international_important
-            padding-top: 15px
-            p
-              font-size: 13px
-              line-height: 130%
-              clear: both
-          form
-            padding-top: 15px
-            .bootstrap-twitter
-              padding-top: 10px
-              label
-        #review_form
-          display: inline-block
-          margin-top: 20px
-          &.dont_align
-            margin: 0 !important
-          li
-            float: left
-            margin-right: 20px
+            margin-left: 10px
+            margin-right: 40px
+            display: inline-block
+        .accept_terms
+          input
+            font-size: 20px
+          label
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 22px
+            color: black
+            margin-left: 10px
+            display: inline-block
+            a
+              color: $oceanblue
+      .tab_container
+        padding-top: 20px
+        margin-bottom:  20px
+
+      .payment
+        .title
+          padding-top: 20px            
+      .choose_payment
+        .or
+          +grid(2)
+          padding-top: 50px
+          text-align: center
+          span
+            font-size: 18px
+            text-transform: uppercase
+            color: #666
+        .cc, .boleto
+          +grid(7)
+          width: auto
+          span
+            font-weight: 700
+            font-size: 18px
+            color: #666666 
             margin-bottom: 10px
-            input, select#user_address_state
-              //@include background(linear-gradient(top bottom, #F3F3F3, #FFF))
-            .label
-              font-family: 'Futura Std'
-              font-weight: 200
-              font-size: 22px
-              color: $darkblue
-              text-align: left
-            &#user_full_name_input
-              width: 425px
-              input[type="text"]
-                width: 99%
-            &#user_phone_number_input
-              width: 220px
-              input[type="text"]
-                width: 100%
-            &#user_email_input
-              //clear: both
-              width: 490px
-              input[type="text"]
-                width: 100%
-            &#user_address_street_input
-              width: 410px
-              input[type="text"]
-                width: 99%
-            &#user_address_zip_code_input
-              clear: left
-              width: 200px
-              input[type="text"]
-                width: 100%
-            &#user_address_number_input
-              width: 90px
-              input[type="text"]
-                width: 99%
-            &#user_address_complement_input
-              width: 110px
-              input[type="text"]
-                width: 91%
-            &#user_address_neighbourhood_input
-              width: 250px
-              input[type="text"]
-                width: 100%
-            &#user_address_state_input
-              margin-bottom: 20px
-          abbr
-            color: $darkblue
-        .submit
-          margin-top: 30px
-          width: 80%
-          margin-left: 10%
-          padding-bottom: 30px
-          border-bottom: solid 1px $darkgray
-          .accept_terms
-            input
-              font-size: 20px
-            label
-              font-family: 'Futura Std'
-              font-weight: 200
-              font-size: 22px
-              color: black
-              margin-left: 10px
-              display: inline-block
-              a
-                color: $oceanblue
-        .tab_container
-          padding-top: 20px
-          margin-bottom:  20px
-
-        .payment
-          .title
-            padding-top: 20px            
-        .choose_payment
-          .or
-            +grid(2)
-            padding-top: 50px
-            text-align: center
+            display: block           
+          a
+            @include border-radius(10px)
+            background: $carrot
+            display: block
+            height: 55px
+            padding: 0
+            margin-bottom: 8px
+            width: 200px
+            img
+              float: right
+              margin-top: 18px
+              margin-right: 8px
             span
-              font-size: 18px
-              text-transform: uppercase
-              color: #666
-          .cc, .boleto
-            +grid(7)
-            width: auto
-            span
+              float: left
+              margin-top: 23px
+              margin-left: 20px
               font-weight: 700
-              font-size: 18px
-              color: #666666 
-              margin-bottom: 10px
-              display: block           
-            a
-              @include border-radius(10px)
-              background: $carrot
-              display: block
-              height: 55px
-              padding: 0
-              margin-bottom: 8px
-              width: 200px
-              img
-                float: right
-                margin-top: 18px
-                margin-right: 8px
-              span
-                float: left
-                margin-top: 23px
-                margin-left: 20px
-                font-weight: 700
-                font-size: 15px
-                text-transform: uppercase 
-                color: #fff            
-          .cc
-            +alpha
-            +omega
-          .boleto
-            +omega
+              font-size: 15px
+              text-transform: uppercase 
+              color: #fff            
+        .cc
+          +alpha
+          +omega
+        .boleto
+          +omega
+          span
+            margin-left: 15px
+          a
             span
-              margin-left: 15px
-            a
-              span
-                margin-left: 30px
-              .boleto_icon
-                margin-top: 16px
-                margin-right: 25px
+              margin-left: 30px
+            .boleto_icon
+              margin-top: 16px
+              margin-right: 25px
 
-      .link_content
-        a
-          color: $blue
-          text-decoration: none
-          display: block
-          padding: 10px
-          background: $ed_gryn
-          font-size: 15px
-        .bootstrap-twitter
-          float: left
-
-
+    .link_content
+      a
+        color: $blue
+        text-decoration: none
+        display: block
+        padding: 10px
+        background: $ed_gryn
+        font-size: 15px
       .bootstrap-twitter
-        margin-top: 20px
-        input[type="submit"], button
-          width: 190px
-          height: 40px
-          border-radius: 15px
-          @include box-shadow(0px)
-          margin: 12px 0 0px
-          float: none
-          border: none
-          display: block
-          background: $carrot
-          color: white
-          font-size: 15px
-          text-transform: uppercase
+        float: left
+
+
+    .bootstrap-twitter
+      margin-top: 20px
+      input[type="submit"], button
+        width: 190px
+        height: 40px
+        border-radius: 15px
+        @include box-shadow(0px)
+        margin: 12px 0 0px
+        float: none
+        border: none
+        display: block
+        background: $carrot
+        color: white
+        font-size: 15px
+        text-transform: uppercase
   .payments_type
     float: left
     min-height: 264px
