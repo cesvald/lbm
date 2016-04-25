@@ -20,6 +20,19 @@
   meta property="og:site_name" content=::Configuration[:company_name]
   meta property="fb:admins" content="#{fb_admins}"
 
+= content_for :dialogs do
+
+  #new-reward-form.dialog-content
+    .bootstrap-twitter#close-dialog-wrapper
+      span#close-anonymous-warning.badge.close-dialog
+        | X
+    = render partial: 'projects/backers/form', locals: {reward: Reward.new, update: false}
+  - if not @reward.nil?
+    #update-reward-form.dialog-content
+      .bootstrap-twitter#close-dialog-wrapper
+        span#close-anonymous-warning.badge.close-dialog
+          | X
+      = render partial: 'projects/backers/form', locals: {reward: @reward, update: true}
 #page_content
   .container
     - if !@channel.nil? && @channel.banner_top_url.present?
@@ -125,27 +138,6 @@
         .clearfix
         #loading= image_tag "loading.gif"
       .clearfix
-      
-            
-        /*
-          .clearfix
-          - if can?(:update, @project)
-            .bootstrap-twitter.bootstrap-form
-              .alert.alert-info
-                h4.alert-header= t('.no_rewards_warning_title')
-                p style="margin:0; padding:0;"
-                  = t('.no_rewards_warning')
-              .clearfix
-              = link_to t('.menu.add_reward'), 'javascript:void(0);', class: 'btn btn-success pull-right add_new_reward'
-              .clearfix
-              .well.new_reward_content
-                = semantic_form_for [@project, Reward.new] do |f|
-                  = f.input :minimum_value
-                  = f.input :description
-                  = f.input :days_to_delivery
-                  = f.input :maximum_backers
-                  = f.submit class: 'btn'
-          #rewards= render 'project_rewards'
 
     .clearfix
 = render 'show_embed'

@@ -4,25 +4,55 @@
     height: auto !important
     width: auto !important
     float: none !important
-  .add_new_reward
-    font-size: 14px
-    margin-bottom: 20px
-  form#new_reward, form.formtastic.reward
-    list-style: none
-    label
-      display: block
-      font-size: 14px
-      color: black
-      background: none
-    textarea
-      height: 50px
-    input, textarea
-      display: block
-    .inline-hints
-      font-size: 13px
-      line-height: 130%
-      color: rgba(black, 0.6)
-      padding-bottom: 20px
+  
+  #new-reward-form, #update-reward-form
+    form.formtastic.reward
+      list-style: none
+      text-align: left
+      .input
+        text-align: left
+        .label
+          font-family: 'Futura Std'
+          font-weight: 700
+          font-size: 18px
+          color: $darkblue
+          text-align: left
+        .lbm-input, textarea
+          background-color: white
+          margin: 3px 0px
+        textarea
+          height: 67px
+          line-height: 20px
+        .inline-hints
+          font-family: 'Futura Std'
+          font-weight: 200
+          font-size: 14px
+          color: $darkblue
+          text-align: left
+          padding: 0 10px
+          margin-bottom: 25px
+      .lbm-button
+        padding: 10px 30px
+        font-size: 26px
+      #delete-reward-btn
+        float: right
+        padding: 1px 30px
+        font-size: 26px
+        background-color: $carrot
+        border: solid 1px $carrot
+        margin-right: 48px
+        &:hover
+          color: $carrot
+          background-color: white
+          .trash-icon
+            fill: $carrot
+        .trash-icon
+          width: 19px
+          margin-right: 9px
+          vertical-align: baseline
+          position: relative
+          top: 2px
+          fill: white
   #page_content
     #project_menu
       position: relative
@@ -345,10 +375,72 @@
               text-indent: 20px
               padding: 0px
               margin-right: 20px
+      #new-reward-opener
+        font-family: 'Futura'
+        font-weight: 400
+        font-size: 14.5px
+        width: 138px
+        display: inline-block
+        padding-left: 12px
+        position: relative
+        margin-bottom: 10px
+        .plus-icon
+          font-size: 34px
+          position: absolute
+          display: inline-block
+          right: 12px
+          top: 1px
       #rewards
         text-align: center
+        .reward.box
+          width: 380px
+        .lbm-button
+          font-size: 13px
+          padding: 2px 10px
+          float: right
+          margin-top: -28px
         #backer_form
           display: inline-block
+          .inputs
+            &:hover
+              .lbm-button
+                transform: scale(0.90)
+              button
+                transform: scale(0.95)
+
+            button
+              text-transform: uppercase
+              text-align: left
+              &:hover
+                transform: sclae(1)
+            .lbm-button
+              position: relative
+              z-index: 5
+              margin-left: -115px
+              margin-top: 30px
+              right: 36px
+        .disabled
+          opacity: 0.8
+          cursor: default
+          text-align: left
+          &:hover
+            transform: scale(1)
+        .toggable
+          h2
+            margin-bottom: 0px
+            padding-bottom: 0px
+            margin: 3px 0px
+            border-bottom: 0px
+            display: inline-block
+          .reward-wrapper
+            text-align: left
+            border-top: solid 2px $oceanblue
+            margin-top: 5px
+            padding-top: 10px
+            display: none
+        .expired
+          .reward-wrapper
+            display: block
       #project-history-wrapper
         .image-wrapper
           img

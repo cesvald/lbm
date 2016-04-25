@@ -1,0 +1,34 @@
+- if !reward.sold_out? && !reward.project.expired?
+  = semantic_form_for Backer.new, url: project_backers_path(reward.project), html: { id: 'backer_form' } do |form|
+    = form.inputs do
+      = hidden_field_tag 'credits', ("%0.0f" % current_user.credits)
+      = form.input :value, as: :hidden, required: false, label: false, input_html: {value: reward.minimum_value}
+      = hidden_field_tag '[backer][reward_id]', reward.id
+      = form.input :anonymous, as: :hidden, value: false
+      = button_tag class: 'box reward button', id: "backer_submit" do
+        = t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe
+      - if can?(:update, @project)
+        = link_to t('projects.show.menu.edit'), { params: {:update_reward => "#{reward.id}"} }, {class: "lbm-button"}
+
+  
+- else
+  div[id="reward_#{reward.id}"  class="box reward button toggable disabled #{(reward.minimum_value == 0 ? 'selected' : '')} #{('expired' if reward.project.expired?)}" data-id="#{(reward.id) ? reward.id : 0}" data-min-value="#{reward.minimum_value.to_i}"]
+    h2= t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe
+    .reward-wrapper
+      em= pluralize(reward.backers.confirmed.count, t('backer_singular'), t('backer_plural'))
+      .description-wrapper
+        div= reward.description
+        - if reward.maximum_backers
+          .maximum_backers.clearfix
+            - if reward.sold_out?
+              .sold-out= t('reward.sold_out')
+            - else
+              = "#{t('reward.limited')}: #{reward.display_remaining}"
+          - in_time_to_confirm = reward.backers.in_time_to_confirm.count
+          - if in_time_to_confirm > 0
+            .maximum_backers.in_time_to_confirm.clearfix
+              = t('projects.rewards.backs_to_confirm', count: in_time_to_confirm)
+          .clearfix
+        - if reward.days_to_delivery.present?
+          div class="reward_deliver_at"
+            p= "#{t('projects.rewards.reward_deliver_time', prevision: reward.display_deliver_prevision)}".html_safe

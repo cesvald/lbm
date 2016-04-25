@@ -45,7 +45,12 @@ span.status_text ="#{@project.display_progress}% #{t('projects.back_project.reac
       - if @project.about.present?
         = @project.about_html.html_safe
 
-#rewards= render 'project_rewards'
+#new-reward-opener.lbm-button
+  = t('projects.form.add_reward')
+  span.plus-icon
+    | +
+end
+#rewards = render partial: 'project_reward', collection: @rewards, as: :reward
 
 #project-history-wrapper
   .image-wrapper

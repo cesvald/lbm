@@ -104,7 +104,7 @@ class ProjectsController < ApplicationController
 
       show!{
         @title = @project.name
-        @rewards = @project.rewards.includes(:project).rank(:row_order).all
+        @rewards = @project.rewards.order(:minimum_value).includes(:project).rank(:row_order).all
         @backers = @project.backers.confirmed.limit(12).order("confirmed_at DESC").all
         fb_admins_add(@project.user.facebook_id) if @project.user.facebook_id
         #TODO find a way to make accessible_by work here
@@ -115,6 +115,7 @@ class ProjectsController < ApplicationController
         @update = @project.updates.where(id: params[:update_id]).first if params[:update_id].present?
         @channel = Channel.find_by_permalink(request.subdomain) if request.subdomain.present?
         @pictures = @project.pictures
+        @reward = params[:update_reward].present? ? @rewards.find(params[:update_reward]).first : nil
       }
     rescue ActiveRecord::RecordNotFound
       return render_404

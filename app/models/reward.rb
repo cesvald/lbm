@@ -41,11 +41,15 @@ class Reward < ActiveRecord::Base
     I18n.t('reward.display_remaining', remaining: remaining, maximum: maximum_backers).html_safe
   end
 
+  def has_backers
+    backers.count > 0
+  end
+
   def name
     "<div class='reward_minimum_value'>#{minimum_value > 0 ? display_minimum+'+' : I18n.t('reward.dont_want')}#{ I18n.t('reward.international', value: number_to_currency(converted_minimum, unit: Configuration[:paypal_currency], precision: 2, delimiter: '.')) unless I18n.locale == I18n.default_locale or minimum_value == 0}</div><div class='reward_description'>#{h description}</div>#{'<div class="sold_out">' + I18n.t('reward.sold_out') + '</div>' if sold_out?}<div class='clear'></div>".html_safe
   end
   def display_minimum
-    number_to_currency minimum_value, unit: 'COP', precision: 2, delimiter: '.'
+    number_to_currency minimum_value, unit: 'COP', precision: 1, delimiter: '.'
   end
   def short_description
     truncate description, length: 35

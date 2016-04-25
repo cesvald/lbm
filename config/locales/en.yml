@@ -746,6 +746,8 @@ en:
       title: "Support and receive"
       versions: "See the previous version"
       updated_at: "Last modified"
+      delete: "Delete Reward"
+      view: Ver
     send_mail:
       success: "Your project was successfully created! We'll contact you soon. Thanks a lot!"
     show:

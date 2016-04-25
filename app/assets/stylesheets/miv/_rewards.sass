@@ -1,6 +1,7 @@
 .reward.box
-  background-image: url($images_lbm_path + 'background-full-icons.png')
+  background-image: url($images_lbm_path + 'background-icons.png')
   background-size: 100%
+  background-color: transparent
   width: 350px
   padding: 10px
   margin: 20px
@@ -38,52 +39,61 @@
     border-bottom: solid 2px $oceanblue
     padding-bottom: 2px
     margin-bottom: 10px
-  em
-    color: $darkblue
-    font-family: 'Futura Std'
-    font-weight: 700
-    font-size: 16px
-    text-transform: uppercase
-    display: block
-  .description-wrapper
-    height: 88px
-    overflow-y: scroll
-  p, .on_the_spot_editing
-    color: $darkblue
-    font-size: 15px
-    font-family: 'Futura Condensed'
-    font-weight: 400
-    a
-      color: $navy
-      text-decoration: none
-      &:hover
-        text-decoration: underline
-  .on_the_spot_editing
-    width: 100%
-    margin-left: 0px
-  .reward_deliver_at, .reward_updated_at
-    p
+  .reward-wrapper
+    em
       color: $darkblue
       font-family: 'Futura Std'
       font-weight: 700
       font-size: 16px
-  .description_version
-    display: none
-    +box-shadow(rgba(black, 0.3) 2px 2px 4px)
-    +border-radius(4px)
-    width: 230px
-    min-height: 60px
-    padding: 30px
-    background: #fff8e5
-    position: absolute
-    margin: -140px 0 0 -340px
-    p
-      font-size: 13px
-      color: #444444
-  .maximum_backers
-    color: $darkblue
-    font-family: 'Futura Std'
-    font-weight: 700
-    font-size: 16px
-    &.in_time_to_confirm
-      margin-top: 10px
+      text-transform: uppercase
+      display: block
+    .description-wrapper
+      height: 88px
+      overflow-y: scroll
+      div
+        color: $darkblue
+        font-size: 15px
+        font-family: 'Futura Std'
+        font-weight: 700
+    p, .on_the_spot_editing
+      color: $darkblue
+      font-size: 15px
+      font-family: 'Futura Condensed'
+      font-weight: 400
+      a
+        color: $navy
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+    .on_the_spot_editing
+      width: 100%
+      margin-left: 0px
+    .reward_deliver_at, .reward_updated_at
+      p
+        color: $darkblue
+        font-family: 'Futura Std'
+        font-weight: 700
+        font-size: 16px
+    .description_version
+      display: none
+      +box-shadow(rgba(black, 0.3) 2px 2px 4px)
+      +border-radius(4px)
+      width: 230px
+      min-height: 60px
+      padding: 30px
+      background: #fff8e5
+      position: absolute
+      margin: -140px 0 0 -340px
+      p
+        font-size: 13px
+        color: #444444
+    .maximum_backers
+      color: $darkblue
+      font-family: 'Futura Std'
+      font-weight: 700
+      font-size: 16px
+      &.in_time_to_confirm
+        margin-top: 10px
+      .sold-out
+        font-size: 22px
+        font-weight: bold

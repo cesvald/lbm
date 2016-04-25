@@ -746,6 +746,8 @@ es:
       title: "Colabora y recibe"
       versions: "Ver la versión anterior"
       updated_at: "Última modificación"
+      delete: "Eliminar Recompensa"
+      view: Ver
     send_mail:
       success: "Tu proyecto fue creado exitosamente! Te contactaremos próximamente. Muchas gracias!"
     show:

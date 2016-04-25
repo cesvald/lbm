@@ -59,9 +59,9 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
       $(event.target).next('.deleting_update').hide();
     });
 
-    this.project = new CATARSE.Project($('#project_description').data("project"))
+    this.project = new CATARSE.Project($('#project_description').data("project"));
 
-    this.render()
+    this.render();
     this.bestInPlaceEvents();
 
 
@@ -69,18 +69,17 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     if(window.location.search.match(/update_id/)){
       window.location.hash = 'updates';
     }
+
+    if($('#update-reward-form').size() > 0){
+      $('#update-reward-form').show();
+      $('#lbm-dialog-transparency').fadeIn();
+    }
   },
 
   events: {
-    "keyup form input[type=text],textarea": "validate",
-    "click #project_link": "selectTarget",
-    "click #project_embed textarea": "selectTarget",
-    "click #rewards .clickable": "backWithReward",
-    "click #rewards .clickable_owner span.avaliable": "backWithReward",
-    "click .add_new_reward": "showUpNewRewardForm",
-    "click a.edit_reward": "showUpRewardEditForm",
-    "click .updated_reward span":"showUpDescriptionVersioning",
-    "click .project_picture":"showPicture"
+    "click .close-dialog": "closeDialog",
+    "click .project_picture": "showPicture",
+    "click #new-reward-opener": "openRewardForm"
   },
 
   showPicture: function(e) {
@@ -96,6 +95,17 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
       $('.project_full_image').removeClass('hide');
 
     }
+  },
+
+  closeDialog: function() {
+    $('#lbm-dialog-transparency').fadeOut(function(){
+      $('.dialog-content').hide();
+    });
+  },
+
+  openRewardForm: function() {
+    $('#new-reward-form').show();
+    $('#lbm-dialog-transparency').fadeIn();
   },
 
   showUpDescriptionVersioning: function(e) {
@@ -123,13 +133,13 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     });
   },
 
-  showUpNewRewardForm: function(event) {
+  showUpNewRewardForm: function( event ) {
     event.preventDefault();
     $(event.currentTarget).fadeOut('fast');
     $('.new_reward_content').fadeIn('fast');
   },
 
-  showUpRewardEditForm: function(event) {
+  showUpRewardEditForm: function( event ) {
     event.preventDefault();
     var id = $(event.currentTarget).attr('href')
     $(id).slideDown();
@@ -266,15 +276,6 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
       }
     })
     return valid
-  },
-
-  validate: function(event){
-    var form = $(event.target).parentsUntil('form')
-    var submit = form.find('[type=submit]')
-    if(this.isValid(form))
-      submit.attr('disabled', false)
-    else
-      submit.attr('disabled', true)
   },
 
   selectTarget: function(event){
