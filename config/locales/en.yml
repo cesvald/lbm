@@ -572,7 +572,7 @@ en:
         submit: "Review and proceed to checkout"
         title: "Support %{name}"
         anonymous_warning_html: "<strong>Are you sure you want your support to be anonymous?</strong>Showing your support in public increases your reputation and adds to our contributor's range. <br/><br/>Moreover, the value of your support will not be shared with anyone but the owner of the project. Only the administrator can access this information regardless of wheter your support is public or anonymous."
-        continue: "Continue"
+        continue: Continue
         back_faq:
           title: "I want to support now"
           question_1: "How can I support this project?"
@@ -746,8 +746,6 @@ en:
       title: "Support and receive"
       versions: "See the previous version"
       updated_at: "Last modified"
-      delete: "Delete Reward"
-      view: Ver
     send_mail:
       success: "Your project was successfully created! We'll contact you soon. Thanks a lot!"
     show:
@@ -767,6 +765,7 @@ en:
       pictures:
         delete: ~
         error: ~
+        save_changes: ~
       documents:
         almost_done: ~
       reports:
@@ -846,7 +845,7 @@ en:
       rewards_important: "Keep it simple! Plan how you're going to deliver your rewards (digital) and include the costs in your budget. People are relying on you, this is very serious!"
       submit: "Submit the project"
       send_project: "I want to submit my project"
-      legend_html: "After filling in the form below, you will receive a project page in draft mode. In this draft you can add the rewards for your supporters. You can also share the page with your friends to collect feedback and sharpen your project even more.<br><br>The information filled in below is not definitive, but remember that the more consistent you are in your project submission, the faster it will go live.<br><br><b>Very Important:</b> <i>LittleBigMoney is a platform with diverse levels of supervision, which means that our board will evaluate the focus, the feasibility and consistency of your project during the draft. We hope you understand that if your project does not comply with our <a href='https://docs.google.com/a/catarse.me/document/d/1wLDS2lphQ6monovg9rEaTIDcxBD3FRZV9dfGKmajyj8/edit' target='_blank' >selection criteria</a>, it may be refused by the team of curators.</i>"
+      legend_html: "After filling in the form below, you will receive a project page in draft mode. In this draft you can add the rewards for your supporters. You can also share the page with your friends to collect feedback and sharpen your project even more.<br><br>The information filled in below is not definitive, but remember that the more consistent you are in your project submission, the faster it will go live.<br><br><b>Very Important:</b> <i>LittleBigMoney is a platform with diverse levels of supervision, which means that our board will evaluate the focus, the feasibility and consistency of your project during the draft. We hope you understand that if your project does not comply with our selection criteria</a>, it may be refused by the team of curators.</i>"
     twitter:
       take_a_look: "Check out the project %{name} on @LBigMoney"
     video_embed:
@@ -1102,51 +1101,51 @@ en:
       for_backers:
         description: "Descripción de las herramientas para donantes"
         tool_1:
-          title: "Todo para donantes.pdf"
-          link: ~
+          title: "¿Cómo usar mis créditos?.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUVGVvTnE0b3BHYXM"
           image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title: "Todo para donantes.pdf"
-          link: ~
+          title: "¿Qué sucedió con mi colaboración?pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUVGVvTnE0b3BHYXM"
           image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_3:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
         tool_4:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
         tool_5:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
         tool_6:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
       about_project:
         description: "Descripción de las herramientas sobre projectos"
         tool_1:
-          title: "Todo sobre tu campaña.pdf"
-          link: ~
+          title: "¿Cómo subir tu proyecto?.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
           image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title: ~
-          link: ~
-          image: ~
+          title: "Antes de subir tu proyecto.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_3:
-          title: ~
-          link: ~
-          image: ~
+          title: "¿Cómo promuevo mi proyecto?.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_4:
-          title: ~
-          link: ~
-          image: ~
+          title: "Crear buenas recompensas.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_5:
-          title: ~
-          link: ~
-          image: ~
+          title: "¿Cómo crear un buen video?"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_6:
           title: ~
           link: ~
@@ -1206,25 +1205,25 @@ en:
       about_crowdfunding:
         description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
-          title: "Todo sobre CrowdFunding.pdf"
-          link: ~
+          title: "Modalidades de financiación.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUS1ptQjJKZXFFRHc"
           image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title: ~
-          link: ~
-          image: ~
+          title: "Concepto Legal.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUS1ptQjJKZXFFRHc"
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_3:
-          title: ~
-          link: ~
-          image: ~
+          title: "¿Qué es un canal?.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUS1ptQjJKZXFFRHc"
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_4:
-          title: ~
-          link: ~
-          image: ~
+          title: "Reglas de oro.pdf"
+          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUS1ptQjJKZXFFRHc"
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_5:
           title: ~
           link: ~
-          image: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_6:
           title: ~
           link: ~

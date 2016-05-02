@@ -92,14 +92,14 @@ pt:
       funded_projects: "Projetos bem-sucedidos"
       active_projects: "Projetos no ar agora"
     contact:
-      address_label: "Dirección"
+      address_label: Dirección
       address: "Calle 102 # 45A-36 Bogotá, Colombia"
-      tel_label: "Tel"
+      tel_label: Tel
       tel: "+ 57 1 602 5530"
-      schedule_label: "Horario"
+      schedule_label: Horario
       schedule: "L-V de 9:00 am a 6:00 pm"
-      email_label: "Correo"
-      email: "littlebigmoney@fundacioncapital.org"
+      email_label: Correo
+      email: littlebigmoney@fundacioncapital.org
     links:
       how_works: Ajuda
       faq: FAQ/Ajuda
@@ -387,7 +387,7 @@ pt:
         first_backers: "Lista com os primeiros apoiadores *"
         how_know: "Como você conheceu o LittleBigMoney? *"
       picture:
-        picture: "Imagen"
+        picture: Imagen
       reward:
         days_to_delivery: "Previsão de entrega"
         maximum_backers: "Máximo de apoiadores (opcional)"
@@ -572,7 +572,7 @@ pt:
         submit: "Revisar e realizar pagamento"
         title: "Apoie o %{name}"
         anonymous_warning_html: "<strong>Você tem certeza que quer que seu apoio seja anônimo?</strong> Deixar seu apoio público aumenta sua reputação e conta pontos para o nosso ranking de apoiadores.<br/><br/>Além disso, o valor do seu apoio não será divulgado para ninguém além do dono do projeto. Somente o proponente terá acesso a essa informação, independente se o seu investimento seja público ou anônimo."
-        continue: "Continuar"
+        continue: Continuar
         back_faq:
           title: "Quero apoiar, e agora?"
           question_1: "Como eu apoio este projeto?"
@@ -746,8 +746,6 @@ pt:
       title: "Apoie e ganhe..."
       versions: "Veja a versão anterior."
       updated_at: "Modificado em"
-      delete: "Eliminar Recompensa"
-      view: Ver
     send_mail:
       success: "Seu projeto foi enviado com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
@@ -765,7 +763,7 @@ pt:
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
       pictures:
-        delete: "Eliminar"
+        delete: Eliminar
         error: "Hubo un error adicionando la imagen"
         save_changes: "Guardar Cambios"
       documents:
@@ -1089,135 +1087,135 @@ pt:
       text_eight: "Quando não está programando gosta de projetar circuitos e se arriscar no piano."
     tools:
       for_backers:
-        description: 'Descripción de las herramientas para donantes'
+        description: "Descripción de las herramientas para donantes"
         tool_1:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_3:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_4:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_5:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_6:
-          title: 'Todo para donantes.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo para donantes.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
       about_project:
-        description: 'Descripción de las herramientas sobre projectos'
+        description: "Descripción de las herramientas sobre projectos"
         tool_1:
-          title: 'Todo sobre tu campaña.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo sobre tu campaña.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       after_project:
-        description: 'Descripción de las herramientas después de tu campaña'
+        description: "Descripción de las herramientas después de tu campaña"
         tool_1:
-          title: 'Después de tu campaña.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Después de tu campaña.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       venture_course:
-        description: 'Descripción de las herramientas del curso en empredimiento'
+        description: "Descripción de las herramientas del curso en empredimiento"
         tool_1:
-          title: 'Curso en emprendimiento.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Curso en emprendimiento.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
       about_crowdfunding:
-        description: 'Descripción de las herramientas todo sobre CrowdFunding'
+        description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
-          title: 'Todo sobre CrowdFunding.pdf'
-          link:
-          image: 'https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit'
+          title: "Todo sobre CrowdFunding.pdf"
+          link: ~
+          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
         tool_2:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_3:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_4:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_5:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
         tool_6:
-          title:
-          link:
-          image:
+          title: ~
+          link: ~
+          image: ~
     privacy:
       title: "Política de privacidade"
     terms:
@@ -1257,8 +1255,8 @@ pt:
       your_reward: "Sua recompensa"
       project_owner: "Projeto de"
       project_name: "Nome do projeto"
-      cpf_file: "Cédula"
-      state_inscription_file: "RUT"
+      cpf_file: Cédula
+      state_inscription_file: RUT
       user_id: "Id do Usuario"
       certify_request:
         submit: "Certificar colaborações"
@@ -1274,7 +1272,7 @@ pt:
         not_backers: "Selecione pelo menos uma parceria para certificar"
         success: "A solicitação foi enviada com sucesso em breve receber uma resposta"
         subject: "Pedido de certificação de doações"
-        mail_body: 'Veja abaixo as informações que o usuário que solicitou o certificado, a lista de colaborações e certificar e anexado ao certificado e RUT'
+        mail_body: "Veja abaixo as informações que o usuário que solicitou o certificado, a lista de colaborações e certificar e anexado ao certificado e RUT"
     unsubscribes:
       title: "Escolha de quais projetos você deseja receber notificações:"
       updates: "Eu quero receber atualizações dos projetos"

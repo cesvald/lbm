@@ -147,7 +147,7 @@ es:
       title: "Con el <p class='allies_text'>apoyo de</p>"
     channels:
       title: "Conoce nuestros <span class='font_futuraLT_medium'> Canales </span>"
-  accept_terms_html: "He leído y estoy de acuerdo %{link}."
+  accept_terms_html: "He leído y estoy de acuerdo con los %{link}."
   activerecord:
     errors:
       models:
@@ -354,7 +354,7 @@ es:
         days_to_delivery: "Total de días para enviar la recompensa."
     labels:
       backer:
-        anonymous: "Deseo hacer mi colaboración anónima."
+        anonymous: "Quiero que mi colaboración sea anónima."
         credits: "Quiero usar mis créditos para aportar a esto."
         reward: "Selecciona tu recompensa"
         value: "¿De cuánto quieres que sea tu colaboración?"
@@ -516,9 +516,9 @@ es:
         lbm_gift_cards: "Gift Card"
         lbm_gift_cards_info:
           title: "Gift Card"
-          coupon: "Ingresa el código del cupo (Sólo minúsculas y números)"
+          coupon: "Código del cupo (Sólo minúsculas y números)"
           accept_terms_html: "He leido y estoy de acuerdo con los <a href='http://soporte.littlebigmoney.org/knowledgebase/articles/245482-t%C3%A9rminos-de-uso-espa%C3%B1ol'>términos de uso para Gift Cards</a>."
-          submit: "Donar"
+          submit: "Usar Gift Card"
           success: "Pago con Gift Card realizado con éxito!"
           error: "Oops! Hubo un error mientras se registraba tu pago con Gift Card. Por favor intenta de nuevo."
           error_duplicate: "Este Gift Card ya fue utilizado."
@@ -543,11 +543,11 @@ es:
       show:
         error: "Oops! Sólo puedes ingresar a esta página después de apoyar un proyecto."
         moip_message: "Tu transacción fue \"autorizada.\" El código de PayU es \"%{code}\".<br>Si tienes alguna pregunta sobre esta transacción, contacta a PayU directamente."
-        header_subtitle: "Sin tu colaboración este proyecto no tendría éxito"
-        header_title: "¡Gracias!"
+        header_subtitle: "Sin tu colaboración este proyecto no tendría éxito. Bienvenido al equipo!"
+        header_title: "Gracias! :)"
         text_subtitle: "Cuéntale a todos sobre esto!"
-        recommended_projects: "También puedes aportar a estos proyectos"
-        text_title_html: "<p class='exclamation'>¡Ahora eres parte del equipo!</p> Haz todo lo posible para cumplir la meta %{link}"
+        recommended_projects: "También puedes aportar a estos proyectos:"
+        text_title_html: "Ahora eres parte del equipo! Haz todo lo posible para cumplir la meta %{link}"
         title: Gracias
       checkout:
         no_credits: "No tienes suficiente crédito para aportar a este proyecto."
@@ -572,7 +572,7 @@ es:
         submit: "Revisar y realizar el pago"
         title: "Colabora con %{name}"
         anonymous_warning_html: "<strong>¿Seguro deseas que tu aporte sea anónimo?</strong> Dejar tu aporte público aumenta tu reputación y suma en nuestro rango de colaboradores. <br/><br/>Por otra parte, el valor de tu aporte no será compartido con nadie más que el dueño del proyecto. Sólo el administrador podrá acceder a esta información, con independencia de que tu aporte sea público o anónimo."
-        continue: "Continuar"
+        continue: Continuar
         back_faq:
           title: "Quiero aportar y lo quiero hacer ahora"
           question_1: "¿Cómo puedo aportar a este proyecto?"
@@ -746,8 +746,6 @@ es:
       title: "Colabora y recibe"
       versions: "Ver la versión anterior"
       updated_at: "Última modificación"
-      delete: "Eliminar Recompensa"
-      view: Ver
     send_mail:
       success: "Tu proyecto fue creado exitosamente! Te contactaremos próximamente. Muchas gracias!"
     show:
@@ -847,7 +845,7 @@ es:
       rewards_important: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
       submit: "Enviar tu proyecto!"
       send_project: "Quiero enviar mi proyecto."
-      legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>Es muy importante:LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el <a href='https://docs.google.com/a/catarse.me/document/d/1wLDS2lphQ6monovg9rEaTIDcxBD3FRZV9dfGKmajyj8/edit' target='_blank' >perfil</a>, podrá ser no aprobado por nuestro equipo.</span></p>"
+      legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>Es muy importante:LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
     twitter:
       take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
     video_embed:
@@ -911,16 +909,16 @@ es:
       title_magic: "Nuestra fórmula mágica"
       magic: "Creemos que propiciar encuentros entre personas que compartan intereses al rededor de un proyecto, es la mejor forma de volverlos realidad e incrementar su potencial. Por eso, utiliza LittleBigMoney como un canal para generar una red con un objetivo COMÚN."
       title_money: "¿De dónde viene el dinero que hace posible la realización de los proyectos?"
-      money: "Al menos un 50% vendrá de tu red de contactos. LittleBigMoney es un medio que te permite aproximarte a personas afines a tus ideas y trabajo, para que así puedas generar una red de colaboradores a través de la divulgación en redes sociales, periódicos, revistas, blogs y claro tus sitios de reunión favoritos."
+      money: "Al menos un 80% vendrá de tu red de contactos, así que esfuérzate al máximo por dar a conocer tu idea y tu trabajo a tu familia, amigos y a todas aquellas personas que creen y apuestan por tu iniciativa. A través de LittleBigMoney podrás encontrar personas afines a tu proyecto."
       title_work: "¿Hay que dedicarle mucho tiempo?"
       work: "Si mucho! En internet no hay \"dinero fácil\". Tendrás que trabajar bastante antes, durante y después del periodo de duración de tu proyecto. Aunque no es posible saber cómo será el resultado de estos esfuerzos hasta el final de la campaña en línea. Este proceso te será útil para perfeccionar tu proyecto y fortalecer una red de personas que creen en tu trabajo."
       title_costs: "¿Qué costo tiene usar LittleBigMoney?"
       costs: "Registrarse, enviar un proyecto y realizar una colaboración no tiene costo alguno. Cuando tu proyecto cumple la meta, LittleBigMoney cobra una comisión del 6%. Adicionalmente los medios de pago cobran una comisión entre el 5% y 7% sobre el total de los fondos movilizados, esta variación de la tasa corresponde al número de transacciones locales e internacionales realizadas, así como la tasa de cambio."
       why: "¿Por qué LittleBigMoney?"
-      intro: "Antes que nada, es relevante que sepas el por qué de esta nueva alternativa de financiación y la importancia del colectivo como fuente de colaboración:"
-      why_one: "Poca intermediación y bajo riesgo financiero; sin intereses, sin acciones, y una promoción al aire sin costo alguno. Pero sobre todo, con mucha emoción y diversión."
-      why_two: "Un gran esfuerzo en la comunicación de tu proyecto puede expandir rápidamente tus ideas hacia mucha gente, mejorando tus propuestas, y fortaleciendo tu red de colaboradores."
-      why_three: "Ampliando tu red y cercanías, tu campaña puede abrir puertas para nuevos proyectos, además de nuevas ideas, aliados y conexiones inesperadas."
+      intro: "Antes que nada, es importante que sepas el por qué de esta nueva alternativa de financiación y la importancia del colectivo como fuente de colaboración:"
+      why_one: "Esta alternativa representa poca intermediación y bajo riesgo financiero: sin intereses, sin acciones y una promoción al aire sin costo alguno, pero sobre todo mucha emoción y diversión."
+      why_two: "Existe porque implica básicamente un gran esfuerzo en la comunicación de tu proyecto la que puede expandir rápidamente tus ideas hacia mucha gente, mejorando tus propuestas y fortaleciendo tu red de colaboradores."
+      why_three: "Al usar esta plataforma colaborativa, podrás ampliar tu red para que tu campaña pueda abrir puertas a nuevas oportunidades."
     guidelines_tips:
       title: "Ya casi!"
       subtitle: "Antes de que envíes tu proyecto, vale la pena revisar algunos puntos importantes."
@@ -991,50 +989,50 @@ es:
     guidelines:
       title: "¡Bienvenido a este, tu espacio!"
       subtitle: "Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados. "
-      description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del pais, que juntos permiten la realización de proyectos con impacto social o ambiental en pro fortalecimiento económico y la realizacion de metas de diversas comunidades."
-      description_paragraph_2: "Ya sea aportando o recibiendo puedes contribuir con el crecimiento de nuestro país."
-      send_project_title: "¡Lo que debes tener en cuenta para enviar proyectos!"
+      description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
+      description_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees o incluso crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa."
+      send_project_title: "¡Ten en cuenta al enviar tu proyecto!"
       project_send:
         phrase_1: "Ideas creativas y realizables"
         phrase_2: "Impacto y beneficios colectivos"
         phrase_3: "Recompensas no financieras"
         phrase_4: "No apoyamos proyectos personales o sin resultados claros"
-        phrase_5: "Ideas creativas y realizables"
+        phrase_5: "Convoca tu comunidad"
       network_title: "Utiliza tus redes personales para movilizar tu proyecto"
       network_description: "Trabaja a diario por promocionar tu proyecto en todas las redes sociales <span class='color-carrot'>(facebook, instagram, twitter, etc)</span> y comparte tus ideas con amigos y conocidos para poder así alcanzar tu meta. No pierdas de vista esta recomendación, la promoción es vital para alcanzar tu meta."
       budget_title: "Uso de los recursos recaudados"
-      budget_description: "Desglosa y explica claramente cuáles son las acciones que vas a realizar con los fondos que recibas. <span class='color-carrot'>La TRANSPARENCIA es lo más importante para generar confianza.</span> Puedes incluir un link para una hoja de cálculo de GOOGLE DOCS para que todos los interesados puedan descargarlo y explorar tu presupuesto."
-      description_end_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del pais, que juntos permiten la realización de proyectos con impacto social o ambiental en pro fortalecimiento económico y la realizacion de metas de diversas comunidades."
-      description_end_paragraph_2: "Ya sea aportando o recibiendo puedes contribuir con el crecimiento de nuestro país."
+      budget_description: "Desglosa y explica claramente cuáles son las acciones que vas a realizar con los fondos que recibas. <span class='color-carrot'>La TRANSPARENCIA es lo más importante para generar confianza.</span> Puedes incluir un link para una hoja de cálculo de GOOGLE DOCS para que todos los interesados puedan descargarlo y explorar tu presupuesto.Si al final tu proyecto no llega a la meta pero supera los COP $500.000 en recaudos quedará parcialmente financiado y podrás destinar los fondos a tus actividades clave."
+      description_end_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
+      description_end_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees o incluso crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa."
       success:
         title: "Proyectos exitosos"
         how_works: "¿Cómo funciona?"
-        how_work_explanation: "how works explanation Lorem ipsum dolor sit amet, ad vis noster vivendo. Duo detracto iracundia ea, debitis voluptua eos ei, modus atomorum ius ne. Id nec amet elit torquatos, ut vix malis soleat. Epicuri rationibus liberavisse et sea."
+        how_work_explanation: "Si los aportes al proyecto logran alcanzar o superar el 100% de la meta propuesta el proyecto se denominará “Proyecto exitoso” y los fondos recaudados serán entregados al emprendedor para ser utilizados en sus propósitos prioritarios."
         take_into_account: "¿Qué debes tener en cuenta?"
-        take_into_account_explanation: "take into account Lorem ipsum dolor sit amet, ad vis noster vivendo. Duo detracto iracundia ea, debitis voluptua eos ei, modus atomorum ius ne. Id nec amet elit torquatos, ut vix malis soleat. Epicuri rationibus liberavisse et sea."
+        take_into_account_explanation: "Los objetivos que se trazan desde un principio permiten que el desarrollo del proyecto sea más claro. Tener un proyecto exitoso implica que la gestión de los recursos fue completada en su totalidad. No esperes a que los fondos lleguen solos, ¡esfuérzate por atraerlos!"
         project_use: "¿Para qué tipo de proyectos se usa?"
-        project_use_explanation: "project use Lorem ipsum dolor sit amet, ad vis noster vivendo. Duo detracto iracundia ea, debitis voluptua eos ei, modus atomorum ius ne. Id nec amet elit torquatos, ut vix malis soleat. Epicuri rationibus liberavisse et sea."
+        project_use_explanation: "Son apoyados proyectos que tengan metas claras, que tengan impacto social o ambiental. Como ejemplo de ello, mira el caso de crear tu campaña para financiar la construcción de un hogar de interés social. Si solicitas el dinero para este fin, no podrás cumplir tu meta con la mitad del dinero pues no puedes construir la mitad de la casa."
       partial_success:
-        title: "Proyectos parcialmente exitosos"
+        title: "Proyectos parcialmente financiados"
         how_works: "¿Cómo funciona?"
-        how_work_explanation: "how works explanation Lorem ipsum dolor sit amet, ad vis noster vivendo. Duo detracto iracundia ea, debitis voluptua eos ei, modus atomorum ius ne. Id nec amet elit torquatos, ut vix malis soleat. Epicuri rationibus liberavisse et sea."
+        how_work_explanation: "Si los aportes al proyecto logran como mínimo alcanzar los $500.000 COP, es decir, un porcentaje de la meta propuesta, el proyecto se denominará “Proyecto parcialmente financiado”  y los fondos que se logren recaudar serán entregados al emprendedor para ser utilizados en sus propósitos prioritarios."
         take_into_account: "¿Qué debes tener en cuenta?"
-        take_into_account_explanation: "take into account Lorem ipsum dolor sit amet, ad vis noster vivendo. Duo detracto iracundia ea, debitis voluptua eos ei, modus atomorum ius ne. Id nec amet elit torquatos, ut vix malis soleat. Epicuri rationibus liberavisse et sea."
+        take_into_account_explanation: "Financiar parcialmente tu proyecto te permitirá tener una flexibilidad sobre el mismo. Sin embargo, debes tener un objetivo económico claro que pueda ser cumplido por etapas."
         project_use: "¿Para qué tipo de proyectos se usa?"
-        project_use_explanation: "project use Lorem ipsum dolor sit amet, ad vis noster vivendo. Duo detracto iracundia ea, debitis voluptua eos ei, modus atomorum ius ne. Id nec amet elit torquatos, ut vix malis soleat. Epicuri rationibus liberavisse et sea."
+        project_use_explanation: "Son apoyados proyectos que permitan financiar objetivos por etapas. Esto quiere decir que si no se financia la totalidad del proyecto, aún se puede contar con los recursos gestionados a través de la plataforma para llevar a cabo las actividades clave."
       more_title: "Conoce Más de LittleBigMoney"
       lbm_objective_title: "¿Cuál es el objetivo de LittleBigMoney?"
-      lbm_objective_explanation: "Somos el punto de encuentro entre buenas ideas y personas que quieren contribuir a su implementación, creando una red alrededor de un objetivo COMÚN."
+      lbm_objective_explanation: "Somos el punto de encuentro de buenos proyectos y de personas que con sus aportes los hacen realidad, creando una red alrededor de objetivos COMUNES."
       money_come_title: "¿De dónde viene el dinero que hace posible la realización de los proyectos?"
       moeny_come_explanation: "Al menos un 50% vendrá de tu red de contactos, así que esfuérzate al máximo por dar a conocer tu idea en tu trabajo, con tus famiia y amigos, en redes sociales y a través de cualquier otro medio que se te ocurra. LittleBigMoney se encargará de conseguir que personas afines a tu proyecto puedan conocerlo y así lograr tu meta! "
       time_dedication_title: "¿Hay que dedicarle mucho tiempo?"
-      time_dedication_explanation: "Si, mucho! En internet no hay 'dinero fácil'. Tendrás que trabajar bastante antes, durante y después del periodo de duración de tu proyecto para dar a conocer a los demás lo genial que es tu idea. "
+      time_dedication_explanation: "Si, ¡mucho! En internet no hay \"dinero fácil\". Tendrás que trabajar bastante antes, durante y después del periodo de duración de tu proyecto para dar a conocer a los demás lo genial que es tu idea. "
       cost_title: "¿Qué costo tiene usar LittleBigMoney?"
-      cost_description: "LittleBigMoney cobra una comisión del 6%. Adicionalmente los medios de pago cobran una comisión entre el 5% y 7% sobre el total de los fondos movilizados, esta variación de la tasa corresponde al número de transacciones locales e internacionales realizadas, así como la tasa de cambio."
-      why_title: "Antes que nada, es relevante que sepas el por qué de esta nueva alternativa de financiación y la importancia del colectivo como fuente de colaboración:"
-      reason_1: "Poca intermediación y bajo riesgo financiero; sin intereses, sin acciones, y una promoción al aire sin costo alguno. Pero sobre todo, con mucha emoción y diversión."
-      reason_2: "Un gran esfuerzo en la comunicación de tu proyecto puede expandir rápidamente tus ideas hacia mucha gente, mejorando tus propuestas, y fortaleciendo tu red de colaboradores."
-      reason_3: "Ampliando tu red y cercanías, tu campaña puede abrir puertas para nuevos proyectos, además de nuevas ideas, aliados y conexiones inesperadas."
+      cost_description: "Al momento del desembolso, la plataforma descuenta 2 comisiones del monto total recogido:1. Comisión del 8% por medios de pago utilizados. 2. Comisión del 6% para cubrir costos financieros y operativos de la plataforma."
+      why_title: "Antes que nada, es importante que sepas el por qué de esta nueva alternativa de financiación y la importancia del colectivo como fuente de colaboración:"
+      reason_1: "Esta alternativa representa poca intermediación y bajo riesgo financiero: sin intereses, sin acciones y una promoción al aire sin costo alguno, pero sobre todo mucha emoción y diversión."
+      reason_2: "Existe porque implica básicamente un gran esfuerzo en la comunicación de tu proyecto la que puede expandir rápidamente tus ideas hacia mucha gente, mejorando tus propuestas y fortaleciendo tu red de colaboradores."
+      reason_3: "Al usar esta plataforma colaborativa, podrás ampliar tu red para que tu campaña pueda abrir puertas a nuevas oportunidades."
       rol_play: "¿Qué rol deseas jugar hoy?"
       new_project: "Crear una camapaña"
       back_project: "Aporta a una camapaña"
@@ -1091,50 +1089,50 @@ es:
       for_backers:
         description: "Descripción de las herramientas para donantes"
         tool_1:
-          title: "Antes de Subir tu proyecto.pdf"
-          link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: "¿Cómo usar mis créditos?donantes.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUOW1ZNHluUGxtaDQ/view"
+          image: ~
         tool_2:
-          title: "Todo para donantes.pdf"
-          link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: "¿Qué sucedió con mi colaboración?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUcEdrZkpzZFdkYVE/view"
+          image: ~
         tool_3:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
         tool_4:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
         tool_5:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
         tool_6:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
       about_project:
         description: "Descripción de las herramientas sobre projectos"
         tool_1:
-          title: "Todo sobre tu campaña.pdf"
-          link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: "¿Cómo subir tu proyecto?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUV1pocERMZnJ1Rmc/view"
+          image: ~
         tool_2:
-          title: ~
-          link: ~
+          title: "Antes de subir tu proyecto.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUSUxLRmRxRlpEM3c/view"
           image: ~
         tool_3:
-          title: ~
-          link: ~
+          title: "¿Cómo promuevo mi proyecto?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUNlpFeFhBNmU3bUE/view"
           image: ~
         tool_4:
-          title: ~
-          link: ~
+          title: "Crear buenas recompensas.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUTzdURjRzLTN5SzQ/view"
           image: ~
         tool_5:
-          title: ~
-          link: ~
+          title: "¿Cómo crear un buen video?"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUdlBxTFB6enRCYms/view"
           image: ~
         tool_6:
           title: ~
@@ -1145,7 +1143,7 @@ es:
         tool_1:
           title: "Después de tu campaña.pdf"
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
         tool_2:
           title: ~
           link: ~
@@ -1171,7 +1169,7 @@ es:
         tool_1:
           title: "Curso en emprendimiento.pdf"
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          image: ~
         tool_2:
           title: ~
           link: ~
@@ -1195,20 +1193,20 @@ es:
       about_crowdfunding:
         description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
-          title: "Todo sobre CrowdFunding.pdf"
-          link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: "Modalidades de financiación.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUSWlFd05INzZ2WlU/view"
+          image: ~
         tool_2:
-          title: ~
-          link: ~
+          title: "Concepto Legal.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
           image: ~
         tool_3:
-          title: ~
-          link: ~
+          title: "¿Qué es un canal?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUTTBKYmlReTBpLVE/view"
           image: ~
         tool_4:
-          title: ~
-          link: ~
+          title: "Reglas de oro.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUa2RrT0VXTUNhc00/view"
           image: ~
         tool_5:
           title: ~

@@ -1,110 +1,155 @@
-[data-controller-class="adm::backerscontroller"][data-action="index"],
-[data-controller-class="adm::projectscontroller"][data-action="index"],
-[data-controller-class="adm::projectscontroller"][data-action="show_review"],
-[data-controller-class="adm::financialscontroller"][data-action="index"],
-[data-controller-class="adm::userscontroller"][data-action="index"],
-[data-controller-class="adm::statisticscontroller"][data-action="index"],
-[data-controller-class="channels::adm::projectscontroller"][data-action="index"]
-  .actions_menu
-    float: left
-    padding: 10px
-    position: absolute
-    background: white
-    list-style: none
-    margin-left: -25px
-    +border-radius(5px)
-    +box-shadow(rgba(black, 0.3) 1px 2px 3px)
+body[data-namespace="adm"]
+  width: auto
+  overflow-x: scroll  
+  [data-controller-class="adm::backerscontroller"][data-action="index"],
+  [data-controller-class="adm::projectscontroller"][data-action="index"],
+  [data-controller-class="adm::projectscontroller"][data-action="show_review"],
+  [data-controller-class="adm::financialscontroller"][data-action="index"],
+  [data-controller-class="adm::userscontroller"][data-action="index"],
+  [data-controller-class="adm::statisticscontroller"][data-action="index"],
+  [data-controller-class="adm::channelscontroller"][data-action="index"],
+  [data-controller-class="adm::channelscontroller"][data-action="new"],
+  [data-controller-class="channels::adm::projectscontroller"][data-action="index"]
+    .actions_menu
+      float: left
+      padding: 10px
+      position: absolute
+      background: white
+      list-style: none
+      margin-left: -25px
+      +border-radius(5px)
+      +box-shadow(rgba(black, 0.3) 1px 2px 3px)
 
-  #page_content
-    .container
-      padding-top: 15px
-      //overflow: hidden
-      .title
-        +grid(16)
-        +alpha
-        padding-bottom: 40px
-      h1
-        color: $ultra_gryn
-        font-size: 28px
-        padding: 5px 0
-      h2
-        color: rgba($ultra_gryn, 0.7)
-        font-size: 18px
-        strong
-          font-weight: bold
-          color: $green
-      fieldset
-        float: left
-        clear: both
-        width: 100%
-        .input
-          float: left
-          margin-right: 20px
-          margin-top: 7px
-          &.check
-            input
-              display: inline
-            label
-              display: inline
-          &.total_results
-            float: right
-          &.submit
-            float: right
-            margin-top: 23px
-          label
-            font-size: 13px
-            margin-bottom: 0px
-      #total_results
-        float: right
-        font-size: 13px
-        padding-top: 2px
-        strong
+    #page_content
+      .container
+        padding-top: 15px
+        //overflow: hidden
+        .title
+          +grid(16)
+          +alpha
+          padding-bottom: 40px
+        h1
+          font-family: 'Futura'
+          font-weight: 400
+          color: $darkblue
+          font-size: 28px
+          padding: 5px 0
+        h2
+          font-family: 'Futura Std'
           font-weight: 700
-          color: $green
-      .pagination
-        text-align: right
-        padding: 20px 0 40px
-        font-size: 13px
-        span.page.current
-          color: rgba(black, 0.3)
-        a
-          color: $carrot
-      
-      .table
-        thead
-          th
+          color: rgba($darkblue, 0.7)
+          font-size: 18px
+          strong        
+            font-weight: bold
+            color: $carrot
+        fieldset
+          float: left
+          clear: both
+          width: 100%
+          .input
+            float: left
+            margin-right: 20px
+            margin-top: 7px
+            &.check
+              input
+                display: inline
+              label
+                display: inline
+            &.total_results
+              float: right
+            &.submit
+              float: right
+              
+            label
+              font-family: 'Futura LT'
+              font-weight: 400
+              font-size: 17px
+              color: $darkblue
+              margin-bottom: 0px
+              padding-left: 5px
+            #between_values_start_at, #between_values_ends_at, #between_created_at_start_at, #between_created_at_ends_at, #between_confirmed_at_start_at, #between_confirmed_at_ends_at
+              width: 186px
+            #between_values_start_at, #between_created_at_start_at, #between_confirmed_at_start_at
+              margin-right: 12px
+        .export-btn
+          font-size: 30px
+        #total_results
+          font-family: 'Futura Std'
+          font-weight: 200
+          float: right
+          font-size: 13px
+          padding-top: 2px
+          color: $darkblue
+          strong
             font-weight: 700
-            font-size: 13px
-            text-align: center
-        tbody
-          tr
-            td
-              font-size: 12px
+            color: $carrot
+        .pagination
+          text-align: right
+          font-size: 15px
+          font-family: 'Futura Std'
+          font-weight: 400
+          color: $darkblue
+          margin-bottom: 0px
+          margin-top: 55px
+          span.page.current
+            color: $carrot
+          a
+            color: $darkblue
+        
+        .table
+          thead
+            th
+              font-family: 'Futura'
+              font-weight: 400
+              font-size: 13px
               text-align: center
-              vertical-align: middle
-              form.form_in_place
-                input
-                  width: 50%
-              &.checkbox
-                color: $blue
-                cursor: pointer
-              img
-                &.project_img
-                  width: 50px
-                &.user_img
-                  width: 30px
-      
-      #review_form
-        textarea
-          width: 75%
-        input
-          margin-bottom: 40px
-  .bootstrap-twitter .btn-group .btn
-    float: right
-  .btn-group .dropdown-menu
-    min-width: 100px
-    li
-      text-align: left
-      a
-        i
-          margin-right: 10px
+              color: $darkblue
+          tbody
+            tr
+              td
+                font-size: 12px
+                text-align: center
+                vertical-align: middle
+                font-family: 'Futura Std'
+                font-weight: 400
+                color: $darkblue
+                form.form_in_place
+                  input
+                    width: 50%
+                &.checkbox
+                  color: $blue
+                  cursor: pointer
+                img
+                  &.project_img
+                    width: 50px
+                  &.user_img
+                    width: 30px
+        
+        #review_form
+          textarea
+            width: 75%
+          input
+            margin-bottom: 40px
+        #new_channel
+          padding: 20px
+          margin-left: $less_half_width
+          .label
+            text-align: left
+          .input
+            float: none
+            margin-right: 0px
+            text-align: left
+            input[type="checkbox"]
+              display: inline-block
+              margin-right: 5px
+          .form-actions
+            background-color: transparent
+    .bootstrap-twitter .btn-group .btn
+      float: right
+    .btn-group .dropdown-menu
+      min-width: 100px
+      li
+        text-align: left
+        a
+          i
+            margin-right: 10px
