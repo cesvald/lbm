@@ -3,24 +3,60 @@ html
   head
     meta content="text/html; charset=utf-8" http-equiv="Content-Type"
     title= message.subject
-  body[style='overflow: hidden']
-    div style="background-image: url(http://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/background.jpg); background-repeat:repeat; margin:0px;padding: 0px; width: 700px;float: left"
-      div style="width: 600px;padding-left: 18px; float:left"
-        img src="http://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/logo.1.png" width="140px" height="73px" style="float: left; margin-left: 20px; margin-top: 30px"
-
-        div style="width: 599px;height: 68px;float: left; background:url(http://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/header_system.png); margin-top: 30px;margin-left: 6px"
-          h3 style="color: #f57421; font-size: 18px;margin-left: 60px;float: left;font-family:Helvetica, Arial, Sans-serif;margin-top: 24px; margin-bottom: 0px; font-style: normal; "
-            = @header || message.subject
-        div style="background: url(http://gallery.mailchimp.com/9d9950758917a323093e71034/images/back_box.jpg);background-repeat: repeat-y; width: 620px; float: left;"
-          #content
-            div style="font-family: Helvetica, Arial, Sans-serif;color: #5d5d5d; font-size: 13px; line-height: 21px;width: 513px; margin-left: 60px; font-style:normal; "
-              br
-              = yield
-        div style="background: url(http://gallery.mailchimp.com/9d9950758917a323093e71034/images/close_box2.png); width: 589px; height: 19px;float: left;margin-left: 15px"
-        div style="float: right; margin-top: 10px; margin-bottom: 30px; height: 25px;width: 100px;"
-          a href="#{::Configuration[:facebook_url]}" style="float: right; width: 25px; height: 25px; margin-left: 5px; margin-right: 5px;" target="_blank"
-            img alt="Facebook" height="25" src="http://gallery.mailchimp.com/9d9950758917a323093e71034/images/icon_facebook.gif" width="25"
-          a href="https://twitter.com/#{::Configuration[:twitter_username]}" style="float: right; width: 25px; height: 25px; margin-left: 5px; margin-right: 5px;" target="_blank"
-            img alt="Twitter" height="25" src="http://gallery.mailchimp.com/9d9950758917a323093e71034/images/icon_twitter.gif" width="25"
-      p
-        br
+  body
+    div style="margin:0px;padding: 0px; width: 918px;float: left"
+      div style="width: 100%; height: 130px; text-align: center"
+        img src="https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/f002a77b-d1b2-4f0d-8d8d-1c0d9e408658.png" style="margin-top: 20px; height:90px"
+      div style="box-shadow: rgba(0,0,0,0.4) 0px 8px 5px -5px, rgba(0,0,0,0.4) 0px -8px 5px -5px; text-align:center"
+        img src="https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/4b2de32e-fe54-48db-a27d-9f9cf6e43885.png" style="display: inline-block; vertical-align: middle; height: 43px"
+        h3 style="color: #DF7722; font-size: 35px; margin-left: 20px; margin-right: 20px; display: inline-block;"
+          = @header || message.subject
+        img src="https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/19d30db1-45ad-4fc6-9e11-c8ae689308dc.png" style="display: inline-block; vertical-align: middle; height: 43px"
+      div style="background:url(https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/7c197bf1-389f-4ca6-8261-4fc1a01e5d57.png); overflow: auto"
+        div style="width: 728px;padding: 30px; float:left; background:white; margin-left: 60px; padding-top:40px; margin-bottom: 20px; box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.4), rgba(0,0,0,0.4) 0px 8px 5px -5px inset;"
+          = yield
+        #footer.box-shadow style="background-color: white; overflow: hidden; width: 100%; margin-top: 30px; display: inline-block"
+          hr style="height: 26px; background-color: #003865; margin-bottom: 25px; margin-top: 0px"
+          .section_wrapper style="display: block; padding-bottom: 10px; overflow: hidden; text-align: center"
+            .section style="height: 80px; display: inline-block; float: left; border-right: solid 2px #aaa; padding: 5px 25px;"
+              img src="https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/dc01f89b-98ab-4129-8493-761971453740.png" style="width: 138px"
+            .section style="height: 80px; display: inline-block; float: left; border-right: solid 2px #aaa; padding: 5px 25px; text-align: left"
+              = link_to t('footer.links.faq'), Configuration[:support_forum], {style: "font-size: 12px; color: #033964; text-decoration: none; line-height: 15px; display: block;"}, target: '_blank'
+              = link_to "#{t('footer.links.terms')} /", t('footer.links.terms_link'), {style: "font-size: 12px; color: #033964; text-decoration: none; line-height: 15px; display: block;"}
+              = link_to t('footer.links.policy'), t('footer.links.policy_link'), {style: "font-size: 12px; color: #033964; text-decoration: none; line-height: 15px; display: block;"}
+              = link_to t('footer.links.our_team'), about_url, {style: "font-size: 12px; color: #033964; text-decoration: none; line-height: 15px; display: block;"}
+              = link_to t('footer.links.work_with_us'), Configuration[:support_forum], {style: "font-size: 12px; color: #033964; text-decoration: none; line-height: 15px; display: block;"}, target: '_blank'
+            .section.contact_section style="height: 80px; display: inline-block; float: left; border-right: solid 2px #aaa; padding: 5px 25px; width: 247px; text-align: left"
+              .contact_title style="margin-top: -6px; margin-bottom: 5px"
+                img src="https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/c4347b61-2f34-4a8f-9257-5f5c20ce207b.png" style="height: 20px; vertical-align: sub;"
+                span style="font-size: 21px; color: #033964; margin-left: 5px;"
+                  = t('footer.links.contact')
+              .contact_left style="width: 252px;"
+                span.label style="font-size: 11px; color: #033964; padding: 0px;"
+                  = "#{t('footer.contact.address_label')}:"
+                span.text style="font-size: 11px; color: #033964;"
+                  = t('footer.contact.address')
+                br
+                span.label style="font-size: 11px; color: #033964; padding: 0px;"
+                  = "#{t('footer.contact.tel_label')}:"
+                span.text style="font-size: 11px; color: #033964;"
+                  = t('footer.contact.tel')
+                span.label style="font-size: 11px; color: #033964; padding: 0px;"
+                  = "#{t('footer.contact.schedule_label')}:"
+                span.text style="font-size: 11px; color: #033964;"
+                  = t('footer.contact.schedule')
+                br
+                span.label style="font-size: 11px; color: #033964; padding: 0px;"
+                  = "#{t('footer.contact.email_label')}:"
+                span.text style="font-size: 11px; color: #033964;"
+                  = t('footer.contact.email')
+            .section.social_section style="display: inline-block; float: left; padding: 5px 25px; padding-right: 0px"
+              .social_wrapper style="float: left"
+                = link_to ::Configuration[:facebook_url], {style:"font-size: 12px; color: #033964; text-decoration: none; line-height: 10px; display: block;"}, target: :_blank do
+                  img src="https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/fa5047f2-7d45-4d05-8c19-f26066d18cd1.png" style="margin-left: 5px; margin-right: 10px; padding-bottom: 7px;"
+                  = t('footer.links.facebook').html_safe
+              .social_wrapper style="float: left"
+                = link_to "https://twitter.com/#{::Configuration[:twitter_username]}", {style:"font-size: 12px; color: #033964; text-decoration: none; line-height: 10px; display: block; margin-left: 10px"}, target: :_blank do
+                  img src="https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/1557c0a7-880d-4805-8f76-0f107daa3708.png" style="padding-bottom: 6px; padding-top: 7px"
+                  = t('footer.links.twitter', twitter: ::Configuration[:twitter_username]).html_safe
+        img src="https://gallery.mailchimp.com/4a1f5054d0cf6af4a40b5423e/images/02b576eb-8fc4-45ad-b15c-63f59363f1f1.png" style="width: 100%; margin-top: -3px; background-color: white"

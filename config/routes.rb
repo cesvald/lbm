@@ -3,6 +3,7 @@ require 'sidekiq/web'
 Catarse::Application.routes.draw do
 
   match '/thank_you' => "static#thank_you"
+  match '/email' => "static#email"
 
   devise_for :users, path: '', 
     path_names:   { sign_in: :login, sign_out: :logout, sign_up: :register }, 

@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
+  layout false
   def guidelines
     @title = t('static.guidelines.title')
   end
@@ -23,6 +24,10 @@ class StaticController < ApplicationController
     @recent       ||= Project.includes(:user, :category).visible.not_expiring.not_expired.where("projects.user_id <> 7329").order('created_at DESC').limit(3).all
     @successful   ||= Project.includes(:user, :category).visible.successful.order("(projects.expires_at) DESC").limit(3).all
     return render 'sitemap'
+  end
+
+  def email
+    @header = "Aporte Confirmado"
   end
 
   def tools
