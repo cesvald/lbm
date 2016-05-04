@@ -5,13 +5,14 @@
       .welcome-message-wrapper
         = image_tag "lbm/hand-icon.png", class: "welcome-icon"
         h1.welcome-message= t('projects.backers.create.you_are_about_html', link: link_to(@project.name, project_by_slug_path(permalink: @project.permalink)))
-      .project-info-wrapper
-        .project_info
-          .review-wrapper
-            #review_text
-              .reward
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacus erat, efficitur at condimentum eu, ultrices id metus. Praesent at aliquam quam. Morbi nunc massa, interdum eget libero ac, tincidunt bibendum elit. Pellentesque accumsan felis eu 
-          = image_tag @project.display_image, id: 'project_image', alt: @project.name, width: '250px'
+      /*
+        .project-info-wrapper
+          .project_info
+            .review-wrapper
+              #review_text
+                .reward
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacus erat, efficitur at condimentum eu, ultrices id metus. Praesent at aliquam quam. Morbi nunc massa, interdum eget libero ac, tincidunt bibendum elit. Pellentesque accumsan felis eu 
+            = image_tag @project.display_image, id: 'project_image', alt: @project.name, width: '250px'
     .bootstrap-form
       = form_for @backer, url: @create_url, id: 'backer_form' do |form|
         #value-container

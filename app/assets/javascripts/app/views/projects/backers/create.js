@@ -139,7 +139,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
     'keyup input[type=text]' : 'everything_ok',
     'click #accept' : 'everything_ok',
     'click #live_in_brazil' : 'showUpAddressForm',
-    'click #anonymous' : 'checkAnonymous',
+    'click #anonymous' : 'updateAnonymous',
     'change select' : 'everything_ok',
     'keyup #user_address_zip_code' : 'onZipCodeKeyUp',
   },
@@ -232,30 +232,20 @@ CATARSE.ReviewForm = Backbone.View.extend({
     });
   },
 
-  checkAnonymous: function(event) {
-    isAnonymous = $(event.target).is(':checked')
-    if(isAnonymous){
-      this.showAnonymousWarning();
-    }
-    else{
-      this.updateAnonymous();
-    }
-  },
-
-  showAnonymousWarning: function(){
-    $('#anonymous-warning').show();
-    $('#lbm-dialog-transparency').fadeIn();
-  },
-
-  updateAnonymous: function(callback) {
+  updateAnonymous: function(event) {
     var backer_id = $('input#backer_id').val();
     var project_id = $('input#project_id').val();
     var backer_data = {
       anonymous: $('#anonymous').is(':checked')
     }
     $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
-      callback(data);
+      console.log(data)
     });
+  },
+
+  showAnonymousWarning: function(){
+    $('#anonymous-warning').show();
+    $('#lbm-dialog-transparency').fadeIn();
   }
 });
 
