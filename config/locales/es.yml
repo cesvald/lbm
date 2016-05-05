@@ -121,6 +121,7 @@ es:
       successful: "Explora proyectos exitosos"
       near: "Explora proyectos cercanos a ti"
       channel_projects: "Conozca el canal %{name}"
+      view_all: "Ver Todos"
   sidebar:
     titles:
       blog: LittleBig-Blog

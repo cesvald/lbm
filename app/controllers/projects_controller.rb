@@ -48,6 +48,7 @@ class ProjectsController < ApplicationController
         @categories = Category.with_projects.order("name_#{I18n.locale}").all
 
         @channels = Channel.not_receive_projects.order("RANDOM()").all
+        @last_channel = Channel.not_receive_projects.last
       end
 
       format.json do

@@ -18,10 +18,10 @@
               = link_to "Conoce más", root_path
             .item.second
               = image_tag("lbm/banner_2.png")
-              = link_to "Conoce más", root_path
+              = link_to "Conoce más", tools_path
             .item.third
               = image_tag("lbm/banner_3.png")
-              = link_to "Conoce más", root_path
+              = link_to "Conoce más", root_url(subdomain: @last_channel.permalink)
           /! Controls
           a.left.carousel-control data-slide="prev" href="#banners_carousel" role="button" 
             span.glyphicon.glyphicon-chevron-left aria-hidden="true" 
@@ -43,7 +43,10 @@
           = image_tag "lbm/recent_icon.png", class: "icon"
           h2= t('sections.recents.title').html_safe
         .explore_link
-          = link_to t('main.links.view_all'), explore_path(anchor: :recent)
+          - if @recent.first.successful?
+            = link_to t('main.links.view_all'), explore_path()
+          - else
+            = link_to t('main.links.view_all'), explore_path(anchor: :recent)
         .projects
           - @recent.each_with_index do |item,i|
             = render 'project', project: item

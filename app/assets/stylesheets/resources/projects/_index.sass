@@ -60,6 +60,20 @@
     padding-top: 20px
     &:nth-child(odd)
       background: url($images_lbm_path+"background_blue.png")
+    .explore_link
+      a
+        float: right
+        margin-right: 14%
+        margin-top: 20px
+        border-radius: 10px
+        border: solid 2px $darkblue
+        padding: 5px 10px
+        color: $darkblue
+        +transition(0.3s, all)
+        &:hover
+          background: $darkblue
+          color: white
+          text-decoration: none
   .categories_container
     .categories_title
       text-align: center

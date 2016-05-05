@@ -121,6 +121,7 @@ en:
       successful: "Explore successful projects"
       near: "Explore projects near to you"
       channel_projects: "Discover channel %{name}"
+      view_all: "View All"
   sidebar:
     titles:
       blog: Blog
