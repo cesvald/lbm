@@ -602,9 +602,10 @@
               width: 144px
               height: 144px
               padding: 20px
-              background: $carrot
-              border: solid 1px $carrot
-              +border-radius(10px)
+              background: $darkgreen
+              border: solid 1px $darkgreen
+              +border-radius(50%)
+              +box-shadow(rgba(black, 0.8) 0px 0px 10px 0px)
               +transition(all, 0.3s)
               text-transform: uppercase
               font-family: 'Futura Std'
@@ -613,15 +614,17 @@
               color: white
               text-align: center
               &:hover
-                color: $carrot
+                color: $darkgreen
                 background: white
-                .puzzle-icon
-                  fill: $orange
-              .puzzle-icon
+                +box-shadow(rgba($darkgreen, 0.8) 0px 0px 10px 0px)
+                .money-icon
+                  fill: $darkgreen
+              .money-icon
                 fill: white
-                width: 58px
+                width: 62px
                 +transition(all, 0.3s)
-
+          .static-row
+            display: table-row
           .statistic-wrapper
             width: 144px
             height: 144px
@@ -629,10 +632,13 @@
             border: solid 2px $oceanblue
             text-align: center
             margin-bottom: 20px
+            margin-top: 20px
             +border-radius(10px)
-            .money-icon
-              width: 61px
-              fill: $oceanblue
+            &.goal
+              display: table-cell
+              vertical-align: middle
+              .subdescription
+                font-size: 16px
             .description
               font-family: 'Futura Std'
               font-weight: 700

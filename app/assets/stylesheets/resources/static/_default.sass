@@ -27,16 +27,30 @@
       .illustration-container
         text-align: center
         background-color: transparent
+        margin-top: 35px
         .illustration
-          height: 290px
-          background-color: $oceanblue
-          padding: 20px
-          border-radius: 10px
           width: 25%
-          display: inline-block
           margin-right: 30px
+          vertical-align: top
+          display: inline-block
           &:last-child
             margin-right: 0px
+          img
+            width: 100%
+            margin-bottom: 10px
+          .text-row
+            display: table-row
+            .text
+              display: table-cell
+              vertical-align: middle
+              font-family: 'Futura Std'
+              font-weight: 200
+              font-size: 13px
+              color: white
+              background-color: $darkblue
+              padding: 10px
+              border-radius: 10px
+              height: 92px
       .container
         background-image: url($images_lbm_path + "background_blue.png")
         width: 100%
@@ -261,10 +275,17 @@
           cursor: pointer
           &:last-child
             border-right: none
+          &:hover
+            .tool-icon
+              fill: $oceanblue
+              stroke: $oceanblue
+            .tool-text
+              color: $oceanblue
           .tool-icon
             height: 41px
             stroke: $carrot
             fill: $carrot
+            +transition(0.3s, fill)
           .tool-text
             display: inline-block
             margin-left: 10px
@@ -276,6 +297,7 @@
             line-height: 22px
             text-align: left
             cursor: pointer
+            +transition(0.3s, color)
             .enfasis
               font-family: 'Futura LT'
               font-weight: 400

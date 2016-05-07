@@ -1,7 +1,7 @@
 .media
   = image_tag @project.display_video_thumbnail, class: 'project_full_image hide'
   .video
-    iframe src="#{@project.display_video_embed_url}" width="830" height="600" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+    iframe src="#{@project.display_video_embed_url}" width="830" height="415" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
 .status_bar
   .progress style="width: #{@project.display_progress}%;"
 span.status_text ="#{@project.display_progress}% #{t('projects.back_project.reached_of')}"

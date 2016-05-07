@@ -10,8 +10,21 @@
       .row.illustration-container
         .col-xs-12
           .illustration
+            = image_tag 'lbm/illustration-1.png'
+            .text-row
+              .text
+                = t('static.guidelines.illustration_1')
+
           .illustration
+            = image_tag 'lbm/illustration-2.png'
+            .text-row
+              .text
+                = t('static.guidelines.illustration_2')
           .illustration
+            = image_tag 'lbm/illustration-3.png'
+            .text-row
+              .text
+                = t('static.guidelines.illustration_3')
 
       .row.description-container.container.container-with-icon
         .col-xs-12
@@ -111,22 +124,27 @@
       .row.tools-container.container
         .col-xs-10.col-xs-offset-1
           .tool-wrapper
+            = link_to tools_path(anchor: "for-backers") do
               = embedded_svg "lbm/for-backers-icon.svg", class: "tool-icon"
               .tool-text
                 = t('static.guidelines.all_for_backers').html_safe
           .tool-wrapper
+            = link_to tools_path(anchor: "about-project") do
               = embedded_svg "lbm/about-project-icon.svg", class: "tool-icon"
               .tool-text
                 = t('static.guidelines.about_project').html_safe
           .tool-wrapper
+            = link_to tools_path(anchor: "after-project") do
               = embedded_svg "lbm/after-project-icon.svg", class: "tool-icon"
               .tool-text
                 = t('static.guidelines.after_project').html_safe
           .tool-wrapper
+            = link_to tools_path(anchor: "venture-course") do
               = embedded_svg "lbm/venture-course-icon.svg", class: "tool-icon"
               .tool-text
                 = t('static.guidelines.venture_course').html_safe
           .tool-wrapper
+            = link_to tools_path(anchor: "about-crowdfunding") do
               = embedded_svg "lbm/about-crowdfunding-icon.svg", class: "tool-icon"
               .tool-text
                 = t('static.guidelines.about_crowdfunding').html_safe

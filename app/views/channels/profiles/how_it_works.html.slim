@@ -1,9 +1,13 @@
 = content_for(:title, t('channels.how_it_works.title', channel: @profile.name))
 #how_it_works.channels
-  #page_content.projects
-    .container
-      h1= t('channels.how_it_works.title', channel: @profile.name)
-      hr
-      = @profile.how_it_works_html.html_safe
-      .send= link_to t('channels.send_your_project'), new_project_path, class: [:ch_button, :ch_button_ok, :ch_button_green], title: t('channels.accessibility.send_your_project')
+	#page_content.projects
+		.container
+			= image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
+			h1= t('channels.how_it_works.title', channel: @profile.name)
+			= image_tag "lbm/hand-icon.png", class: "hand-icon"
+			hr
+			= @profile.how_it_works_html.html_safe
+			= embedded_svg "lbm/puzzle-icon.svg", class: "puzzle-icon"
+			.send= link_to t('channels.send_your_project'), new_project_path, class: "lbm-button", title: t('channels.accessibility.send_your_project')
+			= image_tag 'lbm/plain-icon.png', class: "plain-icon"
 = render 'footer'
