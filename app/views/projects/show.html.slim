@@ -102,6 +102,7 @@
               .statistics
                 .static-row
                   .statistic-wrapper.goal
+                    = embedded_svg "lbm/money-icon.svg", class: "money-icon"
                     em.subdescription
                       = "#{@project.display_pledged} #{t('statistics.goal.subtitle', total: @project.display_goal).html_safe}"
                 .statistic-wrapper
