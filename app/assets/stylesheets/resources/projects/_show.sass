@@ -54,6 +54,8 @@
           top: 2px
           fill: white
   #page_content
+    .tab_container
+      margin-top: 30px
     #project_menu
       position: relative
       width: $page_width
@@ -155,18 +157,20 @@
         max-width: 90px
         max-height: 67px
     .section_header
-      padding-top:  40px
-      padding-bottom: 40px
       position: relative
       margin-left: $less_half_width
       left: 50%
       width: $page_width
+      margin-bottom: 20px
       h1
         font-family: 'Futura Std'
-        font-weight: 700
-        font-size: 20px
+        font-weight: 400
+        font-size: 24px
         color: $darkblue
         padding: 5px 0
+        text-align: center
+        b
+          font-size: 30px
       h4
         font-family: 'Futura Std'
         font-weight: 200
@@ -197,29 +201,6 @@
       #project_content
         .content
           overflow: hidden
-      .media
-      .status_bar
-        margin-top: 20px
-        display: inline-block
-        width: 87%
-        background-color: $lightgreen
-        height: 31px
-        overflow: hidden
-        +border-radius(18px)
-        .progress
-          +border-radius(18px)
-          background-color: $darkgreen
-          height: 31px
-          overflow: hidden
-          margin-bottom: 0px
-      .status_text
-        font-size: 24px
-        line-height: 71px
-        font-family: 'Futura'
-        font-weight: 400
-        color: $darkgreen
-        margin-left: 20px
-        vertical-align: top
       .carousel
         margin-top: 30px
         width: 100%
@@ -583,109 +564,117 @@
               .user_reward
                 font-size: 12px
     .sidebar
-      +grid(3)
-      +omega
+      width: 300px
+      margin-left: 14px
       border: none
       float: right
       .info
-        .statistics
-          float: left
-          width: 144px
-          #pledge
-            margin-bottom: 20px
-            button[type="submit"][disabled="disabled"]
-              +opacity(0.6)
-              background: $ultra_gryn
-            button[type="submit"]
-              display: block
-              margin: 0 auto
-              width: 144px
-              height: 144px
-              padding: 20px
-              background: $darkgreen
-              border: solid 1px $darkgreen
-              +border-radius(50%)
-              +box-shadow(rgba(black, 0.8) 0px 0px 10px 0px)
-              +transition(all, 0.3s)
-              text-transform: uppercase
-              font-family: 'Futura Std'
-              font-size: 18px
-              font-weight: 700
-              color: white
-              text-align: center
-              &:hover
-                color: $darkgreen
-                background: white
-                +box-shadow(rgba($darkgreen, 0.8) 0px 0px 10px 0px)
-                .money-icon
-                  fill: $darkgreen
-              .money-icon
-                fill: white
-                width: 62px
-                +transition(all, 0.3s)
-          .static-row
-            display: table-row
+        #statistics
+          background-image: url($images_lbm_path + 'background_blue.png')
+          padding: 20px
           .statistic-wrapper
-            width: 144px
-            height: 144px
-            padding: 15px
-            border: solid 2px $oceanblue
-            text-align: center
-            margin-bottom: 20px
-            margin-top: 20px
-            +border-radius(10px)
-            &.goal
-              display: table-cell
-              vertical-align: middle
-              .money-icon
-                display: none
-              .subdescription
-                font-size: 16px
+            text-align: left
             .description
-              font-family: 'Futura Std'
-              font-weight: 700
-              font-size: 13px
-              color: $oceanblue
-              margin-top: 15px
-              margin-bottom: 0px
-              line-height: 10px
+              .pledged
+                font-family: 'Futura Std'
+                font-weight: 700
+                font-size: 30px
+                color: $darkblue
+                margin-bottom: 0px
+              .goal
+                font-family: 'Futura Std'
+                font-weight: 200
+                font-size: 18px
+                color: $darkblue
+                margin-bottom: 10px
             .subdescription
-              font-size: 13px
+              font-size: 20px
               font-family: 'Futura Std'
-              font-weight: 700
-              color: $oceanblue
-            .time-clock-icon
-              width: 31px
-            .time-remaining
-              font-size: 60px
-              font-weight: 700
-              font-family: 'Futura Std'
-              color: $oceanblue
-              margin-bottom: 0px
-              line-height: 50px
-        #condition
-          float: left
-          padding: 13px 27px 0px
-          padding-right: 16px
-          color: $darkblue
-          background-size: 100%
-          background-repeat: no-repeat
-          &.partial_successful
-            background-image: url($images_lbm_path + 'status_partial_successful.png')
-            color: white
-          &.successful
-            background-image: url($images_lbm_path + 'status_successful.png')
-            color: white
-          &.failed
-            background-image: url($images_lbm_path + 'status_failed.png')
-            color: white
-          &.waiting_confirmation
-            background-image: url($images_lbm_path + 'status_waiting_confirmation.png')
-            color: white
-          p
+              font-weight: 200
+              color: $darkblue
+              .time-clock-icon
+                width: 31px
+                fill: $darkblue
+                vertical-align: bottom
+              .time-remaining
+                font-size: 28px
+                font-weight: 200
+                font-family: 'Futura Std'
+                color: $darkblue
+                margin-left: 10px
+                margin-right: 5px
+                margin-bottom: 0px
+                display: inline-block
+            .status_bar
+              display: inline-block
+              width: 212px
+              background-color: $lightgreen
+              height: 15px
+              overflow: hidden
+              margin-bottom: 50px
+              +border-radius(18px)
+              .progress
+                +border-radius(18px)
+                background-color: $darkgreen
+                height: 15px
+                overflow: hidden
+                margin-bottom: 0px
+            .status_text
+              font-size: 10px
+              line-height: 20px
+              font-family: 'Futura'
+              font-weight: 400
+              color: $darkgreen
+              margin-left: 10px
+              vertical-align: top
+        #pledge
+          margin-bottom: 20px
+          button[type="submit"][disabled="disabled"]
+            background: $ultra_gryn
+            +opacity(0.6)
+          button[type="submit"]
+            display: block
+            margin: 0 auto
+            width: 100%
+            height: auto
+            padding: 20px
+            background: $darkgreen
+            border: solid 1px $darkgreen
+            margin-top: 20px
+            text-transform: uppercase
             font-family: 'Futura Std'
+            font-size: 18px
             font-weight: 700
-            font-size: 11px
+            color: white
+            text-align: center
+            +border-radius(10px)
+            +transition(all, 0.3s)
+            &:hover
+              color: $darkgreen
+              background: white
+      #condition
+        float: left
+        padding: 13px 27px 0px
+        padding-right: 16px
+        color: $darkblue
+        background-size: 100%
+        background-repeat: no-repeat
+        &.partial_successful
+          background-image: url($images_lbm_path + 'status_partial_successful.png')
+          color: white
+        &.successful
+          background-image: url($images_lbm_path + 'status_successful.png')
+          color: white
+        &.failed
+          background-image: url($images_lbm_path + 'status_failed.png')
+          color: white
+        &.waiting_confirmation
+          background-image: url($images_lbm_path + 'status_waiting_confirmation.png')
+          color: white
+        p
+          font-family: 'Futura Std'
+          font-weight: 700
+          font-size: 11px
         .bootstrap-twitter
           .btn-primary
             background-image: -moz-linear-gradient(top, #64CB64, #51A553)
@@ -705,7 +694,6 @@
               font-size: 18px
               font-weight: normal
               text-shadow: 1px 1px white
-        
     #project_edit, #project_reports, #project_documents, #project_pictures
       .bootstrap-twitter
         +grid(14)

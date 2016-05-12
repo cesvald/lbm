@@ -1,10 +1,3 @@
-.media
-  = image_tag @project.display_video_thumbnail, class: 'project_full_image hide'
-  .video
-    iframe src="#{@project.display_video_embed_url}" width="830" height="415" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
-.status_bar
-  .progress style="width: #{@project.display_progress}%;"
-span.status_text ="#{@project.display_progress}% #{t('projects.back_project.reached_of')}"
 .bootstrap-twitter
   #images_carousel.carousel.slide data-ride="carousel" data-interval="10000" data-pause="none"
     .carousel-inner role="listbox"

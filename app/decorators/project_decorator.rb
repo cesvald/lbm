@@ -35,7 +35,7 @@ class ProjectDecorator < Draper::Decorator
   end
 
   def display_mark
-    image_tag "lbm/mark_#{source.state}.png", class: "mark"
+    image_tag "lbm/mark_#{source.state}_#{I18n.locale}.png", class: "mark"
   end
 
   def display_icon_category

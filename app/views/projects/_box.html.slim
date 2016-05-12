@@ -5,8 +5,8 @@
     = link_to project, class: 'link' do
       .cover
         = image_tag project.display_image, itemprop: 'image'
-        - if project.expired?
-          = image_tag "lbm/mark_#{project.state}.png", class: "mark"
+        - if project.expired? && !project.waiting_funds? 
+          = image_tag "lbm/mark_#{project.state}_#{I18n.locale}.png", class: "mark"
     .project_content
       .project_title
         h4= project.name

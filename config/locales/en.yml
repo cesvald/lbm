@@ -121,7 +121,6 @@ en:
       successful: "Explore successful projects"
       near: "Explore projects near to you"
       channel_projects: "Discover channel %{name}"
-      view_all: "View All"
   sidebar:
     titles:
       blog: Blog
@@ -680,7 +679,7 @@ en:
       empty: "Nobody has supported this project so far. How about being the first one?"
     project_header:
       subtitle_html: "A project by %{link}"
-      without_city: "A project in %{category_name}, by %{author}"
+      without_city: "a project in %{category_name}, by %{author}"
       with_city: "A project in %{category_name}, in %{city}, by %{author}"
     project_updates:
       empty: "This project didn't have updates yet. But wait and see =D"

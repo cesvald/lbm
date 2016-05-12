@@ -14,13 +14,13 @@
           /! Wrapper for slides
           .carousel-inner role="listbox"
             .item.active.first
-              = image_tag("lbm/banner_1.png")
+              = image_tag("lbm/banner_1_#{I18n.locale}.png")
               = link_to "Conoce más", explore_path
             .item.second
-              = image_tag("lbm/banner_2.png")
+              = image_tag("lbm/banner_2_#{I18n.locale}.png")
               = link_to "Conoce más", tools_path
             .item.third
-              = image_tag("lbm/banner_3.png")
+              = image_tag("lbm/banner_3_#{I18n.locale}.png")
               = link_to "Conoce más", root_url(subdomain: @last_channel.permalink)
           /! Controls
           a.left.carousel-control data-slide="prev" href="#banners_carousel" role="button" 
@@ -85,7 +85,7 @@
           #channels-swiper-button-prev.swiper-button-prev
           #channels-swiper-button-next.swiper-button-next
 
-      = image_tag "lbm/banner_footer.png", class: "banner_footer"
+      = image_tag "lbm/banner_footer_#{I18n.locale}.png", class: "banner_footer"
       
       = render 'layouts/allies'
 

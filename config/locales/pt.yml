@@ -121,7 +121,6 @@ pt:
       successful: "explore mais projetos bem-sucedidos"
       near: "explore mais projetos próximos"
       channel_projects: "conheça o canal %{name}"
-      view_all: "Ver Todos"
   sidebar:
     titles:
       blog: blog

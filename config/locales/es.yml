@@ -121,7 +121,6 @@ es:
       successful: "Explora proyectos exitosos"
       near: "Explora proyectos cercanos a ti"
       channel_projects: "Conozca el canal %{name}"
-      view_all: "Ver Todos"
   sidebar:
     titles:
       blog: LittleBig-Blog
@@ -680,7 +679,7 @@ es:
       empty: "Este proyecto necesita más entusiasmo. ¿Qué tal que si eres el primero en realizar un aporte?"
     project_header:
       subtitle_html: "Un proyecto de %{link} en"
-      without_city: "Un proyecto en %{category_name}, por %{author}"
+      without_city: "un proyecto en %{category_name}, por %{author}"
       with_city: "Un proyecto en %{category_name}, en %{city} por %{author}"
     project_updates:
       empty: "Aún no te tenemos novedades, pero muy pronto las habrán. No te las pierdas!"
@@ -989,9 +988,6 @@ es:
       explore_projects: "Quiero aportar a este proyecto!"
     guidelines:
       title: "¡Bienvenido a este, tu espacio!"
-      illustration_1: "Este es el lugar donde con pequeñas acciones logramos grandes resultados"
-      illustration_2: "Únete a esta comunidad y podrás ser parte de proyectos de impacto social o ambiental. Los esfuerzos se unen para colaborar a proyectos o para financiar muchas iniciativas."
-      illustration_3: "Ofrecemos un espacio único e innovador para que muchas organizaciones puedan financiar sus propias iniciativas. Conoce nuestros servicios de Canales."
       subtitle: "Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados. "
       description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
       description_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees o incluso crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa."

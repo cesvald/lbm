@@ -11,7 +11,7 @@ script type="text/template" id="project_template"
       a href="<%= url %>"
         .cover
           img src="<%= image %>" itemprop="image"
-          | <% if(expired) { %>
+          | <% if(expired && !waiting_funds) { %>
           | <%= mark_image %>
           | <% } %>
       .project_content
