@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Be sure to restart your server when you modify this file.
 
 if Rails.env.production? && Configuration[:base_domain]

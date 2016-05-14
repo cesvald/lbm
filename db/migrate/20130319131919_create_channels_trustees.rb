@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateChannelsTrustees < ActiveRecord::Migration
   def up
     create_table :channels_trustees do |t|

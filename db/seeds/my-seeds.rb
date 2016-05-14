@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 ## Optional Seed file 
 ## to be used during development
 

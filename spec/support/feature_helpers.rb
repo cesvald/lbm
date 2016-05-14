@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module FeatureHelpers
   def login
     visit new_user_session_path

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ChangeMatchfundingDefault < ActiveRecord::Migration
   def change
   	change_column_default(:backers, :matchfunding, false)

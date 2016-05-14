@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class NotifyUpdateWorker
   include Sidekiq::Worker
   sidekiq_options retry: false

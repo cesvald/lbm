@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UpdateBackersByPeriodViewWithDeletedBackerState < ActiveRecord::Migration
   def up
     drop_view :backers_by_periods

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddCreditsFeeToProjects < ActiveRecord::Migration
   def change
     add_column :projects, :credits_fee, :float

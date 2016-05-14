@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::FinancialsController < Adm::BaseController
   require 'csv'
   inherit_resources

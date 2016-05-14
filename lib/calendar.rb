@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Calendar
   attr_accessor :api_key, :max_results
   CALENDAR_API_URL = "https://www.googleapis.com/calendar/v3/"

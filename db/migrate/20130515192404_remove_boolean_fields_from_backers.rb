@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveBooleanFieldsFromBackers < ActiveRecord::Migration
   def up
     execute "

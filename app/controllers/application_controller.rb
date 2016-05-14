@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- encoding : utf-8 -*-
 require 'uservoice_sso'
 
 class ApplicationController < ActionController::Base

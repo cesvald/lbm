@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveAgreementAndDisbursmentFileFromProjects < ActiveRecord::Migration
   def up
     remove_column :projects, :agreement_file

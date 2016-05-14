@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddBannerTopBottomUrlToChannels < ActiveRecord::Migration
   def change
     add_column :channels, :banner_top_url, :text

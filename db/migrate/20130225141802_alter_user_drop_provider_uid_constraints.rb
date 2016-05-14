@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AlterUserDropProviderUidConstraints < ActiveRecord::Migration
   def up
     execute "

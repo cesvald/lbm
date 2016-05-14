@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddBackerStateMachineIntoStatistics < ActiveRecord::Migration
   def up
     execute <<-SQL

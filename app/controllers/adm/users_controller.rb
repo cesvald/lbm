@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::UsersController < Adm::BaseController
   inherit_resources
   menu I18n.t("adm.users.index.menu", locale: :es) => Rails.application.routes.url_helpers.adm_users_path(locale: :es)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'sidekiq/web'
 
 Catarse::Application.routes.draw do

@@ -1,8 +1,13 @@
+# -*- encoding : utf-8 -*-
 class UserObserver < ActiveRecord::Observer
   observe :user
 
   def before_validation(user)
     user.password = SecureRandom.hex(4) unless user.password || user.persisted?
+  end
+
+  def after_initialize(user)
+    user.name.force_encoding(Encoding::UTF_8)
   end
 
   def after_create(user)

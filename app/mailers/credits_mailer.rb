@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreditsMailer < ActionMailer::Base
   include ERB::Util
 

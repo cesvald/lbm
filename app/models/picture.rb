@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Picture < ActiveRecord::Base
   attr_accessible :picture, :project_id
   validates_presence_of :picture

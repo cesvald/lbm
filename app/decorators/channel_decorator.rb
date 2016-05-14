@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ChannelDecorator < Draper::Decorator
   decorates :channel
   include Draper::LazyHelpers

@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- encoding : utf-8 -*-
 require 'state_machine'
 class Project < ActiveRecord::Base
   include ActionView::Helpers::TextHelper

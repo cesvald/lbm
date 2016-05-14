@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveCuratedPages < ActiveRecord::Migration
   def up
     drop_table :curated_pages

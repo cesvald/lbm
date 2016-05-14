@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Notification < ActiveRecord::Base
   schema_associations
   belongs_to :notification_type # don't know why schema_association did not get it. the FK seems to be in place

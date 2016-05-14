@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module CatarseAutoHtml
   AutoHtml.add_filter(:email_image).with(width: 200) do |text, options|
     text.gsub(/http(s)?:\/\/.+\.(jpg|jpeg|bmp|gif|png)(\?\S+)?/i) do |match|

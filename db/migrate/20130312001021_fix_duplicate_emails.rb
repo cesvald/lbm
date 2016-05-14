@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class FixDuplicateEmails < ActiveRecord::Migration
   def up
     execute "

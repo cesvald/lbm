@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveExpiresAtFromViews < ActiveRecord::Migration
   def up
     execute"CREATE or replace VIEW financial_reports AS

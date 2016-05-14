@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::StatisticsController < Adm::BaseController
   inherit_resources
   defaults  resource_class: Statistics

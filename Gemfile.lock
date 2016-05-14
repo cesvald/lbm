@@ -279,6 +279,7 @@ GEM
       railties (>= 3)
     loofah (1.2.1)
       nokogiri (>= 1.4.4)
+    magic_encoding (0.0.2)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -547,6 +548,7 @@ DEPENDENCIES
   launchy
   letter_opener
   lograge
+  magic_encoding
   newrelic_rpm
   nokogiri
   omniauth

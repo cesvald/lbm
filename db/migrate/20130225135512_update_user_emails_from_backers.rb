@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UpdateUserEmailsFromBackers < ActiveRecord::Migration
   def up
     execute "

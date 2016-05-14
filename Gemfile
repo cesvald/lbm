@@ -7,6 +7,7 @@ gem 'rails',    '3.2.22'
 gem 'sidekiq',  '~> 2.13.0'
 gem 'sinatra', require: false # required by sidekiq web interface mounted on /sidekiq
 
+gem 'magic_encoding'
 # Turns every field on a editable one
 gem 'best_in_place'
 

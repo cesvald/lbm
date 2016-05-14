@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UpdateBackerReportsToBackerStateMachine < ActiveRecord::Migration
   def up
     drop_view :backer_reports

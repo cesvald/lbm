@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateBackerReportsForProjectOwner < ActiveRecord::Migration
   def up
     create_view :backer_reports_for_project_owners, "

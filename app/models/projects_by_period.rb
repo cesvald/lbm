@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProjectsByPeriod < ActiveRecord::Base
   def self.chart
     self.all.reduce([]) do |memo, row|

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class BackersController < ApplicationController
   inherit_resources
   defaults resource_class: Backer, collection_name: 'backs', instance_name: 'back'

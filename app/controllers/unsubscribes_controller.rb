@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UnsubscribesController < ApplicationController
   inherit_resources
   belongs_to :user

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Projects::BackersController < ApplicationController
   inherit_resources
   actions :index, :show, :new, :update_info, :review, :create

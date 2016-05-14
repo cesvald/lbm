@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveProjectsManagers < ActiveRecord::Migration
   def up
     drop_table :projects_managers

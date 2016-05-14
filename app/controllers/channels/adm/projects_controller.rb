@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Channels::Adm::ProjectsController < Adm::BaseController
   menu I18n.t('channels.adm.menu') => Rails.application.routes.url_helpers.adm_projects_path
 

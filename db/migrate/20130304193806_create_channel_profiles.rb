@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateChannelProfiles < ActiveRecord::Migration
   def change
     create_table :channel_profiles do |t|

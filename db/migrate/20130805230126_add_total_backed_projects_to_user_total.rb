@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddTotalBackedProjectsToUserTotal < ActiveRecord::Migration
   def change
     execute <<-SQL

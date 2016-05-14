@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddMatchfundingFactorToChannels < ActiveRecord::Migration
   def change
     add_column :channels, :matchfunding_factor, :float

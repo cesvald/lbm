@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::BaseController < ApplicationController
   inherit_resources
   before_filter do

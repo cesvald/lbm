@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class BackersMailer < ActionMailer::Base
   def request_certify(user, backers, cpf_file, state_inscription_file)
     @backers = backers

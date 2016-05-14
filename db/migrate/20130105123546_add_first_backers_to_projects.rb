@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddFirstBackersToProjects < ActiveRecord::Migration
   def change
     add_column :projects, :first_backers, :text

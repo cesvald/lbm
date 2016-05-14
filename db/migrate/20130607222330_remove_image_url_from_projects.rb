@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveImageUrlFromProjects < ActiveRecord::Migration
   def up
     execute "ALTER TABLE projects DROP IF EXISTS image_url;"

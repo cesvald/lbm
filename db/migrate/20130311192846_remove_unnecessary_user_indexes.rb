@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveUnnecessaryUserIndexes < ActiveRecord::Migration
   def up
     execute "

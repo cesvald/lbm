@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class FixProjectTotalAgainSomeRegexError < ActiveRecord::Migration
   def up
     execute <<-SQL

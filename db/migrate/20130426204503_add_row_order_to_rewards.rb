@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddRowOrderToRewards < ActiveRecord::Migration
   def change
     add_column :rewards, :row_order, :integer

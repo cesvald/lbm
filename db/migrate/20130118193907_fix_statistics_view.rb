@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class FixStatisticsView < ActiveRecord::Migration
   def up
     execute <<-SQL

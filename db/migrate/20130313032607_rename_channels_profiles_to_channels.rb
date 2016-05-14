@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RenameChannelsProfilesToChannels < ActiveRecord::Migration
   def up
     rename_table :channel_profiles, :channels

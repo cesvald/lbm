@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveCreditsFromUsers < ActiveRecord::Migration
   def up
     remove_column :users, :credits
