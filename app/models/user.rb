@@ -115,6 +115,10 @@ class User < ActiveRecord::Base
   scope :has_credits, joins(:user_total).where('user_totals.credits > 0')
   scope :order_by, ->(sort_field){ order(sort_field) }
 
+  def name
+    read_attribute(:name).force_encoding(Encoding::UTF_8)
+  end
+  
   def self.backer_totals
     connection.select_one(
       self.scoped.

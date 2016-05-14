@@ -97,7 +97,7 @@ gem 'enumerate_it'
 gem 'httparty', '~> 0.6.1' # this version is required by moip gem, otherwise payment confirmation will break
 gem 'nokogiri'
 gem 'axlsx_rails', '>= 0.4.0'
-
+gem 'test-unit'
 
 # Translations
 gem 'http_accept_language'
@@ -153,7 +153,6 @@ group :test do
   gem 'jasmine'
   gem 'coveralls', require: false
   gem "selenium-webdriver", "~> 2.34.0"
-  gem 'test-unit'
 end
 
 
