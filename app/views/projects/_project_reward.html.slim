@@ -20,6 +20,10 @@
 - else
   div[id="reward_#{reward.id}"  class="box reward button toggable disabled #{(reward.minimum_value == 0 ? 'selected' : '')} #{('expired' if reward.project.expired?)}" data-id="#{(reward.id) ? reward.id : 0}" data-min-value="#{reward.minimum_value.to_i}"]
     h2= t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe
+    .reward-description
+      .sold-out
+        = t('reward.sold_out')
+      = reward.description
     .reward-wrapper
       em= pluralize(reward.backers.confirmed.count, t('backer_singular'), t('backer_plural'))
       .description-wrapper
