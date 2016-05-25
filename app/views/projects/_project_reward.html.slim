@@ -6,7 +6,13 @@
       = hidden_field_tag '[backer][reward_id]', reward.id
       = form.input :anonymous, as: :hidden, value: false
       = button_tag class: 'box reward button', id: "backer_submit" do
-        = t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe
+        .reward-value
+          = t('projects.rewards.reward_title', minimum: reward.display_minimum).html_safe
+        .reward-description
+          = reward.description
+        .press-option
+          p
+            = t('projects.rewards.reward_payment', value: reward.display_minimum).html_safe
       - if can?(:update, @project)
         = link_to t('projects.show.menu.edit'), { params: {:update_reward => "#{reward.id}"} }, {class: "lbm-button"}
 

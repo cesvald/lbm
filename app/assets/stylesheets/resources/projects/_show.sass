@@ -383,17 +383,48 @@
         #backer_form
           display: inline-block
           .inputs
+            position: relative
             &:hover
-              .lbm-button
-                transform: scale(0.90)
               button
-                transform: scale(0.95)
+                .press-option
+                  opacity: 1
 
             button
               text-transform: uppercase
               text-align: left
               &:hover
-                transform: sclae(1)
+                transform: initial
+              .press-option
+                position: absolute
+                top: 20px
+                left: 20px
+                width: 380px
+                height: 132px
+                background: rgba($darkgreen, 0.9)
+                +border-radius(10px)
+                opacity: 0
+                transition: all 0.3s ease
+                padding: 10px
+                text-align: center
+                &:before
+                  content: ''
+                  display: inline-block
+                  height: 100%
+                  vertical-align: middle
+                  margin-right: -0.25em
+                p
+                  display: inline-block
+                  vertical-align: middle
+                  width: 100%
+                  color: white
+              .reward-description
+                height: 85px
+                font-family: 'Futura Std'
+                font-weight: 200
+                font-size: 12px
+                text-transform: initial
+                color: black
+                overflow-y: auto
             .lbm-button
               position: relative
               z-index: 5

@@ -740,6 +740,7 @@ es:
     rewards:
       reward_title: "Para %{minimum} o más"
       reward_deliver_time: "Tiempo de entrega estimado: %{prevision}"
+      reward_payment: "Donar %{value} y obtener esta recompensa"
       backs_to_confirm:
         one: "1 colaboración esperando confirmación."
         other: "%{count} colaboraciones esperando confirmación."
