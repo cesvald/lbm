@@ -24,7 +24,10 @@ Catarse::Application.routes.draw do
   #mount CatarseMercadopago::Engine => "/", :as => :catarse_mercadopago
   mount CatarseLbmGiftCards::Engine => "/", :as => :catarse_lbm_gift_cards
   # mount CatarsePayroll::Engine => "/", :as => :catarse_payroll
-
+  
+  post '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
+  get 'mercadopago/success', to: 'mercadopago#success', as: :mercadopago_success
+  
   # Non production routes
   if Rails.env.development?
     resources :emails, only: [ :index ]
