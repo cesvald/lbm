@@ -285,6 +285,8 @@ GEM
       treetop (~> 1.4.8)
     mailchimp (0.0.9)
       httparty
+    mercadopago-sdk (0.3.4)
+      json
     mime-types (1.25.1)
     money (5.1.1)
       i18n (~> 0.6.0)
@@ -549,6 +551,7 @@ DEPENDENCIES
   letter_opener
   lograge
   magic_encoding
+  mercadopago-sdk
   newrelic_rpm
   nokogiri
   omniauth
@@ -587,5 +590,8 @@ DEPENDENCIES
   web_translate_it
   weekdays
 
+RUBY VERSION
+   ruby 2.2.4p230
+
 BUNDLED WITH
-   1.11.2
+   1.12.4
