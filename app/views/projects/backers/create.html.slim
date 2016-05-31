@@ -16,8 +16,6 @@
       .welcome-message-wrapper
         = image_tag "lbm/hand-icon.png", class: "welcome-icon"
         h1.welcome-message= t('.you_are_about_html', link: link_to(@project.name, project_by_slug_path(permalink: @project.permalink)))
-        h1= @preference.inspect
-        h1= @preference_data
       .project-info-wrapper
         .project_info
           .review-wrapper
@@ -100,6 +98,9 @@
             
             - PaymentEngines.engines.each do |engine|
               div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path].call(@backer)}" data-form=(engine[:form_path].present? ? "#{engine[:form_path].call(@backer)}" : "asd")]
+            .payment-form
+              = link_to @preference["response"]["init_point"], target:"_blank", class:"submit-wrapper" do
+                = image_tag "lbm/mercadopago.png", class: "payment-icon", alt: "mercadopago-icon"
 
   = render 'layouts/allies'
 = content_for :mouseflow do

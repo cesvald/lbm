@@ -69,8 +69,8 @@ class Projects::BackersController < ApplicationController
       success.html do
         require 'mercadopago.rb'
         mp = MercadoPago.new(::Configuration[:mercadopago_id], ::Configuration[:mercadopago_secret])
-        @preference_data = {"items": [{"title": t('projects.backers.checkout.mercadopago_description'), "quantity": 1, "unit_price": @backer.value.to_f, "currency_id": "COP"}], "notification_url": mercadopago_notification_url, "back_urls": {"failure": ::Configuration[:base_url], "pending": ::Configuration[:base_url], "success": mercadopago_success_url}}
-        @preference = mp.create_preference(@preference_data)
+        preference_data = {"items": [{"title": t('projects.backers.checkout.mercadopago_description', project_name: @backer.project.name, value: @backer.display_value), "quantity": 1, "unit_price": @backer.value.to_f, "currency_id": "COP"}], "notification_url": mercadopago_notification_url, "back_urls": {"failure": ::Configuration[:base_url], "pending": ::Configuration[:base_url], "success": mercadopago_success_url}}
+        @preference = mp.create_preference(preference_data)
         session[:thank_you_backer_id] = @backer.id
         return render :create
       end
