@@ -26,6 +26,7 @@ Catarse::Application.routes.draw do
   # mount CatarsePayroll::Engine => "/", :as => :catarse_payroll
   
   post '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
+  get '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
   get 'mercadopago/success', to: 'mercadopago#success', as: :mercadopago_success
   
   # Non production routes
