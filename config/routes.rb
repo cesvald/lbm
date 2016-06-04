@@ -28,6 +28,7 @@ Catarse::Application.routes.draw do
   post '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
   get '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
   get 'mercadopago/success', to: 'mercadopago#success', as: :mercadopago_success
+  get 'mercadopago/failure', to: 'mercadopago#failure', as: :mercadopago_failure
   
   # Non production routes
   if Rails.env.development?
