@@ -16,7 +16,6 @@
       .welcome-message-wrapper
         = image_tag "lbm/hand-icon.png", class: "welcome-icon"
         h1.welcome-message= t('.you_are_about_html', link: link_to(@project.name, project_by_slug_path(permalink: @project.permalink)))
-        h1= @preference.inspect
       .project-info-wrapper
         .project_info
           .review-wrapper
