@@ -36,7 +36,7 @@ class MercadopagoController < ApplicationController
 
   def proccess_mercadopago_response(params)
     require 'mercadopago.rb'
-    mp = MercadoPago.new(::Configuration[:mercadopago_id_test], ::Configuration[:mercadopago_secret_test])
+    mp = MercadoPago.new(::Configuration[:mercadopago_id], ::Configuration[:mercadopago_secret])
     merchant_order_info = nil
     if params[:topic] == 'merchant_order'
       merchant_order_info = mp.get("/merchant_orders/" + params[:id])

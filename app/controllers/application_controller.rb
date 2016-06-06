@@ -84,8 +84,8 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     if !current_user
-    #  sign_in User.find_by_email("maria.hoyos@fundacioncapital.org"), event: :authentication, store: true
-      sign_in User.find_by_email("valderramago@gmail.com"), event: :authentication, store: true
+      sign_in User.find_by_email("maria.hoyos@fundacioncapital.org"), event: :authentication, store: true
+    #  sign_in User.find_by_email("valderramago@gmail.com"), event: :authentication, store: true
     end
     if params[:locale]
       I18n.locale = params[:locale]
