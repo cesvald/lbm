@@ -7,34 +7,40 @@
       .item
         img
           width: 100%
-        &.first
-          a
-            top: 65%
-            left: 50%
-            margin-left: -26px
-        &.second
-          a
-            top: 65%
-            left: 56%
-        &.third
-          a
-            top: 65%
-            left: 50%
-            margin-left: -80px
-        a
+        .container
           position: absolute
-          color: $darkblue
-          font-family: "Futura Std"
-          font-weight: 700
-          font-size: 24px
-          text-decoration: none
-          padding: 10px 15px
-          border-radius: 10px
-          background-color: rgba(277, 277,277, 0.7)
-          transition: all, 0.3s, ease
-          &:hover
-            color: rgba(277, 277,277, 0.7)
-            background-color: $darkblue
+          top: 0px
+          left: 0px
+          height: 100%
+          text-align: center
+          &:before
+            content: ''
+            display: inline-block
+            height: 100%
+            vertical-align: middle
+            margin-right: -0.25em
+          .message
+            display: inline-block
+            vertical-align: middle
+            padding: 0 10%
+            h1
+              color: white
+              font-family: 'Futura Std'
+              font-weight: 700
+              margin-bottom: 45px
+            a
+              color: $darkblue
+              font-family: "Futura Std"
+              font-weight: 700
+              font-size: 24px
+              text-decoration: none
+              padding: 10px 15px
+              border-radius: 10px
+              background-color: rgba(277, 277,277, 0.7)
+              transition: all, 0.3s, ease
+              &:hover
+                color: rgba(277, 277,277, 0.7)
+                background-color: $darkblue
   .paragraph
     width: 100%
     text-align: center

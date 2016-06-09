@@ -9,19 +9,23 @@
           /! Indicators
           ol.carousel-indicators
             li.active data-slide-to="0" data-target="#banners_carousel" 
-            li data-slide-to="1" data-target="#banners_carousel" 
-            li data-slide-to="2" data-target="#banners_carousel" 
+            /li data-slide-to="1" data-target="#banners_carousel" 
+            /li data-slide-to="2" data-target="#banners_carousel" 
           /! Wrapper for slides
           .carousel-inner role="listbox"
-            .item.active.first
-              = image_tag("lbm/banner_1_#{I18n.locale}.png")
-              = link_to "Conoce más", explore_path
-            .item.second
-              = image_tag("lbm/banner_2_#{I18n.locale}.png")
-              = link_to "Conoce más", tools_path
-            .item.third
-              = image_tag("lbm/banner_3_#{I18n.locale}.png")
-              = link_to "Conoce más", root_url(subdomain: @last_channel.permalink)
+            .item.active
+              = image_tag("lbm/banner_1.png")
+              .container
+                .message
+                  h1
+                    | Hola mundo
+                  = link_to "Conoce más", explore_path
+            /.item.second
+            /  = image_tag("lbm/banner_2_#{I18n.locale}.png")
+            /  = link_to "Conoce más", tools_path
+            /.item.third
+            /  = image_tag("lbm/banner_3_#{I18n.locale}.png")
+            /  = link_to "Conoce más", root_url(subdomain: @last_channel.permalink)
           /! Controls
           a.left.carousel-control data-slide="prev" href="#banners_carousel" role="button" 
             span.glyphicon.glyphicon-chevron-left aria-hidden="true" 
