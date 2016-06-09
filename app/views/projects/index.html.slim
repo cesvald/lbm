@@ -17,9 +17,8 @@
               = image_tag("lbm/banner_1.png")
               .container
                 .message
-                  h1
-                    | Hola mundo
-                  = link_to "Conoce más", explore_path
+                  h1= t 'projects.index.banner_message_1'
+                  = link_to t("projects.index.know_more"), explore_path
             /.item.second
             /  = image_tag("lbm/banner_2_#{I18n.locale}.png")
             /  = link_to "Conoce más", tools_path
