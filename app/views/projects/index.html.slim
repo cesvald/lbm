@@ -9,22 +9,50 @@
           /! Indicators
           ol.carousel-indicators
             li.active data-slide-to="0" data-target="#banners_carousel" 
-            /li data-slide-to="1" data-target="#banners_carousel" 
-            /li data-slide-to="2" data-target="#banners_carousel" 
+            li data-slide-to="1" data-target="#banners_carousel" 
+            li data-slide-to="2" data-target="#banners_carousel"
+            li data-slide-to="3" data-target="#banners_carousel"
+            li data-slide-to="4" data-target="#banners_carousel"
+            li data-slide-to="5" data-target="#banners_carousel"
+            
           /! Wrapper for slides
           .carousel-inner role="listbox"
             .item.active
-              = image_tag("lbm/banner_1.png")
+              = image_tag("lbm/banner_1.jpg")
               .container
                 .message
                   h1= t 'projects.index.banner_message_1'
                   = link_to t("projects.index.know_more"), explore_path
-            /.item.second
-            /  = image_tag("lbm/banner_2_#{I18n.locale}.png")
-            /  = link_to "Conoce más", tools_path
-            /.item.third
-            /  = image_tag("lbm/banner_3_#{I18n.locale}.png")
-            /  = link_to "Conoce más", root_url(subdomain: @last_channel.permalink)
+            .item
+              = image_tag("lbm/banner_2.jpg")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_2'
+                  = link_to t("projects.index.know_more"), tools_path
+            .item
+              = image_tag("lbm/banner_3.jpg")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_3'
+                  = link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
+            .item
+              = image_tag("lbm/banner_4.png")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_4'
+                  = link_to t("projects.index.know_more"), explore_path
+            .item
+              = image_tag("lbm/banner_5.png")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_5'
+                  = link_to t("projects.index.know_more"), tools_path
+            .item
+              = image_tag("lbm/banner_6.png")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_6'
+                  = link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
           /! Controls
           a.left.carousel-control data-slide="prev" href="#banners_carousel" role="button" 
             span.glyphicon.glyphicon-chevron-left aria-hidden="true" 
