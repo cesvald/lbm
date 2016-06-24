@@ -2,6 +2,8 @@ en:
   channel:
     pledged: Pledged
     projects: Projects
+    explore_projects: "Explora Proyectos"
+    explore_subchannels: "Explora Subcanales"
   channels_subscribers:
     created: "You're following the channel now"
     deleted: "You're no longer following this channel"

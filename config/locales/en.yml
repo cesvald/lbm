@@ -344,7 +344,7 @@ en:
         headline: "Summarize your project in 140 characters. This sentence will be the first contact people will have with your project, before even seeing the video. Be creative, clear and direct :)"
         name: "Be as objective as you can. Leave explanations for the About section."
         uploaded_image: "Upload a 512x400 image(.jpg)."
-        video_url: "Paste the URL from a <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a> video. We recommend Vimeo because it looks better and doesn't have ads. This way, your project will look better too! <strong>Produce your video the best you can and specifically for your campaign</strong>. If there is a single thing that differentiates the projects that reach the goal from the others is the video. Watch ;)"
+        video_url: "Paste the URL from a <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a> video. We recommend Vimeo because it looks better and doesn't have ads. This way, your project will look better too! <strong>Produce your video the best you can and specifically for your campaign</strong>. If there is a single thing that differentiates the projects that reach the goal from the others is the video."
         more_links: "Which chanels will be used to spread the word about your project? List here your facebook/twitter/blog/site/ the more you have, the better."
         first_backers: "To reach your financial goal it’s essential to engage with the people who are close to you and the project. So if you can list here who would be your first 20 supporters it would be a great start :)"
       reward:
@@ -455,7 +455,8 @@ en:
         email_text: "Unfortunately the project %{project_link}, that you have supported, did not reach its goal and was not funded at LittleBigMoney.<br><br>In this case, you have received <strong>%{value}</strong> credits to support other projects. You can see other projects at %{project_category}%{explore_category_link}.<br><br>You can also ask for a refund by clicking in %{credits_link}. Remember that you signed up in LittleBigMoney using %{user_provider}. </b> If you have some difficulty in this process, do not hesitate to send an email to financeiro@catarse.me with the subject \"Refund - login issue\".<br><br>(In case you prefer to request a refund, just to remind you, as it appears in %{link_to_term}  of LittleBigMoney, if the support was made by credit card the amount will be returned in the next card bill. If the support was made through bank transfer or check, we will send an email with the procedure yo return the support to you.<br><br>If, for any reason, you want to contact %{project_owner_name} the project owner, send an email to %{project_owner_email}.<br><br>If you have any other doubts, acess our FAQ or send an email to financeiro@catarse.me.<br>"
         notification_text: "You received %{value} in credits to support other projects. If you prefer, you can request a refund %{link}."
         unsuccessful_text: "The project %{link} that you supported didn't have enough funds. Maybe next time!"
-    video_regex_validation: "only Vimeo URLs are allowed"
+    video_regex_validation: "Only Vimeo URLs are allowed"
+    name_regex_validation: "Only alphanumeric characters are allowed"
     display_status:
       expired: expired
       rejected: Rejected
@@ -801,9 +802,9 @@ en:
     new:
       subtitle: "The time to make it happen is now! We really want to know what you're up to"
       title: "Submit your project"
-      leyend_title: "TEN EN CUENTA QUE:"
+      legend_title: "IMPORTANT:"
       introduction_html: "Complete the form below, give us good information! The more information we receive <br/>the better and faster your project will go to the platform."
-      permalink_important: "Try not to use underline, hyphen etc."
+      permalink_important: "Do not use hyphen, spaces or underline."
       permalink_hint: "Go simple. Your supporters should be able to remember the URL to your project ;)"
       important_html: "Keep in mind! The 13% (Approximate) fee will be charged on the total funds raised, in case you reach your financial goal. Just divide your final budget by 0.8492 to find the amount to be deducted."
       about: "Describe your project using this guide!"

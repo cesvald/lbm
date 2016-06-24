@@ -104,9 +104,9 @@ es:
       how_works: "¿Cómo funciona?"
       faq: F.A.Q./Ayuda
       about: "¿Quiénes somos?"
-      terms: "Términos de uso"
+      terms: Legales
       policy: "Políticas de privacidad"
-      terms_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245482"
+      terms_link: "https://drive.google.com/a/fundacioncapital.org/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
       policy_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245484"
       contact: Contacto
       twitter: "<p class='social_follow'>Síguenos en Twitter</p> <p class='social_user'>@%{twitter}</p>"
@@ -344,7 +344,7 @@ es:
         headline: "Resume tu proyecto en 140 caracteres. Esta frase será el primer contacto de las personas con tu proyecto incluso antes de ver el video. Se creativo, transparente y directo :)"
         name: "Sé lo más concreto posible. Deja las explicaciones para el video y la descripción."
         uploaded_image: "Aquí puedes subir una imagen (.jpg) de tamaño 512x400."
-        video_url: "Pega la URL de un video de Vimeo o Youtube. <strong>Realiza tu video lo mejor que puedas y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un proyecto de otro, es el video. Mira ;)"
+        video_url: "Pega la URL de un video de Vimeo o Youtube. <strong>Realiza tu video lo mejor que puedas y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un proyecto de otro, es el video."
         more_links: "¿Qué canales usarás para promocionar la idea de tu proyecto? Puedes Nombralos aquí (facebook/twitter/blog/sitio web) entre más tengas, te puede ayudar más."
         first_backers: "Para que tu campaña tenga éxito, es fundamental que traigas a tus redes de contactos más cercanas. Por eso, cuéntanos quiénes crees que serán tus primeros 20 colaboradores"
       reward:
@@ -407,7 +407,7 @@ es:
       faq: FAQ
       signup: Regístrate
       signin: Ingresa
-      explore: Explora
+      explore: Explore
       invest: "Inversión (Próximamente)"
       submit_project: Envía
       how_it_works: "Cómo funciona"
@@ -455,7 +455,8 @@ es:
         email_text: "Desafortunadamente el proyecto %{project_link} en el que colaboraste, no alcanzó su meta y no ha tenido éxito en LittleBigMoney. <br><br>En este caso, recibiste <strong>%{value}</strong> en créditos para apoyar otros proyectos. puedes conocer más proyectos de %{project_category} %{explore_category_link}.<br><br>Caso prefira, você pode pedir o reembolso do seu dinheiro %{credits_link}. Recuerda que tu registro en la plataforma fue hecho a través de <b>%{user_provider}.</b> Es por él que debes entrar para accesar a tu cuenta. Si tienes alguna dificultad en este proceso, envía un email para (financeiro@catarse.me) con el asunto \"Reembolso - problema en el ingreso\".<br><br>(Caso você prefira solicitar o reembolso, só para lembrar, como constam nos %{link_to_term} do LittleBigMoney, que se o apoio foi feito com cartão de crédito, o valor será estornado na próxima fatura do cartão. Se o apoio foi feito através de transferência bancária ou boleto, enviaremos um email com os procedimentos necessários para poder devolver o valor para você.<br><br>Se, por qualquer motivos, quiser entrar em contato com %{project_owner_name}, realizador do projeto, mande um email para %{project_owner_email}.<br><br>Se tiver alguma outra dúvida, acesse nosso FAQ ou mande um email para o financeiro@catarse.me.<br>"
         notification_text: "Recibiste %{value} en créditos para apoyar otros projetos. Caso prefira, você pode pedir seu dinheiro de volta %{link}."
         unsuccessful_text: "El proyecto %{link} no tuvo suficiente colaboración. Suerte para la próxima!"
-    video_regex_validation: "solo URLs de Vimeo o Youtube son permitidas"
+    video_regex_validation: "Solo URLs de Vimeo o Youtube son permitidas"
+    name_regex_validation: "Solo caracteres alfanuméricos son permitidos"
     display_status:
       expired: finalizado
       rejected: Rechazado
@@ -747,7 +748,6 @@ es:
     rewards:
       reward_title: "Para %{minimum} o más"
       reward_deliver_time: "Tiempo de entrega estimado: %{prevision}"
-      reward_payment: "Donar %{value} y obtener esta recompensa"
       backs_to_confirm:
         one: "1 colaboración esperando confirmación."
         other: "%{count} colaboraciones esperando confirmación."
@@ -800,11 +800,11 @@ es:
         take_a_look: "Echa un vistazo al proyecto"
         title: "Se parte y promociona este proyecto"
     new:
-      subtitle: "Es la hora de hacerlo realidad! Queremos saber del potencial de tu empresa y de tu proyecto"
-      title: "¡AHORA, ENVÍA TU PROYECTO!"
-      leyend_title: ~
+      subtitle: "¡Es hora de hacerlo realidad! Queremos saber del potencial de tu proyecto."
+      title: "ENVÍA TU PROYECTO"
+      legend_title: "IMPORTANTE"
       introduction_html: "Completa el siguiente formulario, danos buena información! Entre más información recibimos <br/>mejor completamos tu proyecto y más rápido irá al irá en la plataforma."
-      permalink_important: "Trata de no usar guión o subrayado"
+      permalink_important: "No uses guión, espacio o guión bajo."
       permalink_hint: "Hazlo simple. Tus colaboradores deben poder recordar la URL de tu proyecto ; )"
       important_html: "Ten en cuenta que el descuento total será de aproximadamente el 14% sobre el valor recogido, si logras completar el monto solicitado. Divide tu presupuesto final por 0.8492 para hallar el monto total que vas a solicitar."
       about: "Describe tu proyecto utilizando esta guía!"
@@ -837,7 +837,7 @@ es:
       first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."
       online_days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
       headline_important: "Se trata de una breve descripción del proyecto, 140 caracteres como máximo!"
-      name_important: "No más de 50 caracteres"
+      name_important: "No más de 50 caracteres alfanuméricos"
       social: "Red de financiamiento"
       facebook_hint: "http://facebook.com/__________"
       twitter_hint: "http:// twitter.com/____________"
@@ -853,7 +853,7 @@ es:
       rewards_important: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
       submit: "Enviar tu proyecto!"
       send_project: "Quiero enviar mi proyecto."
-      legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>Es muy importante:LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
+      legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
     twitter:
       take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
     video_embed:
