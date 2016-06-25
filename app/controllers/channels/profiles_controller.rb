@@ -6,8 +6,10 @@ class Channels::ProfilesController < Channels::BaseController
   custom_actions resource: [:how_it_works]
 
   before_filter{ params[:id] = request.subdomain }
-
+  #before_filter{ params[:id] = 'clicsporsuenos' }
   def show
+    #THIS LINE MUST BE REMOVED=================================
+    
     show! do
       if @profile.group_channels.present?
         channel_ids = @profile.group_channels.map{|p| p.id }

@@ -10,4 +10,5 @@
 				- if locale != I18n.locale.to_s && locale != 'pt'
 					= link_to params.merge(locale: locale), class: "locale-link" do
 						li.locale-option
+							= image_tag ("lbm/locale-world.png"), class: "locale-world"	
 							= t("locale.#{locale}")

@@ -14,39 +14,40 @@
               = image_tag @profile.image, title: @profile.name
         .about
           - if !@profile.parent_channel.nil?
-            #sub-channels-swiper.swiper-container
-              .swiper-wrapper
-                .swiper-slide.sub-channel-slide
-                  .sub-channel
-                    = image_tag @profile.image, title: @profile.name
-                - @profile.parent_channel.group_channels.each do |sub_channel|
-                  - if sub_channel.id != @profile.id
-                    .swiper-slide.sub-channel-slide
-                      .sub-channel
-                        = link_to root_url(subdomain: sub_channel.permalink), class: 'link' do
-                          = image_tag sub_channel.image, title: sub_channel.name
-            #sub-channels-swiper-button-prev.swiper-button-prev
-            #sub-channels-swiper-button-next.swiper-button-next
+            .channel-swiper-container
+              #sub-channels-swiper.swiper-container
+                .swiper-wrapper
+                  .swiper-slide.sub-channel-slide
+                    .sub-channel
+                      = image_tag @profile.image, title: @profile.name
+                  - @profile.parent_channel.group_channels.each do |sub_channel|
+                    - if sub_channel.id != @profile.id
+                      .swiper-slide.sub-channel-slide
+                        .sub-channel
+                          = link_to root_url(subdomain: sub_channel.permalink), class: 'link' do
+                            = image_tag sub_channel.image, title: sub_channel.name
+              #sub-channels-swiper-button-prev.swiper-button-prev
+              #sub-channels-swiper-button-next.swiper-button-next
             
           - else
             p.description   = truncate(@profile.description, length: 210)
           - if @profile.receive_projects?
             strong.headline = t('channels.projects.see_how_it_works')
-            p.buttons       = link_to t('channels.projects.how_it_works'), channels_about_path, class: [:ch_button, :ch_button_ok, :ch_button_green], title: t('channels.accessibility.how_it_works')
+            = link_to t('channels.projects.how_it_works'), channels_about_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
 
   - if @profile.group_channels.present?
     .group-channels
       .container.sub-channel-container
         .title
           = image_tag "lbm/channels_icon.png", class: "icon"
-          h2= t('sections.sub_channels.title').html_safe
+          h2= t('channel.explore_subchannels').html_safe
         ol.projects_list
           - @profile.group_channels.each do |channel|
             = render 'channels/subchannel', channel: channel
       .container.other-channel-container
         .title
           = image_tag "lbm/channels_icon.png", class: "icon"
-          h2= t('sections.other_channels.title').html_safe
+          h2= t('channel.explore_other_channels').html_safe
         .explore_link
           = link_to t('main.links.view_all'), root_path
         .channels
@@ -88,7 +89,7 @@
                 = resource.channels_subscribers.size
         .title
           = image_tag "lbm/recent_icon.png", class: "icon"
-          h2= t('sections.projects_sub_channel.title', channel: @profile.name).html_safe
+          h2= t('channel.explore_projects', channel: @profile.name).html_safe
         .project-list
           - @projects.each do |project|
             = render partial: 'projects/project', locals: { project: project }

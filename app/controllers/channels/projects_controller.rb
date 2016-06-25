@@ -9,7 +9,7 @@ class Channels::ProjectsController < ProjectsController
   after_filter only: [:create] { notify_trustees }
 
   prepend_before_filter{ params[:profile_id] = request.subdomain }
-
+  #prepend_before_filter{ params[:profile_id] = 'escuelataller' }
 
 
 

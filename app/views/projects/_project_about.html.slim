@@ -38,11 +38,12 @@
       - if @project.about.present?
         = @project.about_html.html_safe
 
-#new-reward-opener.lbm-button
-  = t('projects.form.add_reward')
-  span.plus-icon
-    | +
-end
+- if not @project.expired?
+  #new-reward-opener.lbm-button
+    = t('projects.form.add_reward')
+    span.plus-icon
+      | +
+
 #rewards = render partial: 'project_reward', collection: @rewards, as: :reward
 
 #project-history-wrapper

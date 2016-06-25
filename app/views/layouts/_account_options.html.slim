@@ -1,7 +1,7 @@
 #account_options_container
   #account_welcome
     #welcome_message
-      = t('layouts.header.welcome_html', name: current_user.name)
+      = t('layouts.header.welcome_html', name: truncate(current_user.name, length: 17))
     #separator
     #account_options_btn
       .bootstrap-twitter

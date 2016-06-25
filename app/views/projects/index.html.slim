@@ -28,13 +28,13 @@
               .container
                 .message
                   h1= t 'projects.index.banner_message_2'
-                  = link_to t("projects.index.know_more"), tools_path
+                  = link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
             .item
               = image_tag("lbm/banner_3.jpg")
               .container
                 .message
                   h1= t 'projects.index.banner_message_3'
-                  = link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
+                  = link_to t("projects.index.know_more"), tools_path
             .item
               = image_tag("lbm/banner_4.png")
               .container

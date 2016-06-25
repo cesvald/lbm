@@ -1,0 +1,2 @@
+remove from profile channel @profile = Channel.first
+Add again https block
