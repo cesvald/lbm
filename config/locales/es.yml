@@ -382,6 +382,7 @@ es:
         rut_file: RUT
         comercial_file: "Cámara de Comercio"
         bank_certificate_file: "Certificación Bancaria"
+        banking_data_file: "Información Bancaria"
         banking_format_file: ~
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
@@ -754,6 +755,7 @@ es:
       title: "Colabora y recibe"
       versions: "Ver la versión anterior"
       updated_at: "Última modificación"
+      reward_payment: "Dona %{value} y recibe esta recompensa"
     send_mail:
       success: "Tu proyecto fue creado exitosamente! Te contactaremos próximamente. Muchas gracias!"
     show:
@@ -761,6 +763,7 @@ es:
       waiting: "Este proyecto esta esperando aprobación, pronto te contaremos si irá al aire en LittleBigMoney ;)"
       waiting_owner: "Para editar la información del proyecto, haz clic en \"editar proyecto.\" Puedes editar las recompensas en la columna de recompensas."
       about_title: "El proyecto"
+      prev_about_text: "Gracias por apoyar %{name}, un proyecto en %{category}, por %{user}. %{backers} donantes apoyaron esta iniciativa, esperamos seguir generando impacto positivo en la sociedad. Este proyecto es uno de los %{total_projects} proyectos exitosos con los que cientos de personas están cumpliendo sus metas"
       no_rewards_warning_title: "Crea aquí tus recompensas"
       no_rewards_warning: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
       guide_html: ~
@@ -802,7 +805,7 @@ es:
     new:
       subtitle: "¡Es hora de hacerlo realidad! Queremos saber del potencial de tu proyecto."
       title: "ENVÍA TU PROYECTO"
-      legend_title: "IMPORTANTE"
+      legend_title: IMPORTANTE
       introduction_html: "Completa el siguiente formulario, danos buena información! Entre más información recibimos <br/>mejor completamos tu proyecto y más rápido irá al irá en la plataforma."
       permalink_important: "No uses guión, espacio o guión bajo."
       permalink_hint: "Hazlo simple. Tus colaboradores deben poder recordar la URL de tu proyecto ; )"

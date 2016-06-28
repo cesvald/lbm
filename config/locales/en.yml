@@ -383,6 +383,7 @@ en:
         comercial_file: ~
         bank_certificate_file: ~
         banking_format_file: ~
+        banking_data_file: ~
         more_links: "List of project related links"
         first_backers: "List of people who could be your first supporters"
         how_know: "How did you get to know LittleBigMoney?"
@@ -754,6 +755,7 @@ en:
       title: "Support and receive"
       versions: "See the previous version"
       updated_at: "Last modified"
+      reward_payment: "Donate %{value} and receive this reward"
     send_mail:
       success: "Your project was successfully created! We'll contact you soon. Thanks a lot!"
     show:

@@ -33,7 +33,10 @@
         = image_tag 'lbm/social-book-icon.png'
   .about-wrapper
     p
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec aliquet nisi. Morbi iaculis nibh et nulla venenatis, et condimentum urna maximus. Duis sed massa vitae purus dignissim lobortis ut vel nisi. Donec eu varius erat. Aliquam erat volutpat. Suspendisse porttitor porttitor nibh, quis vulputate elit molestie et. Morbi magna velit, hendrerit ac pulvinar at, convallis vitae est. Praesent vel elit non quam facilisis luctus ut faucibus ex.
+      - if @project.created_at < Date.new(2016, 7, 1)
+        = t('projects.show.prev_about_text', name: @project.name, category: @project.category, user: @project.user.name, backers: @project.total_backers, total_projects: Project.successful.count + Project.partial_successful.count)
+      - else
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec aliquet nisi. Morbi iaculis nibh et nulla venenatis, et condimentum urna maximus. Duis sed massa vitae purus dignissim lobortis ut vel nisi. Donec eu varius erat. Aliquam erat volutpat. Suspendisse porttitor porttitor nibh, quis vulputate elit molestie et. Morbi magna velit, hendrerit ac pulvinar at, convallis vitae est. Praesent vel elit non quam facilisis luctus ut faucibus ex.
     /*
       - if @project.about.present?
         = @project.about_html.html_safe

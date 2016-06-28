@@ -382,6 +382,7 @@ pt:
         rut_file: RUT
         comercial_file: "Câmara de comércio"
         bank_certificate_file: "Certificado Bancário"
+        banking_data_file: "Información Bancaria"
         banking_format_file: "Formato de dados bancário"
         more_links: "Lista de Links relacionados a seu projeto *"
         first_backers: "Lista com os primeiros apoiadores *"
@@ -754,6 +755,7 @@ pt:
       title: "Apoie e ganhe..."
       versions: "Veja a versão anterior."
       updated_at: "Modificado em"
+      reward_payment: "Dona %{value} y recibe esta recompensa"
     send_mail:
       success: "Seu projeto foi enviado com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
