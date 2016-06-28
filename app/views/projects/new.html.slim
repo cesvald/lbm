@@ -6,6 +6,7 @@
           h1= t('.title')
           = image_tag 'lbm/plain-icon.png'
         h2= t('.subtitle')
+        = render partial: 'channels/projects/banner'
         .legend-wrapper
           .legend-title-wrapper
             = image_tag "lbm/lbm-logo.png", class: "legend-icon"
@@ -48,7 +49,7 @@
                 = form.label :about, "3. #{t('formtastic.labels.project.about')}"
                 .input-wrapper
                   = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}", maxlength: "220"
-                  p.inline-hints= t('formtastic.hints.project.about')
+                  p.inline-hints= t('formtastic.hints.project.about').html_safe
 
             .input-container
               .input
@@ -70,7 +71,7 @@
                 = form.label :cause, "5. #{t('formtastic.labels.project.cause')}"
                 .input-wrapper
                   = form.text_area :cause, class: "#{'error' if @project.errors[:cause].present?}"
-                  p.inline-hints= t('formtastic.hints.project.cause')
+                  p.inline-hints= t('formtastic.hints.project.cause').html_safe
 
             .input-container
               .input
@@ -81,7 +82,7 @@
                 = form.label :description, "6. #{t('formtastic.labels.project.description')}"
                 .input-wrapper
                   = form.text_area :description, class: "#{'error' if @project.errors[:description].present?}"
-                  p.inline-hints= t('formtastic.hints.project.description')
+                  p.inline-hints= t('formtastic.hints.project.description').html_safe
 
             .input-container
               .input
@@ -92,7 +93,7 @@
                 = form.label :impact, "7. #{t('formtastic.labels.project.impact')}"
                 .input-wrapper
                   = form.text_area :impact, class: "#{'error' if @project.errors[:impact].present?}"
-                  p.inline-hints= t('formtastic.hints.project.impact')
+                  p.inline-hints= t('formtastic.hints.project.impact').html_safe
 
             .input-container
               .input
@@ -114,7 +115,7 @@
                 = form.label :budget, "9. #{t('formtastic.labels.project.budget')}"
                 .input-wrapper
                   = form.text_area :budget, class: "#{'error' if @project.errors[:budget].present?}"
-                  p.inline-hints= t('formtastic.hints.project.budget')
+                  p.inline-hints= t('formtastic.hints.project.budget').html_safe
 
             .input-container
               .input
@@ -125,7 +126,7 @@
                 = form.label :implementation, "10. #{t('formtastic.labels.project.implementation')}"
                 .input-wrapper
                   = form.text_area :implementation, class: "#{'error' if @project.errors[:implementation].present?}"
-                  p.inline-hints= t('formtastic.hints.project.implementation')
+                  p.inline-hints= t('formtastic.hints.project.implementation').html_safe
 
             .input-container
               .input

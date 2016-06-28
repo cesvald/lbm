@@ -98,9 +98,10 @@
             = t('sections.category.title')
           .categories_wrapper
             - @categories.each_with_index do |category, index|
-              .category_circle
-                = embedded_svg "lbm/#{category.icon_text}.svg"
-                p.category_name = category
+              = link_to explore_path(anchor: category.to_s.parameterize) do
+                .category_circle
+                  = embedded_svg "lbm/#{category.icon_text}.svg"
+                  p.category_name = category
                 
       .block_container
         .title
