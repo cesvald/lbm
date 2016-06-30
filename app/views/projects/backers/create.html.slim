@@ -69,7 +69,6 @@
                   = link_to "##{engine[:name]}_payment", id: engine[:name], class: 'selected enabled' , :'data-target' => engine[:review_path].call(@backer) do
                     = t("projects.backers.review.#{engine[:name]}")
           - PaymentEngines.engines.each do |engine|
-            - if engine[:name] != 'paypal'
               div[id="#{engine[:name]}_payment" class="payments_type hide"]
     .clearfix
 = content_for :mouseflow do
