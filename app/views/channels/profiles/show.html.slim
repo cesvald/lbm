@@ -9,7 +9,7 @@
         .video
           .padding
             - if @profile.video_url.present?
-              = content_tag(:iframe, nil, src: @profile.display_video_embed_url)
+              = content_tag(:iframe, nil, src: @profile.video_url)
             - else
               = image_tag @profile.image, title: @profile.name
         .about

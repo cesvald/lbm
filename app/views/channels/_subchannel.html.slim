@@ -2,7 +2,7 @@
 	= link_to root_url(subdomain: channel.permalink), class: 'link' do
 		.video
 			- if channel.video_url.present?
-				= content_tag(:iframe, nil, src: channel.video_url)
+				= content_tag(:iframe, nil, src: channel.display_video_embed_url)
 			- elsif channel.image.present?
 				= image_tag channel.image, title: channel.name
 			- else
