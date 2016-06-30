@@ -9,7 +9,7 @@
         .video
           .padding
             - if @profile.video_url.present?
-              = content_tag(:iframe, nil, src: @profile.video_url)
+              = content_tag(:iframe, nil, src: @profile.display_video_embed_url)
             - else
               = image_tag @profile.image, title: @profile.name
         .about
@@ -32,8 +32,7 @@
           - else
             p.description   = truncate(@profile.description, length: 210)
           - if @profile.receive_projects?
-            strong.headline = t('channels.projects.see_how_it_works')
-            = link_to t('channels.projects.how_it_works'), channels_about_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
+            = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
 
   - if @profile.group_channels.present?
     .group-channels

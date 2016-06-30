@@ -6,11 +6,12 @@
           h1= t('.title')
           = image_tag 'lbm/plain-icon.png'
         h2= t('.subtitle')
+        = render partial: 'channels/projects/banner'
         .legend-wrapper
           .legend-title-wrapper
             = image_tag "lbm/lbm-logo.png", class: "legend-icon"
-            h2.legend-title= t('.legend_title')
-          .legend-text= t('projects.new.legend_html')
+            h2.legend-title= t('projects.new.legend_title')
+          .legend-text= t('.legend_html')
       .bootstrap-form
         .clearfix
         = semantic_form_for @project, html: { id: 'project_form' } do |form|
@@ -47,7 +48,7 @@
                     .important= t('projects.new.about_important')
                 = form.label :about, "3. #{t('formtastic.labels.project.about')}"
                 .input-wrapper
-                  = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}", maxlength: "220"
+                  = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}"
                   p.inline-hints= t('formtastic.hints.project.about')
 
             .input-container

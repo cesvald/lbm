@@ -48,7 +48,7 @@
                     .important= t('.about_important')
                 = form.label :about, "3. #{t('formtastic.labels.project.about')}"
                 .input-wrapper
-                  = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}", maxlength: "220"
+                  = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}"
                   p.inline-hints= t('formtastic.hints.project.about').html_safe
 
             .input-container

@@ -25,7 +25,7 @@ class Channel < ActiveRecord::Base
   }
 
 
-  delegate :display_pledged_total, :display_video_thumbnail, to: :decorator
+  delegate :display_pledged_total, :display_video_thumbnail, :display_video_embed_url,  to: :decorator
 
   catarse_auto_html_for field: :how_it_works, video_width: 600, video_height: 403
   catarse_auto_html_for field: :legend, video_width: 600, video_height: 403
