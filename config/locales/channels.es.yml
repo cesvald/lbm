@@ -4,6 +4,7 @@ es:
     projects: Campañas
     explore_projects: "Explora Proyectos"
     explore_subchannels: "Explora Subcanales"
+    other_subchannels: "Otros Subcanales"
   channels_subscribers:
     created: "Ahora estas siguiendo el canal"
     deleted: "Yo no estas siguiendo este canal"

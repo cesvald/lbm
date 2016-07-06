@@ -382,8 +382,8 @@ en:
         rut_file: ~
         comercial_file: ~
         bank_certificate_file: ~
-        banking_format_file: ~
         banking_data_file: ~
+        banking_format_file: ~
         more_links: "List of project related links"
         first_backers: "List of people who could be your first supporters"
         how_know: "How did you get to know LittleBigMoney?"
@@ -489,6 +489,7 @@ en:
       banner_message_5: "Proyecta y desarrolla ideas que pueden transformar la comunidad"
       banner_message_6: "Únete a nuestras alianzas estratégicas, conoce cómo tu empresa puede impulsar grandes proyectos"
       know_more: "Conoce más"
+      know_more_successful_projects: "Know more successful projects"
       slogan_donate: "A little donation, a big help"
       slogan_invest: "Grow with new entrepreneurs (soon)"
     update:

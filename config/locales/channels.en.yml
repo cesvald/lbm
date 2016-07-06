@@ -4,6 +4,7 @@ en:
     projects: Projects
     explore_projects: "Explora Proyectos"
     explore_subchannels: "Explora Subcanales"
+    other_subchannels: "Other Subchannels"
   channels_subscribers:
     created: "You're following the channel now"
     deleted: "You're no longer following this channel"
