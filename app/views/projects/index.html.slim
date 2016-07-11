@@ -116,8 +116,9 @@
                 == render 'channels/channel', channel: channel
           #channels-swiper-button-prev.swiper-button-prev
           #channels-swiper-button-next.swiper-button-next
-
-      = image_tag "lbm/banner_footer_#{I18n.locale}.png", class: "banner_footer"
+      .banner-footer-wrapper
+        = image_tag "lbm/banner_footer_#{I18n.locale}.png", class: "banner_footer"
+        = link_to t("projects.index.know_more_successful_projects"), explore_path(anchor: :successful), class: 'lbm-button'
       
       = render 'layouts/allies'
 

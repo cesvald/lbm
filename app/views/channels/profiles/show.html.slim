@@ -13,7 +13,8 @@
             - else
               = image_tag @profile.image, title: @profile.name
         .about
-          - if !@profile.parent_channel.nil?
+          - if not @profile.parent_channel.nil?
+            p.other-channel-title= t('channel.other_subchannels')
             .channel-swiper-container
               #sub-channels-swiper.swiper-container
                 .swiper-wrapper

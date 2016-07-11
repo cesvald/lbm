@@ -20,6 +20,8 @@ body[data-namespace="channels"][data-controller="profiles"]
           padding-right: 50px
           border: none
           background: transparent
+          iframe
+            padding: 0px
     .row
       float: left
       position: relative
@@ -39,7 +41,9 @@ body[data-namespace="channels"][data-controller="profiles"]
       .video
         background-color: transparent
         display: table-cell
-        width: 77%
+        width: 67%
+        iframe
+          padding: 0px
         .padding
           text-align: center
         iframe
@@ -51,7 +55,7 @@ body[data-namespace="channels"][data-controller="profiles"]
       .about
         display: table-cell
         position: relative
-        vertical-align: middle
+        vertical-align: top
         padding-left: 50px
         text-align: center
         .description
@@ -73,6 +77,11 @@ body[data-namespace="channels"][data-controller="profiles"]
           margin-top: 40px
           padding: 10px 16px
           display: inline-block
+        .other-channel-title
+          font-size: 26px
+          color: $darkblue
+          font-family: 'Futura Std'
+          font-weight: 700
         .channel-swiper-container
           position: relative
           .swiper-container
@@ -103,6 +112,37 @@ body[data-namespace="channels"][data-controller="profiles"]
           .channel
             width: 500px
             margin: 20px 20px
+            position: relative
+            &:hover
+              .hover-show
+                opacity: 1
+            .hover-show
+              position: absolute
+              top: 0px
+              left: 0px
+              height: 283px
+              width: 100%
+              background-color: rgba($darkblue, 0.9)
+              opacity: 0
+              transition: all 0.3s ease
+              padding: 10px
+              text-align: center
+              z-index: 1
+              
+              &:before
+                content: ''
+                display: inline-block
+                height: 100%
+                vertical-align: middle
+                margin-right: -0.25em
+              p
+                display: inline-block
+                vertical-align: middle
+                width: 100%
+                color: white
+                font-family: 'Futura Std'
+                font-weight: 200
+                font-size: 20px
             .video
               border: none
               height: 283px
@@ -116,10 +156,8 @@ body[data-namespace="channels"][data-controller="profiles"]
               &:before
                 background: rgba(251, 120, 14, 0)
                 transition: all 0s ease 0s
-              &:hover
-                transform: scale(1.1)
-                &:before
-                  height: 284px
+                height: 284px
+                  
       .other-channel-container
         .explore_link
           margin-right: 7%
