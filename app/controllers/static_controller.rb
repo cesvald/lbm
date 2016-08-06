@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class StaticController < ApplicationController
+  layout nil
   def guidelines
     @title = t('static.guidelines.title')
   end
