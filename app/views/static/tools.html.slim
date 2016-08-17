@@ -6,7 +6,7 @@
 			| Herramientas
 	hr.separator
 	.bootstrap-twitter
-		.row.send-project-container.container
+		#send-project-container.row.container
 		    .col-xs-12
 		      .row
 		        .col-xs-12
@@ -58,15 +58,24 @@
 		#container-about-project.tools-container
 			p.tools-description= t('static.tools.about_project.description')
 			.tools-wrapper
-				- for i in 1..6
-					- if t(".about_project.tool_#{i}.title", default: "").present?
+				.pdf-container
+					- if t(".about_project.tool_1.title", default: "").present?
 						.tool-element
-							= link_to t(".about_project.tool_#{i}.link", default: "#"), class: "tool-link", target: "_blank" do
-								- if t(".about_project.tool_#{i}.image", default: "").present?
-									= image_tag t(".about_project.tool_#{i}.image"), class: 'tool-image'
+							= link_to t(".about_project.tool_1.link", default: "#"), class: "tool-link", target: "_blank" do
+								- if t(".about_project.tool_1.image", default: "").present?
+									= image_tag t(".about_project.tool_1.image"), class: 'tool-image'
 								- else
 									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
 								p.tool-title= t(".about_project.tool_#{i}.title")
+				
+				- for i in 1..6
+					- if t(".about_project.tool_#{i}.question", default: "").present?
+						.faq
+							p.question
+								span.glyphicon.glyphicon-chevron-right
+								span.question-text= t(".about_project.tool_#{i}.question")
+							p.answer= t(".about_project.tool_#{i}.answer")
+					
 		
 		#container-after-project.tools-container
 			p.tools-description= t('static.tools.after_project.description')

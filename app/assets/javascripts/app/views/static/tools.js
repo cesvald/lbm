@@ -17,6 +17,21 @@ CATARSE.StaticToolsView = Backbone.View.extend({
       slidesPerGroup: 3,
       spaceBetween: 10,
     })
+    
+    $('.question-text').click(function(){
+      var answer = $(this).closest('.question').next();
+      var arrow = $(this).prev()
+      if(arrow.hasClass('glyphicon-chevron-right')){
+        arrow.removeClass('glyphicon-chevron-right');
+        arrow.addClass('glyphicon-chevron-down');
+      }
+      else{
+        arrow.removeClass('glyphicon-chevron-down');
+        arrow.addClass('glyphicon-chevron-right');
+      }
+      answer.slideToggle(400);
+      
+    });
   },
 
   for_backers: function() {

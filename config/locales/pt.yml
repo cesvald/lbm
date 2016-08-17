@@ -1100,132 +1100,193 @@ pt:
       for_backers:
         description: "Descripción de las herramientas para donantes"
         tool_1:
-          title: "Todo para donantes.pdf"
-          link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: "¿Cómo usar mis créditos?donantes.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUOW1ZNHluUGxtaDQ/view"
+          question: 
+          answer: ~
+          
+          image: ~
         tool_2:
-          title: "Todo para donantes.pdf"
-          link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: "¿Qué sucedió con mi colaboración?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUcEdrZkpzZFdkYVE/view"
+          question: ~
+          answer: ~
+          image: ~
         tool_3:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          question: ~
+          answer: ~
+          image: ~
         tool_4:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          question: ~
+          answer: ~
+          image: ~
         tool_5:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          question: ~
+          answer: ~
+          image: ~
         tool_6:
-          title: "Todo para donantes.pdf"
+          title: ~
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          question: ~
+          answer: ~
+          image: ~
       about_project:
         description: "Descripción de las herramientas sobre projectos"
         tool_1:
-          title: "Todo sobre tu campaña.pdf"
-          link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: "¿Cómo subir tu proyecto?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUV1pocERMZnJ1Rmc/view"
+          question: ~
+          answer: ~
+          image: ~
         tool_2:
-          title: ~
-          link: ~
+          title: "Antes de subir tu proyecto.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUSUxLRmRxRlpEM3c/view"
+          question: ~
+          answer: ~
           image: ~
         tool_3:
-          title: ~
-          link: ~
+          title: "¿Cómo promuevo mi proyecto?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUNlpFeFhBNmU3bUE/view"
+          question: ~
+          answer: ~
           image: ~
         tool_4:
-          title: ~
-          link: ~
+          title: "Crear buenas recompensas.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUTzdURjRzLTN5SzQ/view"
+          question: ~
+          answer: ~
           image: ~
         tool_5:
-          title: ~
-          link: ~
+          title: "¿Cómo crear un buen video?"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUdlBxTFB6enRCYms/view"
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
       after_project:
         description: "Descripción de las herramientas después de tu campaña"
         tool_1:
           title: "Después de tu campaña.pdf"
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          question: ~
+          answer: ~
+          image: ~
         tool_2:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_3:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_4:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
       venture_course:
         description: "Descripción de las herramientas del curso en empredimiento"
         tool_1:
           title: "Curso en emprendimiento.pdf"
           link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          question: ~
+          answer: ~
+          image: ~
         tool_2:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_3:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_4:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
       about_crowdfunding:
         description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
-          title: "Todo sobre CrowdFunding.pdf"
-          link: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: "Modalidades de financiación.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUSWlFd05INzZ2WlU/view"
+          question: ~
+          answer: ~
+          image: ~
         tool_2:
-          title: ~
-          link: ~
+          title: "Concepto Legal.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
+          question: ~
+          answer: ~
           image: ~
         tool_3:
-          title: ~
-          link: ~
+          title: "¿Qué es un canal?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUTTBKYmlReTBpLVE/view"
+          question: ~
+          answer: ~
           image: ~
         tool_4:
-          title: ~
-          link: ~
+          title: "Reglas de oro.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUa2RrT0VXTUNhc00/view"
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
     privacy:
       title: "Política de privacidade"

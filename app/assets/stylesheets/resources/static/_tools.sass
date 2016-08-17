@@ -24,36 +24,6 @@
 			background-color: $mediumgray
 			width: 70%
 			margin-bottom: -33px
-		.send-project-container
-			padding-top: 20px
-			text-align: center
-			.megaphone-icon
-				width: 44px
-				vertical-align: sub
-			.plain-icon
-				width: 50px
-				vertical-align: sub
-			.send-project-title
-				font-family: 'Futura Std'
-				font-weight: 200
-				font-size: 30px
-				color: $oceanblue
-				display: inline
-				margin: 0px 15px
-			.send-project-points
-				padding: 10px
-				font-family: 'Futura Std'
-				font-weight: 700
-				font-size: 18px
-				color: $darkblue
-				margin-top: 20px
-				.project-point
-					display: table-cell
-					width: 231px
-					padding: 0px 10px
-					border-right: solid 2px $mediumgray
-					&:last-child
-						border-right: none
 		.tools-icon-container
 			margin-top: 20px
 			text-align: center
@@ -137,6 +107,30 @@
 					margin-left: -528px
 					+box-shadow(rgba(black, 0.4) 0 0 5px 0)
 					overflow: hidden
+					.pdf-container
+						float: left
+					.faq
+						p
+							text-align: left
+						.question
+							color: $carrot
+							font-family: 'Futura Std'
+							font-weight: 700
+							font-size: 15px
+							.glyphicon
+								font-size: 10px
+								margin-right: 2px
+							.question-text
+								cursor: pointer
+								&:hover
+									text-decoration: underline
+						.answer
+							color: $darkblue
+							font-family: 'Futura Std'
+							font-weight: 200
+							position: relative
+							left: 13px
+							display: none
 					.tool-element
 						width: 190px
 						padding: 10px 20px

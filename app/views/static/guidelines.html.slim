@@ -14,17 +14,31 @@
             .text-row
               .text
                 = t('static.guidelines.illustration_1')
+                .bold
+                  = t('static.guidelines.illustration_1_bold')
 
           .illustration
             = image_tag 'lbm/illustration-2.png'
             .text-row
               .text
                 = t('static.guidelines.illustration_2')
+                .bold
+                    = t('static.guidelines.illustration_2_bold')
           .illustration
             = image_tag 'lbm/illustration-3.png'
             .text-row
               .text
                 = t('static.guidelines.illustration_3')
+                .bold
+                    = t('static.guidelines.illustration_3_bold')
+      
+      .row.description-container.container.container-with-icon
+        .col-xs-12
+          = image_tag "lbm/lbm-logo.png", class: "container-icon"
+          .content-wrapper
+            p= t('.description_paragraph_1')
+            p.enphasis= t('.description_paragraph_2')
+            
       .row.more-title-container
         .col-xs-12
           = image_tag 'lbm/lbm-logo.png', class: "lbm-logo"
@@ -74,13 +88,6 @@
             p.explanation= t('static.guidelines.partial_success.take_into_account_explanation')
             p.subtitle= t('static.guidelines.partial_success.project_use')
             p.explanation= t('static.guidelines.partial_success.project_use_explanation')
-            
-      .row.description-container.container.container-with-icon
-        .col-xs-12
-          = image_tag "lbm/lbm-logo.png", class: "container-icon"
-          .content-wrapper
-            p= t('.description_paragraph_1')
-            p.enphasis= t('.description_paragraph_2')
 
       .row.network-container.container.container-with-icon
         .col-xs-12
@@ -96,12 +103,7 @@
             h2.container-title= t('static.guidelines.budget_title')
             p.description= t('static.guidelines.budget_description').html_safe
 
-      .row.description-container.container.container-with-icon
-        .col-xs-12
-          =image_tag 'lbm/lbm-logo.png', class: "container-icon"
-          .content-wrapper
-            p= t('.description_end_paragraph_1')
-            p.enphasis= t('.description_end_paragraph_2')
+      
       
       
       

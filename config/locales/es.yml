@@ -441,7 +441,7 @@ es:
   project:
     start:
       email_subject: "Tu proyecto ha sido recibido por el equipo LittleBigMoney"
-      email_text: "Muchas gracias por confiar en LittleBigMoney y enviarnos tu proyecto :) <br><br>Antes que nada, queríamos recordarte como funcionan los pasos de selección de los proyectos en LittleBigMoney. Es muy fácil, son 4 pasos: <br><br> 1 - Acabamos de recibir ese lindo formulario que llenaste; <br><br> 2 - Tu respuesta estará lista en 4 días hábiles. Así que no te despegues de la pantalla. <br><br> 3 - Cuando el proyecto esté revisado, te enviaremos un link especial para que puedas registrar tu proyecto inmediatamente; <br><br> 4 - Una vez nos hayas avisado, autorizaremos el proyecto para que esté disponible y todos los seres humanos del mundo puedan conocerte y apoyar tu idea (en caso de que ellos quieran no?).  <br><br> <strong>Una información importante</strong>: Si olvidaste llenar algo de este formulario, no te preocupes, puedes adicionar nueva información (o cambiar alguna de ellas) así el equipo de soporte podrá estar en contacto contigo, ok?  <br><br> Por eso vale la pena conocer los proyectos que se encuentran al aire (<a href='%{explore_link}' style='color: #f57421 !important;'>%{explore_link}</a>)  y si te gusta alguno de ellos, Apoya! Esa es la mejor manera de mostrar que crees en la cultura del financiamiento colaborativa en Colombia al fomentar el ecosistema que se está formando al rededor de LittleBigMoney. Además, también te puedes inspirar para tu propio proyecto.  <br> Mantén el contacto para saber de nuestras novedades en<a href='%{facebook}' style='color: #f57421 !important;'>Facebook</a> y en <a href='%{twitter}' style='color: #f57421 !important;'>Twitter</a> y conoce más de LittleBigMoney en nuestro Blog<a href='%{blog}' style='color: #f57421 !important;'>blog</a>.  <br> Si tienes alguna duda, nos puedes contactar en: %{email}"
+      email_text: "Muchas gracias por confiar en LittleBigMoney y enviarnos tu proyecto :) <br><br>Antes que nada, queríamos recordarte como funcionan los pasos de selección de los proyectos en LittleBigMoney. Es muy fácil, son 4 pasos: <br><br> 1 - Acabamos de recibir ese lindo formulario que llenaste; <br><br> 2 - Tu respuesta estará lista en 4 días hábiles. Así que no te despegues de la pantalla. <br><br> 3 - Cuando el proyecto esté revisado, te enviaremos un link especial para que puedas registrar tu proyecto inmediatamente; <br><br> 4 - Una vez nos hayas avisado, autorizaremos el proyecto para que esté disponible y todos los seres humanos del mundo puedan conocerte y apoyar tu idea (en caso de que ellos quieran no?).  <br><br> <strong>Una información importante</strong>: Si olvidaste llenar algo de este formulario, no te preocupes, puedes adicionar nueva información (o cambiar alguna de ellas) así el equipo de soporte podrá estar en contacto contigo, ok?  <br><br> Por eso vale la pena conocer los proyectos que se encuentran al aire (<a href='%{explore_link}' style='color: #f57421 !important;'>%{explore_link}</a>)  y si te gusta alguno de ellos, Apoya! Esa es la mejor manera de mostrar que crees en la cultura del financiamiento colaborativa en Colombia al fomentar el ecosistema que se está formando al rededor de LittleBigMoney. Además, también te puedes inspirar para tu propio proyecto.  <br> Mantén el contacto para saber de nuestras novedades en<a href='%{facebook}' style='color: #f57421 !important;'>Facebook</a> y en <a href='%{twitter}' style='color: #f57421 !important;'>Twitter</a><br> Si tienes alguna duda, nos puedes contactar en: %{email}"
       notification_text: "Tu proyecto ha sido recibido por el equipo LittleBigMoney"
     finish:
       successful:
@@ -482,12 +482,12 @@ es:
       banner_image_8: ~
       banner_image_9: ~
       banner_image_10: ~
-      banner_message_1: "Dona y se parte del cambio"
-      banner_message_2: "LittleBigMoney; Crowdfunding para la Responsabilidad Social Empresarial"
-      banner_message_3: "Herramientas para apoyar iniciativas de alto impacto"
+      banner_message_1: "Un aliado para los programas de desarrollo y responsabilidad social"
+      banner_message_2: "Conectamos organizaciones con ideas que transforman comunidades"
+      banner_message_3: "Financiación colectiva de iniciativas de alto impacto ENVíANOS TU PROYECTO"
       banner_message_4: "¡Dona ya! Pequeños aportes con GRAN impacto"
-      banner_message_5: "Responsabilidad Social Empresarial con ideas que transforman comunidades"
-      banner_message_6: "En LittleBigMoney cumplimos las reglas"
+      banner_message_5: "Crowdfunding para la Responsabilidad Social Empresarial"
+      banner_message_6: "Herramientas y recomendaciones para una campaña exitosa"
       know_more: "Conoce más"
       know_more_successful_projects: "Conoce más proyectos exitosos"
       slogan_donate: "Una pequeña colaboración, una gran ayuda"
@@ -919,17 +919,32 @@ es:
       more_questions: "listo! pero cuéntame un poco más de LittleBigMoney..."
       title_magic: "Nuestra fórmula mágica"
       magic: "Creemos que propiciar encuentros entre personas que compartan intereses al rededor de un proyecto, es la mejor forma de volverlos realidad e incrementar su potencial. Por eso, utiliza LittleBigMoney como un canal para generar una red con un objetivo COMÚN."
-      title_money: "¿De dónde viene el dinero que hace posible la realización de los proyectos?"
+      title_money: "- Para los colaboradores:"
       money: "Al menos un 80% vendrá de tu red de contactos, así que esfuérzate al máximo por dar a conocer tu idea y tu trabajo a tu familia, amigos y a todas aquellas personas que creen y apuestan por tu iniciativa. A través de LittleBigMoney podrás encontrar personas afines a tu proyecto."
-      title_work: "¿Hay que dedicarle mucho tiempo?"
+      title_work: "- Para emprendedores"
       work: "Si mucho! En internet no hay \"dinero fácil\". Tendrás que trabajar bastante antes, durante y después del periodo de duración de tu proyecto. Aunque no es posible saber cómo será el resultado de estos esfuerzos hasta el final de la campaña en línea. Este proceso te será útil para perfeccionar tu proyecto y fortalecer una red de personas que creen en tu trabajo."
-      title_costs: "¿Qué costo tiene usar LittleBigMoney?"
+      title_costs: "- Para socios institucionales:"
       costs: "Registrarse, enviar un proyecto y realizar una colaboración no tiene costo alguno. Cuando tu proyecto cumple la meta, LittleBigMoney cobra una comisión del 6%. Adicionalmente los medios de pago cobran una comisión entre el 5% y 7% sobre el total de los fondos movilizados, esta variación de la tasa corresponde al número de transacciones locales e internacionales realizadas, así como la tasa de cambio."
       why: "¿Por qué LittleBigMoney?"
-      intro: "Antes que nada, es importante que sepas el por qué de esta nueva alternativa de financiación y la importancia del colectivo como fuente de colaboración:"
-      why_one: "Esta alternativa representa poca intermediación y bajo riesgo financiero: sin intereses, sin acciones y una promoción al aire sin costo alguno, pero sobre todo mucha emoción y diversión."
-      why_two: "Existe porque implica básicamente un gran esfuerzo en la comunicación de tu proyecto la que puede expandir rápidamente tus ideas hacia mucha gente, mejorando tus propuestas y fortaleciendo tu red de colaboradores."
-      why_three: "Al usar esta plataforma colaborativa, podrás ampliar tu red para que tu campaña pueda abrir puertas a nuevas oportunidades."
+      intro: |-
+          ¿Qué ofrecemos?
+          Nuestra plataforma tecnológica brinda una vitrina para la visibilización y financiación de iniciativas, una experiencia personalizada para todos sus actores y una gestión eficaz y transparente de ideas y recursos para obtener mejores resultados.
+      why_one: |-
+          Para colaboradores:
+          - Posibilidad de contribuir con una causa en la que crees
+          - Acceso fácil y directo con el beneficiario de tu donación
+          - Ser parte de la comunidad LBM
+          - Diversas opciones de pago online y offline
+      why_two: |-
+          Para los proyectos:
+          - Alternativa efectiva de financiamiento
+          - Perfil exclusivo para monitorear recaudo en línea
+          - Asesoramiento y capacitación para la gestión de la campaña de crowdfunding
+      why_three: |-
+          Para los socios institucionales:
+          - Canal personalizado para la difusión y promoción de sus proyectos
+          - Coordinación en la implementación y acompañamiento durante todo el proceso
+          - Apoyo en la comunicación para multiplicar la visibilidad de la campaña
     guidelines_tips:
       title: "Ya casi!"
       subtitle: "Antes de que envíes tu proyecto, vale la pena revisar algunos puntos importantes."
@@ -985,7 +1000,7 @@ es:
       title_credits: "Si el proyecto no cumple la meta, ¿cómo uso mis créditos?"
       credits: "Recibirás tus créditos en tu perfil de LittleBigMoney. En el momento que quieras aportar tus créditos a otro proyecto, en la ventana de selección de recompensas tendrás un campo para utilizar tu crédito."
       title_money: "¿Qué pasa si no quiero usar mis créditos?"
-      money: "No hay problema! solo debes entrar a tu perfil (Mis créditos) y solicitar un reembolso cumpliendo con los términos de uso. También puedes enviar un correo a littlebigmoney@fundacioncapital.org con tu solicitud."
+      money: "No hay problema! solo debes entrar a tu perfil (Mis créditos) y solicitar un reembolso con los términos de uso. También puedes enviar un correo a littlebigmoney@fundacioncapital.org con tu solicitud."
       other_backers: "¿PUEDO COLABORAR DE OTRAS FORMAS?"
       intro: "Conoce otras formas de colaborar con el proyecto en que crees"
       other_one: "Trae otros dos amigos para que  como tú aporten al proyecto"
@@ -999,8 +1014,13 @@ es:
       explore_projects: "Quiero aportar a este proyecto!"
     guidelines:
       title: "¡Bienvenido a este, tu espacio!"
-      subtitle: "Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados. "
-      description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
+      subtitle: |-
+          LittleBigMoney es la plataforma de crowdfunding para proyectos con impacto social y ambiental.
+          Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados.
+          ¿Qué rol quieres jugar hoy? 
+      description_paragraph_1: |-
+          LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades.
+          En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees, crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa o crear un canal para tu organización y así aportar a muchos proyectos.
       description_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees o incluso crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa."
       send_project_title: "¡Ten en cuenta al enviar tu proyecto!"
       project_send:
@@ -1017,12 +1037,12 @@ es:
       description_end_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees o incluso crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa."
       success:
         title: "Proyectos exitosos"
-        how_works: "¿Cómo funciona?"
-        how_work_explanation: "Si los aportes al proyecto logran alcanzar o superar el 100% de la meta propuesta el proyecto se denominará “Proyecto exitoso” y los fondos recaudados serán entregados al emprendedor para ser utilizados en sus propósitos prioritarios."
-        take_into_account: "¿Qué debes tener en cuenta?"
-        take_into_account_explanation: "Los objetivos que se trazan desde un principio permiten que el desarrollo del proyecto sea más claro. Tener un proyecto exitoso implica que la gestión de los recursos fue completada en su totalidad. No esperes a que los fondos lleguen solos, ¡esfuérzate por atraerlos!"
-        project_use: "¿Para qué tipo de proyectos se usa?"
-        project_use_explanation: "Son apoyados proyectos que tengan metas claras, que tengan impacto social o ambiental. Como ejemplo de ello, mira el caso de crear tu campaña para financiar la construcción de un hogar de interés social. Si solicitas el dinero para este fin, no podrás cumplir tu meta con la mitad del dinero pues no puedes construir la mitad de la casa."
+        how_works: "Proyecto exitoso:"
+        how_work_explanation: "Cuando el recaudo alcanza el 100% o más de la meta planteada por el emprendedor del proyecto."
+        take_into_account: "Proyecto parcialmente financiado:"
+        take_into_account_explanation: "Cuando el recaudo es igual o mayor a $500.000 COP pero no llega a la meta."
+        project_use: "Proyecto no exitoso:"
+        project_use_explanation: "Cuando las donaciones recibidas no alcanzan el valor mínimo para desembolso ($500.000 COP)"
       partial_success:
         title: "Proyectos parcialmente financiados"
         how_works: "¿Cómo funciona?"
@@ -1032,21 +1052,38 @@ es:
         project_use: "¿Para qué tipo de proyectos se usa?"
         project_use_explanation: "Son apoyados proyectos que permitan financiar objetivos por etapas. Esto quiere decir que si no se financia la totalidad del proyecto, aún se puede contar con los recursos gestionados a través de la plataforma para llevar a cabo las actividades clave."
       more_title: "Conoce Más de LittleBigMoney"
-      lbm_objective_title: "¿Cuál es el objetivo de LittleBigMoney?"
-      lbm_objective_explanation: "Somos el punto de encuentro de buenos proyectos y de personas que con sus aportes los hacen realidad, creando una red alrededor de objetivos COMUNES."
-      money_come_title: "¿De dónde viene el dinero que hace posible la realización de los proyectos?"
-      moeny_come_explanation: "Al menos un 50% vendrá de tu red de contactos, así que esfuérzate al máximo por dar a conocer tu idea en tu trabajo, con tus famiia y amigos, en redes sociales y a través de cualquier otro medio que se te ocurra. LittleBigMoney se encargará de conseguir que personas afines a tu proyecto puedan conocerlo y así lograr tu meta! "
-      time_dedication_title: "¿Hay que dedicarle mucho tiempo?"
-      time_dedication_explanation: "Si, ¡mucho! En internet no hay \"dinero fácil\". Tendrás que trabajar bastante antes, durante y después del periodo de duración de tu proyecto para dar a conocer a los demás lo genial que es tu idea. "
-      cost_title: "¿Qué costo tiene usar LittleBigMoney?"
-      cost_description: "Al momento del desembolso, la plataforma descuenta 2 comisiones del monto total recogido:1. Comisión del 8% por medios de pago utilizados. 2. Comisión del 6% para cubrir costos financieros y operativos de la plataforma."
-      why_title: "Antes que nada, es importante que sepas el por qué de esta nueva alternativa de financiación y la importancia del colectivo como fuente de colaboración:"
-      reason_1: "Esta alternativa representa poca intermediación y bajo riesgo financiero: sin intereses, sin acciones y una promoción al aire sin costo alguno, pero sobre todo mucha emoción y diversión."
-      reason_2: "Existe porque implica básicamente un gran esfuerzo en la comunicación de tu proyecto la que puede expandir rápidamente tus ideas hacia mucha gente, mejorando tus propuestas y fortaleciendo tu red de colaboradores."
-      reason_3: "Al usar esta plataforma colaborativa, podrás ampliar tu red para que tu campaña pueda abrir puertas a nuevas oportunidades."
+      lbm_objective_title: "¿Qué hacemos en LittleBigMoney?"
+      lbm_objective_explanation: "Conectamos a colaboradores con proyectos viables e innovadores, cuidadosamente seleccionados, para aumentar las posibilidades de éxito de los emprendedores y multiplicar el impacto social de los proyectos."
+      money_come_title: "- Para los colaboradores:"
+      moeny_come_explanation: "La unión de muchas pequeñas donaciones permite alcanzar metas ambiciosas y multiplica el valor de tu contribución. Serás parte de grandes cambios con pequeños aportes."
+      time_dedication_title: "- Para emprendedores"
+      time_dedication_explanation: "Somos una ventana al mundo para que se conozcan tus ideas, facilitamos su acceso a recursos (financieros y humanos) para salir adelante. Propiciamos la integración en tu comunidad fortaleciendo el tejido social."
+      cost_title: "- Para socios institucionales:"
+      cost_description: |-
+          Los ayudamos a hacer crecer el impacto de sus recursos y, junto a los de colaboradores individuales, a financiar proyectos que los muevan e interesen.
+          Ver Crea tu canal
+      why_title: |-
+          ¿Qué ofrecemos?
+          Nuestra plataforma tecnológica brinda una vitrina para la visibilización y financiación de iniciativas, una experiencia personalizada para todos sus actores y una gestión eficaz y transparente de ideas y recursos para obtener mejores resultados.
+      reason_1: |-
+          Para colaboradores:
+          - Posibilidad de contribuir con una causa en la que crees
+          - Acceso fácil y directo con el beneficiario de tu donación
+          - Ser parte de la comunidad LBM
+          - Diversas opciones de pago online y offline
+      reason_2: |-
+          Para los proyectos:
+          - Alternativa efectiva de financiamiento
+          - Perfil exclusivo para monitorear recaudo en línea
+          - Asesoramiento y capacitación para la gestión de la campaña de crowdfunding
+      reason_3: |-
+          Para los socios institucionales:
+          - Canal personalizado para la difusión y promoción de sus proyectos
+          - Coordinación en la implementación y acompañamiento durante todo el proceso
+          - Apoyo en la comunicación para multiplicar la visibilidad de la campaña
       rol_play: "¿Qué rol deseas jugar hoy?"
-      new_project: "Crear una camapaña"
-      back_project: "Aporta a una camapaña"
+      new_project: "Crear un proyecto"
+      back_project: "Colaborar a proyectos"
       all_for_backers: "Todo para <p class='enfasis'>Donantes</p>"
       about_project: "Todo sobre <p class='enfasis'>Tu Campaña</p>"
       after_project: "Después de <p class='enfasis'>Tu Campaña</p>"
@@ -1102,130 +1139,190 @@ es:
         tool_1:
           title: "¿Cómo usar mis créditos?donantes.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUOW1ZNHluUGxtaDQ/view"
+          question: ~
+          answer: ~
           image: ~
         tool_2:
           title: "¿Qué sucedió con mi colaboración?.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUcEdrZkpzZFdkYVE/view"
+          question: ~
+          answer: ~
           image: ~
         tool_3:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_4:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
       about_project:
         description: "Descripción de las herramientas sobre projectos"
         tool_1:
           title: "¿Cómo subir tu proyecto?.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUV1pocERMZnJ1Rmc/view"
+          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
           image: ~
         tool_2:
           title: "Antes de subir tu proyecto.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUSUxLRmRxRlpEM3c/view"
+          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
           image: ~
         tool_3:
           title: "¿Cómo promuevo mi proyecto?.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUNlpFeFhBNmU3bUE/view"
+          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
           image: ~
         tool_4:
           title: "Crear buenas recompensas.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUTzdURjRzLTN5SzQ/view"
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: "¿Cómo crear un buen video?"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUdlBxTFB6enRCYms/view"
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
       after_project:
         description: "Descripción de las herramientas después de tu campaña"
         tool_1:
           title: "Después de tu campaña.pdf"
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_2:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_3:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_4:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
       venture_course:
         description: "Descripción de las herramientas del curso en empredimiento"
         tool_1:
           title: "Curso en emprendimiento.pdf"
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_2:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_3:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_4:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
       about_crowdfunding:
         description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
           title: "Modalidades de financiación.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUSWlFd05INzZ2WlU/view"
+          question: ~
+          answer: ~
           image: ~
         tool_2:
           title: "Concepto Legal.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
+          question: ~
+          answer: ~
           image: ~
         tool_3:
           title: "¿Qué es un canal?.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUTTBKYmlReTBpLVE/view"
+          question: ~
+          answer: ~
           image: ~
         tool_4:
           title: "Reglas de oro.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUa2RrT0VXTUNhc00/view"
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
+          question: ~
+          answer: ~
           image: ~
     privacy:
       title: "Políticas de Privacidad"
