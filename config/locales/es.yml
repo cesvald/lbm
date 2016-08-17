@@ -1,5 +1,6 @@
 es:
   failure_title: "Bienvenido a LittleBigMoney"
+  contact_and_support: "Contacto & Soporte"
   uservoice_gadget:
     user:
       name: Usuario
@@ -1353,6 +1354,13 @@ es:
         email: "Envíame un correo"
         facebook: "Perfil de Facebook"
         twitter: "Perfil en Facebook"
+    contact_message:
+      subject: "%{name} quiere contactar a LittleBigMoney: %{subject}"
+      mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
+      success: "Gracias por su mensaje, pronto nos pondremos en contacto con usted"
+      subject: "Asunto"
+      message: "Mensaje"
+      send_message: "Enviar Mensaje"
     backs:
       anonymous: "Colaboración anónima"
       no_backs: "%{name} no has colaborado a ningún proyecto. Pero sabemos que es sólo cuestión de tiempo! :)"

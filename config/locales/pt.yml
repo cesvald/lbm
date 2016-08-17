@@ -1,5 +1,6 @@
 pt:
   failure_title: "Por favor, corrija os seguintes erros:"
+  contact_and_support: "Contacto & Soporte"
   uservoice_gadget:
     user:
       name: Usuário
@@ -1317,6 +1318,13 @@ pt:
         email: "Me envie um email"
         facebook: "Perfil no facebook"
         twitter: "Perfil no twitter"
+    contact_message:
+      subject: "%{name} quiere contactar a LittleBigMoney: %{subject}"
+      mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
+      success: "Gracias por su mensaje, pronto nos pondremos en contacto con usted"
+      subject: "Asunto"
+      message: "Mensaje"
+      send_message: "Enviar Mensaje"
     backs:
       anonymous: "Apoio anônimo."
       no_backs: "%{name} ainda não apoiou nenhum projeto. Mas a gente sabe que é só questão de tempo! :D"

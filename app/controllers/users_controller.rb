@@ -11,7 +11,13 @@ class UsersController < ApplicationController
     end
     render :uservoice_gadget, layout: false
   end
-
+  
+  def contact_and_support
+    ContactMailer.contact(params).deliver
+    flash[:success] = I18n.t('users.contact_message.success')
+    redirect_to tools_path
+  end
+  
   def show
     show!{
       fb_admins_add(@user.facebook_id) if @user.facebook_id

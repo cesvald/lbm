@@ -1,5 +1,6 @@
 en:
   failure_title: "Welcome to LittleBigMoney"
+  contact_and_support: "Contact & Support"
   uservoice_gadget:
     user:
       name: User
@@ -1328,6 +1329,13 @@ en:
         email: "Send me an email"
         facebook: "Facebook profile"
         twitter: "Facebook profile"
+    contact_message:
+      subject: ~
+      mail_body: ~
+      success: ~
+      subject: "Subject"
+      message: "Message"
+      send_message: "send Message"
     backs:
       anonymous: "Anonymous support"
       no_backs: "%{name} you haven't supported any project yet. But we know it's just a matter of time! :)"

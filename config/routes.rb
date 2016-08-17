@@ -59,10 +59,6 @@ Catarse::Application.routes.draw do
     end
   end
 
-  # Static Pages
-  get '/sitemap',               to: 'static#sitemap',             as: :sitemap
-  get "/about",                 to: "static#about",               as: :about
-
   match "/credits" => "credits#index", as: :credits
 
   match "/reward/:id" => "rewards#show", as: :reward
@@ -74,7 +70,10 @@ Catarse::Application.routes.draw do
 
   match "/explore" => "explore#index", as: :explore
   match "/explore#:quick" => "explore#index", as: :explore_quick
-
+  
+  # Static Pages
+  get '/sitemap',               to: 'static#sitemap',             as: :sitemap
+  get "/about",                 to: "static#about",               as: :about
   get '/guidelines',            to: 'static#guidelines',          as: :guidelines
   get "/guidelines_tips",       to: "static#guidelines_tips",     as: :guidelines_tips
   get "/guidelines_backers",    to: "static#guidelines_backers",  as: :guidelines_backers
@@ -111,6 +110,7 @@ Catarse::Application.routes.draw do
   resources :users, except: [:index, :new, :create, :edit, :destroy] do
     collection do
       get :uservoice_gadget
+      get :contact_and_support
       post :authenticate_user
     end
     resources :backers, only: [:index] do
