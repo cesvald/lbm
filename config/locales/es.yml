@@ -1140,14 +1140,14 @@ es:
         tool_1:
           title: "¿Cómo usar mis créditos?donantes.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUOW1ZNHluUGxtaDQ/view"
-          question: ~
-          answer: ~
+          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
           image: ~
         tool_2:
           title: "¿Qué sucedió con mi colaboración?.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUcEdrZkpzZFdkYVE/view"
-          question: ~
-          answer: ~
+          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
+          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
           image: ~
         tool_3:
           title: ~
