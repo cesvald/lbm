@@ -1355,7 +1355,7 @@ es:
         facebook: "Perfil de Facebook"
         twitter: "Perfil en Facebook"
     contact_message:
-      subject: "%{name} quiere contactar a LittleBigMoney: %{subject}"
+      mail_subject: "%{name} quiere contactar a LittleBigMoney: %{subject}"
       mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
       success: "Gracias por su mensaje, pronto nos pondremos en contacto con usted"
       subject: "Asunto"

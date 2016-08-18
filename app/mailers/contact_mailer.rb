@@ -5,7 +5,7 @@ class ContactMailer < ActionMailer::Base
     mail({
     	from: "#{@message[:name]} <#{@message[:email]}>",
     	to: "valderramago@gmail.com",
-    	subject: I18n.t('users.contact_message.subject', name: @message[:name], subject: @message[:subject])
+    	subject: I18n.t('users.contact_message.mail_subject', name: @message[:name], subject: @message[:subject])
     })
   end
 end
