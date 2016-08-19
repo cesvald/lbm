@@ -1019,6 +1019,15 @@ es:
           LittleBigMoney es la plataforma de crowdfunding para proyectos con impacto social y ambiental.
           Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados.
           ¿Qué rol quieres jugar hoy? 
+      illustration_1: 'La acción de "donar" es la que le da vida a LittleBigMoney, y gracias a ella se pueden construir los sueños de muchos emprendedores.'
+      illustration_1_bold: "¡Juntos todo es posible!"
+      illustration_1_btn: "Dona a un proyecto"
+      illustration_2: "Si tienes una iniciativa con enfoques sociales o ambientales, LittleBigMoney es la mejor opción para alcanzar tus metas."
+      illustration_2_bold: "¡Te ayudaremos a hacerla realidad!"
+      illustration_2_btn: "Envía un proyecto"
+      illustration_3: "Si quieres multiplicar el impacto social de tu organización, en LittleBigMoney creamos canales personalizados para la promoción de tus programas."
+      illustration_3_bold: "¡Descubre más!"
+      illustration_3_btn: "Crea tu canal"
       description_paragraph_1: |-
           LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades.
           En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees, crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa o crear un canal para tu organización y así aportar a muchos proyectos.
@@ -1140,14 +1149,14 @@ es:
         tool_1:
           title: "¿Cómo usar mis créditos?donantes.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUOW1ZNHluUGxtaDQ/view"
-          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
-          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
+          question: ~
+          answer: ~
           image: ~
         tool_2:
           title: "¿Qué sucedió con mi colaboración?.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUcEdrZkpzZFdkYVE/view"
-          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
-          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
+          question: ~
+          answer: ~
           image: ~
         tool_3:
           title: ~
@@ -1355,11 +1364,10 @@ es:
         facebook: "Perfil de Facebook"
         twitter: "Perfil en Facebook"
     contact_message:
-      mail_subject: "%{name} quiere contactar a LittleBigMoney: %{subject}"
+      subject: Asunto
       mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
       success: "Gracias por su mensaje, pronto nos pondremos en contacto con usted"
-      subject: "Asunto"
-      message: "Mensaje"
+      message: Mensaje
       send_message: "Enviar Mensaje"
     backs:
       anonymous: "Colaboración anónima"

@@ -14,24 +14,29 @@
             .text-row
               .text
                 = t('static.guidelines.illustration_1')
-                .bold
+                |&nbsp
+                span.bold
                   = t('static.guidelines.illustration_1_bold')
-
+            = link_to t('static.guidelines.illustration_1_btn'), explore_path, class: "button"
           .illustration
             = image_tag 'lbm/illustration-2.png'
             .text-row
               .text
                 = t('static.guidelines.illustration_2')
-                .bold
+                |&nbsp
+                span.bold
                     = t('static.guidelines.illustration_2_bold')
+            = link_to t('static.guidelines.illustration_2_btn'), new_project_path, class: "button"
           .illustration
             = image_tag 'lbm/illustration-3.png'
             .text-row
               .text
                 = t('static.guidelines.illustration_3')
-                .bold
+                |&nbsp
+                span.bold
                     = t('static.guidelines.illustration_3_bold')
-      
+            = link_to t('static.guidelines.illustration_3_btn'), root_path, class: "button"
+            
       .row.description-container.container.container-with-icon
         .col-xs-12
           = image_tag "lbm/lbm-logo.png", class: "container-icon"

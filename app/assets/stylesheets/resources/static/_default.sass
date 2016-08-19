@@ -1,6 +1,9 @@
 [data-controller="static"]
   #page_content
     .bootstrap-twitter
+      &#contact-wrapper
+        .container
+          background-image: none
       .row
         margin: 0px
       .welcome-container
@@ -47,37 +50,54 @@
               font-family: 'Futura Std'
               font-weight: 200
               font-size: 13px
-              color: white
-              background-color: $darkblue
+              color: black
               padding: 10px
-              border-radius: 10px
               height: 92px
+              text-align: justify
+              +border-radius(10px)
               .bold
                 font-weight: bold
-    .container
-      background-image: url($images_lbm_path + "background_blue.png")
-      width: 100%
-      margin-top: 50px
-      padding-bottom: 30px
-      text-align: center
-      .content-wrapper
-        margin-top: 35px
-        .container-title
-          font-family: 'Futura Std'
-          font-weight: 700
-          color: $darkblue
-          margin-bottom: 30px
-          margin-top: 25px
-        .description
-          font-family: 'Futura Std'
-          font-weight: 200
-          font-size: 20px
-          color: $darkblue
-          .color-carrot
-            color: $carrot
-    #contact-wrapper
+          .button
+            font-family: 'Futura Std'
+            font-weight: 700
+            font-size: 17px
+            color: white
+            background-color: $darkblue
+            border: solid 1px $darkblue
+            padding: 10px
+            display: block
+            margin-top: 12px
+            font-size: 23px
+            text-transform: uppercase
+            letter-spacing: 1px
+            +border-radius(10px)
+            +transition(all, 0.3s)
+            &:hover
+              text-decoration: none
+              background-color: white
+              color: $darkblue
       .container
-        background-image: none
+        background-image: url($images_lbm_path + "background_blue.png")
+        width: 100%
+        margin-top: 50px
+        padding-bottom: 30px
+        text-align: center
+        .content-wrapper
+          margin-top: 35px
+          .container-title
+            font-family: 'Futura Std'
+            font-weight: 700
+            color: $darkblue
+            margin-bottom: 30px
+            margin-top: 25px
+          .description
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 20px
+            color: $darkblue
+            .color-carrot
+              color: $carrot
+    
       .container-with-icon
         padding-left: 10%
         padding-right: 10%
