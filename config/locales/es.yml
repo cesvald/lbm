@@ -1014,12 +1014,12 @@ es:
       explore_curious: "ME APUNTO!"
       explore_projects: "Quiero aportar a este proyecto!"
     guidelines:
-      title: "¡Bienvenido a este, tu espacio!"
+      title: "¡Bienvenido a tu espacio!"
       subtitle: |-
           LittleBigMoney es la plataforma de crowdfunding para proyectos con impacto social y ambiental.
           Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados.
           ¿Qué rol quieres jugar hoy? 
-      illustration_1: 'La acción de "donar" es la que le da vida a LittleBigMoney, y gracias a ella se pueden construir los sueños de muchos emprendedores.'
+      illustration_1: "La acción de \"donar\" es la que le da vida a LittleBigMoney, y gracias a ella se pueden construir los sueños de muchos emprendedores."
       illustration_1_bold: "¡Juntos todo es posible!"
       illustration_1_btn: "Dona a un proyecto"
       illustration_2: "Si tienes una iniciativa con enfoques sociales o ambientales, LittleBigMoney es la mejor opción para alcanzar tus metas."
@@ -1028,10 +1028,8 @@ es:
       illustration_3: "Si quieres multiplicar el impacto social de tu organización, en LittleBigMoney creamos canales personalizados para la promoción de tus programas."
       illustration_3_bold: "¡Descubre más!"
       illustration_3_btn: "Crea tu canal"
-      description_paragraph_1: |-
-          LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades.
-          En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees, crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa o crear un canal para tu organización y así aportar a muchos proyectos.
-      description_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees o incluso crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa."
+      description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
+      description_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a las campañas que desees, enviar tu propio proyecto o crear un canal para tu organización y así apoyar a muchas iniciativas."
       send_project_title: "¡Ten en cuenta al enviar tu proyecto!"
       project_send:
         phrase_1: "Ideas creativas y realizables"
@@ -1039,12 +1037,12 @@ es:
         phrase_3: "Recompensas no financieras"
         phrase_4: "No apoyamos proyectos personales o sin resultados claros"
         phrase_5: "Convoca tu comunidad"
-      network_title: "Utiliza tus redes personales para movilizar tu proyecto"
-      network_description: "Trabaja a diario por promocionar tu proyecto en todas las redes sociales <span class='color-carrot'>(facebook, instagram, twitter, etc)</span> y comparte tus ideas con amigos y conocidos para poder así alcanzar tu meta. No pierdas de vista esta recomendación, la promoción es vital para alcanzar tu meta."
-      budget_title: "Uso de los recursos recaudados"
-      budget_description: "Desglosa y explica claramente cuáles son las acciones que vas a realizar con los fondos que recibas. <span class='color-carrot'>La TRANSPARENCIA es lo más importante para generar confianza.</span> Puedes incluir un link para una hoja de cálculo de GOOGLE DOCS para que todos los interesados puedan descargarlo y explorar tu presupuesto.Si al final tu proyecto no llega a la meta pero supera los COP $500.000 en recaudos quedará parcialmente financiado y podrás destinar los fondos a tus actividades clave."
+      network_title: "<span class='color-carrot'>¿Qué te ofrece LittleBigMoney?</span>"
+      network_description: "Nuestra plataforma tecnológica brinda una vitrina para la visibilización y financiación de iniciativas, una experiencia personalizada para todos sus actores y una gestión eficaz y transparente de ideas y recursos para obtener mejores resultados."
+      budget_title: "<span class='color-carrot'>¿Qué hacemos en LittleBigMoney?</span>"
+      budget_description: "Conectamos a colaboradores con proyectos viables e innovadores, cuidadosamente seleccionados, para aumentar las posibilidades de éxito de los emprendedores y multiplicar el impacto social de los proyectos."
       description_end_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
-      description_end_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a los proyectos que desees o incluso crear tu propio proyecto para recibir el apoyo de quienes se unan a tu causa."
+      description_end_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a las campañas que desees, enviar tu propio proyecto o crear un canal para tu organización y así apoyar a muchas iniciativas."
       success:
         title: "Proyectos exitosos"
         how_works: "Proyecto exitoso:"

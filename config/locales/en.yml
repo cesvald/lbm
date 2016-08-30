@@ -1001,15 +1001,15 @@ en:
     guidelines:
       title: "¡Bienvenido a este, tu espacio!"
       subtitle: "Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados. "
-      illustration_1: 'La acción de "donar" es la que le da vida a LittleBigMoney, y gracias a ella se pueden construir los sueños de muchos emprendedores.'
-      illustration_1_bold: "¡Juntos todo es posible!"
-      illustration_1_btn: "Dona a un proyecto"
-      illustration_2: "Si tienes una iniciativa con enfoques sociales o ambientales, LittleBigMoney es la mejor opción para alcanzar tus metas."
-      illustration_2_bold: "¡Te ayudaremos a hacerla realidad!"
-      illustration_2_btn: "Envía un proyecto"
-      illustration_3: "Si quieres multiplicar el impacto social de tu organización, en LittleBigMoney creamos canales personalizados para la promoción de tus programas."
-      illustration_3_bold: "¡Descubre más!"
-      illustration_3_btn: "Crea tu canal"
+      illustration_1: ~
+      illustration_1_bold: ~
+      illustration_1_btn: ~
+      illustration_2: ~
+      illustration_2_bold: ~
+      illustration_2_btn: ~
+      illustration_3: ~
+      illustration_3_bold: ~
+      illustration_3_btn: ~
       description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del pais, que juntos permiten la realización de proyectos con impacto social o ambiental en pro fortalecimiento económico y la realizacion de metas de diversas comunidades."
       description_paragraph_2: "Ya sea aportando o recibiendo puedes contribuir con el crecimiento de nuestro país."
       send_project_title: "¡Lo que debes tener en cuenta para enviar proyectos!"
