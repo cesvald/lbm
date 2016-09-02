@@ -19,7 +19,7 @@
           font-weight: 200
           font-size: 24px
           color: $darkblue
-          width: 680px
+          width: 950px
           display: inline-block
           .color-carrot
             color: $carrot
@@ -49,7 +49,7 @@
               vertical-align: middle
               font-family: 'Futura Std'
               font-weight: 200
-              font-size: 13px
+              font-size: 15px
               color: black
               padding: 10px
               height: 92px
@@ -87,7 +87,7 @@
           .container-title
             font-family: 'Futura Std'
             font-weight: 700
-            color: $darkblue
+            color: $carrot
             margin-bottom: 30px
             margin-top: 25px
           .description
@@ -120,7 +120,8 @@
       .budget-container
         margin-top: 125px
         .container-icon
-          margin-top: -60px
+          width: 80px
+          margin-top: -45px
       .success-projects-container
         text-align: left
         margin-top: 90px
@@ -190,41 +191,68 @@
           display: inline
           vertical-align: text-top
       .more-container
-        .col-more
-          margin-top: 40px
+        .inner-container
+          margin-top: 80px
+          padding: 40px 15px
           +box-shadow(rgba(black, 0.75) 0px 0px 7px 2px)
-          font-family: 'Futura Std'
-          font-weight: 200
-          text-align: center
-          padding: 50px 30px
-          background-color: white
-          margin-top: 40px
-          margin-bottom: 0px
-          color: $darkblue
-          height: 986px
-          .subtitle
-            font-size: 18px
-          .explanation
-            font-size: 15px
-            margin-top: 0px
-            color: $darkgray
-          .more-icon
-            width: 50px
-            margin-top: 30px
-            margin-bottom: 10px
-          .more-title
-            font-family: 'Futura Std'
-            font-weight: 700
-            font-size: 20px
-          .reason-number
-            font-family: 'Futura LT'
-            font-weight: 400
-            font-size: 54px
-            margin-top: 25px
-          .reason-text
-            font-family: 'Futura Std'
-            font-weight: 200
-            font-size: 19px
+          .col-more
+            text-align: center
+            &.first
+              .subtitle
+                background-color: $carrot
+            &.second
+              .subtitle
+                background-color: $oceanblue
+            &.third
+              .subtitle
+                background-color: $darkblue
+            .subtitle
+              text-align: center
+              font-family: 'Futura LT'
+              font-weight: 400
+              font-size: 18px
+              color: white
+              line-height: 140%
+              padding: 10px
+              margin-top: 0px
+              +border-radius(10px)
+            .more-text
+              text-align: justify
+              &.first
+                height: 130px
+                margin-top: 20px
+              &.second
+                p:first-child
+                  text-align: center
+                  font-weight: 700
+                  font-size: 20px
+              p
+                font-family: 'Futura Std'
+                font-size: 17px
+                font-weight: 200
+                color: $darkblue
+            .explanation
+              font-size: 15px
+              margin-top: 0px
+              color: $darkgray
+            .more-icon
+              height: 60px
+              margin-top: 25px
+              margin-bottom: 0px
+              fill: $darkblue
+            .more-title
+              font-family: 'Futura Std'
+              font-weight: 700
+              font-size: 20px
+            .reason-number
+              font-family: 'Futura LT'
+              font-weight: 400
+              font-size: 54px
+              margin-top: 25px
+            .reason-text
+              font-family: 'Futura Std'
+              font-weight: 200
+              font-size: 19px
             
       .rol-container
         text-align: center
@@ -235,7 +263,7 @@
           font-size: 28px
           color: $carrot
           margin-bottom: 40px
-        .new-project-btn, .back-project-btn
+        .new-project-btn, .back-project-btn, .new-channel-btn
           font-family: 'Futura LT'
           font-weight: 400
           font-size: 30px
@@ -254,10 +282,16 @@
         .back-project-btn
           padding: 5px 15px
           background-color: $carrot
-          margin-right: 0px
           border: solid 1px $carrot
           &:hover
             color: $carrot
+            background-color: white
+        .new-channel-btn
+          background-color: $darkblue
+          border: solid 1px $darkblue
+          margin-right: 50px
+          &:hover
+            color: $darkblue
             background-color: white
       .tools-container
         margin-top: 80px
