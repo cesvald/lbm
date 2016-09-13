@@ -1,0 +1,133 @@
+= content_for :title, t('.title')
+#page-content
+    .bootstrap-twitter
+        .page-title-1= t('.page_title_1').html_safe
+        .page-title-2= t('.page_title_2')
+        .subtitle= t('.subtitle')
+        = render partial: 'channels/projects/banner'
+        .container
+            .row.content-1
+                .col-xs-12
+                    = image_tag "lbm/lbm-logo.png", class: "container-icon"
+                    .subtitle-what-is= t('.what_is_channel_q')
+                    .text= t('.what_is_channel_a')
+            .row.content-2
+                .col-xs-12
+                    .subtitle-2= t('.subtitle_2')
+                .row.content-2-1
+                    .col-xs-4
+                        = embedded_svg 'lbm/wallet-icon.svg', class: 'icon'
+                    .col-xs-4
+                        = embedded_svg 'lbm/arrow-top-icon.svg', class: 'icon'
+                    .col-xs-4
+                        = embedded_svg 'lbm/steps-icon.svg', class: 'icon'
+                .row.content-2-1
+                    .col-xs-4.col
+                        .phrase-1= t('.answer_1_1')
+                    .col-xs-4.col
+                        .phrase-1= t('.answer_2_1')
+                    .col-xs-4.col
+                        .phrase-1= t('.answer_3_1')
+                .row.content-2-1
+                    .col-xs-4.col
+                        .phrase-2= t('.answer_1_2').html_safe
+                    .col-xs-4.col
+                        .phrase-2= t('.answer_2_2').html_safe
+                    .col-xs-4.col
+                        .phrase-2= t('.answer_3_2').html_safe
+                .row.content-2-1
+                    .col-xs-4.col
+                        .phrase-3= t('.answer_1_3').html_safe
+                    .col-xs-4.col
+                        .phrase-3= t('.answer_2_3').html_safe
+                    .col-xs-4.col
+                        .phrase-3= t('.answer_3_3').html_safe
+            .row.content-3
+                .col-xs-12
+                    .title
+                        = image_tag "lbm/lbm-logo.png", class: "container-icon"
+                        .text= t('.subtitle_3')
+                    .row.content-3-1
+                        .col-xs-4.col
+                            = embedded_svg "lbm/channel-icon.svg", class: 'icon'
+                        .col-xs-4.col
+                            = embedded_svg "lbm/assistant-icon.svg", class: 'icon'
+                        .col-xs-4.col
+                            = embedded_svg "lbm/megaphone-icon.svg", class: 'icon'
+                    .row.content-3-1
+                        .col-xs-4.col
+                            .phrase-1= t('.answer_4_1')
+                        .col-xs-4.col
+                            .phrase-1= t('.answer_5_1')
+                        .col-xs-4.col
+                            .phrase-1= t('.answer_6_1')
+                    .row.content-3-1
+                        .col-xs-4.col
+                            .phrase-2= t('.answer_4_2')
+                        .col-xs-4.col
+                            .phrase-2= t('.answer_5_2')
+                        .col-xs-4.col
+                            .phrase-2= t('.answer_6_2')
+            .row.content-4
+                .col-xs-12
+                    .title
+                        = embedded_svg 'lbm/hand-icon-filled.svg', class: "icon"
+                        .title-text= t('.subtitle_4')
+                        = embedded_svg 'lbm/puzzle-icon.svg', class: "icon"
+            .row.content-5
+                .col-xs-4
+                    .history-point
+                    .history-text= t('.history_1')
+                .col-xs-4
+                    .history-point
+                    .history-text= t('.history_1')
+                .col-xs-4
+                    .history-point
+                    .history-text= t('.history_1')
+            .row.content-6
+                .col-xs-12
+                    .campaign-message= t('.comment_1')
+            .row.content-7
+                .col-xs-6
+                    = render partial: 'channels/projects/banner'
+                .col-xs-6
+                    p= t('.statistics_1')
+                    p= t('.statistics_2')
+                    p= t('.statistics_3')
+                    p= t('.statistics_4')
+                    p= t('.statistics_5')
+                    p= t('.statistics_6')
+            .row.content-8
+                .col-xs-12
+                    .title= t('.subtitle_5')
+                    =image_tag 'lbm/campaign_ambassadors.jpg'
+            .row.content-9
+                .col-xs-12
+                    .title
+                        = embedded_svg 'lbm/chat-icon.svg'
+                        .text= t('.subtitle_6')
+                    .about-us-container
+                        .text-container
+                            .pointer
+                            .text= t('.answer_7_1')
+                        .text-container
+                            .pointer
+                            .text= t('.answer_7_2')
+                        .text-container
+                            .pointer
+                            .text= t('.answer_7_3')
+            .row.content-10
+                .col-xs-12
+                    .title
+                        = embedded_svg 'lbm/channel-icon.svg'
+                        .text= t('.subtitle_7')
+                    .image-slider
+            .row.content-11
+                .col-xs-12
+                    = t('.subtitle_8')
+                    
+            .row.content-12
+                .col-xs-12
+                    .contact-form
+                
+        

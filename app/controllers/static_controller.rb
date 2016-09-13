@@ -9,6 +9,10 @@ class StaticController < ApplicationController
     @title = t('static.guidelines_tips.title')
   end
 
+  def guidelines_channel
+    @title = t('static.guidelines_channels.title')
+  end
+  
   def faq
     @title = t('static.faq.title')
   end

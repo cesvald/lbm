@@ -160,11 +160,12 @@
               = embedded_svg "lbm/after-project-icon.svg", class: "tool-icon"
               .tool-text
                 = t('static.guidelines.after_project').html_safe
-          .tool-wrapper
-            = link_to tools_path(anchor: "venture-course") do
-              = embedded_svg "lbm/venture-course-icon.svg", class: "tool-icon"
-              .tool-text
-                = t('static.guidelines.venture_course').html_safe
+          /*
+            .tool-wrapper
+              = link_to tools_path(anchor: "venture-course") do
+                = embedded_svg "lbm/venture-course-icon.svg", class: "tool-icon"
+                .tool-text
+                  = t('static.guidelines.venture_course').html_safe
           .tool-wrapper
             = link_to tools_path(anchor: "about-crowdfunding") do
               = embedded_svg "lbm/about-crowdfunding-icon.svg", class: "tool-icon"

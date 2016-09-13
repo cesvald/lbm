@@ -998,10 +998,53 @@ pt:
       send_project: "Quero enviar meu projeto"
       explore_curious: "Tâmo junto!"
       explore_projects: "Quero apoiar um projeto"
+    guidelines_channel:
+      title: "¡Bienvenido a tu espacio!"
+      page_title_1: "INICIA <span class='carrot'> TU CANAL</span> CON LBM"
+      page_title_2: "Y potencia tu impacto social"
+      subtitle: "LBM permite potenciar el impacto y la visibilidad de los programas de desarrollo y responsabilidad social de las organizaciones, fortaleciendo sus vínculos con las comunidades y las organizaciones que apoyan."
+      what_is_channel_q: "¿Qué es un Canal?"
+      what_is_channel_a: "Es un mini-sitio con dominio e imagen personalizada que funciona como una vitrina y permite subir varios proyectos al tiempo además de ofrecer incentivos para multiplicar las donaciones (fondos de contrapartida)."
+      subtitle_2: "Un canal es la respuesta a tu organización si…"
+      answer_1_1: "Buscas brindar una alternativa de  ﬁnanciación a proyectos de una población o causa especíﬁca"
+      answer_1_2: "Con LBM puedes llegar a<p>tener muchos donantes</p>"
+      answer_1_3: "Cuéntanos de qué se trata"
+      answer_2_1: "Tienes unos recursos para apoyar tus grupos de interés y quieres maximizar su impacto"
+      answer_2_2: "LBM permite a tus fondos<p>hacer más con menos</p>"
+      answer_2_3: "Transfórmalos en fondos de <p>contrapartida</p>"
+      answer_3_1: "Quieres dar a tus empleados la posibilidad de dejar su huella apoyando una causa que los anime"
+      answer_3_2: "Con LBM puedes regalar la<p>emoción de donar</p>"
+      answer_3_3: "Pregunta por nuestras<p>Giftcards</p>"
+      subtitle_3: "¿Qué ofrece LBM?"
+      answer_4_1: "1. Un canal dedicado"
+      answer_4_2: "Una vitrina virtual especializada donde mostrar los proyectos que se quieran apoyar."
+      answer_5_1: "2. Coordinanción de la implementación"
+      answer_5_2: "Asistencia, capacitaciones y coordinación, antes, durante y después"
+      answer_6_1: "3. Difusión y visibilidad"
+      answer_6_2: "Una estratégia dedicada de comunicación para garantizar visibilidad"
+      subtitle_4: "Conoce algunos de nuestros canales"
+      history_1: "Alianza con RCN <p>2014</p>"
+      history_2: "Alianza con ANSPE y Pioneros/ Compartamos <p>2014</p>"
+      history_3: "Alianza Fundación Bavaria <p>2015</p>"
+      history_4: "Alianza PNUD y KOICA <p>2015</p>"
+      comment_1: "La campaña de crowdfunding<p>MÁS GRANDE DE COLOMBIA.</p>"
+      statistics_1: "<span class='carrot'>*100</span> proyectos al aire al mismo tiempo"
+      statistics_2: "<span class='carrot'>*Lanzamientos en 5</span> ciudades diferentes"
+      statistics_3: "<span class='carrot'>*XXXX</span> donaciones recibidas en 80 días al aire"
+      statistics_4: "*$171,239,733 COP (61,000 USD) recolectados"
+      statistics_5: "<span class='carrot'>*170%</span>  del fondo de contrapartida "
+      statistics_6: "<span class='carrot'>*Socios Institucionales:</span>  PNUD y Koica"
+      subtitle_5: "Embajadores de la campaña:  Mariana Pajón y Santiago Cruz"
+      subtitle_6: "Dicen de nosotros:"
+      answer_7_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      answer_7_2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      answer_7_3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
+      subtitle_7: "¡No te quedes atrás! ¡Crea tu canal!"
+      subtitle_8: "¿Quieres tener un canal con nosotros? ¿Necesitas más información?  Escribe a littlebigmoney@fundacioncapital.org  o déjanos un mensaje y pronto nuestro equipo entrará en contacto contigo."
     guidelines:
       title: "¡Bienvenido a este, tu espacio!"
       subtitle: "Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados. "
-      illustration_1: 'La acción de "donar" es la que le da vida a LittleBigMoney, y gracias a ella se pueden construir los sueños de muchos emprendedores.'
+      illustration_1: "La acción de \"donar\" es la que le da vida a LittleBigMoney, y gracias a ella se pueden construir los sueños de muchos emprendedores."
       illustration_1_bold: "¡Juntos todo es posible!"
       illustration_1_btn: "Dona a un proyecto"
       illustration_2: "Si tienes una iniciativa con enfoques sociales o ambientales, LittleBigMoney es la mejor opción para alcanzar tus metas."
@@ -1066,7 +1109,7 @@ pt:
       rol_play: "¿Qué rol deseas jugar hoy?"
       new_project: "Crear una camapaña"
       back_project: "Aporta a una camapaña"
-      new_channel: "Crea un canal"
+      new_channel: "Crear un canal"
       all_for_backers: "Todo para <p class='enfasis'>donantes</p>"
       about_project: "Todo sobre <p class='enfasis'>Tu Campaña</p>"
       after_project: "Después de <p class='enfasis'>Tu Campaña</p>"
@@ -1122,9 +1165,8 @@ pt:
         tool_1:
           title: "¿Cómo usar mis créditos?donantes.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUOW1ZNHluUGxtaDQ/view"
-          question: 
+          question: ~
           answer: ~
-          
           image: ~
         tool_2:
           title: "¿Qué sucedió con mi colaboración?.pdf"
@@ -1338,11 +1380,10 @@ pt:
         facebook: "Perfil no facebook"
         twitter: "Perfil no twitter"
     contact_message:
-      subject: "%{name} quiere contactar a LittleBigMoney: %{subject}"
+      subject: Asunto
       mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
       success: "Gracias por su mensaje, pronto nos pondremos en contacto con usted"
-      subject: "Asunto"
-      message: "Mensaje"
+      message: Mensaje
       send_message: "Enviar Mensaje"
     backs:
       anonymous: "Apoio anônimo."
