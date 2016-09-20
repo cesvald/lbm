@@ -194,6 +194,9 @@ var CATARSE = {
     guidelines: function(){
       window.view = new CATARSE.StaticGuidelinesView({el: $("body") });
     },
+    guidelines_channel: function(){
+      window.view = new CATARSE.StaticGuidelinesView({el: $("body") });
+    },
     tools: function(){
       window.view = new CATARSE.StaticToolsView({el: $("body") });
     }

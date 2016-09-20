@@ -41,7 +41,7 @@
         .title
           = image_tag "lbm/channels_icon.png", class: "icon"
           h2= t('channel.explore_subchannels').html_safe
-        ol.projects_list
+        .projects_list
           - @profile.group_channels.each do |channel|
             = render 'channels/subchannel', channel: channel
       .container.other-channel-container

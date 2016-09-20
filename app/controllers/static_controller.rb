@@ -11,6 +11,7 @@ class StaticController < ApplicationController
 
   def guidelines_channel
     @title = t('static.guidelines_channels.title')
+    @channels = Channel.not_receive_projects
   end
   
   def faq

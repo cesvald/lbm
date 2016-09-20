@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def contact_and_support
     ContactMailer.contact(params).deliver
     flash[:success] = I18n.t('users.contact_message.success')
-    redirect_to tools_path
+    redirect_to :back
   end
   
   def show

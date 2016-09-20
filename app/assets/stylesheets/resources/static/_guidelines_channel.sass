@@ -7,6 +7,7 @@
             font-weight: 400
             font-size: 26px
             color: $darkblue
+            margin-top: 135px
             .carrot
                 color: $carrot
         .page-title-2
@@ -26,14 +27,16 @@
             padding: 0 20%
         .banner
             margin-bottom: 50px
+            margin-top: 30px
             iframe
-                width: 80%
-                height: 600px
+                width: 60%
+                height: 470px
         .container
             width: 100%
             padding: 0px
             .content-1
                 margin-bottom: 80px
+                padding: 0 20%
                 .container-icon
                     width: 43px
                 .subtitle-what-is
@@ -45,7 +48,6 @@
                     margin-left: 15px
                     vertical-align: top
                     margin-bottom: 20px
-                    padding: 0 20%
                 .text
                     font-family: 'Futura'
                     font-weight: 400
@@ -128,4 +130,194 @@
                             color: $darkblue
                     &:last-child
                         padding-bottom: 40px
-                
+            .content-4
+                .title
+                    margin-bottom: 20px
+                    .icon
+                        height: 54px
+                        vertical-align: middle
+                        fill: $oceanblue
+                    .icon-puzzle
+                        +transform( rotate(15deg) )
+                    .title-text
+                        font-size: 30px
+                        font-family: 'Futura LT'
+                        font-weight: 400
+                        color: white
+                        background-color: $oceanblue
+                        padding: 10px 50px
+                        border-radius: 20px
+                        display: inline-block
+                        margin: 15px
+            .content-5
+                border-top: black dashed 1px
+                margin-top: 30px
+                .history-point
+                    display: inline-block
+                    border-radius: 50%
+                    background-color: $carrot
+                    width: 20px
+                    height: 20px
+                    position: relative
+                    top: -10px
+                .history-text
+                    font-family: 'Futura Std'
+                    font-weight: 700
+                    font-size: 19px
+                    color: $darkblue
+            .content-6
+                margin-top: 85px
+                margin-bottom: 35px
+                .campaign-message
+                    background-color: $carrot
+                    padding: 20px 80px
+                    position: relative
+                    display: inline-block
+                    color: white
+                    font-family: 'Futura Std'
+                    font-weight: 700
+                    font-size: 29px
+                    border-radius: 30px
+                    &:after
+                        position: absolute
+                        content: ''
+                        border-style: solid
+                        border-width: 40px 23px 0 23px
+                        border-color: $carrot transparent transparent transparent
+                        bottom: -90px
+                        right: 45px
+                        padding-bottom: 50px
+                        z-index: 3
+                        background-color: white
+                    p
+                        margin-bottom: 0px
+                    .icon
+                        position: absolute
+                        width: 75px
+                        top: -58px
+                        left: -35px
+                        fill: $carrot
+            .content-7
+                margin: 0 10%
+                margin-top: 55px
+                border-top: solid 3px $lightgray
+                padding-top: 70px
+                iframe
+                    width: 100%
+                    height: 300px
+                .text
+                    font-family: 'Futura Std'
+                    font-weight: 200
+                    color: $darkblue
+                    font-size: 20px
+                    text-align: left
+                    padding-left: 5%
+                    .bold
+                        font-size: 21px
+                        font-weight: 700
+                    .oceanblue
+                        color: $oceanblue
+                    .carrot
+                        color: $carrot
+            .content-8
+                margin-top: 50px
+                .title
+                    font-family: 'Futura Std'
+                    font-weight: 700
+                    font-size: 21px
+                    color: white
+                    background-color: $darkblue
+                    display: inline-block
+                    padding: 10px 60px
+                    border-radius: 10px
+                    margin-bottom: 50px
+            .content-9
+                margin-top: 60px
+                background-image: url($images_lbm_path + 'background-icons.png')
+                background-size: 100%
+                .title
+                    margin-top: -47px
+                    .icon
+                        width: 68px
+                        fill: $oceanblue
+                        vertical-align: middle
+                    .text
+                        font-family: 'Futura Std'
+                        font-weight: 200
+                        font-size: 37px
+                        color: $oceanblue
+                        display: inline-block
+                        margin-left: 10px
+                        position: relative
+                        top: 10px
+                        
+                .about-us-container
+                    margin-top: -20px
+                    padding: 0 10%
+                    padding-bottom: 35px
+                    .text-container
+                        text-align: left
+                        .pointer
+                            width: 0px
+                            height: 0px
+                            border-style: solid
+                            border-width: 12px 0 12px 21px
+                            border-color: transparent transparent transparent $carrot
+                            position: relative
+                            top: 35px
+                            left: -35px
+                        .text
+                            font-family: 'Futura'
+                            font-weight: 400
+                            font-style: italic
+                            font-size: 19px
+                            color: $darkblue
+            .content-10
+                position: relative
+                margin-top: 30px
+                .title
+                    margin-bottom: 10px
+                    .icon
+                        width: 67px
+                        fill: $carrot
+                        vertical-align: middle
+                    .text
+                        display: inline-block
+                        font-family: 'Futura Std'
+                        font-weight: 200
+                        font-size: 37px
+                        color: $carrot
+                        position: relative
+                        top: 10px
+                        margin-left: 10px
+                .image-slider
+                    width: 1080px
+                    .image
+                        width: 281px
+                        height: 164px
+                        border-radius: 10px
+                #images-swiper-button-next, #images-swiper-button-prev
+                    background-image: none
+                    width: 0px
+                    height: 0px
+                    border-style: solid
+                    top: 167px
+                    right: 5%
+                    border-width: 12px 0 12px 21px
+                    border-color: transparent transparent transparent $carrot
+                    position: absolute
+                #images-swiper-button-prev
+                    border-width: 12px 21px 12px 0
+                    border-color: transparent $carrot transparent transparent
+                    left: 5%
+                    right: 0%
+            .content-11
+                background-image: url($images_lbm_path + 'background-icons.png')
+                background-size: 100%
+                padding: 50px 10%
+                font-family: 'Futura Std'
+                font-weight: 200
+                font-size: 23px
+                color: #7B7B7B
+                .oceanblue
+                    color: $oceanblue

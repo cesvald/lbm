@@ -73,38 +73,50 @@
                     .title
                         = embedded_svg 'lbm/hand-icon-filled.svg', class: "icon"
                         .title-text= t('.subtitle_4')
-                        = embedded_svg 'lbm/puzzle-icon.svg', class: "icon"
+                        = embedded_svg 'lbm/puzzle-icon.svg', class: "icon icon-puzzle"
+                    #channels-swiper.swiper-container
+                        .swiper-wrapper
+                            - @channels.each do |channel|
+                                - if channel.parent_channel.nil?
+                                    = render 'channels/image_channel', channel: channel
             .row.content-5
-                .col-xs-4
+                .col-xs-3
                     .history-point
-                    .history-text= t('.history_1')
-                .col-xs-4
+                    .history-text= t('.history_1').html_safe
+                .col-xs-3
                     .history-point
-                    .history-text= t('.history_1')
-                .col-xs-4
+                    .history-text= t('.history_2').html_safe
+                .col-xs-3
                     .history-point
-                    .history-text= t('.history_1')
+                    .history-text= t('.history_3').html_safe
+                .col-xs-3
+                    .history-point
+                    .history-text= t('.history_4').html_safe
             .row.content-6
                 .col-xs-12
-                    .campaign-message= t('.comment_1')
+                    .campaign-message
+                        = t('.comment_1').html_safe
+                        = embedded_svg 'lbm/three-hands-icon.svg', class: 'icon'
+                    
             .row.content-7
                 .col-xs-6
                     = render partial: 'channels/projects/banner'
                 .col-xs-6
-                    p= t('.statistics_1')
-                    p= t('.statistics_2')
-                    p= t('.statistics_3')
-                    p= t('.statistics_4')
-                    p= t('.statistics_5')
-                    p= t('.statistics_6')
+                    p.text= t('.statistics_1').html_safe
+                    p.text= t('.statistics_2').html_safe
+                    p.text= t('.statistics_3').html_safe
+                    p.text= t('.statistics_4').html_safe
+                    p.text= t('.statistics_5').html_safe
+                    p.text= t('.statistics_6').html_safe
             .row.content-8
                 .col-xs-12
                     .title= t('.subtitle_5')
-                    =image_tag 'lbm/campaign_ambassadors.jpg'
+                    .row
+                        =image_tag 'lbm/embajadores.jpg'
             .row.content-9
                 .col-xs-12
                     .title
-                        = embedded_svg 'lbm/chat-icon.svg'
+                        = embedded_svg 'lbm/chat-icon.svg', class: 'icon'
                         .text= t('.subtitle_6')
                     .about-us-container
                         .text-container
@@ -119,15 +131,40 @@
             .row.content-10
                 .col-xs-12
                     .title
-                        = embedded_svg 'lbm/channel-icon.svg'
+                        = embedded_svg 'lbm/channel-icon.svg', class: 'icon'
                         .text= t('.subtitle_7')
-                    .image-slider
+                    #images-swiper.swiper-container.image-slider
+                        .swiper-wrapper
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                    #images-swiper-button-prev.swiper-button-prev
+                    #images-swiper-button-next.swiper-button-next
+                    
             .row.content-11
                 .col-xs-12
-                    = t('.subtitle_8')
+                    = t('.subtitle_8').html_safe
                     
             .row.content-12
                 .col-xs-12
-                    .contact-form
+                    #contact-wrapper
+                        = form_tag contact_and_support_users_path, method: :get do
+        					.row
+        						.col-md-4.col-md-offset-2.col-xs-12
+        							= text_field_tag :name, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.full_name')
+        							= text_field_tag :email, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.email')
+        							= text_field_tag :subject, nil, class: 'lbm-input form-control', placeholder: t('users.contact_message.subject')
+        						.col-md-4.col-xs-12
+        							= text_area_tag :message, nil, class: 'lbm-textarea form-control', placeholder: t('users.contact_message.message')
+        					.row
+        						.col-md-10.submit-wrapper
+        							= submit_tag t('users.contact_message.send_message'), class: 'btn btn-primary'
                 
         
