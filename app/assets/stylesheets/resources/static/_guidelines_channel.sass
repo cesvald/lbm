@@ -53,7 +53,6 @@
                     font-weight: 400
                     font-size: 18px
                     color: $darkblue
-                    font-style: italic
             .content-2
                 background: url($images_lbm_path+"background_blue.png")
                 margin-top: 50px
@@ -117,6 +116,7 @@
                             position: relative
                             top: -35px
                             margin-bottom: -25px
+                            fill: $oceanblue
                         .phrase-1
                             font-family: 'Futura Std'
                             font-weight: 700
@@ -131,24 +131,31 @@
                     &:last-child
                         padding-bottom: 40px
             .content-4
+                margin-top: 70px
                 .title
+                    background-color: $darkblue
                     margin-bottom: 20px
-                    .icon
-                        height: 54px
-                        vertical-align: middle
-                        fill: $oceanblue
-                    .icon-puzzle
-                        +transform( rotate(15deg) )
-                    .title-text
-                        font-size: 30px
-                        font-family: 'Futura LT'
-                        font-weight: 400
-                        color: white
-                        background-color: $oceanblue
-                        padding: 10px 50px
-                        border-radius: 20px
+                    padding: 20px 0px
+                    .bullet
+                        width: 10px
+                        height: 10px
+                        border-radius: 50%
+                        background-color: white
                         display: inline-block
-                        margin: 15px
+                        margin: 0px 10px
+                        vertical-align: super
+                    .icon
+                        height: 38px
+                        vertical-align: bottom
+                        fill: white
+                    .title-text
+                        font-size: 37px
+                        font-family: 'Futura Std'
+                        font-weight: 200
+                        color: white
+                        display: inline-block
+                        line-height: 100%
+                        margin-right: 10px
             .content-5
                 border-top: black dashed 1px
                 margin-top: 30px
@@ -166,8 +173,22 @@
                     font-size: 19px
                     color: $darkblue
             .content-6
-                margin-top: 85px
-                margin-bottom: 35px
+                margin-top: 60px
+                .title
+                    padding: 20px 0px
+                    background-color: $darkblue
+                    margin-bottom: 35px
+                    .text-title
+                        font-size: 37px
+                        font-family: 'Futura Std'
+                        font-weight: 200
+                        color: white
+                        display: inline-block
+                        line-height: 100%
+                        margin-right: 10px
+                    .icon
+                        height: 48px
+                        vertical-align: bottom
                 .campaign-message
                     background-color: $carrot
                     padding: 20px 80px
@@ -199,7 +220,7 @@
                         fill: $carrot
             .content-7
                 margin: 0 10%
-                margin-top: 55px
+                margin-top: -20px
                 border-top: solid 3px $lightgray
                 padding-top: 70px
                 iframe
@@ -232,20 +253,21 @@
                     border-radius: 10px
                     margin-bottom: 50px
             .content-9
-                margin-top: 60px
+                margin-top: 70px
                 background-image: url($images_lbm_path + 'background-icons.png')
                 background-size: 100%
                 .title
-                    margin-top: -47px
+                    background-color: $darkblue
+                    margin-bottom: 50px
                     .icon
                         width: 68px
-                        fill: $oceanblue
+                        fill: white
                         vertical-align: middle
                     .text
                         font-family: 'Futura Std'
                         font-weight: 200
                         font-size: 37px
-                        color: $oceanblue
+                        color: white
                         display: inline-block
                         margin-left: 10px
                         position: relative
@@ -274,19 +296,20 @@
                             color: $darkblue
             .content-10
                 position: relative
-                margin-top: 30px
+                margin-bottom: 40px
                 .title
-                    margin-bottom: 10px
+                    margin-bottom: 30px
+                    background-color: $carrot
                     .icon
                         width: 67px
-                        fill: $carrot
+                        fill: white
                         vertical-align: middle
                     .text
                         display: inline-block
                         font-family: 'Futura Std'
                         font-weight: 200
                         font-size: 37px
-                        color: $carrot
+                        color: white
                         position: relative
                         top: 10px
                         margin-left: 10px
@@ -301,7 +324,7 @@
                     width: 0px
                     height: 0px
                     border-style: solid
-                    top: 167px
+                    top: 187px
                     right: 5%
                     border-width: 12px 0 12px 21px
                     border-color: transparent transparent transparent $carrot
@@ -319,5 +342,6 @@
                 font-weight: 200
                 font-size: 23px
                 color: #7B7B7B
+                margin-bottom: 30px
                 .oceanblue
                     color: $oceanblue

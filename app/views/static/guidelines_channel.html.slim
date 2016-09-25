@@ -71,14 +71,40 @@
             .row.content-4
                 .col-xs-12
                     .title
-                        = embedded_svg 'lbm/hand-icon-filled.svg', class: "icon"
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        = embedded_svg 'lbm/sandglass-icon.svg', class: "icon"
                         .title-text= t('.subtitle_4')
-                        = embedded_svg 'lbm/puzzle-icon.svg', class: "icon icon-puzzle"
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
+                        .bullet
                     #channels-swiper.swiper-container
                         .swiper-wrapper
-                            - @channels.each do |channel|
-                                - if channel.parent_channel.nil?
-                                    = render 'channels/image_channel', channel: channel
+                            .swiper-slide.channel-slide
+                            	.miv-image-channel
+                            	        = image_tag "lbm/channel-time-1.jpg", class: "image"
+                            .swiper-slide.channel-slide
+                            	.miv-image-channel
+                            	        = image_tag "lbm/channel-time-2.jpg", class: "image"
+                            .swiper-slide.channel-slide
+                            	.miv-image-channel
+                            	        = image_tag "lbm/channel-time-3.jpg", class: "image"
+                            .swiper-slide.channel-slide
+                            	.miv-image-channel
+                            	        = image_tag "lbm/channel-time-4.jpg", class: "image"
             .row.content-5
                 .col-xs-3
                     .history-point
@@ -94,6 +120,10 @@
                     .history-text= t('.history_4').html_safe
             .row.content-6
                 .col-xs-12
+                    .title
+                        .text-title
+                            |Clicks Por un Sueño
+                        = embedded_svg "lbm/clicks-channel-icon.svg", class: 'icon'
                     .campaign-message
                         = t('.comment_1').html_safe
                         = embedded_svg 'lbm/three-hands-icon.svg', class: 'icon'
