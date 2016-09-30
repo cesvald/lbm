@@ -1233,6 +1233,30 @@ es:
           question: ~
           answer: ~
           image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_10:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
       about_project:
         description: "Descripción de las herramientas sobre projectos"
         tool_1:
@@ -1266,6 +1290,30 @@ es:
           answer: ~
           image: ~
         tool_6:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_10:
           title: ~
           link: ~
           question: ~
@@ -1309,6 +1357,30 @@ es:
           question: ~
           answer: ~
           image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_10:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
       venture_course:
         description: "Descripción de las herramientas del curso en empredimiento"
         tool_1:
@@ -1347,6 +1419,30 @@ es:
           question: ~
           answer: ~
           image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_10:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
       about_crowdfunding:
         description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
@@ -1380,6 +1476,30 @@ es:
           answer: ~
           image: ~
         tool_6:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_10:
           title: ~
           link: ~
           question: ~
