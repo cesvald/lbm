@@ -5,32 +5,67 @@
 		.tool-icon
 			width: 62px
 			fill: $carrot
-			margin-right: 30px
+			margin-right: 10px
 		.tool-header-title
 			font-family: 'Futura Std'
 			font-weight: 200
 			font-size: 34px
 			color: $darkblue
-			vertical-align: top
-			width: 122px
 			line-height: 38px
 			display: inline-block
 			.tool-header-title-bold
 				font-family: 'Futura LT'
 				font-weight: 400
 				font-size: 29px
+		.subtitle-wrapper
+			margin-top: 20px
+			.subtitle
+				font-family: 'Futura Std'
+				font-weight: 400
+				font-size: 18px
+				color: $darkblue
+				line-height: 150%
+				margin-bottom: 0px
+				&.bold
+					font-weight: 700
+				&.carrot
+					color: $carrot
 		.separator
 			height: 1px
 			background-color: $mediumgray
 			width: 70%
 			margin-bottom: -33px
+		#contact-wrapper
+			.container
+				.col-md-4
+					padding: 0px
+					position: relative
+					&:first-child
+						left: -41px
+					&:last-child
+						left: 41px
+				.submit-wrapper
+					input
+						position: relative
+						left: 55px
+		.faq-subtitle
+			font-family: 'Futura LT'
+			font-weight: 400
+			font-size: 29px
+			color: $darkblue
+			text-align: left
+			padding-left: 24px
+			width: 986px
+			position: relative
+			left: 50%
+			margin-left: -493px
 		.tools-icon-container
 			margin-top: 20px
 			text-align: center
-			width: 1056px
+			width: 986px
 			position: relative
 			left: 50%
-			margin-left: -528px
+			margin-left: -493px
 			padding-bottom: 20px
 			.pointer
 				width: 50px
@@ -38,14 +73,9 @@
 				bottom: -55px
 				left: 0px
 			.tool-icon-wrapper
-				padding: 10px 25px
+				padding: 10px 5px
 				display: table-cell
 				cursor: pointer
-				&:nth-child(5)
-					padding-right: 0px
-				&:last-child
-					border-right: none
-					padding-left: 0px
 				.tool-icon
 					height: 41px
 					stroke: $carrot
@@ -54,7 +84,6 @@
 					+transition(all, 0.3s)
 				.tool-text
 					display: inline-block
-					vertical-align: top
 					font-family: 'Futura Std'
 					font-weight: 200
 					font-size: 21px

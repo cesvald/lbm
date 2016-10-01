@@ -485,7 +485,7 @@ es:
       banner_image_10: ~
       banner_message_1: "Un aliado para los programas de desarrollo y responsabilidad social"
       banner_message_2: "Conectamos organizaciones con ideas que transforman comunidades"
-      banner_message_3: "Financiación colectiva de iniciativas de alto impacto ENVíANOS TU PROYECTO"
+      banner_message_3: "Financiación colectiva de iniciativas de alto impacto ENVIANOS TU PROYECTO"
       banner_message_4: "¡Dona ya! Pequeños aportes con GRAN impacto"
       banner_message_5: "Crowdfunding para la Responsabilidad Social Empresarial"
       banner_message_6: "Herramientas y recomendaciones para una campaña exitosa"
@@ -1145,11 +1145,11 @@ es:
       new_project: "Crear un proyecto"
       back_project: "Colaborar a proyectos"
       new_channel: ~
-      all_for_backers: "Todo para <p class='enfasis'>Donantes</p>"
-      about_project: "Todo sobre <p class='enfasis'>Tu Campaña</p>"
-      after_project: "Después de <p class='enfasis'>Tu Campaña</p>"
-      venture_course: "Curso de <p class='enfasis'>Emprendimiento</p>"
-      about_crowdfunding: "Todo Sobre <p class='enfasis'>CrowdFunding</p>"
+      all_for_backers: "Todo para <p>colaboradores</p>"
+      about_project: "Todo para tu <p>proyecto</p>"
+      after_project: "Todo para tu <p>canal</p>"
+      venture_course: "Guías y <p>herramientas</p>"
+      about_crowdfunding: "Crowdfunding y <p>LittleBigMoney</p>"
     about:
       title: "Nuestro equipo"
       subtitle: "Conoce a las pequeñas personas que hacen grandes cosas! <3"
@@ -1195,6 +1195,10 @@ es:
       title_eight: ""
       text_eight: ""
     tools:
+      subtitle_1: "¿Quieres conocer  los beneficios que LBM tiene para ti? ¿No pudiste resolver tus dudas con las preguntas frecuentes?" 
+      subtitle_2: "Escríbenos a littlebigmoney@fundacioncapital.org o déjanos tu mensaje completando tus datos en esta casilla."
+      subtitle_3: "Pronto alguien de nuestro equipo entrará en contacto contigo."
+      faq_subtitle: "Preguntas frecuentes"
       for_backers:
         description: "Descripción de las herramientas para donantes"
         tool_1:

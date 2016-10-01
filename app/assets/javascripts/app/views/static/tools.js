@@ -36,27 +36,37 @@ CATARSE.StaticToolsView = Backbone.View.extend({
 
   for_backers: function() {
     this.selectItem("for-backers")
-    $('.tools-icon-container .pointer').animate({left: '100px'}, 300)
+    var element = $('.tools-icon-container .active');
+    var position = element.position().left + element.width() / 2;
+    $('.tools-icon-container .pointer').animate({left: position}, 300);
   },
 
   about_project: function() {
     this.selectItem("about-project")
-    $('.tools-icon-container .pointer').animate({left: '308px'}, 300)
+    var element = $('.tools-icon-container .active');
+    var position = element.position().left + element.width() / 2;
+    $('.tools-icon-container .pointer').animate({left: position}, 300);
   },
 
   after_project: function() {
     this.selectItem("after-project")
-    $('.tools-icon-container .pointer').animate({left: '523px'}, 300)
+    var element = $('.tools-icon-container .active');
+    var position = element.position().left + element.width() / 2;
+    $('.tools-icon-container .pointer').animate({left: position}, 300);
   },
 
   venture_course: function() {
     this.selectItem("venture-course")
-    $('.tools-icon-container .pointer').animate({left: '739px'}, 300)
+    var element = $('.tools-icon-container .active');
+    var position = element.position().left + element.width() / 2;
+    $('.tools-icon-container .pointer').animate({left: position}, 300);
   },
 
   about_crowdfunding: function() {
     this.selectItem("about-crowdfunding")
-    $('.tools-icon-container .pointer').animate({left: '930px'}, 300)
+    var element = $('.tools-icon-container .active');
+    var position = element.position().left + element.width() / 2;
+    $('.tools-icon-container .pointer').animate({left: position}, 300);
   },
 
   selectItem: function(item){

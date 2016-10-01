@@ -1172,6 +1172,10 @@ en:
       title_eight: ~
       text_eight: ~
     tools:
+      subtitle_1: "¿Quieres conocer  los beneficios que LBM tiene para ti? ¿No pudiste resolver tus dudas con las preguntas frecuentes?" 
+      subtitle_2: "Escríbenos a littlebigmoney@fundacioncapital.org o déjanos tu mensaje completando tus datos en esta casilla."
+      subtitle_3: "Pronto alguien de nuestro equipo entrará en contacto contigo."
+      faq_subtitle: "Preguntas frecuentes"
       for_backers:
         description: "Descripción de las herramientas para donantes"
         tool_1:

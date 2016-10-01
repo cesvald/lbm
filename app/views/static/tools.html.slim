@@ -1,9 +1,11 @@
 #page_content
-	= embedded_svg "lbm/header_3.svg", class:"tool-icon"
+	= embedded_svg "lbm/mailbox-icon.svg", class:"tool-icon"
 	span.tool-header-title
-		| Contacto & 
-		span.tool-header-title-bold
-			| Soporte
+		| Contacto & Soporte
+	.subtitle-wrapper
+		p.subtitle= t('.subtitle_1')
+		p.subtitle.bold= t('.subtitle_2')
+		p.subtitle.carrot.bold= t('.subtitle_3')
 	hr.separator
 	/*
 		.bootstrap-twitter
@@ -20,7 +22,6 @@
 			            .project-point= t('static.guidelines.project_send.phrase_3')
 			            .project-point= t('static.guidelines.project_send.phrase_4')
 			            .project-point= t('static.guidelines.project_send.phrase_5')
-			            
 	#contact-wrapper.bootstrap-twitter
 		.container.row
 			.col-xs-12
@@ -35,11 +36,15 @@
 					.row
 						.col-md-10.submit-wrapper
 							= submit_tag t('users.contact_message.send_message'), class: 'btn btn-primary'
-					
+	.faq-subtitle= t '.faq_subtitle'				
 	.tools-icon-container
 		= image_tag 'lbm/tool-pointer.png', class: 'pointer'
+		=link_to "#about-crowdfunding", class:"tool-icon-wrapper", id:"option-about-crowdfunding" do
+		  = embedded_svg "lbm/about-crowdfunding-icon.svg", class: "tool-icon"
+		  .tool-text
+		    = t('static.guidelines.about_crowdfunding').html_safe
 		=link_to "#for-backers", class:"tool-icon-wrapper", id:"option-for-backers" do
-			= embedded_svg "lbm/for-backers-icon.svg", class: "tool-icon"
+			= embedded_svg "lbm/donor-icon.svg", class: "tool-icon"
 			.tool-text
 			  = t('static.guidelines.all_for_backers').html_safe
 		=link_to "#about-project", class:"tool-icon-wrapper", id:"option-about-project" do
@@ -47,18 +52,13 @@
 		  .tool-text
 		    = t('static.guidelines.about_project').html_safe
 		=link_to "#after-project", class:"tool-icon-wrapper", id:"option-after-project" do
-		  = embedded_svg "lbm/after-project-icon.svg", class: "tool-icon"
+		  = embedded_svg "lbm/channel-icon.svg", class: "tool-icon"
 		  .tool-text
 		    = t('static.guidelines.after_project').html_safe
-		/*
-			=link_to "#venture-course", class:"tool-icon-wrapper", id:"option-venture-course" do
-			  = embedded_svg "lbm/venture-course-icon.svg", class: "tool-icon"
-			  .tool-text
-			    = t('static.guidelines.venture_course').html_safe
-		=link_to "#about-crowdfunding", class:"tool-icon-wrapper", id:"option-about-crowdfunding" do
-		  = embedded_svg "lbm/about-crowdfunding-icon.svg", class: "tool-icon"
+		=link_to "#venture-course", class:"tool-icon-wrapper", id:"option-venture-course" do
+		  = embedded_svg "lbm/header_3.svg", class: "tool-icon"
 		  .tool-text
-		    = t('static.guidelines.about_crowdfunding').html_safe
+		    = t('static.guidelines.venture_course').html_safe
 	#main-tools-container
 		#container-for-backers.tools-container.active
 			p.tools-description= t('static.tools.for_backers.description')
@@ -102,7 +102,6 @@
 								span.question-text= t(".about_project.tool_#{i}.question")
 							p.answer= t(".about_project.tool_#{i}.answer")
 					
-		
 		#container-after-project.tools-container
 			p.tools-description= t('static.tools.after_project.description')
 			.tools-wrapper
@@ -124,19 +123,18 @@
 								span.question-text= t(".after_project.tool_#{i}.question")
 							p.answer= t(".after_project.tool_#{i}.answer")
 
-		/*
-			#container-venture-course.tools-container
-				p.tools-description= t('static.tools.venture_course.description')
-				.tools-wrapper
-					- for i in 1..10
-						- if t(".venture_course.tool_1.title", default: "").present?
-							.tool-element
-								= link_to t(".venture_course.tool_#{i}.link", default: "#"), class: "tool-link", target: "_blank" do
-									- if t(".venture_course.tool_#{i}.image", default: "").present?
-										= image_tag t(".venture_course.tool_#{i}.image"), class: 'tool-image'
-									- else
-										= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
-									p.tool-title= t(".venture_course.tool_1.title")
+		#container-venture-course.tools-container
+			p.tools-description= t('static.tools.venture_course.description')
+			.tools-wrapper
+				- for i in 1..10
+					- if t(".venture_course.tool_#{i}.link", default: "").present?
+						.tool-element
+							= link_to t(".venture_course.tool_#{i}.link", default: "#"), class: "tool-link", target: "_blank" do
+								- if t(".venture_course.tool_#{i}.image", default: "").present?
+									= image_tag t(".venture_course.tool_#{i}.image"), class: 'tool-image'
+								- else
+									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
+								p.tool-title= t(".venture_course.tool_1.title")
 
 		#container-about-crowdfunding.tools-container
 			p.tools-description= t('static.tools.about_crowdfunding.description')
