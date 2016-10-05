@@ -22,7 +22,7 @@
               .container
                 .message
                   h1= t 'projects.index.banner_message_1'
-                  = link_to t("projects.index.know_more"), explore_path
+                  = link_to t("projects.index.know_more"), guidelines_channel_path
             .item
               = image_tag("lbm/banner_2.jpg")
               .container
@@ -47,13 +47,14 @@
               .container
                 .message
                   h1= t 'projects.index.banner_message_5'
-                  = link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
+                  /= link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
+                  = link_to t("projects.index.know_more"), guidelines_channel_path
             .item
               = image_tag("lbm/banner_6.png")
               .container
                 .message
                   h1= t 'projects.index.banner_message_6'
-                  = link_to t("projects.index.know_more"), guidelines_channel_path
+                  = link_to t("projects.index.know_more"), tools_path
                   /= link_to t("projects.index.know_more"), 'https://drive.google.com/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view?usp=sharing', target:"_blank"
           /! Controls
           a.left.carousel-control data-slide="prev" href="#banners_carousel" role="button" 
