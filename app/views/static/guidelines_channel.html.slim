@@ -75,6 +75,23 @@
             .row.content-4
                 .col-xs-12
                     .title
+                        = embedded_svg 'lbm/chat-icon.svg', class: 'icon'
+                        .text= t('.subtitle_6')
+                    .row
+                        .col-xs-10.col-xs-offset-1
+                            .about-us-container
+                                .text-container
+                                    .pointer
+                                    .text= t('.answer_7_1')
+                                .text-container
+                                    .pointer
+                                    .text= t('.answer_7_2')
+                                .text-container
+                                    .pointer
+                                    .text= t('.answer_7_3')
+            .row.content-5
+                .col-xs-12
+                    .title
                         /*
                             .bullet
                             .bullet
@@ -115,7 +132,7 @@
                                     .swiper-slide.channel-slide
                                     	.miv-image-channel
                                     	        = image_tag "lbm/channel-time-4.jpg", class: "image"
-            .row.content-5
+            .row.content-6
                 .row
                     .col-xs-10.col-xs-offset-1
                         .row
@@ -131,7 +148,23 @@
                             .col-xs-3
                                 .history-point
                                 .history-text= t('.history_4').html_safe
-            .row.content-6
+            .row.content-7
+                .col-xs-10.col-xs-offset-1
+                    #images-swiper.swiper-container.image-slider
+                        .swiper-wrapper
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                            .swiper-slide
+                                = image_tag "project.png", class: "image"
+                    #images-swiper-button-prev.swiper-button-prev
+                    #images-swiper-button-next.swiper-button-next
+            .row.content-8
                 .col-xs-12
                     .title
                         .text-title
@@ -140,7 +173,7 @@
                     .campaign-message
                         = t('.comment_1').html_safe
                         = embedded_svg 'lbm/three-hands-icon.svg', class: 'icon'
-            .row.content-7
+            .row.content-9
                 .col-xs-6
                     = render partial: 'channels/projects/banner'
                 .col-xs-6
@@ -150,55 +183,20 @@
                     p.text= t('.statistics_4').html_safe
                     p.text= t('.statistics_5').html_safe
                     p.text= t('.statistics_6').html_safe
-            .row.content-8
+            .row.content-10
                 .col-xs-12
                     .title= t('.subtitle_5')
                     .row
                         =image_tag 'lbm/embajadores.jpg'
-            .row.content-9
-                .col-xs-12
-                    .title
-                        = embedded_svg 'lbm/chat-icon.svg', class: 'icon'
-                        .text= t('.subtitle_6')
-                    .row
-                        .col-xs-10.col-xs-offset-1
-                            .about-us-container
-                                .text-container
-                                    .pointer
-                                    .text= t('.answer_7_1')
-                                .text-container
-                                    .pointer
-                                    .text= t('.answer_7_2')
-                                .text-container
-                                    .pointer
-                                    .text= t('.answer_7_3')
-            .row.content-10
+            .row.content-11
                 .col-xs-12
                     .title
                         = embedded_svg 'lbm/channel-icon.svg', class: 'icon'
                         .text= t('.subtitle_7')
-                    .row
-                        .col-xs-10.col-xs-offset-1
-                            #images-swiper.swiper-container.image-slider
-                                .swiper-wrapper
-                                    .swiper-slide
-                                        = image_tag "project.png", class: "image"
-                                    .swiper-slide
-                                        = image_tag "project.png", class: "image"
-                                    .swiper-slide
-                                        = image_tag "project.png", class: "image"
-                                    .swiper-slide
-                                        = image_tag "project.png", class: "image"
-                                    .swiper-slide
-                                        = image_tag "project.png", class: "image"
-                            #images-swiper-button-prev.swiper-button-prev
-                            #images-swiper-button-next.swiper-button-next
-                    
-            .row.content-11
+            .row.content-12
                 .col-xs-12
                     = t('.subtitle_8').html_safe
-                    
-            .row.content-12
+            .row.content-13
                 .col-xs-12
                     #contact-wrapper
                         = form_tag contact_and_support_users_path, method: :get do

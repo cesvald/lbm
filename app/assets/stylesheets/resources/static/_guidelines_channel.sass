@@ -136,8 +136,49 @@
                         padding-bottom: 40px
             .content-4
                 margin-top: 70px
+                background-image: url($images_lbm_path + 'background-icons.png')
+                background-size: 100%
                 .title
-                    margin-bottom: 20px
+                    margin-top: -46px
+                    .icon
+                        width: 68px
+                        fill: $oceanblue
+                        vertical-align: middle
+                    .text
+                        font-family: 'Futura Std'
+                        font-weight: 200
+                        font-size: 37px
+                        color: $oceanblue
+                        display: inline-block
+                        margin-left: 10px
+                        position: relative
+                        top: 10px
+                        
+                .about-us-container
+                    margin-top: -20px
+                    padding: 0 10%
+                    padding-bottom: 45px
+                    .text-container
+                        text-align: left
+                        .pointer
+                            width: 0px
+                            height: 0px
+                            border-style: solid
+                            border-width: 12px 0 12px 21px
+                            border-color: transparent transparent transparent $carrot
+                            position: relative
+                            top: 35px
+                            left: -35px
+                        .text
+                            font-family: 'Futura'
+                            font-weight: 400
+                            font-style: italic
+                            font-size: 19px
+                            color: $darkblue
+            .content-5
+                margin-top: 70px
+                .title
+                    margin-bottom: 30px
                     .bullet
                         width: 10px
                         height: 10px
@@ -151,7 +192,7 @@
                         vertical-align: bottom
                         fill: $oceanblue
                         &.puzzle-icon
-                            +transform( rotate(45deg) )
+                            +transform( rotate(20deg) )
                     .title-text
                         font-size: 37px
                         font-family: 'Futura Std'
@@ -161,8 +202,8 @@
                         background-color: $oceanblue
                         border-radius: 20px
                         padding: 7px 54px
-                        margin: 0px 10px
-            .content-5
+                        margin: 0px 20px
+            .content-6
                 border-top: black dashed 1px
                 margin-top: 30px
                 .history-point
@@ -178,7 +219,29 @@
                     font-weight: 700
                     font-size: 19px
                     color: $darkblue
-            .content-6
+            .content-7
+                margin-top: 50px
+                .image-slider
+                    width: 1080px
+                    .image
+                        width: 281px
+                        height: 164px
+                        border-radius: 10px
+                #images-swiper-button-next, #images-swiper-button-prev
+                    background-image: none
+                    width: 0px
+                    height: 0px
+                    border-style: solid
+                    right: 5%
+                    border-width: 12px 0 12px 21px
+                    border-color: transparent transparent transparent $carrot
+                    position: absolute
+                #images-swiper-button-prev
+                    border-width: 12px 21px 12px 0
+                    border-color: transparent $carrot transparent transparent
+                    left: 5%
+                    right: 0%
+            .content-8
                 margin-top: 60px
                 .title
                     padding: 20px 0px
@@ -224,7 +287,7 @@
                         top: -58px
                         left: -35px
                         fill: $carrot
-            .content-7
+            .content-9
                 margin: 0 10%
                 margin-top: 20px
                 border-top: solid 3px $lightgray
@@ -246,7 +309,7 @@
                         color: $oceanblue
                     .carrot
                         color: $carrot
-            .content-8
+            .content-10
                 margin-top: 50px
                 .title
                     font-family: 'Futura Std'
@@ -258,51 +321,10 @@
                     padding: 10px 60px
                     border-radius: 10px
                     margin-bottom: 50px
-            .content-9
-                margin-top: 70px
-                background-image: url($images_lbm_path + 'background-icons.png')
-                background-size: 100%
-                .title
-                    background-color: $darkblue
-                    margin-bottom: 30px
-                    .icon
-                        width: 68px
-                        fill: white
-                        vertical-align: middle
-                    .text
-                        font-family: 'Futura Std'
-                        font-weight: 200
-                        font-size: 37px
-                        color: white
-                        display: inline-block
-                        margin-left: 10px
-                        position: relative
-                        top: 10px
-                        
-                .about-us-container
-                    margin-top: -20px
-                    padding: 0 10%
-                    padding-bottom: 45px
-                    .text-container
-                        text-align: left
-                        .pointer
-                            width: 0px
-                            height: 0px
-                            border-style: solid
-                            border-width: 12px 0 12px 21px
-                            border-color: transparent transparent transparent $carrot
-                            position: relative
-                            top: 35px
-                            left: -35px
-                        .text
-                            font-family: 'Futura'
-                            font-weight: 400
-                            font-style: italic
-                            font-size: 19px
-                            color: $darkblue
-            .content-10
+            .content-11
                 position: relative
-                margin-bottom: 40px
+                margin-bottom: 10px
+                margin-top: 60px
                 .title
                     margin-bottom: 30px
                     background-color: $carrot
@@ -319,27 +341,7 @@
                         position: relative
                         top: 10px
                         margin-left: 10px
-                .image-slider
-                    width: 1080px
-                    .image
-                        width: 281px
-                        height: 164px
-                        border-radius: 10px
-                #images-swiper-button-next, #images-swiper-button-prev
-                    background-image: none
-                    width: 0px
-                    height: 0px
-                    border-style: solid
-                    right: 5%
-                    border-width: 12px 0 12px 21px
-                    border-color: transparent transparent transparent $carrot
-                    position: absolute
-                #images-swiper-button-prev
-                    border-width: 12px 21px 12px 0
-                    border-color: transparent $carrot transparent transparent
-                    left: 5%
-                    right: 0%
-            .content-11
+            .content-12
                 background-image: url($images_lbm_path + 'background-icons.png')
                 background-size: 100%
                 padding: 50px 10%
@@ -347,6 +349,6 @@
                 font-weight: 200
                 font-size: 23px
                 color: #7B7B7B
-                margin-bottom: 30px
+                margin-bottom: 10px
                 .oceanblue
                     color: $oceanblue

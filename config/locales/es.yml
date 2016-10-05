@@ -1144,7 +1144,7 @@ es:
       rol_play: "¿Qué rol deseas jugar hoy?"
       new_project: "Crear un proyecto"
       back_project: "Colaborar a proyectos"
-      new_channel: ~
+      new_channel: "Crear un canal"
       all_for_backers: "Todo para <p>colaboradores</p>"
       about_project: "Todo para tu <p>proyecto</p>"
       after_project: "Todo para tu <p>canal</p>"

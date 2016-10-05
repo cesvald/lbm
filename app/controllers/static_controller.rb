@@ -9,7 +9,7 @@ class StaticController < ApplicationController
     @title = t('static.guidelines_tips.title')
   end
 
-  def guidelines_channel
+  def guidelines_channels
     @title = t('static.guidelines_channels.title')
     @channels = Channel.not_receive_projects
   end

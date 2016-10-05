@@ -22,7 +22,7 @@
               .container
                 .message
                   h1= t 'projects.index.banner_message_1'
-                  = link_to t("projects.index.know_more"), guidelines_channel_path
+                  = link_to t("projects.index.know_more"), guidelines_channels_path
             .item
               = image_tag("lbm/banner_2.jpg")
               .container
@@ -48,7 +48,7 @@
                 .message
                   h1= t 'projects.index.banner_message_5'
                   /= link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
-                  = link_to t("projects.index.know_more"), guidelines_channel_path
+                  = link_to t("projects.index.know_more"), guidelines_channels_path
             .item
               = image_tag("lbm/banner_6.png")
               .container
