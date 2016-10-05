@@ -35,7 +35,6 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     if(this.$('.section_header .replaced_header')) {
       this.$('.section_header .replaced_header').remove();
     }
-    
     $('.section_header').append('<div class="replaced_header"></div>');
     $('.section_header .replaced_header').html('<h1><span>Explore</span> / '+ search +'</h1>');
     
@@ -145,6 +144,13 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     }
     $('.section_header').append('<div class="replaced_header"></div>');
     $('.section_header .replaced_header').html('<h1><span>Explore</span> '+ $('.sidebar a[href="#' + name + '"] span').text()+'</h1>');
+    console.log(name)
+    if(name == 'recent' || name == 'recommended' || name == 'expiring'){
+      $('.section_header h4').show();
+    }
+    else{
+      $('.section_header h4').hide();
+    }
   },
 
   selectItem: function(name) {

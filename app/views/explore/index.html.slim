@@ -49,10 +49,11 @@
                 li.no_margin
                   a href='#partial_successful'
                     span= t('.partial_successful')
-              - if current_user
-                li.no_margin
-                  a href="#near"
-                    span= t('.near')
+              /*
+                - if current_user
+                  li.no_margin
+                    a href="#near"
+                      span= t('.near')
 
         - unless @categories.empty?
           section.categories
