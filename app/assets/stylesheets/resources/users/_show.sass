@@ -12,7 +12,7 @@
     padding-top: 20px
     padding-bottom: 40px
     #user_profile_content
-      width: $page_width
+      width: 1430px
       position: relative
       left: 50%
       margin-left: $less_half_width
@@ -35,6 +35,9 @@
           .avatar_wrapper
             +box-shadow(rgba(black, 0.4) 2px 2px 2px)
         .profile_title
+          color: $darkblue
+          font-family: "Futurs Std"
+          font-weight: 200
           +grid(7)
           +omega
           h1
@@ -52,9 +55,12 @@
           margin-bottom: 10px
           +opacity(0.8)
           a
-            color: $mediumgray
-            +transition(all, 0.5s)
+            font-family: 'Futura Std'
+            font-weight: 400
+            font-size: 12px
+            color: black
             text-decoration: none
+            +transition(all, 0.3s)
             &:hover
               color: $carrot
           &.email
