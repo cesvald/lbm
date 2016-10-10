@@ -274,6 +274,7 @@ en:
       refunded: "Refund request successful. Our team will contact you within two business days. "
       insufficient_credits: "You don't have enough credits to request this refund."
       refunds_title: "Payments that can be refunded"
+      credits_use: "Recuerda que al momento de realizar una donación puedes escoger como método de pago utilizar tus créditos"
       request_refund: Refund?
       requested_refund: "Refund requested"
       status: Status

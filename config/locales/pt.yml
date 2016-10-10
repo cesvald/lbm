@@ -274,6 +274,7 @@ pt:
       refunded: "Reembolso requisitado com sucesso. Nossa equipe entrará em contato com você em até 2 dias úteis. "
       insufficient_credits: "Você não tem créditos suficientes para realizar este estorno."
       refunds_title: "Apoios que podem ter estorno realizado"
+      credits_use: "Recuerda que al momento de realizar una donación puedes escoger como método de pago utilizar tus créditos"
       request_refund: "Solicitar estorno"
       requested_refund: "Solicitado estorno"
       status: Status
