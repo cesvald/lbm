@@ -24,21 +24,25 @@
       .sold-out
         = t('reward.sold_out')
       = reward.description
-    .reward-wrapper
-      em= pluralize(reward.backers.confirmed.count, t('backer_singular'), t('backer_plural'))
-      .description-wrapper
-        div= reward.description
-        - if reward.maximum_backers
-          .maximum_backers.clearfix
-            - if reward.sold_out?
-              .sold-out= t('reward.sold_out')
-            - else
-              = "#{t('reward.limited')}: #{reward.display_remaining}"
-          - in_time_to_confirm = reward.backers.in_time_to_confirm.count
-          - if in_time_to_confirm > 0
-            .maximum_backers.in_time_to_confirm.clearfix
-              = t('projects.rewards.backs_to_confirm', count: in_time_to_confirm)
-          .clearfix
-        - if reward.days_to_delivery.present?
-          div class="reward_deliver_at"
-            p= "#{t('projects.rewards.reward_deliver_time', prevision: reward.display_deliver_prevision)}".html_safe
+      br
+      em
+        b= pluralize(reward.backers.confirmed.count, t('backer_singular'), t('backer_plural'))
+    /*
+      .reward-wrapper
+        em= pluralize(reward.backers.confirmed.count, t('backer_singular'), t('backer_plural'))
+        .description-wrapper
+          div= reward.description
+          - if reward.maximum_backers
+            .maximum_backers.clearfix
+              - if reward.sold_out?
+                .sold-out= t('reward.sold_out')
+              - else
+                = "#{t('reward.limited')}: #{reward.display_remaining}"
+            - in_time_to_confirm = reward.backers.in_time_to_confirm.count
+            - if in_time_to_confirm > 0
+              .maximum_backers.in_time_to_confirm.clearfix
+                = t('projects.rewards.backs_to_confirm', count: in_time_to_confirm)
+            .clearfix
+          - if reward.days_to_delivery.present?
+            div class="reward_deliver_at"
+              p= "#{t('projects.rewards.reward_deliver_time', prevision: reward.display_deliver_prevision)}".html_safe

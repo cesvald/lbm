@@ -1,19 +1,18 @@
-.bootstrap-twitter
-  #images_carousel.carousel.slide data-ride="carousel" data-interval="10000" data-pause="none"
-    .carousel-inner role="listbox"
-      .item.active
-        = image_tag "#{@project.display_image}"
-      - @project.pictures.each do |picture|
-        - if picture.picture.project_picture.url.present?
-          .item
-            = image_tag "#{picture.picture.project_picture.url}"
-    /! Controls
-    a.left.carousel-control data-slide="prev" href="#images_carousel" role="button" 
-      span.glyphicon.glyphicon-chevron-left aria-hidden="true" 
-      span.sr-only Previous
-    a.right.carousel-control data-slide="next" href="#images_carousel" role="button" 
-      span.glyphicon.glyphicon-chevron-right aria-hidden="true" 
-      span.sr-only Next
+- if @project.pictures.count > 0
+  .bootstrap-twitter
+    #images_carousel.carousel.slide data-ride="carousel" data-interval="10000" data-pause="none"
+      .carousel-inner role="listbox"
+        - @project.pictures.each_with_index do |picture, index|
+          - if picture.picture.project_picture.url.present?
+            .item class=("active" if index == 0)
+              = image_tag "#{picture.picture.project_picture.url}"
+      /! Controls
+      a.left.carousel-control data-slide="prev" href="#images_carousel" role="button" 
+        span.glyphicon.glyphicon-chevron-left aria-hidden="true" 
+        span.sr-only Previous
+      a.right.carousel-control data-slide="next" href="#images_carousel" role="button" 
+        span.glyphicon.glyphicon-chevron-right aria-hidden="true" 
+        span.sr-only Next
 
 #creator_profile
   .image-wrapper
@@ -49,9 +48,12 @@
 
 #project-history-wrapper
   .image-wrapper
+    = @project.channels.count
     - @project.channels.each do |channel|
       - if channel.banner_top_url.present?
         p= link_to image_tag(channel.banner_top_url), root_url(subdomain: channel.permalink)
+      - elsif channel.banner_url.present?
+        p= link_to image_tag(channel.banner_url), root_url(subdomain: channel.permalink)
 
 /*  
   .social
@@ -64,11 +66,7 @@
             = t('projects.show.share.embed')
       #twitter_share= render_twitter(url: project_by_slug_url(permalink: @project.permalink))
       .clear
-
-.text
-- @project.channels.each do |channel|
-  - if channel.banner_url.present?
-    p= link_to image_tag(channel.banner_url, class: "channel-banner"), root_url(subdomain: channel.permalink)
+      
 #information-container
   - if @project.about.present?
     .information-wrapper
