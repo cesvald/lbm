@@ -79,7 +79,7 @@
 							p.question
 								span.glyphicon.glyphicon-chevron-right
 								span.question-text= t(".for_backers.tool_#{i}.question")
-							p.answer= t(".for_backers.tool_#{i}.answer")
+							p.answer= t(".for_backers.tool_#{i}.answer").html_safe
 					
 		#container-about-project.tools-container
 			p.tools-description= t('static.tools.about_project.description')
@@ -100,7 +100,7 @@
 							p.question
 								span.glyphicon.glyphicon-chevron-right
 								span.question-text= t(".about_project.tool_#{i}.question")
-							p.answer= t(".about_project.tool_#{i}.answer")
+							p.answer= t(".about_project.tool_#{i}.answer").html_safe
 					
 		#container-after-project.tools-container
 			p.tools-description= t('static.tools.after_project.description')
@@ -121,7 +121,7 @@
 							p.question
 								span.glyphicon.glyphicon-chevron-right
 								span.question-text= t(".after_project.tool_#{i}.question")
-							p.answer= t(".after_project.tool_#{i}.answer")
+							p.answer= t(".after_project.tool_#{i}.answer").html_safe
 
 		#container-venture-course.tools-container
 			p.tools-description= t('static.tools.venture_course.description')
@@ -155,6 +155,6 @@
 							p.question
 								span.glyphicon.glyphicon-chevron-right
 								span.question-text= t(".about_crowdfounding.tool_#{i}.question")
-							p.answer= t(".about_crowdfounding.tool_#{i}.answer")
+							p.answer= t(".about_crowdfounding.tool_#{i}.answer").html_safe
 
 	= render 'layouts/allies'
