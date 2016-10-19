@@ -61,18 +61,7 @@
 		    = t('static.guidelines.venture_course').html_safe
 	#main-tools-container
 		#container-for-backers.tools-container.active
-			p.tools-description= t('static.tools.for_backers.description')
 			.tools-wrapper
-				.pdf-container
-					- if t(".for_backers.tool_1.title", default: "").present?
-						.tool-element
-							= link_to t(".for_backers.tool_1.link", default: "#"), class: "tool-link", target: "_blank" do
-								- if t(".for_backers.tool_1.image", default: "").present?
-									= image_tag t(".for_backers.tool_1.image"), class: 'tool-image'
-								- else
-									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
-								p.tool-title= t(".for_backers.tool_1.title")
-				
 				- for i in 1..10
 					- if t(".for_backers.tool_#{i}.question", default: "").present?
 						.faq
@@ -82,18 +71,7 @@
 							p.answer= t(".for_backers.tool_#{i}.answer").html_safe
 					
 		#container-about-project.tools-container
-			p.tools-description= t('static.tools.about_project.description')
 			.tools-wrapper
-				.pdf-container
-					- if t(".about_project.tool_1.title", default: "").present?
-						.tool-element
-							= link_to t(".about_project.tool_1.link", default: "#"), class: "tool-link", target: "_blank" do
-								- if t(".about_project.tool_1.image", default: "").present?
-									= image_tag t(".about_project.tool_1.image"), class: 'tool-image'
-								- else
-									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
-								p.tool-title= t(".about_project.tool_1.title")
-				
 				- for i in 1..10
 					- if t(".about_project.tool_#{i}.question", default: "").present?
 						.faq
@@ -103,18 +81,7 @@
 							p.answer= t(".about_project.tool_#{i}.answer").html_safe
 					
 		#container-after-project.tools-container
-			p.tools-description= t('static.tools.after_project.description')
 			.tools-wrapper
-				.pdf-container
-					- if t(".after_project.tool_1.title", default: "").present?
-						.tool-element
-							= link_to t(".after_project.tool_1.link", default: "#"), class: "tool-link", target: "_blank" do
-								- if t(".after_project.tool_1.image", default: "").present?
-									= image_tag t(".after_project.tool_1.image"), class: 'tool-image'
-								- else
-									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
-								p.tool-title= t(".after_project.tool_1.title")
-				
 				- for i in 1..10
 					- if t(".after_project.tool_#{i}.question", default: "").present?
 						.faq
@@ -124,7 +91,6 @@
 							p.answer= t(".after_project.tool_#{i}.answer").html_safe
 
 		#container-venture-course.tools-container
-			p.tools-description= t('static.tools.venture_course.description')
 			.tools-wrapper
 				- for i in 1..10
 					- if t(".venture_course.tool_#{i}.link", default: "").present?
@@ -137,18 +103,7 @@
 								p.tool-title= t(".venture_course.tool_1.title")
 
 		#container-about-crowdfunding.tools-container
-			p.tools-description= t('static.tools.about_crowdfunding.description')
 			.tools-wrapper
-				.pdf-container
-					- if t(".about_crowdfounding.tool_1.title", default: "").present?
-						.tool-element
-							= link_to t(".about_crowdfounding.tool_1.link", default: "#"), class: "tool-link", target: "_blank" do
-								- if t(".about_crowdfounding.tool_1.image", default: "").present?
-									= image_tag t(".about_crowdfounding.tool_1.image"), class: 'tool-image'
-								- else
-									= image_tag 'lbm/tool-pdf-default.png', class: 'tool-image'
-								p.tool-title= t(".about_crowdfounding.tool_1.title")
-				
 				- for i in 1..10
 					- if t(".about_crowdfounding.tool_#{i}.question", default: "").present?
 						.faq

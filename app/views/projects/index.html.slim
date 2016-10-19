@@ -100,13 +100,12 @@
         .title
           = image_tag "lbm/channels_icon.png", class: "icon"
           h2= t('sections.channels.title').html_safe
-        .explore_link
-          = link_to t('main.links.view_all'), root_path
         .channels
           #channels-swiper.swiper-container
             .swiper-wrapper
               - @channels.each do |channel|
-                == render 'channels/channel', channel: channel
+                - if channel.parent_channel.nil?
+                  == render 'channels/channel', channel: channel
           #channels-swiper-button-prev.swiper-button-prev
           #channels-swiper-button-next.swiper-button-next
       

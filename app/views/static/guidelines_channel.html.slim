@@ -39,11 +39,11 @@
                                 .phrase-2= t('.answer_3_2').html_safe
                         .row.content-2-1
                             .col-xs-4.col
-                                .phrase-3= t('.answer_1_3').html_safe
+                                .phrase-3= link_to t('.answer_1_3').html_safe, tools_path
                             .col-xs-4.col
-                                .phrase-3= t('.answer_2_3').html_safe
+                                .phrase-3= link_to t('.answer_2_3').html_safe, tools_path
                             .col-xs-4.col
-                                .phrase-3= t('.answer_3_3').html_safe
+                                .phrase-3= link_to t('.answer_3_3').html_safe, tools_path
             .row.content-3
                 .col-xs-12
                     .title
@@ -168,7 +168,7 @@
                 .col-xs-12
                     .title
                         .text-title
-                            |Clicks Por un Sueño
+                            |Clics por Sueños
                         = embedded_svg "lbm/clicks-channel-icon.svg", class: 'icon'
                     .campaign-message
                         = t('.comment_1').html_safe

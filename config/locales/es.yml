@@ -103,12 +103,13 @@ es:
       email: littlebigmoney@fundacioncapital.org
     links:
       how_works: "¿Cómo funciona?"
-      faq: F.A.Q./Ayuda
+      faq: F.A.Q
       about: "¿Quiénes somos?"
-      terms: Legales
-      policy: "Políticas de privacidad"
+      terms: Concepto legal
+      policy: "Política de privacidad"
       terms_link: "https://drive.google.com/a/fundacioncapital.org/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
       policy_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245484"
+      terms_of_use: "Términos de uso"
       contact: Contacto
       twitter: "<p class='social_follow'>Síguenos en Twitter</p> <p class='social_user'>@%{twitter}</p>"
       facebook: "<p class='social_follow'>Síguenos en Facebook</p> <p class='social_user'>@littlebigmoney</p>"
@@ -1448,55 +1449,55 @@ es:
           question: ~
           answer: ~
           image: ~
-      about_crowdfounding:
+      about_crowdfunding:
         description: ~
         tool_1:
-          title:
-          link: 
-          question: "¿Qué es el crowdfunding?"
-          answer: "Es el financiamiento colectivo de un proyecto o iniciativa, que se consigue con la difusión masiva y con los aportes de colaboradores independientes que simpatizan con la causa y/o persiguen algún tipo de beneficio (recompensa, interés, acciones) ofrecido por el responsable del proyecto. Por lo general, las plataformas de crowdfunding son herramientas virtuales, es decir, se encuentran en internet, y pueden ser usadas para diversos fines."
+          title: "Modalidades de financiación.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUSWlFd05INzZ2WlU/view"
+          question: ~
+          answer: ~
           image: ~
         tool_2:
-          title:
-          link:
-          question: "¿Qué tipos de crowdfunding existen?"
-          answer: "Hay cuatro tipos de crowdfunding divididos en dos categorías distintas:<br/>1. Crowdfunding SIN retorno económico: crowdfunding de donaciones (ánimo filantrópico) y crowdfunding con recompensas (ej.: preventa de un producto nuevo).<br/>2. Crowdfunding CON retorno económico: incluye el crowdfunding de préstamo (peer-to-peer lending) y el crowdfunding de inversión (equity crowdfunding).<br/>En LittleBigMoney trabajamos con la primera categoría, integrando el crowdfunding de donación con el de recompensas, y entendemos las recompensas como retribuciones simbólicas que se entregan a los colaboradores de los proyectos."
+          title: "Concepto Legal.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
+          question: ~
+          answer: ~
           image: ~
         tool_3:
-          title: ~
-          link: ~
-          question: "¿Qué diferencia a LittleBigMoney de otras plataformas?"
-          answer: "LBM es la primera plataforma de crowdfunding en Colombia para el desarrollo de proyectos con impacto social o ambiental. Esta solución digital de Fundación Capital nació en 2013 para ofrecer una herramienta alternativa de financiamiento para la población de escasos recursos, que carece de acceso al financiamiento tradicional.<br/><br/>Hoy ofrece su servicio y asesoría personalizada para tres tipos diferentes de actores: colaboradores, emprendedores y socios institucionales. Junto a estos actores y con el apoyo a proyectos sociales y ambientales contribuye al crecimiento del país, y pronto iniciará su presencia en otros países.<br/><br/>Nuestra filosofía es apoyar al máximo los proyectos seleccionados, por eso distinguimos entre financiación total y parcial para favorecer que haya cada vez más proyectos exitosos. Así, si el proyecto reúne toda la financiación solicitada, recibe la calificación de proyecto totalmente financiado, mientras que si reúne un monto inferior al solicitado pero superior a COP 500,000, se considerará parcialmente financiado y también recibirá el monto recaudado. Los proyectos serán considerados no exitosos si recaudan cantidades inferiores a COP 500.000, y en ese caso no recibirán dinero y los aportes se devolverán a los colaboradores a modo de créditos en la plataforma para ser utilizados en otro proyecto activo."
+          title: "¿Qué es un canal?.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUTTBKYmlReTBpLVE/view"
+          question: ~
+          answer: ~
           image: ~
         tool_4:
-          title: ~
-          link: ~
-          question: "¿En Colombia es legal el crowdfunding?"
-          answer: "Sí, en Colombia es legal tanto el crowdfunding de donación, así como el que emplea recompensas de tipo simbólico, precisamente los que realizamos en LittleBigMoney. También está permitido el crowdfunding por inversión, pero únicamente para instituciones financieras. En ninguno de estos casos es considerado captación ilegal de fondos."
+          title: "Reglas de oro.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUa2RrT0VXTUNhc00/view"
+          question: ~
+          answer: ~
           image: ~
         tool_5:
           title: ~
           link: ~
-          question: "¿Qué significa hacer una campaña de crowdfunding?"
-          answer: "Tener una campaña de crowdfunding significa que durante un tiempo determinado (definido por el emprendedor o responsable del proyecto) estará activa la posibilidad de recibir, usualmente a través de una plataforma virtual, donaciones para un proyecto específico. Para ello, se dispone de un espacio destinado a explicar el propósito del proyecto, así como la cantidad de dinero que se necesita reunir en ese plazo de tiempo. La posibilidad de reunir los fondos depende del trabajo de promoción que realice el mismo emprendedor en sus redes sociales: la difusión de su proyecto ayudará a que este sea visto por más y más colaboradores potenciales.<br/><br/>En LBM, las campañas duran 30, 60 o 90 días, según el requerimiento, con un promedio de monto meta solicitado de 3 a 5 millones de pesos colombianos. Todos los proyectos cuentan con un video explicativo del motivo de la campaña y deberán ofrecer una serie de recompensas simbólicas para sus colaboradores."
+          question: ~
+          answer: ~
           image: ~
         tool_6:
           title: ~
           link: ~
-          question: "¿Cuánto cuesta tener un proyecto crowdfunding?"
-          answer: "Hoy en día existen diversas plataformas de crowdfunding, con diferentes propósitos y alcances geográficos. Cada una de ella es libre de especificar sus políticas y costos asociados.<br/><br/>En LBM, el emprendedor de un proyecto individual no paga para poder acceder al servicio; sin embargo, una vez financiado su proyecto (parcial o totalmente) deberá descontar el 14% del total recaudado para calcular el monto que recibirá en su cuenta bancaria. Este porcentaje corresponde a dos comisiones: una del 6% por costos operativos de la plataforma y la segunda del 8% por costos derivados de las pasarelas de pagos que nos brindan su servicio (MercadoPago, PayU y PayPal)."
+          question: ~
+          answer: ~
           image: ~
         tool_7:
           title: ~
           link: ~
-          question: "¿Qué tipo de proyectos se pueden encontrar en LBM?"
-          answer: "LBM recibe, evalúa y acepta únicamente aquellos proyectos que tengan un claro impacto social o ambiental y que estén ubicados en Colombia. Dichos proyectos pueden ser de diversas categorías, tales como: agricultura, alimentos, artesanías, educación, energía, medio ambiente, negocios sociales, salud, tecnología o textil. Te invitamos a explorarlas!."
+          question: ~
+          answer: ~
           image: ~
         tool_8:
           title: ~
           link: ~
-          question: "¿Dónde opera LittleBigMoney?"
-          answer: "Actualmente operamos en Colombia, es decir, todos los proyectos son desarrollados por emprendedores colombianos, pero nuestra comunidad es internacional, por lo que aceptamos colaboraciones desde cualquier parte del mundo por medio de tarjetas de crédito, débito o de cuentas de PayPal.<br/><br/>Adicionalmente, estamos en contacto con varias organizaciones para empezar a apoyar proyectos de otros países de la región, ya que recibir donaciones está permitido en toda América Latina."
+          question: ~
+          answer: ~
           image: ~
         tool_9:
           title: ~
