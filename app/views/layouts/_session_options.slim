@@ -4,3 +4,6 @@
 	#separator
 	#login
 		= link_to t('layouts.header.signin'), new_user_session_path
+- if test_environment?
+	= link_to "Usar cuenta donante", change_user_users_path(email: 'nathalia.santos@fundacioncapital.org')
+    = link_to "Usar cuenta administrador", change_user_users_path(email: 'sonia.agnesod@fundacioncapital.org')
