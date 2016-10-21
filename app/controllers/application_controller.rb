@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg
+  helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg, :inside_channel?, :test_environment?
   
   before_filter :set_locale
   #before_filter :force_http
@@ -51,6 +51,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def inside_channel?
+    not (request.subdomain.blank? || request.subdomain == 'lbm-cesvald')
+  end
+  
+  def test_environment?
+    request.original_url.start_with?('https://lbm-cesvald.c9users.io') || request.original_url.start_with?('http://s22.org')
+  end
+  
   private
   
   def fb_admins
@@ -83,9 +91,13 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    if !current_user
-      #sign_in User.find_by_email("maria.hoyos@fundacioncapital.org"), event: :authentication, store: true
-      sign_in User.find_by_email("valderramago@gmail.com"), event: :authentication, store: true
+    if test_environment?
+      if !current_user
+        #sign_in User.find_by_email("maria.hoyos@fundacioncapital.org"), event: :authentication, store: true
+        if not ::Configuration[:test_user_email].blank?
+          sign_in User.find_by_email(::Configuration[:test_user_email]), event: :authentication, store: true
+        end
+      end
     end
     if params[:locale]
       I18n.locale = params[:locale]

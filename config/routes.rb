@@ -169,7 +169,11 @@ Catarse::Application.routes.draw do
         put 'push_to_trash'
       end
     end
-    resources :users, only: [ :index ]
+    resources :users, only: [ :index ] do
+      collection do
+        get 'change_user_account'
+      end
+    end
     resources :channels, except: [ :show ] do
       resources :projects, controller: 'channels/projects', only: [:create, :destroy], on: :member
       resources :trustees, controller: 'channels/trustees', only: [:create, :destroy], on: :member
