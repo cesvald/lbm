@@ -17,13 +17,13 @@
         span.small
           | (#{current_user.display_credits})
     - if test_environment?
-      = link_to change_user_account_adm_users_path(email: 'nathalia.santos@fundacioncapital.org') do
+      = link_to change_user_users_path(email: 'nathalia.santos@fundacioncapital.org') do
         li
           |Usar cuenta donante
-      = link_to change_user_account_adm_users_path(email: 'sonia.agnesod@fundacioncapital.org') do
+      = link_to change_user_users_path(email: 'sonia.agnesod@fundacioncapital.org') do
         li
           |Usar cuenta administrador
-      = link_to change_user_account_adm_users_path(email: '') do
+      = link_to change_user_users_path(email: '') do
         li
           |Usar cuenta no logeado
       

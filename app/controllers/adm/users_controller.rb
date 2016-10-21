@@ -16,11 +16,6 @@ class Adm::UsersController < Adm::BaseController
     end
   end
   
-  def change_user_account
-    ::Configuration['test_user_email'] = params[:email]
-    redirect_to root_path
-  end
-  
   protected
 
   def set_totals

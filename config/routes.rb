@@ -113,6 +113,7 @@ Catarse::Application.routes.draw do
       get :uservoice_gadget
       get :contact_and_support
       post :authenticate_user
+      get :change_user
     end
     resources :backers, only: [:index] do
       member do
@@ -169,11 +170,7 @@ Catarse::Application.routes.draw do
         put 'push_to_trash'
       end
     end
-    resources :users, only: [ :index ] do
-      collection do
-        get 'change_user_account'
-      end
-    end
+    resources :users, only: [ :index ]
     resources :channels, except: [ :show ] do
       resources :projects, controller: 'channels/projects', only: [:create, :destroy], on: :member
       resources :trustees, controller: 'channels/trustees', only: [:create, :destroy], on: :member
