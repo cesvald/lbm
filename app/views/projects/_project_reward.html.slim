@@ -1,7 +1,7 @@
 - if !reward.sold_out? && !reward.project.expired?
   = semantic_form_for Backer.new, url: project_backers_path(reward.project), html: { id: 'backer_form' } do |form|
     = form.inputs do
-      = hidden_field_tag 'credits', ("%0.0f" % current_user.credits)
+      = hidden_field_tag 'credits', (current_user.nil? ? "" : "%0.0f" % current_user.credits)
       = form.input :value, as: :hidden, required: false, label: false, input_html: {value: reward.minimum_value}
       = hidden_field_tag '[backer][reward_id]', reward.id
       = form.input :anonymous, as: :hidden, value: false
