@@ -7,7 +7,9 @@ class UserObserver < ActiveRecord::Observer
   end
 
   def after_initialize(user)
-    user.name.force_encoding(Encoding::UTF_8)
+    if not user.name.nil?
+      user.name.force_encoding(Encoding::UTF_8)
+    end
   end
 
   def after_create(user)

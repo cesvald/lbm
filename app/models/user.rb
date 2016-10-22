@@ -114,7 +114,9 @@ class User < ActiveRecord::Base
   scope :order_by, ->(sort_field){ order(sort_field) }
 
   def name
-    read_attribute(:name).force_encoding(Encoding::UTF_8)
+    if not read_attribute(:name).nil?
+      read_attribute(:name).force_encoding(Encoding::UTF_8)
+    end
   end
 
   def self.backer_totals

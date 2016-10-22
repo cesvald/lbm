@@ -56,7 +56,7 @@ class ApplicationController < ActionController::Base
   end
   
   def test_environment?
-    request.original_url.start_with?('https://lbm-cesvald.c9users.io') || request.original_url.start_with?('http://s22.org')
+     request.original_url.start_with?('http://s22.org')
   end
   
   private
@@ -91,14 +91,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    if test_environment?
-      if !current_user
-        #sign_in User.find_by_email("maria.hoyos@fundacioncapital.org"), event: :authentication, store: true
-        if not ::Configuration[:test_user_email].blank?
-          sign_in User.find_by_email(::Configuration[:test_user_email]), event: :authentication, store: true
-        end
-      end
-    end
+    
     if params[:locale]
       I18n.locale = params[:locale]
       current_user.update_attribute :locale, params[:locale] if current_user && params[:locale] != current_user.locale
