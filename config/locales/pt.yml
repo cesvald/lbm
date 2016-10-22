@@ -109,7 +109,6 @@ pt:
       policy: "Política de Privacidade"
       terms_link: "http://suporte.catarse.me/knowledgebase/articles/161100-termos-de-uso"
       policy_link: "http://suporte.catarse.me/knowledgebase/articles/161103-pol%C3%ADtica-de-privacidade"
-      terms_of_use: "Términos de uso"
       contact: Contato
       twitter: "Siga-nos no @%{twitter}"
       facebook: "Encontre-nos no Facebook"
@@ -1162,7 +1161,7 @@ pt:
       title_eight: Programador
       text_eight: "Quando não está programando gosta de projetar circuitos e se arriscar no piano."
     tools:
-      subtitle_1: "¿Quieres conocer  los beneficios que LBM tiene para ti? ¿No pudiste resolver tus dudas con las preguntas frecuentes?" 
+      subtitle_1: "¿Quieres conocer  los beneficios que LBM tiene para ti? ¿No pudiste resolver tus dudas con las preguntas frecuentes?"
       subtitle_2: "Escríbenos a littlebigmoney@fundacioncapital.org o déjanos tu mensaje completando tus datos en esta casilla."
       subtitle_3: "Pronto alguien de nuestro equipo entrará en contacto contigo."
       faq_subtitle: "Preguntas frecuentes"

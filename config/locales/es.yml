@@ -103,13 +103,12 @@ es:
       email: littlebigmoney@fundacioncapital.org
     links:
       how_works: "¿Cómo funciona?"
-      faq: F.A.Q
+      faq: F.A.Q./Ayuda
       about: "¿Quiénes somos?"
-      terms: Concepto legal
-      policy: "Política de privacidad"
+      terms: Legales
+      policy: "Políticas de privacidad"
       terms_link: "https://drive.google.com/a/fundacioncapital.org/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
       policy_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245484"
-      terms_of_use: "Términos de uso"
       contact: Contacto
       twitter: "<p class='social_follow'>Síguenos en Twitter</p> <p class='social_user'>@%{twitter}</p>"
       facebook: "<p class='social_follow'>Síguenos en Facebook</p> <p class='social_user'>@littlebigmoney</p>"
@@ -1204,82 +1203,91 @@ es:
       for_backers:
         description: "Descripción de las herramientas para donantes"
         tool_1:
-          title: "¿Cómo subir tu proyecto?.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUV1pocERMZnJ1Rmc/view"
-          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
-          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
+          title:
+          link: 
+          question: "¿Cuál es el proceso para donar?"
+          answer: |-
+              Para poder colaborar con un proyecto en LittleBigMoney primero deberás registrarte en la plataforma. Podrás hacerlo, independientemente del país al que pertenezcas, con tu correo y creando una contraseña o enlazando directamente tu cuenta de Facebook. Luego de unirte a nuestra comunidad estarás listo para realizar tu donación al proyecto de tu agrado siguiendo los siguientes pasos:<br/>
+              1. Accede a la sección “Dona a un proyecto”.<br/>
+              2. Selecciona el proyecto que desees.<br/>
+              3. Conoce de qué se trata.<br/>
+              4. Si quieres ayudar, dirígete a la opción "Quiero aportar", elige el valor y medio de pago, y listo!<br/>
+              5. Volver a buscar otros proyectos que te motiven!<br/>
+              Es importante recalcar que solo se puede donar mientras un proyecto esté “al aire” o activo para recibir donaciones, tiempo durante el cual aparecerá en el perfil del proyecto el botón para aportar, así como un indicador del monto que lleva recaudado y de los días que quedan de campaña.
           image: ~
         tool_2:
-          title: "Antes de subir tu proyecto.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUSUxLRmRxRlpEM3c/view"
-          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
-          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
+          title: ~
+          link: ~
+          question: "¿De qué medios dispongo para colaborar con un proyecto?"
+          answer: "Para donaciones nacionales (Colombia) contamos con diferentes medios de pago, como tarjeta de crédito, débito, Baloto o Efecty. Y para el caso de donaciones provenientes de otros países contamos con PayPal, además de poder gestionar tu donación con tarjetas de crédito o débito autorizada para pagos internacionales, a través de las pasarelas de pago PayU o MercadoPago."
           image: ~
         tool_3:
-          title: "¿Cómo promuevo mi proyecto?.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUNlpFeFhBNmU3bUE/view"
-          question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
-          answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
+          title: 
+          link:
+          question: "¿Hay un monto mínimo para donar?"
+          answer: |-
+              Sí, nuestra plataforma permite hacer donaciones a partir de $25.000 COP*.<br/>
+              *equivalente a 8.3 USD (1 USD = aproximadamente 3000 COP)
           image: ~
         tool_4:
-          title: "Crear buenas recompensas.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUTzdURjRzLTN5SzQ/view"
-          question: ~
-          answer: ~
+          title: ~
+          link: ~
+          question: "¿Se puede donar desde otros países o en monedas diferentes a pesos colombianos?"
+          answer: "Se puede donar desde cualquier país, pero las donaciones serán recaudadas en pesos colombianos (COP) si se paga a través de PayU o MercadoPago con tarjeta de crédito o débito, y en dólares americanos (USD) si se efectúa el pago a través de PayPal con el medio de pago que haya registrado. Considerar 1 USD = aproximadamente 3000 COP (actualizado Sept 2016)"
           image: ~
         tool_5:
-          title: "¿Cómo crear un buen video?"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUdlBxTFB6enRCYms/view"
-          question: ~
-          answer: ~
+          title: ~
+          link: ~
+          question: "¿En qué consisten las recompensas?¿Cuándo las recibiré?"
+          answer: "Las recompensas en nuestra plataforma corresponden a reconocimientos simbólicos que los emprendedores idean para entregar de acuerdo con la colaboración recibida. Estas estarán visibles en el perfil del proyecto y también al momento de realizar la donación. Deberás seleccionar la que corresponda con el valor que quieras para tu colaboración, o de lo contrario seleccionar que no deseas recibir recompensa para que el emprendedor lo tenga contabilizado.<br/><br/>Las recompensas comienzan a entregarse según lo que disponga el emprendedor. El tiempo de entrega empieza a contar a partir de la finalización de la campaña, pues es ahí cuando se sabe si la campaña ha sido exitosa o no. La cantidad de días exactos serán comunicados en el mensaje que cada donante recibirá después de hacer la colaboración."
           image: ~
         tool_6:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Puedo seguir colaborando con un proyecto que ya llegó a la meta?"
+          answer: "Sí, en LBM el único motivo por el cual una campaña llega a su fin es por la variable del tiempo, es decir, cuando culminan los días definidos por el emprendedor; así, los proyectos que hayan llegado a la meta pueden seguir recaudando donaciones sin límite hasta que el tiempo se agote."
           image: ~
         tool_7:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Qué pasa si un proyecto no llega a la meta?"
+          answer: "En LBM, somos conscientes de que muchas veces es más complicado para algunos emprendedores llegar a completar sus metas, pero el esfuerzo debe ser igualmente valorado. Por eso, un proyecto puede alcanzar dos escalas de financiamiento (parcial o total). Para que un proyecto obtenga el financiamiento parcial hace falta superar el monto mínimo de recaudo de $500.000 COP, monto desde el cual podremos hablar de un desembolso a la cuenta bancaria del emprendedor. Cuando un proyecto no alcance dicho monto mínimo, las donaciones recibidas serán regresadas a los colaboradores a modo de créditos en la plataforma para ser utilizados en algún otro proyecto al aire."
           image: ~
         tool_8:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Qué son los créditos y cómo puedo usarlos?"
+          answer: "Los créditos aparecen en la cuenta de un colaborador cuando el proyecto al que ha contribuido no logra recaudar el monto mínimo ($500.000 COP) para acceder a un desembolso de dinero. Estos equivalen al valor donado y son retornados a cada colaborador en su cuenta para que los utilice en cualquier otro proyecto al aire de la plataforma. Si quieres usar tus créditos sigue estos pasos:<br/>Ingresa a LittleBigMoney con tu correo y contraseña o con tu cuenta de Facebook.<br/>Elige un proyecto al cual apoyar.<br/>Al momento de realizar la colaboración y elegir el medio de pago, elige la pestaña “créditos”.<br/>En caso de que lo requieras, también podrás pedir el reembolso de tu dinero."
           image: ~
         tool_9:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Emiten certificado de donación?"
+          answer: "Sí, por ser una iniciativa de Fundación Capital podemos emitir certificados de donación a personas jurídicas o naturales residentes en Colombia o Estados Unidos que los requieran para fines impositivos. Dicho certificado será emitido luego de haber recibido la solicitud del interesado a través de la opción \"Certificar esta donación\" desde el perfil del usuario en la plataforma, donde se le requerirá la documentación necesaria y correspondiente."
           image: ~
         tool_10:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Existen otras formas de colaborar que no involucren desembolso de dinero?"
+          answer: "Cuando el emprendedor o la organización quieran o necesiten aportes en mano de obra (asistencia técnica, voluntariado, etc.), éstos podrán considerarse como una donación en especie. De no estar escrito en el perfil, significará que para ese proyecto la opción no está activada."
           image: ~
       about_project:
         description: "Descripción de las herramientas sobre projectos"
         tool_1:
-          title: "¿Cómo subir tu proyecto?.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUV1pocERMZnJ1Rmc/view"
+          title:
+          link: 
           question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
           answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
           image: ~
         tool_2:
-          title: "Antes de subir tu proyecto.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUSUxLRmRxRlpEM3c/view"
+          title: 
+          link: 
           question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
           answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
           image: ~
         tool_3:
-          title: "¿Cómo promuevo mi proyecto?.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUNlpFeFhBNmU3bUE/view"
+          title: 
+          link: 
           question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
           answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec sem feugiat blandit. Phasellus semper dapibus urna. Donec eget accumsan urna. Praesent ut felis commodo, dignissim risus et, ornare enim. Fusce quis molestie quam."
           image: ~
@@ -1290,8 +1298,8 @@ es:
           answer: ~
           image: ~
         tool_5:
-          title: "¿Cómo crear un buen video?"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUdlBxTFB6enRCYms/view"
+          title:
+          link:
           question: ~
           answer: ~
           image: ~
@@ -1452,52 +1460,52 @@ es:
       about_crowdfunding:
         description: ~
         tool_1:
-          title: "Modalidades de financiación.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUSWlFd05INzZ2WlU/view"
-          question: ~
-          answer: ~
+          title:
+          link: 
+          question: "¿Qué es el crowdfunding?"
+          answer: "Es el financiamiento colectivo de un proyecto o iniciativa, que se consigue con la difusión masiva y con los aportes de colaboradores independientes que simpatizan con la causa y/o persiguen algún tipo de beneficio (recompensa, interés, acciones) ofrecido por el responsable del proyecto. Por lo general, las plataformas de crowdfunding son herramientas virtuales, es decir, se encuentran en internet, y pueden ser usadas para diversos fines."
           image: ~
         tool_2:
-          title: "Concepto Legal.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
-          question: ~
-          answer: ~
+          title:
+          link:
+          question: "¿Qué tipos de crowdfunding existen?"
+          answer: "Hay cuatro tipos de crowdfunding divididos en dos categorías distintas:<br/>1. Crowdfunding SIN retorno económico: crowdfunding de donaciones (ánimo filantrópico) y crowdfunding con recompensas (ej.: preventa de un producto nuevo).<br/>2. Crowdfunding CON retorno económico: incluye el crowdfunding de préstamo (peer-to-peer lending) y el crowdfunding de inversión (equity crowdfunding).<br/>En LittleBigMoney trabajamos con la primera categoría, integrando el crowdfunding de donación con el de recompensas, y entendemos las recompensas como retribuciones simbólicas que se entregan a los colaboradores de los proyectos."
           image: ~
         tool_3:
-          title: "¿Qué es un canal?.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUTTBKYmlReTBpLVE/view"
-          question: ~
-          answer: ~
+          title: ~
+          link: ~
+          question: "¿Qué diferencia a LittleBigMoney de otras plataformas?"
+          answer: "LBM es la primera plataforma de crowdfunding en Colombia para el desarrollo de proyectos con impacto social o ambiental. Esta solución digital de Fundación Capital nació en 2013 para ofrecer una herramienta alternativa de financiamiento para la población de escasos recursos, que carece de acceso al financiamiento tradicional.<br/><br/>Hoy ofrece su servicio y asesoría personalizada para tres tipos diferentes de actores: colaboradores, emprendedores y socios institucionales. Junto a estos actores y con el apoyo a proyectos sociales y ambientales contribuye al crecimiento del país, y pronto iniciará su presencia en otros países.<br/><br/>Nuestra filosofía es apoyar al máximo los proyectos seleccionados, por eso distinguimos entre financiación total y parcial para favorecer que haya cada vez más proyectos exitosos. Así, si el proyecto reúne toda la financiación solicitada, recibe la calificación de proyecto totalmente financiado, mientras que si reúne un monto inferior al solicitado pero superior a COP 500,000, se considerará parcialmente financiado y también recibirá el monto recaudado. Los proyectos serán considerados no exitosos si recaudan cantidades inferiores a COP 500.000, y en ese caso no recibirán dinero y los aportes se devolverán a los colaboradores a modo de créditos en la plataforma para ser utilizados en otro proyecto activo."
           image: ~
         tool_4:
-          title: "Reglas de oro.pdf"
-          link: "https://drive.google.com/file/d/0B5yleHdyw7uUa2RrT0VXTUNhc00/view"
-          question: ~
-          answer: ~
+          title: ~
+          link: ~
+          question: "¿En Colombia es legal el crowdfunding?"
+          answer: "Sí, en Colombia es legal tanto el crowdfunding de donación, así como el que emplea recompensas de tipo simbólico, precisamente los que realizamos en LittleBigMoney. También está permitido el crowdfunding por inversión, pero únicamente para instituciones financieras. En ninguno de estos casos es considerado captación ilegal de fondos."
           image: ~
         tool_5:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Qué significa hacer una campaña de crowdfunding?"
+          answer: "Tener una campaña de crowdfunding significa que durante un tiempo determinado (definido por el emprendedor o responsable del proyecto) estará activa la posibilidad de recibir, usualmente a través de una plataforma virtual, donaciones para un proyecto específico. Para ello, se dispone de un espacio destinado a explicar el propósito del proyecto, así como la cantidad de dinero que se necesita reunir en ese plazo de tiempo. La posibilidad de reunir los fondos depende del trabajo de promoción que realice el mismo emprendedor en sus redes sociales: la difusión de su proyecto ayudará a que este sea visto por más y más colaboradores potenciales.<br/><br/>En LBM, las campañas duran 30, 60 o 90 días, según el requerimiento, con un promedio de monto meta solicitado de 3 a 5 millones de pesos colombianos. Todos los proyectos cuentan con un video explicativo del motivo de la campaña y deberán ofrecer una serie de recompensas simbólicas para sus colaboradores."
           image: ~
         tool_6:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Cuánto cuesta tener un proyecto crowdfunding?"
+          answer: "Hoy en día existen diversas plataformas de crowdfunding, con diferentes propósitos y alcances geográficos. Cada una de ella es libre de especificar sus políticas y costos asociados.<br/><br/>En LBM, el emprendedor de un proyecto individual no paga para poder acceder al servicio; sin embargo, una vez financiado su proyecto (parcial o totalmente) deberá descontar el 14% del total recaudado para calcular el monto que recibirá en su cuenta bancaria. Este porcentaje corresponde a dos comisiones: una del 6% por costos operativos de la plataforma y la segunda del 8% por costos derivados de las pasarelas de pagos que nos brindan su servicio (MercadoPago, PayU y PayPal)."
           image: ~
         tool_7:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Qué tipo de proyectos se pueden encontrar en LBM?"
+          answer: "LBM recibe, evalúa y acepta únicamente aquellos proyectos que tengan un claro impacto social o ambiental y que estén ubicados en Colombia. Dichos proyectos pueden ser de diversas categorías, tales como: agricultura, alimentos, artesanías, educación, energía, medio ambiente, negocios sociales, salud, tecnología o textil. Te invitamos a explorarlas!."
           image: ~
         tool_8:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "¿Dónde opera LittleBigMoney?"
+          answer: "Actualmente operamos en Colombia, es decir, todos los proyectos son desarrollados por emprendedores colombianos, pero nuestra comunidad es internacional, por lo que aceptamos colaboraciones desde cualquier parte del mundo por medio de tarjetas de crédito, débito o de cuentas de PayPal.<br/><br/>Adicionalmente, estamos en contacto con varias organizaciones para empezar a apoyar proyectos de otros países de la región, ya que recibir donaciones está permitido en toda América Latina."
           image: ~
         tool_9:
           title: ~
