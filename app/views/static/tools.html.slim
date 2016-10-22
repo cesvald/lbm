@@ -105,11 +105,11 @@
 		#container-about-crowdfunding.tools-container
 			.tools-wrapper
 				- for i in 1..10
-					- if t(".about_crowdfounding.tool_#{i}.question", default: "").present?
+					- if t(".about_crowdfunding.tool_#{i}.question", default: "").present?
 						.faq
 							p.question
 								span.glyphicon.glyphicon-chevron-right
-								span.question-text= t(".about_crowdfounding.tool_#{i}.question")
-							p.answer= t(".about_crowdfounding.tool_#{i}.answer").html_safe
+								span.question-text= t(".about_crowdfunding.tool_#{i}.question")
+							p.answer= t(".about_crowdfunding.tool_#{i}.answer").html_safe
 
 	= render 'layouts/allies'
