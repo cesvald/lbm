@@ -153,15 +153,13 @@
                     #images-swiper.swiper-container.image-slider
                         .swiper-wrapper
                             .swiper-slide
-                                = image_tag "project.png", class: "image"
+                                = image_tag "lbm/channels-gallery-1.jpg", class: "image"
                             .swiper-slide
-                                = image_tag "project.png", class: "image"
+                                = image_tag "lbm/channels-gallery-2.jpg", class: "image"
                             .swiper-slide
-                                = image_tag "project.png", class: "image"
+                                = image_tag "lbm/channels-gallery-3.jpg", class: "image"
                             .swiper-slide
-                                = image_tag "project.png", class: "image"
-                            .swiper-slide
-                                = image_tag "project.png", class: "image"
+                                = image_tag "lbm/channels-gallery-4.jpg", class: "image"
                     #images-swiper-button-prev.swiper-button-prev
                     #images-swiper-button-next.swiper-button-next
             .row.content-8
@@ -175,7 +173,7 @@
                         = embedded_svg 'lbm/three-hands-icon.svg', class: 'icon'
             .row.content-9
                 .col-xs-6
-                    = render partial: 'channels/projects/banner'
+                    = content_tag(:iframe, nil, src: "https://www.youtube.com/watch?v=hW5nQokS3Y8")
                 .col-xs-6
                     p.text= t('.statistics_1').html_safe
                     p.text= t('.statistics_2').html_safe
@@ -187,7 +185,9 @@
                 .col-xs-12
                     .title= t('.subtitle_5')
                     .row
-                        =image_tag 'lbm/embajadores.jpg'
+                        = image_tag 'lbm/embajador-2.png', class: "image"
+                        |&nbsp;&nbsp;&nbsp;
+                        = image_tag 'lbm/embajador-1.png', class: "image"
             .row.content-11
                 .col-xs-12
                     .title
