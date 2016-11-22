@@ -110,6 +110,10 @@ class Backer < ActiveRecord::Base
   def refund_deadline
     created_at + 180.days
   end
+  
+  def available_deadline
+    created_at + 120.days
+  end
 
   def change_reward! reward
     self.reward_id = reward

@@ -29,6 +29,10 @@ class UserDecorator < Draper::Decorator
     number_to_currency source.credits, unit: 'COP', precision: 0, delimiter: '.'
   end
 
+  def display_credits_used
+    number_to_currency source.credits_used, unit: 'COP', precision: 0, delimiter: '.'
+  end
+  
   def display_total_of_backs
     number_to_currency source.backs.confirmed.sum(:value), unit: 'COP', precision: 0, delimiter: '.'
   end

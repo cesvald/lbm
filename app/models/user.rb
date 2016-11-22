@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   end
 
   delegate  :display_name, :display_image, :short_name, :display_image_html,
-    :medium_name, :display_credits, :display_total_of_backs,
+    :medium_name, :display_credits, :display_credits_used, :display_total_of_backs,
     to: :decorator
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email,
@@ -160,7 +160,11 @@ class User < ActiveRecord::Base
   def credits
     user_total ? user_total.credits : 0.0
   end
-
+  
+  def credits_used
+    user_total ? user_total.credits_used : 0.0
+  end
+  
   def total_backed_projects
     user_total ? user_total.total_backed_projects : 0
   end

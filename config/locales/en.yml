@@ -261,10 +261,11 @@ en:
       accept_btn: "Yes, I want to request a refund"
     index:
       back_date: "Support date"
-      current_credits_html: "Your current balance is <span id=\"current_credits\">%{credits}</span> in credits."
+      current_credits_html: "Your current balance is <span id=\"current_credits\">%{credits}</span> in credits and you have used <span id=\"current_credits\">%{credits_used}</span> to donate"
       important_html: "To learn the rules of the reimbursement procedure, <a href='http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos' target='_blank'>click here</a>. Any questions, please enter <a href='http://suporte.catarse.me' target='_blank'> Support</a>."
       project: Project
       refund_expration_date: "Refund deadline"
+      use_expration_date: "Use deadline"
       refunded: "Refund request successful. Our team will contact you within two business days. "
       insufficient_credits: "You don't have enough credits to request this refund."
       refunds_title: "Payments that can be refunded"

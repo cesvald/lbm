@@ -261,10 +261,11 @@ es:
       accept_btn: "Sí, deseo solicitar el reembolso de mi colaboración"
     index:
       back_date: "Fecha de apoyo"
-      current_credits_html: "Tu saldo actual es <span id=\"current_credits\">%{credits}</span> en créditos."
+      current_credits_html: "Tu saldo actual es <span id=\"current_credits\">%{credits}</span> en créditos y has utilizado <span id=\"current_credits\">%{credits_used}</span> para donar"
       important_html: "Para saber el reglamento de funcionamiento de reembolso, <a href='http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos' target='_blank'>haz click aquí</a>. Cualquier duda, puedes entrar a  <a href='http://suporte.catarse.me' target='_blank'> Soporte</a>."
       project: Proyecto
       refund_expration_date: "Plazo para reembolso"
+      use_expration_date: "Plazo para uso"
       refunded: "Solicitud de reembolso exitosa. Nuestro equipo se comunicará contigo en los próximos dos días hábiles. "
       insufficient_credits: "No tienes los créditos suficientes para solicitar este reembolso."
       refunds_title: "Pagos que pueden ser reembolsados"
