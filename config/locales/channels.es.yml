@@ -7,7 +7,7 @@ es:
     other_subchannels: "Otros Subcanales"
   channels_subscribers:
     created: "Ahora estas siguiendo el canal"
-    deleted: "Yo no estas siguiendo este canal"
+    deleted: "Ya no estas siguiendo este canal"
   channels:
     send_your_project: "Envía tu proyecto"
     send_a_email: "Enviar un email"
@@ -50,7 +50,7 @@ es:
         links_hint: "Déjanos todos los enlaces que tienes, así podemos saber más sobre ti y tu proyecto. No tiene que ser algo formal o elegante, sólo unos enlaces útiles."
         category: Categoría
         tags_hint: "Antes de enviar tu proyecto, explora e inspírate con otros que han pasado por el sitio."
-        tags_important: "Dale un vistazo a otros proyectos de tu categoría  <a href='%{href}' target='_blank'>Aquí</a>!."
+        tags_important: "Dale un vistazo a otros proyectos de tu categoría <a href='%{href}' target='_blank'>Aquí</a>!."
         video: "¿Ya tienes un video? envía la URL!"
         video_hint: "El vídeo es lo más importante del proyecto. Si no tienes uno aún, no es necesario que lo envíes ya ... Pero ve pensando como vas a hacer uno muy bueno!"
         video_important: "Pega aquí la URL de tu video de Vimeo o Youtube!"
@@ -59,7 +59,7 @@ es:
         first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."
         online_days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
         headline_important: "Se trata de una breve descripción del proyecto, 140 caracteres como máximo!"
-        name_important: "No excedas los 50 caracteres"
+        name_important: "No excedas los 50 caracteres"
         social: "Red de financiamiento"
         facebook_hint: "http://facebook.com/__________"
         twitter_hint: "http:// twitter.com/____________"

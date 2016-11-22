@@ -110,7 +110,7 @@ class User < ActiveRecord::Base
   scope :by_name, ->(name){ where('users.name ~* ?', name) }
   scope :by_id, ->(id){ where(id: id) }
   scope :by_key, ->(key){ where('EXISTS(SELECT true FROM backers WHERE backers.user_id = users.id AND backers.key ~* ?)', key) }
-  scope :has_credits, joins(:user_total).where('user_totals.credits > 0')
+  scope :has_credits, joins(:user_total).where('user_totals.credits_used > 0')
   scope :order_by, ->(sort_field){ order(sort_field) }
 
   def name
@@ -127,7 +127,8 @@ class User < ActiveRecord::Base
         count(DISTINCT user_id) as users,
         count(*) as backers,
         sum(user_totals.sum) as backed,
-        sum(user_totals.credits) as credits').
+        sum(user_totals.credits) as credits,
+        sum(user_totals.credits_used) as credits_used').
       to_sql
     ).reduce({}){|memo,el| memo.merge({ el[0].to_sym => BigDecimal.new(el[1] || '0') }) }
   end

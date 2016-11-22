@@ -93,6 +93,8 @@ pt:
         total_backs: apoios
         total_users: usuários
         total_credits: créditos
+        total_credits_used: "Total credits used"
+        total_available_credits: "Total available credits"
         total_credits_view: "créditos calculados"
         user: Usuário
         value: Valor

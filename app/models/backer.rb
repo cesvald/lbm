@@ -119,6 +119,10 @@ class Backer < ActiveRecord::Base
   def can_refund?
     confirmed? && project.finished? && !project.successful?
   end
+  
+  def can_use_credits?
+    confirmed? && (not credits?) && project.finished? && !project.successful? && created_at + 120.days > DateTime.now
+  end
 
   def reward_must_be_from_project
     return unless reward

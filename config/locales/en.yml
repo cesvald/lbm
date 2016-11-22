@@ -1,21 +1,15 @@
 en:
   failure_title: "Welcome to LittleBigMoney"
   contact_and_support: "Contact & Support"
-  uservoice_gadget:
-    user:
-      name: User
-      location: "City / State"
-      confirmed_backers: "Support confirmed"
-      created_projects: "Project creation"
   current_update: "Modified "
   "no": "No"
   "yes": "Yes"
   or: or
   site:
-    title: "LittleBigMoney is a crowdfunding platform for small and growing businesses with social or environmental impact"
+    title: "Primera plataforma en la región de crowdfunding para el desarrollo de proyectos con impacto social y ambiental"
     meta_title: "%{title} · %{company_name}"
-    description: "LittleBigMoney is a different - and colaborative - tool for your project to come alive!"
-    keywords: "littlebigmoney, crowdfunding, project, community, open source, crowdfunding, donate, help, collaborate, support"
+    description: "LittleBigMoney es una herramienta diferente – y colaborativa – para que tu proyecto salga del papel!"
+    keywords: "littlebigmoney, crowdfunding, project, community, open source, financiación colectiva, donar, ayudar, colaborar, apoyar"
   login:
     forgot_password:
       welcome: "Reset password"
@@ -894,111 +888,6 @@ en:
   static:
     faq:
       title: "Frequently asked questions"
-    guidelines_start:
-      accept: "I have read and understand how LittleBigMoney works."
-      explore_curious: "I'm just looking around!"
-      explore_projects: "I want to explore the projects"
-      submit: "Next step!"
-      send_project: "I want to submit my project"
-      subtitle: "Learn how to finance your project through LittleBigMoney"
-      title: "How does LittleBigMoney work?"
-      introduction: "LittleBigMoney is a different - and collaborative - way to make your project become a reality."
-      legend_html: "Use this guide to decide if <br>LittleBigMoney is the right choice to finance your project."
-      title_one: "Submit your project"
-      step_one: "Ideas can be projects and they require support! LittleBigMoney facilitates and receives them with open arms whether they are big, small or just for simple advice. We love projects that require little money and have a big impact in their communities."
-      title_two: Review
-      step_two: "After we receive your project, it will be screened by our team of reviewers. The objective here is to give you tips in order to maximize the chances of your project becoming successful, as well as filtering NON-SENSE projects. Remember, we want your project to be successful as much as you do ;)"
-      title_three: "Ready to go online?"
-      step_three: "When your project is ready, it's time to go live and promote it in LittleBigMoney. During this period, you will need to engage as many people as possible to reach your goal."
-      title_four: "It's all-or-nothing"
-      step_four: "If your project didn't get enough support on time, all of your supporters will receive back their support in credit with which they can support other projects. if they want, they can ask for a refund."
-      title_requirements: "Requirements to submit your project to LittleBigMoney"
-      creative: "Coherent and short"
-      colective: "Collective benefits"
-      nonprofit: "Non-financial rewards"
-      donation: "We don't support philanthropic or “fund my life” projects"
-      video: "Make a video"
-      more_questions: "Ok! but tell me more about LittleBigMoney..."
-      title_magic: "Our magic formula"
-      magic: "We believe that providing a meeting place for people that share common values is the best way to turn projects into reality. Use LittleBigMoney as a channel to direct your network towards a COMMON objective."
-      title_money: "Where does the money to finance projects come from?"
-      money: "At least 50% will come from your own contact network. In this manner, LittleBigMoney is a way for you to get closer to the people that enjoy your work and expand this network through sharing in social media, newspapers, blogs and, of course, your favorite places."
-      title_work: "Does it take a lot of time?"
-      work: "A lot! There is no 'easy money on the internet'. You will have to work a lot before, during and after your project, but the experience will be worth it - we assure you :D And you will have a much stronger network behind your project after LittleBigMoney."
-      title_costs: "How much does it cost to use LittleBigMoney?"
-      costs: "It’s free to sign up, to create a campaign, and to contribute to a campaign. However, when your project is approved and has reached its goal, LittleBigMoney will apply a 6% fee. In addition the payment gateway fee is around 5% and 7% on the total of funds raised, this fee is variable depending of the number of local and international transactions."
-      why: "Why LittleBigMoney?"
-      intro: "First of all, it's important that you know why we believe that this new alternative to finance projects is phenomenal:"
-      why_one: "Minimum red tape and low financial risk. No interest rate, no entry fees and lots of fun and emotion."
-      why_two: "If the projects are well connected they can spread quickly to a lot of people, expanding and strengthening the network of people around your project."
-      why_three: "By creating a very strong bond with your network, this kind of campaign opens doors to new projects, partnerships and other unexpected connections."
-    guidelines_tips:
-      title: "Almost there!"
-      subtitle: "Before submitting your project, it's good to think over a few important points."
-      introduction_html: "We know you can't wait to have your project online, but first answer <br> (in a piece of paper) the following questions"
-      legend_html: "Having clear answers to these questions will help tremendously<br> in structuring your project, increasing the chances of its success"
-      title_one: "What inspired you to make this project?"
-      tip_one: "People only engage when they realize the importance of a cause for society or for the person who leads a campaign. So be very clear about what is your inspiration and let it overflow into your project."
-      title_two: "What is the focus?"
-      tip_two: "LittleBigMoney is an excellent tool to give a boost to your ideas. Therefore, define the purpose of your project objectively, as well as who will benefit from it. Clearly defining your goals is one of the best ways to engage people."
-      title_three: "What is your goal?"
-      tip_three: "Calculate all costs for the project execution and rewards delivery. Also take into account your ability to engage people in order to define your financial goal."
-      title_four: "What is your deadline to raise the support?"
-      tip_four: "The maximum deadline is 90 days, but remember: don't underestimate the amount of work that goes into a campaign. You will have to work hard before and during the campaign if you want to succeed. It is important to keep enthusiasm and not get worn out, which is why we recommend you 45 or 60 days of campaign."
-      title_five: "Have you thought about your project's rewards?"
-      tip_five: "Remember that rewards are public promises. So, think very well while you elaborate them, as well as the logistics in delivering them to your supporters. Our suggestion: think about immaterial rewards: downloads, experiences, courses, products, kisses and hugs!"
-      title_six: "Is your video ready?"
-      tip_six: "The video is the business card of your project. It's through it that the supporters will get in touch with your cause. So, take special care in the script, audio and image quality. HD is recommended."
-      title_seven: "How will you mobilize your network?"
-      tip_seven: "It is important to plan strategically to mobilize networks and convince them to support your project, both before and during the period of project completion. We recommend distributing your work weekly with your network according to the proximity you achieve with your supporters."
-      title_eight: "How will the money be used?"
-      tip_eight: "Create a GOOGLE DOCS spreadsheet and open your budget to show everyone how the support will be used. TRANSPARENCY is everything in this project."
-      explore_curious: "I'm just looking around!"
-      explore_projects: "I want to explore the projects"
-      submit: "Next step!"
-      send_project: "I want to submit my project"
-      guide: "Download a complete guide with all the tips to make your project in LittleBigMoney."
-      guide_url: ~
-    guidelines_backers:
-      title: "I want to support a project!"
-      subtitle: "Understand step-by-step how to support a project on LittleBigMoney."
-      introduction: "LittleBigMoney is a great way to engage in causes you believe in"
-      legend_html: "We know people support our projects for a variety of reasons. But mostly? Because it feels so darn good!"
-      title_one: "Explore the project"
-      step_one: "The first step is to understand the project. Watch the video, read the description, browse the links. If you are certain that this project can't remain only on paper, go one step forward!"
-      title_two: "Decide with how much you want to support"
-      step_two: "A good way to decide how much you want to give as support is to observe the rewards that the microentrepreneurs offer in exchange for your support."
-      title_three: "Finalize your support"
-      step_three: "Fill in your information and review it! Then, decide what form of payment meets your needs best.<br/></br><a href='https://docs.google.com/document/d/1clhFsbWPZiVZeAZNf3g0pj58CFIHAsBGieNVlG5JPBM/edit' target='_blank'>Click here to know more about the payment methods</a>"
-      title_four: "Spread the word!"
-      step_four: "Now you're in the same boat as the project creator. Spread the word in social media and stay tuned for updates."
-      title_requirements: "Remember: with LittleBigMoney it’s “all or nothing”"
-      sucessfull_title: "If the project meets or exceeds its support goal"
-      sucessfull: "The project was successful! The microentrepreneur will receive the money and will contact all the supporters."
-      not_sucess_title: "If the project does not meet its support goal..."
-      not_sucess: "You get the full amount of your support in the form of credit (to support another project). If that does not please you, you can request your money back, according to the rules of the <a href='%{terms}' target='_blank'>terms of use</a>."
-      title_not_funded: "If the project does not achieve the goal, how do I use my credits?"
-      not_funded: "You will receive your credits on your LittleBigMoney profile. At the time you choose to support another project, on the select a reward window, there will be a field to use your credits."
-      more_questions: "I'm dying to support a project, is there anything else I need to know?"
-      title_backer: "How do I know that my support was successful?"
-      backer: "You will receive a confirmation email. Stay tuned and check your support on the SUPPORTERS tab at the page of the project you contributed."
-      title_rewards: "If the project is successfully supported, how do I get my rewards?"
-      rewards: "It is the duty of the project creator to contact you and arrange how to deliver the reward. If not, you need to send an email to him/her to claim it! If you get no answer contact us so we can give them an earful"
-      title_credits: "If the project does not achieve the goal, how do I use my credits?"
-      credits: "You will receive your credits on your LittleBigMoney profile. At the time you choose to support another project, on the select a reward window, there will be a field to use your credits."
-      title_money: "What if I don't want to use the credits?"
-      money: "No problem! You just have to go to your profile (My credits) and request a refund according to the terms of use. You can also send an email to finanzas@littlebigmoney.org with your request."
-      other_backers: "CAN I HELP IN OTHER WAYS?"
-      intro: "Get to know diferent ways to help the project you believe in"
-      other_one: "Bring two other friends to support the project as you did"
-      other_two: "Spread the word! Tell everyone how amazing the project that you supported is on LittleBigMoney and encourage them to support too."
-      other_three: "Do you have a friend who’s a journalist? Try to have him/her to post something about it on his/her blog."
-      other_four: "Make a support video to broadcast your faith in the project. Like these guys did: https://vimeo.com/46233018"
-      other_five: "Send an e-mail to the project creator asking how you can help even more."
-      submit: "I'M CHECKING IT OUT!"
-      send_project: "I want to submit my project "
-      explore_curious: "I’M ON BOARD!"
-      explore_projects: "I want to support"
     guidelines_channel:
       title: "¡Bienvenido a tu espacio!"
       page_title_1: "INICIA <span class='carrot'> TU CANAL</span> CON LBM"
@@ -1045,15 +934,15 @@ en:
     guidelines:
       title: "¡Bienvenido a este, tu espacio!"
       subtitle: "Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados. "
-      illustration_1: ~
-      illustration_1_bold: ~
-      illustration_1_btn: ~
-      illustration_2: ~
-      illustration_2_bold: ~
-      illustration_2_btn: ~
-      illustration_3: ~
-      illustration_3_bold: ~
-      illustration_3_btn: ~
+      illustration_1: "La acción de \"donar\" es la que le da vida a LittleBigMoney, y gracias a ella se pueden construir los sueños de muchos emprendedores."
+      illustration_1_bold: "¡Juntos todo es posible!"
+      illustration_1_btn: "Dona a un proyecto"
+      illustration_2: "Si tienes una iniciativa con enfoques sociales o ambientales, LittleBigMoney es la mejor opción para alcanzar tus metas."
+      illustration_2_bold: "¡Te ayudaremos a hacerla realidad!"
+      illustration_2_btn: "Envía un proyecto"
+      illustration_3: "Si quieres multiplicar el impacto social de tu organización, en LittleBigMoney creamos canales personalizados para la promoción de tus programas."
+      illustration_3_bold: "¡Descubre más!"
+      illustration_3_btn: "Crea tu canal"
       description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del pais, que juntos permiten la realización de proyectos con impacto social o ambiental en pro fortalecimiento económico y la realizacion de metas de diversas comunidades."
       description_paragraph_2: "Ya sea aportando o recibiendo puedes contribuir con el crecimiento de nuestro país."
       send_project_title: "¡Lo que debes tener en cuenta para enviar proyectos!"
@@ -1116,62 +1005,6 @@ en:
       after_project: "Después de <p class='enfasis'>Tu Campaña</p>"
       venture_course: "Curso de <p class='enfasis'>Emprendimiento</p>"
       about_crowdfunding: "Todo Sobre <p class='enfasis'>CrowdFunding</p>"
-    about:
-      title: "Who are we?"
-      subtitle: "Meet the Little people that make BIG things happen! <3"
-      introduction: "What do they look like? What do they eat? How do they network? You've come to the right place."
-      name_one: "Yves Moury"
-      image_one: "http://fundacioncapitaldotorg.files.wordpress.com/2013/10/yves_wp.jpg"
-      place_one: Belgium
-      title_one: "President and Executive Director"
-      text_one: |-
-          Economist and Management Engineer from the University of Leuven in Belgium, and Postgraduate in Social and Cultural Anthropology, Administration, Banking and IT and Development Finances from the same university. His experience of over 25 years in international development and poverty reduction includes consulting and research for agencies and international organizations such as BID, EU, IFAD, UNIDO, OIT and UNDP, and also with public and private entities, financial corporations and universities in Europe, Africa, Asia and Latin America.
-          y.moury@fundacioncapital.org
-      name_two: "Franz Gomez"
-      image_two: "http://fundacioncapitaldotorg.files.wordpress.com/2013/10/franz_gomez_wp.jpg"
-      place_two: Bolivia
-      title_two: "Financial Inclusion Director"
-      text_two: |-
-          Economist from the Universidad Mayor of San Andrés, Bolivia. He holds a Master in Economics and a Doctorate (Ph.D.) in Economic Development from the Ohio State University, United States. He specializes in microfinance and rural finance, with extensive experience in technical assistance to government agencies and financial institutions for the design and implementation of financial inclusion policies and social protection. He has worked as a consultant and researcher in several countries in Latin America and the Caribbean, Europe and Asia.
-          franz.gomez@fundacioncapital.org
-      name_three: "Paula Rodriguez Rueda"
-      image_three: "http://fundacioncapitaldotorg.files.wordpress.com/2013/10/paula_wp.jpg"
-      place_three: Colombia
-      title_three: "Project Coordinator"
-      text_three: |-
-          Master's in International Relations from the Universidad Javeriana in Bogotá and Master's in Public Management from SDA Bocconi School of Management in Italy. She has worked with the Colombian public sector by opening foreign markets to small and medium enterprises, and also with private companies like public utility providers, supporting the design of new investment projects and public tenders.
-          paula.rodriguez@fundacioncapital.org
-      name_four: "María Antonia Hoyos"
-      image_four: "http://fundacioncapitaldotorg.files.wordpress.com/2013/10/tona_wp.jpg"
-      place_four: Colombia
-      title_four: "Operations Officer"
-      text_four: |-
-          Professional in Government and International Relations with emphasis in Public Management of the Externado University of Colombia. Experience in managing and developing social projects, fundraising and management of international technical assistance for SMEs in Colombia. She worked at the CINEP Foundation/Program for Peace as Junior Professional Project Manager and performed a one-year internship in the Department of Cooperation and Conventions in PROEXPORT
-          maria.hoyos@fundacioncapital.org
-      name_five: "Veruschka Zilveti"
-      image_five: "http://fundacioncapitaldotorg.files.wordpress.com/2013/10/veru_wp.jpg"
-      place_five: Bolivia
-      title_five: "Project Coordinator"
-      text_five: |-
-          Economist from the Catholic University of Bolivia, with a postgraduate degree in Management of Non-Profit Institutions. She has extensive experience in rural development projects and working with rural communities. She worked for eight years at IFAD analyzing strategies for poverty reduction and tools to strengthen market access for rural businesses.
-          veruschka.zilveti@fudacioncapital.org
-      name_six: "Javier Felipe Hidalgo"
-      image_six: "http://fundacioncapitaldotorg.files.wordpress.com/2013/10/javier_wp.jpg"
-      place_six: Colombia
-      title_six: "Communications Officer"
-      text_six: |-
-          Social communicator and journalist with emphasis on business communication management from the Externado University of Colombia. Experience in handling and creating networks and online communities; also experienced in organizational communication strategies. He worked as a volunteer at the CISV foundation of Colombia as leadership coach in experiential education and performed photographical duties in the Choral and Orchestral Corporation of Colombia.
-          javier.hidalgo@fundacioncapital.org
-      name_seven: ~
-      image_seven: ~
-      place_seven: ~
-      title_seven: ~
-      text_seven: ~
-      name_eight: ~
-      image_eight: ~
-      place_eight: ~
-      title_eight: ~
-      text_eight: ~
     tools:
       subtitle_1: "¿Quieres conocer  los beneficios que LBM tiene para ti? ¿No pudiste resolver tus dudas con las preguntas frecuentes?"
       subtitle_2: "Escríbenos a littlebigmoney@fundacioncapital.org o déjanos tu mensaje completando tus datos en esta casilla."

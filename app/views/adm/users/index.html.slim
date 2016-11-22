@@ -45,6 +45,9 @@
         |  ·
         strong= "#{number_to_currency @total_credits, precision: 0} "
         = t('.total_credits')
+        |  ·
+        strong = "#{number_to_currency @total_credits_used, precision: 0} "
+        = t('.total_credits')
       br
       = paginate @users
       br
