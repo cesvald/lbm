@@ -1,11 +1,11 @@
 CATARSE.StaticToolsView = Backbone.View.extend({
   initialize: function() {
-    _.bindAll(this, "for_backers", "about_project", "after_project", "venture_course", "about_crowdfunding", "selectItem")
+    _.bindAll(this, "for_backers", "about_project", "after_project", "tools", "about_crowdfunding", "selectItem")
     CATARSE.router.route("", "index", this.for_backers)
     CATARSE.router.route("for-backers", "for-backers", this.for_backers)
     CATARSE.router.route("about-project", "about-project", this.about_project)
     CATARSE.router.route("after-project", "after-project", this.after_project)
-    CATARSE.router.route("venture-course", "venture-course", this.venture_course)
+    CATARSE.router.route("tools", "tools", this.tools)
     CATARSE.router.route("about-crowdfunding", "about-crowdfunding", this.about_crowdfunding)
 
     new Swiper ('#allies-swipper', {
@@ -55,7 +55,7 @@ CATARSE.StaticToolsView = Backbone.View.extend({
     $('.tools-icon-container .pointer').animate({left: position}, 300);
   },
 
-  venture_course: function() {
+  tools: function() {
     this.selectItem("venture-course")
     var element = $('.tools-icon-container .active');
     var position = element.position().left + element.width() / 2;
