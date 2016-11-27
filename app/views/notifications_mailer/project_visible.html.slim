@@ -1,3 +1,3 @@
 - project = @notification.project
-= t('notifications.project_visible.text_html', name: project.user.display_name, link: link_to(project.name, project_by_slug_url(project.permalink)), knowledge_base: link_to(t("contact_and_support"), tools_path(anchor: :tools)), support: link_to(t("contact_and_support"), tools_path(anchor: :tools)))
+= t('notifications.project_visible.text_html', name: project.user.display_name, link: link_to(project.name, project_by_slug_url(project.permalink)), knowledge_base: link_to(t("contact_and_support"), tools_url(anchor: :tools)), contact: link_to(t("here"), tools_url(anchor: :tools)), support: link_to(t("contact_and_support"), tools_url(anchor: :tools)))
 = render "email_footer"

@@ -100,9 +100,11 @@ es:
       faq: F.A.Q./Ayuda
       about: "¿Quiénes somos?"
       terms: Legales
+      terms_of_use: "Términos de uso"
       policy: "Políticas de privacidad"
-      terms_link: "https://drive.google.com/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view?usp=sharing"
-      policy_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245484"
+      terms_link: "https://drive.google.com/a/fundacioncapital.org/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
+      policy_link: "https://docs.google.com/document/d/17Jam83JCh-6gXPWQcl9WiQY_GzIyflUGKZQpAqIRz4E/edit?usp=sharing"
+      terms_of_use_link: "https://docs.google.com/document/d/1WLkb2hOQsWG_S3FPFtbs_UWRyyRu7TDcb_ntBY395XM/edit?usp=sharing"
       contact: Contacto
       twitter: "<p class='social_follow'>Síguenos en Twitter</p> <p class='social_user'>@%{twitter}</p>"
       facebook: "<p class='social_follow'>Síguenos en Facebook</p> <p class='social_user'>@littlebigmoney</p>"
@@ -921,7 +923,7 @@ es:
       comment_1: "La campaña de crowdfunding<p>MÁS GRANDE DE COLOMBIA.</p>"
       statistics_1: "<span class='carrot bold'>*100</span> proyectos al aire al mismo tiempo"
       statistics_2: "<span class='oceanblue bold'>*Lanzamientos en 5</span> ciudades diferentes"
-      statistics_3: "<span class='carrot bold'>*XXXX</span> donaciones recibidas en 80 días al aire"
+      statistics_3: "<span class='carrot bold'>*2245</span> donaciones recibidas en 80 días al aire"
       statistics_4: "<span class='bold'>*$171,239,733 COP (61,000 USD) recolectados</span>"
       statistics_5: "<span class='carrot bold'>*170%</span>  del fondo de contrapartida "
       statistics_6: "<span class='oceanblue bold'>*Socios Institucionales:</span>  PNUD y Koica"

@@ -101,8 +101,10 @@ en:
       about: "Who are we?"
       terms: "Terms of use"
       policy: "Privacy Policy"
-      terms_link: "http://lbm.uservoice.com/knowledgebase/articles/245482"
-      policy_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/278637"
+      terms_of_use: "Términos de uso"
+      terms_link: "https://drive.google.com/a/fundacioncapital.org/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
+      policy_link: "https://docs.google.com/document/d/17Jam83JCh-6gXPWQcl9WiQY_GzIyflUGKZQpAqIRz4E/edit?usp=sharing"
+      terms_of_use_link: "https://docs.google.com/document/d/1WLkb2hOQsWG_S3FPFtbs_UWRyyRu7TDcb_ntBY395XM/edit?usp=sharing"
       contact: Contact
       twitter: "Follow us @%{twitter}"
       facebook: "Find us on Facebook"
