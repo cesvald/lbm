@@ -48,7 +48,6 @@
 
 #project-history-wrapper
   .image-wrapper
-    = @project.channels.count
     - @project.channels.each do |channel|
       - if channel.banner_top_url.present?
         p= link_to image_tag(channel.banner_top_url), root_url(subdomain: channel.permalink)

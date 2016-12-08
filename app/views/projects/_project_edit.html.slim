@@ -16,6 +16,8 @@
         = form.input :category, as: :select, required: false, input_html: {class: 'lbm-select'}
       - if can? :update, @project, :video_url
         = form.input :video_url, as: :string, hint: t('formtastic.hints.project.video_url_edit'),required: false, input_html: {class: 'lbm-input'}
+      - if can? :update, @project, :uploaded_image
+        = form.input :uploaded_image, as: :file, required: false, hint: image_tag(@project.uploaded_image.current_path)
       - if can? :update, @project, :online_days
         = form.input :online_days, as: :number, required: false, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :goal

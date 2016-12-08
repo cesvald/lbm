@@ -4,10 +4,11 @@
         .page-title-1= t('.page_title_1').html_safe
         .page-title-2= t('.page_title_2')
         .subtitle= t('.subtitle')
-        = image_tag "lbm/create_channel.png", class: "top-image"
         .container
             .row.content-1
-                .col-xs-12
+                .col-xs-6
+                    = image_tag "lbm/create_channel.png", class: "top-image"
+                .col-xs-6.right-side
                     = image_tag "lbm/lbm-logo.png", class: "container-icon"
                     .subtitle-what-is= t('.what_is_channel_q')
                     .text= t('.what_is_channel_a')
@@ -81,12 +82,16 @@
                         .col-xs-10.col-xs-offset-1
                             .about-us-container
                                 .text-container
-                                    .pointer
                                     .text= t('.answer_7_1').html_safe
+                                    .sayer
+                                        b
+                                            | (Juan Felipe Yepes, ex Director Centro de Innovación Social, ANSPE)
                                 .text-container
-                                    .pointer
                                     .text= t('.answer_7_2').html_safe
-            .row.content-5
+                                    .sayer
+                                        b
+                                            | (Gretel Jordan, Comunidades y Cadena de Valor, Fundación Bavaria)
+            .row.content-5          
                 .col-xs-12
                     .title
                         /*

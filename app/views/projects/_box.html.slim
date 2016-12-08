@@ -1,11 +1,10 @@
-.project[itemscope itemtype="http://schema.org/CreativeWork" class=("belongs-channel" if project.channels.present?)]
+.project[class=("belongs-channel" if project.channels.present?)]
   meta[itemprop="dateCreated" content=project.created_at.to_date]
   .box
-    /p.black_box= project.category
     = link_to project, class: 'link' do
       .cover
         = image_tag project.display_image, itemprop: 'image'
-        - if project.expired? && !project.waiting_funds? 
+        - if project.expired? && !project.waiting_funds?
           = image_tag "lbm/mark_#{project.state}_#{I18n.locale}.png", class: "mark"
     .project_content
       .project_title

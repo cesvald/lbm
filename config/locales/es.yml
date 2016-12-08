@@ -263,6 +263,7 @@ es:
       accept_btn: "Sí, deseo solicitar el reembolso de mi colaboración"
     index:
       back_date: "Fecha de apoyo"
+      project_finished_date: "Fecha finalización del proyecto"
       current_credits_html: "Tu saldo actual es <span id=\"current_credits\">%{credits}</span> en créditos y has utilizado <span id=\"current_credits\">%{credits_used}</span> para donar"
       important_html: "Para saber el reglamento de funcionamiento de reembolso, <a href='http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos' target='_blank'>haz click aquí</a>. Cualquier duda, puedes entrar a  <a href='http://suporte.catarse.me' target='_blank'> Soporte</a>."
       project: Proyecto
@@ -382,7 +383,7 @@ es:
         comercial_file: "Cámara de Comercio"
         bank_certificate_file: "Certificación Bancaria"
         banking_data_file: "Información Bancaria"
-        banking_format_file: ~
+        banking_format_file: "Formato Bancario"
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
@@ -458,15 +459,15 @@ es:
     video_regex_validation: "Solo URLs de Vimeo o Youtube son permitidas"
     name_regex_validation: "Solo caracteres alfanuméricos son permitidos"
     display_status:
-      expired: finalizado
+      expired: Finalizado
       rejected: Rechazado
       failed: "Sin éxito"
-      partial_successful: "parcialmente financiado"
+      partial_successful: "Parcialmente Financiado"
       successful: Exitoso
-      reached_goal: financiado
-      waiting_confirmation: "Un momentico"
-      waiting_funds: "Un momentico"
-      not_reached_goal: "Un momentico"
+      reached_goal: Financiado
+      waiting_confirmation: "Esperando Confirmación"
+      waiting_funds: "Esperando Fondos"
+      not_reached_goal: "No Financiado"
   projects:
     index:
       vimeo_video_id: 97187346
@@ -487,6 +488,7 @@ es:
       banner_message_4: "¡Dona ya! Pequeños aportes con GRAN impacto"
       banner_message_5: "Crowdfunding para la Responsabilidad Social Empresarial"
       banner_message_6: "Herramientas y recomendaciones para una campaña exitosa"
+      total_successful_projects: "<span class='color_carrot'>{</span><span class='color_darkblue'> Mas de </span><span class='color_carrot'>%{successful_number} </span><span class='color_darkblue'> Proyectos exitosos </span><span class='color_oceanblue_letter'>& </span><span class='color_darkblue'>cientos de personas cumpliendo sus metas, tú puedes ser el </span><a class='link-underline' href='%{link}'>próximo</a><span class='color_carrot'> }</span>"
       know_more: "Conoce más"
       know_more_successful_projects: "Conoce más proyectos exitosos"
       slogan_donate: "Una pequeña colaboración, una gran ayuda"
@@ -775,7 +777,7 @@ es:
       pictures:
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"
-        save_changes: "Save Changes"
+        save_changes: "Guardar Cambios"
       documents:
         almost_done: "Casi listo"
       reports:
@@ -929,8 +931,8 @@ es:
       statistics_6: "<span class='oceanblue bold'>*Socios Institucionales:</span>  PNUD y Koica"
       subtitle_5: "Embajadores de la campaña:  Mariana Pajón y Santiago Cruz"
       subtitle_6: "Dicen de nosotros:"
-      answer_7_1: "<b>ANSPE: </b> Gracias a LBM, encontramos una forma masiva de visibilizar problemáticas sociales, ¡y especialmente de darles soluciones!. El Crowdfunding es una buena opción para que las comunidades vulnerables puedan darse a conocer y financiar sus proyectos"
-      answer_7_2: "<b>Fundación Bavaria: </b> Es una buena metodología por la transparencia que se maneja y la efectividad en corto tiempo. Los de LittleBigMoney son muy pilos y estuvieron respaldándonos todo el tiempo. Hicieron lo posible por solucionarnos los inconvenientes en el menor tiempo. Nos dictaron una capacitación inicial de uso de la plataforma. Hicieron seguimiento a todo el proceso."
+      answer_7_1: "<b>\"</b>Gracias a LBM, encontramos una forma masiva de visibilizar problemáticas sociales, ¡y especialmente de darles soluciones!. El Crowdfunding es una buena opción para que las comunidades vulnerables puedan darse a conocer y financiar sus proyectos<b>\"</b>"
+      answer_7_2: "<b>\"</b>Es una buena metodología por la transparencia que se maneja y la efectividad en corto tiempo. Los de LittleBigMoney son muy pilos y estuvieron respaldándonos todo el tiempo. Hicieron lo posible por solucionarnos los inconvenientes en el menor tiempo. Nos dictaron una capacitación inicial de uso de la plataforma. Hicieron seguimiento a todo el proceso.<b>\"</b>"
       subtitle_7: "¡No te quedes atrás! ¡Crea tu canal!"
       subtitle_8: "¿Quieres tener un canal con nosotros? ¿Necesitas más información?  Escribe a <span class='oceanblue'>littlebigmoney@fundacioncapital.org</span>  o déjanos un mensaje y pronto nuestro equipo entrará en contacto contigo."
     guidelines:
@@ -971,7 +973,7 @@ es:
       more_text_2_phrase_1: "<p>Somos una ventana al mundo para que se conozcan tus ideas,facilitamos el acceso a recursos (financieros y humanos) y propiciamos la integración en tu comunidad.</p>"
       more_text_2_phrase_2: "<p>Tendrás</p><p>- Asesoramiento y capacitación para la gestión de la campaña de crowdfunding</p><p>- Un perfil exclusivo que podrás compartir en redes sociales</p><p>- La posibilidad de recibir dinero desde otros lugares y monitorear el recaudo en línea</p>"
       more_text_3_phrase_1: "<p>Te ayudaremos a hacer crecer el impacto de tus recursos crearemos una experiencia personalizada y, junto a los de colaboradores individuales, a financiar proyectos que te muevan e interesen.</p>"
-      more_text_3_phrase_2: "<p>Recibirás</p><p>- Un canal personalizado para la difusión y promoción de los proyectos que quieres apoyar</p><p>- Coordinación y acompañamiento durante todo el proceso de implementación de la campaña</p><p>- Apoyo en el diseño de una estrategia de comunicación para visibilizar y </p>"
+      more_text_3_phrase_2: "<p>Recibirás</p><p>- Un canal personalizado para la difusión y promoción de los proyectos que quieres apoyar</p><p>- Coordinación y acompañamiento durante todo el proceso de implementación de la campaña</p><p>- Apoyo en el diseño de una estrategia de comunicación para visibilizar</p>"
       success:
         title: "Proyectos exitosos"
         how_works: "Proyecto exitoso:"

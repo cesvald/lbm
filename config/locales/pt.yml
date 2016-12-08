@@ -261,6 +261,7 @@ pt:
       accept_btn: "Sim, desejo solicitar o reembolso do meu apoio"
     index:
       back_date: "Data do apoio"
+      project_finished_date: "Fecha finalización del proyecto"
       current_credits_html: "Seu saldo atual é de <span id=\"current_credits\">%{credits}</span> em créditos y has utilizado <span id=\"current_credits\">%{credits_used}</span> para donar"
       important_html: "Para saber todas as regras de funcionamento de reembolso, <a href='http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos' target='_blank'>clique aqui</a>. Qualquer dúvida, acesse nosso <a href='http://suporte.catarse.me' target='_blank'>suporte</a>."
       project: Projeto
@@ -485,6 +486,7 @@ pt:
       banner_message_4: "Aquí las pequeñas acciones tienen alcances, explora las iniciativas a las que puedes aportar"
       banner_message_5: "Proyecta y desarrolla ideas que pueden transformar la comunidad"
       banner_message_6: "Únete a nuestras alianzas estratégicas, conoce cómo tu empresa puede impulsar grandes proyectos"
+      total_successful_projects: "<span class='color_carrot'>{</span><span class='color_darkblue'> Mas de </span><span class='color_carrot'>%{successful_number} </span><span class='color_darkblue'> Proyectos exitosos </span><span class='color_oceanblue_letter'>& </span><span class='color_darkblue'>cientos de personas cumpliendo sus metas, tú puedes ser el </span><a class='link-underline' href='%{link}'>próximo</a><span class='color_carrot'> }</span>"
       know_more: "Conoce más"
       know_more_successful_projects: "Conoce más proyectos exitosos"
       slogan_donate: "Uma pequena doação, uma grande ajuda"
