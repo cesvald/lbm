@@ -10,8 +10,9 @@
 				| <iframe src="https://docs.google.com/presentation/d/1seaD3z-ExImV7ImlvCs7Jx-XFaqKlY8tXQka1A-jN2A/embed?start=true&loop=false&delayms=15000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 			- else
 				= @profile.how_it_works_html.html_safe
-			div
-				= embedded_svg "lbm/puzzle-icon.svg", class: "puzzle-icon"
-				.send= link_to t('channels.send_your_project'), new_project_path, class: "lbm-button", title: t('channels.accessibility.send_your_project')
-				= image_tag 'lbm/plain-icon.png', class: "plain-icon"
+			/*
+				div
+					= embedded_svg "lbm/puzzle-icon.svg", class: "puzzle-icon"
+					.send= link_to t('channels.send_your_project'), new_project_path, class: "lbm-button", title: t('channels.accessibility.send_your_project')
+					= image_tag 'lbm/plain-icon.png', class: "plain-icon"
 = render 'footer'

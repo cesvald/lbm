@@ -11,6 +11,8 @@
 		    = mail_to @profile.email, t('channels.footer.contact'), title: t('channels.footer.contact'), target: '_blank' 
 	.home-wrapper
 		= embedded_svg "lbm/header_1.svg", class: "back-home-icon"
+		- if action_name == "how_it_works"
+			= link_to t('channels.back_home'), root_url(subdomain: @profile.permalink)
 		- if @profile.parent_channel.nil?
 			= link_to t('channels.back_home'), Configuration[:base_url], class: "back-home-link"
 		- else

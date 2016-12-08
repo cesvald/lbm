@@ -75,7 +75,7 @@ class ProjectsController < ApplicationController
 
   def update
     update! do |success, failure|
-      success.html{ 
+      success.html{
         return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
       }
       success.json{
