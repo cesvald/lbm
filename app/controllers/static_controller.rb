@@ -1,4 +1,6 @@
+# -*- encoding : utf-8 -*-
 class StaticController < ApplicationController
+  layout nil
   def guidelines
     @title = t('static.guidelines.title')
   end
@@ -7,6 +9,11 @@ class StaticController < ApplicationController
     @title = t('static.guidelines_tips.title')
   end
 
+  def guidelines_channels
+    @title = t('static.guidelines_channels.title')
+    @channels = Channel.not_receive_projects
+  end
+  
   def faq
     @title = t('static.faq.title')
   end
@@ -25,4 +32,10 @@ class StaticController < ApplicationController
     return render 'sitemap'
   end
 
+  def email
+    @header = "Aporte Confirmado"
+  end
+
+  def tools
+  end
 end

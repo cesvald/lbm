@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 FactoryGirl.define do
   sequence :name do |n|
     "Foo bar #{n}"

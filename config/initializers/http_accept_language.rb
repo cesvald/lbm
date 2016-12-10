@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 if defined?(ActionDispatch::Request)
   ActionDispatch::Request.send :include, HttpAcceptLanguage
 elsif defined?(ActionDispatch::AbstractRequest)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Update < ActiveRecord::Base
   extend CatarseAutoHtml
 

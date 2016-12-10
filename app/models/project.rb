@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- encoding : utf-8 -*-
 require 'state_machine'
 class Project < ActiveRecord::Base
   include ActionView::Helpers::TextHelper
@@ -16,8 +16,8 @@ class Project < ActiveRecord::Base
   mount_uploader :bank_certificate_file, DocumentUploader
   mount_uploader :banking_data_file, DocumentUploader
 
-  delegate :display_status, :display_progress, :display_image, :display_expires_at,
-    :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :progress_bar, :successful_flag,
+  delegate :display_status, :display_progress, :display_image, :display_icon_category, :display_expires_at,
+    :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :display_mark, :progress_bar, :successful_flag,
     to: :decorator
 
   schema_associations
@@ -98,15 +98,19 @@ class Project < ActiveRecord::Base
                                      WHEN 'successful' THEN 3
                                      WHEN 'failed' THEN 4
                                      END ASC, online_date DESC, created_at DESC, id DESC") }
-  scope :expiring_for_home, ->(exclude_ids){
-    includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.expiring.order("projects.expires_at, random()").limit(3)
+  scope :expiring_for_home, ->(){
+    includes(:user, :category, :project_total).visible.expiring.order("projects.expires_at, random()").limit(3)
   }
-  scope :recent_for_home, ->(exclude_ids){
-    includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.recent.not_expiring.order('random()').limit(3)
+  scope :recent_for_home, ->(){
+    includes(:user, :category, :project_total).visible.recent.not_expiring.order('random()').limit(3)
   }
-  scope :successful_for_home, ->(exclude_ids){
+  scope :successful_for_home, ->(){
+    includes(:user, :category, :project_total).visible.successful.order('random()').limit(3)
+  }
+  scope :successful_for_home_excluding, ->(exclude_ids){
     includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.successful.order('random()').limit(3)
   }
+
   scope :backed_by, ->(user_id){
     where("id IN (SELECT project_id FROM backers b WHERE b.state = 'confirmed' AND b.user_id = ?)", user_id)
   }
@@ -122,6 +126,7 @@ class Project < ActiveRecord::Base
   validates_uniqueness_of :permalink, allow_blank: true, allow_nil: true, case_sensitive: false
   validates_format_of :permalink, with: /^(\w|-)*$/, allow_blank: true, allow_nil: true
   validates_format_of :video_url, with: /(https?:\/\/(www\.)?vimeo.com\/(\d+))|(^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*)|(youtu\.be\/([^\?]*))/, message: I18n.t('project.video_regex_validation'), allow_blank: true
+  validates_format_of :name, with: /^[a-z\d\-_\s]+$/i, message:  I18n.t('project.name_regex_validation')
   validate :permalink_cant_be_route, allow_nil: true
 
   def self.between_created_at(start_at, ends_at)
@@ -257,8 +262,10 @@ class Project < ActiveRecord::Base
       name: name,
       user: user,
       category: category,
+      category_name: category.to_s,
+      mark_image: display_mark,
       image: display_image,
-      headline: headline,
+      headline: truncate(headline, length: 140),
       progress: progress,
       display_progress: display_progress,
       goal: display_goal,
@@ -269,13 +276,15 @@ class Project < ActiveRecord::Base
       video_url: video_url,
       embed_url: video_embed_url ? video_embed_url : (video ? video.embed_url : nil),
       url: Rails.application.routes.url_helpers.project_by_slug_path(permalink, locale: I18n.locale),
+      icon_category: display_icon_category,
       full_uri: Rails.application.routes.url_helpers.project_by_slug_url(permalink, locale: I18n.locale),
       expired: expired?,
       partial_successful: partial_successful?,
       successful: successful?,
       waiting_funds: waiting_funds?,
       failed: failed?,
-      display_status_to_box: display_status.blank? ? nil : I18n.t("project.display_status.#{display_status}"),
+      state: state,
+      display_status_to_box: display_status.blank? ? nil : I18n.t("project.display_status.#{display_status}").capitalize,
       display_expires_at: display_expires_at,
       in_time: in_time?,
       permalink: permalink,

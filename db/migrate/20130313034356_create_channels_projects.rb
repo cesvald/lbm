@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateChannelsProjects < ActiveRecord::Migration
   def change
     create_table :channels_projects do |t|

@@ -1,8 +1,10 @@
+# -*- encoding : utf-8 -*-
 require 'sidekiq/web'
 
 Catarse::Application.routes.draw do
 
   match '/thank_you' => "static#thank_you"
+  match '/email' => "static#email"
 
   devise_for :users, path: '', 
     path_names:   { sign_in: :login, sign_out: :logout, sign_up: :register }, 
@@ -22,14 +24,19 @@ Catarse::Application.routes.draw do
   #mount CatarseMercadopago::Engine => "/", :as => :catarse_mercadopago
   mount CatarseLbmGiftCards::Engine => "/", :as => :catarse_lbm_gift_cards
   # mount CatarsePayroll::Engine => "/", :as => :catarse_payroll
-
+  
+  post '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
+  get '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
+  get 'mercadopago/success', to: 'mercadopago#success', as: :mercadopago_success
+  get 'mercadopago/failure', to: 'mercadopago#failure', as: :mercadopago_failure
+  
   # Non production routes
   if Rails.env.development?
     resources :emails, only: [ :index ]
   end
 
   # Channels
-  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
+  constraints subdomain: /^(?!lbm-cesvald|www|secure|test|local)(\w+)/ do
     namespace :channels, path: '' do
       namespace :adm do
         resources :projects, only: [ :index, :update] do
@@ -52,10 +59,6 @@ Catarse::Application.routes.draw do
     end
   end
 
-  # Static Pages
-  get '/sitemap',               to: 'static#sitemap',             as: :sitemap
-  get "/about",                 to: "static#about",               as: :about
-
   match "/credits" => "credits#index", as: :credits
 
   match "/reward/:id" => "rewards#show", as: :reward
@@ -67,12 +70,18 @@ Catarse::Application.routes.draw do
 
   match "/explore" => "explore#index", as: :explore
   match "/explore#:quick" => "explore#index", as: :explore_quick
-
+  
+  # Static Pages
+  get '/sitemap',               to: 'static#sitemap',             as: :sitemap
+  get "/about",                 to: "static#about",               as: :about
   get '/guidelines',            to: 'static#guidelines',          as: :guidelines
   get "/guidelines_tips",       to: "static#guidelines_tips",     as: :guidelines_tips
   get "/guidelines_backers",    to: "static#guidelines_backers",  as: :guidelines_backers
   get "/guidelines_start",      to: "static#guidelines_start",    as: :guidelines_start
-
+  get "/guidelines_channels",     to: "static#guidelines_channel",   as: :guidelines_channels
+  get "/tools",                 to: "static#tools",               as: :tools
+  
+  
   resources :projects do
     resources :updates, only: [ :index, :create, :destroy ]
     resources :pictures, only: [ :index, :create, :destroy ]
@@ -102,7 +111,9 @@ Catarse::Application.routes.draw do
   resources :users, except: [:index, :new, :create, :edit, :destroy] do
     collection do
       get :uservoice_gadget
+      get :contact_and_support
       post :authenticate_user
+      get :change_user
     end
     resources :backers, only: [:index] do
       member do

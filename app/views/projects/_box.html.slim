@@ -1,48 +1,36 @@
-.project[itemscope itemtype="http://schema.org/CreativeWork" class=(custom_class if defined?(custom_class))]
+.project[class=("belongs-channel" if project.channels.present?)]
   meta[itemprop="dateCreated" content=project.created_at.to_date]
-  - if project.expired?
-    .status_image
-      = link_to project_by_slug_path(permalink: project.permalink), target: ( defined?(embed_link) ? '__blank' : '' ) do
-        - if project.successful?
-          = image_tag "successful.#{I18n.locale}.png"
-        - elsif project.waiting_funds?
-          = image_tag "waiting_confirmation.#{I18n.locale}.png"
-        - else
-          = image_tag "not_successful.#{I18n.locale}.png"
   .box
-    p.black_box= project.category
-    .cover
-      = link_to project, target: ( defined?(embed_link) ? '__blank' : '' ) do
+    = link_to project, class: 'link' do
+      .cover
         = image_tag project.display_image, itemprop: 'image'
+        - if project.expired? && !project.waiting_funds?
+          = image_tag "lbm/mark_#{project.state}_#{I18n.locale}.png", class: "mark"
     .project_content
-      h4= link_to project, target: ( defined?(embed_link) ? '__blank' : '' ), itemprop: 'url' do
-        span[itemprop="name"]= project.name
-      p.author
-        = t('.by')
+      .project_title
+        h4= project.name
+      .project_info
+        p.author
+          = t('.by')
+          |&nbsp;
+          span[itemprop="author"]= project.user.name
+        p.description[itemprop="description"]= "\"#{truncate(project.headline, length: 140)}\""
+        .status_bar
+          .progress style="width: #{project.display_progress}%;"
         |&nbsp;
-        span[itemprop="author"]= project.user.name
-      p.description[itemprop="description"]= truncate(project.headline, length: 140)
-      p.where[itemprop="contentLocation"]
-        - unless project.user.address_city.blank?
-          = project.user.address_city
-          - unless project.user.address_state.blank?
-            | /
-            = project.user.address_state
-    .info_bar
-      .status_bar
-        .progress style="width: #{project.display_progress}%;"
-      ul
-        li
+        span.progress_percent ="#{project.progress}%"
+      .project_status
+        .category_wrapper
+          = embedded_svg "lbm/#{project.category.icon_text}.svg"
+          p.project_category = project.category
+        .pledged_wrapper
+          span= "#{project.display_pledged}"
+          p= "#{t('projects.project.backed')}"
+        .time_wrapper
           - if project.in_time?
-            h6= "#{project.time_to_go[:time]} #{project.time_to_go[:unit]}"
-            p= "#{project.remaining_text}"
+            = image_tag "lbm/clock.png"
+            span.time_number= "#{project.time_to_go[:time]}"
+            p.time_text= "#{project.time_to_go[:unit].capitalize} #{project.remaining_text}"
           - else
             h6= I18n.t("project.display_status.#{project.display_status}").capitalize
             p= project.display_expires_at
-        li
-          h6= "#{project.display_pledged}"
-          p= "#{t('projects.project.backed')}"
-
-        li
-          h6= "#{project.progress}%"
-          p= "#{t('projects.project.reached')}"

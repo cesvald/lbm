@@ -8,7 +8,7 @@
             p= f.input :uploaded_image, as: :file, label: t('.submit_text')
           = f.actions do
             .bootstrap-twitter
-              p= f.action :submit, button_html: {value: t('.submit'), class: 'btn', id: 'image_upload_btn'}
+              p= f.action :submit, button_html: {value: t('.submit'), class: 'btn lbm-button', id: 'image_upload_btn'}
     li
       #gravatar_hint.alert.alert-info
         = link_to 'http://gravatar.com/', target: :_blank do
@@ -28,36 +28,36 @@
       .bootstrap-form
         = semantic_form_for @user, html: {method: :put, id: 'user_form'}  do |f|
           .profile
-            = f.input :id, as: :string, input_html: { disabled:  'disabled'}
-            = f.input :full_name, required: true, as: :string
-            = f.input :cpf, as: :string, input_html: {autocomplete: 'off'}
-            = f.input :state_inscription, as: :string
-            = f.input :name, required: false, as: :string
-            = f.input :address_street, as: :string
-            = f.input :address_number, as: :string
-            = f.input :address_complement, required: false, as: :string
-            = f.input :address_neighbourhood, as: :string
-            = f.input :address_zip_code, as: :string, input_html: {autocomplete: 'off'}
-            = f.input :address_city, as: :string
-            = f.input :address_state, as: :select, collection: State.array
+            = f.input :id, as: :string, input_html: { disabled:  'disabled', class: "lbm-input"}
+            = f.input :full_name, required: true, as: :string, input_html:{class:"lbm-input"}
+            = f.input :cpf, as: :string, input_html: {autocomplete: 'off', class: "lbm-input"}
+            = f.input :state_inscription, as: :string, input_html:{class:"lbm-input"}
+            = f.input :name, required: false, as: :string, input_html:{class:"lbm-input"}
+            = f.input :address_street, as: :string, input_html:{class:"lbm-input"}
+            = f.input :address_number, as: :string, input_html:{class:"lbm-input"}
+            = f.input :address_complement, required: false, as: :string, input_html:{class:"lbm-input"}
+            = f.input :address_neighbourhood, as: :string, input_html:{class:"lbm-input"}
+            = f.input :address_zip_code, as: :string, input_html: {autocomplete: 'off', class: "lbm-input"}
+            = f.input :address_city, as: :string, input_html:{class:"lbm-input"}
+            = f.input :address_state, as: :select, collection: State.array, input_html:{class:"lbm-select"}
           .socialmidia
             .div
               = f.label :twitter, t('.twitter')
-              = f.text_field :twitter
+              = f.text_field :twitter, class:"lbm-input"
             .div
               = f.label :facebook_link, t('.facebook_link')
-              = f.text_field :facebook_link
+              = f.text_field :facebook_link, class:"lbm-input"
             .div
               = f.label :other_link, t('.other_link')
-              = f.text_field :other_link
-            = f.input :moip_login
-            = f.input :phone_number, required: false, as: :string
-            = f.input :email, as: :string
+              = f.text_field :other_link, class:"lbm-input"
+            /= f.input :moip_login, input_html:{class:"lbm-input"}
+            = f.input :phone_number, required: false, as: :string, input_html:{class:"lbm-input"}
+            = f.input :email, as: :string, input_html:{class:"lbm-input"}
             = hidden_field_tag 'id', @user.id
-            = f.input :newsletter, as: :boolean, label: t('.newsletter')
-            = f.input :bio, hint: t('.bio_limit'), as: :text, input_html: { rows: 5, cols: 20, maxlength: 140  }
+            = f.input :newsletter, as: :boolean, label: t('.newsletter'), input_html:{class:"lbm-input"}
+            = f.input :bio, hint: t('.bio_limit'), as: :text, input_html: { rows: 5, cols: 20, maxlength: 140, class:"lbm-textarea"  }
           .bootstrap-twitter
-            p= f.submit t('.update_social_info'), class: 'btn', id: "user_submit"
+            p= f.submit t('.update_social_info'), class: 'lbm-button'
 #change_password
   h1= t('.change_password')
   ul
@@ -68,12 +68,12 @@
           br
           .div
             = f.label :current_password
-            = f.password_field :current_password, class:'empty'
+            = f.password_field :current_password, class:'empty', class: "lbm-input"
           .div
             = f.label :password, t('passwords.edit.label_new_password')
-            = f.password_field :password, class:'empty'
+            = f.password_field :password, class:'empty', class: "lbm-input"
           .div
             = f.label :password_confirmation
-            = f.password_field :password_confirmation, class:'empty'
+            = f.password_field :password_confirmation, class:'empty', class: "lbm-input"
           .bootstrap-twitter
-            p= f.submit 'OK', class: 'btn', id: 'password_submit'
+            p= f.submit 'OK', class: 'btn lbm-button', id: 'password_submit'

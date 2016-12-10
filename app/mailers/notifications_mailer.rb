@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class NotificationsMailer < ActionMailer::Base
   def notify(notification)
     @notification = notification

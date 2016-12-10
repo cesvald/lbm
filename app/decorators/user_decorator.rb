@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UserDecorator < Draper::Decorator
   decorates :user
   include Draper::LazyHelpers
@@ -7,7 +8,7 @@ class UserDecorator < Draper::Decorator
   end
 
   def display_image
-    source.uploaded_image.thumb_avatar.url || source.image_url || source.gravatar_url || '/assets/user.png'
+    source.uploaded_image.thumb_avatar.url || source.image_url || '/assets/user.png'
   end
 
   def display_image_html options={width: 119, height: 121}
@@ -28,6 +29,10 @@ class UserDecorator < Draper::Decorator
     number_to_currency source.credits, unit: 'COP', precision: 0, delimiter: '.'
   end
 
+  def display_credits_used
+    number_to_currency source.credits_used, unit: 'COP', precision: 0, delimiter: '.'
+  end
+  
   def display_total_of_backs
     number_to_currency source.backs.confirmed.sum(:value), unit: 'COP', precision: 0, delimiter: '.'
   end

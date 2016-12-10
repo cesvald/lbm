@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- encoding : utf-8 -*-
 unless defined?(I18nViz).nil?
   # determine under which condition the gem should be active (e.g. only in non-production environments)
   # I18nViz.enabled = !Rails.env.production?

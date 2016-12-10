@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Channel < ActiveRecord::Base
   extend CatarseAutoHtml
 
@@ -18,8 +19,14 @@ class Channel < ActiveRecord::Base
   belongs_to :matchfunding_user, class_name: :User
 
   scope :home_page, ->() { where("home_page").order('random()') }
+  scope :not_receive_projects, -> { where(receive_projects: false) }
+  scope :visible, -> { where(visible: true) }
+  scope :other_channels, ->(exclude_ids){
+    not_receive_projects.where("coalesce(id NOT IN (?), true)", exclude_ids).order('random()')
+  }
 
-  delegate :all, to: :decorator
+
+  delegate :display_pledged_total, :display_video_thumbnail, :display_video_embed_url,  to: :decorator
 
   catarse_auto_html_for field: :how_it_works, video_width: 600, video_height: 403
   catarse_auto_html_for field: :legend, video_width: 600, video_height: 403
@@ -36,6 +43,14 @@ class Channel < ActiveRecord::Base
     self.backers.confirmed.matchfunding.where(matchfunding_channel_id: self.id).sum(:value)
   end
 
+  def pledged_total
+    self.backers.confirmed.sum(:value)
+  end
+
+  def projects_total
+    self.projects.count
+  end
+
   def group_channels
     return unless self.group_subdomains.present?
     subdomains = self.group_subdomains.split(',').map &:strip
@@ -44,5 +59,9 @@ class Channel < ActiveRecord::Base
 
   def parent_channel
     Channel.where("group_subdomains LIKE ?", "%#{self.permalink}%").first
+  end
+
+  def video
+    @video ||= VideoInfo.get(self.video_url) if self.video_url.present?
   end
 end

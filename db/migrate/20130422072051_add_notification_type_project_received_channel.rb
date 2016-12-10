@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddNotificationTypeProjectReceivedChannel < ActiveRecord::Migration
   def up
     execute "

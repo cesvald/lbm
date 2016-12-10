@@ -1,6 +1,4 @@
-# coding: utf-8
-
-
+#encoding : utf-8
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
@@ -22,7 +20,7 @@ class User < ActiveRecord::Base
   end
 
   delegate  :display_name, :display_image, :short_name, :display_image_html,
-    :medium_name, :display_credits, :display_total_of_backs,
+    :medium_name, :display_credits, :display_credits_used, :display_total_of_backs,
     to: :decorator
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email,
@@ -112,11 +110,13 @@ class User < ActiveRecord::Base
   scope :by_name, ->(name){ where('users.name ~* ?', name) }
   scope :by_id, ->(id){ where(id: id) }
   scope :by_key, ->(key){ where('EXISTS(SELECT true FROM backers WHERE backers.user_id = users.id AND backers.key ~* ?)', key) }
-  scope :has_credits, joins(:user_total).where('user_totals.credits > 0')
+  scope :has_credits, joins(:user_total).where('user_totals.credits_used > 0')
   scope :order_by, ->(sort_field){ order(sort_field) }
 
   def name
-    read_attribute(:name).force_encoding(Encoding::UTF_8)
+    if not read_attribute(:name).nil?
+      read_attribute(:name).force_encoding(Encoding::UTF_8)
+    end
   end
   
   def self.backer_totals
@@ -127,7 +127,8 @@ class User < ActiveRecord::Base
         count(DISTINCT user_id) as users,
         count(*) as backers,
         sum(user_totals.sum) as backed,
-        sum(user_totals.credits) as credits').
+        sum(user_totals.credits) as credits,
+        sum(user_totals.credits_used) as credits_used').
       to_sql
     ).reduce({}){|memo,el| memo.merge({ el[0].to_sym => BigDecimal.new(el[1] || '0') }) }
   end
@@ -159,7 +160,11 @@ class User < ActiveRecord::Base
   def credits
     user_total ? user_total.credits : 0.0
   end
-
+  
+  def credits_used
+    user_total ? user_total.credits_used : 0.0
+  end
+  
   def total_backed_projects
     user_total ? user_total.total_backed_projects : 0
   end

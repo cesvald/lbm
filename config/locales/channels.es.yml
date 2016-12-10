@@ -1,7 +1,13 @@
 es:
+  channel:
+    pledged: Recaudado
+    projects: Campañas
+    explore_projects: "Explora Proyectos"
+    explore_subchannels: "Explora Subcanales"
+    other_subchannels: "Otros Subcanales"
   channels_subscribers:
     created: "Ahora estas siguiendo el canal"
-    deleted: "Yo no estas siguiendo este canal"
+    deleted: "Ya no estas siguiendo este canal"
   channels:
     send_your_project: "Envía tu proyecto"
     send_a_email: "Enviar un email"
@@ -10,7 +16,7 @@ es:
     unfollow: "Dejar de seguir"
     subscribed: "%{count} siguiendo el canal"
     curator: Curador
-    back_home: "Volver al Home"
+    back_home: "Regresar al Home"
     adm:
       menu: "Moderación de Canal"
     projects:
@@ -24,8 +30,8 @@ es:
       pledged_html: "<span>%{value}</span> financiado"
       new:
         title: "Súper! Envía tu proyecto al canal"
-        subtitle: "Es la hora de hacerlo realidad! Queremos saber del potencial de tu empresa y de tu proyecto"
-        legend_html: "<br/><br/><strong>Recuerda</strong><br/>Si estás diligenciando esta información, estás en el PASO 3. Por lo tanto, ya debes haber superado el Paso 1 (leer la descripción del concurso) y el Paso 2 (diligenciar el formato de Google Drive “Aplicación Impact Hub Fellowship en biocomercio”).<br/><br/>Después de llenar este formato tendrás acceso a un borrador de la página del proyecto donde podrás agregar las recompensas para tus colaboradores y hacer todos los ajustes que creas necesarios.<br/><br/>Recibirás comentarios del equipo de curadores para mejorar tu proyecto y ni bien esté listo, éste irá al aire. "
+        subtitle: "¡Es hora de hacerlo realidad! Queremos saber del potencial de tu proyecto."
+        legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
         permalink_hint: "Usa una URL simple. Tus colaboradores deben recordar esta dirección fácilmente para compartir tu proyecto."
         permalink_important: "Usa una palabra que represente tu proyecto para que podamos crear tu URL."
         important_html: "Ten en cuenta que el descuento total será de aproximadamente el 14% sobre el valor recogido, si logras completar el monto solicitado. Divide tu presupuesto final por 0.8492 para hallar el monto total que vas a solicitar."
@@ -44,7 +50,7 @@ es:
         links_hint: "Déjanos todos los enlaces que tienes, así podemos saber más sobre ti y tu proyecto. No tiene que ser algo formal o elegante, sólo unos enlaces útiles."
         category: Categoría
         tags_hint: "Antes de enviar tu proyecto, explora e inspírate con otros que han pasado por el sitio."
-        tags_important: "Dale un vistazo a otros proyectos de tu categoría  <a href='%{href}' target='_blank'>Aquí</a>!."
+        tags_important: "Dale un vistazo a otros proyectos de tu categoría <a href='%{href}' target='_blank'>Aquí</a>!."
         video: "¿Ya tienes un video? envía la URL!"
         video_hint: "El vídeo es lo más importante del proyecto. Si no tienes uno aún, no es necesario que lo envíes ya ... Pero ve pensando como vas a hacer uno muy bueno!"
         video_important: "Pega aquí la URL de tu video de Vimeo o Youtube!"
@@ -53,7 +59,7 @@ es:
         first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."
         online_days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
         headline_important: "Se trata de una breve descripción del proyecto, 140 caracteres como máximo!"
-        name_important: "No excedas los 50 caracteres"
+        name_important: "No excedas los 50 caracteres"
         social: "Red de financiamiento"
         facebook_hint: "http://facebook.com/__________"
         twitter_hint: "http:// twitter.com/____________"

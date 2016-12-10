@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- encoding : utf-8 -*-
 require 'state_machine'
 class Backer < ActiveRecord::Base
   include ActionView::Helpers::NumberHelper
@@ -110,6 +110,10 @@ class Backer < ActiveRecord::Base
   def refund_deadline
     created_at + 180.days
   end
+  
+  def available_deadline
+    created_at + 120.days
+  end
 
   def change_reward! reward
     self.reward_id = reward
@@ -118,6 +122,10 @@ class Backer < ActiveRecord::Base
 
   def can_refund?
     confirmed? && project.finished? && !project.successful?
+  end
+  
+  def can_use_credits?
+    confirmed? && (not credits?) && project.finished? && !project.successful? && created_at + 120.days > DateTime.now
   end
 
   def reward_must_be_from_project

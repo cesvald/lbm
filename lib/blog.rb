@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Blog
   class << self
     def fetch_last_posts

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateUsersOauthProviders < ActiveRecord::Migration
   def change
     create_table :users_oauth_providers do |t|

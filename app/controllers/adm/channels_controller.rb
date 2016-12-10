@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::ChannelsController < Adm::BaseController
 
   menu I18n.t("adm.channels.index.menu", locale: :es) => Rails.application.routes.url_helpers.adm_channels_path(locale: :es)

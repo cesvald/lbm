@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::UsersController < Adm::BaseController
   inherit_resources
   menu I18n.t("adm.users.index.menu", locale: :es) => Rails.application.routes.url_helpers.adm_users_path(locale: :es)
@@ -14,7 +15,7 @@ class Adm::UsersController < Adm::BaseController
       end
     end
   end
-
+  
   protected
 
   def set_totals
@@ -23,6 +24,7 @@ class Adm::UsersController < Adm::BaseController
     @total_backs = totals[:backs]
     @total_backed = totals[:backed]
     @total_credits = totals[:credits]
+    @total_credits_used = totals[:credits_used]
   end
 
   def set_title

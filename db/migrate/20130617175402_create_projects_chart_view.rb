@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateProjectsChartView < ActiveRecord::Migration
   def up
     create_view :projects_by_periods, <<-SQL

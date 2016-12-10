@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Reports::BackerReportsForProjectOwnersController < Reports::BaseController
   before_filter :check_if_project_belongs_to_user
 

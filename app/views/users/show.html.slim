@@ -14,28 +14,29 @@
 #page_content
   .container
     #user_profile[data-user="#{@user.to_json}"]
-      .section_header
-        .profile_image
-          = @user.display_image_html
-        .profile_title
-          h1.profile
-              = @user.display_name
-          h4.bio
-              = @user.bio
-      .user_social
-        ul
-          - if can? :manage, @user
-            li.email
-              = mail_to @user.email, "Email", target: '_blank'
-          - if @user.facebook_link
-            li.facebook
-              = link_to t('.user_social.facebook'), @user.facebook_link, target: '_blank'
-          - if @user.twitter
-            li.twitter
-              = link_to t('.user_social.twitter'), @user.twitter_link, target: '_blank'
-          - if @user.other_link
-            li.other
-              = link_to @user.other_link, @user.other_link, target: '_blank'
+      #header-wrapper
+        .section_header
+          .profile_image
+            = @user.display_image_html
+          .profile_title
+            h1.profile
+                = @user.display_name
+            h4.bio
+                = @user.bio
+        .user_social
+          ul
+            - if can? :manage, @user
+              li.email
+                = mail_to @user.email, "Email", target: '_blank'
+            - if @user.facebook_link
+              li.facebook
+                = link_to t('.user_social.facebook'), @user.facebook_link, target: '_blank'
+            - if @user.twitter
+              li.twitter
+                = link_to t('.user_social.twitter'), @user.twitter_link, target: '_blank'
+            - if @user.other_link
+              li.other
+                = link_to @user.other_link, @user.other_link, target: '_blank'
 
       .tab_container
         nav#user_profile_menu
@@ -45,64 +46,65 @@
           - if can? :manage, @user
             = link_to t('.tabs.credits'), '#credits', id: 'credits_link'
             = link_to t('.tabs.settings'), '#settings', id: 'settings_link'
-            = link_to t('.tabs.unsubscribes'), '#unsubscribes', id: 'unsubscribes_link'
+            /= link_to t('.tabs.unsubscribes'), '#unsubscribes', id: 'unsubscribes_link'
       .clearfix
       #user_profile_content
         #user_backed_projects.content
           .certificate_container
             = form_tag certificate_request_user_backers_path(@user), method: :get, id: 'certificate_form' do
-              = submit_tag t('users.backs.certify_request.submit')
+              = submit_tag t('users.backs.certify_request.submit'), class: "lbm-button"
               span= t('users.backs.certify_request.hint')
           #user_backers
         #user_created_projects.content
         - if can? :manage, @user
-          #user_unsubscribes.content.hide
-            = render 'unsubscribes'
-          #user_settings.content.hide
+          /*
+            #user_unsubscribes.content
+              = render 'unsubscribes'
+          #user_settings.content
             = render 'current_user_fields'
-          #user_credits.content.hide
+          #user_credits.content
             .current_credits
-              p= t('credits.index.current_credits_html', credits: @user.display_credits)
-
+              p= t('credits.index.current_credits_html', credits: @user.display_credits, credits_used: @user.display_credits_used)
             .table_title
-              p= I18n.t('credits.index.refunds_title')
+              p= I18n.t('credits.index.credits_use')
+              /p= I18n.t('credits.index.refunds_title')
             .table_content
               table.table.table-striped
                 thead
                   th= t('credits.index.project')
-                  th= t('credits.index.back_date')
+                  th= t('credits.index.project_finished_date')
                   th= t('credits.index.value')
-                  th= t('credits.index.refund_expration_date')
-                  th= t('credits.index.status')
+                  th= t('credits.index.use_expration_date')
                 - @credits.each do |credit|
                   tr[id="back_#{credit.id}"]
                     td.project_name
                       = link_to credit.project.name, credit.project, class: 'link_project'
                     td.date= I18n.l(credit.created_at.to_date)
                     td.value= credit.display_value
-                    td.term= I18n.l(credit.refund_deadline.to_date)
-                    td.status
-                      - if credit.requested_refund?
-                        = t('credits.index.requested_refund')
-                      - elsif credit.refunded?
-                        = t('credits.index.refunded')
-                      - else
-                        - if can? :request_refund, credit
-                          .bootstrap-twitter
-                            div id="requestRefundModal#{credit.id}" class="hide modal"
-                              .modal-header
-                                h3= t('credits.modal.title')
-                              .modal-body
-                                p= t('credits.modal.text')
-                                = link_to t('credits.modal.link'), t('credits.modal.link_url'), target: '_blank'
-                              .modal-footer
-                                button type='button' data-dismiss="modal" class="btn"
-                                  = t('credits.modal.reject_btn')
-                                = link_to request_refund_user_backer_path(@user, credit), class: 'btn' do
-                                  = t('credits.modal.accept_btn')
-                          = link_to t('credits.index.request_refund'), "#requestRefundModal#{credit.id}", data: {toggle: 'modal'}, class: 'link_project'
+                    / td.term= I18n.l(credit.refund_deadline.to_date)
+                    td.term= I18n.l(credit.available_deadline.to_date)
+                    /
+                      td.status
+                        - if credit.overdue?
+                          = t('credits.index.overdue')
+                        - else
+                          = t('credits.index.available')
+                            - if can? :request_refund, credit
+                              .bootstrap-twitter
+                                div id="requestRefundModal#{credit.id}" class="hide modal"
+                                  .modal-header
+                                    h3= t('credits.modal.title')
+                                  .modal-body
+                                    p= t('credits.modal.text')
+                                    = link_to t('credits.modal.link'), t('credits.modal.link_url'), target: '_blank'
+                                  .modal-footer
+                                    button type='button' data-dismiss="modal" class="btn"
+                                      = t('credits.modal.reject_btn')
+                                    = link_to request_refund_user_backer_path(@user, credit), class: 'btn' do
+                                      = t('credits.modal.accept_btn')
+                              = link_to t('credits.index.request_refund'), "#requestRefundModal#{credit.id}", data: {toggle: 'modal'}, class: 'link_project'
             .bootstrap-alert
               .alert.alert-info
-                = t('credits.index.important_html')
+                /= t('credits.index.important_html')
       #loading= image_tag "loading.gif"
     .clearfix

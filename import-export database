@@ -1,0 +1,4 @@
+heroku pg:backups capture
+$ curl -o latest.dump `heroku pg:backups public-url --app littlebigmoney`
+Upload latest.dump to S3 and make it public
+heroku pg:backups restore ''https://s3-us-west-2.amazonaws.com/templbm/latest.dump' DATABASE_URL --app lbmtest

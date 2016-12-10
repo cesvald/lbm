@@ -1,135 +1,179 @@
 [data-namespace="null"][data-controller="projects"][data-action="index"]
-  .channel_banner
-    +grid-container
-    +grid-system(16)
+  .carousel
+    .carousel-indicators
+      li
+        margin-left: 5px
+    .carousel-inner
+      .item
+        img
+          width: 100%
+        .container
+          position: absolute
+          top: 0px
+          left: 0px
+          height: 100%
+          text-align: center
+          &:before
+            content: ''
+            display: inline-block
+            height: 100%
+            vertical-align: middle
+            margin-right: -0.25em
+          .message
+            display: inline-block
+            vertical-align: middle
+            padding: 0 18%
+            h1
+              color: white
+              font-family: 'Futura Std'
+              font-weight: 700
+              font-size: 50px
+              margin-bottom: 45px
+              margin-top: 77px
+            a
+              color: $darkblue
+              font-family: "Futura Std"
+              font-weight: 700
+              font-size: 24px
+              text-decoration: none
+              padding: 10px 15px
+              border-radius: 10px
+              background-color: rgba(255, 255,255, 0.7)
+              transition: all, 0.3s, ease
+              &:hover
+                color: rgba(255, 255,255, 0.7)
+                background-color: $darkblue
+  .paragraph
+    width: 100%
+    text-align: center
+    font-size: 21px
+    font-family: "Futura LT"
+    font-weight: 400
+    margin-top: 20px
+    margin-bottom: 40px
+    .color_carrot
+      color: $carrot
+      font-size: 34px
+    .color_darkblue
+      color: $darkblue
+    .color_oceanblue_letter
+      color: $oceanblue_letter
+      font-size: 33px
+    .link-underline
+      text-decoration: underline
+  .block_container
+    width: 100%
     overflow: hidden
-    padding-top: 40px
-    margin-bottom: 20px
-    .center_content
-      +grid(16)
-    .banner
-      background: $carrot
-      padding: 10px
-      +clearfix
-      img
-        float: left
-        width: 412px
-      iframe
+    margin-top: 20px
+    clear: both
+    padding-bottom: 43px
+    padding-top: 20px
+    &:nth-child(odd)
+      background: url($images_lbm_path+"background_blue.png")
+    .explore_link
+      a
         float: right
-    .text
-      margin-top: 40px
-      h1
-        font-size: 2.2em
-        font-weight: bold
-        margin: 2em 0 0.5em 0
-      h2
-        +grid(14)
-        +grid-prefix(1)
-        +grid-suffix(1)
-        +alpha
-        +omega
-        font-size: 18px
-        line-height: 24px
-        text-transform: uppercase
+        margin-right: 11.5%
+        margin-top: 20px
+        border-radius: 10px
+        border: solid 2px $darkblue
+        padding: 5px 10px
+        color: $darkblue
+        +transition(0.3s, all)
+        &:hover
+          background: $darkblue
+          color: white
+          text-decoration: none
+  .categories_container
+    .categories_title
+      text-align: center
+      font-size: 26px
+      font-family: "Futura Std"
+      font-weight: 200
+      color: $darkblue
+      margin-bottom: 45px
+
+    .categories_wrapper
+      width: 783px
+      margin: 0px auto
+      .category_circle
+        display: inline-block
+        margin-right: 20px
+        margin-top: 10px
+        margin-bottom: 20px
+        border-radius: 50%
+        width: 136.5px
+        height: 136.5px
+        background-color: white
+        position: relative
         text-align: center
-        font-weight: bold
-        color: $mediumlightgray
-        strong
-          color: $mediumgray
-      .donate, .invest
-        +grid(8)
-        text-align: center
-        margin-top: 60px
-        .slogan
-          margin: 40px 0
-          padding: 30px 0
-          background: white
-          text-transform: uppercase
-          font-size: 13px
-          font-weight: bold
-      .donate
-        +alpha
-        .slogan
-          color: $carrot
-      .invest
-        +opacity(0.5)
-        +omega
-        .slogan
-          color: $brightblue
-      span
-        font-size: 1.3em
-        line-height: 1.5
-      .know_more_button
-        display: block
-        padding: .4em 0
-        width: 147px
-        margin-top: 1.8em
-    .picture
-      text-align: right
-      width: 50%
-      float: left
-  
+        transition: .5s background-color
+        &:hover
+          background-color: #49B3E0
+          svg
+            opacity: 0.2
+          .category_name
+            opacity: 1
+        svg
+          width: 85%
+          transition: .5s opacity
+          cursor: pointer
+          fill: $darkblue
+        .category_name
+          width: 80%
+          left: 10%
+          text-align: center
+          margin-top: -77px
+          font-size: 17px
+          font-family: "Futura LT"
+          font-weight: 400
+          color: #163861
+          position: absolute
+          top: 134px
+          opacity: 0
+          transition: .5s opacity
+          cursor: pointer
+  .projects
+    padding-top: 25px
+    text-align: center
+    clear: both
+    overflow: hidden
+
+  .channels
+    margin: 0 auto
+    margin-top: 10px
+    margin-bottom: 45px
+    width: 80%
+    position: relative
+    clear: both
+    text-align: center
+    .swiper-container
+      width: 100%
+      height: 460px
+    #channels-swiper-button-prev
+      margin-left: -50px
+    #channels-swiper-button-next
+      margin-right: -55px
+  .banner-footer-wrapper
+    position: relative
+    .banner_footer
+      width: 100%
+    .lbm-button
+      position: absolute
+      bottom: 15%
+      left: 50%
+      margin-left: -235px
+      width: 470px
+      color: $darkblue
+      background: rgba(255, 255, 255, 0.7)
+      font-size: 28px
+      border: solid 1px rgba(255, 255, 255, 0.7)
+      &:hover
+        color: white
+        background: $darkblue
+        border: solid 1px $darkblue
   #page_content
     .container
-      padding-top: 0
+      padding: 0px
       background: transparent
       border: none
-    .explore_link
-      padding-top: 20px
-      padding-bottom: 30px
-      float: left
-      hr
-        +grid(8)
-        border: none
-        border-bottom: 1px rgba(black, 0.1) solid
-        +omega
-        padding-top: 2px
-      a
-        +grid(4)
-        +omega
-        font-size: 14px
-        color: $carrot
-        text-decoration: none
-        &:hover
-          color: $darkcarrot
-    .clear_link
-      float: left
-      margin-bottom: 60px
-      hr
-        +grid(12)
-        +alpha
-        +omega
-        border: 1px solid transparent
-  .allies, .channels
-    +grid(12)
-    +alpha
-    +omega
-    a
-      display: block
-      +grid(4)
-      +border-radius(4px)
-      background: white
-      text-align: center
-      +opacity(0.8)
-      padding: 20px 0
-      margin-bottom: 20px
-      height: 80px
-      &:hover
-        +opacity(1)
-      &.first
-        +alpha
-      &.last
-        +omega
-      img
-        max-height: 80px
-        max-width: 200px
-  .group_channels
-    .project
-      .channel_image
-        background-color: $lightblue
-        text-align: center
-        a
-          display: block
-          padding: 1em 0
-        img
-          height: 142px

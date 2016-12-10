@@ -101,7 +101,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
               $('#moip_payment').hide();
               $('.tab_container #payment_menu a.enabled:first').trigger('click')
             }
-            $('#payment.hide').show();
+            $('#payment').show();
           }
         }
         else{
@@ -109,7 +109,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
         }
       })
     } else {
-      $('#payment.hide').hide();
+      $('#payment').hide();
       if($('#back_with_credits').length < 1) {
         $('#user_submit').attr('disabled', true)
       }
@@ -139,6 +139,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
     'keyup input[type=text]' : 'everything_ok',
     'click #accept' : 'everything_ok',
     'click #live_in_brazil' : 'showUpAddressForm',
+    'click #anonymous' : 'updateAnonymous',
     'change select' : 'everything_ok',
     'keyup #user_address_zip_code' : 'onZipCodeKeyUp',
   },
@@ -195,6 +196,16 @@ CATARSE.ReviewForm = Backbone.View.extend({
     }
 
     var can_submit_to_moip = true;
+
+    new Swiper ('#allies-swipper', {
+      direction: 'horizontal',
+      loop: false,
+      nextButton: '#allies-swiper-button-next',
+      prevButton: '#allies-swiper-button-prev',
+      slidesPerView: 'auto',
+      slidesPerGroup: 3,
+      spaceBetween: 10,
+    })
   },
 
   updateCurrentBackerInfo: function(callback) {
@@ -212,40 +223,111 @@ CATARSE.ReviewForm = Backbone.View.extend({
       address_state: $('#user_address_state').val(),
       address_phone_number: $('#user_phone_number').val()
     }
-    var is_payment_selected = $('#payment.hide').is(':visible');
+    var is_payment_selected = $('#payment').is(':visible');
     if(!is_payment_selected){
       backer_data.payment_method = "PayULatam";
     }
     $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
       callback(data);
     });
+  },
+
+  updateAnonymous: function(event) {
+    var backer_id = $('input#backer_id').val();
+    var project_id = $('input#project_id').val();
+    var backer_data = {
+      anonymous: $('#anonymous').is(':checked')
+    }
+    $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
+      console.log(data)
+    });
+  },
+
+  showAnonymousWarning: function(){
+    $('#anonymous-warning').show();
+    $('#lbm-dialog-transparency').fadeIn();
   }
 });
 
 CATARSE.BackersCreateView = Backbone.View.extend({
   events:{
-    'click .tab_container #payment_menu a' : 'onPaymentTabClick'
+    'click #gift-card-btn' : 'openGiftCardForm',
+    'click #close-giftcard-form' : 'closeGiftCardForm',
+    'click #catarse_lbm_gift_cards_form #accept_terms' : 'changeSubmitAvailability',
+    'click #close-anonymous-warning': 'closeAnonymousWarning',
+    'click #accept-anonymous-warning' : 'acceptAnonymousWarning',
   },
 
-  onPaymentTabClick: function(e){
-    $('.payments_type').hide();
-    $('.tab_container #payment_menu a').removeClass('selected');
-    e.preventDefault();
-    var reference = $(e.currentTarget).attr('href');
-    var remote_url = $(e.currentTarget).data('target');
-    $(e.currentTarget).addClass('selected');
-    $(reference).fadeIn(300);
-    if($('div', reference).length <= 0) {
+  openGiftCardForm: function(){
+    var remote_url = $('#lbm_gift_cards_payment').data('form');
+    if($('#catarse_lbm_gift_cards_form').size() == 0){
       $.get(remote_url, function(response){
-        $(reference).empty().html(response);
+        $('#giftcard-form').append(response)
+        $('#giftcard-form').show();
+        $('#lbm-dialog-transparency').fadeIn();
       });
+    }
+    else{
+      $('#giftcard-form').show();
+      $('#lbm-dialog-transparency').fadeIn();
+    }
+  },
+
+  closeGiftCardForm: function() {
+    $('#lbm-dialog-transparency').fadeOut(function(){
+      $('#giftcard-form').hide();
+      $('#catarse_lbm_gift_cards_form #accept_terms').removeAttr('checked');
+      $("#catarse_lbm_gift_cards_form input[type=submit]").attr('disabled', 'disabled');
+    });
+  },
+
+  closeAnonymousWarning: function(){
+    $('#lbm-dialog-transparency').fadeOut(function(){
+      $('#anonymous-warning').hide();
+    });
+    $('#anonymous').removeAttr('checked')
+  },
+
+  acceptAnonymousWarning: function(){
+    $('#lbm-dialog-transparency').fadeOut(function(){
+      $('#anonymous-warning').hide();
+    });
+    this.updateAnonymous();
+  },
+
+  updateAnonymous: function(callback) {
+    var backer_id = $('input#backer_id').val();
+    var project_id = $('input#project_id').val();
+    var backer_data = {
+      anonymous: $('#anonymous').is(':checked')
+    }
+    $.post('/projects/'+project_id+'/backers/'+backer_id+'/update_info', {backer: backer_data}, function(data){
+      callback(data);
+    });
+  },
+
+  changeSubmitAvailability: function(event) {
+    submit = $("#catarse_lbm_gift_cards_form input[type=submit]")
+    if ($(event.target).is(':checked')) {
+      submit.attr('disabled', false)
+      submit.removeClass('disabled')
+    } else {
+      submit.attr('disabled', true)
+      submit.addClass('disabled')
     }
   },
 
   initialize: function() {
     $('.payments_type').hide();
     $('.tab_container #payment_menu a').removeClass('selected');
-    this.$('.tab_container #payment_menu a.enabled:first').trigger('click')
+    this.$('.tab_container #payment_menu a.enabled:first').trigger('click');
     this.reviewForm = new CATARSE.ReviewForm();
+    $('.payments_type').each(function(){
+      var remote_url = $(this).data('target');
+      console.log(remote_url)
+      $.get(remote_url, function(response){
+        $('#payment-method-wrapper').append(response);
+      });
+    });
   }
 })

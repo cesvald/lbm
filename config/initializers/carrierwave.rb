@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 CarrierWave.configure do |config|
   if Rails.env.production? and Configuration[:aws_access_key]
     config.fog_credentials = {

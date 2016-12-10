@@ -1,3 +1,5 @@
+# -*- encoding : utf-8 -*-
+
 class ProjectDecorator < Draper::Decorator
   decorates :project
   include Draper::LazyHelpers
@@ -31,6 +33,14 @@ class ProjectDecorator < Draper::Decorator
     else
       image_path("project.png")
     end
+  end
+
+  def display_mark
+    image_tag "lbm/mark_#{source.state}_#{I18n.locale}.png", class: "mark"
+  end
+
+  def display_icon_category
+    embedded_svg "lbm/#{source.category.icon_text}.svg"
   end
 
   def display_video_thumbnail(version = 'project_picture')

@@ -1,0 +1,39 @@
+#all-allies
+  .allies_title
+    = image_tag "lbm/channels_icon.png", class: "icon"
+    h2= t('sections.partners.title').html_safe
+  .allies
+    #allies-swipper.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          a.first href="http://www.culturaemedellin.gov.co/sites/CulturaE/ciudade/Paginas/default.aspx" target="_blank"
+            = image_tag "allies/ciudad_e.png"
+        .swiper-slide
+          a href="http://givetocolombia.org/" target="_blank"
+            = image_tag "allies/give_to_colombia.png"
+        .swiper-slide
+          a.last href="http://www.dps.gov.co/" target="_blank"
+            = image_tag "allies/dps.png"
+        .swiper-slide
+          a.first href="http://www.ccmpc.org.co/Default.aspx" target="_blank"
+            = image_tag "allies/camara_manizales.png"
+        .swiper-slide
+          a href="http://www.globalgiving.org/" target="_blank"
+            = image_tag "allies/global_giving.png"
+        .swiper-slide
+          a.last href="http://www.fordfoundation.org/" target="_blank"
+            = image_tag "allies/ford_foundation.png"
+        .swiper-slide
+          a.first href="http://www.theappdate.com/es/" target="_blank"
+            = image_tag "allies/theappdate.png"
+        .swiper-slide
+          a href="http://bogota.impacthub.net/" target="_blank"
+            = image_tag "allies/impact_hub.png"
+        .swiper-slide
+          a.last href="http://colombia.laspaginasverdes.com/" target="_blank"
+            = image_tag "allies/lpv.png"
+        .swiper-slide
+          a.first href="http://www.emocioncreativa.com/" target="_blank"
+            = image_tag "allies/ec.png"
+    #allies-swiper-button-prev.swiper-button-prev
+    #allies-swiper-button-next.swiper-button-next

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class DropUidAndProviderConstraintOnUsers < ActiveRecord::Migration
   def up
     execute "

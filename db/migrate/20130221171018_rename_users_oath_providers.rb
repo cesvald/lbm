@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RenameUsersOathProviders < ActiveRecord::Migration
   def up
     drop_table :users_oauth_providers

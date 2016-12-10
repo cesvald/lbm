@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddColumnsToProject < ActiveRecord::Migration
   def change
     add_column :projects, :history, :text

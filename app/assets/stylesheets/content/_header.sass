@@ -1,132 +1,202 @@
-#header_wrapper
-  font-family: $headline_font
-  background: white
-  padding: 14px 0
-  text-transform: uppercase
-  box-shadow: 0 10px 30px rgba(#8b8b8b,.3)
+#header_container
   position: fixed
+  top: 0px
+  z-index: 20
   width: 100%
-  top: 0
-  z-index: 400
-  #menu_wrapper
-    position: absolute
-    top: 0
-    right: 0
-    z-index: 10
-    padding: 8px 25px 8px 0
-    height: 12px
-    background: $navy
-    color: white
-    font-size: 12px
-    +decorative-content(before, false)
+  +box-shadow(rgba(black, 0.4) 0px 3px 7px 3px)
+  #header_wrapper
+    font-family: $headline_font
+    background: white
+    width: 100%
+    #menu_wrapper
       position: absolute
-      left: -53px
       top: 0
-      +triangle(top-right, 11px, $navy)
-      border-left-width: 12px
-      z-index: -1
-    +decorative-content(after, false)
-      position: absolute
-      left: -45px
-      top: 0
-      width: 45px
-      height: 28px
+      right: 0
+      z-index: 10
+      padding: 8px 25px 8px 0
+      height: 12px
       background: $navy
-      border-radius: 0 0 0 100%
-      z-index: -1
-    nav.menu
-      float: right
-      .user_name
-        color: darken($lightgray,25%)
-      a
-        color: white
-        font-size: 12px
-        margin: 0 6px
-        text-decoration: none
-        &.my_profile_link
-          margin-right: 0
-          img.profile_picture
-            border: 1px $ultra_gryn
-            +box-shadow(rgba(black, 0.3) 1px 1px 2px)
-            +transition(all, 0.5s)
-            position: relative
-            float: left
-            margin-top: -14px
-            margin-right: 5px
-            &:hover
-              +box-shadow(rgba(black, 0.6) 1px 1px 2px inset)
-          .dropdown_arrow
-            margin-left: 8px
-            top: -2px
-            position: relative
-          .current_user_name
-          .dropdown_arrow
-            position: relative
-            margin-top: 7px
-        &:last-child
-          margin-right: none
-        &:hover
-          text-decoration: underline
-
-#header
-  +grid-container
-  +grid-system(16)
-  display: block
-  .logo
-    +grid(4)
-    +alpha
-    margin-right: 20px
-    height: 73px
-    border: none
-    background: url($images_path+"logo.png") left top no-repeat
-    text-indent: -9999em
-  nav
-    text-align: right
-    a
-      display: inline-block
-      text-decoration: none
-    &.actions
-      +grid(8)
-      margin-top: 34px
-      a
-        color: $warmgray
-        font-size: 13px
-        margin-right: 27px
-        &:last-child
-          margin-right: 0
-        &:hover
-          color: $navy
-        &.explore
-          +icon($icon_donate, $navy)
-        &.invest
-          +icon($icon_invest, $navy)
-        &.submit_project
-          +icon($icon_submit, $navy)
-        &.how_it_works
-          +icon($icon_how_it_works, $navy)
-  .search
-    +grid(4)
-    margin-top: 31px
-    form
-      width: 220px
-      height: 22px
-      +border-radius(8px)
-      border: 1px $minimal_gryn solid
-      // +box-shadow(rgba(black, 0.1) 1px 1px 2px)
-      background: white
-      input[type="text"]
-        border: none
-        width: 190px
-        float: left
-        margin-left: 6px
-        margin-top: 3px
-        &:focus
-          outline: none
-      input[type="submit"]
-        background: url($images_path+"search_submit15x15.png") left top no-repeat
-        width: 15px
-        height: 15px
-        border: none
-        text-indent: -9999em
+      color: white
+      font-size: 12px
+      +decorative-content(before, false)
+        position: absolute
+        left: -53px
+        top: 0
+        +triangle(top-right, 11px, $navy)
+        border-left-width: 12px
+        z-index: -1
+      +decorative-content(after, false)
+        position: absolute
+        left: -45px
+        top: 0
+        width: 45px
+        height: 28px
+        background: $navy
+        border-radius: 0 0 0 100%
+        z-index: -1
+      nav.menu
         float: right
-        margin: 3px 5px 0 0px
+        .user_name
+          color: darken($lightgray,25%)
+        a
+          color: white
+          font-size: 12px
+          margin: 0 6px
+          text-decoration: none
+          &.my_profile_link
+            margin-right: 0
+            img.profile_picture
+              border: 1px $ultra_gryn
+              +box-shadow(rgba(black, 0.3) 1px 1px 2px)
+              +transition(all, 0.3s)
+              position: relative
+              float: left
+              margin-top: -14px
+              margin-right: 5px
+              &:hover
+                +box-shadow(rgba(black, 0.6) 1px 1px 2px inset)
+            .dropdown_arrow
+              margin-left: 8px
+              top: -2px
+              position: relative
+            .current_user_name
+            .dropdown_arrow
+              position: relative
+              margin-top: 7px
+          &:last-child
+            margin-right: none
+          &:hover
+            text-decoration: underline
+
+    #header
+      padding-top: 20px
+      padding-bottom: 13px
+      padding-left: 2%
+      padding-right: 2%
+      .logo
+        width: 138.5px
+        display: inline-block
+        margin-top: 6px
+        position: relative
+        z-index: 5
+        img
+          width: 100%
+          height: 100%
+      nav
+        text-align: right
+        a
+          display: inline-block
+          text-decoration: none
+        &.actions
+          +grid(8)
+          margin-top: 34px
+          a
+            color: $warmgray
+            font-size: 13px
+            margin-right: 27px
+            &:last-child
+              margin-right: 0
+            &:hover
+              color: $navy
+            &.explore
+              +icon($icon_donate, $navy)
+            &.invest
+              +icon($icon_invest, $navy)
+            &.submit_project
+              +icon($icon_submit, $navy)
+            &.how_it_works
+              +icon($icon_how_it_works, $navy)
+      .search
+        +grid(4)
+        margin-top: 31px
+        form
+          width: 220px
+          height: 22px
+          +border-radius(8px)
+          border: 1px $minimal_gryn solid
+          // +box-shadow(rgba(black, 0.1) 1px 1px 2px)
+          background: white
+          input[type="text"]
+            border: none
+            width: 190px
+            float: left
+            margin-left: 6px
+            margin-top: 3px
+            &:focus
+              outline: none
+          input[type="submit"]
+            background: url($images_path+"search_submit15x15.png") left top no-repeat
+            width: 15px
+            height: 15px
+            border: none
+            text-indent: -9999em
+            float: right
+            margin: 3px 5px 0 0px
+    
+  #subheader
+    text-align: center
+    display: inline-block
+    width: 100%
+    position: absolute
+    left: 0px
+    top: 40px
+    margin-left: -8%
+    .image_link
+      display: inline-block
+      margin-left: 20px
+      vertical-align: top
+      text-align: left
+      &:hover
+        .text_link
+          color: $lightblue
+        a
+          svg
+            fill: $lightblue
+            &.svg_darkblue
+              fill: $lightblue
+      &:last-child
+        margin-left: 0px
+      &.donor-link
+        margin-left: -6px
+      a
+        svg
+          height: 41px
+          vertical-align: sub
+          fill: $carrot
+          &.svg_darkblue
+            fill: $darkblue
+          +transition(fill, 0.3s)
+    .text_link
+      display: inline-block
+      font-family: "Futura Std"
+      font-weight: 200
+      font-size: 17px
+      width: 88px
+      margin-left: 10px
+      line-height: 21px
+      color: $carrot
+      +transition(color, 0.3s)
+
+      .font_lt
+        font-family: "Futura LT"
+        font-weight: 400
+    .text_link.text_center
+      text-align: center
+      line-height: 20px
+    .text_link.font_size_19
+      font-size: 19px
+    .text_link.color_darkblue
+      width: 123px
+      color: $darkblue
+      text-align: left
+    .text_link.build-channel-link
+      width: 140px
+      font-size: 17px
+    .text_link.margin-left-3
+      margin-left: 3px
+    .separator
+      height: 41px
+      color: gray
+      display: inline-block
+      border: solid 1px rgba(0, 0, 0, 0.1)
+      margin: 0px 30px

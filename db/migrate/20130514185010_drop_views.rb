@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class DropViews < ActiveRecord::Migration
   def up
     execute "

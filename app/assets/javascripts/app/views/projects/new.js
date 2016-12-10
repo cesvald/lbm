@@ -34,5 +34,13 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
 
     $('#project_permalink').focus()
     $('textarea').maxlength()
+    $('#project_goal').on('input', function(){
+      var amount = this.value
+      var discount = 0
+      if(isNaN(amount)) {discount = 0}
+      else { discount = amount * 0.8492 }
+      var discountText = $('discount_hidden_text').html().find('.value').html(discount)
+      $(this).after()
+    })
   }
 })

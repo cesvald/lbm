@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- encoding : utf-8 -*-
 class ProjectsController < ApplicationController
 
   include ActionView::Helpers::DateHelper
@@ -28,17 +28,27 @@ class ProjectsController < ApplicationController
           @first_project, @second_project, @third_project = collection_projects.all
         end
 
-        project_ids = collection_projects.map{|p| p.id }
-        project_ids << @recommended_projects.last.id if @recommended_projects
+        #project_ids = collection_projects.map{|p| p.id }
+        #project_ids << @recommended_projects.last.id if @recommended_projects
 
-        @projects_near = Project.online.near_of(current_user.address_state).order("random()").limit(3) if current_user
-        @channel = Channel.find_by_permalink("impacthub")
-        @channel_projects = @channel.projects.visible.order("random()").limit(3) if @channel
-        @expiring = Project.expiring_for_home(project_ids)
-        @recent = Project.recent_for_home(project_ids)
-        @successful = Project.successful_for_home(project_ids)
+        #@projects_near = Project.online.near_of(current_user.address_state).order("random()").limit(3) if current_user
+        #@channel = Channel.find_by_permalink("impacthub")
+        #@channel_projects = @channel.projects.visible.order("random()").limit(3) if @channel
+        
+        @expiring = Project.expiring_for_home()
+        @expiring = Project.successful_for_home() if @expiring.empty?
+        @recent = Project.recent_for_home()
+        if @recent.empty?
+          project_ids = @expiring.map{|p| p.id }
+          @recent = Project.successful_for_home_excluding(project_ids)
+        end
+
         @banner_image = ""
         @banner_image = I18n.t("projects.index.banner_image_#{1 + Random.rand(9)}", :default => "") while @banner_image.empty?
+        @categories = Category.with_projects.order("name_#{I18n.locale}").all
+
+        @channels = Channel.visible.order("RANDOM()").all
+        @last_channel = Channel.visible.last
       end
 
       format.json do
@@ -65,7 +75,7 @@ class ProjectsController < ApplicationController
 
   def update
     update! do |success, failure|
-      success.html{ 
+      success.html{
         return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
       }
       success.json{
@@ -95,7 +105,7 @@ class ProjectsController < ApplicationController
 
       show!{
         @title = @project.name
-        @rewards = @project.rewards.includes(:project).rank(:row_order).all
+        @rewards = @project.rewards.order(:minimum_value).includes(:project).rank(:row_order).all
         @backers = @project.backers.confirmed.limit(12).order("confirmed_at DESC").all
         fb_admins_add(@project.user.facebook_id) if @project.user.facebook_id
         #TODO find a way to make accessible_by work here
@@ -106,6 +116,7 @@ class ProjectsController < ApplicationController
         @update = @project.updates.where(id: params[:update_id]).first if params[:update_id].present?
         @channel = Channel.find_by_permalink(request.subdomain) if request.subdomain.present?
         @pictures = @project.pictures
+        @reward = params[:update_reward].present? ? @rewards.find(params[:update_reward]).first : nil
       }
     rescue ActiveRecord::RecordNotFound
       return render_404

@@ -1,154 +1,137 @@
 / Temporaly using channels banner
-  = render partial: 'recommended_header'
-= render partial: 'channels/projects/banner'
+/= render partial: 'recommended_header'
+/ = render partial: 'channels/projects/banner'
 #page_content
   .container
     .main
-      /- if current_user && @projects_near.present?
-        .near_projects.list
-          .list_title
-            .title
-              h2= t('sections.near.title')
-          .projects
-            - @projects_near.each_with_index do |item,i|
-              == render 'project', project: item, custom_class: ((@projects_near.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-          .explore_link
-            hr
-            = link_to t('main.links.near'), explore_path(anchor: :near)
-      .selected_projects.list
-        .list_title
-          .title
-            h2= t('sections.selection.title')
-        .projects
-          = render partial: 'project', locals: {project: @first_project, custom_class: 'first' } if @first_project
-          = render partial: 'project', locals: {project: @second_project } if @second_project
-          = render partial: 'project', locals: {project: @third_project, custom_class: 'last' } if @third_project
-        .explore_link
-          hr
-          = link_to t('main.links.selected'), explore_path(anchor: :recommended)
+      .bootstrap-twitter
+        #banners_carousel.carousel.slide data-ride="carousel" data-interval="10000" data-pause="none"
+          /! Indicators
+          ol.carousel-indicators
+            li.active data-slide-to="0" data-target="#banners_carousel" 
+            li data-slide-to="1" data-target="#banners_carousel" 
+            li data-slide-to="2" data-target="#banners_carousel"
+            li data-slide-to="3" data-target="#banners_carousel"
+            li data-slide-to="4" data-target="#banners_carousel"
+            li data-slide-to="5" data-target="#banners_carousel"
+            
+          /! Wrapper for slides
+          .carousel-inner role="listbox"
+            .item.active
+              = image_tag("lbm/banner_1.jpg")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_1'
+                  = link_to t("projects.index.know_more"), guidelines_channels_path
+            .item
+              = image_tag("lbm/banner_2.jpg")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_2'
+                  = link_to t("projects.index.know_more"), guidelines_path
+                  /= link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
+            .item
+              = image_tag("lbm/banner_3.jpg")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_3'
+                  = link_to t("projects.index.know_more"), new_project_path
+            .item
+              = image_tag("lbm/banner_4.png")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_4'
+                  = link_to t("projects.index.know_more"), explore_path(anchor: :recent)
+            .item
+              = image_tag("lbm/banner_5.png")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_5'
+                  /= link_to t("projects.index.know_more"), root_url(subdomain: @last_channel.permalink)
+                  = link_to t("projects.index.know_more"), guidelines_channels_path
+            .item
+              = image_tag("lbm/banner_6.png")
+              .container
+                .message
+                  h1= t 'projects.index.banner_message_6'
+                  = link_to t("projects.index.know_more"), tools_path
+                  /= link_to t("projects.index.know_more"), 'https://drive.google.com/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view?usp=sharing', target:"_blank"
+          /! Controls
+          a.left.carousel-control data-slide="prev" href="#banners_carousel" role="button" 
+            span.glyphicon.glyphicon-chevron-left aria-hidden="true" 
+            span.sr-only Previous
+          a.right.carousel-control data-slide="next" href="#banners_carousel" role="button" 
+            span.glyphicon.glyphicon-chevron-right aria-hidden="true" 
+            span.sr-only Next
+      .paragraph
+        = t('projects.index.total_successful_projects', successful_number: Project.successful.count + Project.partial_successful.count, link: new_project_path()).html_safe
 
-      / - if @channel && !@channel_projects.empty?
-        .list_title
-          .title
-            h2= @channel.name
-        .projects
-          - @channel_projects.each_with_index do |item,i|
-            == render 'project', project: item, custom_class: ((@channel_projects.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
+      .block_container
+        .title
+          = image_tag "lbm/recent_icon.png", class: "icon"
+          h2= t('sections.recents.title').html_safe
         .explore_link
-          hr
-          = link_to t('main.links.channel_projects', name: @channel.name), root_url(subdomain: @channel.permalink)
-
-      - unless @expiring.empty?
-        .list_title
-          .title
-            h2= t('sections.expiring.title')
-        .projects
-          - @expiring.each_with_index do |item,i|
-            == render 'project', project: item, custom_class: ((@expiring.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-        .explore_link
-          hr
-          = link_to t('main.links.expiring'), explore_path(anchor: :expiring)
-
-      - unless @recent.empty?
-        .list_title
-          .title
-            h2= t('sections.recents.title')
+          - if @recent.first.successful?
+            = link_to t('main.links.view_all'), explore_path()
+          - else
+            = link_to t('main.links.view_all'), explore_path(anchor: :recent)
         .projects
           - @recent.each_with_index do |item,i|
-            == render 'project', project: item, custom_class: ((@recent.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
+            = render 'project', project: item
+      
+      .block_container
+        .title
+          = image_tag "lbm/expiring_icon.png", class: "icon"
+          h2= t('sections.expiring.title').html_safe
         .explore_link
-          hr
-          = link_to t('main.links.recents'), explore_path(anchor: :recent)
-
-      - unless @successful.empty?
-        .successful_projects.list
-          .list_title
-            .title
-              h2= t('sections.successful.title')
-          .projects
-            - @successful.each_with_index do |item,i|
-              == render 'project', project: item, custom_class: ((@successful.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-          .explore_link
-            hr
-            = link_to t('main.links.successful'), explore_path(anchor: :successful)
-
-      / .channels.list
-      /   .list_title
-      /     .title
-      /       h2= t('sections.channels.title')
-      /   .projects
-      /     - Channel.home_page.each do |channel|
-      /       a.first href=root_url(subdomain: channel.permalink) target="_blank"
-      /         = image_tag channel.image
-      /   .clear_link
-      /     hr
-
-      - Channel.home_page.each do |channel|
-        .channel.list
-          .list_title
-            .title
-              h2= channel.name
-          .projects
-            - if channel.group_subdomains.present?
-              - length = channel.group_channels.length
-              - length = 3 if channel.group_channels.length > 3
-              - i = 0
-              - channel.group_channels.each do |grouped_channel|
-                - break if (i+1) > length
-                .group_channels
-                  - random_project = grouped_channel.projects.visible.sample(1).first
-                  - if random_project
-                    == render 'project', project: random_project, custom_class: ((length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-                - i += 1
-            - else
-              - channel_projects = channel.projects.visible.order("random()").limit(3)
-              - channel_projects.each_with_index do |item, i|
-                == render 'project', project: item, custom_class: ((channel_projects.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-          .explore_link
-            hr
-            = link_to t('main.links.channel_projects', name: channel.name), root_url(subdomain: channel.permalink)
-
-      .allies.list
-        .list_title
-          .title
-            h2= t('sections.partners.title')
+          = link_to t('main.links.view_all'), explore_path(anchor: :expiring)
         .projects
-          a.first href="http://www.culturaemedellin.gov.co/sites/CulturaE/ciudade/Paginas/default.aspx" target="_blank"
-            = image_tag "allies/ciudad_e.png"
-          a href="http://givetocolombia.org/" target="_blank"
-            = image_tag "allies/give_to_colombia.png"
-          a.last href="http://www.dps.gov.co/" target="_blank"
-            = image_tag "allies/dps.png"
-          a.first href="http://www.ccmpc.org.co/Default.aspx" target="_blank"
-            = image_tag "allies/camara_manizales.png"
-          a href="http://www.globalgiving.org/" target="_blank"
-            = image_tag "allies/global_giving.png"
-          a.last href="http://www.fordfoundation.org/" target="_blank"
-            = image_tag "allies/ford_foundation.png"
-          a.first href="http://www.theappdate.com/es/" target="_blank"
-            = image_tag "allies/theappdate.png"
-          a href="http://bogota.impacthub.net/" target="_blank"
-            = image_tag "allies/impact_hub.png"
-          a.last href="http://colombia.laspaginasverdes.com/" target="_blank"
-            = image_tag "allies/lpv.png"
-          a.first href="http://www.emocioncreativa.com/" target="_blank"
-            = image_tag "allies/ec.png"
-        .clear_link
-          hr
+          - @expiring.each_with_index do |item,i|
+            = render 'project', project: item
+                
+      .block_container
+        .title
+          = image_tag "lbm/channels_icon.png", class: "icon"
+          h2= t('sections.channels.title').html_safe
+        .channels
+          #channels-swiper.swiper-container
+            .swiper-wrapper
+              - @channels.each do |channel|
+                - if channel.parent_channel.nil?
+                  == render 'channels/channel', channel: channel
+          #channels-swiper-button-prev.swiper-button-prev
+          #channels-swiper-button-next.swiper-button-next
+      
+      - unless @categories.empty?
+        .categories_container.block_container
+          p.categories_title
+            = t('sections.category.title')
+          .categories_wrapper
+            - @categories.each_with_index do |category, index|
+              = link_to explore_path(anchor: category.to_s.parameterize) do
+                .category_circle
+                  = embedded_svg "lbm/#{category.icon_text}.svg"
+                  p.category_name = category
+                  
+      .banner-footer-wrapper
+        = image_tag "lbm/banner_footer_#{I18n.locale}.png", class: "banner_footer"
+        = link_to t("projects.index.know_more_successful_projects"), explore_path(anchor: :successful), class: 'lbm-button'
+        
+      = render 'layouts/allies'
 
-    .sidebar
-      .content
-        .blog
-          h2= t('sidebar.titles.blog')
-          ul.posts
-            - blog_posts.each do |post|
-              li
-                h6
-                  = link_to post.url, target: '__blank' do
-                    = truncate(post.title, length: 80)
-                p.author= "#{t('projects.box.by')} LittleBigMoney"
-                = link_to post.url, target: '_blank', class: 'resume' do
-                  = truncate(strip_tags(post.summary), length: 130)
+    /.sidebar
+    /  .content
+    /    .blog
+    /      h2= t('sidebar.titles.blog')
+    /      ul.posts
+    /        - blog_posts.each do |post|
+    /          li
+    /            h6
+    /              = link_to post.url, target: '__blank' do
+    /                = truncate(post.title, length: 80)
+    /            p.author= "#{t('projects.box.by')} LittleBigMoney"
+    /            = link_to post.url, target: '_blank', class: 'resume' do
+    /              = truncate(strip_tags(post.summary), length: 130)
 
         .twitter
           a class="twitter-timeline" href="https://twitter.com/#{Configuration['twitter_username']}" data-widget-id="407724007530577920"= Configuration['twitter_username']

@@ -93,6 +93,8 @@ en:
         total_backs: Support
         total_users: Users
         total_credits: Credits
+        total_credits_used: "Total credits used"
+        total_available_credits: "Total available credits"
         total_credits_view: "Calculated credits"
         user: User
         value: Value

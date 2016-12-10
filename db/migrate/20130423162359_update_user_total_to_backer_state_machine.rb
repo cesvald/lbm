@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UpdateUserTotalToBackerStateMachine < ActiveRecord::Migration
   def up
     #20130423162359

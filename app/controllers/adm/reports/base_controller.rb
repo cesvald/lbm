@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::Reports::BaseController < Adm::BaseController
   inherit_resources
   responders :csv

@@ -1,5 +1,4 @@
 - project = @notification.project
-
 = t('notifications.new_draft_project.text_html', user_link: link_to(project.user.name, user_url(project.user)), user_mail: mail_to(project.user.email), project_name: project.name, goal: project.display_goal, more_links: simple_format(project.more_links), first_backers: simple_format(project.first_backers), how_know: simple_format(project.how_know), project_url: project_by_slug_url(permalink: project.permalink))
 
 h3= t('formtastic.labels.project.permalink')

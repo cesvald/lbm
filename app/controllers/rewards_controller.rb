@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RewardsController < ApplicationController
   load_and_authorize_resource
   inherit_resources
@@ -25,7 +26,7 @@ class RewardsController < ApplicationController
     create! do |success, failure|
       success.html { flash[:notice] = I18n.t('controllers.rewards.create.notice') }
       failure.html { flash[:alert] = I18n.t('controllers.rewards.create.alert') }
-      return redirect_to project_by_slug_path(permalink: resource.project.permalink)
+      redirect_to project_by_slug_path(permalink: resource.project.permalink)
     end
   end
 

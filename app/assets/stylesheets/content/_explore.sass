@@ -1,82 +1,153 @@
 [data-action="index"][data-controller="explore"]
+  ::-webkit-input-placeholder
+    color: $darkblue
+  :-moz-placeholder
+    color: $darkblue
+  ::-moz-placeholder 
+    color: $darkblue
+  :-ms-input-placeholder
+    color: $darkblue
   #page_content
-    margin-top: 30px
-    .container
-      .sidebar
-        margin-top: 123px
-        .content
-          padding-top: 10px
-        .search
-          margin-bottom: 20px
-          form
-            width: 195px
-            height: 22px
-            +border-radius(8px)
-            border: 1px $minimal_gryn solid
-            // +box-shadow(rgba(black, 0.1) 1px 1px 2px)
-            background: white
-            input[type="text"]
-              border: none
-              width: 165px
-              float: left
+    margin-top: 30px  
+    .sidebar
+      float: right
+      padding-right: 4%
+      width: 24%
+      .content
+        padding-top: 10px
+      .search
+        margin-bottom: 20px
+        border-bottom: solid 2px $df_gryn
+        form
+          svg
+            width: 24px
+            color: $darkblue
+          input[type="text"]
+            &.form-control
+              width: 86%
               margin-left: 6px
-              margin-top: 3px
-              &:focus
-                outline: none
-            input[type="submit"]
-              background: url($images_path+"search_submit15x15.png") left top no-repeat
-              width: 15px
-              height: 15px
-              border: none
-              text-indent: -9999em
-              float: right
-              margin: 3px 5px 0 0px
-        section
-          h2
-            font-size: 13px
-            color: $mediumlightgray
-            margin-bottom: 10px
-            text-transform: uppercase
-            font-weight: 700
+              display: inline-block
+              vertical-align: bottom
+            +border-radius(10px)
+            background-color: rgba(0, 56, 101, 0.45)
+            color: white
+            display: inline-block
+          input[type="submit"]
+            background: url($images_path+"search_submit15x15.png") left top no-repeat
+            width: 15px
+            height: 15px
+            border: none
+            text-indent: -9999em
+            float: right
+            margin: 3px 5px 0 0px
+      section
+        &.highlights
           ul
-            margin-bottom: 20px
             li
-              margin-bottom: 5px
               a
-                color: $mediumlightgray
-                font-size: 14px
-                display: block
-                padding: 6px 10px
-                text-decoration: none
-                +border-radius(5px)
-                &:hover, &.selected
-                  background: rgba($carrot, 0.8)
-                  color: white
-      .main
-        .section_header
-          +grid(16)
-          +alpha
-          display: block
-          height: 105px
-          h1
-            font-weight: 700
-            font-size: 20px
-            padding-bottom: 5px
+                span
+                  line-height: normal
+        h2
+          font-size: 17px
+          font-family: 'Futura Std'
+          font-weight: 700
+          color: $darkblue
+          padding-bottom: 0px
+          padding-left: 34px
+          font-weight: 700
+        ul
+          margin-bottom: 20px
+          border-bottom: solid 2px $df_gryn
+          padding-bottom: 10px
+          &#explore_categories
+            li
+              margin-bottom: -16px
+          li
+            padding-left: 34px
+            &:hover
+              a
+                color: $carrot
+              svg
+                fill: $carrot
+            a
+              color: $darkblue
+              font-size: 17px
+              font-family: 'Futura Std'
+              font-weight: 200
+              display: block
+              padding-left: 0px
+              text-decoration: none
+              +transition(color, 0.3s)
+              &.selected
+                color: $carrot
+                svg
+                  fill: $carrot
+            svg
+              width: 45px
+              fill: $darkblue
+              margin-left: -10px
+              +transition(fill, 0.3s)
             span
-              color: $mediumgray
-          h4
-            font-size: 16px
-            line-height: 20px
+              vertical-align: top
+              line-height: 54px
+
+    .section_header
+      padding-top: 20px
+      padding-bottom: 20px
+      display: block
+      color: $darkblue
+      margin-left: 5%
+      h1
+        font-family: 'Futura Std'
+        font-weight: 700
+        font-size: 17px
+        line-height: 7px
+      h4
+        font-size: 17px
+        line-height: 20px
+        font-family: 'Futura Std'
+        font-weight: 200
+      .replaced_header
+        margin-top: 45px
+    
+    .main-content
+      background: url($images_lbm_path+"background_blue.png")
+      overflow: hidden
+      padding-top: 30px
+      .main
+        width: 76%
+        float: left
         #explore_results
           .results
+            .empty
+              margin-left: 5%
+              font-size: 17px
+              font-family: "Futura Std"
+              font-weight: 400
+              color: $darkblue
             ul.collection_list
-              float: left
+              text-align: center
+              padding-top: 25px
+              clear: both
+              overflow: hidden
               li
-                float: left
-                margin-bottom: 20px
-                &.first
-                  .project
-                    +alpha
-                &.last
-                  .project
-                    +omega
+                margin-right: 2%
+                margin-left: 2%
+                display: inline-block
+                margin-bottom: 14px
+                .project
+                  width: 260px
+                  margin-right: 0px
+                  margin-left: 0px
+                  .project_content
+                    .project_info
+                      .status_bar
+                        width: 87%
+                      .progress_percent
+                        margin-left: 4px
+                    .project_status
+                      .category_wrapper
+                        svg
+                          left: 30px
+                      .pledged_wrapper
+                        margin-top: -10px

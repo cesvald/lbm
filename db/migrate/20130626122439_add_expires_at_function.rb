@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddExpiresAtFunction < ActiveRecord::Migration
   def up
     execute "

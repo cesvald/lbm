@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UpdateBackerReportsToProjectOwnerViewToBackerStateMachine < ActiveRecord::Migration
   def up
     drop_view :backer_reports_for_project_owners

@@ -17,8 +17,9 @@ jQuery(function () {
         ns = ns[name];
       }
     });
-
     if ( ns && controllerName && controllerName !== "" ) {
+      console.log(ns[controllerName])
+      console.log(action)
       if(ns[controllerName] && _.isFunction(ns[controllerName][action])) {
         var view = window.view = new ns[controllerName][action]();
       }
@@ -42,6 +43,7 @@ $.fn.fileuploadDone = function (attrs) {
   this.fileupload({
       dataType: dataType,
       add: function (e, data) {
+        if('callbacks' in attrs && 'add' in attrs.callbacks) attrs.callbacks.add();
         data.context = $('#progress-bar').clone().removeClass('hide');
         attrs.formObject.find('.inline-hints').html(data.context)
         data.submit();

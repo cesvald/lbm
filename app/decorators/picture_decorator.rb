@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PictureDecorator < Draper::Decorator
   delegate_all
 

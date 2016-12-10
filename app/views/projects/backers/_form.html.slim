@@ -1,0 +1,11 @@
+.bootstrap-form
+	= semantic_form_for [@project, reward] do |f|
+	  = f.input :minimum_value, :input_html => { :class => 'lbm-input' }
+	  = f.input :description, :input_html => { :class => 'lbm-textarea' }
+	  = f.input :days_to_delivery, :input_html => { :class => 'lbm-input' }
+	  = f.input :maximum_backers, :input_html => { :class => 'lbm-input' }
+	  - if update
+		  = link_to [@project, reward], method: :delete, id: "delete-reward-btn", class: 'lbm-button' do
+		  	= embedded_svg 'lbm/trash-icon.svg', class:"trash-icon"
+		  	= t('projects.rewards.delete')
+	  = f.submit class: 'lbm-button'

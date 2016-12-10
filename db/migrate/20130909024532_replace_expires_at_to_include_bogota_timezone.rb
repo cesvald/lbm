@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ReplaceExpiresAtToIncludeBogotaTimezone < ActiveRecord::Migration
   def up
     execute "

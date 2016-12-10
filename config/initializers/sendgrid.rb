@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
   if Rails.env.production?
     ActionMailer::Base.smtp_settings = {

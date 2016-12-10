@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveInstitutionalVideos < ActiveRecord::Migration
   def up
     drop_table :institutional_videos

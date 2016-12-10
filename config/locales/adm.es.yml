@@ -93,6 +93,8 @@ es:
         total_backs: Colaboraciones
         total_users: Usuarios
         total_credits: Créditos
+        total_credits_used: "Créditos usados"
+        total_available_credits: "Créditos disponibles"
         total_credits_view: "Créditos calculados"
         user: Usuario
         value: Valor

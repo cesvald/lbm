@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ExploreController < ApplicationController
 
   def index

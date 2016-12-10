@@ -1,10 +1,14 @@
 - if flash[:alert]
-  .alert-box.alert
-    .large-16.large-centered.columns
-      h3= t('failure_title')
-      p= flash[:alert]
+	.alert-box.alert
+		.large-16.large-centered.columns
+			.alert-wrapper
+				= embedded_svg "lbm/header_4.svg", class: "svg_darkblue"
+				h3= t('failure_title')
+			p= flash[:alert]
 - elsif resource.errors.present?
-  .alert-box.alert
-    .large-16.large-centered.columns
-      h3= t('failure_title')
-      p= resource.errors.full_messages.join
+	.alert-box.alert
+		.large-16.large-centered.columns
+			.alert-wrapper
+				= embedded_svg "lbm/header_4.svg", class: "svg_darkblue"
+				h3= t('failure_title')
+			p= resource.errors.full_messages.join

@@ -11,75 +11,87 @@
   #user_profile
     padding-top: 20px
     padding-bottom: 40px
-    float: left
     #user_profile_content
+      width: 1430px
+      position: relative
+      left: 50%
+      margin-left: $less_half_width
       .content
         p.empty
           text-align: center
           font-size: 14px
           width: 100%
-    .section_header
-      +grid(12)
-      +grid-suffix(1)
-      .profile_image
+    #header-wrapper
+      width: $page_width
+      position: relative
+      left: 50%
+      margin-left: $less_half_width
+      .section_header
+        +grid(12)
+        +grid-suffix(1)
+        .profile_image
+          +grid(3)
+          +alpha
+          .avatar_wrapper
+            +box-shadow(rgba(black, 0.4) 2px 2px 2px)
+        .profile_title
+          color: $darkblue
+          font-family: "Futurs Std"
+          font-weight: 200
+          +grid(7)
+          +omega
+          h1
+            font-size: 28px
+            font-weight: 700
+            padding: 4px 0 10px
+          h4
+            font-size: 16px
+            line-height: 140%
+      .user_social
         +grid(3)
-        +alpha
-        .avatar_wrapper
-          +box-shadow(rgba(black, 0.4) 2px 2px 2px)
-      .profile_title
-        +grid(9)
-        +omega
-        h1
-          font-size: 28px
-          font-weight: 700
-          padding: 4px 0 10px
-        h4
-          font-size: 16px
-          line-height: 140%
-    .user_social
-      +grid(3)
-      li
-        font-size: 12px
-        padding: 0 0 5px 25px
-        margin-bottom: 10px
-        +opacity(0.8)
-        a
-          color: $mediumgray
-          +transition(all, 0.5s)
-          text-decoration: none
-          &:hover
-            color: $carrot
-        &.email
-          background: url($images_path+'social_icons.png') left top no-repeat
-        &.facebook
-          padding-top: 2px
-          background: url($images_path+'social_icons.png') left -25px no-repeat
-        &.twitter
-          padding-top: 2px
-          background: url($images_path+'social_icons.png') left -54px no-repeat
+        li
+          font-size: 12px
+          padding: 0 0 5px 25px
+          margin-bottom: 10px
+          +opacity(0.8)
+          a
+            font-family: 'Futura Std'
+            font-weight: 400
+            font-size: 12px
+            color: black
+            text-decoration: none
+            +transition(all, 0.3s)
+            &:hover
+              color: $carrot
+          &.email
+            background: url($images_path+'social_icons.png') left top no-repeat
+          &.facebook
+            padding-top: 2px
+            background: url($images_path+'social_icons.png') left -25px no-repeat
+          &.twitter
+            padding-top: 2px
+            background: url($images_path+'social_icons.png') left -54px no-repeat
     .tab_container
       padding-top: 20px
       margin-bottom:  20px
+      overflow: hidden
+      height: 45px
+      #user_profile_menu
+        width: $page_width
+        position: relative
+        left: 50%
+        margin-left: $less_half_width
     #user_backed_projects
       ul.collection_list
         li
           margin-bottom: 30px
       #certificate_form
         input[type=submit]
-          background: $carrot
-          color: #FFFFFF
-          display: inline-block
-          font-size: 12px
-          height: 49px
-          text-transform: uppercase
-          width: 240px
-          border: 1px solid $darkcarrot
-          +border-radius(15px)
-          margin-bottom: 30px
-          margin-right: 10px
-          font-weight: bold
-          &:hover
-            background: $darkcarrot
+          font-size: 16px
+          padding: 5px 20px
+          margin-bottom: 20px
+        span
+          color: $darkblue
     #user_created_projects
       width: 100%
       float: left
@@ -100,8 +112,9 @@
       .current_credits
         p
           font-size: 24px
+          font-family: 'Futura Std'
           font-weight: 700
-          color: $ultra_gryn
+          color: $darkblue
           padding-bottom: 5px
       #current_credits
         color: $carrot
@@ -109,10 +122,17 @@
         font-size: 20px
         padding-top: 14px
         padding-bottom: 10px
+        p
+          font-family: 'Futura Std'
+          font-weight: 200
+          color: $darkblue
       .table_content
         th
           font-weight: bold
           font-size: 16px
+          font-family: 'Futura Std'
+          font-weight: 700
+          color: $darkblue
         td
           font-size: 14px
           a
@@ -121,6 +141,14 @@
             +transition(all, 0.5s)
             &:hover
               text-decoration: underline
+      .bootstrap-alert
+        .alert.alert-info
+          background: transparent
+          color: $darkblue
+          font-family: 'Futura Std'
+          font-weight: 200
+          border: none
+          font-size: 17px
   #social_info
     margin-top: 20px
   #my_data, #social_info, #my_avatar, #change_password, #my_facebook
@@ -130,9 +158,25 @@
     ul
       padding-top: 20px
       border-bottom: 1px dotted #ccc
+      font-size: 14px
+      font-family: 'Futura Std'
+      font-weight: 200
+      color: $darkblue
       li
         font-size: 15px
         margin-bottom: 15px
+        .facebook_start
+          width: 310px
+          height: 60px
+          color: white
+          font-family: 'Futura Std'
+          font-weight: 700
+          +transition('color', 0.3s)
+          &:hover
+            color: $carrot
+            text-decoration: none
+          &:visited
+            color: white
         .on_the_spot_editing
           color: $carrot
         .hint
@@ -141,26 +185,22 @@
         .disabled
           color: gray
         form
+          label
+            font-family: "Futura LT"
+            font-weight: 400
+            font-size: 17px
+            color: $darkblue
+            text-align: left
+            padding: 0px
+            padding-left: 5px
           .bootstrap-twitter
             .btn
-              background-color: #F5F5F5
-              background-repeat: repeat-x
-              border-color: #CCCCCC #CCCCCC #B3B3B3
-              +border-radius (4px)
-              border-style: solid
-              border-width: 1px
-              color: #333333
-              cursor: pointer
-              display: inline-block
               font-size: 13px
               line-height: 18px
-              margin-bottom: 0
               padding: 4px 10px
-              text-align: center
-              vertical-align: middle
           .div
             float: left
-            width: 230px
+            width: 288px
           .inputs
             margin-bottom: 0px
             float: left
@@ -191,33 +231,33 @@
                 width: 100px
               input#user_name
                 width: 130px
-              input#user_cpf, input#user_state_inscription
-                width: 120px
+              input#user_state_inscription
+                width: 150px
+              input#user_cpf
+                width: 141px
               input#user_address_street
                 width: 450px
               input#user_full_name
                 width: 320px
             li#user_address_complement_input, li#user_address_state_input
-              margin-right: 0px
-          #user_submit
-            background: $carrot
-            color: #FFFFFF
-            display: block
-            font-size: 12px
-            height: 49px
-            text-transform: uppercase
-            width: 240px
-            border: 1px solid $darkcarrot
-            +border-radius(15px)
-            margin-bottom: 30px
+              margin-right: 20px
+          .lbm-button
+            padding: 15px 30px
+            
           .socialmidia
+            margin-bottom: 20px
+            .div
+              margin-right: 22px
             #user_newsletter_input, #user_email_input, #user_phone_number_input
+              display: inline-block
+              margin: 5px
+              margin-left: 0px
+              margin-right: 22px
+              width: 288px
               #user_newsletter
                 float: left
                 margin-right: 5px
-              display: inline-block
-              margin: 5px
-            margin-bottom: 20px
+            
   #my_avatar
     ul
       padding-bottom: 10px
@@ -265,3 +305,8 @@
         display: block
       .btn
         margin-top: 23px
+      .bootstrap-form
+        .div
+          margin-right: 20px
+          label
+            padding-right: 5px

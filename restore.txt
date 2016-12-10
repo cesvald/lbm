@@ -1,0 +1,3 @@
+remove from profile channel @profile = Channel.first
+Add again https block
+remove default user login in application controler

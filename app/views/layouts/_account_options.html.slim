@@ -1,0 +1,39 @@
+#account_options_container
+  #account_welcome
+    #welcome_message
+      = t('layouts.header.welcome_html', name: truncate(current_user.name, length: 17))
+    #separator
+    #account_options_btn
+      .bootstrap-twitter
+        span.current_user_name= t('layouts.header.account')  
+        span.glyphicon.glyphicon-triangle-bottom
+          /= image_tag('dropdown.png', :class => 'dropdown_arrow')
+  ul#account_options_list
+    = link_to current_user do
+      li= t('layouts.header.profile')
+    = link_to user_path(current_user, anchor: 'credits') do
+      li
+        = t('layouts.user.my_credits')
+        span.small
+          | (#{current_user.display_credits})
+    - if test_environment?
+      = link_to change_user_users_path(email: 'nathalia.santos@fundacioncapital.org') do
+        li
+          |Usar cuenta donante
+      = link_to change_user_users_path(email: 'sonia.agnesod@fundacioncapital.org') do
+        li
+          |Usar cuenta administrador
+      = link_to change_user_users_path(email: '') do
+        li
+          |Usar cuenta no logeado
+      
+    - if current_user.admin?
+      - for menu, path in Adm::BaseController.menu do
+        = link_to path do
+          li= menu
+    - if current_user.trustee?
+      - for menu, path in Channels::Adm::ProjectsController.menu do
+        = link_to path do
+          li.channel_trustee= menu
+    = link_to(destroy_user_session_path, method: :delete) do
+      li= t('layouts.user.logout')

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UpdateOauthProviderNameToLower < ActiveRecord::Migration
   def up
     execute "UPDATE oauth_providers SET name = lower(name);"

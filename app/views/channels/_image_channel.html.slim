@@ -1,0 +1,10 @@
+.swiper-slide.channel-slide
+	.miv-image-channel
+	    - if channel.image
+	        = image_tag channel.image, class: "image", alt: channel.name
+		- elsif channel.banner_top_url.present?
+			= image_tag channel.banner_top_url, class: "image", alt: channel.name
+		- else
+		    = image_tag "project.png", class: "image", alt: channel.name
+		
+		    

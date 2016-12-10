@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PaymentNotificationObserver < ActiveRecord::Observer
   observe :payment_notification
 

@@ -1,7 +1,7 @@
 es:
   devise:
     links:
-      forgot_password: "Olvidé mi contraseña"
+      forgot_password: "¿La olvidaste?"
     confirmations:
       confirmed: "Tu cuenta ha sido confirmada. Has accedido a tu cuenta."
       send_instructions: "Recibirás un email con instrucciones para confirmar tu cuenta en poco minutos."

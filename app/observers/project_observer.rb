@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProjectObserver < ActiveRecord::Observer
   observe :project
 
@@ -15,6 +16,9 @@ class ProjectObserver < ActiveRecord::Observer
   
   def after_create(project)
     if (user = project.new_draft_recipient)
+      puts "The encodings are: "
+      puts user.name.encoding
+      puts project.name.encoding
       Notification.create_notification_once(project.new_draft_project_notification_type,
                                             user,
                                             {project_id: project.id},

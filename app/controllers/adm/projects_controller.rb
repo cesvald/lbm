@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::ProjectsController < Adm::BaseController
   menu I18n.t("adm.projects.index.menu", locale: :es) => Rails.application.routes.url_helpers.adm_projects_path(locale: :es)
 

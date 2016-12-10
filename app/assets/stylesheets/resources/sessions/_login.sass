@@ -1,0 +1,136 @@
+#catarse_bootstrap[data-controller='sessions'], [data-controller="registrations"], [data-controller="passwords"]
+	background-image: none
+	.row
+		text-align: center
+		margin-bottom: 100px
+		padding-top: 50px
+	.title-wrapper
+		margin: 0px 20%
+		text-align: center
+		background-color: $oceanblue
+		+border-radius(10px)
+	.welcome-phrase
+		text-align: center
+		font-family: 'Futura std'
+		font-weight: 200
+		font-size: 23px
+		color: $darkblue
+	.session-container
+		width: 660px
+		position: relative
+		left: 50%
+		margin-left: -330px
+	h2
+		font-size: 30px
+		font-family: 'Futura Std'
+		font-weight: 400
+		color: white
+		padding: 10px
+	.form-container
+		background-image: url($images_lbm_path + 'login_background.png')
+		width: 100%
+		padding: 30px 15%
+		padding-bottom: 60px
+		.text-left
+			text-align: left
+			width: 100%
+			.forgot-password
+				color: $darkblue
+				font-size: 16px
+				font-family: "Futura"
+				font-weight: 400
+				text-align: left
+		.form-control
+			font-size: 20px
+			font-family: 'Futura Std'
+			font-weight: 200
+		.input-wrapper
+			input
+				width: 100%
+				text-align: center
+				background-color: $carrot
+				+border-radius(10px)
+				+box-shadow($carrot 5px 5px 19px 0px)
+				color: white
+				font-size: 30px
+				font-family: 'Futura LT'
+				font-weight: 400
+				padding: 4px
+				border: none
+				margin-top: 20px
+				padding-top: 20px
+				padding-bottom: 20px
+				+transition(all, 0.3s)
+				&:hover
+					color: $carrot
+					background-color: white
+		.rememberme-wrapper
+			margin-top: 20px
+			color: $darkblue
+			font-size: 16px
+			font-family: 'Futura'
+			font-weight: 400
+			label
+				margin-left: 5px
+		.register-link-wrapper
+			width: 100%
+			padding-right: 10%
+			margin-top: 40px
+			text-align: right
+			font-size: 17px
+			font-family: 'Futura Std'
+			font-weight: 200
+			color: $darkblue
+			a
+				color: $oceanblue
+				font-weight: 700
+		.facebook
+			width: 100%
+			background-color: $darkblue
+			padding: 10px 9px
+			text-align: center
+			color: white
+			font-family: 'Futura LT'
+			font-weight: 400
+			font-size: 30px
+			border: solid 1px $darkblue
+			+border-radius(10px)
+			+transition(all, 0.3s)
+			&:hover
+				background-color: white
+				color: $darkblue
+				text-decoration: none
+		.facebook-icon
+			height: 45px
+			margin-right: 7px
+			vertical-align: top
+
+	p.hide-label label
+		display: none
+
+	a.right
+		font-size: .9em
+		color: white
+
+	.separator
+		border-top: 1px solid $darkblue
+		height: 1px
+		margin: 2.1em 0
+		text-align: center
+		p
+			text-align: center
+			background: white
+			color: white
+			width: 30px
+			display: block
+	margin: -11px auto
+	.text-right, .text-left
+		color: $grafiti
+		display: inline-block
+	.button.success
+		margin-top: 1.5em
+	.register_link
+		color: white
+
+	.login-logo
+	margin: 1em 0 .1em 0

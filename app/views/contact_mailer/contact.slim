@@ -1,0 +1,14 @@
+.content style="font-size: 14px"
+	p= t('users.contact_message.mail_body', name: @message[:name])
+	p
+		b= "#{t('activerecord.attributes.user.full_name')}:"
+		= @message[:name]
+	p
+		b= "#{t('activerecord.attributes.user.email')}: "
+		= @message[:email]
+	p
+		b= "#{t('users.contact_message.subject')}: "
+		= @message[:subject]
+	
+		b= "#{t('users.contact_message.message')}: "
+		= @message[:message]

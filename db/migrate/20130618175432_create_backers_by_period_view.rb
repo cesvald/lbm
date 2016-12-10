@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateBackersByPeriodView < ActiveRecord::Migration
   def up
     create_view :backers_by_periods, <<-SQL

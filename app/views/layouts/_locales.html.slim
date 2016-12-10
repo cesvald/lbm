@@ -1,8 +1,14 @@
 - if request.method == "GET"
-  #locales class=("notify" if flash[:locale])
-    ul
-      - I18n.available_locales.map(&:to_s).sort.each do |locale|
-        - next if locale == 'pt'
-        li
-          = link_to params.merge(locale: locale) do
-            = image_tag "locales/#{locale}.png"
+	#locale-container
+	  ul#main-locale
+	  	li
+	  		= image_tag ("lbm/locale-world.png"), class: "locale-world"
+	  		span= t("locale.#{I18n.locale}")
+	  		= image_tag ("lbm/locale-arrow.png"), class: "locale-arrow"
+	  ul#locale-list
+			- I18n.available_locales.map(&:to_s).sort.each do |locale|
+				- if locale != I18n.locale.to_s && locale != 'pt'
+					= link_to params.merge(locale: locale), class: "locale-link" do
+						li.locale-option
+							= image_tag ("lbm/locale-world.png"), class: "locale-world"	
+							= t("locale.#{locale}")

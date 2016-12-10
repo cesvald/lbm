@@ -1,5 +1,5 @@
 #page_content
-  .container style="width: 3500px"
+  .container
     .title
       h1= t('.title')
       h2
@@ -17,58 +17,55 @@
     .filters
       .bootstrap-form
         = form_tag adm_backers_path, method: :get, class: 'form-horizontal' do |f|
-          fieldset style="width: 960px"
+          fieldset
             .input
               = label_tag :by_id, t('.id')
-              = text_field_tag :by_id, params[:by_id], class: 'input-small'
+              = text_field_tag :by_id, params[:by_id], class: 'lbm-input'
             .input
               = label_tag :by_user_id, t('.user_id')
-              = text_field_tag :by_user_id, params[:by_user_id], class: 'input-small'
+              = text_field_tag :by_user_id, params[:by_user_id], class: 'lbm-input'
             .input
               = label_tag :between_values, t('.between_values')
-              = text_field_tag 'between_values[start_at]', (params[:between_values][:start_at] if params[:between_values].present?), class: 'input-small'
+              = text_field_tag 'between_values[start_at]', (params[:between_values][:start_at] if params[:between_values].present?), class: 'lbm-input'
               | &nbsp;
               | &nbsp;
-              = text_field_tag 'between_values[ends_at]', (params[:between_values][:ends_at] if params[:between_values].present?), class: 'input-small'
+              = text_field_tag 'between_values[ends_at]', (params[:between_values][:ends_at] if params[:between_values].present?), class: 'lbm-input'
             .input
               = label_tag :between_created_at, 'Creadas entre'
-              = text_field_tag 'between_created_at[start_at]', (params[:between_created_at][:start_at] if params[:between_created_at].present?), class: 'input-small'
+              = text_field_tag 'between_created_at[start_at]', (params[:between_created_at][:start_at] if params[:between_created_at].present?), class: 'lbm-input'
               | &nbsp;
               | &nbsp;
-              = text_field_tag 'between_created_at[ends_at]', (params[:between_created_at][:ends_at] if params[:between_created_at].present?), class: 'input-small'
+              = text_field_tag 'between_created_at[ends_at]', (params[:between_created_at][:ends_at] if params[:between_created_at].present?), class: 'lbm-input'
             .input
               = label_tag :between_confirmed_at, 'Confirmadas entre'
-              = text_field_tag 'between_confirmed_at[start_at]', (params[:between_confirmed_at][:start_at] if params[:between_confirmed_at].present?), class: 'input-small'
+              = text_field_tag 'between_confirmed_at[start_at]', (params[:between_confirmed_at][:start_at] if params[:between_confirmed_at].present?), class: 'lbm-input'
               | &nbsp;
               | &nbsp;
-              = text_field_tag 'between_confirmed_at[ends_at]', (params[:between_confirmed_at][:ends_at] if params[:between_confirmed_at].present?), class: 'input-small'
+              = text_field_tag 'between_confirmed_at[ends_at]', (params[:between_confirmed_at][:ends_at] if params[:between_confirmed_at].present?), class: 'lbm-input'
             .input
               = label_tag :by_state, t('.by_state')
-              = select_tag :by_state, options_for_select(Backer.state_names, params[:by_state]), include_blank: true
+              = select_tag :by_state, options_for_select(Backer.state_names, params[:by_state]), include_blank: true, class: 'lbm-select'
             .input
               = label_tag :by_payment_method, t('.by_payment_method')
-              = select_tag :by_payment_method, options_for_select(Backer.select("DISTINCT payment_method").map(&:payment_method), params[:by_payment_method]), include_blank: true
+              = select_tag :by_payment_method, options_for_select(Backer.select("DISTINCT payment_method").map(&:payment_method), params[:by_payment_method]), include_blank: true, class: 'lbm-select'
             .input
               = label_tag :by_key, t('.key')
-              = text_field_tag :by_key, params[:by_key]
+              = text_field_tag :by_key, params[:by_key], class: 'lbm-input'
             .input
               = label_tag :user_name_contains, t('.user')
-              = text_field_tag :user_name_contains, params[:user_name_contains]
+              = text_field_tag :user_name_contains, params[:user_name_contains], class: 'lbm-input'
             .input
               = label_tag :project_name_contains, t('.project')
-              = text_field_tag :project_name_contains, params[:project_name_contains]
+              = text_field_tag :project_name_contains, params[:project_name_contains], class: 'lbm-input'
             .input
               = label_tag :by_project_state, t('.project_state')
-              = select_tag :by_project_state, options_for_select(Project.select("DISTINCT state").map(&:state), params[:by_project_state]), include_blank: true
+              = select_tag :by_project_state, options_for_select(Project.select("DISTINCT state").map(&:state), params[:by_project_state]), include_blank: true, class: 'lbm-select'
             .input
               = label_tag :by_channel, t('.channel')
-              = select_tag :by_channel, options_from_collection_for_select(Channel.all, 'id', 'name', params[:by_channel]), include_blank: true
+              = select_tag :by_channel, options_from_collection_for_select(Channel.all, 'id', 'name', params[:by_channel]), include_blank: true, class: 'lbm-select'
             .input
               = label_tag :is_matchfunding, t('.is_matchfunding')
-              = select_tag :is_matchfunding, options_for_select([['', ''],['No', '0'],['Yes', '1']], params[:is_matchfunding])
-            .bootstrap-twitter
-              .input.submit
-                = submit_tag t('.submit'), class: 'btn btn-success'
+              = select_tag :is_matchfunding, options_for_select([['', ''],['No', '0'],['Yes', '1']], params[:is_matchfunding]), class: 'lbm-select'
           fieldset style="width: 960px"
             .input.check
               = check_box_tag :confirmed, :on, params[:confirmed]
@@ -90,11 +87,14 @@
                 = pluralize_without_number collection.count, t('found_singular'), t('found_plural')
                 strong= collection.count
                 = pluralize_without_number(collection.count, t('backer_singular'), t('backer_plural')).downcase
+            .bootstrap-twitter
+              .input.submit
+                = submit_tag t('.submit'), class: 'lbm-button'
       .clearfix
       br
       .bootstrap-twitter.input
         .submit
-          = link_to "Download Excel", adm_backers_path({format: "xlsx"}.merge(params)), class: 'btn btn-success'
+          = link_to "Download Excel", adm_backers_path({format: "xlsx"}.merge(params)), class: 'lbm-button export-btn'
       br
       fieldset style="width: 960px"
         = paginate @backers

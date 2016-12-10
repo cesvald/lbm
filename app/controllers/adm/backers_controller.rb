@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Adm::BackersController < Adm::BaseController
   menu I18n.t("adm.backers.index.menu", locale: :es) => Rails.application.routes.url_helpers.adm_backers_path(locale: :es)
   has_scope :by_id, :by_user_id, :by_key, :user_name_contains, :project_name_contains, :confirmed, :credits, :requested_refund, :refunded,

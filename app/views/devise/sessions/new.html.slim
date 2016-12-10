@@ -1,40 +1,33 @@
 = content_for :title, t('.site_title')
-
-.row
-  .large-2.large-centered.columns
-    .text-center.login-logo= image_tag 'catarse_bootstrap/logo_icon_catarse.png'
-
-.row
-  .large-7.large-centered.columns
-    .login-box
-      h2.text-center= t 'login.welcome'
-      hr
-
-      .large-14.large-centered.columns
-        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+.bootstrap-twitter
+  .container
+    .row
+      .col-xs-12
+        .session-container
+          .title-wrapper
+            h2= t 'login.welcome'
+          p.welcome-phrase= t 'login.welcome_phrase'
           = render 'devise/shared/alert'
-          p
-            = f.label :email
-            = f.text_field :email, class: [:login, :email], required: true
+          .form-container
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              .form-group
+                = f.text_field :email, class: "form-control", required: true, placeholder: t('login.placeholder.email')
+              .form-group
+                = f.password_field :password, class: "form-control", placeholder: t('login.placeholder.password')
+              .text-left
+                = link_to t('devise.links.forgot_password'), new_password_path(resource_name), class: 'forgot-password'
 
-          p
-            = f.label :password
-            = link_to t('devise.links.forgot_password'), new_password_path(resource_name), class: 'right text-right'
-            = f.password_field :password, class: [:login]
-          .text-left
-            = f.check_box :remember_me, checked: true
-            = f.label :remember_me, t('login.remember_me')
-
-          .large-10.columns.large-centered
-            = f.submit t('login.submit'), class: [:button, :success, 'large-16', 'columns']
-
-          .clearfix
-
-      .large-14.columns.large-centered
-        .separator
-          p= t('or')
-        = link_to t('login.submit_facebook'), user_omniauth_authorize_path(provider: :facebook, locale: nil), class: [:button, :facebook, 'large-16', 'columns']
-      .clearfix
-      hr
-        p.text-center.register_link
-          = t 'login.no_account_html', link: link_to(t('login.register'), new_user_registration_path)
+              .input-wrapper
+                = f.submit t('login.submit'), class: [:button, :success]
+              
+              .text-left.rememberme-wrapper
+                = f.check_box :remember_me, checked: true
+                = f.label :remember_me, t('login.remember_me')
+              .register-link-wrapper
+                = t 'login.no_account_html', link: link_to(t('login.register'), new_user_registration_path)
+                
+              .separator
+              
+              = link_to user_omniauth_authorize_path(provider: :facebook, locale: nil), class: [:facebook] do
+                = image_tag ('/assets/lbm/facebook-icon.png'), class: "facebook-icon"
+                = t('login.submit_facebook')

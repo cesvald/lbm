@@ -1,35 +1,35 @@
 #page_content
   .container
     .bootstrap-form
-      = semantic_form_for [:adm, @channel] do |form|
+      = semantic_form_for [:adm, @channel], :html => { :class => "centered_page_width" } do |form|
         = form.inputs do
-          = form.input :permalink, as: :string
-          = form.input :name, as: :string
-          = form.input :description, as: :text, input_html: {style: "height: 100px; width: 99%;"}
-          = form.input :email, as: :string
-          = form.input :twitter, as: :string
-          = form.input :facebook, as: :string
-          = form.input :website, as: :string
-          = form.input :image, as: :string, input_html: {style: "width: 50%;"}
-          = form.input :banner_url, as: :string, input_html: {style: "width: 50%;"}
-          = form.input :banner_top_url, as: :string, input_html: {style: "width: 50%;"}
-          = form.input :banner_bottom_url, as: :string, input_html: {style: "width: 50%;"}
-          = form.input :video_url, as: :string, input_html: {style: "width: 50%;"}
-          = form.input :background_color, as: :string, input_html: {style: "width: 50%;"}
-          = form.input :banner_background_color, as: :string, input_html: {style: "width: 50%;"}
-          = form.input :project_background_color, as: :string, input_html: {style: "width: 50%;"}
-          = form.input :how_it_works, as: :text, input_html: {style: "width: 99%;"}
-          = form.input :legend, as: :text, input_html: {style: "width: 99%;"}
-          = form.input :confirm_backer_email_paragraph, as: :text, input_html: {style: "width: 99%;"}
-          = form.input :matchfunding_factor, as: :string
-          = form.input :matchfunding_user_id, as: :string, input_html: {value: "#{User.where(email: 'littlebigmoney@fundacioncapital.org').first.id}"}
-          = form.input :matchfunding_maximum, as: :string
-          = form.input :matchfunding_maximum_per_project, as: :string
-          = form.input :group_subdomains, as: :string, input_html: {style: "width: 50%;"}
+          = form.input :permalink, as: :string, input_html: {class: "lbm-input"}
+          = form.input :name, as: :string, input_html: {class: "lbm-input"}
+          = form.input :description, as: :text, input_html: {class: "lbm-textarea", style: "height: 100px; width: 99%;"}
+          = form.input :email, as: :string, input_html: {class: "lbm-input"}
+          = form.input :twitter, as: :string, input_html: {class: "lbm-input"}
+          = form.input :facebook, as: :string, input_html: {class: "lbm-input"}
+          = form.input :website, as: :string, input_html: {class: "lbm-input"}
+          = form.input :image, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
+          = form.input :banner_url, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
+          = form.input :banner_top_url, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
+          = form.input :banner_bottom_url, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
+          = form.input :video_url, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
+          = form.input :background_color, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
+          = form.input :banner_background_color, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
+          = form.input :project_background_color, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
+          = form.input :how_it_works, as: :text, input_html: {class: "lbm-textarea", style: "width: 99%;"}
+          = form.input :legend, as: :text, input_html: {class: "lbm-textarea", style: "width: 99%;"}
+          = form.input :confirm_backer_email_paragraph, as: :text, input_html: {class: "lbm-textarea", style: "width: 99%;"}
+          = form.input :matchfunding_factor, as: :string, input_html: {class: "lbm-input"}
+          = form.input :matchfunding_user_id, as: :string, input_html: {class: "lbm-input", value: "#{User.where(email: 'littlebigmoney@fundacioncapital.org').first.id}"}
+          = form.input :matchfunding_maximum, as: :string, input_html: {class: "lbm-input"}
+          = form.input :matchfunding_maximum_per_project, as: :string, input_html: {class: "lbm-input"}
+          = form.input :group_subdomains, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
           = form.input :receive_projects
           = form.input :show_drafts
           = form.input :finish_once_reached_goal
           = form.input :home_page
           .clearfix
           .form-actions.bootstrap-twitter
-            = form.submit class: 'btn'
+            = form.submit class: 'lbm-button'

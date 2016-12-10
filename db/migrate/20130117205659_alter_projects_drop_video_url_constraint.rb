@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AlterProjectsDropVideoUrlConstraint < ActiveRecord::Migration
   def up
     execute "

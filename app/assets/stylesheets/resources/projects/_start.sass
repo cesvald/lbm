@@ -7,48 +7,96 @@
     padding: 10px 10px 10px 36px
     margin-bottom: 30px
   span.add-on
-    margin-top: -2px
-    color: $gryn_almost_ccc
+    color: $darkblue
+    border: none
+    background: none
+    font-family: 'Futura Std'
+    font-weight: 200
+    font-size: 16px
   #loading
     display: none
   #page_content
     .container
+      padding: 0px
       .start_content
-        +grid(16)
         padding-top: 15px
+        text-align: center
         .title
-          +grid(16)
-          +alpha
+          width: 100%
           padding-bottom: 40px
-          h1
-            font-size: 24px
-            padding: 0 0 5px 50px
-            margin-top: 20px
-            background: url($images_path+'icon_new.png') left top no-repeat
+          margin-left: 0px
+          #send-project-container
+            margin-top: 40px
+            .col-xs-12
+              padding-left: 30px
+            .send-project-title
+              font-family: 'Futura Std'
+              font-weight: 200
+              font-size: 30px
+              color: $oceanblue
+              display: inline
+              margin: 0px 15px
+          .main-title-wrapper
+            margin-top: 30px
+            h1
+              font-size: 20px
+              font-family: 'Futura Std'
+              font-weight: 700
+              color: $carrot
+              margin-top: 20px
+              display: inline
+              margin-right: 20px
+            img
+              width: 34px
+              vertical-align: bottom
+          .legend-wrapper
+            padding: 20px 0px
+            margin: 0 8%
+            border-bottom: solid 1px $mediumgray
+          .legend-title-wrapper
+            margin-bottom: 20px
+            .legend-title
+              font-family: 'Futura Std'
+              font-weight: 700
+              font-size: 15px
+              color: $darkblue
+              display: inline
+              padding: 0px
+              border: none
+            .legend-icon
+              width: 25.5px
+              vertical-align: bottom
           h2
-            color: $mediumgray
-            font-size: 14px
-            padding-left: 50px
+            color: $darkblue
+            font-size: 17px
+            font-family: 'Futura LT'
+            font-weight: 400
             padding-bottom: 15px
-            border-bottom: 1px dotted #CCCCCC
+          .channel_banner
+            .banner
+              iframe
+                border: solid 1px
           p
-            font-style: italic
-            color: #666666
-            font-size: 16px
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 15px
+            color: $darkblue
             text-align: center
             line-height: 21px
-            padding-top: 20px
-            margin: 0 auto
-            width: 800px
+            
             a
               color: $carrot
               text-decoration: none
-            b
-              float: left
-              margin-top: 10px
-              width: 800px
-            b + i
-              font-size: 13px
+          .legend-text
+            margin: 0 10%
+            p
+              margin: 10px 0px
+            .important
+              color: $carrot
+              a
+                color: $darkblue
+                text-decoration: underline
+
         .bootstrap-alert
           float: right
           position: relative
@@ -59,20 +107,34 @@
             position: absolute
             right: 276px
             top: 17px
+          .alert-icon
+            width: 37.6px
+            position: absolute
+            top: 50%
+            margin-left: -25px
+            margin-top: -16.5px
           .alert
-            float: right
-            min-height: 40px
-            width: 250px
-            background-color: $lightgray
-            border: solid 1px #EDEDED
-            +border-radius (0px)
-            font-size: 13px
+            display: inline-block
+            width: 168px
+            border: solid 2px #e5924f
+            background-color: white
+            font-family: "Futura Std"
+            font-weight: 200
+            font-size: 15px
+            color: #033964
             line-height: 21px
-            color: #666666
-            padding: 10px 10px 10px 40px
+            margin: 0px
+            padding: 10px
+            +border-radius(0px)
+            .important
+              color: $darkblue
+              font-family: 'Futura Std'
+              font-weight: 200
+              font-size: 15px
             a
-              color: $carrot
-              text-decoration: none            
+              color: $darkblue
+              text-decoration: none
+              font-weight: bold
       #project_warning
         .alert
           font-size: 15px
@@ -81,60 +143,121 @@
       .bootstrap-form
         form
           li#project_user_id_input.input
-            border: none        
-          .input 
-            float: left
-            margin-bottom: 30px
-            padding-bottom: 40px
-            width: 600px
-            width: 100%
-            border-bottom: 1px dotted #CCCCCC
-            .input-prepend
+            border: none
+          .input-container
+            overflow: hidden
+            &:nth-child(odd)
+              background: url($images_lbm_path+"background_blue.png")
+              +box-shadow(rgba(black, 0.45) 0px 15px 15px -15px)
+            .input
               float: left
-              width: 42%
-              .inline-hints
-                margin-left: 0px
-            .heart, .date
-              display: block
-              margin-left: 40px
-            .calc, .tag
-              display: block
-              margin-left: 52px
-            .gift
-              display: block
-              margin-left: 59px
-            .video, .social, .link, .logo
-              display: block
-              margin-left: 50px
-            .chanels
-              height: 80px
-            label
-              width: 160px
-              float: left
-              margin-right: 20px
-              font-size: 16px
-              color: $carrot
-              line-height: 21px
+              padding-bottom: 40px
+              width: 80%
+              margin-left: 10%
+              padding: 50px 0px
+              &.control-group.error
+                margin-bottom: 0px
+                padding-bottom: 0px
+
+              .input-prepend
+                display: inline-block
+                width: 452px
+                .inline-hints
+                  font-family: 'Futura Std'
+                  font-weight: 200
+                  font-size: 13px
+                  color: $darkblue
+                  margin-left: 0px
+                  margin-bottom: 0px
+              .heart, .date
+                display: block
+                margin-left: 40px
+              .calc, .tag
+                display: block
+                margin-left: 52px
+              .gift
+                display: block
+                margin-left: 59px
+              .video, .social, .link, .logo
+                display: block
+                margin-left: 50px
+              .chanels
+                height: 80px
+              input
+                background-color: $lightpurple
+                width: auto
+                height: auto
+                font-family: 'Futura Std'
+                font-weight: 200
+                font-size: 17px
+                color: $darkblue
+                border-radius: 10px
+                padding: 6px 10px
+                border: none
+                width: 100%
+                &.permalink
+                  width: 267px
+                &.days-input
+                  width: 100px
+                .inline-hints
+                  width: 100%
+              .input-wrapper
+                width: 452px
+                display: inline-block
+                .input-append
+                  text-align: left
+              label
+                font-family: "Futura LT"
+                font-weight: 400
+                font-size: 17px
+                color: $darkblue
+                width: 220px
+                text-align: left
+                float: left
+                margin-right: 20px
+                line-height: 21px
+                p
+                  font-family: "Futura Std"
+                  font-weight: 200
+                  font-size: 15px
+              select
+                background: $lightpurple
+                font-family: 'Futura Std'
+                font-weight: 200
+                font-size: 17px
+                color: $darkblue
+                width: 100%
+                padding: 0px
           .submit
             .bootstrap-twitter
               width: 100%
               .send
                 position: relative
-                margin: 0 auto
-                width: 240px
+                margin: 10px auto
+                .megaphone-icon
+                  width: 63px
+                  vertical-align: bottom
                 .btn_send
-                  width: 240px
-                  background: $carrot
-                  border: solid 1px $darkcarrot
+                  width: 275px
+                  line-height: 58px
+                  background: $oceanblue
+                  border: solid 1px $oceanblue
+                  font-family: 'Futura LT'
+                  font-weight: 400
+                  font-size: 30px
+                  color: white
                   height: 62px
                   padding: 0px 0px 11px 0px
-                  text-transform: uppercase
-                  color: white
-                  font-weight: 700
-                  font-size: 15px
                   +border-radius(15px)
+                  padding: 0px 10px
+                  margin: 0 30px
+                  +transition(all, 0.3s)
                   &:hover
-                    text-decoration: underline
+                    background-color: white
+                    color: $oceanblue
+                .plain-icon
+                  width: 69.6px
+                  vertical-align: bottom
                 span
                   color: white
                   font-style: italic
@@ -146,26 +269,40 @@
             padding-top: 20px
             padding-bottom: 20px
             text-align: center
+            
             input
               display: inline
+              font-size: 20px
             label
               display: inline
+              font-family: 'Futura Std'
+              font-weight: 200
+              font-size: 17px
+              color: $darkblue
+              margin-left: 5px
               a
                 color: $carrot
-                text-decoration: none
+                text-decoration: underline
+                &:hover
+                  color: $darkcarrot
           label
             font-size: 15px
           textarea
-            width: 400px
-            +border-radius(8px)
+            width: 100%
             height: 180px
+            font-family: 'Futura Std'
+            font-weight: 200
+            font-size: 17px
+            color: $darkblue
+            background-color: $lightpurple
+            border: none
+            padding: 10px
+            +border-radius(10px)
           .inline-hints
+            font-family: 'Futura Std'
+            font-weight: 200
             font-size: 12px
-            line-height: 21px
-            color: #666666
-            padding-bottom: 20px  
-            width: 400px 
-            margin-left: 180px
+            color: $darkblue
             &.much
               margin-left: 0px
             a

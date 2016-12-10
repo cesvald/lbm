@@ -5,19 +5,26 @@
   #nearOfData data-state="#{current_user.address_state}"
 
 #page_content
-  .container
+  .header
+    .section_header
+      .original_title
+        h1= t('.title').upcase
+        h4= t('.subtitle')
+  .main-content
     .main
-      .section_header
-        .original_title
-          h1= t('.title')
-          h4= t('.subtitle')
-
       #explore_results
         .results &nbsp;
         #loading= image_tag "loading.gif"
 
     .sidebar
       .content
+        .bootstrap-twitter
+          .search
+            = form_tag explore_path(:anchor => "search"), :method => 'GET', :class=>'search_input' do
+              .form-group
+                = embedded_svg "lbm/loop.svg"
+                = text_field_tag :search, nil, autocomplete: "off", class: 'form-control', placeholder: t('.search_by_word')
+                /= submit_tag
         - unless @recommended.empty? and @expiring.empty? and @recent.empty? and @successful.empty? and @partial_successful.empty?
           section.highlights
             h2= t('.quick_explore')
@@ -25,27 +32,28 @@
               - unless @recommended.empty?
                 li
                   a href='#recommended'
-                    = t('.recommended')
+                    span= t('.recommended')
               - unless @expiring.empty?
                 li.no_margin
                   a href='#expiring'
-                    = t('.expiring')
+                    span= t('.expiring')
               - unless @recent.empty?
                 li
                   a href='#recent'
-                    = t('.recent')
+                    span= t('.recent')
               - unless @successful.empty?
                 li.no_margin
                   a href='#successful'
-                    = t('.successful')
+                    span= t('.successful')
               - unless @partial_successful.empty?
                 li.no_margin
                   a href='#partial_successful'
-                    = t('.partial_successful')
-              - if current_user
-                li.no_margin
-                  a href="#near"
-                    = t('.near')
+                    span= t('.partial_successful')
+              /*
+                - if current_user
+                  li.no_margin
+                    a href="#near"
+                      span= t('.near')
 
         - unless @categories.empty?
           section.categories
@@ -54,6 +62,7 @@
               - @categories.each_with_index do |category, index|
                 li class="#{(index%2==1 ? 'no_margin':'')}"
                   a href="##{category.to_s.parameterize}" data-id=category.id
-                    = category
+                    = embedded_svg "lbm/#{category.icon_text}.svg"
+                    span =category
 
     .clearfix

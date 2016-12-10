@@ -1,0 +1,11 @@
+.channel
+	= link_to root_url(subdomain: channel.permalink), class: 'link' do
+		.hover-show
+			p= channel.name
+		.video
+			- if channel.video_url.present?
+				= content_tag(:iframe, nil, src: channel.display_video_embed_url)
+			- elsif channel.image.present?
+				= image_tag channel.image, title: channel.name
+			- else
+				= image_tag "project.png", class: "top_image"

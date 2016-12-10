@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   skip_before_filter :set_locale
 

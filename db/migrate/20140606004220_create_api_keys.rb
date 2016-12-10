@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateApiKeys < ActiveRecord::Migration
   def change
     create_table :api_keys do |t|

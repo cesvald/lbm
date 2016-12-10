@@ -1,0 +1,216 @@
+= content_for :title, t('.title')
+#page-content
+    .bootstrap-twitter
+        .page-title-1= t('.page_title_1').html_safe
+        .page-title-2= t('.page_title_2')
+        .subtitle= t('.subtitle')
+        .container
+            .row.content-1
+                .col-xs-6
+                    = image_tag "lbm/create_channel.png", class: "top-image"
+                .col-xs-6.right-side
+                    = image_tag "lbm/lbm-logo.png", class: "container-icon"
+                    .subtitle-what-is= t('.what_is_channel_q')
+                    .text= t('.what_is_channel_a')
+            .row.content-2
+                .col-xs-10.col-xs-offset-1
+                    .row
+                        .col-xs-12
+                            .subtitle-2= t('.subtitle_2')
+                        .row.content-2-1
+                            .col-xs-4
+                                = embedded_svg 'lbm/wallet-icon.svg', class: 'icon'
+                            .col-xs-4
+                                = embedded_svg 'lbm/arrow-top-icon.svg', class: 'icon'
+                            .col-xs-4
+                                = embedded_svg 'lbm/steps-icon.svg', class: 'icon'
+                        .row.content-2-1
+                            .col-xs-4.col
+                                .phrase-1= t('.answer_1_1')
+                            .col-xs-4.col
+                                .phrase-1= t('.answer_2_1')
+                            .col-xs-4.col
+                                .phrase-1= t('.answer_3_1')
+                        .row.content-2-1
+                            .col-xs-4.col
+                                .phrase-2= t('.answer_1_2').html_safe
+                            .col-xs-4.col
+                                .phrase-2= t('.answer_2_2').html_safe
+                            .col-xs-4.col
+                                .phrase-2= t('.answer_3_2').html_safe
+                        .row.content-2-1
+                            .col-xs-4.col
+                                .phrase-3= link_to t('.answer_1_3').html_safe, tools_path
+                            .col-xs-4.col
+                                .phrase-3= link_to t('.answer_2_3').html_safe, tools_path
+                            .col-xs-4.col
+                                .phrase-3= link_to t('.answer_3_3').html_safe, tools_path
+            .row.content-3
+                .col-xs-12
+                    .title
+                        = image_tag "lbm/lbm-logo.png", class: "container-icon"
+                        .text= t('.subtitle_3')
+                .row
+                    .col-xs-10.col-xs-offset-1
+                            .row.content-3-1
+                                .col-xs-4.col
+                                    = embedded_svg "lbm/channel-icon.svg", class: 'icon'
+                                .col-xs-4.col
+                                    = embedded_svg "lbm/assistant-icon.svg", class: 'icon'
+                                .col-xs-4.col
+                                    = embedded_svg "lbm/megaphone-icon.svg", class: 'icon'
+                            .row.content-3-1
+                                .col-xs-4.col
+                                    .phrase-1= t('.answer_4_1')
+                                .col-xs-4.col
+                                    .phrase-1= t('.answer_5_1')
+                                .col-xs-4.col
+                                    .phrase-1= t('.answer_6_1')
+                            .row.content-3-1
+                                .col-xs-4.col
+                                    .phrase-2= t('.answer_4_2')
+                                .col-xs-4.col
+                                    .phrase-2= t('.answer_5_2')
+                                .col-xs-4.col
+                                    .phrase-2= t('.answer_6_2')
+            .row.content-4
+                .col-xs-12
+                    .title
+                        = embedded_svg 'lbm/chat-icon.svg', class: 'icon'
+                        .text= t('.subtitle_6')
+                    .row
+                        .col-xs-10.col-xs-offset-1
+                            .about-us-container
+                                .text-container
+                                    .text= t('.answer_7_1').html_safe
+                                    .sayer
+                                        b
+                                            | (Juan Felipe Yepes, ex Director Centro de Innovación Social, ANSPE)
+                                .text-container
+                                    .text= t('.answer_7_2').html_safe
+                                    .sayer
+                                        b
+                                            | (Gretel Jordan, Comunidades y Cadena de Valor, Fundación Bavaria)
+            .row.content-5          
+                .col-xs-12
+                    .title
+                        /*
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            = embedded_svg 'lbm/sandglass-icon.svg', class: "icon"
+                            .title-text= t('.subtitle_4')
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                            .bullet
+                        = embedded_svg 'lbm/hand-icon-filled.svg', class: "icon"
+                        .title-text= t('.subtitle_4')
+                        = embedded_svg 'lbm/puzzle-icon.svg', class: "icon puzzle-icon"
+                    .row
+                        .col-xs-10.col-xs-offset-1
+                            #channels-swiper.swiper-container
+                                .swiper-wrapper
+                                    .swiper-slide.channel-slide
+                                    	.miv-image-channel
+                                    	        = image_tag "lbm/channel-time-1.jpg", class: "image"
+                                    .swiper-slide.channel-slide
+                                    	.miv-image-channel
+                                    	        = image_tag "lbm/channel-time-2.jpg", class: "image"
+                                    .swiper-slide.channel-slide
+                                    	.miv-image-channel
+                                    	        = image_tag "lbm/channel-time-3.jpg", class: "image"
+                                    .swiper-slide.channel-slide
+                                    	.miv-image-channel
+                                    	        = image_tag "lbm/channel-time-4.jpg", class: "image"
+            .row.content-6
+                .row
+                    .col-xs-10.col-xs-offset-1
+                        .row
+                            .col-xs-3
+                                .history-point
+                                .history-text= t('.history_1').html_safe
+                            .col-xs-3
+                                .history-point
+                                .history-text= t('.history_2').html_safe
+                            .col-xs-3
+                                .history-point
+                                .history-text= t('.history_3').html_safe
+                            .col-xs-3
+                                .history-point
+                                .history-text= t('.history_4').html_safe
+            .row.content-7
+                .col-xs-10.col-xs-offset-1
+                    #images-swiper.swiper-container.image-slider
+                        .swiper-wrapper
+                            .swiper-slide
+                                = image_tag "lbm/channels-gallery-1.jpg", class: "image"
+                            .swiper-slide
+                                = image_tag "lbm/channels-gallery-2.jpg", class: "image"
+                            .swiper-slide
+                                = image_tag "lbm/channels-gallery-3.jpg", class: "image"
+                            .swiper-slide
+                                = image_tag "lbm/channels-gallery-4.jpg", class: "image"
+                    #images-swiper-button-prev.swiper-button-prev
+                    #images-swiper-button-next.swiper-button-next
+            .row.content-8
+                .col-xs-12
+                    .title
+                        .text-title
+                            |Clics por Sueños
+                        = embedded_svg "lbm/clicks-channel-icon.svg", class: 'icon'
+                    .campaign-message
+                        = t('.comment_1').html_safe
+                        = embedded_svg 'lbm/three-hands-icon.svg', class: 'icon'
+            .row.content-9
+                .col-xs-6
+                    iframe width="560" height="315" src="https://www.youtube.com/embed/hW5nQokS3Y8" frameborder="0" allowfullscreen
+                .col-xs-6
+                    p.text= t('.statistics_1').html_safe
+                    p.text= t('.statistics_2').html_safe
+                    p.text= t('.statistics_3').html_safe
+                    p.text= t('.statistics_4').html_safe
+                    p.text= t('.statistics_5').html_safe
+                    p.text= t('.statistics_6').html_safe
+            .row.content-10
+                .col-xs-12
+                    .title= t('.subtitle_5')
+                    .row
+                        = image_tag 'lbm/embajador-2.png', class: "image"
+                        |&nbsp;&nbsp;&nbsp;
+                        = image_tag 'lbm/embajador-1.png', class: "image"
+            .row.content-11
+                .col-xs-12
+                    .title
+                        = embedded_svg 'lbm/channel-icon.svg', class: 'icon'
+                        .text= t('.subtitle_7')
+            .row.content-12
+                .col-xs-12
+                    = t('.subtitle_8').html_safe
+            .row.content-13
+                .col-xs-12
+                    #contact-wrapper
+                        = form_tag contact_and_support_users_path, method: :get do
+        					.row
+        						.col-md-4.col-md-offset-2.col-xs-12
+        							= text_field_tag :name, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.full_name')
+        							= text_field_tag :email, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.email')
+        							= text_field_tag :subject, nil, class: 'lbm-input form-control', placeholder: t('users.contact_message.subject')
+        						.col-md-4.col-xs-12
+        							= text_area_tag :message, nil, class: 'lbm-textarea form-control', placeholder: t('users.contact_message.message')
+        					.row
+        						.col-md-10.submit-wrapper
+        							= submit_tag t('users.contact_message.send_message'), class: 'btn btn-primary'
+                
+        

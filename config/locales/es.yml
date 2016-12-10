@@ -1,11 +1,6 @@
 es:
   failure_title: "Bienvenido a LittleBigMoney"
-  uservoice_gadget:
-    user:
-      name: Usuario
-      location: "Ciudad, Departamento/Provincia"
-      confirmed_backers: "Colaboración confirmada"
-      created_projects: "Creación de proyectos"
+  contact_and_support: "Contacto & Soporte"
   current_update: "Modificación "
   "no": "No"
   "yes": Sí
@@ -17,17 +12,18 @@ es:
     keywords: "littlebigmoney, crowdfunding, project, community, open source, financiación colectiva, donar, ayudar, colaborar, apoyar"
   login:
     forgot_password:
-      welcome: "Restablecer contraseña"
+      welcome: "Restablecer Contraseña"
       label: "Ingresa tu email para cambiar tu contraseña"
       submit: Reestablecer
-    welcome: "Que bueno tenerte de vuelta! :)"
-    submit: Entra
-    register: Regístrate!
-    no_account_html: "¿Aún no tienes cuenta? <strong>%{link}</strong>"
-    remember_me: Recuérdame
-    submit_facebook: "Ingresa usando tu cuenta de Facebook"
+    welcome: "Ingresa a tu cuenta"
+    welcome_phrase: "Pequeños aportes que generan grandes resultados"
+    submit: "Iniciar sesión"
+    register: "Regístrate aquí"
+    no_account_html: "¿Eres nuevo en LittleBigMoney? <strong>%{link}</strong>"
+    remember_me: Recordarme
+    submit_facebook: "Inicia sesión desde facebook"
     placeholder:
-      email: email
+      email: "Correo electrónico"
       password: Contraseña
   backer_report_to_project_owner:
     reward_description: "Descripción de la recompensa"
@@ -90,17 +86,30 @@ es:
       users: Usuarios
       funded_projects: "Proyectos Exitosos"
       active_projects: "Proyectos activos"
+    contact:
+      address_label: Dirección
+      address: "Calle 102 # 45A-36 Bogotá, Colombia"
+      tel_label: Tel
+      tel: "+ 57 1 602 5530"
+      schedule_label: Horario
+      schedule: "L-V de 9:00 am a 6:00 pm"
+      email_label: Correo
+      email: littlebigmoney@fundacioncapital.org
     links:
       how_works: "¿Cómo funciona?"
-      faq: F.A.Q./Ayuda
+      faq: "Preguntas frecuentes/Ayuda"
       about: "¿Quiénes somos?"
-      terms: "Términos de uso"
+      terms: "Concepto legal"
+      terms_of_use: "Términos de uso"
       policy: "Políticas de privacidad"
-      terms_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245482"
-      policy_link: "http://soporte.littlebigmoney.org/knowledgebase/articles/245484"
+      terms_link: "https://drive.google.com/a/fundacioncapital.org/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
+      policy_link: "https://drive.google.com/file/d/0Byoqa61VzXlOdHZoLWloSmM5UHM/view?usp=sharing"
+      terms_of_use_link: "https://drive.google.com/file/d/0Byoqa61VzXlOdFAyQzg1WFo0WHM/view?usp=sharing"
       contact: Contacto
-      twitter: "Síguenos en @%{twitter}"
-      facebook: "Encuéntranos en Facebook"
+      twitter: "<p class='social_follow'>Síguenos en Twitter</p> <p class='social_user'>@%{twitter}</p>"
+      facebook: "<p class='social_follow'>Síguenos en Facebook</p> <p class='social_user'>@littlebigmoney</p>"
+      our_team: "Nuestro Equipo"
+      work_with_us: "Trabaja Con Nosotros"
   main:
     links:
       selected: "Explora proyectos destacados"
@@ -119,21 +128,23 @@ es:
     buttons:
       newsletter: Enviar
   sections:
+    category:
+      title: "Explora nuestros proyectos por Categorías"
     near:
       title: "Proyectos cercanos a ti"
     selection:
       title: "Proyectos destacados"
     expiring:
-      title: "En la recta final"
+      title: "Proyectos en <span class='font_futuraLT_medium'> recta final </span>"
     recents:
-      title: Reciente
+      title: "Proyectos <span class='font_futuraLT_medium'> Recientes </span>"
     successful:
       title: Exitosos
     partners:
-      title: "Con el apoyo de"
+      title: "Con el <p class='allies_text'>apoyo de</p>"
     channels:
-      title: Canales
-  accept_terms_html: "He leído y estoy de acuerdo %{link}."
+      title: "Conoce nuestros <span class='font_futuraLT_medium'> Canales </span>"
+  accept_terms_html: "He leído y estoy de acuerdo con los %{link}."
   activerecord:
     errors:
       models:
@@ -161,7 +172,7 @@ es:
         name: Nombre
         user_id: "Identificación de Usuario"
         video_url: "URL del vídeo"
-        permalink: "URL del proyecto"
+        permalink: "URL de tu proyecto"
         more_links: "¿Dónde podemos conocer más sobre tu proyecto?"
         how_know: "¿Cómo conociste sobre LittleBigMoney?"
       reward:
@@ -252,13 +263,16 @@ es:
       accept_btn: "Sí, deseo solicitar el reembolso de mi colaboración"
     index:
       back_date: "Fecha de apoyo"
-      current_credits_html: "Tu saldo actual es <span id=\"current_credits\">%{credits}</span> en créditos."
+      project_finished_date: "Fecha finalización del proyecto"
+      current_credits_html: "Tu saldo actual es <span id=\"current_credits\">%{credits}</span> en créditos y has utilizado <span id=\"current_credits\">%{credits_used}</span> para donar"
       important_html: "Para saber el reglamento de funcionamiento de reembolso, <a href='http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos' target='_blank'>haz click aquí</a>. Cualquier duda, puedes entrar a  <a href='http://suporte.catarse.me' target='_blank'> Soporte</a>."
       project: Proyecto
       refund_expration_date: "Plazo para reembolso"
+      use_expration_date: "Plazo para uso"
       refunded: "Solicitud de reembolso exitosa. Nuestro equipo se comunicará contigo en los próximos dos días hábiles. "
       insufficient_credits: "No tienes los créditos suficientes para solicitar este reembolso."
       refunds_title: "Pagos que pueden ser reembolsados"
+      credits_use: "Recuerda que al momento de realizar una donación puedes escoger como método de pago utilizar tus créditos"
       request_refund: ¿Reembolso?
       requested_refund: "Reembolso solicitado"
       status: Estado
@@ -305,6 +319,7 @@ es:
       successful: Exitosos
       partial_successful: "Parcialmente exitosos"
       title: "Descubre proyectos increíbles!"
+      search_by_word: "Busca por palabra clave"
     title: "Explora los proyectos"
     project:
       empty: "Oops, no encontramos ningún proyecto con lo que buscas. ¿Qué tal intentar con otras palabras? :)"
@@ -312,7 +327,7 @@ es:
     hints:
       backer:
         credits: "Tienes <strong>%{credits}</strong> en créditos y puedes apoyar hasta este valor sim necesitae realizar un nuevo pago."
-        value: "Tu escoges el valor ;) a partir de 25.000 COP está genial!"
+        value: "Tu escoges el valor a partir de 25.000 COP está genial!"
       project:
         video_url_edit: "Pega aquí la URL de tu video de Vimeo o Youtube."
         about: "Cuéntanos un poco sobre tu historia y lo que será de ella al terminar. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
@@ -329,7 +344,7 @@ es:
         headline: "Resume tu proyecto en 140 caracteres. Esta frase será el primer contacto de las personas con tu proyecto incluso antes de ver el video. Se creativo, transparente y directo :)"
         name: "Sé lo más concreto posible. Deja las explicaciones para el video y la descripción."
         uploaded_image: "Aquí puedes subir una imagen (.jpg) de tamaño 512x400."
-        video_url: "Pega la URL de un video de Vimeo o Youtube. <strong>Realiza tu video lo mejor que puedas y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un proyecto de otro, es el video. Mira ;)"
+        video_url: "Pega la URL de un video de Vimeo o Youtube. <strong>Realiza tu video lo mejor que puedas y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un proyecto de otro, es el video."
         more_links: "¿Qué canales usarás para promocionar la idea de tu proyecto? Puedes Nombralos aquí (facebook/twitter/blog/sitio web) entre más tengas, te puede ayudar más."
         first_backers: "Para que tu campaña tenga éxito, es fundamental que traigas a tus redes de contactos más cercanas. Por eso, cuéntanos quiénes crees que serán tus primeros 20 colaboradores"
       reward:
@@ -348,7 +363,7 @@ es:
       project:
         permalink: "URL del proyecto"
         online_days: "Días online"
-        category: Categoría
+        category: "Categoría de tu proyecto"
         about: "¿Quién eres, que haces y cual tu experiencia en el negocio?"
         history: "¿Cuál es la historia de tu emprendimiento?"
         cause: "¿Cuál es la causa que mueve tu proyecto? ¿Cuál es el problema que busca resolver?"
@@ -357,9 +372,9 @@ es:
         budget: "¿Cómo gastarás el dinero que necesitas para tu proyecto?"
         implementation: "¿Cuánto tiempo necesitas para implementar tu proyecto?"
         expires_at: "¿Cuál es la fecha límite para alcanzar tu meta?"
-        goal: "¿Cuánto esperas reunir? (usa solo números)"
+        goal: "¿Cuánto esperas reunir? <p>(usa solo números)</p>"
         name: "Nombre de tu proyecto"
-        video_url: Video
+        video_url: "Link de tu Video"
         headline: "Frase de motivación"
         uploaded_image: "thumbnail del proyecto"
         picture: "Imágenes del proyecto"
@@ -367,7 +382,8 @@ es:
         rut_file: RUT
         comercial_file: "Cámara de Comercio"
         bank_certificate_file: "Certificación Bancaria"
-        banking_data_file: "Formato de datos bancarios"
+        banking_data_file: "Información Bancaria"
+        banking_format_file: "Formato Bancario"
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
@@ -390,18 +406,18 @@ es:
       blog: LittleBig-Blog
       help: Ayuda
       faq: FAQ
-      signup: Registro
-      signin: Ingreso
-      explore: Explora
+      signup: Regístrate
+      signin: Ingresa
+      explore: Explore
       invest: "Inversión (Próximamente)"
       submit_project: Envía
       how_it_works: "Cómo funciona"
-      welcome_html: "Bienvenido <span class='user_name'>%{name}</span>"
+      welcome_html: "Bienvenid@ <span class='user_name'>%{name}</span>"
       profile: "Mi perfil"
-      account: "Mi cuenta"
+      account: "Tu cuenta"
     user:
-      logout: Salir
-      my_credits: "Mis créditos"
+      logout: "Cerrar Sesión"
+      my_credits: "Mis créditos "
   not_informed: "No informado"
   notify_locale: "Identificamos tu idioma por el buscador. Si prefieres otro por favor, haz clic en la bandera que prefieres."
   on_the_spot:
@@ -425,7 +441,7 @@ es:
   project:
     start:
       email_subject: "Tu proyecto ha sido recibido por el equipo LittleBigMoney"
-      email_text: "Muchas gracias por confiar en LittleBigMoney y enviarnos tu proyecto :) <br><br>Antes que nada, queríamos recordarte como funcionan los pasos de selección de los proyectos en LittleBigMoney. Es muy fácil, son 4 pasos: <br><br> 1 - Acabamos de recibir ese lindo formulario que llenaste; <br><br> 2 - Tu respuesta estará lista en 4 días hábiles. Así que no te despegues de la pantalla. <br><br> 3 - Cuando el proyecto esté revisado, te enviaremos un link especial para que puedas registrar tu proyecto inmediatamente; <br><br> 4 - Una vez nos hayas avisado, autorizaremos el proyecto para que esté disponible y todos los seres humanos del mundo puedan conocerte y apoyar tu idea (en caso de que ellos quieran no?).  <br><br> <strong>Una información importante</strong>: Si olvidaste llenar algo de este formulario, no te preocupes, puedes adicionar nueva información (o cambiar alguna de ellas) así el equipo de soporte podrá estar en contacto contigo, ok?  <br><br> Por eso vale la pena conocer los proyectos que se encuentran al aire (<a href='%{explore_link}' style='color: #f57421 !important;'>%{explore_link}</a>)  y si te gusta alguno de ellos, Apoya! Esa es la mejor manera de mostrar que crees en la cultura del financiamiento colaborativa en Colombia al fomentar el ecosistema que se está formando al rededor de LittleBigMoney. Además, también te puedes inspirar para tu propio proyecto.  <br> Mantén el contacto para saber de nuestras novedades en<a href='%{facebook}' style='color: #f57421 !important;'>Facebook</a> y en <a href='%{twitter}' style='color: #f57421 !important;'>Twitter</a> y conoce más de LittleBigMoney en nuestro Blog<a href='%{blog}' style='color: #f57421 !important;'>blog</a>.  <br> Si tienes alguna duda, nos puedes contactar en: %{email}"
+      email_text: "Muchas gracias por confiar en LittleBigMoney y enviarnos tu proyecto :) <br><br>Antes que nada, queríamos recordarte como funcionan los pasos de selección de los proyectos en LittleBigMoney. Es muy fácil, son 4 pasos: <br><br> 1 - Acabamos de recibir ese lindo formulario que llenaste; <br><br> 2 - Tu respuesta estará lista en 4 días hábiles. Así que no te despegues de la pantalla. <br><br> 3 - Cuando el proyecto esté revisado, te enviaremos un link especial para que puedas registrar tu proyecto inmediatamente; <br><br> 4 - Una vez nos hayas avisado, autorizaremos el proyecto para que esté disponible y todos los seres humanos del mundo puedan conocerte y apoyar tu idea (en caso de que ellos quieran no?).  <br><br> <strong>Una información importante</strong>: Si olvidaste llenar algo de este formulario, no te preocupes, puedes adicionar nueva información (o cambiar alguna de ellas) así el equipo de soporte podrá estar en contacto contigo, ok?  <br><br> Por eso vale la pena conocer los proyectos que se encuentran al aire (<a href='%{explore_link}' style='color: #f57421 !important;'>%{explore_link}</a>)  y si te gusta alguno de ellos, Apoya! Esa es la mejor manera de mostrar que crees en la cultura del financiamiento colaborativa en Colombia al fomentar el ecosistema que se está formando al rededor de LittleBigMoney. Además, también te puedes inspirar para tu propio proyecto.  <br> Mantén el contacto para saber de nuestras novedades en<a href='%{facebook}' style='color: #f57421 !important;'>Facebook</a> y en <a href='%{twitter}' style='color: #f57421 !important;'>Twitter</a><br> Si tienes alguna duda, nos puedes contactar en: %{email}"
       notification_text: "Tu proyecto ha sido recibido por el equipo LittleBigMoney"
     finish:
       successful:
@@ -440,17 +456,18 @@ es:
         email_text: "Desafortunadamente el proyecto %{project_link} en el que colaboraste, no alcanzó su meta y no ha tenido éxito en LittleBigMoney. <br><br>En este caso, recibiste <strong>%{value}</strong> en créditos para apoyar otros proyectos. puedes conocer más proyectos de %{project_category} %{explore_category_link}.<br><br>Caso prefira, você pode pedir o reembolso do seu dinheiro %{credits_link}. Recuerda que tu registro en la plataforma fue hecho a través de <b>%{user_provider}.</b> Es por él que debes entrar para accesar a tu cuenta. Si tienes alguna dificultad en este proceso, envía un email para (financeiro@catarse.me) con el asunto \"Reembolso - problema en el ingreso\".<br><br>(Caso você prefira solicitar o reembolso, só para lembrar, como constam nos %{link_to_term} do LittleBigMoney, que se o apoio foi feito com cartão de crédito, o valor será estornado na próxima fatura do cartão. Se o apoio foi feito através de transferência bancária ou boleto, enviaremos um email com os procedimentos necessários para poder devolver o valor para você.<br><br>Se, por qualquer motivos, quiser entrar em contato com %{project_owner_name}, realizador do projeto, mande um email para %{project_owner_email}.<br><br>Se tiver alguma outra dúvida, acesse nosso FAQ ou mande um email para o financeiro@catarse.me.<br>"
         notification_text: "Recibiste %{value} en créditos para apoyar otros projetos. Caso prefira, você pode pedir seu dinheiro de volta %{link}."
         unsuccessful_text: "El proyecto %{link} no tuvo suficiente colaboración. Suerte para la próxima!"
-    video_regex_validation: "solo URLs de Vimeo o Youtube son permitidas"
+    video_regex_validation: "Solo URLs de Vimeo o Youtube son permitidas"
+    name_regex_validation: "Solo caracteres alfanuméricos son permitidos"
     display_status:
-      expired: finalizado
+      expired: Finalizado
       rejected: Rechazado
       failed: "Sin éxito"
-      partial_successful: "parcialmente financiado"
+      partial_successful: "Parcialmente Financiado"
       successful: Exitoso
-      reached_goal: financiado
-      waiting_confirmation: "Un momentico"
-      waiting_funds: "Un momentico"
-      not_reached_goal: "Un momentico"
+      reached_goal: Financiado
+      waiting_confirmation: "Esperando Confirmación"
+      waiting_funds: "Esperando Fondos"
+      not_reached_goal: "No Financiado"
   projects:
     index:
       vimeo_video_id: 97187346
@@ -465,6 +482,15 @@ es:
       banner_image_8: ~
       banner_image_9: ~
       banner_image_10: ~
+      banner_message_1: "Un aliado para los programas de desarrollo y responsabilidad social"
+      banner_message_2: "Conectamos organizaciones con ideas que transforman comunidades"
+      banner_message_3: "Financiación colectiva de iniciativas de alto impacto ENVIANOS TU PROYECTO"
+      banner_message_4: "¡Dona ya! Pequeños aportes con GRAN impacto"
+      banner_message_5: "Crowdfunding para la Responsabilidad Social Empresarial"
+      banner_message_6: "Herramientas y recomendaciones para una campaña exitosa"
+      total_successful_projects: "<span class='color_carrot'>{</span><span class='color_darkblue'> Mas de </span><span class='color_carrot'>%{successful_number} </span><span class='color_darkblue'> Proyectos exitosos </span><span class='color_oceanblue_letter'>& </span><span class='color_darkblue'>cientos de personas cumpliendo sus metas, tú puedes ser el </span><a class='link-underline' href='%{link}'>próximo</a><span class='color_carrot'> }</span>"
+      know_more: "Conoce más"
+      know_more_successful_projects: "Conoce más proyectos exitosos"
       slogan_donate: "Una pequeña colaboración, una gran ayuda"
       slogan_invest: "(Próximamente) crece con nuevos emprendedores"
     update:
@@ -472,7 +498,7 @@ es:
     update_documents:
       success: "Los documentos fueron actualizados exitosamente!"
     box:
-      by: de
+      by: "De:"
     admin_fields:
       title: "Campos Administrador"
     back_project:
@@ -557,6 +583,7 @@ es:
         submit: "Revisar y realizar el pago"
         title: "Colabora con %{name}"
         anonymous_warning_html: "<strong>¿Seguro deseas que tu aporte sea anónimo?</strong> Dejar tu aporte público aumenta tu reputación y suma en nuestro rango de colaboradores. <br/><br/>Por otra parte, el valor de tu aporte no será compartido con nadie más que el dueño del proyecto. Sólo el administrador podrá acceder a esta información, con independencia de que tu aporte sea público o anónimo."
+        continue: Continuar
         back_faq:
           title: "Quiero aportar y lo quiero hacer ahora"
           question_1: "¿Cómo puedo aportar a este proyecto?"
@@ -657,13 +684,13 @@ es:
       user: Usuario
       value: Valor
     project:
-      backed: Colaboraciones
+      backed: Recaudado
       reached: Alcanzado
     project_backers:
       empty: "Este proyecto necesita más entusiasmo. ¿Qué tal que si eres el primero en realizar un aporte?"
     project_header:
       subtitle_html: "Un proyecto de %{link} en"
-      without_city: "Un proyecto en %{category_name}, por %{author}"
+      without_city: "un proyecto en %{category_name}, por %{author}"
       with_city: "Un proyecto en %{category_name}, en %{city} por %{author}"
     project_updates:
       empty: "Aún no te tenemos novedades, pero muy pronto las habrán. No te las pierdas!"
@@ -730,6 +757,7 @@ es:
       title: "Colabora y recibe"
       versions: "Ver la versión anterior"
       updated_at: "Última modificación"
+      reward_payment: "Dona %{value} y recibe esta recompensa"
     send_mail:
       success: "Tu proyecto fue creado exitosamente! Te contactaremos próximamente. Muchas gracias!"
     show:
@@ -749,6 +777,7 @@ es:
       pictures:
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"
+        save_changes: "Guardar Cambios"
       documents:
         almost_done: "Casi listo"
       reports:
@@ -775,10 +804,11 @@ es:
         take_a_look: "Echa un vistazo al proyecto"
         title: "Se parte y promociona este proyecto"
     new:
-      subtitle: "Es la hora de hacerlo realidad! Queremos saber del potencial de tu empresa y de tu proyecto"
-      title: "Envía tu proyecto"
+      subtitle: "¡Es hora de hacerlo realidad! Queremos saber del potencial de tu proyecto."
+      title: "ENVÍA TU PROYECTO"
+      legend_title: IMPORTANTE
       introduction_html: "Completa el siguiente formulario, danos buena información! Entre más información recibimos <br/>mejor completamos tu proyecto y más rápido irá al irá en la plataforma."
-      permalink_important: "Trata de no usar subrayado, guión etc."
+      permalink_important: "No uses guión, espacio o guión bajo."
       permalink_hint: "Hazlo simple. Tus colaboradores deben poder recordar la URL de tu proyecto ; )"
       important_html: "Ten en cuenta que el descuento total será de aproximadamente el 14% sobre el valor recogido, si logras completar el monto solicitado. Divide tu presupuesto final por 0.8492 para hallar el monto total que vas a solicitar."
       about: "Describe tu proyecto utilizando esta guía!"
@@ -789,13 +819,13 @@ es:
       days_hint: "En promedio los proyectos están al aire por 40 días."
       days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
       about_hint: "Cuéntanos sobre ¿qué quieres hacer? ¿cuánto necesitas y para qué? Se breve y puntual, pero no olvides darnos información que motive a los colaboradores. Después de todo, es tu creación y ellos necesitan conocer tu pasión!"
-      about_important: "Está información te servirá después para el perfil en linea. ¡Úsala! :D"
-      history_important: "Está información te servirá para el perfil en linea ¡Úsala! :D Cuéntanos lo que te hace diferente de otros emprendimientos"
-      cause_important: "Esta pregunta es clave para que veamos que causa hay atrás de tu emprendimiento o proyecto. Está información te servirá para el perfil en linea úsala :D"
-      description_important: "Está información te servirá después para el perfil en linea. ¡Úsala! :D"
-      impact_important: "Está información te servirá después para el perfil en linea. ¡Úsala! :D"
+      about_important: "Esta información te servirá después para el perfil en linea. ¡Úsala! :D"
+      history_important: "Esta información te servirá para el perfil en linea ¡Úsala! :D Cuéntanos lo que te hace diferente de otros emprendimientos"
+      cause_important: "Esta pregunta es clave para que veamos que causa hay atrás de tu emprendimiento o proyecto. Esta información te servirá para el perfil en linea úsala :D"
+      description_important: "Esta información te servirá después para el perfil en linea. ¡Úsala! :D"
+      impact_important: "Esta información te servirá después para el perfil en linea. ¡Úsala! :D"
       budget_important: "Indica el costo de cada rubro. Ej. Valor Total: 7'160.000  (i) Registro INVIMA: 3'160.000; (ii) Plan de mercadeo: 4'000.000, etc."
-      implementation_important: "Los proyectos de más de 8 meses creemos que son muy largos, trata de planear algo muy concreto!"
+      implementation_important: "Los proyectos de más de 8 meses creemos que son muy largos, trata de planear algo concreto!"
       contact: "Deja tu email para que te podamos contactar"
       links: "¿Dónde podemos conocer más sobre tu proyecto?"
       links_important: "Estos enlaces nos ayudan a conocer más sobre ti"
@@ -806,12 +836,12 @@ es:
       video: "¿Ya tienes un video? envía la URL!"
       video_hint: "enlace de Vimeo o Youtube"
       video_important: "Pega aquí la URL de tu video de Vimeo o Youtube!"
-      how_know_important: "Súper! Llegamos a la última pregunta."
+      how_know_important: "Súper! Haz terminado el formulario."
       more_links_important: "Los medios sociales ayudan a que se difunda tu causa! Si tienes una comunidad online, es hora de juntarla para que ayude en tu proyecto."
       first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."
       online_days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
       headline_important: "Se trata de una breve descripción del proyecto, 140 caracteres como máximo!"
-      name_important: "No excedas los 50 caracteres"
+      name_important: "No más de 50 caracteres alfanuméricos"
       social: "Red de financiamiento"
       facebook_hint: "http://facebook.com/__________"
       twitter_hint: "http:// twitter.com/____________"
@@ -825,9 +855,9 @@ es:
       rewards: "¿Qué tipo de recompensas quieres ofrecer?"
       rewards_hint: "Creemos que la mejor forma de inspirar a las personas para aportar a tu proyecto es ofreciendo recompensas muy buenas, creativas y sencillas. A los colaboradores les gustan las cosas exclusivas que les permiten conocer más sobre la vida y entorno tuyo. Tomate tu tiempo para ofrecer recompensas creativas para tus colaboradores."
       rewards_important: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
-      submit: "Enviar el proyecto"
+      submit: "Enviar tu proyecto!"
       send_project: "Quiero enviar mi proyecto."
-      legend_html: "Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.<br><br>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.<br><br><b>Es muy importante:</b><i>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. Esperamos entiendas que si tu proyecto no cumple con el <a href='https://docs.google.com/a/catarse.me/document/d/1wLDS2lphQ6monovg9rEaTIDcxBD3FRZV9dfGKmajyj8/edit' target='_blank' >perfil</a>, podrá ser no aprobado por nuestro equipo.</i>"
+      legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
     twitter:
       take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
     video_embed:
@@ -863,166 +893,466 @@ es:
   static:
     faq:
       title: "Preguntas Frecuentes"
-    guidelines_start:
-      accept: "Leí y entendí cómo funciona LittleBigMoney."
-      explore_curious: "Estoy curioseando!"
-      explore_projects: "Quiero explorar los proyectos."
-      submit: "Siguiente paso!"
-      send_project: "Quiero enviar mi proyecto."
-      subtitle: "Entérate, paso a paso, cómo hacer viable tu proyecto a través de LittleBigMoney"
-      title: "¿Cómo funciona LittleBigMoney?"
-      introduction: "LittleBigMoney es una herramienta diferente – y colaborativa – para impulsar tu idea y sacar tu proyecto del papel"
-      legend_html: "Presta atención a los pasos e instructivos de la plataforma, y decide si <br>LittleBigMoney es la alternativa adecuada para financiar tu proyecto o idea"
-      title_one: "Envía tu proyecto"
-      step_one: "Los proyectos son acciones concretas! Tenemos los brazos abiertos para recibir iniciativas de todo tipo: grandes, pequeñas, divertidas, tradicionales, innovadoras, comunitarias... Nos gustan aquellos proyectos que requieren poco dinero, pero que generan un gran impacto en sus comunidades"
-      title_two: Revisar
-      step_two: "Una vez recibido tu proyecto, este será revisado por nuestro equipo. El objetivo es dar recomendaciones, para <strong>aumentar las posibilidades de éxito de tu proyecto.</strong> Recuerda que nuestro fin es que tu proyecto tenga éxito. Nosotros sólo ganamos cuando tu ganas!"
-      title_three: "¿Listo para salir al aire?"
-      step_three: "Una vez tu proyecto está listo, podrá salir al aire, y ejecutar la campaña de promoción. Durante este tiempo debes estar muy atento al perfil de tu proyecto, estar muy atento a las actualizaciones y solicitudes de información, así como atraer a tantas personas como puedas para que tu proyecto alcance la meta de recaudación"
-      title_four: "Cumple tu meta"
-      step_four: "Durante tu campaña en línea, tienes la oportunidad de repensar el monto solicitado y las actividades, siempre y cuando informes a tu público sobre estos cambios. Si al final tu proyecto no llega a la meta, el dinero recogido regresará a tus aportantes. Alcanzar el 100% del recaudo, garantiza a tus aportantes que podrás ejecutar un proyecto realizable"
-      title_requirements: "Requisitos para enviar proyectos"
-      creative: "Ideas creativas y realizables"
-      colective: "Impacto y beneficios colectivos"
-      nonprofit: "Recompensas no financieras"
-      donation: "No apoyamos proyectos personales o sin resultados claros"
-      video: "Hacer un video"
-      more_questions: "listo! pero cuéntame un poco más de LittleBigMoney..."
-      title_magic: "Nuestra fórmula mágica"
-      magic: "Creemos que propiciar encuentros entre personas que compartan intereses al rededor de un proyecto, es la mejor forma de volverlos realidad e incrementar su potencial. Por eso, utiliza LittleBigMoney como un canal para generar una red con un objetivo COMÚN."
-      title_money: "¿De dónde viene el dinero que hace posible la realización de los proyectos?"
-      money: "Al menos un 50% vendrá de tu red de contactos. LittleBigMoney es un medio que te permite aproximarte a personas afines a tus ideas y trabajo, para que así puedas generar una red de colaboradores a través de la divulgación en redes sociales, periódicos, revistas, blogs y claro tus sitios de reunión favoritos."
-      title_work: "¿Hay que dedicarle mucho tiempo?"
-      work: "Si mucho! En internet no hay \"dinero fácil\". Tendrás que trabajar bastante antes, durante y después del periodo de duración de tu proyecto. Aunque no es posible saber cómo será el resultado de estos esfuerzos hasta el final de la campaña en línea. Este proceso te será útil para perfeccionar tu proyecto y fortalecer una red de personas que creen en tu trabajo."
-      title_costs: "¿Qué costo tiene usar LittleBigMoney?"
-      costs: "Registrarse, enviar un proyecto y realizar una colaboración no tiene costo alguno. Cuando tu proyecto cumple la meta, LittleBigMoney cobra una comisión del 6%. Adicionalmente los medios de pago cobran una comisión entre el 5% y 7% sobre el total de los fondos movilizados, esta variación de la tasa corresponde al número de transacciones locales e internacionales realizadas, así como la tasa de cambio."
-      why: "¿Por qué LittleBigMoney?"
-      intro: "Antes que nada, es relevante que sepas el por qué de esta nueva alternativa de financiación y la importancia del colectivo como fuente de colaboración:"
-      why_one: "Poca intermediación y bajo riesgo financiero; sin intereses, sin acciones, y una promoción al aire sin costo alguno. Pero sobre todo, con mucha emoción y diversión."
-      why_two: "Un gran esfuerzo en la comunicación de tu proyecto puede expandir rápidamente tus ideas hacia mucha gente, mejorando tus propuestas, y fortaleciendo tu red de colaboradores."
-      why_three: "Ampliando tu red y cercanías, tu campaña puede abrir puertas para nuevos proyectos, además de nuevas ideas, aliados y conexiones inesperadas."
-    guidelines_tips:
-      title: "Ya casi!"
-      subtitle: "Antes de que envíes tu proyecto, vale la pena revisar algunos puntos importantes."
-      introduction_html: "Sabemos quieres estar rápidamente al aire con tu proyecto, <br> pero antes piensa unas respuestas sobre las siguientes preguntas"
-      legend_html: "Tener claridad en estas respuestas con seguridad ayudarán mucho <br> en la estructuración de tu proyecto, aumentando tus posibilidades de tener un financiamiento exitoso"
-      title_one: "¿Qué te inspiró a hacer este proyecto?"
-      tip_one: "Las personas sólo se logran conectar con un proyecto cuando perciben la importancia de una causa para la sociedad o para la persona que lidera la campaña. Por eso, es importante tener claro lo que te inspira y tus motivaciones, y describe esto en la formulación del proyecto."
-      title_two: "¿Cuál es el foco?"
-      tip_two: "LittleBigMoney es una excelente herramienta para darle un empujón a tus ideas o para incrementar tu desarrollo como micriempresari@. Definir objetivamente a donde quieres llegar es una de las mejores formas de movilizar personas. Eso incluye conocer bien el público que será beneficiado por tu iniciativa."
-      title_three: "¿Cuál es tu meta?"
-      tip_three: "Calcula todos los costos del proyecto y los envíos de las recompensas. También ten en cuenta tu habilidad para atraer a personas en orden de definir tu meta financiera."
-      title_four: "¿Cuál es el plazo para recaudar la totalidad del dinero?"
-      tip_four: "El plazo máximo son 90 días, pero recuerda: Debes dedicar intensamente tiempo y esfuerzo, antes y durante el periodo de la campaña, si quieres tener éxito. No subestimes esta etapa, es importante mantener un entusiasmo para no sentir cansancio en medio del camino, por eso nosotros te recomendamos plazos de 45 o 60 días, igual es tu decisión!"
-      title_five: "¿Has pensado acerca de las recompensas de tus proyectos?"
-      tip_five: "Las recompensas son promesas que estás haciendo de forma pública. Es importante que consideres tu capacidad de poder cumplir con ellas. Piensa en la facilidad de entrega. Aquí valen recompensas que tengan un valor más simbólico y/o inmaterial como: archivos para desacargar, información interesante, productos tuyos, besos y abrazos"
-      title_six: "¿Ya está listo tu video?"
-      tip_six: "Tu video es la carta de presentación de tu proyecto. Generalmente es el primer contacto con posibles colaboradores, por eso recomendamos tener especial cuidado en el guión (especialmente en los primeros 30 segundos), en el audio y la calidad de la imagen (HD es recomendado)."
-      title_seven: "¿Cómo vas a movilizar tu red?"
-      tip_seven: "Es importante planear estratégicamente la movilización de las redes, tanto antes como durante del plazo de la finalización del proyecto. Recomendamos distribuir tu trabajo semanalmente con tu red según la proximidad que logres con tu colaboradores."
-      title_eight: "¿Cómo será usado el dinero?"
-      tip_eight: "Abre tu presupuesto para que todos sepan un poco más de cómo serán usados los aportes y colaboraciones. La TRANSPARENCIA lo es todo en este proyecto. Puedes incluir un link para una hoja de cálculo de GOOGLE DOCS, y de esta forma se puede descargar tu plan de fortalecimiento."
-      explore_curious: "Estoy curioseando!"
-      explore_projects: "Quiero explorar los proyectos."
-      submit: "Siguiente paso!"
-      send_project: "Quiero enviar mi proyecto"
-      guide: "Descarga aquí una guía completa con todos los tips para hacer tu proyecto en LittleBigMoney."
-      guide_url: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit?usp=sharing"
-    guidelines_backers:
-      title: "Quiero aportar a este proyecto!"
-      subtitle: "Entiende paso a paso como aportar a un proyecto de LittleBigMoney."
-      introduction: "LittleBigMoney es una excelente forma de hacer parte de causas en las que creas"
-      legend_html: "Creemos que hacer parte de un proyecto son ese tipo de cosas que no sabemos porqué, pero nos hace sentir muy bien!"
-      title_one: "Explora el proyecto"
-      step_one: "Para entender un proyecto primero  mira el video, lee la descripción, y luego navega por los links. Si consideras que ese proyecto merece salir del papel, sigue adelante!"
-      title_two: "Decide cuánto quieres aportar"
-      step_two: "Una buena forma de decidir con cuánto quieres aportar es observar las recompensas que l@s microempresari@s ofrecen a cambio de tu aporte."
-      title_three: "Haz efectivo tu aporte"
-      step_three: "Llena tus datos y revísalos. Luego, decide cuál es el método de pago que se acomoda más a ti.<br/></br><a href='https://docs.google.com/document/d/1clhFsbWPZiVZeAZNf3g0pj58CFIHAsBGieNVlG5JPBM/edit' target='_blank'>Haz clic acá para saber más sobre los medios de pago</a>"
-      title_four: "Pasa la bola!"
-      step_four: "Ahora haces parte de la comunidad de est@ microempresari@. Pasa la bola de este proyecto por tus redes sociales y espera las novedades y el aviso en la recta final."
-      title_requirements: "Recuerda: en LittleBigMoney es \"todo o nada\""
-      sucessfull_title: "Si el proyecto logra o supera los aportes requeridos"
-      sucessfull: "El proyecto ha sido exitoso! Su microempresari@ recibirá el dinero y se pondrá en contacto con sus colaboradores."
-      not_sucess_title: "Si el proyecto no tiene tantos aportes..."
-      not_sucess: "Recibes el valor de tu aporte integralmente en forma de créditos (para apoyar otro proyecto), según las reglas de los <a href='%{terms}' target='_blank'>terminos de uso</a>."
-      title_not_funded: "Si el proyecto no cumple la meta, ¿cómo uso mis créditos?"
-      not_funded: "Recibirás tus créditos en tu perfil de LittleBigMoney. En el momento que quieras escoger otro proyecto al que quieras aportar, en la ventana de selección de recompensas, tendrás un campo para utilizar tu crédito."
-      more_questions: "Muero por apoyar un proyecto, ¿hay algo más que deba saber?"
-      title_backer: "¿Cómo se que mi aporte fue exitoso?"
-      backer: "Recibirás un email de confirmación. Tu aporte quedará registrado en la pestaña de COLABORADORES del proyecto que apoyaste."
-      title_rewards: "Si el proyecto es exitoso, ¿cómo obtengo mi recompensa?"
-      rewards: "Es compromiso del microempresario del proyecto entrar en contacto y organizar contigo como será la entrega de la recompensa escogida. Si eso no sucede, envíale un mail cobrando! Si aún así no responde... nos puedes contactar, que nosotros le tiramos las orejas! :)"
-      title_credits: "Si el proyecto no cumple la meta, ¿cómo uso mis créditos?"
-      credits: "Recibirás tus créditos en tu perfil de LittleBigMoney. En el momento que quieras aportar tus créditos a otro proyecto, en la ventana de selección de recompensas tendrás un campo para utilizar tu crédito."
-      title_money: "¿Qué pasa si no quiero usar mis créditos?"
-      money: "No hay problema! solo debes entrar a tu perfil (Mis créditos) y solicitar un reembolso cumpliendo con los términos de uso. También puedes enviar un correo a littlebigmoney@fundacioncapital.org con tu solicitud."
-      other_backers: "¿PUEDO COLABORAR DE OTRAS FORMAS?"
-      intro: "Conoce otras formas de colaborar con el proyecto en que crees"
-      other_one: "Trae otros dos amigos para que  como tú aporten al proyecto"
-      other_two: "Cuéntale a todo el mundo lo increíble que es el proyecto con el que colaboraste en LittleBigMoney y anímalos para que aporten."
-      other_three: "¿Tienes un amigo periodista? Puedes recomendarle que escriba en Blog."
-      other_four: "Puedes hacer un video de apoyo al proyecto como el que hicieron ellos: http://vimeo.com/46233018"
-      other_five: "Envía un email al microempresari@ preguntando cómo puedes ayudr aún más."
-      submit: "ESTOY CURIOSEANDO!"
-      send_project: "Quiero enviar un proyecto"
-      explore_curious: "ME APUNTO!"
-      explore_projects: "Quiero aportar a este proyecto!"
+    guidelines_channel:
+      title: "¡Bienvenido a tu espacio!"
+      page_title_1: "INICIA <span class='carrot'> TU CANAL</span> CON LBM"
+      page_title_2: "Y potencia tu impacto social"
+      subtitle: "LBM permite potenciar el impacto y la visibilidad de los programas de desarrollo y responsabilidad social de las organizaciones, fortaleciendo sus vínculos con las comunidades y las organizaciones que apoyan."
+      what_is_channel_q: "¿Qué es un Canal?"
+      what_is_channel_a: "Es un mini-sitio con dominio e imagen personalizada que funciona como una vitrina y permite subir varios proyectos al tiempo además de ofrecer incentivos para multiplicar las donaciones (fondos de contrapartida)."
+      subtitle_2: "Un canal es la respuesta a tu organización si…"
+      answer_1_1: "Buscas brindar una alternativa de  ﬁnanciación a proyectos de una población o causa especíﬁca"
+      answer_1_2: "Con LBM puedes llegar a<p>tener muchos donantes</p>"
+      answer_1_3: "Cuéntanos de qué se trata"
+      answer_2_1: "Tienes unos recursos para apoyar tus grupos de interés y quieres maximizar su impacto"
+      answer_2_2: "LBM permite a tus fondos<p>hacer más con menos</p>"
+      answer_2_3: "Transfórmalos en fondos de <p>contrapartida</p>"
+      answer_3_1: "Quieres dar a tus empleados la posibilidad de dejar su huella apoyando una causa que los anime"
+      answer_3_2: "Con LBM puedes regalar la<p>emoción de donar</p>"
+      answer_3_3: "Pregunta por nuestras<p>Giftcards</p>"
+      subtitle_3: "¿Qué ofrece LBM?"
+      answer_4_1: "1. Un canal dedicado"
+      answer_4_2: "Una vitrina virtual especializada donde mostrar los proyectos que se quieran apoyar."
+      answer_5_1: "2. Coordinanción de la implementación"
+      answer_5_2: "Asistencia, capacitaciones y coordinación, antes, durante y después"
+      answer_6_1: "3. Difusión y visibilidad"
+      answer_6_2: "Una estratégia dedicada de comunicación para garantizar visibilidad"
+      subtitle_4: "Conoce algunos de nuestros canales"
+      history_1: "Alianza con RCN <p>2014</p>"
+      history_2: "Alianza con ANSPE y Pioneros/ Compartamos <p>2014</p>"
+      history_3: "Alianza Fundación Bavaria <p>2015</p>"
+      history_4: "Alianza PNUD y KOICA <p>2015</p>"
+      comment_1: "La campaña de crowdfunding<p>MÁS GRANDE DE COLOMBIA.</p>"
+      statistics_1: "<span class='carrot bold'>*100</span> proyectos al aire al mismo tiempo"
+      statistics_2: "<span class='oceanblue bold'>*Lanzamientos en 5</span> ciudades diferentes"
+      statistics_3: "<span class='carrot bold'>*2245</span> donaciones recibidas en 80 días al aire"
+      statistics_4: "<span class='bold'>*$171,239,733 COP (61,000 USD) recolectados</span>"
+      statistics_5: "<span class='carrot bold'>*170%</span>  del fondo de contrapartida "
+      statistics_6: "<span class='oceanblue bold'>*Socios Institucionales:</span>  PNUD y Koica"
+      subtitle_5: "Embajadores de la campaña:  Mariana Pajón y Santiago Cruz"
+      subtitle_6: "Dicen de nosotros:"
+      answer_7_1: "<b>\"</b>Gracias a LBM, encontramos una forma masiva de visibilizar problemáticas sociales, ¡y especialmente de darles soluciones!. El Crowdfunding es una buena opción para que las comunidades vulnerables puedan darse a conocer y financiar sus proyectos<b>\"</b>"
+      answer_7_2: "<b>\"</b>Es una buena metodología por la transparencia que se maneja y la efectividad en corto tiempo. Los de LittleBigMoney son muy pilos y estuvieron respaldándonos todo el tiempo. Hicieron lo posible por solucionarnos los inconvenientes en el menor tiempo. Nos dictaron una capacitación inicial de uso de la plataforma. Hicieron seguimiento a todo el proceso.<b>\"</b>"
+      subtitle_7: "¡No te quedes atrás! ¡Crea tu canal!"
+      subtitle_8: "¿Quieres tener un canal con nosotros? ¿Necesitas más información?  Escribe a <span class='oceanblue'>littlebigmoney@fundacioncapital.org</span>  o déjanos un mensaje y pronto nuestro equipo entrará en contacto contigo."
     guidelines:
-      title: "Cómo funciona"
-      subtitle: "Conoce un poco más de LittleBigMoney"
-      introduction_html: "LittleBigMoney es un espacio de colaboración entre individuos, <br>que juntos permiten la realización de proyectos con impacto social o ambiental."
-      legend_html: |-
-          Bienvenidos a este tu espacio! Un lugar hecho para ustedes, donde con pequeños aportes puedes lograr GRANDES resultados. <br><br> Hoy podemos ayudar y contribuir en el crecimiento de muchas micro-empresas, que contribuyen en el crecimiento de tu país, y el fortalecimiento económico de muchas comunidades. 
-          LittleBigMoney es una alternativa que conecta a miles de personas con muchos de sueños de muchos micro-empresarios, y cada uno sea parte de una comunidad en la que las pequeñas cosas se hacen GRANDES.
-      submit: "ENVIAR TU PROYECTO"
-      send_project: "Entérate cómo subir tu proyecto"
-      explore_curious: "APORTAR A UN PROYECTO"
-      explore_projects: "cómo apoyar con un proyecto"
-    about:
-      title: "¿Quiénes somos?"
-      subtitle: "Conoce a las pequeñas personas que hacen grandes cosas! <3"
-      introduction: "¿Quiénes son? ¿Qúe comen? ¿Cómo trabajan en red? Todo eso lo podrás ver ahora en Quiénes Somos."
-      name_one: "Yves Moury"
-      image_one: "http://s22.postimg.org/6mrb6hi5d/yves_wp.jpg"
-      place_one: Bélgica
-      title_one: "Presidente y Director Ejecutivo"
-      text_one: "Economista e Ingeniero de Gestión por la Universidad de Lovaina en Bélgica, y Posgraduado en Antropología Social y Cultural, Administración, Banca e Informática, y Finanzas para el Desarrollo por la misma universidad. Su experiencia de más de 25 años en desarrollo internacional y reducción de la pobreza incluye consultorías e investigaciones para agencias y organizaciones internacionales como BID, Unión Europea, FIDA, ONUDI, OIT y PNUD, y con entidades públicas y privadas, corporaciones financieras y universidades en Europa, África, Asia y América Latina."
-      name_two: "Franz Gomez"
-      image_two: "http://s22.postimg.org/gszwph2jl/franz_gomez_wp.jpg"
-      place_two: Bolivia
-      title_two: "Director de Inclusión Financiera"
-      text_two: "Economista graduado de la Universidad Mayor de San Andrés, Bolivia. Tiene un Master en Economía y un Doctorado (Ph.D.) en Desarrollo Económico en la Universidad Estatal de Ohio, Estados Unidos. Es especialista en microfinanzas y finanzas rurales, con amplia experiencia en asesoramiento técnico a entidades gubernamentales e instituciones financieras para el diseño e implementación de políticas de inclusión financiera y protección social. Ha trabajado como consultor e investigador en varios países en América Latina y el Caribe, Europa y Asia."
-      name_three: "Paula Rodriguez Rueda"
-      image_three: "http://s23.postimg.org/n736tzinv/paula_wp.jpg"
-      place_three: Colombia
-      title_three: "Coordinadora de Proyecto"
-      text_three: "Es Master en Relaciones Internacionales de la Universidad Javeriana en Bogotá y en Public Management del SDA Bocconi School of Management de Italia. Ha trabajado con el sector público colombiano abriendo mercados exteriores a pequeñas y medianas empresas colombianas, y también con empresas privadas prestadoras de servicios públicos, apoyando el diseño de nuevo proyectos de inversión y licitaciones públicas."
-      name_four: "María Antonia Hoyos"
-      image_four: "http://s22.postimg.org/s6mg0od29/tona_wp.jpg"
-      place_four: Colombia
-      title_four: "Oficial de Operaciones"
-      text_four: "Profesional en Gobierno y Relaciones Internacionales, con énfasis en Gestión Pública de la Universidad Externado de Colombia. Experiencia en Gerencia y Formulación de proyectos sociales, Fundraising y gestión de Asistencia Técnica Internacional para pequeñas y medianas empresas colombianas. Trabajó en la Fundación CINEP/Programa por la Paz como Profesional Junior de la Gerencia de Proyectos y realizó un año de pasantía en la Dirección de Cooperación y Convenios de PROEXPORT."
-      name_five: "Veruschka Zilveti"
-      image_five: "http://s22.postimg.org/bgb2bcen5/veru_wp.jpg"
-      place_five: Bolivia
-      title_five: "Coordinadora de Proyecto"
-      text_five: "Economista por la Universidad Católica de Bolivia, con un Posgrado en Gestión y Organización de Entidades Non-Profit. Cuenta con amplia experiencia en proyectos de desarrollo rural y en el trabajo con comunidades rurales. En el FIDA trabajó durante 8 años analizando estrategias de reducción de la pobreza y herramientas para el fortalecimiento el acceso a mercados de emprendimientos rurales."
-      name_six: "Javier Felipe Hidalgo"
-      image_six: "http://s22.postimg.org/wh13w9i5d/javier_wp.jpg"
-      place_six: Colombia
-      title_six: "Oficial de Comunicaciones"
-      text_six: "Comunicador social y periodista con énfasis en la gestión de la comunicación empresarial de la Universidad Externado de Colombia. Experiencia en manejo y creación de comunidades en redes y creación de estratégias de comunicación organizacional. Trabajó como voluntario en la fundación CISV de Colombia como entrenador de liderazgo en educación experiencial y realizó labores de fotografía en la Corporación Coral y Orquestal de Colombia."
-      name_seven: ~
-      image_seven: ""
-      place_seven: Bogotá
-      title_seven: ""
-      text_seven: ~
-      name_eight: ""
-      image_eight: ""
-      place_eight: Bogotá
-      title_eight: ""
-      text_eight: ""
+      title: "¡Bienvenido a tu espacio!"
+      subtitle: |-
+          LittleBigMoney es la plataforma de crowdfunding para proyectos con impacto social y ambiental.
+          Un lugar hecho para ti, donde con pequeños aportes podrás lograr <span class='color-carrot'>GRANDES</span> resultados.
+          ¿Qué rol quieres jugar hoy? 
+      illustration_1: "La acción de \"donar\" es la que le da vida a LittleBigMoney, y gracias a ella se pueden construir los sueños de muchos emprendedores."
+      illustration_1_bold: "¡Juntos todo es posible!"
+      illustration_1_btn: "Dona a un proyecto"
+      illustration_2: "Si tienes una iniciativa con enfoques sociales o ambientales, LittleBigMoney es la mejor opción para alcanzar tus metas."
+      illustration_2_bold: "¡Te ayudaremos a hacerla realidad!"
+      illustration_2_btn: "Envía un proyecto"
+      illustration_3: "Si quieres multiplicar el impacto social de tu organización, en LittleBigMoney creamos canales personalizados para la promoción de tus programas."
+      illustration_3_bold: "¡Descubre más!"
+      illustration_3_btn: "Crea tu canal"
+      description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
+      description_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a las campañas que desees, enviar tu propio proyecto o crear un canal para tu organización y así apoyar a muchas iniciativas."
+      send_project_title: "¡Ten en cuenta al enviar tu proyecto!"
+      project_send:
+        phrase_1: "Ideas creativas y realizables"
+        phrase_2: "Impacto y beneficios colectivos"
+        phrase_3: "Recompensas no financieras"
+        phrase_4: "No apoyamos proyectos personales o sin resultados claros"
+        phrase_5: "Convoca tu comunidad"
+      network_title: "¿Qué te ofrece LittleBigMoney?"
+      network_description: "Nuestra plataforma tecnológica brinda una vitrina para la visibilización y financiación de iniciativas, una experiencia personalizada para todos sus actores y una gestión eficaz y transparente de ideas y recursos para obtener mejores resultados."
+      budget_title: "¿Qué hacemos en LittleBigMoney?"
+      budget_description: "Conectamos a colaboradores con proyectos viables e innovadores, cuidadosamente seleccionados, para aumentar las posibilidades de éxito de los emprendedores y multiplicar el impacto social de los proyectos."
+      description_end_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
+      description_end_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a las campañas que desees, enviar tu propio proyecto o crear un canal para tu organización y así apoyar a muchas iniciativas."
+      more_subtitle_1: "¿ERES UNA PERSONA ANIMADA POR UNA CAUSA y QUIERES APOYARLA?"
+      more_subtitle_2: "¿TIENES UN PROYECTO CON IMPACTO SOCIAL O AMBIENTAL?"
+      more_subtitle_3: "¿ERES UNA ORGANIZACIÓN Y QUIERES INNOVAR SOCIALMENTE?"
+      more_text_1_phrase_1: "<p>Podrás contribuir a grandes cambios con pequeños aportes gracias a la unión de muchas pequeñas donaciones que permite alcanzar metas ambiciosas y multiplicar el valor de tu colaboración. </p>"
+      more_text_1_phrase_2: "<p>Podrás</p><p>- Ser parte de nuestra comunidad y entrarás en contacto con proyectos inspiradores</p><p>- Tener acceso fácil y directo con el beneficiario de tu donación y seguir los avances</p><p>- Convertirte en un embajador de las causas que más te motivan</p>"
+      more_text_2_phrase_1: "<p>Somos una ventana al mundo para que se conozcan tus ideas,facilitamos el acceso a recursos (financieros y humanos) y propiciamos la integración en tu comunidad.</p>"
+      more_text_2_phrase_2: "<p>Tendrás</p><p>- Asesoramiento y capacitación para la gestión de la campaña de crowdfunding</p><p>- Un perfil exclusivo que podrás compartir en redes sociales</p><p>- La posibilidad de recibir dinero desde otros lugares y monitorear el recaudo en línea</p>"
+      more_text_3_phrase_1: "<p>Te ayudaremos a hacer crecer el impacto de tus recursos crearemos una experiencia personalizada y, junto a los de colaboradores individuales, a financiar proyectos que te muevan e interesen.</p>"
+      more_text_3_phrase_2: "<p>Recibirás</p><p>- Un canal personalizado para la difusión y promoción de los proyectos que quieres apoyar</p><p>- Coordinación y acompañamiento durante todo el proceso de implementación de la campaña</p><p>- Apoyo en el diseño de una estrategia de comunicación para visibilizar</p>"
+      success:
+        title: "Proyectos exitosos"
+        how_works: "Proyecto exitoso:"
+        how_work_explanation: "Cuando el recaudo alcanza el 100% o más de la meta planteada por el emprendedor del proyecto."
+        take_into_account: "Proyecto parcialmente financiado:"
+        take_into_account_explanation: "Cuando el recaudo es igual o mayor a $500.000 COP pero no llega a la meta."
+        project_use: "Proyecto no exitoso:"
+        project_use_explanation: "Cuando las donaciones recibidas no alcanzan el valor mínimo para desembolso ($500.000 COP)"
+      partial_success:
+        title: "Proyectos parcialmente financiados"
+        how_works: "¿Cómo funciona?"
+        how_work_explanation: "Si los aportes al proyecto logran como mínimo alcanzar los $500.000 COP, es decir, un porcentaje de la meta propuesta, el proyecto se denominará “Proyecto parcialmente financiado”  y los fondos que se logren recaudar serán entregados al emprendedor para ser utilizados en sus propósitos prioritarios."
+        take_into_account: "¿Qué debes tener en cuenta?"
+        take_into_account_explanation: "Financiar parcialmente tu proyecto te permitirá tener una flexibilidad sobre el mismo. Sin embargo, debes tener un objetivo económico claro que pueda ser cumplido por etapas."
+        project_use: "¿Para qué tipo de proyectos se usa?"
+        project_use_explanation: "Son apoyados proyectos que permitan financiar objetivos por etapas. Esto quiere decir que si no se financia la totalidad del proyecto, aún se puede contar con los recursos gestionados a través de la plataforma para llevar a cabo las actividades clave."
+      more_title: "Conoce Más de LittleBigMoney"
+      lbm_objective_title: "¿Qué hacemos en LittleBigMoney?"
+      lbm_objective_explanation: "Conectamos a colaboradores con proyectos viables e innovadores, cuidadosamente seleccionados, para aumentar las posibilidades de éxito de los emprendedores y multiplicar el impacto social de los proyectos."
+      money_come_title: "- Para los colaboradores:"
+      moeny_come_explanation: "La unión de muchas pequeñas donaciones permite alcanzar metas ambiciosas y multiplica el valor de tu contribución. Serás parte de grandes cambios con pequeños aportes."
+      time_dedication_title: "- Para emprendedores"
+      time_dedication_explanation: "Somos una ventana al mundo para que se conozcan tus ideas, facilitamos su acceso a recursos (financieros y humanos) para salir adelante. Propiciamos la integración en tu comunidad fortaleciendo el tejido social."
+      cost_title: "- Para socios institucionales:"
+      cost_description: |-
+          Los ayudamos a hacer crecer el impacto de sus recursos y, junto a los de colaboradores individuales, a financiar proyectos que los muevan e interesen.
+          Ver Crea tu canal
+      why_title: |-
+          ¿Qué ofrecemos?
+          Nuestra plataforma tecnológica brinda una vitrina para la visibilización y financiación de iniciativas, una experiencia personalizada para todos sus actores y una gestión eficaz y transparente de ideas y recursos para obtener mejores resultados.
+      reason_1: |-
+          Para colaboradores:
+          - Posibilidad de contribuir con una causa en la que crees
+          - Acceso fácil y directo con el beneficiario de tu donación
+          - Ser parte de la comunidad LBM
+          - Diversas opciones de pago online y offline
+      reason_2: |-
+          Para los proyectos:
+          - Alternativa efectiva de financiamiento
+          - Perfil exclusivo para monitorear recaudo en línea
+          - Asesoramiento y capacitación para la gestión de la campaña de crowdfunding
+      reason_3: |-
+          Para los socios institucionales:
+          - Canal personalizado para la difusión y promoción de sus proyectos
+          - Coordinación en la implementación y acompañamiento durante todo el proceso
+          - Apoyo en la comunicación para multiplicar la visibilidad de la campaña
+      rol_play: "¿Qué rol deseas jugar hoy?"
+      new_project: "Crear un proyecto"
+      back_project: "Colaborar a proyectos"
+      new_channel: "Crear un canal"
+      all_for_backers: "Todo para <p>colaboradores</p>"
+      about_project: "Todo para tu <p>proyecto</p>"
+      after_project: "Todo para tu <p>canal</p>"
+      venture_course: "Guías y <p>herramientas</p>"
+      about_crowdfunding: "Crowdfunding y <p>LittleBigMoney</p>"
+    tools:
+      subtitle_1: "¿Quieres conocer  los beneficios que LBM tiene para ti? ¿No pudiste resolver tus dudas con las preguntas frecuentes?"
+      subtitle_2: "Escríbenos a littlebigmoney@fundacioncapital.org o déjanos tu mensaje completando tus datos en esta casilla."
+      subtitle_3: "Pronto alguien de nuestro equipo entrará en contacto contigo."
+      faq_subtitle: "Preguntas frecuentes"
+      for_backers:
+        description: "Descripción de las herramientas para donantes"
+        tool_1:
+          title: ~
+          link: ~
+          question: "¿Cuál es el proceso para donar?"
+          answer: |-
+              Para poder colaborar con un proyecto en LittleBigMoney primero deberás registrarte en la plataforma. Podrás hacerlo, independientemente del país al que pertenezcas, con tu correo y creando una contraseña o enlazando directamente tu cuenta de Facebook. Luego de unirte a nuestra comunidad estarás listo para realizar tu donación al proyecto de tu agrado siguiendo los siguientes pasos:<br/>
+              1. Accede a la sección “Dona a un proyecto”.<br/>
+              2. Selecciona el proyecto que desees.<br/>
+              3. Conoce de qué se trata.<br/>
+              4. Si quieres ayudar, dirígete a la opción "Quiero aportar", elige el valor y medio de pago, y listo!<br/>
+              5. Volver a buscar otros proyectos que te motiven!<br/>
+              Es importante recalcar que solo se puede donar mientras un proyecto esté “al aire” o activo para recibir donaciones, tiempo durante el cual aparecerá en el perfil del proyecto el botón para aportar, así como un indicador del monto que lleva recaudado y de los días que quedan de campaña.
+          image: ~
+        tool_2:
+          title: ~
+          link: ~
+          question: "¿De qué medios dispongo para colaborar con un proyecto?"
+          answer: "Para donaciones nacionales (Colombia) contamos con diferentes medios de pago, como tarjeta de crédito, débito, Baloto o Efecty. Y para el caso de donaciones provenientes de otros países contamos con PayPal, además de poder gestionar tu donación con tarjetas de crédito o débito autorizada para pagos internacionales, a través de las pasarelas de pago PayU o MercadoPago."
+          image: ~
+        tool_3:
+          title: ~
+          link: ~
+          question: "¿Hay un monto mínimo para donar?"
+          answer: |-
+              Sí, nuestra plataforma permite hacer donaciones a partir de $25.000 COP*.<br/>
+              *equivalente a 8.3 USD (1 USD = aproximadamente 3000 COP)
+          image: ~
+        tool_4:
+          title: ~
+          link: ~
+          question: "¿Se puede donar desde otros países o en monedas diferentes a pesos colombianos?"
+          answer: "Se puede donar desde cualquier país, pero las donaciones serán recaudadas en pesos colombianos (COP) si se paga a través de PayU o MercadoPago con tarjeta de crédito o débito, y en dólares americanos (USD) si se efectúa el pago a través de PayPal con el medio de pago que haya registrado. Considerar 1 USD = aproximadamente 3000 COP (actualizado Sept 2016)"
+          image: ~
+        tool_5:
+          title: ~
+          link: ~
+          question: "¿En qué consisten las recompensas?¿Cuándo las recibiré?"
+          answer: "Las recompensas en nuestra plataforma corresponden a reconocimientos simbólicos que los emprendedores idean para entregar de acuerdo con la colaboración recibida. Estas estarán visibles en el perfil del proyecto y también al momento de realizar la donación. Deberás seleccionar la que corresponda con el valor que quieras para tu colaboración, o de lo contrario seleccionar que no deseas recibir recompensa para que el emprendedor lo tenga contabilizado.<br/><br/>Las recompensas comienzan a entregarse según lo que disponga el emprendedor. El tiempo de entrega empieza a contar a partir de la finalización de la campaña, pues es ahí cuando se sabe si la campaña ha sido exitosa o no. La cantidad de días exactos serán comunicados en el mensaje que cada donante recibirá después de hacer la colaboración."
+          image: ~
+        tool_6:
+          title: ~
+          link: ~
+          question: "¿Puedo seguir colaborando con un proyecto que ya llegó a la meta?"
+          answer: "Sí, en LBM el único motivo por el cual una campaña llega a su fin es por la variable del tiempo, es decir, cuando culminan los días definidos por el emprendedor; así, los proyectos que hayan llegado a la meta pueden seguir recaudando donaciones sin límite hasta que el tiempo se agote."
+          image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: "¿Qué pasa si un proyecto no llega a la meta?"
+          answer: "En LBM, somos conscientes de que muchas veces es más complicado para algunos emprendedores llegar a completar sus metas, pero el esfuerzo debe ser igualmente valorado. Por eso, un proyecto puede alcanzar dos escalas de financiamiento (parcial o total). Para que un proyecto obtenga el financiamiento parcial hace falta superar el monto mínimo de recaudo de $500.000 COP, monto desde el cual podremos hablar de un desembolso a la cuenta bancaria del emprendedor. Cuando un proyecto no alcance dicho monto mínimo, las donaciones recibidas serán regresadas a los colaboradores a modo de créditos en la plataforma para ser utilizados en algún otro proyecto al aire."
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: "¿Qué son los créditos y cómo puedo usarlos?"
+          answer: "Los créditos aparecen en la cuenta de un colaborador cuando el proyecto al que ha contribuido no logra recaudar el monto mínimo ($500.000 COP) para acceder a un desembolso de dinero. Estos equivalen al valor donado y son retornados a cada colaborador en su cuenta para que los utilice en cualquier otro proyecto al aire de la plataforma. Si quieres usar tus créditos sigue estos pasos:<br/>Ingresa a LittleBigMoney con tu correo y contraseña o con tu cuenta de Facebook.<br/>Elige un proyecto al cual apoyar.<br/>Al momento de realizar la colaboración y elegir el medio de pago, elige la pestaña “créditos”.<br/>En caso de que lo requieras, también podrás pedir el reembolso de tu dinero."
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: "¿Emiten certificado de donación?"
+          answer: "Sí, por ser una iniciativa de Fundación Capital podemos emitir certificados de donación a personas jurídicas o naturales residentes en Colombia o Estados Unidos que los requieran para fines impositivos. Dicho certificado será emitido luego de haber recibido la solicitud del interesado a través de la opción \"Certificar esta donación\" desde el perfil del usuario en la plataforma, donde se le requerirá la documentación necesaria y correspondiente."
+          image: ~
+        tool_10:
+          title: ~
+          link: ~
+          question: "¿Existen otras formas de colaborar que no involucren desembolso de dinero?"
+          answer: "Cuando el emprendedor o la organización quieran o necesiten aportes en mano de obra (asistencia técnica, voluntariado, etc.), éstos podrán considerarse como una donación en especie. De no estar escrito en el perfil, significará que para ese proyecto la opción no está activada."
+          image: ~
+      about_project:
+        description: "Descripción de las herramientas sobre projectos"
+        tool_1:
+          title: ~
+          link: ~
+          question: "¿Cuál es el procedimiento para tener un proyecto en LittleBigMoney?"
+          answer: "En LBM admitimos proyectos en idea (capital semilla) o en marcha (fortalecimiento) con impacto social o ambiental. Si tienes uno y quieres mostrarlo a través de nuestra plataforma, estos son los pasos que debes seguir:<br/>1.- Ingresa a www.littlebigmoney.org y realiza tu registro. Puedes hacerlo utilizando tu dirección de correo electrónico o a través de tu cuenta de Facebook.<br/>2.- Haz clic en “Envía un proyecto” y completa las casillas del formulario, respondiendo a cada pregunta de manera concreta y precisa.<br/>3.- Después de enviar el formulario, recibirás un mail con la confirmación de admisión, y en caso de ser admitido recibirás además asesoramiento personalizado.<br/>4.- Iniciarás un proceso de curación con el Oficial de Operaciones de LBM para mejorar el perfil de tu proyecto. Mientras tanto, este permanecerá en borrador* y podrás agregar las recompensas para tus colaboradores.<br/>5.- Una vez el perfil esté listo, definirás una fecha para el lanzamiento al público y comenzarás a recibir el financiamiento deseado.<br/><br/>*La información de este borrador no es la definitiva, pero recuerda que cuanto más consciente y coherente seas cuando envíes el proyecto, más rápido saldrá tu proyecto online. Recomendamos que te apoyes en tus amigos para obtener comentarios sobre lo descrito en el perfil del proyecto y así mejorarlo aún más. Ten presente que el perfil del proyecto es la forma en la que te conocerán tus donantes cuando tu proyecto esté al aire."
+          image: ~
+        tool_2:
+          title: ~
+          link: ~
+          question: "¿Hay requisitos para montar un proyecto en LBM?"
+          answer: "Sí, el primer requisito es tener un proyecto que implique impacto, ya sea social o ambiental, para poder ser admitido en nuestra plataforma. Además, deberá tener una meta económica realista y alcanzable según la estrategia del emprendedor para promover su proyecto en redes sociales. Finalmente, y pensando en el éxito del proyecto, solicitamos a todos los emprendedores los siguientes requisitos, que será necesario cumplir en el momento del desembolso de dinero:<br/><b>Persona natural:</b><br/>- Contar con la mayoría de edad<br/>- Ser ciudadano colombiano y tener RUT actualizado.<br/>- Tener una cuenta de ahorros o corriente en una entidad bancaria.<br/>- Firmar un acuerdo de colaboración al momento de recibir los recursos recaudados.<br/><b>Persona jurídica:</b><br/>- Presentar cámara de comercio y RUT actualizado.<br/>- Tener una cuenta de ahorros o corriente en una entidad bancaria reconocida.<br/>- Firmar un acuerdo de colaboración al momento de recibir los recursos recaudados.<br/>"
+          image: ~
+        tool_3:
+          title: ~
+          link: ~
+          question: "¿Es posible registrar el mismo proyecto en LittleBigMoney y a la vez en otra plataforma de crowdfunding?"
+          answer: "Sí, pero no lo recomendamos, pues como bien sabrás el tener una campaña de crowdfunding implica la promoción y gestión del proyecto en tus redes sociales, direccionando a tu audiencia hacia la plataforma en la que recaudarás el máximo de donaciones posibles. Si tuvieras dos campañas al mismo tiempo, tu público podría confundirse y las donaciones dividirse entre las varias plataformas, haciendo más difícil alcanzar tu meta."
+          image: ~
+        tool_4:
+          title: "Crear buenas recompensas.pdf"
+          link: "https://drive.google.com/file/d/0B5yleHdyw7uUTzdURjRzLTN5SzQ/view"
+          question: "¿Cuál es el costo de tener un proyecto en LittleBigMoney?"
+          answer: "En proyectos individuales no hay que pagar previamente para acceder al servicio de LittleBigMoney. En el caso de que el proyecto logre financiamiento (parcial o total), al momento del desembolso de dinero se descontará del total recaudado el 14%, correspondiente a costos de operación de LittleBigMoney (6%) y de las pasarelas de pago (8%)."
+          image: ~
+        tool_5:
+          title: ~
+          link: ~
+          question: "El dinero que recibo, ¿lo tengo que devolver?"
+          answer: "No, en LBM hacemos crowdfunding por donación y por eso todo lo que puedas recibir gracias a las colaboraciones será no reembolsable. Deberás ser muy responsable y transparente con todos los que te apoyaron, utilizar tu presupuesto para la implementación de lo planteado en el perfil de tu proyecto y cumplir con las recompensas prometidas como retribución por el  apoyo de tus colaboradores."
+          image: ~
+        tool_6:
+          title: ~
+          link: ~
+          question: "¿Qué compone el perfil de un proyecto?"
+          answer: "En LBM todos los perfiles de los proyectos deben contener lo siguiente:<br/><b>1.- Vídeo:</b> Es la carta de presentación de tu proyecto y la forma en que las personas conocerán tu iniciativa. Deben transmitir claramente y en corto tiempo cuál es el propósito de tu proyecto, para cautivar a los donantes y que se enamoren de tu idea. Recomendamos que la duración no sea mayor a 3 minutos y puede estar en Vimeo o YouTube.<br/><b>2. Tiempo:</b> Deberás definir la cantidad de tiempo (en días) que tu proyecto estará al aire para recibir donaciones. Los tiempos recomendados son de 30, 60 y 90 días como máximo. Este plazo debe ir acorde con tus objetivos y con la estrategia de comunicación que te plantees cumplir.<br/><b>3.- Recompensas:</b> Nuestra plataforma recibe donaciones a partir de $25.000 COP. Deja que tu imaginación vuele y crea recompensas simbólicas para tus donantes. Recomendamos crear 4 recompensas para diferentes valores ($25.000, $50.000, $100.000 y $150.000) pero tu puedes crear las que quieras para los montos que desees recibir, ¡esfuérzate para que éstas sean únicas!<br/><b>4.- Meta:</b> Cantidad de dinero (en COP) que aspiras a recaudar en el plazo al aire y que contribuirá a financiar tu proyecto. Recomendamos considerar que el promedio de recaudo actual por esta vía es de 3 a 5 M COP pero siempre dependerá del esfuerzo que le pongas a la promoción del proyecto.<br/><b>5.- Explicación objetiva y concisa:</b> En LBM contamos con un formato de preguntas para ayudarte a contar tu proyecto. Trata de ser lo más objetivo y conciso posible para que la gente conecte rápido con tu idea. Evita textos largos, pues podrían resultar contraproducentes y lograr menos donaciones.<br/><b>6.- Impacto social claro:</b> Dentro de la explicación sobre tu proyecto, es importante transmitir información clara sobre el impacto que tendrá, que quienes te apoyen puedan hacerse una idea de los resultados a los que contribuirá su donación. Por ejemplo: cantidad de empleos directos creados, cantidad de familias beneficiadas, etc."
+          image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: "¿Cuáles son los tipos de financiamiento de proyectos?"
+          answer: "Hoy LBM apuesta por el “Todo suma”, es decir, tener un proyecto con nosotros tiene tres posibles estados de finalización de campaña:<br/><b>- Proyecto exitoso:</b> cuando logras reunir el total o más de lo requerido en tu proyecto.<br/><b>- Proyecto parcialmente financiado:</b> cuando el recaudo sobrepasa los $500.000 COP sin importar el tamaño de tu meta.<br/><b>- Proyecto no exitoso:</b>cuando no obtienes colaboraciones suficientes para llegar al monto mínimo para desembolso.<br/>Por supuesto, alentamos a todos nuestros emprendedores a lograr el 100% de su meta e incluso a superarla, pues sabemos por experiencia que con esfuerzo y una buena estrategia de comunicación se puede lograr."
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: "¿Pueden recibirse donaciones de otros países?"
+          answer: "Sí, contamos con pasarelas de pago (PayU y MercadoPago) que admiten donaciones con tarjetas de crédito y débito internacionales. Además, admitimos también el pago por PayPal, que resulta útil para transacciones rápidas y seguras desde otros países."
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: "¿Es posible conseguir donaciones después de pasar la meta?"
+          answer: "El éxito de toda campaña de crowdfunding depende de una buena campaña de comunicación, por lo que debes asegurarte de promocionar tu proyecto en tus redes sociales y personales. Además, si alcanzas la meta es bueno que sigas usando tus redes para hacer mucho más grande el impacto planeado del proyecto, así más personas se verán motivadas a apoyar sin tener como límite la meta trazada."
+          image: ~
+        tool_10:
+          title: ~
+          link: ~
+          question: "¿En qué consisten las recompensas?"
+          answer: "Las recompensas son agradecimientos simbólicos para los colaboradores que crean en tu proyecto. Recomendamos hacer volar la imaginación para que sean reconocimientos originales y únicos, que motiven a la gente a apoyarte pero a la vez que no representen mayores costos en tu presupuesto, que de seguro será destinado a la implementación de tu proyecto.<br/>Ejemplos para incentivar tu creatividad:<br/>1. Envía fotos en las que se vea claramente el avance de tu proyecto.<br/>2. Envía cartas escritas con tu puño y letra para crear una relación más cercana con tus colaboradores.<br/>3. Invita a quienes se interesaron por tu proyecto a que lo conozcan directamente.<br/>4. Ofrece talleres de área de tu conocimiento que puedan ser interesantes."
+          image: ~
+      after_project:
+        description: "Descripción de las herramientas después de tu campaña"
+        tool_1:
+          title: "Después de tu campaña.pdf"
+          link: ~
+          question: "¿Qué es un canal?"
+          answer: "Se denomina así al espacio personalizado para la promoción de proyectos por parte de una o más organizaciones que comparten objetivos específicos;  esta vitrina deriva de una alianza previamente firmada entre LBM y una o más instituciones. En este subdominio se subirán los proyectos de la iniciativa/alianza para promocionarlos y solicitar colaboraciones para alcanzar metas económicas. Para ver un ejemplo puedes ingresar a este canal desarrollado en alianza con PNUD: www.clicsporsuenos.littlebigmoney.org"
+          image: ~
+        tool_2:
+          title: ~
+          link: ~
+          question: "¿Qué beneficios tiene contar con un canal?"
+          answer: "Nuestra plataforma tecnológica ofrece a sus aliados:<br/>- Una vitrina exclusiva para la visibilización y financiación de sus iniciativas.<br/>- Una experiencia personalizada para todos los actores (aliados, beneficiarios y colaboradores)<br/>- Una gestión eficaz y transparente de sus ideas y recursos.<br/>- Acompañamiento en todo momento de la campaña, desde la generación de la idea hasta la cierre de la campaña.<br/>- Posibilidad de incentivar donaciones por medio de fondos de contrapartida (de tu organización o de socios institucionales).<br/>- Tarjetas personalizadas que puedes usar para regalar la emoción de donar.<br/>- Dependiendo de la campaña, también apoyamos en: coordinación con proveedores, presencia en eventos y/o capacitaciones al equipo de trabajo."
+          image: ~
+        tool_3:
+          title: ~
+          link: ~
+          question: "¿Quiénes pueden tener un canal?"
+          answer: "Están invitadas todas las organizaciones, públicas o privadas, interesadas en desarrollar un espacio personalizado para (co)financiar proyectos de impacto social o ambiental (empresas sociales, fundaciones,  microempresas o proyectos comunitarios).<br/><br/>Un canal puede ser la solución para una organización que tenga:<br/>-Varios proyectos sociales por promover o fortalecer.<br/>La voluntad (y posibilidad) de cofinanciar iniciativas de alto impacto.<br/>Interés en abordar un tema concreto, apoyar a un grupo determinado o incidir en la problemática de su interés.<br/><br/>El canal le dará mayor visibilidad a la(s) organizaciones que estén presentando y/o co-financiando los proyectos en apoyo de determinado grupo de beneficiarios y su empoderamiento."
+          image: ~
+        tool_4:
+          title: ~
+          link: ~
+          question: "¿Cuál es el costo para tener un canal en LBM?"
+          answer: "Con cada aliado, analizamos las mejores condiciones para la creación del canal, buscando la mejor opción para todos los implicados (filosofía “ganar-ganar”) y el cumplimento de objetivos comunes. Para ello, ofrecemos propuestas económicas personalizadas y adecuadas a las exigencias de las organizaciones que nos contactan. En línea general, se decidirán los recursos necesarios para llevar a cabo la iniciativa de acuerdo a la cantidad de proyectos que se estén trabajando, así como las responsabilidades que se asumirán en cada una de las etapas del proceso.<br/><br/>Cabe mencionar que, independientemente del costo de la campaña, el porcentaje de descuento por costos operacionales y de pasarelas de pagos en cada proyecto (14%) se mantiene para todos los proyectos por igual y se descuenta al momento del desembolso a los emprendedores."
+          image: ~
+        tool_5:
+          title: ~
+          link: ~
+          question: "¿Cuántos proyectos puede tener un canal?¿Hay límites de tiempo?"
+          answer: "No hay límites para el canal, pero la idea detrás de este formato es la de promocionar un número interesante de proyectos que vuelvan potente la iniciativa y le garanticen la máxima visibilidad e impacto. Lo interesante de un canal es la posibilidad de tener un área reservada y, al estar en el marco de una alianza con LBM, la institución aliada puede lanzar diferentes campañas a lo largo del tiempo quizás con objetivos diferentes; por ejemplo, hoy puede crear una campaña para apoyar a 10 agricultores (cada uno sube su proyecto de crowdfunding y logran su meta) y en unos meses tiene la posibilidad de volver a crear otra campaña, esta vez para apoyar a 25 proyectos de jóvenes empresarios, y así la alianza podrá mantenerse activa en el tiempo.<br/><br/>En general, sugerimos tener un mínimo de 6 proyectos y un máximo de 50, para facilitar la logística y ampliar la efectividad del proyecto."
+          image: ~
+        tool_6:
+          title: ~
+          link: ~
+          question: "¿Qué necesitas para tener un canal?"
+          answer: "Una institución aliada deberá contar con proyectos y/o fondos de contrapartida que quiera multiplicar. Para proceder a armar la campaña, se decidirá el número y tipo de proyectos a apoyar y si se cuenta con algún fondo de contrapartida.<br/><br/>Previamente a la creación de un canal se deberán sentar las bases de la alianza y se firmará un convenio, como evidencia del compromiso mutuo de asumir una serie de responsabilidades por parte de todas las organizaciones implicadas.<br/><br/>Una vez firmado el acuerdo algunas de las acciones a seguir son:<br/><br/>Trabajar un concepto que explique y motive a apoyar la causa.<br/>- Selección de los proyectos.<br/>- Definir parámetros de la campaña (tiempo al aire, metas, etc.).<br/>- Una breve descripción para los perfiles de los proyectos.<br/>- Capacitaciones de las organizaciones o emprendedores.<br/>- Lanzamiento de la campaña.<br/>- Difusión y promoción de la campaña en redes y a través de iniciativas offline.<br/>- Desembolso de los montos recaudados.<br/>"
+          image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: "¿Qué significa “fondos de contrapartida” y para qué sirven?"
+          answer: "Los fondos de contrapartida son aportaciones de donantes institucionales, que deciden destinar un monto de dinero a multiplicar las donaciones recibidas por los proyectos, y multiplican (por un número determinado) las aportaciones de los colaboradores individuales. Estos fondos que incentivan la generosidad de los colaboradores, premian los esfuerzos de los proyectos en conseguir fondos, optimizan el uso de los recursos de los socios y valoran las contribuciones de los colaboradores de manera proporcional.<br/><br/>Ejemplo, aplicando una contrapartida 1:1, al registrarse una donación automáticamente el sistema duplica el valor, atrayendo así más donaciones para los proyectos pues a todo el mundo le gusta que su dinero valga doble. "
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: "¿Cuál es el procedimiento para tener un canal?"
+          answer: "1. Manifiéstanos tu interés enviándonos un mensaje a nuestro buzón, en esta misma sección, indícanos tus datos e ideas que tengas en mente.<br/>2. Recibirás comunicación por parte del equipo para concertar una primera reunión y aterrizar las ideas. Juntos definirán los parámetros (causa, número de proyectos, concepto, estrategia comunicación, etc…) y los pasos para tener una campaña exitosa.<br/>3. Una vez llegado a un acuerdo, se firmará un convenio de alianza que formalizará la creación del canal de acuerdo a las especificaciones requeridas por ambas partes.<br/>4. Se iniciará la creación del canal personalizado en nuestra plataforma y subirán los proyectos establecidos para la campaña.<br/>5. Se definirá una fecha para el lanzamiento de todos los proyectos y estarán listos para recibir financiamiento."
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_10:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+      venture_course:
+        description: "Descripción de las herramientas del curso en empredimiento"
+        tool_1:
+          title: "Curso en emprendimiento.pdf"
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_2:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_3:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_4:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_5:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_6:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_10:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+      about_crowdfunding:
+        description: ~
+        tool_1:
+          title: ~
+          link: ~
+          question: "¿Qué es el crowdfunding?"
+          answer: "Es el financiamiento colectivo de un proyecto o iniciativa, que se consigue con la difusión masiva y con los aportes de colaboradores independientes que simpatizan con la causa y/o persiguen algún tipo de beneficio (recompensa, interés, acciones) ofrecido por el responsable del proyecto. Por lo general, las plataformas de crowdfunding son herramientas virtuales, es decir, se encuentran en internet, y pueden ser usadas para diversos fines."
+          image: ~
+        tool_2:
+          title: ~
+          link: ~
+          question: "¿Qué tipos de crowdfunding existen?"
+          answer: "Hay cuatro tipos de crowdfunding divididos en dos categorías distintas:<br/>1. Crowdfunding SIN retorno económico: crowdfunding de donaciones (ánimo filantrópico) y crowdfunding con recompensas (ej.: preventa de un producto nuevo).<br/>2. Crowdfunding CON retorno económico: incluye el crowdfunding de préstamo (peer-to-peer lending) y el crowdfunding de inversión (equity crowdfunding).<br/>En LittleBigMoney trabajamos con la primera categoría, integrando el crowdfunding de donación con el de recompensas, y entendemos las recompensas como retribuciones simbólicas que se entregan a los colaboradores de los proyectos."
+          image: ~
+        tool_3:
+          title: ~
+          link: ~
+          question: "¿Qué diferencia a LittleBigMoney de otras plataformas?"
+          answer: "LBM es la primera plataforma de crowdfunding en Colombia para el desarrollo de proyectos con impacto social o ambiental. Esta solución digital de Fundación Capital nació en 2013 para ofrecer una herramienta alternativa de financiamiento para la población de escasos recursos, que carece de acceso al financiamiento tradicional.<br/><br/>Hoy ofrece su servicio y asesoría personalizada para tres tipos diferentes de actores: colaboradores, emprendedores y socios institucionales. Junto a estos actores y con el apoyo a proyectos sociales y ambientales contribuye al crecimiento del país, y pronto iniciará su presencia en otros países.<br/><br/>Nuestra filosofía es apoyar al máximo los proyectos seleccionados, por eso distinguimos entre financiación total y parcial para favorecer que haya cada vez más proyectos exitosos. Así, si el proyecto reúne toda la financiación solicitada, recibe la calificación de proyecto totalmente financiado, mientras que si reúne un monto inferior al solicitado pero superior a COP 500,000, se considerará parcialmente financiado y también recibirá el monto recaudado. Los proyectos serán considerados no exitosos si recaudan cantidades inferiores a COP 500.000, y en ese caso no recibirán dinero y los aportes se devolverán a los colaboradores a modo de créditos en la plataforma para ser utilizados en otro proyecto activo."
+          image: ~
+        tool_4:
+          title: ~
+          link: ~
+          question: "¿En Colombia es legal el crowdfunding?"
+          answer: "Sí, en Colombia es legal tanto el crowdfunding de donación, así como el que emplea recompensas de tipo simbólico, precisamente los que realizamos en LittleBigMoney. También está permitido el crowdfunding por inversión, pero únicamente para instituciones financieras. En ninguno de estos casos es considerado captación ilegal de fondos."
+          image: ~
+        tool_5:
+          title: ~
+          link: ~
+          question: "¿Qué significa hacer una campaña de crowdfunding?"
+          answer: "Tener una campaña de crowdfunding significa que durante un tiempo determinado (definido por el emprendedor o responsable del proyecto) estará activa la posibilidad de recibir, usualmente a través de una plataforma virtual, donaciones para un proyecto específico. Para ello, se dispone de un espacio destinado a explicar el propósito del proyecto, así como la cantidad de dinero que se necesita reunir en ese plazo de tiempo. La posibilidad de reunir los fondos depende del trabajo de promoción que realice el mismo emprendedor en sus redes sociales: la difusión de su proyecto ayudará a que este sea visto por más y más colaboradores potenciales.<br/><br/>En LBM, las campañas duran 30, 60 o 90 días, según el requerimiento, con un promedio de monto meta solicitado de 3 a 5 millones de pesos colombianos. Todos los proyectos cuentan con un video explicativo del motivo de la campaña y deberán ofrecer una serie de recompensas simbólicas para sus colaboradores."
+          image: ~
+        tool_6:
+          title: ~
+          link: ~
+          question: "¿Cuánto cuesta tener un proyecto crowdfunding?"
+          answer: "Hoy en día existen diversas plataformas de crowdfunding, con diferentes propósitos y alcances geográficos. Cada una de ella es libre de especificar sus políticas y costos asociados.<br/><br/>En LBM, el emprendedor de un proyecto individual no paga para poder acceder al servicio; sin embargo, una vez financiado su proyecto (parcial o totalmente) deberá descontar el 14% del total recaudado para calcular el monto que recibirá en su cuenta bancaria. Este porcentaje corresponde a dos comisiones: una del 6% por costos operativos de la plataforma y la segunda del 8% por costos derivados de las pasarelas de pagos que nos brindan su servicio (MercadoPago, PayU y PayPal)."
+          image: ~
+        tool_7:
+          title: ~
+          link: ~
+          question: "¿Qué tipo de proyectos se pueden encontrar en LBM?"
+          answer: "LBM recibe, evalúa y acepta únicamente aquellos proyectos que tengan un claro impacto social o ambiental y que estén ubicados en Colombia. Dichos proyectos pueden ser de diversas categorías, tales como: agricultura, alimentos, artesanías, educación, energía, medio ambiente, negocios sociales, salud, tecnología o textil. Te invitamos a explorarlas!."
+          image: ~
+        tool_8:
+          title: ~
+          link: ~
+          question: "¿Dónde opera LittleBigMoney?"
+          answer: "Actualmente operamos en Colombia, es decir, todos los proyectos son desarrollados por emprendedores colombianos, pero nuestra comunidad es internacional, por lo que aceptamos colaboraciones desde cualquier parte del mundo por medio de tarjetas de crédito, débito o de cuentas de PayPal.<br/><br/>Adicionalmente, estamos en contacto con varias organizaciones para empezar a apoyar proyectos de otros países de la región, ya que recibir donaciones está permitido en toda América Latina."
+          image: ~
+        tool_9:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
+        tool_10:
+          title: ~
+          link: ~
+          question: ~
+          answer: ~
+          image: ~
     privacy:
       title: "Políticas de Privacidad"
     terms:
@@ -1046,12 +1376,18 @@ es:
         created_projects: "Proyectos creados"
         comments: Comentarios
         credits: Créditos
-        settings: Información Personal
+        settings: "Información Personal"
         unsubscribes: Notificaciones
       user_social:
         email: "Envíame un correo"
         facebook: "Perfil de Facebook"
-        twitter: "Perfil en Facebook"
+        twitter: "Perfil en Twitter"
+    contact_message:
+      subject: Asunto
+      mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
+      success: "Gracias por su mensaje, pronto nos pondremos en contacto con usted"
+      message: Mensaje
+      send_message: "Enviar Mensaje"
     backs:
       anonymous: "Colaboración anónima"
       no_backs: "%{name} no has colaborado a ningún proyecto. Pero sabemos que es sólo cuestión de tiempo! :)"
@@ -1062,13 +1398,14 @@ es:
       your_reward: "Tu recompensa"
       project_owner: "Proyecto por"
       project_name: "Nombre del proyecto"
-      cpf_file: "Cédula"
-      state_inscription_file: "RUT"
+      cpf_file: Cédula
+      state_inscription_file: RUT
       user_id: "Id del Usuario"
       certify_request:
         submit: "Certificar colaboraciones"
         hint: "Seleccione al menos una colaboración para certificar"
         title: "Solicitud de certificado de colaboraciones"
+        description: ~
         description2: "Valide o complete la siguiente información de su perfil, es necesaria para enviar la solicitud"
         description3: "Es necesario un archivo de su cédula y otro del rut para validar su certificado"
         backs_to_certify: "Colaboraciones a certificar"

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class FixProjectsStates < ActiveRecord::Migration
   def up
     execute "

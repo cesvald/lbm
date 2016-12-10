@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Category < ActiveRecord::Base
   has_many :projects
   validates_presence_of :name_pt
@@ -13,5 +14,9 @@ class Category < ActiveRecord::Base
 
   def to_s
     self.send('name_' + I18n.locale.to_s)
+  end
+
+  def icon_text
+    "icon_#{name_es}"
   end
 end

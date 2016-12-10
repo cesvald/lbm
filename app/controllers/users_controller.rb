@@ -1,8 +1,8 @@
-# coding: utf-8
+# -*- encoding : utf-8 -*-
 class UsersController < ApplicationController
   load_and_authorize_resource new: [ :set_email ], except: [ :projects, :authenticate_user ]
   inherit_resources
-  actions :show, :create, :update, :unsubscribe_update, :request_refund, :set_email, :update_email, :uservoice_gadget, :authenticate_user
+  actions :show, :create, :update, :unsubscribe_update, :request_refund, :set_email, :update_email, :uservoice_gadget, :authenticate_user, :change_user
   respond_to :json, only: [:backs, :projects, :request_refund, :authenticate_user]
 
   def uservoice_gadget
@@ -11,7 +11,18 @@ class UsersController < ApplicationController
     end
     render :uservoice_gadget, layout: false
   end
-
+  
+  def contact_and_support
+    ContactMailer.contact(params).deliver
+    flash[:success] = I18n.t('users.contact_message.success')
+    redirect_to :back
+  end
+  
+  def change_user
+    ::Configuration['test_user_email'] = params[:email]
+    redirect_to root_path
+  end
+  
   def show
     show!{
       fb_admins_add(@user.facebook_id) if @user.facebook_id

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Channels::ChannelsSubscribersController < Channels::BaseController
   inherit_resources
   load_and_authorize_resource

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddHowKnowAndMoreLinksToProjects < ActiveRecord::Migration
   def change
     add_column :projects, :how_know, :text
