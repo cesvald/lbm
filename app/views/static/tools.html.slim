@@ -55,11 +55,12 @@
 		  = embedded_svg "lbm/channel-icon.svg", class: "tool-icon"
 		  .tool-text
 		    = t('static.guidelines.after_project').html_safe
-		- if I18n.locale.to_s == 'es'
-			=link_to "#tools", class:"tool-icon-wrapper", id:"option-venture-course" do
-			  = embedded_svg "lbm/header_3.svg", class: "tool-icon"
-			  .tool-text
-			    = t('static.guidelines.venture_course').html_safe
+		/*
+			- if I18n.locale.to_s == 'es'
+				=link_to "#tools", class:"tool-icon-wrapper", id:"option-venture-course" do
+				  = embedded_svg "lbm/header_3.svg", class: "tool-icon"
+				  .tool-text
+				    = t('static.guidelines.venture_course').html_safe
 	#main-tools-container
 		#container-for-backers.tools-container.active
 			.tools-wrapper
