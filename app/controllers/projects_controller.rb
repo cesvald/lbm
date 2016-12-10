@@ -47,8 +47,8 @@ class ProjectsController < ApplicationController
         @banner_image = I18n.t("projects.index.banner_image_#{1 + Random.rand(9)}", :default => "") while @banner_image.empty?
         @categories = Category.with_projects.order("name_#{I18n.locale}").all
 
-        @channels = Channel.not_receive_projects.order("RANDOM()").all
-        @last_channel = Channel.not_receive_projects.last
+        @channels = Channel.visible.order("RANDOM()").all
+        @last_channel = Channel.visible.last
       end
 
       format.json do
