@@ -44,17 +44,18 @@
         .projects_list
           - @profile.group_channels.each do |channel|
             = render 'channels/subchannel', channel: channel
-      .container.other-channel-container
-        .title
-          = image_tag "lbm/channels_icon.png", class: "icon"
-          h2= t('channel.explore_other_channels').html_safe
-        .channels
-          #channels-swiper.swiper-container
-            .swiper-wrapper
-              - @other_channels.each do |channel|
-                = render 'channels/channel', channel: channel
-          #channels-swiper-button-prev.swiper-button-prev
-          #channels-swiper-button-next.swiper-button-next
+      /*
+        .container.other-channel-container
+          .title
+            = image_tag "lbm/channels_icon.png", class: "icon"
+            h2= t('channel.explore_other_channels').html_safe
+          .channels
+            #channels-swiper.swiper-container
+              .swiper-wrapper
+                - @other_channels.each do |channel|
+                  = render 'channels/channel', channel: channel
+            #channels-swiper-button-prev.swiper-button-prev
+            #channels-swiper-button-next.swiper-button-next
   - else
     .projects
       .container
