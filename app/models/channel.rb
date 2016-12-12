@@ -22,7 +22,7 @@ class Channel < ActiveRecord::Base
   scope :not_receive_projects, -> { where(receive_projects: false) }
   scope :visible, -> { where(visible: true) }
   scope :other_channels, ->(exclude_ids){
-    not_receive_projects.where("coalesce(id NOT IN (?), true)", exclude_ids).order('random()')
+    visible.where("coalesce(id NOT IN (?), true)", exclude_ids).order('random()')
   }
 
 
