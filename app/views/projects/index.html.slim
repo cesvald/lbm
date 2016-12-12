@@ -97,8 +97,7 @@
           #channels-swiper.swiper-container
             .swiper-wrapper
               - @channels.each do |channel|
-                - if channel.parent_channel.nil?
-                  == render 'channels/channel', channel: channel
+                == render 'channels/channel', channel: channel
           #channels-swiper-button-prev.swiper-button-prev
           #channels-swiper-button-next.swiper-button-next
       
