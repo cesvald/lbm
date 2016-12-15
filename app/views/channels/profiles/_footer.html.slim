@@ -5,8 +5,9 @@
 		    = link_to t('channels.footer.terms'), t('footer.links.terms_link'), title: t('channels.footer.terms'), target: '_blank'
 		  .cell
 		    = link_to t('channels.footer.privacy_policy'), t('footer.links.policy_link'), title: t('channels.footer.privacy_policy'), target: '_blank' 
-		  .cell
-		    = link_to t('channels.footer.how_it_works', name: @profile.name), channels_about_path, title: t('channels.footer.how_it_works', name: @profile.name), target: '_blank' 
+		  -if not @profile.how_it_works_html.empty?
+			  .cell
+			    = link_to t('channels.footer.how_it_works', name: @profile.name), channels_about_path, title: t('channels.footer.how_it_works', name: @profile.name), target: '_blank' 
 		  .cell
 		    = mail_to @profile.email, t('channels.footer.contact'), title: t('channels.footer.contact'), target: '_blank' 
 	.home-wrapper

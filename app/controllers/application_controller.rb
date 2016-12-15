@@ -56,7 +56,7 @@ class ApplicationController < ActionController::Base
   end
   
   def test_environment?
-    request.original_url.start_with?('https://lbm-cesvald.c9users.io') || request.original_url.start_with?('http://s22.org')
+    request.original_url.start_with?('http://s22.org')
   end
   
   private

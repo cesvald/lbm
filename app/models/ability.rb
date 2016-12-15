@@ -18,12 +18,12 @@ class Ability
     # NOTE: Project authorizations
     can :create, :projects if current_user.persisted?
 
-    can :update, :projects, [:about, :video_url, :uploaded_image, :headline, :pictures] do |project|
-      project.user == current_user && ( project.online? || project.waiting_funds? || project.successful? || project.failed? || project.partial_successful? )
+    can :update, :projects, [:about, :video_url, :uploaded_image, :headline] do |project|
+      project.user == current_user && project.online?
     end
 
     can :manage, :pictures do |picture|
-      picture.project.user == current_user
+      picture.project.user == current_user && picture.project.online?
     end
 
     can :update, :projects, [:identification_file, :rut_file, :comercial_file, :bank_certificate_file, :banking_data_file] do |project|
@@ -31,7 +31,7 @@ class Ability
     end
 
     can :update, :projects do |project|
-      project.user == current_user && ( project.draft? || project.rejected? )
+      project.user == current_user && ( project.draft? || project.rejected? || project.online? )
     end
 
     # NOTE: Reward authorizations
