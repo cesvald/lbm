@@ -1353,6 +1353,7 @@ pt:
         twitter: "Perfil no twitter"
     contact_message:
       subject: Asunto
+      mail_subject: "Mensaje de contacto enviado desde la plataforma"
       mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
       success: "Gracias por su mensaje, pronto nos pondremos en contacto con usted"
       message: Mensaje

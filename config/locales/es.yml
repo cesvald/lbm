@@ -488,7 +488,7 @@ es:
       banner_message_4: "¡Dona ya! Pequeños aportes con GRAN impacto"
       banner_message_5: "Crowdfunding para la Responsabilidad Social Empresarial"
       banner_message_6: "Herramientas y recomendaciones para una campaña exitosa"
-      total_successful_projects: "<span class='color_carrot'>{</span><span class='color_darkblue'> Mas de </span><span class='color_carrot'>%{successful_number} </span><span class='color_darkblue'> Proyectos exitosos </span><span class='color_oceanblue_letter'>& </span><span class='color_darkblue'>cientos de personas cumpliendo sus metas, tú puedes ser el </span><a class='link-underline' href='%{link}'>próximo</a><span class='color_carrot'> }</span>"
+      total_successful_projects: "<span class='color_carrot'>{</span><span class='color_darkblue'> Más de </span><span class='color_carrot'>%{successful_number} </span><span class='color_darkblue'> Proyectos exitosos </span><span class='color_oceanblue_letter'>& </span><span class='color_darkblue'>cientos de personas cumpliendo sus metas, tú puedes ser el </span><a class='link-underline' href='%{link}'>próximo</a><span class='color_carrot'> }</span>"
       know_more: "Conoce más"
       know_more_successful_projects: "Conoce más proyectos exitosos"
       slogan_donate: "Una pequeña colaboración, una gran ayuda"
@@ -858,6 +858,7 @@ es:
       submit: "Enviar tu proyecto!"
       send_project: "Quiero enviar mi proyecto."
       legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
+      access_links: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto"
     twitter:
       take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
     video_embed:
@@ -1384,6 +1385,7 @@ es:
         twitter: "Perfil en Twitter"
     contact_message:
       subject: Asunto
+      mail_subject: "Mensaje de contacto enviado desde la plataforma"
       mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
       success: "Gracias por su mensaje, pronto nos pondremos en contacto con usted"
       message: Mensaje

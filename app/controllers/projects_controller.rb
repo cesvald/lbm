@@ -2,7 +2,7 @@
 class ProjectsController < ApplicationController
 
   include ActionView::Helpers::DateHelper
-  load_and_authorize_resource only: [ :new, :create, :update, :destroy ]
+  load_and_authorize_resource only: [ :create, :update, :destroy ]
 
   inherit_resources
   has_scope :pg_search, :by_category_id, :recent, :expiring, :successful, :partial_successful, :recommended, :not_expired, :near_of
