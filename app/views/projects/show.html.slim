@@ -120,9 +120,6 @@
           | &nbsp; (
           fb:comments-count href="#{request.url}"
           | )
-        = can?(:update, @project, :identification_file).to_s
-        = (@project.user == current_user).to_s
-        = @project.draft?.to_s
         - if can? :update, @project, :about
           = link_to '#edit', id: 'edit_link' do
             = t('.menu.edit')

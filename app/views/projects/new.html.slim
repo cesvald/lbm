@@ -119,7 +119,7 @@
                   .bootstrap-alert
                     = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
                     .alert
-                      .important= t('.important_html')
+                      .important= t('.important_html', minimum: number_to_currency(::Configuration[:partial_goal], unit: 'COP', precision: 0, delimiter: '.'))
                   = form.label :goal, "8. #{t('formtastic.labels.project.goal')}".html_safe
                   .input-wrapper
                     = form.text_field :goal, class: "#{'error' if @project.errors[:goal].present?}"

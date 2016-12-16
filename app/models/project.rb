@@ -128,7 +128,8 @@ class Project < ActiveRecord::Base
   validates_format_of :video_url, with: /(https?:\/\/(www\.)?vimeo.com\/(\d+))|(^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*)|(youtu\.be\/([^\?]*))/, message: I18n.t('project.video_regex_validation'), allow_blank: true
   validates_format_of :name, with: /^[a-z\d\-_\s]+$/i, message:  I18n.t('project.name_regex_validation')
   validate :permalink_cant_be_route, allow_nil: true
-
+  validates_numericality_of :goal, greater_than_or_equal_to: ::Configuration[:partial_goal].to_f
+  
   def self.between_created_at(start_at, ends_at)
     return scoped unless start_at.present? && ends_at.present?
     where("created_at between to_date(?, 'dd/mm/yyyy') and to_date(?, 'dd/mm/yyyy')", start_at, ends_at)
@@ -314,7 +315,7 @@ class Project < ActiveRecord::Base
   def permalink_cant_be_route
     errors.add(:permalink, I18n.t("activerecord.errors.models.project.attributes.permalink.invalid")) if Project.permalink_on_routes?(permalink)
   end
-
+  
   def self.permalink_on_routes?(permalink)
     permalink && self.get_routes.include?(permalink.downcase)
   end

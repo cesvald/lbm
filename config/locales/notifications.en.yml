@@ -40,9 +40,9 @@ en:
       header: "Project successful"
       text_html: ~
     project_partial_success:
-      subject: ~
-      header: ~
-      text_html: ~
+      subject: "Great! The project %{project_name} was partially funded on LittleBigMoney "
+      header: "Project partially funded"
+      text_html: "Hello, %{user_name}!<br/><br/>The project %{project_link} you supported was successfully funded on LittleBigMoney!<br/>Summary:<br/><br/>The project had %{total_backers} wonderful collaborators (yourself included), raised %{pledged} and achieved %{progress}% of the established goal :D<br/><br/>Below is the project´s detailed budget:<br/>%{project_budget} <br/>Important information: The LittleBigMoney team will get in touch with the entrepreneur so that he or she can begin to plan the distribution of the rewards with you directly (if you requested a reward).<br/><br/>In the meantime, share this great news with everyone!<br/><br/><a href='http://www.facebook.com/share.php?u=%{project_url}&t=Great! The project %{project_name_escaped}, that you supported, was partially funded in LittleBigMoney!'><img src='http://littlebigmoney.org/assets/auth/facebook_64.png' title='facebook' class='social'/></a><a href='http://twitter.com/?status=Great! The project %{project_name_escaped}, that you supported, was partially funded in LittleBigMoney! %{project_url}'><img src='http://littlebigmoney.org/assets/auth/twitter_64.png' title='facebook' class='social'/></a><br/><br/><strong>Important information about your contribution you may need to refer to::<br/><br/>Amount of the contribution:%{backer_value}<br/>%{reward}<br/>Date of the contribution:%{backer_created_at}<br/>ID of the contribution:%{backer_id}<br/><br/></strong>If you would like to get in touch with the project owner, %{project_user}, you may write to: %{project_mail}"
     project_unsuccessful:
       subject: "Your project was not successfully supported, but we would like your feedback :)"
       header: "Your project was not successfully supported :("
@@ -73,14 +73,14 @@ en:
     project_received_channel:
       subject: "Your project was received by the channel"
       header: "Your project was received by the staff of the channel"
-      text_html: ~
+      text_html: "Hello,<br/><br/>Thank you very much for completing the form and sending us your project. Soon it will be a part of this great channel!<br/><br/>From now on you must check your email regularly as this will be our method of communicating the steps you must follow leading up to the launch of your project.<br/><br/>The LittleBigMoney team "
     project_visible:
       subject: "Your project is now online at LittleBigMoney"
       header: "Now it's a reality"
       text_html: ~
     project_review:
-      subject: ~
-      header: ~
+      subject: "Your project is under review"
+      header: "Project under review"
       text_html: ~
     project_rejected:
       subject: "Your project does not match the profile that LittleBigMoney is looking for now"
@@ -108,7 +108,7 @@ en:
     credits_warning:
       subject: "You have %{amount} COP in credits on LittleBigMoney"
       header: "Why not support another project?"
-      text_html: ~
+      text_html: "Hello, <strong>%{user}</strong><br/><br/>You currently have %{credits} COP in credits on LittleBigMoney. This could be the right time to support another project that interests you.<br/><br/>%{recommended}Here are step-by-step instructions for using your credits:<br/><br/>1-<a href='%{explore_url}'>Choose the project you want to use your credits on.<br/><br/>"
     backer_confirmed_after_project_was_closed:
       subject: "New support confirmed for the project '%{project_name}' after 7 days of the end of the deadline"
       header: "New support confirmed"

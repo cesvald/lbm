@@ -28,11 +28,11 @@
 				= form_tag contact_and_support_users_path, method: :get do
 					.row
 						.col-md-4.col-md-offset-2.col-xs-12
-							= text_field_tag :name, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.full_name')
-							= text_field_tag :email, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.email')
-							= text_field_tag :subject, nil, class: 'lbm-input form-control', placeholder: t('users.contact_message.subject')
+							= text_field_tag :name, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.full_name'), required: true
+							= text_field_tag :email, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.email'), required: true
+							= text_field_tag :subject, nil, class: 'lbm-input form-control', placeholder: t('users.contact_message.subject'), required: true
 						.col-md-4.col-xs-12
-							= text_area_tag :message, nil, class: 'lbm-textarea form-control', placeholder: t('users.contact_message.message')
+							= text_area_tag :message, nil, class: 'lbm-textarea form-control', placeholder: t('users.contact_message.message'), required: true
 					.row
 						.col-md-10.submit-wrapper
 							= submit_tag t('users.contact_message.send_message'), class: 'btn btn-primary'
