@@ -1034,176 +1034,322 @@ en:
       for_backers:
         description: "Descripción de las herramientas para donantes"
         tool_1:
-          title: "¿Cómo usar mis créditos?.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUVGVvTnE0b3BHYXM"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "What is the process for making a donation?"
+          answer: |-
+            In order to donate to a project on LittleBigMoney you must first register on the platform. Regardless of your country of residence, you can do this by providing your email account and creating a password or by signing up directly through your Facebook account. Once you have joined our community you will be ready to make a donation to the project of your choice by following these steps:<br/>
+            1. Go to “Donate to a project”.<br/>
+            2. Select any project you like.</br>
+            3. Learn what it’s about.<br/>
+            4. If you want to help out, select the &quot;I want to contribute&quot; option, choose an amount and method of payment, and you’re done!<br/>
+            5. Look for more projects that inspire you!<br/>
+            Please remember that you can only donate to projects that are “on air”, that are active and able to receive donations, during which time the “I want to contribute” button will be visible on the project profile. You will also be able to see the amount raised so far and the remaining number of days in the campaign.
+          image:
         tool_2:
-          title: "¿Qué sucedió con mi colaboración?pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUVGVvTnE0b3BHYXM"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "What payment methods can I use to collaborate?"
+          answer: "For donations made from within Colombia we accept a variety of payment methods including credit card, debit card, Baloto and Efecty. For donations coming from other countries we use PayPal and also accept credit and debit cards that are authorized to make international payments via PayU or MercadoPago."
+          image:
         tool_3:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Is there a minimum amount for donations?"
+          answer: "Yes, our platform accepts donations starting at $25,000 COP*.<br/>*equal to 8.3 USD (1 USD = approximately 3,000 COP)"
           image: ~
         tool_4:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Can I make a donation from another country or in a currency other than the Colombian peso?"
+          answer: "Donations can be made from any country, but they will be collected in Colombian pesos (COP) if payment is made using PayU or MercadoPago with a debit or credit card, and in US dollars (USD) if the donation is made through PayPal using whatever payment method you have registered. Keep in mind that 1 USD = approximately 3,000 COP (updated September 2016)."
           image: ~
         tool_5:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What are the rewards? When will I receive them?"
+          answer: |-
+            The rewards offered on our platform are a symbolic form of recognition that entrepreneurs create and deliver depending on the contribution received. They can be seen on the project profile and are also shown when you donate. You must select the reward that corresponds to the amount you wish to contribute, or you may select the option to not receive the reward and the entrepreneur will take note.<br/><br/>
+            The entrepreneur will deliver the rewards within the time frame that he or she has specified. This time frame begins when the campaign ends, since only then may the success of the campaign be confirmed. The exact number of days will be communicated in the message that each collaborator receives after having made a contribution.
           image: ~
         tool_6:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Can I still contribute to a project that has already reached its goal?"
+          answer: "Yes. At LBM the only factor that leads to the conclusion of a campaign is time (when the number of days specified by the entrepreneur runs out). In this way, projects that have reached their goal can continue to raise funds without any limits until time runs out."
           image: ~
         tool_7:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What happens if a project does not reach its goal?"
+          answer: "At LBM we are aware that it is often more difficult for some entrepreneurs to reach their goals than it is for others, but their efforts must be rewarded nonetheless. For this reason projects may reach two levels of funding: partial or full. For a project to receive partial funding it must raise over $500,000 COP; at this point a deposit into the entrepreneur’s bank account becomes a reality. When a project does not reach this minimum amount, the donations received will be returned to collaborators in the form of credits to be used on the platform in support of another active project."
           image: ~
         tool_8:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What are the credits and how can I use them?"
+          answer: |-
+            The credits appear in the collaborator’s account when the project he or she has contributed to does not achieve the minimum amount needed for the entrepreneur to receive the funding ($500,000 COP). The credits are equal to the amount donated and are put into the collaborator’s account to be used on any other active project on the platform. If you would like to use your credits, follow these steps:<br/>
+            1. Sign into LittleBigMoney using your email and password or your Facebook account.<br/>
+            2. Choose a project to support.<br/>
+            3. When making your donation you will be asked to choose a payment method; select the “Credits” tab.<br/>
+            If you so require, you may ask for your money to be refunded.
           image: ~
         tool_9:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Do you issue donation receipts?"
+          answer: "Yes, because we are an initiative of Fundación Capital we are able to issue donation receipts to legal and natural persons residing in Colombia or the United States who require them for tax purposes. Receipts are issued once the request has been made by the collaborator by selecting “Request donation receipt” on their user profile, where they must provide the required information."
           image: ~
         tool_10:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Are there other ways to collaborate that do not involve donating money?"
+          answer: "When an entrepreneur or organization wants or needs support in the form of labor (technical assistance, volunteer, etc.), this can be considered an in-kind donation. If the option does not appear on the profile, it means that it is not available for that particular project."
           image: ~
       about_project:
         description: "Descripción de las herramientas sobre projectos"
         tool_1:
-          title: "¿Cómo subir tu proyecto?.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title: 
+          link:
+          question: "What are the steps to having a project on LittleBigMoney?"
+          answer: |-
+            At LBM we accept projects in the idea phase (seed capital) and those in progress (strengthening) that have a social or environmental impact. If you have such a project and wish to show it on our platform, here are the steps to follow:<br/>
+            1.- Go to www.littlebigmoney.org and register. You can do so by using your email address or Facebook account.<br/>
+            2.- Click on “Submit a project” and complete the form by answering each question concretely and precisely.<br/>
+            3.- After submitting the form you will receive a confirmation email, and if your project is accepted you will also receive personalized advice.<br/>
+            4.- You will then begin the process with the LBM Operations Officer to improve your project profile. In the meantime, it will remain as a draft* and you  be able to add the rewards for your collaborators.<br/>
+            5.- Once your profile is ready, you will specify a date for the launch of your campaign and you can begin to raise your funding.<br/><br/>
+            *The information in this draft is not definitive, but remember that the more thoughtful and coherent you are when you submit your project, the sooner it will go online. We recommend that you ask friends to give you feedback on your project profile in order to improve it even more. Remember that your project profile is what allows donors to learn about your project when it is live on the site.
+          image:
         tool_2:
-          title: "Antes de subir tu proyecto.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "Are there any requirements for setting up a project on LBM?"
+          answer: |-
+            Yes. In order to be admitted to our platform the first requirement is to have a project with a social or environmental impact. Secondly, the fundraising goal must be realistic and attainable when considering the entrepreneur’s strategy for promoting his or her project on social media. Finally, as a way to ensure project success, we ask that all entrepreneurs meet the following requirements before they can receive the money raised:<br/>
+            Individuals (i.e. fundraising as an individual) must:<br/>
+            - Be of legal age.<br/>
+            - Be Colombian citizens and have an up-to- date RUT.<br/>
+            - Have a checking or savings account with a banking institution.<br/>
+            - Sign a cooperation agreement upon receiving the funds raised.<br/>
+            Entities (i.e. fundraising as a group, organization or business) must:<br/>
+            - Present registration with the chamber of commerce and an up-to- date RUT.<br/>
+            - Have a checking or savings account with a recognized banking institution.<br/>
+            - Sign a cooperation agreement upon receiving the funds raised.<br/>
+          image:
         tool_3:
-          title: "¿Cómo promuevo mi proyecto?.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "Is it possible to register a project on LittleBigMoney and on another crowdfunding platform at the same time?"
+          answer: "Yes, but we do not recommend it. As you know, running a crowdfunding campaign implies promoting and managing your project on social media, where you direct your audience to a platform in an attempt to raise as much money in donations as possible. If you were to run two campaigns at the same time, your audience could get confused and your donations would end up being divided between different platforms, making it harder for you to reach your goal."
+          image:
         tool_4:
-          title: "Crear buenas recompensas.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "What is the cost of having a project on LittleBigMoney?"
+          answer: "No prior payment is required to access LittleBigMoney services if submitting only one project at a time for the platform. If the project achieves either partial or full funding, 14% will be subtracted from the total amount raised before it reaches the entrepreneur in order to cover LittleBigMoney’s operating costs (6%) and payment gateway costs (8%)."
+          image:
         tool_5:
-          title: "¿Cómo crear un buen video?"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUR3I5SlJjLTdxbzA"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "Do I have to return the money I receive?"
+          answer: "No, at LBM we do crowdfunding for donations, meaning that everything you receive through contributions is non-refundable to the collaborators. You must act with responsibility and transparency toward the people who supported you, use the funds raised to implement the project as described on the profile and follow through on the rewards you promised to your collaborators."
+          image:
         tool_6:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What is included on a project profile?"
+          answer: |-
+            On LBM all project profiles must contain the following:<br/>
+            1.- <b>Video:</>b> This is how you present your project and let people know what your initiative is all
+            about. It must clearly and quickly state the purpose of your project in order to engage
+            collaborators and inspire them to support your projectcaptivate and make donors fall in love with
+            your idea. We recommend that your video not exceed 3 minutes. It can be on Vimeo or
+            YouTube.<br/>
+            2. <b>Time frame:</>b> You must state the number of days your project will be on air and able to
+            receive donations. The recommended time frames are 30, 60 or a maximum of 90 days; the one
+            you choose should fit with your objectives and the communications strategy you plan to
+            implement.<br/>
+            3.- <b>Rewards:</>b> Our platform accepts donations starting at $25,000 COP. Let your imagination run
+            free and come up with symbolic rewards for your donors. We recommend you create four
+            different rewards for different amounts ($25,000, $50,000, $100,000 and $150,000 COP), but
+            you are free to offer any reward for any amount you wish to receive. Put in the effort to make
+            your rewards unique!<br/>
+            4.-<b>Goal:</>b> The amount of money (in COP) that you aim to raise within the stated time frame and
+            that will contribute to the funding of your project. Please take into consideration that the average
+            amount raised through the platform is currently 3 to 5 million COP, but this will always be
+            dependent on the effort you put in to promoting your project.<br/>
+            5.- <b>Concise and objective explanation:</>b> LBM uses a questionnaire form to help you describe
+            your project. Try to be as concise and objective as possible so that people can quickly connect
+            with your idea. Avoid long explanations, as these can be counterproductive and lead to fewer
+            donations.<br/>
+            6.- <b>Clear social impact:</>b> In your project explanation, it is important to convey clear information
+            about the impact it will have so that those who support you can get an idea of the results their
+            donations will help to achieve. These might include the number of jobs that will be directly
+            created, the number of families that will benefit, etc.
           image: ~
         tool_7:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What are the different kinds of project funding?"
+          answer: |-
+            LBM takes a kind of “flexible funding” approach, which means that there are three possible campaign outcomes when you have a project with us:<br/>
+            - <b>Successful project:</b> when you raise the required full amount for your projectof your goal or more.<br/>
+            - <b>Partially funded project:</b> when the amount raised exceeds $500,000 COP, regardless of your funding goal.<br/>
+            - <b>Unsuccessful project:</b> when you do not receive sufficient donations to reach the
+            minimum amount required for payout.<br/>
+            We of course encourage all of our entrepreneurs to reach their goals and even surpass them.
+            We know from experience that with effort and a good communications strategy, it can be done.
           image: ~
         tool_8:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Is it possible to receive donations from other countries?"
+          answer: "Yes. We use payment gateways (PayU and MercadoPago) that allow donations to be made with international credit and debit cards. Donors also have the option of using PayPal, which is useful for carrying out fast and secure transactions from other countries."
           image: ~
         tool_9:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Can I continue to receive donations after having reached my goal?"
+          answer: "The success of any crowdfunding campaign is reliant on a good communications strategy; you must therefore be sure to promote your project on social media and through your personal connections. If you reach your goal, it’s a good idea to continue networking in order to plan a much greater impact for your project, and in this way more people will feel motivated to support it without being limited by the initial target."
           image: ~
         tool_10:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What are the rewards?"
+          answer: |-
+            The rewards are symbolic ways of saying thank you to the collaborators who believe in your
+            project. We encourage you to be imaginative and to come up with original and unique rewards
+            that motivate people to support you but that will not require dipping into your funding, which of
+            course will should go towards implementing your project.<br/>
+            Here are some examples to stimulate your creativityhelp inspire you:<br/>
+            1. Send photos that clearly depicshowt the progress of your project.<br/>
+            2. Send handwritten letters to build a closer relationship with your collaborators.<br/>
+            3. Invite those who showed an interest in your project to see it firsthand.<br/>
+            4. Offer workshops in your area of expertise that could be of interest.
           image: ~
       after_project:
         description: "Descripción de las herramientas después de tu campaña"
         tool_1:
-          title: "Después de tu campaña.pdf"
+          title:
           link: ~
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          question: "What is a channel?"
+          answer: "This is how we refer to a personalized space to promote projects used by an organization, or group of organizations with common objectives, to promote projects. The showcaseA channel, which has it’s own subdomain on the LBM site, is made possible through a partnership signed by LBM and one or more institutions. In this subdomain, the initiative/partnership posts projects in order to promote them and solicit contributions to reach funding goals. If you wish tTo see an example you can go to this channel, developed in partnership with UNDP: www.clicsporsuenos.littlebigmoney.org"
+          image:
         tool_2:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What are the benefits of having a channel?"
+          answer: |-
+            Our technology platform offers its partners the following:<br/>
+            - An exclusive showcase for the dissemination and financing of your initiatives.<br/>
+            - A personalized experience for all those involved (partners, beneficiaries and
+            collaborators).<br/>
+            - Efficient and transparent management of your ideas and resources.<br/>
+            - Support throughout the campaign, from the generation of the idea to the closing of the
+            campaign.<br/>
+            - The possibility of encouraging donations through matching funds (from your organization
+            or institutional partners).<br/>
+            - Personalized cards that you can use to inspire the giving spirit.<br/>
+            - Depending on the campaign, we also offer support in the following areas: coordination
+            with suppliers, presence at events and/or team training.
           image: ~
         tool_3:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Who can have a channel?"
+          answer: |-
+            All organizations, public and private (social enterprises, foundations, microenterprises and
+            community projects), interested in developing a personalized space to (co)finance projects with
+            a social or environmental impact are invited to have their own channel.<br/><br/>
+            A channel can be the solution for an organization with:<br/>
+            - Several social projects to promote or grow.
+            - The desire (and ability) to co-finance high-impact initiatives.<br/>
+            - An interest in addressing a specific issue, supporting a particular group or having an
+            impact on a problem of its concernit is concerned with.<br/><br/>
+            Channels give greater visibility to the organization(s) presenting or co-financing projects that
+            support a specific group of beneficiaries and their empowerment.
           image: ~
         tool_4:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What is the cost of having a channel on LBM?"
+          answer: |-
+            We analyze the conditions for the creation of the channel on a case-by- case basis in order to
+            come up with the best option for all parties involved (the win-win philosophy) and to ensure that
+            common goals are attainable. Our offers are economical, personalized and appropriate to the
+            needs of the organizations them. In general terms, the resources necessary to follow
+            through on each initiative will be decided on in accordance with the number of projects in
+            progress as well as the responsibilities to be taken at each stage.<br/><br/>
+            It should be noted that, regardless of the cost of the campaign, the percentage that is deducted
+            due to operative costs and payment gateways for each project (14%) remains the same for all
+            projects and is deducted when the money is deposited into the entrepreneur’s account.
           image: ~
         tool_5:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "How many projects can one channel have? Are there any time limits?"
+          answer: |-
+            There are no limits for the channels, but the idea behind the format is to promote a good
+            number of projects so as to make the initiative strong and guarantee maximum visibility and
+            impact. The benefit of a channel is the opportunity for the partner institution to have a reserved
+            area and, thanks to the partnership with LBM, the ability to launch different campaigns over
+            time, perhaps even with different objectives. For example, on day one a
+            campaign could be launched to support 10 farmers (each one posts a crowdfunding project and
+            reaches his or her goal) and a few months later
+            another campaign could be created on the same channel, this time to support 25 projects for
+            young entrepreneurs. This way, the partnership remains active over time.<br/><br/>
+            In general, we suggest having a minimum of six projects and a maximum of 50, so as to
+            facilitate logistics and widen the effectiveness of the project.
           image: ~
         tool_6:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What do you need in order to have a channel?"
+          answer: |-
+            Partner institutions must have projects and/or matching funds that they are looking to multiply.
+            In order to put a campaign together, the type and number of projects to support is decided on,
+            along with whether or not there will be a matching fund.<br/><br/>
+            Before a channel is created, discussions between LBM and
+            the interested organization determine the size, scope and appropriateness of a channel,
+            developing into a partnership and eventually a signed agreement to formalize the
+            mutual commitment that all organizations involved have made to taking on a series of
+            responsibilities.<br/><br/>
+            Here are some of the actions that must be taken once the agreement has been signed:<br/><br/>
+            - Work on a vision that explains the cause and motivates support for it.<br/>
+            - Select the projects.<br/>
+            - Establish the parameters of the campaign (time on air, goals, etc.).<br/>
+            - Write a brief description for the project profiles.<br/>
+            - Train the organizations or entrepreneurs.<br/>
+            - Launch the campaign.<br/>
+            - Spread and promote the campaign on social media and through offline initiatives.<br/>
+            - Deposit the funds raised.<br/>
           image: ~
         tool_7:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What are matching funds and what are they for?"
+          answer: |-
+            Matching funds are contributions made by institutional donors who have decided to allocate a
+            certain amount of money in order to multiply, by a predetermined amount, the contributions that
+            individual collaborators make to the projects. These funds encourage collaborators to give
+            generously while also rewarding the efforts of the projects to raise money, optimizing the
+            partner’s use of resources and valuing collaborators’ contributions proportionately.<br/><br/>
+            To give an example, if we apply a match of 1:1, the system will automatically double the value
+            when a donation is made. This attracts more donations for the projects since everyone likes the
+            idea of their money being worth double.
           image: ~
         tool_8:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What is the process for getting a channel?"
+          answer: |-
+            1. Let us know you are interested by sending a message to our mailbox, which you can find in this section. Include your contact information and the ideas you have in mind.<br/>
+            2. You will be contacted by the team to arrange an initial meeting in which your ideas can start to take shape. Together you will establish the parameters (cause, number of projects, vision, communications strategy, etc.) and the steps towards a successful campaign.<br/>
+            3. Once a deal has been reached, a partnership agreement will be signed to formalize the creation of the channel in accordance with the specifications required by both sides.<br/>
+            4. The process to create the personalized channel on our platform will begin and the projects chosen for the campaign will be posted.<br/>
+            5. A date will be set for the launch of all of the projects and they will be ready to receive funding.
           image: ~
         tool_9:
           title: ~
@@ -1282,52 +1428,72 @@ en:
       about_crowdfunding:
         description: "Descripción de las herramientas todo sobre CrowdFunding"
         tool_1:
-          title: "Modalidades de financiación.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUS1ptQjJKZXFFRHc"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "What is crowdfunding?"
+          answer: "Crowdfunding is the collective funding of a project or initiative, raised through campaigning (frequently virtually) and with contributions from independent collaborators who want to support the cause and/or support the initiative in exchange for some kind of benefit (such as a reward, interest or shares) offered by the promoter of the project. Crowdfunding platforms are usually virtual tools—meaning they are found on the internet—and may be used for a variety of aims."
+          image:
         tool_2:
-          title: "Concepto Legal.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUS1ptQjJKZXFFRHc"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "What types of crowdfunding are there?"
+          answer: |-
+            There are four types of crowdfunding which can be divided into two categories:<br/>
+            1. Crowdfunding WITHOUT any economic return: crowdfunding for donations (in the spirit of giving) and crowdfunding with rewards (eg. presales of a new product).<br/>
+            2. Crowdfunding WITH an economic return: peer-to- peer lending and investment crowdfunding, also known as equity crowdfunding.<br/>
+            At LittleBigMoney we work within the first category, combining crowdfunding for donations and crowdfunding with rewards, where the rewards given to collaborators are symbolic.
+          image:
         tool_3:
-          title: "¿Qué es un canal?.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUS1ptQjJKZXFFRHc"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "How is LittleBigMoney different from other platforms?"
+          answer: |-
+            LBM is the first crowdfunding platform in Colombia for the development of projects with a social
+            or environmental impact. Fundación Capital created this digital solution in 2013 with the aim
+            of offering an alternative funding tool for people with scarce resources who lack access to
+            traditional funding.<br/><br/>
+            Today LBM offers its services and personalized advice to three different groups: collaborators,
+            entrepreneurs and institutional partners. Alongside these groups it supports social and
+            environmental projects and therefore contributes to the country’s growth. LBM will soon initiate
+            activities in other countries.<br/><br/>
+            Our philosophy is to support selected projects to the greatest degree possible, and for
+            this reason we differentiate between partial and total funding in order to ensure an
+            ever-growing number of successful projects. If a project reaches its funding goal it is considered
+            to be a fully funded project, whereas a project that does not reach its goal but manages to raise
+            over $500,000 COP (Colombian pesos) is considered partially funded and will also receive the
+            amount raised. Projects are considered unsuccessful when they raise less than $500,000 COP,
+            in which case they do not receive the money. Donations are instead returned to collaborators as
+            credits to be used on the platform in support of another active project.
+          image:
         tool_4:
-          title: "Reglas de oro.pdf"
-          link: "https://drive.google.com/drive/folders/0B5yleHdyw7uUS1ptQjJKZXFFRHc"
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          title:
+          link:
+          question: "Is crowdfunding legal in Colombia?"
+          answer: "Yes, in Colombia both crowdfunding for donations and crowdfunding with symbolic rewards such as those offered through LittleBigMoney are legal. Investment crowdfunding is also permitted, but only for financial institutions. In none of these cases is the practice considered illegal fundraising."
+          image:
         tool_5:
           title: ~
           link: ~
-          question: ~
-          answer: ~
-          image: "https://docs.google.com/document/d/1XWH7AQUV_0gN9XA5e3DkMKi0OfvM8shhaO55d9e_t9E/edit"
+          question: "What does it mean to run a crowdfunding campaign?"
+          answer: "In a crowdfunding campaign, people can donate to a specific project, usually via a virtual platform, during a specific period of time set by the entrepreneur or project manager. The platform provides a space to describe the purpose of the project and to specify the amount of money needed and the time frame in which it is to be raised. Whether or not the funds are raised depends on the work done by the entrepreneur to promote the project (usually on social media); campaigning will allow more and more potential collaborators to become aware of the project.<br/><br/> At LBM, campaigns last 30, 60 or 90 days—depending on their specific needs—with an average funding goal of 3 to 5 million Colombian pesos. All projects have a video explaining the motives for the campaign and must offer collaborators a series of symbolic rewards."
+          image:
         tool_6:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "How much does it cost to have a crowdfunding project?"
+          answer: "There are many different crowdfunding platforms, each with their own purpose and geographic scope. They are free to determine their own policies and associated costs.<br/><br/> At LBM, the entrepreneur running an individual project does not pay to access the service; however, once the project is funded (either partially or fully), 14% is subtracted from the total money raised before it is deposited into the bank account of the entrepreneur. This amount is used to pay two commissions: 6% for the operative costs of the platform and 8% for the payment gateways that provide us their services (MercadoPago, PayU and PayPal)."
           image: ~
         tool_7:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "What kind of projects can be found on LBM?"
+          answer: "LBM receives, evaluates and accepts proposals only for those projects that have a clear social or environmental impact and that are located in Colombia. These projects may pertain to a wide range of categories such as agriculture, arts and crafts, education, energy, environment, food, health, social enterprise, technology or textiles. We invite you to explore them!"
           image: ~
         tool_8:
           title: ~
           link: ~
-          question: ~
-          answer: ~
+          question: "Where does LittleBigMoney operate?"
+          answer: "We currently operate in Colombia, which is to say that all projects are developed by Colombian entrepreneurs, but our community is international as we accept collaborations from around the world using credit and debit cards and Paypal accounts.<br/><br/> In addition, we have been in contact with several organizations to begin supporting projects in other countries in the region, since receiving donations is permitted across all of Latin America."
           image: ~
         tool_9:
           title: ~

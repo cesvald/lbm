@@ -1171,7 +1171,7 @@ es:
       after_project:
         description: "Descripción de las herramientas después de tu campaña"
         tool_1:
-          title: "Después de tu campaña.pdf"
+          title:
           link: ~
           question: "¿Qué es un canal?"
           answer: "Se denomina así al espacio personalizado para la promoción de proyectos por parte de una o más organizaciones que comparten objetivos específicos;  esta vitrina deriva de una alianza previamente firmada entre LBM y una o más instituciones. En este subdominio se subirán los proyectos de la iniciativa/alianza para promocionarlos y solicitar colaboraciones para alcanzar metas económicas. Para ver un ejemplo puedes ingresar a este canal desarrollado en alianza con PNUD: www.clicsporsuenos.littlebigmoney.org"
