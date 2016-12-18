@@ -10,7 +10,7 @@ wb.add_worksheet(name: "Colaboradores") do |sheet|
   for user in @users do
     sheet.add_row([
       user.id,
-      user.name,
+      (user.name.blank? ? user.full_name : user.name),
       user.email,
       (user.user_total ? user.user_total.sum : 0),
       user.credits

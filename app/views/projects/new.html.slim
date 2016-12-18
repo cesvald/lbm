@@ -1,4 +1,6 @@
 #page_content
+  #discount-hidden-text
+    = t('projects.new.discount_hidden_text').html_safe
   .container
     .start_content
       .title
@@ -8,19 +10,39 @@
         h2= t('.subtitle')
         = render partial: 'channels/projects/banner'
         .bootstrap-twitter
-      		#send-project-container.row
-      		    .col-xs-12.adjust-margin
-      		      .row
-      		        .col-xs-12
-      		          = image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
-      		          p.send-project-title= t('static.guidelines.send_project_title')
-      		          = image_tag 'lbm/plain-icon.png', class: "plain-icon"
-      		          .send-project-points
-      		            .project-point= t('static.guidelines.project_send.phrase_1')
-      		            .project-point= t('static.guidelines.project_send.phrase_2')
-      		            .project-point= t('static.guidelines.project_send.phrase_3')
-      		            .project-point= t('static.guidelines.project_send.phrase_4')
-      		            .project-point= t('static.guidelines.project_send.phrase_5')
+          #send-project-steps.row
+            .col-xs-10.col-xs-offset-1
+              .row
+                .col-xs-3.col
+                  = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_1_title')
+                  .step-text= t('projects.new.step_1_text')
+                .col-xs-3.col
+                  = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_2_title')
+                  .step-text= t('projects.new.step_2_text')
+                .col-xs-3.col
+                  = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_3_title')
+                  .step-text= t('projects.new.step_3_text')
+                .col-xs-3.col
+                  = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_4_title')
+                  .step-text= t('projects.new.step_4_text')
+                .step-footer= t('projects.new.step_footer')
+          #send-project-container.row
+            .col-xs-12.adjust-margin
+              .row
+                .col-xs-12
+                  = image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
+                  p.send-project-title= t('static.guidelines.send_project_title')
+                  = image_tag 'lbm/plain-icon.png', class: "plain-icon"
+                  .send-project-points
+                    .project-point= t('static.guidelines.project_send.phrase_1')
+                    .project-point= t('static.guidelines.project_send.phrase_2')
+                    .project-point= t('static.guidelines.project_send.phrase_3')
+                    .project-point= t('static.guidelines.project_send.phrase_4')
+                    .project-point= t('static.guidelines.project_send.phrase_5')
       /*
         .legend-wrapper
           .legend-title-wrapper

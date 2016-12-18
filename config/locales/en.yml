@@ -858,6 +858,17 @@ en:
       submit: "Submit the project"
       send_project: "I want to submit my project"
       legend_html: "After filling in the form below, you will receive a project page in draft mode. In this draft you can add the rewards for your supporters. You can also share the page with your friends to collect feedback and sharpen your project even more.<br><br>The information filled in below is not definitive, but remember that the more consistent you are in your project submission, the faster it will go live.<br><br><b>Very Important:</b> <i>LittleBigMoney is a platform with diverse levels of supervision, which means that our board will evaluate the focus, the feasibility and consistency of your project during the draft. We hope you understand that if your project does not comply with our selection criteria</a>, it may be refused by the team of curators.</i>"
+      access_links: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto"
+      step_1_title: "1. Registro"
+      step_1_text: "Crear una cuenta es fácil y gratuito. Sólo necesitas nombre, mail y contraseña"
+      step_2_title: "2. Proyecto"
+      step_2_text: "Completa el formulario y envía el borrador de tu proyecto. Te asesoraremos antes de lanzarlo."
+      step_3_title: "3. Campaña al Aire"
+      step_3_text: "Se activa el botón para recibir donaciones. Promueve tu proyecto en tus redes y busca colaboradores."
+      step_4_title: "4. Desembolso"
+      step_4_text: "Al cierre de tu campaña recibirás el dinero recaudado* en la plataforma en tu cuenta bancaria."
+      step_footer: "* Aplican descuentos por costos financieros y operativos, siempre y cuando hayas superado el monto mínimos"
+      discount_hidden_text: "En total vas a recibir <span class='discount'>xxx</span> COP descontando el 14% sobre el total reunido"
     twitter:
       take_a_look: "Check out the project %{name} on @LBigMoney"
     video_embed:
@@ -871,6 +882,11 @@ en:
       site_title: "Sign up"
       submit: "Sign Up"
       title: "Sign up using you email"
+      account: "Already has an account? %{link}"
+      login: "Log in here"
+      placeholder:
+        name: "Name"
+        password_confirmation: "Password confirmation"
   remaining_plural: left
   remaining_singular: left
   remove: Erase

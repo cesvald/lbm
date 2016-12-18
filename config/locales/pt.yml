@@ -856,6 +856,17 @@ pt:
       submit: "Enviar o projeto"
       send_project: "Quero enviar meu projeto."
       legend_html: "Após preencher o formulário abaixo, você receberá uma página de projeto em rascunho. Lá você irá adicionar as recompensas e poderá compartilhar com seus amigos para ter um projeto ainda mais afiado.<br><br>As informações preenchidas abaixo não são definitivas, mas lembre-se de que quanto mais consistente estiver o seu projeto nesse envio, mais rápido ele irá para o ar.<br><br><b>Importante</b> <i> O LittleBigMoney é uma plataforma curada, o que significa que vamos avaliar o foco, a viabilidade, e a consistência do seu projeto durante o processo de Rascunho. Se entendermos que o seu projeto não está de acordo com os nossos <a href='https://docs.google.com/document/d/1Heh9LlvoSoD0lUfbmV5WlISJ3nqmGpEQiw15TBuCn-0/edit' target='_blank' >Critérios de Seleção</a>, ele poderá ser recusado pela equipe de curadores.</i>"
+      access_links: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto"
+      step_1_title: "1. Registro"
+      step_1_text: "Crear una cuenta es fácil y gratuito. Sólo necesitas nombre, mail y contraseña"
+      step_2_title: "2. Proyecto"
+      step_2_text: "Completa el formulario y envía el borrador de tu proyecto. Te asesoraremos antes de lanzarlo."
+      step_3_title: "3. Campaña al Aire"
+      step_3_text: "Se activa el botón para recibir donaciones. Promueve tu proyecto en tus redes y busca colaboradores."
+      step_4_title: "4. Desembolso"
+      step_4_text: "Al cierre de tu campaña recibirás el dinero recaudado* en la plataforma en tu cuenta bancaria."
+      step_footer: "* Aplican descuentos por costos financieros y operativos, siempre y cuando hayas superado el monto mínimo"
+      discount_hidden_text: "En total vas a recibir <span class='discount'>xxx</span> COP descontando el 14% sobre el total reunido"
     twitter:
       take_a_look: "Confira o projeto %{name} no @catarse"
     video_embed:
@@ -869,6 +880,9 @@ pt:
       site_title: Cadastre-se
       submit: "Efetuar cadastro"
       title: "Criar uma conta"
+      placeholder:
+        name: "Nombre"
+        password_confirmation: "Confirmación de contraseña"
   remaining_plural: restantes
   remaining_singular: restante
   remove: remover

@@ -20,6 +20,7 @@ class Channel < ActiveRecord::Base
 
   scope :home_page, ->() { where("home_page").order('random()') }
   scope :not_receive_projects, -> { where(receive_projects: false) }
+  scope :receive_projects, -> { where(receive_projects: true) }
   scope :visible, -> { where(visible: true) }
   scope :other_channels, ->(exclude_ids){
     visible.where("coalesce(id NOT IN (?), true)", exclude_ids).order('random()')

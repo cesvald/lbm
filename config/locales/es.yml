@@ -841,7 +841,7 @@ es:
       first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."
       online_days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
       headline_important: "Se trata de una breve descripción del proyecto, 140 caracteres como máximo!"
-      name_important: "No más de 50 caracteres alfanuméricos"
+      name_important: "No más de 50 caracteres alfanuméricos"
       social: "Red de financiamiento"
       facebook_hint: "http://facebook.com/__________"
       twitter_hint: "http:// twitter.com/____________"
@@ -859,6 +859,16 @@ es:
       send_project: "Quiero enviar mi proyecto."
       legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
       access_links: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto"
+      step_1_title: "1. Registro"
+      step_1_text: "Crear una cuenta es fácil y gratuito. Sólo necesitas nombre, mail y contraseña"
+      step_2_title: "2. Proyecto"
+      step_2_text: "Completa el formulario y envía el borrador de tu proyecto. Te asesoraremos antes de lanzarlo."
+      step_3_title: "3. Campaña al Aire"
+      step_3_text: "Se activa el botón para recibir donaciones. Promueve tu proyecto en tus redes y busca colaboradores."
+      step_4_title: "4. Desembolso"
+      step_4_text: "Al cierre de tu campaña recibirás el dinero recaudado* en la plataforma en tu cuenta bancaria."
+      step_footer: "* Aplican descuentos por costos financieros y operativos, siempre y cuando hayas superado el monto mínimo"
+      discount_hidden_text: "En total vas a recibir <span class='discount'>xxx</span> COP descontando el 14% sobre el total reunido"
     twitter:
       take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
     video_embed:
@@ -872,6 +882,11 @@ es:
       site_title: Registro
       submit: Registro
       title: "Regístrate usando tu email"
+      account: "Ya estás registrado? %{link}"
+      login: "Ingresa aquí"
+      placeholder:
+        name: "Nombre"
+        password_confirmation: "Confirmación de contraseña"
   remaining_plural: restantes
   remaining_singular: restante
   remove: Borrar
@@ -953,13 +968,13 @@ es:
       illustration_3_btn: "Crea tu canal"
       description_paragraph_1: "LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
       description_paragraph_2: "En LittleBigMoney podrás aportar realizando donaciones a las campañas que desees, enviar tu propio proyecto o crear un canal para tu organización y así apoyar a muchas iniciativas."
-      send_project_title: "¡Ten en cuenta al enviar tu proyecto!"
+      send_project_title: "¡Lista de chequeo para tu proyecto!"
       project_send:
-        phrase_1: "Ideas creativas y realizables"
-        phrase_2: "Impacto y beneficios colectivos"
-        phrase_3: "Recompensas no financieras"
-        phrase_4: "No apoyamos proyectos personales o sin resultados claros"
-        phrase_5: "Convoca tu comunidad"
+        phrase_1: "¿Tiene impacto y beneficios colectivos?"
+        phrase_2: "¿Tiene objetivos y resultados claros?"
+        phrase_3: "¿Inspira a donar?"
+        phrase_4: "¿Tengo un plan de acción para lograr la meta?"
+        phrase_5: "¿Conozco a mis 5 primeros potenciales donantes?"
       network_title: "¿Qué te ofrece LittleBigMoney?"
       network_description: "Nuestra plataforma tecnológica brinda una vitrina para la visibilización y financiación de iniciativas, una experiencia personalizada para todos sus actores y una gestión eficaz y transparente de ideas y recursos para obtener mejores resultados."
       budget_title: "¿Qué hacemos en LittleBigMoney?"

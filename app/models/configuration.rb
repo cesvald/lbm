@@ -7,27 +7,14 @@ class Configuration < ActiveRecord::Base
   end
   
   def self.update_paypal_conversion!
-    page = Nokogiri::HTML(open("https://www.superfinanciera.gov.co/TRMdesagregada/index.jsp"))
-    mean = 0
-    volatility = 0
-
-    page.search("table").search("tr").each do |row|
-      variable = row.search("td")[0]
-      variable = variable.text.strip if variable
-      value = row.search("td")[2]
-      value = value.text.strip if value
-      if variable == 'Promedio ponderado de venta'
-        mean = value.gsub(',', '').to_f
-      elsif variable == 'Volatilidad de la tcrm %'
-        volatility = value.gsub('%', '').to_f / 100
-      end
-    end
-    if mean != 0 && volatility != 0
-      conversion = ((mean - mean * volatility) * 100).round.to_f / 100
-      Configuration[:paypal_currency] = "USD"
-      Configuration[:paypal_conversion] = conversion
-    end
-    
+    url = URI.parse('http://query.yahooapis.com/v1/public/yql?q=select * from yahoo.finance.xchange where pair in ("USDCOP")&format=json&env=store://datatables.org/alltableswithkeys')
+    req = Net::HTTP::Get.new(url.to_s)
+    res = Net::HTTP.start(url.host, url.port) {|http|
+      http.request(req)
+    }
+    result = eval res.body
+    conversion = '%.2f' % result[:query][:results][:rate][:Rate]
+    Configuration[:paypal_conversion] = conversion
   end
   
   class << self

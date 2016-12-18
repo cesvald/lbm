@@ -59,9 +59,9 @@ en:
       subject: "The project %{project_name} did not reach the expected support - Some useful information"
       header: "Information on available credits and refunds ;)"
       text_html: |-
-          Hola, %{user_name}!<br/><br/> Desafortunadamente el proyecto %{project_link} en el que colaboraste no logró cumplir la meta establecida en LittleBigMoney.<br/><br/>En función de esto, recibiste %{backer_value} en créditos para apoyar a otros proyectos. Puedes conocer más proyectos de %{category} en %{category_link}<br/><br/> Abajo seleccionamos algunas sugerencias de proyectos especialmete para ti: <br/><br/>%{recommended_text}. En el caso de solicitar un reembolso debes entrar en
-          %{credits_link}<br/><br/>con tu Id de colaboración: %{backer_id}<br/><br/> Para entender más de este proceso puedes dirigirte a nuestros términos de uso y condición. <http://soporte.littlebigmoney.org/knowledgebase/articles/245482> Términos de uso de LittleBigMoney</a>
-          Si deseas entrar en contacto con %{project_user}, envía un email para %{project_mail}.
+          Hola, %{user_name}!<br/><br/>Desafortunadamente el proyecto %{project_link} al que colaboraste no logró cumplir la meta establecida en LittleBigMoney.<br/><br/>En función de esto, recibiste %{backer_value} en créditos para apoyar a otros proyectos activos en la plataforma.<br/>Sólo debes ingresar al proyecto que desees apoyar y al momento de gestionar el pago seleccionar la opción "Créditos" para hacer efectiva tu colaboración.<br/><br/>Recuerda que tendrás un plazo máximo de 4 meses a partir de ahora para usarlos según nuestros Términos de uso de la plataforma. <https://docs.google.com/document/d/1WLkb2hOQsWG_S3FPFtbs_UWRyyRu7TDcb_ntBY395XM/edit?usp=sharing> Términos de uso de LittleBigMoney</a>. Si quieres solicitar el re-embolso de tu donación escribe a littlebigmoney@fundacioncapital.org indicando el correo de tu usuario.<br/><br/>Si deseas entrar en contacto con el dueño del proyecto, %{project_user}, envía un email a %{project_mail}.<br/><br/>Para comunicarte con nosotros escríbenos a: operacioneslbm@fundacioncapital.org<br/><br/>
+          Un fuerte abrazo,<br/><br/>
+          Equipo de LittleBigMoney
     pending_backer_project_unsuccessful:
       subject: "The project %{project_name} that you supported did not reach the expected support - Some useful information"
       header: "Confirmation about support information, available credits and refunds ;)"
@@ -108,7 +108,7 @@ en:
     credits_warning:
       subject: "You have %{amount} COP in credits on LittleBigMoney"
       header: "Why not support another project?"
-      text_html: "Hello, <strong>%{user}</strong><br/><br/>You currently have %{credits} COP in credits on LittleBigMoney. This could be the right time to support another project that interests you.<br/><br/>%{recommended}Here are step-by-step instructions for using your credits:<br/><br/>1-<a href='%{explore_url}'>Choose the project you want to use your credits on.<br/><br/>"
+      text_html: "Hello, <strong>%{user}</strong><br/><br/>You currently have %{credits} COP in credits on LittleBigMoney. This could be the right time to support another project that interests you.<br/><br/>%{recommended}Here are step-by-step instructions for using your credits:<br/><br/>1-<a href='%{explore_url}'>Choose the project you want to use your credits on.<br/><br/>NOTE: Remember that your credits can be used on one or more projects.</a>;<br/>"
     backer_confirmed_after_project_was_closed:
       subject: "New support confirmed for the project '%{project_name}' after 7 days of the end of the deadline"
       header: "New support confirmed"

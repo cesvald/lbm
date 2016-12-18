@@ -16,7 +16,7 @@
     <% for user in @users do %>
       <Row>
         <Cell><Data ss:Type="Number"><%= user.id %></Data></Cell>
-        <Cell><Data ss:Type="String"><%= user.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= (user.name.blank? ? user.full_name : user.name %></Data></Cell>
         <Cell><Data ss:Type="Date"><%= user.email %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= user.user_total ? user.user_total.sum : 0 %></Data></Cell>
         <Cell><Data ss:Type="Number"><%= user.credits %></Data></Cell>

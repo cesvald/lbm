@@ -135,7 +135,7 @@
                             = link_to finish_adm_project_path(project), method: :put  do
                                 i.icon-ok
                                 = t('.finish_project')
-                        - Channel.all.each do |channel|
+                        - Channel.receive_projects.each do |channel|
                           li
                             - if channel.projects.include?(project)
                               = link_to adm_channel_project_path(channel, project), method: :delete, data: {confirm: t('adm.confirm_dialog')} do

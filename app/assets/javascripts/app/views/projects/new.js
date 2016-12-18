@@ -27,7 +27,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('#project_permalink').timedKeyup(verify_permalink)
 
     $('#project_goal').numeric(false)
-    $('input,textarea,select').live('focus', function(){
+    $('input,textarea,select').on('focus', null, function(){
       $('p.inline-hints').hide()
       $(this).next('p.inline-hints').show()
     })
@@ -37,10 +37,20 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('#project_goal').on('input', function(){
       var amount = this.value
       var discount = 0
-      if(isNaN(amount)) {discount = 0}
-      else { discount = amount * 0.8492 }
-      var discountText = $('discount_hidden_text').html().find('.value').html(discount)
-      $(this).after()
+      if(isNaN(amount) || amount == '') {
+        $('.discount-text').remove()
+      }
+      else {
+        discount = amount * 0.8492 
+        discount = discount.toFixed(2)
+        $('#discount-hidden-text').find('.discount').html(discount)
+        if($('.discount-text').length){
+          $('.discount-text').html($('#discount-hidden-text').html())
+        }
+        else{
+          $(this).after("<div class='discount-text'>" +$('#discount-hidden-text').html()+ "</div>")
+        }
+      }
     })
   }
 })
