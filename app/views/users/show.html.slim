@@ -75,6 +75,7 @@
                   th= t('credits.index.project_finished_date')
                   th= t('credits.index.value')
                   th= t('credits.index.use_expration_date')
+                  th= t('credits.index.request_refund')
                 - @credits.each do |credit|
                   tr[id="back_#{credit.id}"]
                     td.project_name
@@ -83,26 +84,26 @@
                     td.value= credit.display_value
                     / td.term= I18n.l(credit.refund_deadline.to_date)
                     td.term= I18n.l(credit.available_deadline.to_date)
-                    /
-                      td.status
-                        - if credit.overdue?
-                          = t('credits.index.overdue')
-                        - else
-                          = t('credits.index.available')
-                            - if can? :request_refund, credit
-                              .bootstrap-twitter
-                                div id="requestRefundModal#{credit.id}" class="hide modal"
-                                  .modal-header
-                                    h3= t('credits.modal.title')
-                                  .modal-body
-                                    p= t('credits.modal.text')
-                                    = link_to t('credits.modal.link'), t('credits.modal.link_url'), target: '_blank'
-                                  .modal-footer
-                                    button type='button' data-dismiss="modal" class="btn"
-                                      = t('credits.modal.reject_btn')
-                                    = link_to request_refund_user_backer_path(@user, credit), class: 'btn' do
-                                      = t('credits.modal.accept_btn')
-                              = link_to t('credits.index.request_refund'), "#requestRefundModal#{credit.id}", data: {toggle: 'modal'}, class: 'link_project'
+                    
+                    td.status
+                      - if credit.overdue?
+                        = t('credits.index.overdue')
+                      - else
+                        = t('credits.index.available')
+                        - if can? :request_refund, credit
+                          .bootstrap-twitter
+                            div id="requestRefundModal#{credit.id}" class="hide modal"
+                              .modal-header
+                                h3= t('credits.modal.title')
+                              .modal-body
+                                p= t('credits.modal.text')
+                                = link_to t('credits.modal.link'), t('credits.modal.link_url'), target: '_blank'
+                              .modal-footer
+                                button type='button' data-dismiss="modal" class="btn"
+                                  = t('credits.modal.reject_btn')
+                                = link_to request_refund_user_backer_path(@user, credit), class: 'btn' do
+                                  = t('credits.modal.accept_btn')
+                          = link_to t('credits.index.request_refund'), "#requestRefundModal#{credit.id}", data: {toggle: 'modal'}, class: 'link_project'
             .bootstrap-alert
               .alert.alert-info
                 /= t('credits.index.important_html')
