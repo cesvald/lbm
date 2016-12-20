@@ -41,7 +41,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         $('.discount-text').remove()
       }
       else {
-        discount = amount * 0.8492 
+        discount = amount * 0.86
         discount = discount.toFixed(0)
         $('#discount-hidden-text').find('.discount').html(discount)
         if($('.discount-text').length){

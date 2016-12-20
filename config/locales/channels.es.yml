@@ -17,6 +17,7 @@ es:
     subscribed: "%{count} siguiendo el canal"
     curator: Curador
     back_home: "Regresar al Home"
+    back_to_channel: "Regresar al Canal"
     adm:
       menu: "Moderación de Canal"
     projects:
