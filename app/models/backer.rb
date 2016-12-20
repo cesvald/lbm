@@ -108,11 +108,11 @@ class Backer < ActiveRecord::Base
   end
 
   def refund_deadline
-    created_at + 180.days
+    project.expires_at.to_date + 120.days
   end
   
   def available_deadline
-    created_at + 120.days
+    project.expires_at.to_date + 120.days
   end
 
   def change_reward! reward
@@ -121,11 +121,11 @@ class Backer < ActiveRecord::Base
   end
 
   def can_refund?
-    confirmed? && project.finished? && !project.successful?
+    confirmed? && project.finished? && !project.successful? && project.expires_at.to_date + 120.days > DateTime.now
   end
   
   def can_use_credits?
-    confirmed? && (not credits?) && project.finished? && !project.successful? && created_at + 120.days > DateTime.now
+    confirmed? && (not credits?) && project.finished? && !project.successful? && project.expires_at.to_date + 120.days > DateTime.now
   end
 
   def reward_must_be_from_project

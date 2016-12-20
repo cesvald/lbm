@@ -271,11 +271,14 @@ pt:
       insufficient_credits: "Você não tem créditos suficientes para realizar este estorno."
       refunds_title: "Apoios que podem ter estorno realizado"
       credits_use: "Recuerda que al momento de realizar una donación puedes escoger como método de pago utilizar tus créditos"
-      request_refund: "Solicitar estorno"
-      requested_refund: "Solicitado estorno"
-      status: Status
-      title: "Meus créditos"
-      value: Valor
+      request_refund: ¿Solicitar Reembolso?
+      requested_refund: "Reembolso solicitado"
+      credit_refunded: "Reembolsado"
+      refund: "Reembolso"
+      expired: "Caducado"
+      status: Estado
+      title: "Mis créditos"
+      value: valor
     refund:
       cannot_refund: "Este apoio não pode ser estornado."
       error: "Oops. Ocorreu um erro ao solicitar seu estorno."

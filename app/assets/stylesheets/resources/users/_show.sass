@@ -2,6 +2,21 @@
   .inline-hints
     font-size: 11px
     color: rgba(black, 0.6)
+  .modal-refund
+    .modal-header
+      h3
+        font-family: 'Futura'
+        font-weight: 400
+        font-size: 26px
+        color: $darkblue
+    .modal-body
+      p
+        font-family: 'Futura'
+        font-weight: 200
+        font-size: 19px
+        color: $darkblue
+      a
+        font-size: 19px
   #creditsModal
     h3
       font-weight: 700
@@ -135,12 +150,17 @@
           color: $darkblue
         td
           font-size: 14px
+          color: $darkblue
           a
             text-decoration: none
-            color: $brightblue
+            color: $carrot
             +transition(all, 0.5s)
             &:hover
               text-decoration: underline
+          .modal-footer
+            a
+              color: white
+              text-decoration: none
       .bootstrap-alert
         .alert.alert-info
           background: transparent

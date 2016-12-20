@@ -260,7 +260,7 @@ es:
       link: "Mira como funcionan los reembolsos"
       link_url: ~
       reject_btn: "Quiero conservar mis créditos"
-      accept_btn: "Sí, deseo solicitar el reembolso de mi colaboración"
+      accept_btn: "Sí, deseo solicitar el reembolso"
     index:
       back_date: "Fecha de apoyo"
       project_finished_date: "Fecha finalización del proyecto"
@@ -273,8 +273,11 @@ es:
       insufficient_credits: "No tienes los créditos suficientes para solicitar este reembolso."
       refunds_title: "Pagos que pueden ser reembolsados"
       credits_use: "Recuerda que al momento de realizar una donación puedes escoger como método de pago utilizar tus créditos"
-      request_refund: ¿Reembolso?
+      request_refund: ¿Solicitar Reembolso?
       requested_refund: "Reembolso solicitado"
+      credit_refunded: "Reembolsado"
+      refund: "Reembolso"
+      expired: "Caducado"
       status: Estado
       title: "Mis créditos"
       value: valor

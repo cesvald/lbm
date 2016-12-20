@@ -275,6 +275,9 @@ en:
       credits_use: "Recuerda que al momento de realizar una donación puedes escoger como método de pago utilizar tus créditos"
       request_refund: Refund?
       requested_refund: "Refund requested"
+      credit_refunded: "Refunded"
+      refund: "Refund"
+      expired: "Expired"
       status: Status
       title: "My credits"
       value: value
