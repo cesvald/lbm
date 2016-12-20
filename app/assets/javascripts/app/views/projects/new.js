@@ -27,7 +27,9 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('#project_permalink').timedKeyup(verify_permalink)
     
     $('#project_goal').timedKeyup(function(){
-      if(this.val < gon.partial_goal){
+      console.log(gon.partial_goal)
+      console.log(this.value)
+      if(parseInt(this.value) < parseInt(gon.partial_goal)){
         $(this).addClass('error').removeClass('ok')
       }
       else{
