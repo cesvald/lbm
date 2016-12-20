@@ -85,17 +85,6 @@
             h2.subtitle= t('.choose_payment_subtitle')
 
           #payment-method-wrapper
-            /*
-              = form_tag current_user, class: "payment-form" do
-                .submit-wrapper
-                  = image_submit_tag "lbm/payu-icon.png", class: "payment-icon"
-              = form_tag current_user, class: "payment-form" do
-                .submit-wrapper
-                  = image_submit_tag "lbm/paypal-icon.png", class: "payment-icon"
-              .payment-form
-                .submit-wrapper
-                  = image_tag "lbm/giftcard-icon.png", class: "payment-icon"
-            
             - PaymentEngines.engines.each do |engine|
               div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path].call(@backer)}" data-form=(engine[:form_path].present? ? "#{engine[:form_path].call(@backer)}" : "asd")]
             /*
