@@ -25,15 +25,18 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     }
 
     $('#project_permalink').timedKeyup(verify_permalink)
-
+    
+    $('#project_goal').timedKeyup(function(){
+      if(this.val < gon.partial_goal){
+        $(this).addClass('error').removeClass('ok')
+      }
+      else{
+        $(this).addClass('ok').removeClass('error')
+      }
+    });
+    
     $('#project_goal').numeric(false)
-    $('input,textarea,select').on('focus', null, function(){
-      $('p.inline-hints').hide()
-      $(this).next('p.inline-hints').show()
-    })
-
-    $('#project_permalink').focus()
-    $('textarea').maxlength()
+    
     $('#project_goal').on('input', function(){
       var amount = this.value
       var discount = 0
@@ -53,5 +56,12 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         }
       }
     })
+    
+    $('input,textarea,select').on('focus', null, function(){
+      $('p.inline-hints').hide()
+      $(this).next('p.inline-hints').show()
+    })
+
+    $('textarea').maxlength()
   }
 })
