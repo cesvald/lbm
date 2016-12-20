@@ -10,26 +10,27 @@
         h2= t('.subtitle')
         = render partial: 'channels/projects/banner'
         .bootstrap-twitter
-          #send-project-steps.row
-            .col-xs-10.col-xs-offset-1
-              .row
-                .col-xs-3.col
-                  = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
-                  .step-title= t('projects.new.step_1_title')
-                  .step-text= t('projects.new.step_1_text')
-                .col-xs-3.col
-                  = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
-                  .step-title= t('projects.new.step_2_title')
-                  .step-text= t('projects.new.step_2_text')
-                .col-xs-3.col
-                  = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
-                  .step-title= t('projects.new.step_3_title')
-                  .step-text= t('projects.new.step_3_text')
-                .col-xs-3.col
-                  = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
-                  .step-title= t('projects.new.step_4_title')
-                  .step-text= t('projects.new.step_4_text')
-                .step-footer= t('projects.new.step_footer')
+          /*
+            #send-project-steps.row
+              .col-xs-10.col-xs-offset-1
+                .row
+                  .col-xs-3.col
+                    = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                    .step-title= t('projects.new.step_1_title')
+                    .step-text= t('projects.new.step_1_text')
+                  .col-xs-3.col
+                    = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                    .step-title= t('projects.new.step_2_title')
+                    .step-text= t('projects.new.step_2_text')
+                  .col-xs-3.col
+                    = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                    .step-title= t('projects.new.step_3_title')
+                    .step-text= t('projects.new.step_3_text')
+                  .col-xs-3.col
+                    = embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                    .step-title= t('projects.new.step_4_title')
+                    .step-text= t('projects.new.step_4_text')
+                  .step-footer= t('projects.new.step_footer')
           #send-project-container.row
             .col-xs-12.adjust-margin
               .row
