@@ -99,10 +99,10 @@ class Project < ActiveRecord::Base
                                      WHEN 'failed' THEN 4
                                      END ASC, online_date DESC, created_at DESC, id DESC") }
   scope :expiring_for_home, ->(){
-    includes(:user, :category, :project_total).visible.online.order("random()").limit(3)
+    includes(:user, :category, :project_total).online.expiring.order("random()").limit(3)
   }
   scope :recent_for_home, ->(){
-    includes(:user, :category, :project_total).visible.recent.not_expiring.order('random()').limit(3)
+    includes(:user, :category, :project_total).online.order("random()").limit(3)
   }
   scope :successful_for_home, ->(){
     includes(:user, :category, :project_total).visible.successful.order('random()').limit(3)
