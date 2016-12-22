@@ -100,11 +100,13 @@
               transform: rotate(-30deg)
               position: relative
               left: -40px
-            #money-simbol
-              font-family: 'Futura Std'
-              font-weight: 200
-              font-size: 19px
-              color: $darkgray
+            #currency
+              border: none
+              background-color: white
+              width: 80px
+              +box-shadow(inset, 0, 1px, 1px, rgba(0, 0, 0, 0.075))
+              +transition(border, linear, 0.2s, box-shadow, linear, 0.2s)
+              +border-radius(10px)
             #backer_value
               width: 235px
               background-color: white
@@ -118,6 +120,14 @@
               vertical-align: middle
               width: 158px
               display: inline-block
+            #converted-value
+              font-family: 'Futura Std'
+              font-weight: 200
+              font-size: 12px
+              color: $darkblue
+              position: relative
+              left: -100px
+              top: -11px
       #rewards-title
         font-family: 'Futura Std'
         font-weight: 200

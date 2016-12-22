@@ -151,7 +151,11 @@ class Backer < ActiveRecord::Base
   def display_value
     number_to_currency value, unit: "COP", precision: 0, delimiter: '.'
   end
-
+  
+  def display_value_usd
+    number_to_currency (value / ::Configuration[:paypal_conversion].to_f).round(0), unit: "USD", precision: 0, delimiter: '.'
+  end
+  
   def available_rewards
     Reward.where(project_id: self.project_id).where('minimum_value <= ?', self.value).order(:minimum_value)
   end

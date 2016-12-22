@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg, :inside_channel?, :test_environment?
+  helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg, :inside_channel?, :test_environment?, :to_usd, :to_cop
   
   before_filter :set_locale
   #before_filter :force_http
@@ -57,6 +57,16 @@ class ApplicationController < ActionController::Base
   
   def test_environment?
     request.original_url.start_with?('http://s22.org')
+  end
+  
+  def to_usd(amount)
+    conversion = ::Configuration[:paypal_conversion].to_f
+    (amount / conversion).round(0)
+  end
+  
+  def to_cop(amount)
+    conversion = ::Configuration[:paypal_conversion].to_f
+    ( amount * conversion ).round(0)
   end
   
   private

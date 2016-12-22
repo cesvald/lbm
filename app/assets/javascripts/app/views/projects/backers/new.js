@@ -44,8 +44,9 @@ CATARSE.BackersNewView = Backbone.View.extend({
       }
     }
     value_ok = function(){
-      var value = $('#backer_value').val()
-      if(/^(\d+)$/.test(value) && parseInt(value) >= 25000){
+      var value = $('#backer_value').val();
+      var currency = $('#currency').val();
+      if(/^(\d+)$/.test(value) && ( (parseInt(value) >= 25000 && currency == 'COP') || (parseInt(value) >= (25000 / gon.paypal_conversion).toFixed(0) && currency == 'USD') )){
         $('#backer_value').addClass("ok").removeClass("error")
         return true
       } else {
@@ -54,33 +55,47 @@ CATARSE.BackersNewView = Backbone.View.extend({
         return false
       }
     }
-
-    $('.reward.available').each(function(){
-      self.rewards.push({id: $(this).data('id'), value: parseInt($(this).data('min-value'))})
-    })
-
-    $('.reward.available').click(function(){
-      var id = parseInt($(this).data('id'))
-      var minimum = parseInt($(this).data('min-value'))
-      if( (minimum > $('#backer_value').val()) || !user_set && id != 0){
-        $('#backer_value').val(minimum)
-        user_set = false
+    updateConvertion = function(){
+      var value = $('#backer_value').val();
+      var currency = $('#currency').val();
+      if(currency == 'USD'){
+        $('#converted-value').html(  ((value * gon.paypal_conversion).toFixed(0)) + " COP" );
       }
-      $('#backer_reward_id').val(id)
-      $('.selected').removeClass('selected')
-      $(this).addClass('selected')
-      everything_ok()
+      else{
+        $('#converted-value').html(  ((value / gon.paypal_conversion ).toFixed(0)) + " USD" );
+      }
+    }
+    
+    currentConversion = (25000 / gon.paypal_conversion).toFixed(0);
+    gon.paypal_conversion = 25000 / currentConversion
+    
+    $('.reward.available').each(function(){
+      self.rewards.push({id: $(this).data('id'), value: parseInt($(this).data('min-value'))});
     })
-
+  
+    $('.reward.available').click(function(){
+      var currency = $('#currency').val();
+      var id = parseInt($(this).data('id'));
+      var minimum = parseInt($(this).data('min-value'));
+      if(currency == 'USD') minimum = (minimum / gon.paypal_conversion).toFixed(0);
+      if( (minimum > $('#backer_value').val()) || !user_set && id != 0){
+        $('#backer_value').val(minimum);
+        updateConvertion();
+        user_set = false;
+      }
+      $('#backer_reward_id').val(id);
+      $('.selected').removeClass('selected');
+      $(this).addClass('selected');
+      everything_ok();
+    })
+    
     $('#backer_value').keyup(function(){
-      user_set = true
-      var value = parseInt($('#backer_value').val())
-      var found = false
+      user_set = true;
+      var value = parseInt($('#backer_value').val());
+      var currency = $('#currency').val();
+      var found = false;
       for(i = self.rewards.length - 1; i >= 0 && !found; i--){
         var reward = self.rewards[i]
-        console.log("try " + i)
-        console.log(reward.value)
-        console.log(value)
         if(value >= reward.value){
           $('.reward.selected').removeClass('selected')
           $('.reward[data-id="' +reward.id+ '"]').addClass('selected')
@@ -88,9 +103,24 @@ CATARSE.BackersNewView = Backbone.View.extend({
           found = true
         }
       }
+      updateConvertion()
       everything_ok()
     })
 
+    $('#currency').change(function(){
+      value = $('#backer_value').val();
+      if(value != ''){
+        if(this.value == 'USD'){
+          newValue = value / gon.paypal_conversion;
+        }
+        else{
+          newValue = value * gon.paypal_conversion;
+        }
+        $('#backer_value').val(newValue.toFixed(0))
+        updateConvertion();
+      }
+    });
+    
     $('.back_faq h3').click(function(event){
       $(event.target).next('p').slideToggle('slow');
     });
@@ -100,15 +130,21 @@ CATARSE.BackersNewView = Backbone.View.extend({
     if($('#backer_value').val())
       everything_ok()
     
-    $('#backer_value').focus()
+    $('#backer_value').focus();
     
     $('#backer_anonymous').click(function(){
       if($(this).is(':checked')){
-        $('#anonymous_warning').slideDown(200)
+        $('#anonymous_warning').slideDown(200);
       } else {
-        $('#anonymous_warning').slideUp(200)
+        $('#anonymous_warning').slideUp(200);
       }
-    })
+    });
+    
+    $('#new_backer').on('submit', function(){
+      $('#currency').val('COP');
+      $('#currency').change();
+      return true;
+    });
   }
 })
 

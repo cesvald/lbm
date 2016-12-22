@@ -330,7 +330,7 @@ en:
     hints:
       backer:
         credits: "You have <strong>%{credits}</strong> in credits and can support with up to this amount without needing to make a new payment."
-        value: "You choose the amount ;) starting from 25,000 COP, any amount is great!"
+        value: "You choose the amount, starting from 25,000 COP ( %{minimum_usd} USD ), any amount is great!"
       project:
         video_url_edit: "Paste here the URL of your Vimeo video."
         about: "Tell us about what inspired you to come up with this project . Be objective and charming, present your readers with something that moves them while being very transparent over the expectations on your project! Do you nedd help? http://bit.ly/17L1aEK"
@@ -609,8 +609,8 @@ en:
           important_html: "<p>The use of PayPal is designated primarily for international payments, because. You'll have only 60 days to receive an eventual refund without paying any extra fees.</p><p>If you make your payment through PayU, you'll have to request your refund directly.</p><p>If that's not possible, don't worry: you'll always be able to get your money back. If you request your refund 60 days after your payment, you'll have to pay PayPal's fee of 5.4% + 0.60 COP per transaction.</p>"
           submit: "Proceed to PayPal"
           title: "Want to make an international payment?"
-        review_with_reward_html: "You are going to support with <strong>%{value}</strong> and receive the following reward:"
-        review_without_reward_html: "You are going to contribute <strong>%{value}</strong> but you'd rather not receive an additional reward for your support."
+        review_with_reward_html: "You are going to support with <strong>%{value} (%{conversion})</strong> and receive the following reward:"
+        review_without_reward_html: "You are going to contribute <strong>%{value} (%{conversion})</strong> but you'd rather not receive an additional reward for your support."
         submit:
           credits: "Confirm support with credits"
           moip: "Proceed to PayU's checkout"
