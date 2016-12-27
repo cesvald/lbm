@@ -141,8 +141,10 @@ CATARSE.BackersNewView = Backbone.View.extend({
     });
     
     $('#new_backer').on('submit', function(){
-      $('#currency').val('COP');
-      $('#currency').change();
+      if($('#currency').val() == 'USD'){
+        $('#currency').val('COP');
+        $('#currency').change();
+      }
       return true;
     });
   }
