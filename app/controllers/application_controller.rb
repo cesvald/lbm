@@ -52,8 +52,8 @@ class ApplicationController < ActionController::Base
   end
 
   def inside_channel?
-    #not (request.subdomain.blank? || request.subdomain == 'lbm2-cesvald')
-    not (request.subdomain.blank?)
+    not (request.subdomain.blank? || request.subdomain == 'lbm2-cesvald')
+    #not (request.subdomain.blank?)
   end
   
   def test_environment?

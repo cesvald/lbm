@@ -4,7 +4,7 @@
 			= image_tag channel.banner_top_url, class: "top_image"
 		- else
 			= image_tag "project.png", class: "top_image"
-		= link_to root_url(subdomain: channel.permalink), class: 'link' do
+		= link_to root_url(subdomain: channel.permalink, protocol: 'http'), class: 'link' do
 			.video
 				- if channel.video_url.present?
 					= image_tag channel.display_video_thumbnail
