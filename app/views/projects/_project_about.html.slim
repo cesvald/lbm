@@ -50,9 +50,9 @@
   .image-wrapper
     - @project.channels.each do |channel|
       - if channel.banner_top_url.present?
-        p= link_to image_tag(channel.banner_top_url), root_url(subdomain: channel.permalink)
+        p= link_to image_tag(channel.banner_top_url), root_url(subdomain: channel.permalink, protocol: 'http')
       - elsif channel.banner_url.present?
-        p= link_to image_tag(channel.banner_url), root_url(subdomain: channel.permalink)
+        p= link_to image_tag(channel.banner_url), root_url(subdomain: channel.permalink, protocol: 'http')
 
 /*  
   .social
