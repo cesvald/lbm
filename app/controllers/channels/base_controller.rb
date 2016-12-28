@@ -5,7 +5,6 @@ class Channels::BaseController < ApplicationController
     private
     
     def force_http
-        redirect_to(protocol: 'http', host: request.url ) if request.ssl?
+        redirect_to(protocol: 'http', host:"#{request.subdomain}.#{::Configuration[:base_domain]}")
     end
-    
 end

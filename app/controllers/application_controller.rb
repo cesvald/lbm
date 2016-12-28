@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
   helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg, :inside_channel?, :test_environment?, :to_usd, :to_cop
   
   before_filter :set_locale
+  #before_filter :force_http
 
   # TODO: Change this way to get the opendata
   before_filter do
@@ -51,7 +52,8 @@ class ApplicationController < ActionController::Base
   end
 
   def inside_channel?
-    not (request.subdomain.blank? || request.subdomain == 'lbm2-cesvald')
+    #not (request.subdomain.blank? || request.subdomain == 'lbm2-cesvald')
+    not (request.subdomain.blank?)
   end
   
   def test_environment?
@@ -138,6 +140,10 @@ class ApplicationController < ActionController::Base
 
   def render_404
     render file: "#{Rails.root}/public/404.html", status: 404, layout: false
+  end
+
+  def force_http
+    redirect_to(protocol: 'http', host: ::Configuration[:base_domain]) if request.ssl?
   end
 
   def blog_posts

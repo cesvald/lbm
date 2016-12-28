@@ -36,7 +36,7 @@ Catarse::Application.routes.draw do
   end
 
   # Channels
-  constraints subdomain: /^(?!lbm2-cesvald|www|secure|test|local)(\w+)/ do
+  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
     namespace :channels, path: '' do
       namespace :adm do
         resources :projects, only: [ :index, :update] do
@@ -78,7 +78,7 @@ Catarse::Application.routes.draw do
   get "/guidelines_tips",       to: "static#guidelines_tips",     as: :guidelines_tips
   get "/guidelines_backers",    to: "static#guidelines_backers",  as: :guidelines_backers
   get "/guidelines_start",      to: "static#guidelines_start",    as: :guidelines_start
-  get "/guidelines_channels",     to: "static#guidelines_channel",   as: :guidelines_channels
+  get "/guidelines_channels",   to: "static#guidelines_channel",  as: :guidelines_channels
   get "/tools",                 to: "static#tools",               as: :tools
   
   

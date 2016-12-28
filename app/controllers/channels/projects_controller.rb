@@ -7,7 +7,8 @@ class Channels::ProjectsController < ProjectsController
   # With one addition: we include the project into the current channel
   #before_filter only: [:create] { params[:project][:channels] = [@channel] }
   after_filter only: [:create] { notify_trustees }
-
+  before_filter :force_http
+  
   prepend_before_filter{ params[:profile_id] = request.subdomain }
   #prepend_before_filter{ params[:profile_id] = 'clicsporsuenos' }
 
@@ -17,5 +18,9 @@ class Channels::ProjectsController < ProjectsController
   protected
     def notify_trustees
 
+    end
+  private
+    def force_http
+        redirect_to(protocol: 'http', host:"#{request.subdomain}.#{::Configuration[:base_domain]}")
     end
 end
