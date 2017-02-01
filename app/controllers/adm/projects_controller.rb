@@ -2,7 +2,7 @@
 class Adm::ProjectsController < Adm::BaseController
   menu I18n.t("adm.projects.index.menu", locale: :es) => Rails.application.routes.url_helpers.adm_projects_path(locale: :es)
 
-  has_scope c, :pg_search, :user_name_contains, :by_state, :by_channel, :by_user_email
+  has_scope :by_id, :pg_search, :user_name_contains, :by_state, :by_channel, :by_user_email
   has_scope :between_created_at, using: [ :start_at, :ends_at ], allow_blank: true
   has_scope :order_table, default: 'projects.created_at'
 

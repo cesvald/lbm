@@ -223,6 +223,7 @@ es:
         matchfunding_maximum: "Presupuesto máximo para matchfunding"
         matchfunding_maximum_per_project: "Presupuesto máximo para matchfunding por proyecto"
         show_drafts: "Mostrar borradores"
+        funding_channel: "Canal de financiación"
         receive_projects: "Recibe proyectos"
         legend: "Texto para el formulario de nuevo proyecto"
         group_subdomains: "Subdominios para consolidar en el canal"

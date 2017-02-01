@@ -223,6 +223,7 @@ en:
         matchfunding_maximum: ~
         matchfunding_maximum_per_project: ~
         show_drafts: ~
+        funding_channel: "Canal de financiación"
         receive_projects: ~
         legend: ~
         group_subdomains: ~
