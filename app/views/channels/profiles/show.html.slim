@@ -29,12 +29,14 @@
                             = image_tag sub_channel.image, title: sub_channel.name
               #sub-channels-swiper-button-prev.swiper-button-prev
               #sub-channels-swiper-button-next.swiper-button-next
-            
           - else
             p.description   = truncate(@profile.description, length: 210)
           - if @profile.receive_projects?
             = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
-
+  
+  - if @profile.financial_channel?
+    #channel-map
+  
   - if @profile.group_channels.present?
     .group-channels
       .container.sub-channel-container

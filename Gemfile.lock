@@ -225,6 +225,7 @@ GEM
     formatador (0.2.4)
     formtastic (2.1.1)
       actionpack (~> 3.0)
+    gmaps4rails (2.1.2)
     gon (6.1.0)
       actionpack (>= 3.0)
       json
@@ -540,6 +541,7 @@ DEPENDENCIES
   fog (>= 1.3.1)
   foreman
   formtastic (~> 2.1.1)
+  gmaps4rails
   gon
   has_scope (= 0.6.0)
   heroku-deflater (>= 0.4.1)
