@@ -65,4 +65,8 @@ class Channel < ActiveRecord::Base
   def video
     @video ||= VideoInfo.get(self.video_url) if self.video_url.present?
   end
+  
+  def funding_channel?
+    funding_channel
+  end
 end

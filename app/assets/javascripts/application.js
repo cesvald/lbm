@@ -16,6 +16,7 @@
 //= require best_in_place
 //= require ./lib/underscore-min.js
 //= require ./lib/backbone-min.js
+//= require gmaps/google
 //= require_tree ./lib
 //= require ./app/catarse.js
 //= require ./app/views/model.js
