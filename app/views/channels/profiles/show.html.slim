@@ -36,7 +36,7 @@
   
   - if @profile.funding_channel?
     #channel-map
-  
+    = image_tag 'lbm/maps-blue-marker.png', id: "hidden-marker"
   - if @profile.group_channels.present?
     .group-channels
       .container.sub-channel-container
