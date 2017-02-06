@@ -206,4 +206,9 @@ var CATARSE = {
       window.view = new CATARSE.UsersShowView({el: $("body") });
     }
   },
+  profiles: {
+    show: function(){
+      window.view = new CATARSE.channels.profiles.show();
+    }
+  }
 }

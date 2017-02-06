@@ -18,10 +18,9 @@ jQuery(function () {
       }
     });
     if ( ns && controllerName && controllerName !== "" ) {
-      console.log(ns[controllerName])
-      console.log(action)
       if(ns[controllerName] && _.isFunction(ns[controllerName][action])) {
         var view = window.view = new ns[controllerName][action]();
+        console.log(view)
       }
     }
   }

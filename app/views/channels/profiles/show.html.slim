@@ -35,7 +35,8 @@
             = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
   
   - if @profile.funding_channel?
-    #channel-map
+    #channel-map-wrapper
+      #channel-map
     = image_tag 'lbm/maps-blue-marker.png', id: "hidden-marker"
   - if @profile.group_channels.present?
     .group-channels

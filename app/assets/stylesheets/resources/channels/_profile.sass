@@ -21,9 +21,12 @@ body[data-namespace="channels"][data-controller="profiles"]
           background: transparent
           iframe
             padding: 0px
-    #channel-map
-      width: 800px
-      height: 400px
+    #channel-map-wrapper
+      text-align: center
+      #channel-map
+        display: inline-block
+        width: 800px
+        height: 400px
     .row
       float: left
       position: relative
@@ -187,6 +190,8 @@ body[data-namespace="channels"][data-controller="profiles"]
     .banner-bottom
       width: 100%
       margin-top: 40px
+    #hidden-marker
+      display: none
 .channel-footer
   .links-container
     display: inline-block
