@@ -18,5 +18,4 @@ class Channels::ProfilesController < Channels::BaseController
       @projects = @projects.visible unless @profile.show_drafts?
     end
   end
-
 end
