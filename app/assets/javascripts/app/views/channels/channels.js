@@ -29,8 +29,8 @@ CATARSE.channels = {
           slidesPerView: 1,
           slidesPerGroup: 1
         });
-        var handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 8, gridSize: 10} } });
-        handler.buildMap({ internal: {id: 'channel-map'}}, function(){
+        var handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 6, gridSize: 10} } });
+        handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: false, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false}, internal: {id: 'channel-map'}}, function(){
           var markers = handler.addMarkers([
             { 
               lat: 4.527468,
@@ -51,8 +51,7 @@ CATARSE.channels = {
           var particularMarker = { lat: 4.530206, lng: -75.177741, name: 'Foo', infowindow: "<p>Aquí va la información</p><a href='google.com'/>Enlace al proyecto</a>" }
           handler.addMarker(particularMarker, { fillColor: 'blue' })
         });
-        handler.getMap().setZoom(6);
-        
+        handler.getMap().setZoom(5.5);
       },
 
       setupBackground: function(){
