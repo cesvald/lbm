@@ -3,7 +3,6 @@ class CreatePhases < ActiveRecord::Migration
     create_table :phases do |t|
       t.date :started_at, index: true
       t.string :title
-      t.string :subtitle
       t.text :description
       t.belongs_to :channel
 

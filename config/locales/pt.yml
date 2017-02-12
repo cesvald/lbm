@@ -231,6 +231,10 @@ pt:
         project_background_color: "Cor de fundo dos banners de projeto"
         confirm_backer_email_paragraph: "Parágrafo para email de confirmação de apoio"
         home_page: "Mostrar na home"
+      phase:
+        title: "Título"
+        description: "Descripción"
+        started_at: "Fecha de Inicio"
     models:
       backer: Apoiador
       category: Categoria

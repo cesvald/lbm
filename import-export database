@@ -1,4 +1,11 @@
+HEROKU UPDATE
+
 heroku pg:backups capture --app littlebigmoney
 curl -o latest.dump `heroku pg:backups public-url --app littlebigmoney`
+
+==Restore Remote Heroku==
 Upload latest.dump to S3 and make it public
 heroku pg:backups restore 'https://s3-us-west-2.amazonaws.com/templbm/latest.dump' DATABASE_URL --app lbmtest
+
+==Restore Locally==
+pg_restore --verbose --clean --no-acl --no-owner -h localhost -U ubuntu -d app_development latest.dump

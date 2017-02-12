@@ -109,8 +109,7 @@ body[data-namespace="channels"][data-controller="profiles"]
       #phase-form-container
         #add-phase-button
           margin-left: 10%
-          margin-top: 20px
-          
+          margin-top: 80px
         .modal-header
           font-family: 'Futura LT'
           font-weight: 400
@@ -133,59 +132,72 @@ body[data-namespace="channels"][data-controller="profiles"]
             width: 90px
         .text-field
           height: 100px
-      #phases-swiper
-        width: 1080px
-        .swiper-wrapper
-          .swiper-slide
-            text-align: center
-            .month-date
-              font-family: "Futura Std"
-              font-weight: 700
-              font-size: 35px
-              color: $darkblue
-              margin-bottom: 0px
-            .month-year
-              font-family: "Futura Std"
-              font-weight: 700
-              font-size: 18px
-              color: $darkblue
-              margin-bottom: 20px
-            .phase-title
-              font-family: "Futura LT"
-              font-weight: 400
-              font-size: 20px
-              color: white
-              background-color: $carrot
-              display: inline-block
-              padding: 5px 10px
-              +border-radius(10px)
-            .phase-description
-              font-family: "Futura Std"
-              font-weight: 700
-              font-size: 19px
-              color: $darkblue
-              padding: 0px 10px
-            .point-wrapper
-              border-top: #000 dashed 1px
-              .history-point
-                display: inline-block
-                border-radius: 50%
-                background-color: #DF7722
-                width: 20px
-                height: 20px
-                position: relative
-                top: -10px
-      #phases-swiper-button-prev
-        position: absolute
-        left: 0
-        right: 0%
-        border-width: 12px 21px 12px 0
-        border-color: transparent #DF7722 transparent transparent
-        background-image: none
-        width: 0px
-        height: 0px
-        border-style: solid
-        margin-top: -10px
+      #phases-swiper-supercontainer
+        text-align: center
+        margin-top: 35px
+        #phases-swiper-container
+          position: relative
+          display: inline-block
+          #phases-swiper
+            width: 1080px
+            .swiper-wrapper
+              .swiper-slide
+                text-align: center
+                .month-date
+                  font-family: "Futura Std"
+                  font-weight: 700
+                  font-size: 35px
+                  color: $darkblue
+                  margin-bottom: 0px
+                .month-year
+                  font-family: "Futura Std"
+                  font-weight: 700
+                  font-size: 18px
+                  color: $darkblue
+                  margin-bottom: 20px
+                .phase-title
+                  font-family: "Futura LT"
+                  font-weight: 400
+                  font-size: 20px
+                  color: white
+                  background-color: $carrot
+                  display: inline-block
+                  padding: 5px 10px
+                  margin: 0 10px
+                  +border-radius(10px)
+                .phase-description
+                  font-family: "Futura Std"
+                  font-weight: 700
+                  font-size: 19px
+                  color: $darkblue
+                  padding: 0px 10px
+                .point-wrapper
+                  border-top: #000 dashed 1px
+                  .history-point
+                    display: inline-block
+                    border-radius: 50%
+                    background-color: #DF7722
+                    width: 20px
+                    height: 20px
+                    position: relative
+                    top: -10px
+          #phases-swiper-button-prev, #phases-swiper-button-next
+            position: absolute
+            background-image: none
+            width: 0px
+            height: 0px
+            border-style: solid
+            top: 104px
+          #phases-swiper-button-prev
+            left: -40px
+            right: 0%
+            border-width: 12px 21px 12px 0
+            border-color: transparent #DF7722 transparent transparent
+          #phases-swiper-button-next
+            right: -40px
+            border-width: 12px 0 12px 21px
+            border-color: transparent transparent transparent $carrot
+                
     .group-channels
       .sub-channel-container
         text-align: center

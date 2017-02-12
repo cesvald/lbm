@@ -233,6 +233,10 @@ en:
         project_background_color: ~
         confirm_backer_email_paragraph: ~
         home_page: ~
+      phase:
+        title: ~
+        description: ~
+        started_at: ~
     models:
       backer: Supporter
       category: Category
