@@ -29,6 +29,9 @@ CATARSE.channels = {
           slidesPerView: 1,
           slidesPerGroup: 1
         });
+        
+        this.setupPhasesSwiper()
+        
         var handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 6, gridSize: 10} } });
         handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: false, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false}, internal: {id: 'channel-map'}}, function(){
           var markers = handler.addMarkers([
@@ -59,7 +62,22 @@ CATARSE.channels = {
                         this.banner.data('background') + '") no-repeat center',
                       'opacity': 1 
         });
+      },
+      
+      setupPhasesSwiper: function(){
+        if(typeof $('#phases-swiper').html() != 'undefined'){
+          new Swiper ('#phases-swiper', {
+            direction: 'horizontal',
+            loop: false,
+            nextButton: '#phases-swiper-button-next',
+            prevButton: '#phases-swiper-button-prev',
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            spaceBetween: 0,
+          })
+        }
       }
+      
     }), 
     // End Show
   },

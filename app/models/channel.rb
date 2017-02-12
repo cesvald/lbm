@@ -15,7 +15,9 @@ class Channel < ActiveRecord::Base
   has_and_belongs_to_many :trustees, class_name: :User, join_table: :channels_trustees
 
   has_many :backers, through: :projects
-
+  
+  has_many :phases
+  
   belongs_to :matchfunding_user, class_name: :User
 
   scope :home_page, ->() { where("home_page").order('random()') }

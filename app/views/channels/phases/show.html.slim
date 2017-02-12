@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Started at:
+  = @phase.started_at
+p
+  strong Title:
+  = @phase.title
+p
+  strong Subtitle:
+  = @phase.subtitle
+p
+  strong Description:
+  = @phase.description
+p
+  strong Channel:
+  = @phase.channel
+
+= link_to 'Edit', edit_phase_path(@phase)
+'|
+= link_to 'Back', phases_path

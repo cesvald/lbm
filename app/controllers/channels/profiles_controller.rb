@@ -5,8 +5,8 @@ class Channels::ProfilesController < Channels::BaseController
   actions :show
   custom_actions resource: [:how_it_works]
 
-  before_filter{ params[:id] = request.subdomain }
-  #before_filter{ params[:id] = 'financiacion' }
+  #before_filter{ params[:id] = request.subdomain }
+  before_filter{ params[:id] = 'financiacion' }
   def show
     show! do
       if @profile.group_channels.present?
@@ -16,6 +16,7 @@ class Channels::ProfilesController < Channels::BaseController
       end
       @projects = @profile.projects.visible_or_draft
       @projects = @projects.visible unless @profile.show_drafts?
+      @phase = Phase.new
     end
   end
 end

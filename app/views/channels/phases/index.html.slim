@@ -1,0 +1,27 @@
+h1 Listing phases
+
+table
+  tr
+    th Started at
+    th Title
+    th Subtitle
+    th Description
+    th Channel
+    th
+    th
+    th
+
+  - @phases.each do |phase|
+    tr
+      td = phase.started_at
+      td = phase.title
+      td = phase.subtitle
+      td = phase.description
+      td = phase.channel
+      td = link_to 'Show', phase
+      td = link_to 'Edit', edit_phase_path(phase)
+      td = link_to 'Destroy', phase, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Phase', new_phase_path

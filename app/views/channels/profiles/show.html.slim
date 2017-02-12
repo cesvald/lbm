@@ -35,9 +35,27 @@
             = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
   
   - if @profile.funding_channel?
-    #channel-map-wrapper
-      #channel-map
-    = image_tag 'lbm/maps-blue-marker.png', id: "hidden-marker"
+    #founding-wrapper
+      #channel-map-wrapper
+        #channel-map
+      = image_tag 'lbm/maps-blue-marker.png', id: "hidden-marker"
+      = render "channels/phases/form"
+      #phases-swiper.swiper-container
+        .swiper-wrapper
+          - @profile.phases.each do |phase|
+            .swiper-slide.channel-slide
+              p.month-date
+                = phase.started_at.strftime("%d")
+              p.month-year
+                = phase.started_at.strftime("%B %Y")
+              .point-wrapper
+                .history-point
+              /p.phase-title= phase.title
+              p.phase-description= phase.description
+        #phases-swiper-button-prev.swiper-button-prev
+        #phases-swiper-button-next.swiper-button-next
+    
+    
   - if @profile.group_channels.present?
     .group-channels
       .container.sub-channel-container
