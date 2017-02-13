@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
     @fb_admins = [100000428222603, 547955110]
   end
 
-  # We use this method only to make stubing easier 
+  # We use this method only to make stubing easier
   # and remove FB templates from acceptance tests
   def render_facebook_sdk
     render_to_string(partial: 'layouts/facebook_sdk').html_safe
@@ -57,7 +57,7 @@ class ApplicationController < ActionController::Base
   end
   
   def test_environment?
-    request.original_url.start_with?('http://s22.org')
+    request.original_url.include?('s22.org')
   end
   
   def to_usd(amount)
