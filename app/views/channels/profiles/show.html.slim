@@ -42,9 +42,11 @@
       = render "channels/phases/form"
       #phases-swiper-supercontainer
         #phases-swiper-container
+          - there_are_phases = false
           #phases-swiper.swiper-container
             .swiper-wrapper
               - @profile.phases.each do |phase|
+                - there_are_phases = true
                 .swiper-slide.channel-slide
                   - if current_user and current_user.admin?
                     = link_to 'X', [:channels, phase], :confirm => 'Estas seguro?', :method => :delete, class: 'delete-action'
@@ -56,8 +58,9 @@
                     .history-point
                   p.phase-title= phase.title
                   p.phase-description= phase.description
-          #phases-swiper-button-prev.swiper-button-prev
-          #phases-swiper-button-next.swiper-button-next
+          - if there_are_phases 
+            #phases-swiper-button-prev.swiper-button-prev
+            #phases-swiper-button-next.swiper-button-next
     
   - if @profile.group_channels.present?
     .group-channels
