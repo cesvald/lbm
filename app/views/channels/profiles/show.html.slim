@@ -44,8 +44,10 @@
         #phases-swiper-container
           #phases-swiper.swiper-container
             .swiper-wrapper
-              - @profile.phases.each_with_index do |phase, index|
+              - @profile.phases.each do |phase|
                 .swiper-slide.channel-slide
+                  - if current_user and current_user.admin?
+                    = link_to 'X', [:channels, phase], :confirm => 'Estas seguro?', :method => :delete, class: 'delete-action'
                   p.month-date
                     = l(phase.started_at, format: "%d")
                   p.month-year
