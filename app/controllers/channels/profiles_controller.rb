@@ -5,8 +5,8 @@ class Channels::ProfilesController < Channels::BaseController
   actions :show
   custom_actions resource: [:how_it_works]
 
-  #before_filter{ params[:id] = request.subdomain }
-  before_filter{ params[:id] = 'jovenesactivos' }
+  before_filter{ params[:id] = request.subdomain }
+  #before_filter{ params[:id] = 'jovenesactivos' }
   def show
     show! do
       if @profile.group_channels.present?
