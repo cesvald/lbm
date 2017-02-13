@@ -3,12 +3,13 @@ class Channels::PhasesController < Channels::BaseController
     actions :create, :destroy
     
     def create
-        #create! { root_url(subdomain: @channel.permalink, protocol: 'http') }
-        create! { root_url }
+        @channel = Channel.find(params[:phase][:channel_id])
+        create! { root_url(subdomain: @channel.permalink, protocol: 'http') }
+        #create! { root_url }
     end
     
     def destroy
-        #destroy! { root_url(subdomain: @channel.permalink, protocol: 'http') }
-        destroy! { root_url }
+        destroy! { root_url(subdomain: resource.channel.permalink, protocol: 'http') }
+        #destroy! { root_url }
     end
 end
