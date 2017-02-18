@@ -464,7 +464,11 @@ class Project < ActiveRecord::Base
   def remind_rewards_and_impact
     notify_observers :remind_owner_rewards_and_impact
   end
-
+  
+  def funding_channel
+    channels.where(funding_channel: true).first
+  end
+  
   private
   def self.get_routes
     routes = Rails.application.routes.routes.map do |r|

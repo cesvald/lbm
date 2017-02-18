@@ -90,7 +90,13 @@ class ProjectsController < ApplicationController
       else
         return redirect_to project_by_slug_path(resource.permalink)
       end
-
+      
+      if @project.funding_channel.present?
+        if !request.subdomain.present? || @project.funding_channel.permalink != request.subdomain
+          return redirect_to project_url(@project, subdomain: @project.funding_channel.permalink, protocol: 'http')
+        end
+      end
+      
       show!{
         @title = @project.name
         @rewards = @project.rewards.order(:minimum_value).includes(:project).rank(:row_order).all

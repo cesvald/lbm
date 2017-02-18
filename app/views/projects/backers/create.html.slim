@@ -87,6 +87,12 @@
           #payment-method-wrapper
             - PaymentEngines.engines.each do |engine|
               div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path].call(@backer)}" data-form=(engine[:form_path].present? ? "#{engine[:form_path].call(@backer)}" : "asd")]
+            - if current_user.admin?
+              - if @backer.project.belongs_to_funding_channel?
+                .payment-form
+                  .submit-wrapper
+                    = link_to confirm_adm_backer_path(@backer), method: :put do
+                      = image_tag "lbm/financial-payment.png", class: "payment-icon", alt: "financial-icon"
             /*
               .payment-form
                 = link_to @preference["response"]["init_point"], target:"_blank", class:"submit-wrapper" do
