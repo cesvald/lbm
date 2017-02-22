@@ -18,6 +18,7 @@
                   ul
                     - @phase.errors.full_messages.each do |message|
                       li = message
+              = f.hidden_field :financial_channel_id, value: @profile.financial_channel.id
               = f.hidden_field :channel_id, value: @profile.id
               .field
                 = f.label :started_at

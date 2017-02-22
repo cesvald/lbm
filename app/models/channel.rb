@@ -1,4 +1,5 @@
 # -*- encoding : utf-8 -*-
+
 class Channel < ActiveRecord::Base
   extend CatarseAutoHtml
 
@@ -16,7 +17,9 @@ class Channel < ActiveRecord::Base
 
   has_many :backers, through: :projects
   
-  has_many :phases
+  has_one :financial_channel
+  
+  has_many :phases, through: :financial_channel
   
   belongs_to :matchfunding_user, class_name: :User
 
@@ -68,7 +71,7 @@ class Channel < ActiveRecord::Base
     @video ||= VideoInfo.get(self.video_url) if self.video_url.present?
   end
   
-  def funding_channel?
-    funding_channel
+  def financial?
+    financial_channel.present?
   end
 end

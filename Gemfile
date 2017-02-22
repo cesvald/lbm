@@ -104,7 +104,6 @@ gem 'axlsx_rails', '>= 0.4.0'
 gem 'test-unit'
 gem 'gon' # from controller to js
 
-
 # apis
 gem 'gmaps4rails'
 
