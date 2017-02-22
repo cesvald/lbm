@@ -2,7 +2,7 @@
 class Channels::ProfilesController < Channels::BaseController
   inherit_resources
   defaults resource_class: Channel, finder: :find_by_permalink!
-  actions :show
+  actions :show, :create
   custom_actions resource: [:how_it_works]
 
   #before_filter{ params[:id] = request.subdomain }
@@ -17,6 +17,14 @@ class Channels::ProfilesController < Channels::BaseController
       @projects = @profile.projects.visible_or_draft
       @projects = @projects.visible unless @profile.show_drafts?
       @phase = Phase.new
+    end
+  end
+  
+  def create
+    create! do
+      if params[:financial_channel] == "1"
+        FinancialChannel.create(channel: @profile)
+      end
     end
   end
 end

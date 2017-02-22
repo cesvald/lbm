@@ -9,6 +9,7 @@ body[data-namespace="adm"]
   [data-controller-class="adm::statisticscontroller"][data-action="index"],
   [data-controller-class="adm::channelscontroller"][data-action="index"],
   [data-controller-class="adm::channelscontroller"][data-action="new"],
+  [data-controller-class="adm::channelscontroller"][data-action="edit"],
   [data-controller-class="channels::adm::projectscontroller"][data-action="index"]
     .actions_menu
       float: left
@@ -131,7 +132,7 @@ body[data-namespace="adm"]
             width: 75%
           input
             margin-bottom: 40px
-        #new_channel
+        #form_channel
           padding: 20px
           margin-left: $less_half_width
           .label

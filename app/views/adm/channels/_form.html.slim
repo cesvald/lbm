@@ -1,7 +1,7 @@
 #page_content
   .container
     .bootstrap-form
-      = semantic_form_for [:adm, @channel], :html => { :class => "centered_page_width" } do |form|
+      = semantic_form_for [:adm, @channel], :html => { :class => "centered_page_width", :id => "form_channel" } do |form|
         = form.inputs do
           = form.input :permalink, as: :string, input_html: {class: "lbm-input"}
           = form.input :name, as: :string, input_html: {class: "lbm-input"}
@@ -26,7 +26,11 @@
           = form.input :matchfunding_maximum, as: :string, input_html: {class: "lbm-input"}
           = form.input :matchfunding_maximum_per_project, as: :string, input_html: {class: "lbm-input"}
           = form.input :group_subdomains, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
-          = form.input :funding_channel
+          li.boolean.input.optional
+            = hidden_field_tag :funding_channel, 0
+            label
+              = check_box_tag :funding_channel, 1, (@channel.financial_channel.present?)
+              = t('activerecord.attributes.channel.funding_channel')
           = form.input :receive_projects
           = form.input :show_drafts
           = form.input :finish_once_reached_goal
