@@ -244,6 +244,7 @@ es:
       project: Proyecto
       reward: Recompensa
       channel: Canal
+      iniciative: Iniciativa
   backer:
     display_confirmed_at: "%{time_ago} atrás"
     reward_must_be_from_project: "Debe ser del mismo proyecto"
@@ -361,6 +362,27 @@ es:
         maximum_backers: "Si tu recompensa es limitada, cuéntanos el máximo de colaboradores."
         minimum_value: "Este es el valor mínimo de colaboración para escoger esta recompensa."
         days_to_delivery: "Total de días para enviar la recompensa."
+      iniciative:
+        name: 'Sé lo más concreto posible. Deja las explicaciones para el video y la descripción.'
+        category: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        description: 'Realice una breve descripción de la iniciativa (¿Cuál es el propósito de su iniciativa? ¿Qué causa la mueve? ¿Qué problemática quiere resolver?)'
+        year: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        activities: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        department: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        municipality: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        other_municipality: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        participants_count: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        zone: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        women_count: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        average_age: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        benefited_count: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        web_url: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        facebook_url: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        blog_url: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        video_url: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        contact_name: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        contact_email: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        contact_phone: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     labels:
       backer:
         anonymous: "Quiero que mi colaboración sea anónima."
@@ -401,6 +423,27 @@ es:
       reward:
         days_to_delivery: "Días de entrega"
         maximum_backers: "Máximo de colaboradores (opcional)"
+      iniciative:
+        name: 'Nobre de tu iniciativa'
+        category: 'Categoría de tu iniciativa'
+        description: 'Descripción de tu iniciativa'
+        year: 'Año de creación de la iniciativa'
+        activities: '¿Qué actividades realizan?'
+        department: '¿En qué departamento opera principalmente la iniciativa? '
+        municipality: '¿En qué municipio opera principalmente la iniciativa? '
+        other_municipality: '¿Opera en otros municipios? Especifique en cuales'
+        participants_count: '¿Cuántos participantes tiene la iniciativa?'
+        zone: '¿Zona urbana o rural?'
+        women_count: 'De los participantes de la iniciativa, ¿cuántas mujeres participan?'
+        average_age: '¿Cuál es el promedio de edad de los participantes?'
+        benefited_count: '¿A cuántas personas benefician con su labor?'
+        web_url: 'Página web de la iniciativa'
+        facebook_url: 'Página de Facebook de la iniciativa'
+        blog_url: 'Blog de la iniciativa'
+        video_url: 'Video de la iniciativa'
+        contact_name: 'Nombre de persona de contacto'
+        contact_email: 'Correo electrónico de contacto'
+        contact_phone: 'Teléfono/ Celular de contacto'
     optional: " (Opcional)"
   found_plural: Encontrados
   found_singular: Encontrado

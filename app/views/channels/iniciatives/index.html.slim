@@ -1,0 +1,59 @@
+h1 Listing iniciatives
+
+table
+  tr
+    th Name
+    th Category
+    th Description
+    th Year
+    th Activities
+    th Department
+    th Municipality
+    th Other municipality
+    th Participants count
+    th Zone
+    th Women count
+    th Average age
+    th Benefited count
+    th Web url
+    th Facebook url
+    th Blog url
+    th Video url
+    th Contact name
+    th Contact email
+    th Contact phone
+    th Financial channel
+    th
+    th
+    th
+
+  - @iniciatives.each do |iniciative|
+    tr
+      td = iniciative.name
+      td = iniciative.category
+      td = iniciative.description
+      td = iniciative.year
+      td = iniciative.activities
+      td = iniciative.department
+      td = iniciative.municipality
+      td = iniciative.other_municipality
+      td = iniciative.participants_count
+      td = iniciative.zone
+      td = iniciative.women_count
+      td = iniciative.average_age
+      td = iniciative.benefited_count
+      td = iniciative.web_url
+      td = iniciative.facebook_url
+      td = iniciative.blog_url
+      td = iniciative.video_url
+      td = iniciative.contact_name
+      td = iniciative.contact_email
+      td = iniciative.contact_phone
+      td = iniciative.financial_channel
+      td = link_to 'Show', iniciative
+      td = link_to 'Edit', edit_iniciative_path(iniciative)
+      td = link_to 'Destroy', iniciative, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Iniciative', new_iniciative_path

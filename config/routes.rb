@@ -58,6 +58,7 @@ Catarse::Application.routes.draw do
       end
       resources :channels_subscribers, only: [:index, :create, :destroy]
       resources :phases
+      resources :iniciatives
     end
   end
 

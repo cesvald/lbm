@@ -91,3 +91,9 @@ es:
       link_to_twitter: "Enlace con el Twitter del canal"
       link_to_facebook: "Enlace con el Facebook del canal"
       link_to_website: "Enlace a la página web del canal"
+    iniciatives:
+      new:
+        title: 'ENVÍA TU INICIATIVA'
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit sem nec aliquet bibendum. Nam sollicitudin massa ante, sed ultrices sem consequat at. Quisque scelerisque efficitur felis quis imperdiet. Mauris in nisl lectus. Sed m'
+      form:
+        submit: 'Enviar tu iniciativa!'

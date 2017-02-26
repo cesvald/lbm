@@ -1,0 +1,69 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @iniciative.name
+p
+  strong Category:
+  = @iniciative.category
+p
+  strong Description:
+  = @iniciative.description
+p
+  strong Year:
+  = @iniciative.year
+p
+  strong Activities:
+  = @iniciative.activities
+p
+  strong Department:
+  = @iniciative.department
+p
+  strong Municipality:
+  = @iniciative.municipality
+p
+  strong Other municipality:
+  = @iniciative.other_municipality
+p
+  strong Participants count:
+  = @iniciative.participants_count
+p
+  strong Zone:
+  = @iniciative.zone
+p
+  strong Women count:
+  = @iniciative.women_count
+p
+  strong Average age:
+  = @iniciative.average_age
+p
+  strong Benefited count:
+  = @iniciative.benefited_count
+p
+  strong Web url:
+  = @iniciative.web_url
+p
+  strong Facebook url:
+  = @iniciative.facebook_url
+p
+  strong Blog url:
+  = @iniciative.blog_url
+p
+  strong Video url:
+  = @iniciative.video_url
+p
+  strong Contact name:
+  = @iniciative.contact_name
+p
+  strong Contact email:
+  = @iniciative.contact_email
+p
+  strong Contact phone:
+  = @iniciative.contact_phone
+p
+  strong Financial channel:
+  = @iniciative.financial_channel
+
+= link_to 'Edit', edit_iniciative_path(@iniciative)
+'|
+= link_to 'Back', iniciatives_path

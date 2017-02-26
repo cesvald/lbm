@@ -53,9 +53,9 @@
         .acess_links
           = t('.access_links', sign_in_link: new_user_session_path, sign_up_link: new_user_registration_path).html_safe
       - else
-        .bootstrap-form
+        .bootstrap-form 
           .clearfix
-          = semantic_form_for @project, html: { id: 'project_form' } do |form|
+          = semantic_form_for @project, html: { id: 'project_form', class: 'lbm-form' } do |form|
             = form.inputs do
               .input.control-group.error
               .input-container

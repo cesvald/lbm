@@ -31,8 +31,13 @@
               #sub-channels-swiper-button-next.swiper-button-next
           - else
             p.description   = truncate(@profile.description, length: 210)
-          - if @profile.receive_projects?
-            = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
+          - if @profile.financial?
+            =  @profile.financial_channel.state
+            - if @profile.financial_channel.state == 'summoning'
+              = link_to t('channels.send_initiative'), new_channels_iniciative_path, class: 'lbm-button', title: t('channels.send_initiative')
+          - else
+            - if @profile.receive_projects?
+              = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
   
   - if @profile.financial?
     #founding-wrapper
