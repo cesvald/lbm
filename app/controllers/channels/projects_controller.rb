@@ -13,7 +13,7 @@ class Channels::ProjectsController < ProjectsController
   #prepend_before_filter{ params[:profile_id] = 'jovenesactivos' }
 
   def new
-    if parent.financial? and parent.financial_channel.state != 'applying'
+    if parent.financial? and parent.financial_channel.state != 'applaying'
       return redirect_to root_url
     end
     if parent.financial? and current_user
