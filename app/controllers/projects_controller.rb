@@ -55,7 +55,10 @@ class ProjectsController < ApplicationController
 
   def create
     @project = current_user.projects.new(params[:project])
-
+    if(params[:iniciative_id].present?)
+      iniciative = Iniciative.find(params[:iniciative_id])
+      @project.iniciative = iniciative
+    end
     create!(notice: t('projects.create.success')) do |success, failure|
       success.html{ return redirect_to project_by_slug_path(@project.permalink) }
     end
@@ -91,10 +94,11 @@ class ProjectsController < ApplicationController
         return redirect_to project_by_slug_path(resource.permalink)
       end
       
-      if @project.funding_channel.present?
-        if !request.subdomain.present? || @project.funding_channel.permalink != request.subdomain
-          return redirect_to project_url(@project, subdomain: @project.funding_channel.permalink, protocol: 'http')
-        end
+      if @project.financial?
+        #if !request.subdomain.present? || @project.financial_channel.permalink != request.subdomain
+          #return redirect_to project_url(@project, subdomain: @project.financial_channel.permalink, protocol: 'http')
+        #  return redirect_to project_url(@project, protocol: 'http')
+        #end
       end
       
       show!{

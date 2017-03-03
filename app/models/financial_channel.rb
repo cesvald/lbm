@@ -2,6 +2,7 @@ require 'state_machine'
 class FinancialChannel < ActiveRecord::Base
 	belongs_to :channel
 	has_many :phases
+	has_many :iniciatives
 	
 	state_machine :state, initial: :summoning do
 		state :summoning, value: 'summoning'
@@ -30,6 +31,9 @@ class FinancialChannel < ActiveRecord::Base
 	
 	def after_selecting_to_announced
 		channel.projects.each do |project|
+			project.online_days = 0
+			project.online_date = DateTime.now - 1.day
+			project.save
 			project.finish
 		end
 	end

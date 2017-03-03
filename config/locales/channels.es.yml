@@ -10,6 +10,10 @@ es:
     deleted: "Ya no estas siguiendo este canal"
   channels:
     send_your_project: "Envía tu proyecto"
+    send_your_iniciative: "Envía tu iniciativa"
+    close_summoning: "Cerrar convocatoria"
+    close_applying: "Cerrar aplicación"
+    announce: "Anunciar resultados"
     send_a_email: "Enviar un email"
     follow: "Sigue el canal"
     following: Siguiendo
@@ -94,6 +98,9 @@ es:
     iniciatives:
       new:
         title: 'ENVÍA TU INICIATIVA'
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit sem nec aliquet bibendum. Nam sollicitudin massa ante, sed ultrices sem consequat at. Quisque scelerisque efficitur felis quis imperdiet. Mauris in nisl lectus. Sed m'
+        subtitle: '¡Es hora de hacerlo realidad! Queremos saber del potencial de tu iniciativa.'
+        urban: 'Urbana'
+        rural: 'Rural'
+        urban_and_rural: 'Ambas'
       form:
         submit: 'Enviar tu iniciativa!'

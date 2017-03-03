@@ -102,6 +102,7 @@ gem 'httparty', '~> 0.6.1' # this version is required by moip gem, otherwise pay
 gem 'nokogiri'
 gem 'axlsx_rails', '>= 0.4.0'
 gem 'test-unit'
+gem 'jbuilder'
 gem 'gon' # from controller to js
 
 # apis

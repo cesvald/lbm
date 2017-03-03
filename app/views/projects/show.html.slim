@@ -81,15 +81,24 @@
                 .status_bar
                   .progress style="width: #{@project.display_progress}%;"
                 span.status_text ="#{@project.display_progress}%"
-                .subdescription
-                  = embedded_svg "lbm/time-clock-icon.svg", class: "time-clock-icon"
-                  - if @project.draft? || @project.rejected? || @project.reviewed?
-                    p.time-remaining= @project.online_days
-                    em.description #{@project.online_days} #{pluralize_without_number(@project.online_days, I18n.t('datetime.prompts.day').downcase)} #{pluralize_without_number(@project.online_days, t('remaining_singular'), t('remaining_plural'))}
-                  - else
-                    p.time-remaining= "#{@project.remaining_days} "
-                    em.description #{@project.time_to_go[:unit].capitalize} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
-          - if @project.online? && @project.in_time?
+                - if not @project.financial?
+                  .subdescription
+                    = embedded_svg "lbm/time-clock-icon.svg", class: "time-clock-icon"
+                    - if @project.draft? || @project.rejected? || @project.reviewed?
+                      p.time-remaining= @project.online_days
+                      em.description #{@project.online_days} #{pluralize_without_number(@project.online_days, I18n.t('datetime.prompts.day').downcase)} #{pluralize_without_number(@project.online_days, t('remaining_singular'), t('remaining_plural'))}
+                    - else
+                      p.time-remaining= "#{@project.remaining_days} "
+                      em.description #{@project.time_to_go[:unit].capitalize} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
+                - else
+                  - if @project.financial_channel.financial_channel.state == 'selecting' && @project.state == 'online'
+                    = form_tag finance_channels_project_path(@project), method: :post do
+                      = text_field_tag :value, nil, class: 'lbm-input', placeholder: "Valor"
+                      br
+                      br
+                      = submit_tag t('.submit_finance'), class: 'finance-btn btn btn-success'
+
+          - if @project.online? && @project.in_time? && !@project.financial?
             #pledge
               = form_tag(new_project_backer_path(@project), method: :get, id: 'back_project_form') do
                 fieldset

@@ -445,6 +445,11 @@ es:
         contact_email: 'Correo electrónico de contacto'
         contact_phone: 'Teléfono/ Celular de contacto'
     optional: " (Opcional)"
+    options:
+      iniciative:
+        rural: 'Rural'
+        urban: 'Urbana'
+        rural_and_urban: 'Ambas'
   found_plural: Encontrados
   found_singular: Encontrado
   here: aquí
@@ -826,6 +831,7 @@ es:
       update_documents: "Actualizar documentos"
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
+      submit_finance: "Financiar"
       pictures:
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"
@@ -929,6 +935,9 @@ es:
     start_project_email:
       subject: "Enviado por %{name}"
       subject_html: "Enviado por %{link}"
+  iniciatives:
+    create:
+      success: "Tu iniciativa fue creada exitosamente! Te contactaremos próximamente. Muchas gracias!"
   registrations:
     new:
       site_title: Registro

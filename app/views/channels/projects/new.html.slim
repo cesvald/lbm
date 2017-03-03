@@ -12,214 +12,253 @@
             = image_tag "lbm/lbm-logo.png", class: "legend-icon"
             h2.legend-title= t('projects.new.legend_title')
           .legend-text= t('.legend_html')
-      .bootstrap-form
-        .clearfix
-        = semantic_form_for @project, html: { id: 'project_form', class: 'lbm-form' } do |form|
-          = form.inputs do
-            .input.control-group.error
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.name_important')
-                = form.label :name, "1. #{t('formtastic.labels.project.name')}"
-                .input-wrapper
-                  = form.text_field :name, class: "#{'error' if @project.errors[:name].present?}"
-                  p.inline-hints= t('formtastic.hints.project.name')
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.permalink_important')
-                = form.label :permalink, "2. #{t('activerecord.attributes.project.permalink')} *"
-                .input-prepend.permalink
-                  span.add-on= "#{::Configuration[:base_url]}/"
-                  = form.text_field :permalink, class: "permalink #{'error' if @project.errors[:permalink].present?}"
-                  p.inline-hints
-                    = t('.permalink_hint')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.about_important')
-                = form.label :about, "3. #{t('formtastic.labels.project.about')}"
-                .input-wrapper
-                  = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}"
-                  p.inline-hints= t('formtastic.hints.project.about')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.history_important')
-                = form.label :history, "4. #{t('formtastic.labels.project.history')}"
-                .input-wrapper
-                  = form.text_area :history, class: "#{'error' if @project.errors[:history].present?}"
-                  p.inline-hints= t('formtastic.hints.project.history')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.cause_important')
-                = form.label :cause, "5. #{t('formtastic.labels.project.cause')}"
-                .input-wrapper
-                  = form.text_area :cause, class: "#{'error' if @project.errors[:cause].present?}"
-                  p.inline-hints= t('formtastic.hints.project.cause')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.description_important')
-                = form.label :description, "6. #{t('formtastic.labels.project.description')}"
-                .input-wrapper
-                  = form.text_area :description, class: "#{'error' if @project.errors[:description].present?}"
-                  p.inline-hints= t('formtastic.hints.project.description')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.impact_important')
-                = form.label :impact, "7. #{t('formtastic.labels.project.impact')}"
-                .input-wrapper
-                  = form.text_area :impact, class: "#{'error' if @project.errors[:impact].present?}"
-                  p.inline-hints= t('formtastic.hints.project.impact')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.important_html')
-                = form.label :goal, "8. #{t('formtastic.labels.project.goal')}".html_safe
-                .input-wrapper
-                  = form.text_field :goal, class: "#{'error' if @project.errors[:goal].present?}"
-                  p.inline-hints= t('formtastic.hints.project.goal').html_safe
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.budget_important')
-                = form.label :budget, "9. #{t('formtastic.labels.project.budget')}"
-                .input-wrapper
-                  = form.text_area :budget, class: "#{'error' if @project.errors[:budget].present?}"
-                  p.inline-hints= t('formtastic.hints.project.budget')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.implementation_important')
-                = form.label :implementation, "10. #{t('formtastic.labels.project.implementation')}"
-                .input-wrapper
-                  = form.text_area :implementation, class: "#{'error' if @project.errors[:implementation].present?}"
-                  p.inline-hints= t('formtastic.hints.project.implementation')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.online_days_important')
-                = form.label :online_days, "11. #{t('formtastic.labels.project.expires_at')}"
-                .input-wrapper
-                  .input-append
-                    = form.text_field :online_days, class: "#{'error' if @project.errors[:online_days].present?}, days-input"
-                    span.add-on= t('days')
-                  p.inline-hints= t('formtastic.hints.project.online_days')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.tags_important', href: explore_path).html_safe
-                = form.label :category, "12. #{t('formtastic.labels.project.category')}"
-                .input-wrapper
-                  = form.select :category_id, Category.array, class: "#{'error' if @project.errors[:category].present?}"
-                  p.inline-hints= t('formtastic.hints.project.category')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.headline_important')
-                = form.label :headline, "13. #{t('formtastic.labels.project.headline')}"
-                .input-wrapper
-                  = form.text_field :headline, { maxlength: 140, class: "#{'error' if @project.errors[:headline].present?}" }
-                  p.inline-hints= t('formtastic.hints.project.headline')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.video_important')
-                = form.label :video_url, "14. #{t('formtastic.labels.project.video_url')}"
-                .input-wrapper
-                  = form.text_field :video_url, class: "#{'error' if @project.errors[:video_url].present?}"
-                  p.inline-hints= t('formtastic.hints.project.video_url').html_safe
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.more_links_important')
-                = form.label :more_links, "15. #{t('formtastic.labels.project.more_links')}"
-                .input-wrapper
-                  = form.text_area :more_links, class: "#{'error' if @project.errors[:more_links].present?}"
-                  p.inline-hints= t('formtastic.hints.project.more_links')
-
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.first_backers_important')
-                = form.label :first_backers, "16. #{t('formtastic.labels.project.first_backers')}"
-                .input-wrapper
-                  = form.text_area :first_backers, class: "#{'error' if @project.errors[:first_backers].present?}"
-                  p.inline-hints= t('formtastic.hints.project.first_backers')
-                  
-            .input-container
-              .input
-                .bootstrap-alert
-                  = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                  .alert
-                    .important= t('projects.new.how_know_important')
-                = form.label :how_know, "17. #{t('formtastic.labels.project.how_know')}"
-                .input-wrapper
-                  = form.text_area :how_know, class: "#{'error' if @project.errors[:how_know].present?}"
-
-            .clearfix
-            .submit
-              fieldset.accept
-                = form.check_box :accepted_terms
-                = form.label :accepted_terms, t('accept_terms_html', link: link_to(t('terms'), t('footer.links.terms_link'), target: :_blank)), class: 'inline'
-                - if @project.errors[:accepted_terms].present?
+        .bootstrap-twitter
+          #send-project-steps.row
+            .col-xs-10.col-xs-offset-1
+              .row
+                .col-xs-3.col
+                  /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_1_title')
+                  .step-text= t('projects.new.step_1_text')
+                .col-xs-3.col
+                  /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_2_title')
+                  .step-text= t('projects.new.step_2_text')
+                .col-xs-3.col
+                  /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_3_title')
+                  .step-text= t('projects.new.step_3_text')
+                .col-xs-3.col
+                  /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_4_title')
+                  .step-text= t('projects.new.step_4_text')
+                .step-footer= t('projects.new.step_footer')
+          #send-project-container.row
+            .col-xs-12.adjust-margin
+              .row
+                .col-xs-12
+                  = image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
+                  p.send-project-title= t('static.guidelines.send_project_title')
+                  = image_tag 'lbm/plain-icon.png', class: "plain-icon"
+                  .send-project-points
+                    .project-point= t('static.guidelines.project_send.phrase_1')
+                    .project-point= t('static.guidelines.project_send.phrase_2')
+                    .project-point= t('static.guidelines.project_send.phrase_3')
+                    .project-point= t('static.guidelines.project_send.phrase_4')
+                    .project-point= t('static.guidelines.project_send.phrase_5')
+      - if !current_user
+        .acess_links
+          = t('projects.new.access_links', sign_in_link: new_user_session_path, sign_up_link: new_user_registration_path).html_safe
+      - else
+        .bootstrap-form
+          .clearfix
+          = semantic_form_for @project, html: { id: 'project_form', class: 'lbm-form' } do |form|
+            = form.inputs do
+              .input.control-group.error
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.name_important')
+                  = form.label :name, "1. #{t('formtastic.labels.project.name')}"
+                  .input-wrapper
+                    = form.text_field :name, class: "#{'error' if @project.errors[:name].present?}", value: (@iniciative.present? ? @iniciative.name : params[:project][:name])
+                    p.inline-hints= t('formtastic.hints.project.name')
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.permalink_important')
+                  = form.label :permalink, "2. #{t('activerecord.attributes.project.permalink')} *"
+                  .input-prepend.permalink
+                    span.add-on= "#{::Configuration[:base_url]}/"
+                    = form.text_field :permalink, class: "permalink #{'error' if @project.errors[:permalink].present?}"
+                    p.inline-hints
+                      = t('.permalink_hint')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.about_important')
+                  = form.label :about, "3. #{t('formtastic.labels.project.about')}"
+                  .input-wrapper
+                    = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}"
+                    p.inline-hints= t('formtastic.hints.project.about')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.history_important')
+                  = form.label :history, "4. #{t('formtastic.labels.project.history')}"
+                  .input-wrapper
+                    = form.text_area :history, class: "#{'error' if @project.errors[:history].present?}"
+                    p.inline-hints= t('formtastic.hints.project.history')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.cause_important')
+                  = form.label :cause, "5. #{t('formtastic.labels.project.cause')}"
+                  .input-wrapper
+                    = form.text_area :cause, class: "#{'error' if @project.errors[:cause].present?}"
+                    p.inline-hints= t('formtastic.hints.project.cause')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.description_important')
+                  = form.label :description, "6. #{t('formtastic.labels.project.description')}"
+                  .input-wrapper
+                    = form.text_area :description, class: "#{'error' if @project.errors[:description].present?}", value: (@iniciative.present? ? @iniciative.description : params[:project][:description])
+                    p.inline-hints= t('formtastic.hints.project.description')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.impact_important')
+                  = form.label :impact, "7. #{t('formtastic.labels.project.impact')}"
+                  .input-wrapper
+                    = form.text_area :impact, class: "#{'error' if @project.errors[:impact].present?}"
+                    p.inline-hints= t('formtastic.hints.project.impact')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.important_html')
+                  = form.label :goal, "8. #{t('formtastic.labels.project.goal')}".html_safe
+                  .input-wrapper
+                    = form.text_field :goal, class: "#{'error' if @project.errors[:goal].present?}"
+                    p.inline-hints= t('formtastic.hints.project.goal').html_safe
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.budget_important')
+                  = form.label :budget, "9. #{t('formtastic.labels.project.budget')}"
+                  .input-wrapper
+                    = form.text_area :budget, class: "#{'error' if @project.errors[:budget].present?}"
+                    p.inline-hints= t('formtastic.hints.project.budget')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.implementation_important')
+                  = form.label :implementation, "10. #{t('formtastic.labels.project.implementation')}"
+                  .input-wrapper
+                    = form.text_area :implementation, class: "#{'error' if @project.errors[:implementation].present?}"
+                    p.inline-hints= t('formtastic.hints.project.implementation')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.online_days_important')
+                  = form.label :online_days, "11. #{t('formtastic.labels.project.expires_at')}"
+                  .input-wrapper
+                    .input-append
+                      = form.text_field :online_days, class: "#{'error' if @project.errors[:online_days].present?}, days-input"
+                      span.add-on= t('days')
+                    p.inline-hints= t('formtastic.hints.project.online_days')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.tags_important', href: explore_path).html_safe
+                  = form.label :category, "12. #{t('formtastic.labels.project.category')}"
+                  .input-wrapper
+                    = form.select :category_id, Category.array, class: "#{'error' if @project.errors[:category].present?}", value: (@iniciative.present? ? @iniciative.category_id : params[:project][:category_id])
+                    p.inline-hints= t('formtastic.hints.project.category')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.headline_important')
+                  = form.label :headline, "13. #{t('formtastic.labels.project.headline')}"
+                  .input-wrapper
+                    = form.text_field :headline, { maxlength: 140, class: "#{'error' if @project.errors[:headline].present?}" }
+                    p.inline-hints= t('formtastic.hints.project.headline')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.video_important')
+                  = form.label :video_url, "14. #{t('formtastic.labels.project.video_url')}"
+                  .input-wrapper
+                    = form.text_field :video_url, class: "#{'error' if @project.errors[:video_url].present?}", value: (@iniciative.present? ? @iniciative.video_url : params[:project][:video_url])
+                    p.inline-hints= t('formtastic.hints.project.video_url').html_safe
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.more_links_important')
+                  = form.label :more_links, "15. #{t('formtastic.labels.project.more_links')}"
+                  .input-wrapper
+                    = form.text_area :more_links, class: "#{'error' if @project.errors[:more_links].present?}", value: (@iniciative.present? ? "#{@iniciative.web_url} #{@iniciative.blog_url} #{@iniciative.facebook_url}" : params[:project][:description])
+                    p.inline-hints= t('formtastic.hints.project.more_links')
+  
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.first_backers_important')
+                  = form.label :first_backers, "16. #{t('formtastic.labels.project.first_backers')}"
+                  .input-wrapper
+                    = form.text_area :first_backers, class: "#{'error' if @project.errors[:first_backers].present?}"
+                    p.inline-hints= t('formtastic.hints.project.first_backers')
+                    
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.how_know_important')
+                  = form.label :how_know, "17. #{t('formtastic.labels.project.how_know')}"
+                  .input-wrapper
+                    = form.text_area :how_know, class: "#{'error' if @project.errors[:how_know].present?}"
+              - if @iniciative.present?
+                = hidden_field_tag :iniciative_id, @iniciative.id
+              .clearfix
+              .submit
+                fieldset.accept
+                  = form.check_box :accepted_terms
+                  = form.label :accepted_terms, t('accept_terms_html', link: link_to(t('terms'), t('footer.links.terms_link'), target: :_blank)), class: 'inline'
+                  - if @project.errors[:accepted_terms].present?
+                    .bootstrap-twitter
+                      p.text-error= @project.errors[:accepted_terms].to_sentence
+                fieldset
                   .bootstrap-twitter
-                    p.text-error= @project.errors[:accepted_terms].to_sentence
-              fieldset
-                .bootstrap-twitter
-                  .send
-                    = image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
-                    = submit_tag t('.submit'), id: 'project_submit', class: 'btn_send'
-                    = image_tag 'lbm/plain-icon.png', class: "plain-icon"
-                  /= form.submit t('.submit'), disabled: true, class: 'btn-large btn-block btn btn-warning', id: 'project_submit', style: 'width: 100%;'
-
-    .clearfix
+                    .send
+                      = image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
+                      = submit_tag t('.submit'), id: 'project_submit', class: 'btn_send'
+                      = image_tag 'lbm/plain-icon.png', class: "plain-icon"
+                    /= form.submit t('.submit'), disabled: true, class: 'btn-large btn-block btn btn-warning', id: 'project_submit', style: 'width: 100%;'
+  
+      .clearfix

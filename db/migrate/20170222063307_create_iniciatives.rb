@@ -2,7 +2,6 @@ class CreateIniciatives < ActiveRecord::Migration
   def change
     create_table :iniciatives do |t|
       t.string :name
-      t.belongs_to :category
       t.text :description
       t.integer :year
       t.text :activities
@@ -21,11 +20,17 @@ class CreateIniciatives < ActiveRecord::Migration
       t.string :contact_name
       t.string :contact_email
       t.string :contact_phone
+      t.string :state
+      t.decimal :lat, precision: 20, scale: 14
+      t.decimal :lng, precision: 20, scale: 14
       t.belongs_to :financial_channel
-
+      t.belongs_to :category
+      t.belongs_to :project
+      
       t.timestamps
     end
     add_index :iniciatives, :category_id
     add_index :iniciatives, :financial_channel_id
+    add_index :iniciatives, :project_id
   end
 end

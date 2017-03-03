@@ -260,6 +260,9 @@ GEM
       rspec (>= 1.3.1)
       selenium-webdriver (>= 0.1.3)
     jasmine-core (1.3.1)
+    jbuilder (2.6.3)
+      activesupport (>= 3.0.0, < 5.2)
+      multi_json (~> 1.2)
     journey (1.0.4)
     jquery-fileupload-rails (0.4.6)
       actionpack (>= 3.1)
@@ -552,6 +555,7 @@ DEPENDENCIES
   inherited_resources (= 1.6.0)
   initjs
   jasmine
+  jbuilder
   jquery-fileupload-rails
   jquery-rails
   kaminari

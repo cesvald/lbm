@@ -28,8 +28,10 @@ class Project < ActiveRecord::Base
   has_many :notifications, dependent: :destroy
   has_many :pictures, dependent: :destroy
   has_and_belongs_to_many :channels
-
+  
   has_one :project_total
+  has_one :iniciative
+  
   accepts_nested_attributes_for :rewards
   accepts_nested_attributes_for :pictures
 
@@ -114,7 +116,7 @@ class Project < ActiveRecord::Base
   scope :backed_by, ->(user_id){
     where("id IN (SELECT project_id FROM backers b WHERE b.state = 'confirmed' AND b.user_id = ?)", user_id)
   }
-
+  
   attr_accessor :accepted_terms, :review_comments
 
   validates_acceptance_of :accepted_terms, on: :create
@@ -465,8 +467,12 @@ class Project < ActiveRecord::Base
     notify_observers :remind_owner_rewards_and_impact
   end
   
-  def funding_channel
-    channels.where(funding_channel: true).first
+  def financial_channel
+    channels.joins(:financial_channel).first
+  end
+  
+  def financial?
+    financial_channel.present?
   end
   
   private
