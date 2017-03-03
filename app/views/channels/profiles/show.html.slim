@@ -36,12 +36,15 @@
           - if @profile.financial?
             - if @profile.financial_channel.state == 'summoning'
               = link_to t('channels.send_your_iniciative'), new_channels_iniciative_path, class: 'lbm-button', title: t('channels.send_your_iniciative')
-              = link_to t('channels.close_summoning'), close_summoning_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_summoning')
+              - if current_user && current_user.admin?
+                = link_to t('channels.close_summoning'), close_summoning_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_summoning')
             - if @profile.financial_channel.state == 'applaying'
               = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
-              = link_to t('channels.close_applying'), close_applaying_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_summoning')
+              - if current_user && current_user.admin?
+                = link_to t('channels.close_applying'), close_applaying_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_summoning')
             - if @profile.financial_channel.state == 'selecting'
-              = link_to t('channels.announce'), announce_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.announce')
+              - if current_user && current_user.admin?
+                = link_to t('channels.announce'), announce_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.announce')
           - else
             - if @profile.receive_projects?
               = link_to t('channels.projects.how_it_works'), new_channels_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
