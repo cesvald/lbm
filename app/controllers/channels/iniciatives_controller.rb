@@ -19,18 +19,18 @@ class Channels::IniciativesController < Channels::BaseController
         @iniciative = Iniciative.new(params[:iniciative])
 
         create!(notice: t('iniciatives.create.success')) do |success, failure|
-          #success.html{ return redirect_to root_url(subdomain: @financial_channel.channel.permalink) }
-          success.html{ return redirect_to root_url }
-          #failure.html{ return redirect_to not_exist_path }
+          success.html{ return redirect_to root_url(subdomain: @financial_channel.channel.permalink) }
+          #success.html{ return redirect_to root_url }
+          failure.html{ return redirect_to not_exist_path }
         end
     end
 
-    
+
     private
     
     def find_financial_channel
-        #@financial_channel = FinancialChannel.joins(:channel).where("channels.permalink": request.subdomain).first
-        @financial_channel = FinancialChannel.joins(:channel).where("channels.permalink": 'jovenesactivos').first
+        @financial_channel = FinancialChannel.joins(:channel).where("channels.permalink": request.subdomain).first
+        #@financial_channel = FinancialChannel.joins(:channel).where("channels.permalink": 'jovenesactivos').first
     end
     
 end
