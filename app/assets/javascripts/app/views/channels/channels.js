@@ -40,7 +40,7 @@ CATARSE.channels = {
         
         this.setupPhasesSwiper()
         
-        var handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 6, gridSize: 10} } });
+        var handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 6, gridSize: 50} } });
         var iniciatives = []
         _.each(gon.iniciatives, function(iniciative){
           var summary = "En <span class='iniciative-name'>" + iniciative.name + "</span> somos " + iniciative.participants_count + " emprendedores";
@@ -54,7 +54,7 @@ CATARSE.channels = {
           summary = '<span class="iniciative-wrapper"><p class="summary">' +summary+ '</p><p class="know-more" data-id="' +iniciative.id+ '" data-toggle="modal" data-target="#iniciative-modal"> Saber más de nosotros</p></span>'
           iniciatives.push({lat: iniciative.lat, lng: iniciative.lng, name: iniciative.name, infowindow: summary});
         });
-        handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: true, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false}, internal: {id: 'channel-map'}}, function(){
+        handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: false, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false, minZoom: 5}, internal: {id: 'channel-map'}}, function(){
           var markers = handler.addMarkers(iniciatives)
           /*var markers = handler.addMarkers([
             { 
@@ -128,6 +128,49 @@ CATARSE.channels = {
   
   iniciatives: {
     new: Backbone.View.extend({
+      el: 'body',
+      events: {
+        'blur #iniciative_municipality': 'findLocation'
+      },
+      findLocation: function(event){
+        var self = this;
+        var address = event.target.value
+        var geocoder = new google.maps.Geocoder();
+        console.log(address + ", " + $('#iniciative_department').val() +  ", Colombia")
+        geocoder.geocode({'address': address + ", " + $('#iniciative_department').val() + ", Colombia"}, function(results, status){
+          if(status == 'ZERO_RESULTS'){
+            geocoder.geocode({'address': $('#iniciative_department').val() + ", Colombia"}, function(results, status){
+              if(status == 'OK'){
+                $('#iniciative_lng').val(self.randomNumber(results[0].geometry.bounds.b.b, results[0].geometry.bounds.b.f))
+                $('#iniciative_lat').val(self.randomNumber(results[0].geometry.bounds.f.b, results[0].geometry.bounds.f.f))
+              }
+            });
+          }
+          else if(status == 'OK'){
+            $('#iniciative_lng').val(self.randomNumber(results[0].geometry.bounds.b.b, results[0].geometry.bounds.b.f))
+            $('#iniciative_lat').val(self.randomNumber(results[0].geometry.bounds.f.b, results[0].geometry.bounds.f.f))
+          }
+        })
+      },
+      randomNumber: function(start, end){
+        if(start < 0 && end < 0){
+          start *= -1
+          end *= -1
+          return -1 * (Math.random() * (start - end) + end)
+        }
+        if(end > 0){
+          return Math.random() * (start - end) + end
+        }
+        else {
+          var random = Math.random() + start
+          if(random < (end * -1)) {
+            random *= Math.floor(Math.random()*2) == 1 ? 1 : -1
+          }
+          return random
+        }
+      }
+    }),
+    create: Backbone.View.extend({
       el: 'body',
       events: {
         'blur #iniciative_municipality': 'findLocation'
