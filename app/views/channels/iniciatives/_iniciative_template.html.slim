@@ -21,6 +21,10 @@ script type="text/template" id="iniciative-view"
 				span.answer
 					| <%= municipality %>, <%= department %>
 			p
+				span.modal-label Opera en otros municipios como:
+				span.answer
+					| <%= other_municipality %>
+			p
 				span.modal-label ¿Zona urbana o rural?
 				span.answer
 					| <%= zone %>
@@ -61,3 +65,17 @@ script type="text/template" id="iniciative-view"
 				span.modal-label Facebook
 				span.answer
 					| <%= facebook_url %>
+	
+		.section
+			p
+				span.modal-label Nombre de Contacto
+				span.answer
+					| <%= contact_name %>
+			p
+				span.modal-label Email de Contacto
+				span.answer
+					| <%= contact_email %>
+			p
+				span.modal-label Teléfono de Contacto
+				span.answer
+					| <%= contact_phone %>
