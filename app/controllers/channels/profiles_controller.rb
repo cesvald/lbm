@@ -6,7 +6,7 @@ class Channels::ProfilesController < Channels::BaseController
   custom_actions resource: [:how_it_works]
 
   before_filter{ params[:id] = request.subdomain }
-  #before_filter{ params[:id] = 'jovenesactivos' }
+  #before_filter{ params[:id] = 'clicsporibague' }
   def show
     show! do
       if @profile.group_channels.present?

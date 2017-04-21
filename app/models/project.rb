@@ -469,6 +469,7 @@ class Project < ActiveRecord::Base
     channels.each do |channel|
       return channel unless channel.financial_channel.nil?
     end
+    return nil
   end
   
   private
