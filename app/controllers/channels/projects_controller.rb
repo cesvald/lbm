@@ -13,13 +13,18 @@ class Channels::ProjectsController < ProjectsController
   #prepend_before_filter{ params[:profile_id] = 'jovenesactivos' }
 
   def new
-    if parent.financial? and parent.financial_channel.state != 'applaying'
+    if parent.financial? and parent.financial_channel.state != 'applying'
       return redirect_to root_url
     end
-    if parent.financial? and current_user
+    
+    if parent.financial? and !current_user
+      return redirect_to root_url, flash: { notice: t('projects.new.access_financial') }
+    elsif parent.financial? and current_user
       @iniciative = parent.financial_channel.iniciatives.where(contact_email: current_user.email).first
       if not @iniciative.present?
-        return redirect_to root_url, flash: { notice: "No está autorizado para enviar un proyecto"}
+        return redirect_to root_url, flash: { notice: "No existe una iniciativa creada con tu usuario. Por favor envía una iniciativa antes de crear el proyecto."}
+      elsif @iniciative.draft?
+        return redirect_to root_url, flash: { notice: "Tu iniciativa no ha sido aprobada aún. Si deseas escríbenos a littlebigmoney@fundacioncapital.org y en breve te daremos una respuesta"}
       end
     end
     super

@@ -48,7 +48,7 @@
                     .project-point= t('static.guidelines.project_send.phrase_5')
       - if !current_user
         .acess_links
-          = t('projects.new.access_links', sign_in_link: new_user_session_path, sign_up_link: new_user_registration_path).html_safe
+            = t('projects.new.access_links', sign_in_link: new_user_session_path, sign_up_link: new_user_registration_path).html_safe
       - else
         .bootstrap-form
           .clearfix

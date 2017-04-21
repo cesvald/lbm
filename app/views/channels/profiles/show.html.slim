@@ -34,13 +34,13 @@
           - else
             p.description   = truncate(@profile.description, length: 210)
           - if @profile.financial?
+            = link_to t('channels.send_your_iniciative'), new_channels_iniciative_path, class: 'lbm-button', title: t('channels.send_your_iniciative')
             - if @profile.financial_channel.state == 'summoning'
-              = link_to t('channels.send_your_iniciative'), new_channels_iniciative_path, class: 'lbm-button', title: t('channels.send_your_iniciative')
-              - if current_user && current_user.admin?
+              - if can? :update, @profile.financial_channel
                 = link_to t('channels.close_summoning'), close_summoning_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_summoning')
-            - if @profile.financial_channel.state == 'applaying'
+            - if @profile.financial_channel.state == 'applying'
               = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
-              - if current_user && current_user.admin?
+              - if can? :update, @profile.financial_channel
                 = link_to t('channels.close_applying'), close_applaying_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_summoning')
             - if @profile.financial_channel.state == 'selecting'
               - if current_user && current_user.admin?
@@ -68,7 +68,7 @@
               - @profile.phases.each do |phase|
                 - there_are_phases = true
                 .swiper-slide.channel-slide
-                  - if current_user and current_user.admin?
+                  - if can? :update, @profile.financial_channel
                     = link_to 'X', [:channels, phase], :confirm => 'Estas seguro?', :method => :delete, class: 'delete-action'
                   p.month-date
                     = l(phase.started_at, format: "%d")

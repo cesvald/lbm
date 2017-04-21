@@ -11,7 +11,7 @@ class FinancialChannel < ActiveRecord::Base
 		state :announced, value: 'announced'
 		
 		event :close_summoning do
-			transition :summoning => :applaying
+			transition :summoning => :applying
 		end
 
 		event :close_applaying do

@@ -104,9 +104,7 @@ class ApplicationController < ActionController::Base
   def set_locale
     if test_environment?
       if !current_user
-        if not ::Configuration[:test_user_email].blank?
-          sign_in User.find_by_email(::Configuration[:test_user_email]), event: :authentication, store: true
-        end
+        sign_in User.find_by_email(::Configuration[:test_user_email]), event: :authentication, store: true
       end
     end
     if params[:locale]

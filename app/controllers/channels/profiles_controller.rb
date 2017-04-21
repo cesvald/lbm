@@ -8,7 +8,6 @@ class Channels::ProfilesController < Channels::BaseController
   before_filter{ params[:id] = request.subdomain }
   #before_filter{ params[:id] = 'jovenesactivos' }
   
-  
   def show
     show! do
       if @profile.group_channels.present?

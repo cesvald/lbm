@@ -868,6 +868,7 @@ en:
       send_project: "I want to submit my project"
       legend_html: "After filling in the form below, you will receive a project page in draft mode. In this draft you can add the rewards for your supporters. You can also share the page with your friends to collect feedback and sharpen your project even more.<br><br>The information filled in below is not definitive, but remember that the more consistent you are in your project submission, the faster it will go live.<br><br><b>Very Important:</b> <i>LittleBigMoney is a platform with diverse levels of supervision, which means that our board will evaluate the focus, the feasibility and consistency of your project during the draft. We hope you understand that if your project does not comply with our selection criteria</a>, it may be refused by the team of curators.</i>"
       access_links: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto"
+      access_financial: "Necesitas iniciar sesión o registrarte para enviar tu proyecto. Recuerda ingresar con el mismo email con el cual enviaste tu iniciativa."
       step_1_title: "1. Registro"
       step_1_text: "Crear una cuenta es fácil y gratuito. Sólo necesitas nombre, mail y contraseña"
       step_2_title: "2. Proyecto"

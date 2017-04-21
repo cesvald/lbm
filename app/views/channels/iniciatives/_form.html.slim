@@ -112,13 +112,13 @@
         .input
           = form.label :contact_name, "18. #{t('formtastic.labels.iniciative.contact_name')}"
           .input-wrapper
-            = form.text_field :contact_name, class: "#{'error' if @iniciative.errors[:contact_name].present?}"
+            = form.text_field :contact_name, value:(current_user ? current_user.full_name : params[:contact_name]), class: "#{'error' if @iniciative.errors[:contact_name].present?}"
             p.inline-hints= t('formtastic.hints.iniciative.contact_name')
       .input-container
         .input
           = form.label :contact_email, "19. #{t('formtastic.labels.iniciative.contact_email')}"
           .input-wrapper
-            = form.text_field :contact_email, class: "#{'error' if @iniciative.errors[:contact_email].present?}"
+            = form.text_field :contact_email, value:(current_user ? current_user.email : params[:contact_email]), class: "#{'error' if @iniciative.errors[:contact_email].present?}"
             p.inline-hints= t('formtastic.hints.iniciative.contact_email')
       .input-container
         .input
