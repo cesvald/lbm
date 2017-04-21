@@ -518,6 +518,7 @@ en:
         successful: "This project was successful and was funded on %{date}"
         waiting_funds: "Waiting for payment confirmation to know if the project will be supported."
         draft: "This project is in draft mode and is not open to supporters yet."
+        reviewed: "This project has been reviewd and it needs to be updated"
       reached_of: Reached
       submit: "I want to support"
     backer:

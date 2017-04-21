@@ -518,6 +518,7 @@ pt:
         successful: "Este projeto foi bem-sucedido e foi financiado em %{date}"
         waiting_funds: "Aguardando a confirmação de boletos para saber se este projeto será financiado."
         draft: "Esse projeto é apenas um rascunho e ainda não está aberto para receber apoios."
+        reviewed: "Este proyecto ha sido revisado y necesita ser actualizado"
       reached_of: "Atingidos de"
       submit: "Apoiar este projeto"
     backer:

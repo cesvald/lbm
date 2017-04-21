@@ -466,7 +466,9 @@ class Project < ActiveRecord::Base
   end
   
   def funding_channel
-    channels.where(financial_channel: true).first
+    channels.each do |channel|
+      return channel.funding_channel unless channel.funding_channel.nil?
+    end
   end
   
   private
