@@ -400,6 +400,11 @@ es:
         days_to_delivery: "Días de entrega"
         maximum_backers: "Máximo de colaboradores (opcional)"
     optional: " (Opcional)"
+    options:
+      iniciative:
+        rural: 'Rural'
+        urban: 'Urbana'
+        rural_and_urban: 'Ambas'
   found_plural: Encontrados
   found_singular: Encontrado
   here: aquí
@@ -782,6 +787,7 @@ es:
       update_documents: "Actualizar documentos"
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
+      submit_finance: "Financiar"
       pictures:
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"
@@ -867,6 +873,7 @@ es:
       send_project: "Quiero enviar mi proyecto."
       legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
       access_links: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto"
+      access_links_financial: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto. Recuerda ingresar con el mismo email con el cual enviaste tu iniciativa."
       step_1_title: "1. Registro"
       step_1_text: "Crear una cuenta es fácil y gratuito. Sólo necesitas nombre, mail y contraseña"
       step_2_title: "2. Proyecto"
@@ -885,6 +892,14 @@ es:
     start_project_email:
       subject: "Enviado por %{name}"
       subject_html: "Enviado por %{link}"
+  iniciatives:
+    create:
+      success: "Tu iniciativa fue creada exitosamente! Te contactaremos próximamente. Muchas gracias!"
+      fail:
+        contact_email_exists_applying: "Ya existe una iniciativa con tu email de contacto. Si desea puedes crear un proyecto a partir de esta iniciativa o ingresar otro email de contacto"
+        contact_email_exists: "Ya existe una iniciativa con este email de contacto."
+    new:
+      email_exists: "Ya existe una iniciativa creada con tu usuario, si deseas crea un proyecto a partir de esta iniciativa en el siguiente paso"
   registrations:
     new:
       site_title: Registro

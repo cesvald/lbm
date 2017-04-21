@@ -10,8 +10,8 @@ jQuery(function () {
     var ns, railsNS;
 
     ns = CATARSE;
+    
     railsNS = controllerClass ? controllerClass.split("::").slice(0, -1) : [];
-
     _.each(railsNS, function(name){
       if(ns) {
         ns = ns[name];
@@ -20,7 +20,6 @@ jQuery(function () {
     if ( ns && controllerName && controllerName !== "" ) {
       if(ns[controllerName] && _.isFunction(ns[controllerName][action])) {
         var view = window.view = new ns[controllerName][action]();
-        console.log(view)
       }
     }
   }

@@ -1,0 +1,90 @@
+#page_content
+	.container
+		.title
+			h1 Iniciativas
+		.bootstrap-form
+			= form_tag adm_iniciatives_path, method: :get, class: 'form-horizontal' do |f|
+				fieldset
+					.input
+						= label_tag :by_contact_email, t('.activerecord.attributes.iniciative.contact_email')
+						= text_field_tag :by_contact_email, params[:by_contact_email], class: 'lbm-input'
+					.input
+						= label_tag :by_name, t('.activerecord.attributes.iniciative.name')
+						= text_field_tag :by_name, params[:by_name], class: 'lbm-input'
+					.input
+						= label_tag :by_channel, t('.by_channel')
+						= select_tag :by_channel, options_from_collection_for_select(@channels, 'id', 'name', params[:by_channel]), include_blank: true, class: "lbm-select"
+
+					.bootstrap-twitter
+						.input.submit
+							= submit_tag t('.submit'), class: 'btn btn-success'
+
+		.data-table
+			= paginate @iniciatives
+			br
+			- if @iniciatives.empty?
+				= t('.no_iniciatives')
+			- else
+				.bootstrap-twitter
+					table.table.table-striped
+						thead
+							tr
+								th= t('.name')
+								th= t('.category_id')
+								th= t('.description')
+								th= t('.year')
+								th= t('.activities')
+								th= t('.department')
+								th= t('.municipality')
+								th= t('.other_municipality')
+								th= t('.participants_count')
+								th= t('.zone')
+								th= t('.women_count')
+								th= t('.average_age')
+								th= t('.benefited_count')
+								th= t('.web_url')
+								th= t('.facebook_url')
+								th= t('.blog_url')
+								th= t('.video_url')
+								th= t('.contact_name')
+								th= t('.contact_email')
+								th= t('.contact_phone')
+								th= t('.state')
+								th
+						tbody
+							- for iniciative in @iniciatives do
+								tr id=iniciative.id class=cycle("even", "odd")
+										td= iniciative.name
+										td= iniciative.category.name_es
+										td= iniciative.description
+										td= iniciative.year
+										td= iniciative.activities
+										td= iniciative.department
+										td= iniciative.municipality
+										td= iniciative.other_municipality
+										td= iniciative.participants_count
+										td= iniciative.zone
+										td= iniciative.women_count
+										td= iniciative.average_age
+										td= iniciative.benefited_count
+										td= iniciative.web_url
+										td= iniciative.facebook_url
+										td= iniciative.blog_url
+										td= iniciative.video_url
+										td= iniciative.contact_name
+										td= iniciative.contact_email
+										td= iniciative.contact_phone
+										td= iniciative.state
+										td
+												.btn-group
+													= link_to 'javascript:void(0);', class: 'btn btn-mini dropdown-toggle', data: {toggle: "dropdown"} do
+														b.caret
+													ul.dropdown-menu
+															li
+																= link_to approve_adm_iniciative_path(iniciative), method: :put do
+																	i.icon-edit
+																	= t('.approve')
+															
+			= paginate @iniciatives
+
+	.clearfix

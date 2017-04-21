@@ -11,6 +11,7 @@ class Ability
     can :access, :updates do |update|
       update.project.user_id == current_user.id
     end
+    
     can :see, :updates do |update|
       !update.exclusive || !current_user.backs.confirmed.where(project_id: update.project.id).empty?
     end
@@ -117,7 +118,12 @@ class Ability
         end
       else
     end
-
+    
+    # Financial Channel authorization
+    can :update, :financial_channel do |financial_channel|
+      financial_channel.trustees.include?(current_user)
+    end
+    
     # NOTE: admin can access everything.
     # It's the last ability to override all previous abilities.
     can :access, :all if current_user.admin?

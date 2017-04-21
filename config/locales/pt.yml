@@ -867,6 +867,7 @@ pt:
       send_project: "Quero enviar meu projeto."
       legend_html: "Após preencher o formulário abaixo, você receberá uma página de projeto em rascunho. Lá você irá adicionar as recompensas e poderá compartilhar com seus amigos para ter um projeto ainda mais afiado.<br><br>As informações preenchidas abaixo não são definitivas, mas lembre-se de que quanto mais consistente estiver o seu projeto nesse envio, mais rápido ele irá para o ar.<br><br><b>Importante</b> <i> O LittleBigMoney é uma plataforma curada, o que significa que vamos avaliar o foco, a viabilidade, e a consistência do seu projeto durante o processo de Rascunho. Se entendermos que o seu projeto não está de acordo com os nossos <a href='https://docs.google.com/document/d/1Heh9LlvoSoD0lUfbmV5WlISJ3nqmGpEQiw15TBuCn-0/edit' target='_blank' >Critérios de Seleção</a>, ele poderá ser recusado pela equipe de curadores.</i>"
       access_links: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto"
+      access_links_financial: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto. Recuerda ingresar con el mismo email con el cual enviaste tu iniciativa."
       step_1_title: "1. Registro"
       step_1_text: "Crear una cuenta es fácil y gratuito. Sólo necesitas nombre, mail y contraseña"
       step_2_title: "2. Proyecto"

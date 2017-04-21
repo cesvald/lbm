@@ -37,7 +37,7 @@ Catarse::Application.routes.draw do
   end
 
   # Channels
-  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
+  constraints subdomain: /^(?!lbm3-cesvald|www|secure|test|local)(\w+)/ do
     namespace :channels, path: '' do
       namespace :adm do
         resources :projects, only: [ :index, :update] do
@@ -47,6 +47,7 @@ Catarse::Application.routes.draw do
             put 'push_to_draft'
           end
         end
+        resources :iniciatives
       end
       get '/', to: 'profiles#show', as: :profile
       get '/how-it-works', to: 'profiles#how_it_works', as: :about
@@ -55,10 +56,20 @@ Catarse::Application.routes.draw do
           get 'video'
           get 'check_slug'
         end
+        member do
+          post 'finance'
+        end
       end
       resources :channels_subscribers, only: [:index, :create, :destroy]
       resources :phases
       resources :iniciatives
+      resources :financial_channels, only: :index do
+        member do
+          put 'close_summoning'
+          put 'close_applaying'
+          put 'announce'
+        end
+      end
     end
   end
 
@@ -174,6 +185,11 @@ Catarse::Application.routes.draw do
       end
     end
     resources :users, only: [ :index ]
+    resources :iniciatives do
+      member do
+        put 'approve'
+      end
+    end
     resources :channels, except: [ :show ] do
       resources :projects, controller: 'channels/projects', only: [:create, :destroy], on: :member
       resources :trustees, controller: 'channels/trustees', only: [:create, :destroy], on: :member

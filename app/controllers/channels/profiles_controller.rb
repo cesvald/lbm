@@ -7,6 +7,8 @@ class Channels::ProfilesController < Channels::BaseController
 
   before_filter{ params[:id] = request.subdomain }
   #before_filter{ params[:id] = 'clicsporibague' }
+  #before_filter{ params[:id] = 'jovenesactivos' }
+  
   def show
     show! do
       if @profile.group_channels.present?
@@ -17,6 +19,11 @@ class Channels::ProfilesController < Channels::BaseController
       @projects = @profile.projects.visible_or_draft
       @projects = @projects.visible unless @profile.show_drafts?
       @phase = Phase.new
+      if @profile.financial?
+        @iniciatives = @profile.financial_channel.iniciatives
+        gon.jbuilder template: 'app/views/channels/iniciatives/index.json'
+      end
+      
     end
   end
   

@@ -1,6 +1,6 @@
 .bootstrap-twitter
   #phase-form-container
-    - if current_user and current_user.admin?
+    - if can? :update, @profile.financial_channel
       button#add-phase-button.lbm-button data-target="#phase-modal" data-toggle="modal" type="button"
         | Agregar Nueva Fase
     #phase-modal.modal.fade role="dialog" tabindex="-1" 
