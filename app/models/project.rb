@@ -466,7 +466,7 @@ class Project < ActiveRecord::Base
   end
   
   def funding_channel
-    channels.where(funding_channel: true).first
+    channels.where(financial_channel: true).first
   end
   
   private
