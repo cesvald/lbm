@@ -31,7 +31,7 @@ class Ability
     end
 
     can :update, :projects do |project|
-      project.user == current_user && ( project.draft? || project.rejected? || project.online? )
+      project.user == current_user && ( project.draft? || project.rejected? || project.online? || project.reviewed?)
     end
 
     # NOTE: Reward authorizations

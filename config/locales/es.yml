@@ -100,11 +100,9 @@ es:
       faq: "Preguntas frecuentes/Ayuda"
       about: "¿Quiénes somos?"
       terms: "Concepto legal"
-      terms_of_use: "Términos de uso"
       policy: "Políticas de privacidad"
       terms_link: "https://drive.google.com/a/fundacioncapital.org/file/d/0B5yleHdyw7uUMXNuclIteXA3OEE/view"
       policy_link: "https://drive.google.com/file/d/0Byoqa61VzXlOdHZoLWloSmM5UHM/view?usp=sharing"
-      terms_of_use_link: "https://drive.google.com/file/d/0Byoqa61VzXlOdFAyQzg1WFo0WHM/view?usp=sharing"
       contact: Contacto
       twitter: "<p class='social_follow'>Síguenos en Twitter</p> <p class='social_user'>@%{twitter}</p>"
       facebook: "<p class='social_follow'>Síguenos en Facebook</p> <p class='social_user'>@littlebigmoney</p>"
@@ -118,7 +116,7 @@ es:
       successful: "Explora proyectos exitosos"
       near: "Explora proyectos cercanos a ti"
       channel_projects: "Conozca el canal %{name}"
-      view_all: "Ver todos"
+      view_all: ~
   sidebar:
     titles:
       blog: LittleBig-Blog
@@ -224,7 +222,7 @@ es:
         matchfunding_maximum: "Presupuesto máximo para matchfunding"
         matchfunding_maximum_per_project: "Presupuesto máximo para matchfunding por proyecto"
         show_drafts: "Mostrar borradores"
-        funding_channel: "Canal de financiación"
+        funding_channel: ~
         receive_projects: "Recibe proyectos"
         legend: "Texto para el formulario de nuevo proyecto"
         group_subdomains: "Subdominios para consolidar en el canal"
@@ -235,16 +233,15 @@ es:
         confirm_backer_email_paragraph: "Párrafo para email de confirmación de aporte"
         home_page: "Mostrar en el home"
       phase:
-        title: "Título"
-        description: "Descripción"
-        started_at: "Fecha de Inicio"
+        title: ~
+        description: ~
+        started_at: ~
     models:
       backer: Colaborador
       category: Categoría
       project: Proyecto
       reward: Recompensa
       channel: Canal
-      iniciative: Iniciativa
   backer:
     display_confirmed_at: "%{time_ago} atrás"
     reward_must_be_from_project: "Debe ser del mismo proyecto"
@@ -280,11 +277,11 @@ es:
       insufficient_credits: "No tienes los créditos suficientes para solicitar este reembolso."
       refunds_title: "Pagos que pueden ser reembolsados"
       credits_use: "Recuerda que al momento de realizar una donación puedes escoger como método de pago utilizar tus créditos"
-      request_refund: ¿Solicitar Reembolso?
+      request_refund: "¿Solicitar Reembolso?"
       requested_refund: "Reembolso solicitado"
-      credit_refunded: "Reembolsado"
-      refund: "Reembolso"
-      expired: "Caducado"
+      credit_refunded: Reembolsado
+      refund: Reembolso
+      expired: Caducado
       status: Estado
       title: "Mis créditos"
       value: valor
@@ -362,27 +359,6 @@ es:
         maximum_backers: "Si tu recompensa es limitada, cuéntanos el máximo de colaboradores."
         minimum_value: "Este es el valor mínimo de colaboración para escoger esta recompensa."
         days_to_delivery: "Total de días para enviar la recompensa."
-      iniciative:
-        name: 'Sé lo más concreto posible. Deja las explicaciones para el video y la descripción.'
-        category: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        description: 'Realice una breve descripción de la iniciativa (¿Cuál es el propósito de su iniciativa? ¿Qué causa la mueve? ¿Qué problemática quiere resolver?)'
-        year: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        activities: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        department: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        municipality: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        other_municipality: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        participants_count: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        zone: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        women_count: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        average_age: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        benefited_count: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        web_url: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        facebook_url: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        blog_url: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        video_url: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        contact_name: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        contact_email: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        contact_phone: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     labels:
       backer:
         anonymous: "Quiero que mi colaboración sea anónima."
@@ -423,27 +399,6 @@ es:
       reward:
         days_to_delivery: "Días de entrega"
         maximum_backers: "Máximo de colaboradores (opcional)"
-      iniciative:
-        name: 'Nobre de tu iniciativa'
-        category: 'Categoría de tu iniciativa'
-        description: 'Descripción de tu iniciativa'
-        year: 'Año de creación de la iniciativa'
-        activities: '¿Qué actividades realizan?'
-        department: '¿En qué departamento opera principalmente la iniciativa? '
-        municipality: '¿En qué municipio opera principalmente la iniciativa? '
-        other_municipality: '¿Opera en otros municipios? Especifique en cuales'
-        participants_count: '¿Cuántos participantes tiene la iniciativa?'
-        zone: '¿Zona urbana o rural?'
-        women_count: 'De los participantes de la iniciativa, ¿cuántas mujeres participan?'
-        average_age: '¿Cuál es el promedio de edad de los participantes?'
-        benefited_count: '¿A cuántas personas benefician con su labor?'
-        web_url: 'Página web de la iniciativa'
-        facebook_url: 'Página de Facebook de la iniciativa'
-        blog_url: 'Blog de la iniciativa'
-        video_url: 'Video de la iniciativa'
-        contact_name: 'Nombre de persona de contacto'
-        contact_email: 'Correo electrónico de contacto'
-        contact_phone: 'Teléfono/ Celular de contacto'
     optional: " (Opcional)"
   found_plural: Encontrados
   found_singular: Encontrado
@@ -934,10 +889,8 @@ es:
       site_title: Registro
       submit: Registro
       title: "Regístrate usando tu email"
-      account: "Ya estás registrado? %{link}"
-      login: "Ingresa aquí"
       placeholder:
-        name: "Nombre"
+        name: Nombre
         password_confirmation: "Confirmación de contraseña"
   remaining_plural: restantes
   remaining_singular: restante
@@ -1197,7 +1150,7 @@ es:
           title: "Crear buenas recompensas.pdf"
           link: "https://drive.google.com/file/d/0B5yleHdyw7uUTzdURjRzLTN5SzQ/view"
           question: "¿Cuál es el costo de tener un proyecto en LittleBigMoney?"
-          answer: "En proyectos individuales no hay que pagar previamente para acceder al servicio de LittleBigMoney. En el caso de que el proyecto logre financiamiento (parcial o total), al momento del desembolso de dinero se descontará del total recaudado el 14%, correspondiente a costos de operación de LittleBigMoney (6%) y de las pasarelas de pago (8%)."
+          answer: "En proyectos individuales no hay que pagar previamente para acceder al servicio de LittleBigMoney. En el caso de que el proyecto logre financiamiento (parcial o total), al momento del desembolso de dinero se descontará el 10% del total recaudado, correspondiente a costos de operación de LittleBigMoney y de las pasarelas de pago."
           image: ~
         tool_5:
           title: ~
@@ -1238,7 +1191,7 @@ es:
       after_project:
         description: "Descripción de las herramientas después de tu campaña"
         tool_1:
-          title:
+          title: ~
           link: ~
           question: "¿Qué es un canal?"
           answer: "Se denomina así al espacio personalizado para la promoción de proyectos por parte de una o más organizaciones que comparten objetivos específicos;  esta vitrina deriva de una alianza previamente firmada entre LBM y una o más instituciones. En este subdominio se subirán los proyectos de la iniciativa/alianza para promocionarlos y solicitar colaboraciones para alcanzar metas económicas. Para ver un ejemplo puedes ingresar a este canal desarrollado en alianza con PNUD: www.clicsporsuenos.littlebigmoney.org"
@@ -1259,7 +1212,7 @@ es:
           title: ~
           link: ~
           question: "¿Cuál es el costo para tener un canal en LBM?"
-          answer: "Con cada aliado, analizamos las mejores condiciones para la creación del canal, buscando la mejor opción para todos los implicados (filosofía “ganar-ganar”) y el cumplimento de objetivos comunes. Para ello, ofrecemos propuestas económicas personalizadas y adecuadas a las exigencias de las organizaciones que nos contactan. En línea general, se decidirán los recursos necesarios para llevar a cabo la iniciativa de acuerdo a la cantidad de proyectos que se estén trabajando, así como las responsabilidades que se asumirán en cada una de las etapas del proceso.<br/><br/>Cabe mencionar que, independientemente del costo de la campaña, el porcentaje de descuento por costos operacionales y de pasarelas de pagos en cada proyecto (14%) se mantiene para todos los proyectos por igual y se descuenta al momento del desembolso a los emprendedores."
+          answer: "Con cada aliado, analizamos las mejores condiciones para la creación del canal, buscando la mejor opción para todos los implicados (filosofía “ganar-ganar”) y el cumplimento de objetivos comunes. Para ello, ofrecemos propuestas económicas personalizadas y adecuadas a las exigencias de las organizaciones que nos contactan. En línea general, se decidirán los recursos necesarios para llevar a cabo la iniciativa de acuerdo a la cantidad de proyectos que se estén trabajando, así como las responsabilidades que se asumirán en cada una de las etapas del proceso.<br/><br/>Cabe mencionar que, independientemente del costo de la campaña, el porcentaje de descuento por costos operacionales y de pasarelas de pagos en cada proyecto (10%) se mantiene para todos los proyectos por igual y se descuenta al momento del desembolso/entrega del dinero a los emprendedores."
           image: ~
         tool_5:
           title: ~
@@ -1395,7 +1348,7 @@ es:
           title: ~
           link: ~
           question: "¿Cuánto cuesta tener un proyecto crowdfunding?"
-          answer: "Hoy en día existen diversas plataformas de crowdfunding, con diferentes propósitos y alcances geográficos. Cada una de ella es libre de especificar sus políticas y costos asociados.<br/><br/>En LBM, el emprendedor de un proyecto individual no paga para poder acceder al servicio; sin embargo, una vez financiado su proyecto (parcial o totalmente) deberá descontar el 14% del total recaudado para calcular el monto que recibirá en su cuenta bancaria. Este porcentaje corresponde a dos comisiones: una del 6% por costos operativos de la plataforma y la segunda del 8% por costos derivados de las pasarelas de pagos que nos brindan su servicio (MercadoPago, PayU y PayPal)."
+          answer: "Hoy en día existen diversas plataformas de crowdfunding, con diferentes propósitos y alcances geográficos. Cada una de ella es libre de especificar sus políticas y costos asociados.<br/><br/>En LBM, el emprendedor de un proyecto individual no paga para poder acceder al servicio; sin embargo, una vez financiado su proyecto (parcial o totalmente) deberá descontar el 10% del total recaudado para calcular el monto que recibirá en su cuenta bancaria. Este porcentaje corresponde costos operativos de la plataforma y costos derivados de las pasarelas de pagos que nos brindan su servicio."
           image: ~
         tool_7:
           title: ~
