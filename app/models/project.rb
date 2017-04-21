@@ -465,9 +465,9 @@ class Project < ActiveRecord::Base
     notify_observers :remind_owner_rewards_and_impact
   end
   
-  def funding_channel
+  def financial_channel
     channels.each do |channel|
-      return channel.funding_channel unless channel.funding_channel.nil?
+      return channel unless channel.financial_channel.nil?
     end
   end
   

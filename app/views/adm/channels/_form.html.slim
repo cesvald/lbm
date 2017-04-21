@@ -27,10 +27,10 @@
           = form.input :matchfunding_maximum_per_project, as: :string, input_html: {class: "lbm-input"}
           = form.input :group_subdomains, as: :string, input_html: {class: "lbm-input", style: "width: 50%;"}
           li.boolean.input.optional
-            = hidden_field_tag :funding_channel, 0
+            = hidden_field_tag :financial_channel, 0
             label
-              = check_box_tag :funding_channel, 1, (@channel.financial_channel.present?)
-              = t('activerecord.attributes.channel.funding_channel')
+              = check_box_tag :financial_channel, 1, (@channel.financial_channel.present?)
+              = t('activerecord.attributes.channel.financial_channel')
           = form.input :receive_projects
           = form.input :show_drafts
           = form.input :finish_once_reached_goal
