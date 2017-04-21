@@ -10,13 +10,8 @@ class Channels::ProjectsController < ProjectsController
   after_filter only: [:create] { notify_trustees }
   
   prepend_before_filter{ params[:profile_id] = request.subdomain }
-<<<<<<< HEAD
   #prepend_before_filter{ params[:profile_id] = 'clicsporibague' }
-
-
-=======
   #prepend_before_filter{ params[:profile_id] = 'jovenesactivos' }
->>>>>>> financial
 
   def new
     if parent.financial? and parent.financial_channel.state != 'applying'
