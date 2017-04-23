@@ -9,7 +9,7 @@ class Channels::PhasesController < Channels::BaseController
     end
     
     def destroy
-        destroy! { root_url(subdomain: resource.channel.permalink, protocol: 'http') }
+        destroy! { root_url(subdomain: resource.financial_channel.channel.permalink, protocol: 'http') }
         #destroy! { root_url }
     end
 end
