@@ -23,6 +23,12 @@
             p.inline-hints= t('formtastic.hints.iniciative.description')
       .input-container
         .input
+          = form.label :main_image, "3. #{t('formtastic.labels.iniciative.main_image')}"
+          .input-wrapper
+            = form.file :main_image, class: "#{'error' if @iniciative.errors[:main_image].present?}"
+            p.inline-hints= t('formtastic.hints.iniciative.description')
+      .input-container
+        .input
           = form.label :year, "4. #{t('formtastic.labels.iniciative.year')}"
           .input-wrapper
             = form.number_field :year, class: "#{'error' if @iniciative.errors[:year].present?}"
