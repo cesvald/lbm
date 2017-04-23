@@ -32,6 +32,6 @@ class CreateIniciatives < ActiveRecord::Migration
     end
     add_index :iniciatives, :category_id
     add_index :iniciatives, :financial_channel_id
-    add_index :iniciatives, :project_id
+    #add_index :iniciatives, :project_id
   end
 end
