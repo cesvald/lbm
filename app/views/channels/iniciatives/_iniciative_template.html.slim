@@ -10,12 +10,13 @@ script type="text/template" id="iniciative-view"
 			span.category
 				| <%= category %>
 	.modal-body
+		.main-image
+			img src="<%= main_image %>"
 		.section
 			p
 				span.modal-label Año de creación:
 				span.answer
 					| <%= year %>
-					
 			p
 				span.modal-label Ubicación:
 				span.answer

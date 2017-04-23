@@ -25,8 +25,8 @@
         .input
           = form.label :main_image, "3. #{t('formtastic.labels.iniciative.main_image')}"
           .input-wrapper
-            = form.file :main_image, class: "#{'error' if @iniciative.errors[:main_image].present?}"
-            p.inline-hints= t('formtastic.hints.iniciative.description')
+            = form.input :main_image, label: false, required: false,
+          hint: (@iniciative.main_image.present? ? image_tag(@iniciative.main_image.url, size: '220x172') : t('formtastic.hints.iniciative.main_image') )
       .input-container
         .input
           = form.label :year, "4. #{t('formtastic.labels.iniciative.year')}"
@@ -53,9 +53,9 @@
             p.inline-hints= t('formtastic.hints.iniciative.municipality')
       .input-container
         .input
-          = form.label :municipality, "8. #{t('formtastic.labels.iniciative.other_municipality')}"
+          = form.label :other_municipality, "8. #{t('formtastic.labels.iniciative.other_municipality')}"
           .input-wrapper
-            = form.text_field :municipality, class: "#{'error' if @iniciative.errors[:other_municipality].present?}"
+            = form.text_field :other_municipality, class: "#{'error' if @iniciative.errors[:other_municipality].present?}"
             p.inline-hints= t('formtastic.hints.iniciative.other_municipality')
       .input-container
         .input

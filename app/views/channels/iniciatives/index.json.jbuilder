@@ -3,4 +3,5 @@ json.iniciatives @iniciatives do |iniciative|
     json.zone t("formtastic.options.iniciative.#{iniciative.zone}")
     json.activities iniciative.activities.html_safe
     json.category iniciative.category.name_es
+    json.main_image iniciative.main_image.url
 end

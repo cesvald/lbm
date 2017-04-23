@@ -141,14 +141,14 @@ CATARSE.channels = {
           if(status == 'ZERO_RESULTS'){
             geocoder.geocode({'address': $('#iniciative_department').val() + ", Colombia"}, function(results, status){
               if(status == 'OK'){
-                $('#iniciative_lng').val(self.randomNumber(results[0].geometry.bounds.b.b, results[0].geometry.bounds.b.f))
-                $('#iniciative_lat').val(self.randomNumber(results[0].geometry.bounds.f.b, results[0].geometry.bounds.f.f))
+                $('#iniciative_lng').val(self.randomNumber(results[0].geometry.viewport.b.b, results[0].geometry.viewport.b.f))
+                $('#iniciative_lat').val(self.randomNumber(results[0].geometry.viewport.f.b, results[0].geometry.viewport.f.f))
               }
             });
           }
           else if(status == 'OK'){
-            $('#iniciative_lng').val(self.randomNumber(results[0].geometry.bounds.b.b, results[0].geometry.bounds.b.f))
-            $('#iniciative_lat').val(self.randomNumber(results[0].geometry.bounds.f.b, results[0].geometry.bounds.f.f))
+            $('#iniciative_lng').val(self.randomNumber(results[0].geometry.viewport.b.b, results[0].geometry.viewport.b.f))
+            $('#iniciative_lat').val(self.randomNumber(results[0].geometry.viewport.f.b, results[0].geometry.viewport.f.f))
           }
         })
       },

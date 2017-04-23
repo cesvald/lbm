@@ -233,15 +233,38 @@ es:
         confirm_backer_email_paragraph: "Párrafo para email de confirmación de aporte"
         home_page: "Mostrar en el home"
       phase:
-        title: ~
-        description: ~
-        started_at: ~
+        title: Título
+        description: Descripción
+        started_at: "Fecha de Inicio"
+      iniciative:
+        name: Nombre
+        description: Descripción
+        year: Año de creación
+        activities: Actividades
+        department: Departamento
+        municipality: Municipio
+        other_municipality: Otros Municipios
+        participants_count: Número de Participantes
+        zone: Zona
+        women_count: Número de Mujeres
+        average_age: Edad Promedio
+        benefited_count: Número de Beneficiados
+        web_url: Web Url
+        facebook_url: Facebook Url
+        blog_url: Blog Url
+        video_url: Video Url
+        contact_name: Nombre de Contacto
+        contact_email: Email de Contacto
+        contact_phone: Teléfono de Contacto
+        state: Estado
+        main_image: Imagen Princiapl
     models:
       backer: Colaborador
       category: Categoría
       project: Proyecto
       reward: Recompensa
       channel: Canal
+      iniciative: Iniciativa
   backer:
     display_confirmed_at: "%{time_ago} atrás"
     reward_must_be_from_project: "Debe ser del mismo proyecto"
@@ -359,6 +382,29 @@ es:
         maximum_backers: "Si tu recompensa es limitada, cuéntanos el máximo de colaboradores."
         minimum_value: "Este es el valor mínimo de colaboración para escoger esta recompensa."
         days_to_delivery: "Total de días para enviar la recompensa."
+      iniciative:
+        name: Nombre
+        category: Category
+        description: Descripción
+        year: Año de creación
+        activities: Actividades
+        department: Departamento
+        municipality: Municipio
+        other_municipality: Otros Municipios
+        participants_count: Número de Participantes
+        zone: Zona
+        women_count: Número de Mujeres
+        average_age: Edad Promedio
+        benefited_count: Número de Beneficiados
+        web_url: Web Url
+        facebook_url: Facebook Url
+        blog_url: Blog Url
+        video_url: Video Url
+        contact_name: Nombre de Contacto
+        contact_email: Email de Contacto
+        contact_phone: Teléfono de Contacto
+        state: Estado
+        main_image: Imagen Principal
     labels:
       backer:
         anonymous: "Quiero que mi colaboración sea anónima."
@@ -394,6 +440,29 @@ es:
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
+      iniciative:
+        name: Nombre
+        category: Categoria
+        description: Descripción
+        year: Año de creación
+        activities: Actividades
+        department: Departamento
+        municipality: Municipio
+        other_municipality: Otros Municipios
+        participants_count: Número de Participantes
+        zone: Zona
+        women_count: Número de Mujeres
+        average_age: Edad Promedio
+        benefited_count: Número de Beneficiados
+        web_url: Web Url
+        facebook_url: Facebook Url
+        blog_url: Blog Url
+        video_url: Video Url
+        contact_name: Nombre de Contacto
+        contact_email: Email de Contacto
+        contact_phone: Teléfono de Contacto
+        state: Estado
+        main_image: Imagen Princiapl
       picture:
         picture: Imagen
       reward:
