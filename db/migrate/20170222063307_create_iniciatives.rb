@@ -21,6 +21,7 @@ class CreateIniciatives < ActiveRecord::Migration
       t.string :contact_email
       t.string :contact_phone
       t.string :state
+      t.string :main_image
       t.decimal :lat, precision: 20, scale: 14
       t.decimal :lng, precision: 20, scale: 14
       t.belongs_to :financial_channel
