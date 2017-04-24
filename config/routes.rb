@@ -3,7 +3,6 @@ require 'sidekiq/web'
 
 Catarse::Application.routes.draw do
 
-
   match '/thank_you' => "static#thank_you"
   match '/email' => "static#email"
 
@@ -37,7 +36,7 @@ Catarse::Application.routes.draw do
   end
 
   # Channels
-  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
+  constraints subdomain: /^(?!lbm-cesvald|www|secure|test|local)(\w+)/ do
     namespace :channels, path: '' do
       namespace :adm do
         resources :projects, only: [ :index, :update] do

@@ -114,7 +114,7 @@ class ProjectsController < ApplicationController
         @update = @project.updates.where(id: params[:update_id]).first if params[:update_id].present?
         @channel = Channel.find_by_permalink(request.subdomain) if request.subdomain.present?
         @pictures = @project.pictures
-        @reward = params[:update_reward].present? ? @rewards.find(params[:update_reward]).first : nil
+        @reward = params[:update_reward].present? ? Reward.find(params[:update_reward]) : nil
       }
     rescue ActiveRecord::RecordNotFound
       return render_404

@@ -24,7 +24,7 @@
       - if can? :update, @project, :goal
         = form.input :goal, as: :number, required: false, label: "#{t('formtastic.labels.project.goal')}".html_safe, hint: t('formtastic.hints.project.goal').html_safe, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :about
-        = form.input :about, required: false, input_html: {class: 'lbm-textarea', maxlength: '220'}
+        = form.input :about, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :history
         = form.input :history, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :cause
