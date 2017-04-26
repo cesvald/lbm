@@ -5,6 +5,9 @@ class Iniciative < ActiveRecord::Base
   belongs_to :financial_channel
   belongs_to :project
   
+  has_many :votes
+  has_many :users, through: :votes
+    
   mount_uploader :main_image, LogoUploader
   
   attr_accessible :state, :lat, :lng, :department, :activities, :average_age, :benefited_count, :blog_url, :contact_email, :contact_name, :contact_phone, :description, :facebook_url, :municipality, :name, :other_municipality, :participants_count, :state, :video_url, :web_url, :women_count, :year, :zone, :financial_channel, :category_id, :financial_channel_id, :accepted_terms, :main_image
@@ -34,6 +37,14 @@ class Iniciative < ActiveRecord::Base
 		event :confirm do
 			transition :approved => :confirmed
 		end
+	end
+	
+	def add_vote
+	  self.vote_count = self.vote_count + 1
+	end
+	
+	def already_voted?(user)
+	  users.exists?(user.id)
 	end
 #Iniciative.create(:lat => 1, :lng => 1, :name => "asdf", :description => "asdf", :year => 2010, :activities => "asdf", :department => "Bolivar", :municipality => "Cartagena", :participants_count => 2, :zone => "asdf", :women_count => "asdf", :average_age => 30, :benefited_count => 20, :contact_name => "Cesar", :contact_email => "valderramago@gmail.com", :financial_channel_id => 1, :category_id => 28)	
 end

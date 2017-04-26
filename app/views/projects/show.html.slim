@@ -80,7 +80,7 @@
                     = t('statistics.goal.subtitle', total: @project.display_goal).html_safe
                 .status_bar
                   .progress style="width: #{@project.display_progress}%;"
-                span.status_text ="#{@project.display_progress}%"
+                span.status_text ="#{@project.display_progress}% "
                 - if not @project.financial?
                   .subdescription
                     = embedded_svg "lbm/time-clock-icon.svg", class: "time-clock-icon"
@@ -97,6 +97,17 @@
                       br
                       br
                       = submit_tag t('.submit_finance'), class: 'finance-btn btn btn-success'
+                  - if @project.online? && @project.financial? && current_user
+                    .voting
+                      .vote = "#{@project.iniciative.vote_count} votos"
+                      - if not @project.iniciative.already_voted?(current_user)
+                        = form_tag(add_vote_channels_iniciative_path(@project.iniciative), method: :post, id: 'vote-form') do
+                          fieldset
+                            = button_tag do
+                              = 'Quiero votar por este proyecto!!'
+                      - else
+                        | Ya has realizado este voto.
+                        = link_to " Comparte tu voto en Facebook", root_path
 
           - if @project.online? && @project.in_time? && !@project.financial?
             #pledge

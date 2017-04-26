@@ -71,7 +71,8 @@ class User < ActiveRecord::Base
   has_many :channels_projects, through: :channels, source: :projects
   has_many :channels_subscribers
 
-
+  has_many :votes
+  has_many :iniciatives, through: :votes
 
   accepts_nested_attributes_for :unsubscribes, allow_destroy: true rescue puts "No association found for name 'unsubscribes'. Has it been defined yet?"
 

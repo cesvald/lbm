@@ -56,8 +56,8 @@ class ProjectsController < ApplicationController
   def create
     @project = current_user.projects.new(params[:project])
     if(params[:iniciative_id].present?)
-      iniciative = Iniciative.find(params[:iniciative_id])
-      @project.iniciative = iniciative
+      @iniciative = Iniciative.find(params[:iniciative_id])
+      @project.iniciative = @iniciative
     end
     create!(notice: t('projects.create.success')) do |success, failure|
       success.html{ return redirect_to project_by_slug_path(@project.permalink) }

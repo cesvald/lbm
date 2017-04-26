@@ -40,7 +40,20 @@ class Channels::IniciativesController < Channels::BaseController
         end
     end
 
-
+    def add_vote
+        iniiciative = Iniciative.find(params[:id])
+        if iniiciative.already_voted?(current_user)
+            flash[:failure] = 'Ya has realizado este voto, solo puedes votar una vez por proyecto'
+        else
+            iniiciative.add_vote
+            iniiciative.votes.build(user: current_user)
+            iniiciative.save
+            flash[:success] = 'Has votado por este proyecto!!'
+        end
+            
+        redirect_to :back
+    end
+    
     private
     
     def find_financial_channel

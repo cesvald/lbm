@@ -187,7 +187,7 @@
                       .important= t('projects.new.tags_important', href: explore_path).html_safe
                   = form.label :category, "12. #{t('formtastic.labels.project.category')} *"
                   .input-wrapper
-                    = form.select :category_id, Category.array, class: "#{'error' if @project.errors[:category].present?}", value: (@iniciative.present? ? @iniciative.category_id : params[:project][:category_id])
+                    = form.select :category_id, options_for_select(Category.array, (@iniciative.present? ? @iniciative.category_id : params[:project][:category_id])), class: "#{'error' if @project.errors[:category].present?}"
                     p.inline-hints= t('formtastic.hints.project.category')
   
               .input-container
@@ -220,8 +220,8 @@
                       .important= t('projects.new.image_important')
                   = form.label :image, "15. #{t('formtastic.labels.project.image')}"
                   .input-wrapper
-                    = form.input :image, as: :file, label: false,  class: "#{'error' if @project.errors[:image].present?}"
-                    p.inline-hints= t('formtastic.hints.project.image').html_safe
+                    = form.input :image, as: :file, label: false,  class: "#{'error' if @project.errors[:image].present?}",
+                    hint: ((@iniciative and @iniciative.main_image.present?) ? image_tag(@project.image.project_thumb.url, size: '220x172') : t('formtastic.hints.project.image') )
                     
               .input-container
                 .input
