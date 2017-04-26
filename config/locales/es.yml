@@ -360,6 +360,7 @@ es:
         value: "Tú escoges el valor, a partir de 25.000 COP ( %{minimum_usd} USD ) está genial!"
       project:
         video_url_edit: "Pega aquí la URL de tu video de Vimeo o Youtube."
+        image: "En caso de no tener un video puedes subir una imagen que represente tu proyecto"
         about: "Cuéntanos un poco sobre tu historia y lo que será de ella al terminar. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
         history: "Describe en un párrafo cómo y por qué nace tu emprendimiento y los momentos más importantes para su desarrollo."
         cause: "Cuéntanos un poco sobre la causa que mueve tu proyecto. Hazlo en tus mismas palabras y evita las formalidades. Presenta a tus colaboradores algo que los conmueva y se muy transparente en relación con la expectativa sobre el proyecto. Necesitas ayuda? http://bit.ly/17L1aEK"
@@ -428,6 +429,7 @@ es:
         goal: "¿Cuánto esperas reunir? <p>(usa solo números)</p>"
         name: "Nombre de tu proyecto"
         video_url: "Link de tu Video"
+        image: Imagen
         headline: "Frase de motivación"
         uploaded_image: "thumbnail del proyecto"
         picture: "Imágenes del proyecto"
@@ -919,6 +921,7 @@ es:
       video: "¿Ya tienes un video? envía la URL!"
       video_hint: "enlace de Vimeo o Youtube"
       video_important: "Pega aquí la URL de tu video de Vimeo o Youtube!"
+      image_important: "Sube una imagen que represente tu proyecto"
       how_know_important: "Súper! Haz terminado el formulario."
       more_links_important: "Los medios sociales ayudan a que se difunda tu causa! Si tienes una comunidad online, es hora de juntarla para que ayude en tu proyecto."
       first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."

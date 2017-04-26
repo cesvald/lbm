@@ -337,6 +337,7 @@ en:
         value: "You choose the amount, starting from 25,000 COP ( %{minimum_usd} USD ), any amount is great!"
       project:
         video_url_edit: "Paste here the URL of your Vimeo video."
+        image: "In case you don´t have a video, upload an image that represents your project."
         about: "Tell us about what inspired you to come up with this project . Be objective and charming, present your readers with something that moves them while being very transparent over the expectations on your project! Do you nedd help? http://bit.ly/17L1aEK"
         history: ~
         cause: ~
@@ -382,6 +383,7 @@ en:
         goal: "How much do you intend to raise? (use only numbers)"
         name: "Project's Name"
         video_url: Video
+        image: Image
         headline: "Motivational phrase"
         uploaded_image: "project thumbnail"
         picture: "Project pictures"
@@ -844,6 +846,7 @@ en:
       video: "Your project already has a video? Send the URL!"
       video_hint: "Vimeo link"
       video_important: "The video must be hosted by Vimeo. Paste the URL here!"
+      image_important: "Upload an image that represents your project"
       how_know_important: "Yay! We reached  the final question."
       more_links_important: "It's very important to use social media to spread the word about your project and engage your network into making it a success"
       first_backers_important: "These people are fundamental to the success of your project."

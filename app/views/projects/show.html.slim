@@ -109,8 +109,13 @@
                 p
                   = t("projects.back_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
 
+      
       .video
-        iframe src="#{@project.display_video_embed_url}" width="700" height="415" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+        - if @project.video_url.present?
+          iframe src="#{@project.display_video_embed_url}" width="700" height="415" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+        - elsif @project.image.present?
+          = image_tag @project.image.url
+        
 
     .tab_container
       nav#project_menu

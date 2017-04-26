@@ -7,6 +7,7 @@ class Project < ActiveRecord::Base
 
   #images
   mount_uploader :uploaded_image, LogoUploader
+  mount_uploader :image, LogoUploader
   mount_uploader :video_thumbnail, LogoUploader
 
   #files
