@@ -32,6 +32,7 @@ class Projects::BackersController < ApplicationController
   end
 
   def new
+    return redirect_to(action: 'new', protocol: 'http') if request.ssl?
     unless parent.online?
       flash[:failure] = t('projects.back.cannot_back')
       return redirect_to :root
