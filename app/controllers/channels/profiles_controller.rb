@@ -5,7 +5,7 @@ class Channels::ProfilesController < Channels::BaseController
   actions :show, :create
   custom_actions resource: [:how_it_works]
 
-  #before_filter{ params[:id] = request.subdomain }
+  before_filter{ params[:id] = request.subdomain }
   #before_filter{ params[:id] = 'clicsporibague' }
   #before_filter{ params[:id] = 'jovenesactivos' }
   
