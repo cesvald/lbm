@@ -80,7 +80,7 @@
                     = t('statistics.goal.subtitle', total: @project.display_goal).html_safe
                 .status_bar
                   .progress style="width: #{@project.display_progress}%;"
-                span.status_text ="#{@project.display_progress}% "
+                span.status_text ="#{@project.progress}% "
                 - if not @project.financial?
                   .subdescription
                     = embedded_svg "lbm/time-clock-icon.svg", class: "time-clock-icon"
