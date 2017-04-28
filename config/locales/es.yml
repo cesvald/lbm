@@ -977,6 +977,7 @@ es:
       site_title: Registro
       submit: Registro
       title: "Regístrate usando tu email"
+      login: "Ya tienes una cuenta? Ingresa aquí"
       placeholder:
         name: Nombre
         password_confirmation: "Confirmación de contraseña"

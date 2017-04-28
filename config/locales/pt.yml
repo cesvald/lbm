@@ -894,6 +894,7 @@ pt:
       site_title: Cadastre-se
       submit: "Efetuar cadastro"
       title: "Criar uma conta"
+      login: "Ya tienes una cuenta? Ingresa aquí"
       placeholder:
         name: "Nombre"
         password_confirmation: "Confirmación de contraseña"

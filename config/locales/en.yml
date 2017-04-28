@@ -894,6 +894,7 @@ en:
       site_title: "Sign up"
       submit: "Sign Up"
       title: "Sign up using you email"
+      login: "Already have an account? Log in here"
       placeholder:
         name: Name
         password_confirmation: "Password confirmation"

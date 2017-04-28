@@ -7,7 +7,14 @@
           h2= t 'registrations.new.title'
         .form-container
           = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          
+            = link_to user_omniauth_authorize_path(provider: :facebook, locale: nil), class: [:facebook] do
+              = image_tag ('/assets/lbm/facebook-icon.png'), class: "facebook-icon"
+              = t('login.submit_facebook')
             = render 'devise/shared/alert'
+            br
+            br
+            .separator
             .form-group
               = f.text_field :name, class: "form-control", required: true, placeholder: t('registrations.new.placeholder.name')
             .form-group
@@ -21,10 +28,6 @@
               = f.submit t('registrations.new.submit'), class: [:button, :success]
             
             .register-link-wrapper
-              = t('registrations.new.account', link: link_to(t('registrations.new.login'), new_session_path(resource_name))).html_safe
+              = link_to(t('registrations.new.login'), new_session_path(resource_name)).html_safe
 
-            .separator
             
-            = link_to user_omniauth_authorize_path(provider: :facebook, locale: nil), class: [:facebook] do
-              = image_tag ('/assets/lbm/facebook-icon.png'), class: "facebook-icon"
-              = t('login.submit_facebook')

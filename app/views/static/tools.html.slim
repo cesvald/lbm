@@ -2,10 +2,6 @@
 	= embedded_svg "lbm/mailbox-icon.svg", class:"tool-icon"
 	span.tool-header-title
 		| Contacto & Soporte
-	.subtitle-wrapper
-		p.subtitle= t('.subtitle_1')
-		p.subtitle.bold= t('.subtitle_2')
-		p.subtitle.carrot.bold= t('.subtitle_3')
 	hr.separator
 	/*
 		.bootstrap-twitter
@@ -22,20 +18,7 @@
 			            .project-point= t('static.guidelines.project_send.phrase_3')
 			            .project-point= t('static.guidelines.project_send.phrase_4')
 			            .project-point= t('static.guidelines.project_send.phrase_5')
-	#contact-wrapper.bootstrap-twitter
-		.container.row
-			.col-xs-12
-				= form_tag contact_and_support_users_path, method: :get do
-					.row
-						.col-md-4.col-md-offset-2.col-xs-12
-							= text_field_tag :name, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.full_name'), required: true
-							= text_field_tag :email, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.email'), required: true
-							= text_field_tag :subject, nil, class: 'lbm-input form-control', placeholder: t('users.contact_message.subject'), required: true
-						.col-md-4.col-xs-12
-							= text_area_tag :message, nil, class: 'lbm-textarea form-control', placeholder: t('users.contact_message.message'), required: true
-					.row
-						.col-md-10.submit-wrapper
-							= submit_tag t('users.contact_message.send_message'), class: 'btn btn-primary'
+	
 	.faq-subtitle= t '.faq_subtitle'				
 	.tools-icon-container
 		= image_tag 'lbm/tool-pointer.png', class: 'pointer'
@@ -113,5 +96,22 @@
 								span.glyphicon.glyphicon-chevron-right
 								span.question-text= t(".about_crowdfunding.tool_#{i}.question")
 							p.answer= t(".about_crowdfunding.tool_#{i}.answer").html_safe
-
+	.subtitle-wrapper
+		p.subtitle= t('.subtitle_1')
+		p.subtitle.bold= t('.subtitle_2')
+		p.subtitle.carrot.bold= t('.subtitle_3')
+	#contact-wrapper.bootstrap-twitter
+		.container.row
+			.col-xs-12
+				= form_tag contact_and_support_users_path, method: :get do
+					.row
+						.col-md-4.col-md-offset-2.col-xs-12
+							= text_field_tag :name, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.full_name'), required: true
+							= text_field_tag :email, nil, class: 'lbm-input form-control', placeholder: t('activerecord.attributes.user.email'), required: true
+							= text_field_tag :subject, nil, class: 'lbm-input form-control', placeholder: t('users.contact_message.subject'), required: true
+						.col-md-4.col-xs-12
+							= text_area_tag :message, nil, class: 'lbm-textarea form-control', placeholder: t('users.contact_message.message'), required: true
+					.row
+						.col-md-10.submit-wrapper
+							= submit_tag t('users.contact_message.send_message'), class: 'btn btn-primary'
 	= render 'layouts/allies'
