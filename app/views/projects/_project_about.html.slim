@@ -38,13 +38,14 @@
         - else
       = @project.headline
 
-- if not @project.expired?
+- if not @project.financial? and not @project.expired?
   #new-reward-opener.lbm-button
     = t('projects.form.add_reward')
     span.plus-icon
       | +
 
-#rewards = render partial: 'project_reward', collection: @rewards, as: :reward
+- if not @project.financial?
+  #rewards = render partial: 'project_reward', collection: @rewards, as: :reward
 
 #project-history-wrapper
   .image-wrapper

@@ -713,6 +713,7 @@ es:
         pay_with: "Pagar con"
     create:
       success: "Tu proyecto fue creado exitosamente! Te contactaremos próximamente. Muchas gracias!"
+      alert: "No fue posible crear el proyecto, revisa los campos con una equis para hacer las correcciones"
     form:
       permalink_hint: "Usa una URL simple. Tus colaboradores deben recordar esta dirección fácilmente para compartir tu proyecto."
       important_html: "Recuerda que la comisión de LittleBigMoney es del 14%, si el proyecto tiene éxito."
@@ -859,6 +860,12 @@ es:
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
       submit_finance: "Financiar"
+      goal_requested: "%{total} Solicitados"
+      share_vote: "Comparte tu voto en"
+      already_voted: "Ya realizaste este voto"
+      submit_vote: "Quiero votar por este proyecto!!"
+      i_just_voted: "Acabo de votar por el proyecto %{name} en @LbigMoney"
+      reached_votes: "Votos Alcanzados"
       pictures:
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"

@@ -61,6 +61,10 @@ class ProjectsController < ApplicationController
     end
     create!(notice: t('projects.create.success')) do |success, failure|
       success.html{ return redirect_to project_by_slug_path(@project.permalink) }
+      failure.html{
+        flash[:alert] = I18n.t('projects.create.alert')
+        render new_project_path
+      }
     end
   end
 
@@ -95,8 +99,8 @@ class ProjectsController < ApplicationController
       end
       
       if @project.financial?
-        #if !request.subdomain.present? || @project.financial_channel.permalink != request.subdomain
-          #return redirect_to project_url(@project, subdomain: @project.financial_channel.permalink, protocol: 'http')
+        #if !request.subdomain.present? || @project.financial_channel.channel.permalink != request.subdomain
+          #return redirect_to project_url(@project, subdomain: @project.financial_channel.channel.permalink, protocol: 'http')
         #  return redirect_to project_url(@project, protocol: 'http')
         #end
       end

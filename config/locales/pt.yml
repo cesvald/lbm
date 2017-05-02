@@ -784,6 +784,8 @@ pt:
       update_documents: "Actualizar documentos"
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
+      submit_finance: "Financiar"
+      goal_requested: "%{total} Solicitados"
       pictures:
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"

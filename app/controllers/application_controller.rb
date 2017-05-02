@@ -57,7 +57,7 @@ class ApplicationController < ActionController::Base
   end
   
   def test_environment?
-    request.original_url.include?('s22.org')
+    request.original_url.include?('s22.org') || request.original_url.include?('lbm-cesvald')
   end
   
   def to_usd(amount)

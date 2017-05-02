@@ -74,13 +74,18 @@
           - unless @channel && @channel.show_drafts? && (@project.draft? || @project.reviewed?)
             #statistics
               .statistic-wrapper
-                em.description
-                  .pledged= @project.display_pledged
-                  .goal
-                    = t('statistics.goal.subtitle', total: @project.display_goal).html_safe
-                .status_bar
-                  .progress style="width: #{@project.display_progress}%;"
-                span.status_text ="#{@project.progress}% "
+                - if @project.financial? && !@project.financial_channel.announced?
+                  em.description
+                    .finance-goal
+                      = t('.goal_requested', total: @project.display_goal).html_safe  
+                - else
+                  em.description
+                    .pledged= @project.display_pledged
+                    .goal
+                      = t('statistics.goal.subtitle', total: @project.display_goal).html_safe
+                  .status_bar
+                    .progress style="width: #{@project.display_progress}%;"
+                  span.status_text ="#{@project.progress}% "
                 - if not @project.financial?
                   .subdescription
                     = embedded_svg "lbm/time-clock-icon.svg", class: "time-clock-icon"
@@ -91,7 +96,7 @@
                       p.time-remaining= "#{@project.remaining_days} "
                       em.description #{@project.time_to_go[:unit].capitalize} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
                 - else
-                  - if @project.financial_channel.financial_channel.state == 'selecting' && @project.state == 'online'
+                  - if @project.financial_channel.selecting? && @project.online?
                     = form_tag finance_channels_project_path(@project), method: :post do
                       = text_field_tag :value, nil, class: 'lbm-input', placeholder: "Valor"
                       br
@@ -99,15 +104,22 @@
                       = submit_tag t('.submit_finance'), class: 'finance-btn btn btn-success'
                   - if @project.online? && @project.financial? && current_user
                     .voting
-                      .vote = "#{@project.iniciative.vote_count} votos"
+                      .vote
+                        span.number= "#{@project.iniciative.vote_count} "
+                        = t(".reached_votes")
                       - if not @project.iniciative.already_voted?(current_user)
                         = form_tag(add_vote_channels_iniciative_path(@project.iniciative), method: :post, id: 'vote-form') do
                           fieldset
                             = button_tag do
                               = 'Quiero votar por este proyecto!!'
                       - else
-                        | Ya has realizado este voto.
-                        = link_to " Comparte tu voto en Facebook", root_path
+                        h3.description=t('.already_voted')
+                        #share
+                          h2= t('.share_vote')
+                          = link_to "http://twitter.com/?status=#{t('.i_just_voted', name: @project.name)} #{project_by_slug_url(permalink: @project.permalink)}", target: :_blank do
+                            = image_tag 'lbm/twitter-icon.png', title: 'Facebook'
+                          = link_to "http://www.facebook.com/share.php?u=#{project_by_slug_url(permalink: @project.permalink)}", target: :_blank do
+                            = image_tag 'lbm/facebook-icon.png', title: 'Twitter'
 
           - if @project.online? && @project.in_time? && !@project.financial?
             #pledge
@@ -137,9 +149,10 @@
         = link_to '#updates', id: 'updates_link' do
           = t('.menu.updates')
           span.count=" (#{@updates.count})"
-        = link_to '#backers', id: 'backers_link' do
-          = t('.menu.backers')
-          span.count=" (#{@project.total_backers})"
+        - if not @project.financial?
+          = link_to '#backers', id: 'backers_link' do
+            = t('.menu.backers')
+            span.count=" (#{@project.total_backers})"
         = link_to '#comments', id: 'comments_link' do
           = t('.menu.comments')
           | &nbsp; (
@@ -148,10 +161,10 @@
         - if can? :update, @project, :about
           = link_to '#edit', id: 'edit_link' do
             = t('.menu.edit')
-        - if can? :update, @project
+        - if can?(:update, @project) and not @project.financial?
           = link_to '#reports', id: 'reports_link' do
             = t('.menu.reports')
-        - if can? :update, @project, :identification_file
+        - if can?(:update, @project, :identification_file) and not @project.financial?
           = link_to '#documents', id: 'documents_link' do
             = t('.menu.documents')
     .main

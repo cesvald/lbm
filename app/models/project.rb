@@ -469,11 +469,11 @@ class Project < ActiveRecord::Base
   end
   
   def financial_channel
-    channels.joins(:financial_channel).first
+    channels.joins(:financial_channel).first.financial_channel
   end
   
   def financial?
-    financial_channel.present?
+    iniciative.present?
   end
   
   private

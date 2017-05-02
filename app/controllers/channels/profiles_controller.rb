@@ -5,9 +5,7 @@ class Channels::ProfilesController < Channels::BaseController
   actions :show, :create
   custom_actions resource: [:how_it_works]
 
-  before_filter{ params[:id] = request.subdomain }
-  #before_filter{ params[:id] = 'clicsporibague' }
-  #before_filter{ params[:id] = 'jovenesactivos' }
+  before_filter { channel_permalink }
   
   def show
     show! do
@@ -32,6 +30,15 @@ class Channels::ProfilesController < Channels::BaseController
       if params[:financial_channel] == "1"
         FinancialChannel.create(channel: @profile)
       end
+    end
+  end
+  
+  
+  def channel_permalink
+    if test_environment?
+      params[:id] = 'jovenesactivos'
+    else
+      params[:id] = request.subdomain
     end
   end
 end
