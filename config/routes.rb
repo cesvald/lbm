@@ -36,7 +36,7 @@ Catarse::Application.routes.draw do
   end
 
   # Channels
-  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
+  constraints subdomain: /^(?!lbm-cesvald|www|secure|test|local)(\w+)/ do
     namespace :channels, path: '' do
       namespace :adm do
         resources :projects, only: [ :index, :update] do
@@ -69,7 +69,7 @@ Catarse::Application.routes.draw do
       resources :financial_channels, only: :index do
         member do
           put 'close_summoning'
-          put 'close_applaying'
+          put 'close_applying'
           put 'announce'
         end
       end

@@ -14,8 +14,8 @@ class FinancialChannel < ActiveRecord::Base
 			transition :summoning => :applying
 		end
 
-		event :close_applaying do
-			transition :applaying => :selecting
+		event :close_applying do
+			transition :applying => :selecting
 		end
 
 		event :announce do

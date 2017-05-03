@@ -55,7 +55,7 @@ CATARSE.BackersNewView = Backbone.View.extend({
         return false
       }
     }
-    updateConvertion = function(){
+    var updateConvertion = function(){
       var value = $('#backer_value').val();
       var currency = $('#currency').val();
       if(currency == 'USD'){
@@ -78,7 +78,12 @@ CATARSE.BackersNewView = Backbone.View.extend({
       var id = parseInt($(this).data('id'));
       var minimum = parseInt($(this).data('min-value'));
       if(currency == 'USD') minimum = (minimum / gon.paypal_conversion).toFixed(0);
-      if( (minimum > $('#backer_value').val()) || !user_set && id != 0){
+      console.log("minimum is " + minimum)
+      console.log("value is " + $('#backer_value').val())
+      console.log("the minimum is " + (minimum > parseInt($('#backer_value').val())))
+      console.log("the user set is " + user_set)
+      console.log("the id is " + (((minimum > $('#backer_value').val()) || !user_set) && id != 0))
+      if( ((minimum > parseInt($('#backer_value').val())) || !user_set) && id != 0){
         $('#backer_value').val(minimum);
         updateConvertion();
         user_set = false;

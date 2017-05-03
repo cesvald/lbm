@@ -41,7 +41,7 @@
             - if @profile.financial_channel.state == 'applying'
               = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
               - if can? :update, @profile.financial_channel
-                = link_to t('channels.close_applying'), close_applaying_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_summoning')
+                = link_to t('channels.close_applying'), close_applying_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_summoning')
             - if @profile.financial_channel.state == 'selecting'
               - if current_user && current_user.admin?
                 = link_to t('channels.announce'), announce_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.announce')
