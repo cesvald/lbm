@@ -20,6 +20,7 @@ class Channels::ProjectsController < ProjectsController
       return redirect_to root_url, flash: { notice: t('projects.new.access_financial') }
     elsif parent.financial? and current_user
       @iniciative = parent.financial_channel.iniciatives.where(contact_email: current_user.email).first
+      @financial_project = FinancialProject.new
       if not @iniciative.present?
         return redirect_to root_url, flash: { notice: "No existe una iniciativa creada con tu usuario. Por favor envía una iniciativa antes de crear el proyecto."}
       elsif @iniciative.draft?
@@ -43,7 +44,7 @@ class Channels::ProjectsController < ProjectsController
     end
     
     def channel_permalink
-      if test_environment?
+      if dev_environment? 
         params[:profile_id] = 'jovenesactivos'
       else
         params[:profile_id] = request.subdomain

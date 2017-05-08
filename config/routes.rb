@@ -116,6 +116,7 @@ Catarse::Application.routes.draw do
     collection do
       get 'video'
       get 'check_slug'
+      get 'new_financial'
     end
     member do
       put 'pay'

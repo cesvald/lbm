@@ -68,6 +68,7 @@
         b
           = "#{@project.name}, "
         = t('projects.project_header.without_city', category_name: link_to(@project.category, explore_path(anchor: @project.category.to_s.parameterize)), author: link_to(@project.user.display_name, user_path(@project.user))).html_safe
+        = " que opera en el municipio de #{@project.financial_project.municipality} y beneficia a más de #{@project.financial_project.benefited_count} personas"
     .main_info_wrapper.centered_page_width
       .sidebar
         .info

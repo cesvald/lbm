@@ -378,6 +378,12 @@ es:
         video_url: "Pega la URL de un video de Vimeo o Youtube. <strong>Realiza tu video lo mejor que puedas y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un proyecto de otro, es el video."
         more_links: "¿Qué canales usarás para promocionar la idea de tu proyecto? Puedes Nombralos aquí (facebook/twitter/blog/sitio web) entre más tengas, te puede ayudar más."
         first_backers: "Para que tu campaña tenga éxito, es fundamental que traigas a tus redes de contactos más cercanas. Por eso, cuéntanos quiénes crees que serán tus primeros 20 colaboradores"
+      financial_project:
+        benefited_count: "¿Cuántas personas se verán beneficidadas por el proyecto?"
+        women_count: "¿Cuántas mujeres se verán beneficiadas por el proyecto?"
+        department: "¿En que Departamento se implementará el proyecto?"
+        municipality: "¿En que municipio(s) se implementará?"
+        zone: "¿Zona rural o urbana?"
       reward:
         description: "Describe tu recompensa de una forma que despierte el interés de las personas para aportar a tu proyecto. No te de miedo pedir!"
         maximum_backers: "Si tu recompensa es limitada, cuéntanos el máximo de colaboradores."
@@ -420,6 +426,7 @@ es:
         category: "Categoría de tu proyecto"
         about: "¿Quién eres, que haces y cual tu experiencia en el negocio?"
         history: "¿Cuál es la historia de tu emprendimiento?"
+        financial_history: "¿De donde nace la idea de este proyecto?"
         cause: "¿Cuál es la causa que mueve tu proyecto? ¿Cuál es el problema que busca resolver?"
         description: "¿En qué consiste tu Proyecto?"
         impact: "¿Qué impacto tendría tu proyecto en el desarrollo económico o social de tu comunidad o región?"
@@ -442,6 +449,12 @@ es:
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
+      financial_project:
+        benefited_count: "¿Cuántas personas se verá beneficidadas por el proyecto?"
+        women_count: "¿Cuántas mujeres se verán beneficiadas por el proyecto?"
+        department: "¿En que Departamento se implementará el proyecto?"
+        municipality: "¿En que municipio(s) se implementará?"
+        zone: "¿Zona rural o urbana?"
       iniciative:
         name: "Nombre de la iniciativa"
         plurality: "¿Iniciativa colectiva o individual?"
@@ -929,6 +942,11 @@ es:
       category: Categoría
       tags_hint: "Antes de enviar tu proyecto, explora e inspírate con otros que han pasado por el sitio."
       tags_important: "Revisa otros proyectos de tu categoría <a href='%{href}' target='_blank'>aquí</a>."
+      benefited_count_important: "Cuántas personas esperas beneficiar con este proyecto"
+      women_count_important: "Cuántas personas esperas beneficiar con este proyecto"
+      department_important: "Cuántas personas esperas beneficiar con este proyecto"
+      municipality_important: "Cuántas personas esperas beneficiar con este proyecto"
+      zone_important: "Cuántas personas esperas beneficiar con este proyecto"
       video: "¿Ya tienes un video? envía la URL!"
       video_hint: "enlace de Vimeo o Youtube"
       video_important: "Pega aquí la URL de tu video de Vimeo o Youtube!"

@@ -32,7 +32,9 @@ class Project < ActiveRecord::Base
   
   has_one :project_total
   has_one :iniciative
+  has_one :financial_project
   
+  accepts_nested_attributes_for :financial_project
   accepts_nested_attributes_for :rewards
   accepts_nested_attributes_for :pictures
 

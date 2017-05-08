@@ -68,7 +68,7 @@
       .clear
       
 #information-container
-  - if @project.about.present?
+  - if not @project.financial? and @project.about.present?
     .information-wrapper
       h3= t('formtastic.labels.project.about')
       p= @project.about_html.html_safe
@@ -96,3 +96,9 @@
     .information-wrapper
       h3= t('formtastic.labels.project.implementation')
       p= @project.implementation_html.html_safe
+  - if @project.financial_project.present?
+    - if @project.financial_project.benefited_count.present?
+      .information-wrapper
+        h3= t('formtastic.labels.financial_project.benefited_count')
+        p= "#{@project.financial_project.benefited_count} beneficiados"
+        p= "#{@project.financial_project.women_count} son mujeres"
