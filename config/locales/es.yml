@@ -443,28 +443,30 @@ es:
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
       iniciative:
-        name: Nombre
-        category: Categoria
-        description: Descripción
-        year: Año de creación
-        activities: Actividades
-        department: Departamento
-        municipality: Municipio
-        other_municipality: Otros Municipios
-        participants_count: Número de Participantes
-        zone: Zona
-        women_count: Número de Mujeres
-        average_age: Edad Promedio
-        benefited_count: Número de Beneficiados
-        web_url: Web Url
-        facebook_url: Facebook Url
-        blog_url: Blog Url
-        video_url: Video Url
-        contact_name: Nombre de Contacto
-        contact_email: Email de Contacto
-        contact_phone: Teléfono de Contacto
+        name: "Nombre de la iniciativa"
+        plurality: "¿Iniciativa colectiva o individual?"
+        category: "¿Qué tipo de iniciativa es?"
+        description: "Realice una breve descripción de la iniciativa: ¿Cuál es su misión? ¿Con cuál propósito se creó? ¿Qué causa la mueve? "
+        year: "Año de creación de la iniciativa"
+        activities: "¿Qué actividades realizan?"
+        department: "¿En qué departamento opera principalmente la iniciativa?"
+        municipality: "¿En qué municipio opera?"
+        other_municipality: "¿Opera en otros municipios? Especifique en cuales"
+        participants_count: "¿Cuántos participantes tiene la iniciativa?"
+        women_count: "De los participantes de la iniciativa, ¿cuántas son mujeres?"
+        ethnic_count: "De los participantes de la iniciativa, ¿cuántos pertenecen a grupos étnicos y/o afrocolombianos?"
+        zone: "Zona urbana o rural"
+        average_age: "¿Cuál es el promedio de edad de los participantes?"
+        benefited_count: "¿A cuántas personas benefician con su labor?"
+        web_url: "Página web de la iniciativa"
+        facebook_url: "Página de Facebook de la iniciativa"
+        blog_url: "Blog de la iniciativa"
+        video_url: "Url del video de la iniciativa"
+        contact_name: "Nombre de persona de contacto"
+        contact_email: "Correo electrónico de contacto"
+        contact_phone: "Número de telefono"
         state: Estado
-        main_image: Imagen Princiapl
+        main_image: "Imagen representativa de la iniciativa"
       picture:
         picture: Imagen
       reward:
@@ -476,6 +478,8 @@ es:
         rural: 'Rural'
         urban: 'Urbana'
         rural_and_urban: 'Ambas'
+        individual: 'Individual'
+        collective: 'Colectiva'
   found_plural: Encontrados
   found_singular: Encontrado
   here: aquí

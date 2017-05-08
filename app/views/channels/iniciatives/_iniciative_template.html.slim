@@ -38,6 +38,10 @@ script type="text/template" id="iniciative-view"
 				span.answer
 					| <%= women_count %>
 			p
+				span.modal-label De los participantes de la iniciativa, ¿cuántos pertenecen a grupos étnicos y/o afrocolombianos?
+				span.answer
+					| <%= ethnic_count %>
+			p
 				span.modal-label ¿Cuál es el promedio de edad de los participantes?
 				span.answer
 					| <%= participants_count %>
@@ -50,7 +54,7 @@ script type="text/template" id="iniciative-view"
 			p
 				| <%= description %>
 		.section
-			h3 Actividades
+			h3 Actividades que realiza
 			p
 				| <%= activities %>
 		.section

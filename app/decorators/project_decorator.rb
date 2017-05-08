@@ -24,10 +24,10 @@ class ProjectDecorator < Draper::Decorator
   end
 
   def display_image(version = 'project_thumb' )
-    if source.uploaded_image.present?
-      source.uploaded_image.send(version).url
-    elsif
+    if source.image.present?
       source.image.send(version).url
+    elsif source.uploaded_image.present?
+      source.uploaded_image.send(version).url
     elsif source.video_thumbnail.url.present?
       source.video_thumbnail.send(version).url
     elsif source.video
