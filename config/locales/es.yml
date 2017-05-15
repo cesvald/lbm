@@ -733,7 +733,7 @@ es:
       alert: "No fue posible crear el proyecto, revisa los campos con una equis para hacer las correcciones"
     form:
       permalink_hint: "Usa una URL simple. Tus colaboradores deben recordar esta dirección fácilmente para compartir tu proyecto."
-      important_html: "Recuerda que la comisión de LittleBigMoney es del 14%, si el proyecto tiene éxito."
+      important_html: "Recuerda que la comisión de LittleBigMoney es del 10%, si el proyecto tiene éxito."
       add_reward: "Agregar recomepensa"
       project_warning:
         content_html: "¿Quieres aumentar las posibilidades de tener éxito? Asegúrate de revisar este %{link}"
@@ -919,11 +919,11 @@ es:
       introduction_html: "Completa el siguiente formulario, danos buena información! Entre más información recibimos <br/>mejor completamos tu proyecto y más rápido irá al irá en la plataforma."
       permalink_important: "No uses guión, espacio o guión bajo."
       permalink_hint: "Hazlo simple. Tus colaboradores deben poder recordar la URL de tu proyecto ; )"
-      important_html: "El valor mínimo a reunir es de %{minimum}. Ten en cuenta que el descuento total será de aproximadamente el 14% sobre el valor recogido, si logras completar el monto solicitado. Divide tu presupuesto final por 0.86 para hallar el monto total que vas a solicitar."
+      important_html: "El valor mínimo a reunir es de %{minimum}. Ten en cuenta que el descuento total será de aproximadamente el 10% sobre el valor recogido, si logras completar el monto solicitado. Divide tu presupuesto final por 0.9 para hallar el monto total que vas a solicitar."
       about: "Describe tu proyecto utilizando esta guía!"
       how_much_you_need: "¿Cuánto dinero quieres recaudar?"
       how_much_hint_html: "Es importante recodar que la mayoría del dinero que recolectes vendrá de personas cercanas a ti (familiares, amigos y/o conocidos):<a href='%{href}' target='_blank'>Clickhere!</a> Por esta razón ten en cuenta que cuando calcules el monto total a solicitar en LittleBigMoney, debes tener al menos la capacidad de recolectar el 50% del mismo entre tu red."
-      how_much_important: "Ten en cuenta que la comisión cargada por LittleBigMoney es del 14% si logras completar el monto solicitado. Divide tu presupuesto final por 0,87 para hallar el monto a ser descontado."
+      how_much_important: "Ten en cuenta que la comisión cargada por LittleBigMoney es del 10% si logras completar el monto solicitado. Divide tu presupuesto final por 0,87 para hallar el monto a ser descontado."
       days: "¿En cuántos días?"
       days_hint: "En promedio los proyectos están al aire por 40 días."
       days_important: "La fecha límite para que el proyecto este al aire es de 90 días."
@@ -984,7 +984,7 @@ es:
       step_4_title: "4. Desembolso"
       step_4_text: "Al cierre de tu campaña recibirás el dinero recaudado* en la plataforma en tu cuenta bancaria."
       step_footer: "* Aplican descuentos por costos financieros y operativos, siempre y cuando hayas superado el monto mínimo"
-      discount_hidden_text: "En total vas a recibir <span class='discount'>xxx</span> COP descontando el 14% sobre el total reunido"
+      discount_hidden_text: "En total vas a recibir <span class='discount'>xxx</span> COP descontando el 10% sobre el total reunido"
     twitter:
       take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
     video_embed:

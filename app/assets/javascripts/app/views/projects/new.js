@@ -46,7 +46,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         $('.discount-text').remove()
       }
       else {
-        discount = amount * 0.86
+        discount = amount * 0.9
         discount = discount.toFixed(0)
         discount = discount.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")
         $('#discount-hidden-text').find('.discount').html(discount)
