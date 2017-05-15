@@ -138,7 +138,7 @@ es:
     recents:
       title: "Proyectos <span class='font_futuraLT_medium'> Recientes </span>"
     successful:
-      title: Exitosos
+      title: "Proyectos <span class='font_futuraLT_medium'> Exitosos </span>"
     partners:
       title: "Con el <p class='allies_text'>apoyo de</p>"
     channels:

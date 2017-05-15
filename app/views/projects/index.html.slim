@@ -69,9 +69,12 @@
       .block_container
         .title
           = image_tag "lbm/recent_icon.png", class: "icon"
-          h2= t('sections.recents.title').html_safe
+          - if not @thereAreRecent
+            h2= t('sections.successful.title').html_safe
+          - else
+            h2= t('sections.recents.title').html_safe
         .explore_link
-          - if @recent.first.successful?
+          - if not @thereAreRecent
             = link_to t('main.links.view_all'), explore_path()
           - else
             = link_to t('main.links.view_all'), explore_path(anchor: :recent)

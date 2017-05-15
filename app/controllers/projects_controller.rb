@@ -28,9 +28,11 @@ class ProjectsController < ApplicationController
         @expiring = Project.expiring_for_home()
         @expiring = Project.successful_for_home() if @expiring.empty?
         @recent = Project.recent_for_home()
+        @thereAreRecent = true
         if @recent.empty?
           project_ids = @expiring.map{|p| p.id }
           @recent = Project.successful_for_home_excluding(project_ids)
+          @thereAreRecent = false
         end
 
         @categories = Category.with_projects.order("name_#{I18n.locale}").all
