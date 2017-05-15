@@ -433,7 +433,7 @@ es:
         budget: "¿Cómo gastarás el dinero que necesitas para tu proyecto?"
         implementation: "¿Cuánto tiempo necesitas para implementar tu proyecto?"
         expires_at: "¿Cuál es la fecha límite para alcanzar tu meta?"
-        goal: "¿Cuánto esperas reunir? <p>(usa solo números)</p>"
+        goal: "¿Cuánto esperas reunir? * <p>(usa solo números)</p>"
         name: "Nombre de tu proyecto"
         video_url: "Link de tu Video"
         image: Imagen

@@ -1,4 +1,6 @@
 #page_content
+  #discount-hidden-text
+    = t('projects.new.discount_hidden_text').html_safe
   .container
     .start_content
       .title
@@ -151,9 +153,9 @@
                   .bootstrap-alert
                     = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
                     .alert
-                      .important= t('projects.new.important_html')
+                      .important= t('projects.new.important_html', minimum: number_to_currency(::Configuration[:partial_goal], unit: 'COP', precision: 0, delimiter: '.'))
                   - question_number = question_number + 1
-                  = form.label :goal, "#{question_number}. #{t('formtastic.labels.project.goal')} *".html_safe
+                  = form.label :goal, "#{question_number}. #{t('formtastic.labels.project.goal')}".html_safe
                   .input-wrapper
                     = form.text_field :goal, class: "#{'error' if @project.errors[:goal].present?}"
                     p.inline-hints= t('formtastic.hints.project.goal').html_safe
