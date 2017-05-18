@@ -5,7 +5,7 @@ class Channels::IniciativesController < Channels::BaseController
     before_filter :find_financial_channel, only: [:new, :edit, :create, :show]
     
     def new
-        iniciative = (current_user ? Iniciative.where(contact_email: current_user.email).first : nil)
+        iniciative = (current_user.nil? ? nil : Iniciative.where(contact_email: current_user.email).first)
         if iniciative.present?
             return redirect_to root_url, flash: { notice: I18n.t('iniciatives.new.email_exists') }
             #redirect_to root_url(subdomain: @financial_channel.channel.permalink)
