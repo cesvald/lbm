@@ -13,7 +13,6 @@ class Channels::IniciativesController < Channels::BaseController
             gon.departments = departments
             new!
         end
-            
     end
     
     def edit

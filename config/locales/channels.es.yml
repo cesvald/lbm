@@ -11,7 +11,7 @@ es:
   channels:
     send_your_project: "Envía tu proyecto"
     send_your_iniciative: "Envía tu iniciativa"
-    close_summoning: "Cerrar convocatoria"
+    close_summoning: "Empezar campaña"
     close_applying: "Cerrar aplicación"
     announce: "Anunciar resultados"
     send_a_email: "Enviar un email"

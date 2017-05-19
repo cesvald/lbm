@@ -63,12 +63,13 @@
     #project_description[data-project=@project.to_json]
     /.project_image
     /  = image_tag @project.display_image('project_thumb_small')
-    .section_header
-      h1
-        b
-          = "#{@project.name}, "
-        = t('projects.project_header.without_city', category_name: link_to(@project.category, explore_path(anchor: @project.category.to_s.parameterize)), author: link_to(@project.user.display_name, user_path(@project.user))).html_safe
-        = " que opera en el municipio de #{@project.financial_project.municipality} y beneficia a más de #{@project.financial_project.benefited_count} personas"
+    - if @project.financial_project.present?
+      .section_header
+        h1
+          b
+            = "#{@project.name}, "
+          = t('projects.project_header.without_city', category_name: link_to(@project.category, explore_path(anchor: @project.category.to_s.parameterize)), author: link_to(@project.user.display_name, user_path(@project.user))).html_safe
+          = " que opera en el municipio de #{@project.financial_project.municipality} y beneficia a más de #{@project.financial_project.benefited_count} personas"
     .main_info_wrapper.centered_page_width
       .sidebar
         .info
