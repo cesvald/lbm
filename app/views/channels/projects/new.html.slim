@@ -343,6 +343,9 @@
                     = form.text_area :how_know, class: "#{'error' if @project.errors[:how_know].present?}"
               - if @iniciative.present?
                 = hidden_field_tag :iniciative_id, @iniciative.id
+              .input-container
+                .input
+                  = image_tag 'lbm/tips-writting.jpg', class: 'tips-writting'
               .clearfix
               .submit
                 fieldset.accept

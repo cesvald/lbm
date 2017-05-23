@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
         #@channel_projects = @channel.projects.visible.order("random()").limit(3) if @channel
         
         @expiring = Project.expiring_for_home()
-        @expiring = Project.successful_for_home() if @expiring.empty?
+        #@expiring = Project.successful_for_home() if @expiring.empty?
         @recent = Project.recent_for_home()
         @thereAreRecent = true
         if @recent.empty?

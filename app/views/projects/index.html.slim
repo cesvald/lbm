@@ -81,17 +81,17 @@
         .projects
           - @recent.each_with_index do |item,i|
             = render 'project', project: item
-      
-      .block_container
-        .title
-          = image_tag "lbm/expiring_icon.png", class: "icon"
-          h2= t('sections.expiring.title').html_safe
-        .explore_link
-          = link_to t('main.links.view_all'), explore_path(anchor: :expiring)
-        .projects
-          - @expiring.each_with_index do |item,i|
-            = render 'project', project: item
-                
+      - if not @expiring.empty?
+        .block_container
+          .title
+            = image_tag "lbm/expiring_icon.png", class: "icon"
+            h2= t('sections.expiring.title').html_safe
+          .explore_link
+            = link_to t('main.links.view_all'), explore_path(anchor: :expiring)
+          .projects
+            - @expiring.each_with_index do |item,i|
+              = render 'project', project: item
+
       .block_container
         .title
           = image_tag "lbm/channels_icon.png", class: "icon"

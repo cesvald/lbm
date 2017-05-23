@@ -178,6 +178,7 @@ es:
     iniciatives:
       index:
         menu: Iniciativas
+        search: "Buscar"
   channels:
     adm:
       confirm_dialog: "¿Estás seguro?"

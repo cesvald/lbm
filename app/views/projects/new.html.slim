@@ -256,7 +256,9 @@
                   = form.label :how_know, "18. #{t('formtastic.labels.project.how_know')}"
                   .input-wrapper
                     = form.text_area :how_know, class: "#{'error' if @project.errors[:how_know].present?}"
-  
+              .input-container
+                .input
+                  = image_tag 'lbm/tips-writting.jpg', class: 'tips-writting'
               .clearfix
               .submit
                 fieldset.accept
