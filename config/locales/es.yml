@@ -239,25 +239,25 @@ es:
       iniciative:
         name: Nombre
         description: Descripción
-        year: Año de creación
+        year: "Año de creación"
         activities: Actividades
         department: Departamento
         municipality: Municipio
-        other_municipality: Otros Municipios
-        participants_count: Número de Participantes
+        other_municipality: "Otros Municipios"
+        participants_count: "Número de Participantes"
         zone: Zona
-        women_count: Número de Mujeres
-        average_age: Edad Promedio
-        benefited_count: Número de Beneficiados
-        web_url: Web Url
-        facebook_url: Facebook Url
-        blog_url: Blog Url
-        video_url: Video Url
-        contact_name: Nombre de Contacto
-        contact_email: Email de Contacto
-        contact_phone: Teléfono de Contacto
+        women_count: "Número de Mujeres"
+        average_age: "Edad Promedio"
+        benefited_count: "Número de Beneficiados"
+        web_url: "Web Url"
+        facebook_url: "Facebook Url"
+        blog_url: "Blog Url"
+        video_url: "Video Url"
+        contact_name: "Nombre de Contacto"
+        contact_email: "Email de Contacto"
+        contact_phone: "Teléfono de Contacto"
         state: Estado
-        main_image: Imagen Princiapl
+        main_image: "Imagen Princiapl"
     models:
       backer: Colaborador
       category: Categoría
@@ -393,25 +393,25 @@ es:
         name: Nombre
         category: Category
         description: Descripción
-        year: Año de creación
+        year: "Año de creación"
         activities: Actividades
         department: Departamento
         municipality: Municipio
-        other_municipality: Otros Municipios
-        participants_count: Número de Participantes
+        other_municipality: "Otros Municipios"
+        participants_count: "Número de Participantes"
         zone: Zona
-        women_count: Número de Mujeres
-        average_age: Edad Promedio
-        benefited_count: Número de Beneficiados
-        web_url: Web Url
-        facebook_url: Facebook Url
-        blog_url: Blog Url
-        video_url: Video Url
-        contact_name: Nombre de Contacto
-        contact_email: Email de Contacto
-        contact_phone: Teléfono de Contacto
+        women_count: "Número de Mujeres"
+        average_age: "Edad Promedio"
+        benefited_count: "Número de Beneficiados"
+        web_url: "Web Url"
+        facebook_url: "Facebook Url"
+        blog_url: "Blog Url"
+        video_url: "Video Url"
+        contact_name: "Nombre de Contacto"
+        contact_email: "Email de Contacto"
+        contact_phone: "Teléfono de Contacto"
         state: Estado
-        main_image: Imagen Principal
+        main_image: "Imagen Principal"
     labels:
       backer:
         anonymous: "Quiero que mi colaboración sea anónima."
@@ -488,11 +488,11 @@ es:
     optional: " (Opcional)"
     options:
       iniciative:
-        rural: 'Rural'
-        urban: 'Urbana'
-        rural_and_urban: 'Ambas'
-        individual: 'Individual'
-        collective: 'Colectiva'
+        rural: Rural
+        urban: Urbana
+        rural_and_urban: Ambas
+        individual: Individual
+        collective: Colectiva
   found_plural: Encontrados
   found_singular: Encontrado
   here: aquí
@@ -877,7 +877,7 @@ es:
       update_documents: "Actualizar documentos"
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
-      submit_finance: "Financiar"
+      submit_finance: Financiar
       goal_requested: "%{total} Solicitados"
       share_vote: "Comparte tu voto en"
       already_voted: "Ya realizaste este voto"

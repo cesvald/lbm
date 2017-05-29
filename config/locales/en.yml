@@ -236,12 +236,35 @@ en:
         title: ~
         description: ~
         started_at: ~
+      iniciative:
+        name: ~
+        description: ~
+        year: ~
+        activities: ~
+        department: ~
+        municipality: ~
+        other_municipality: ~
+        participants_count: ~
+        zone: ~
+        women_count: ~
+        average_age: ~
+        benefited_count: ~
+        web_url: ~
+        facebook_url: ~
+        blog_url: ~
+        video_url: ~
+        contact_name: ~
+        contact_email: ~
+        contact_phone: ~
+        state: ~
+        main_image: ~
     models:
       backer: Supporter
       category: Category
       project: Project
       reward: Reward
       channel: ~
+      iniciative: ~
   backer:
     display_confirmed_at: "%{time_ago} ago"
     reward_must_be_from_project: "Must be from the same project"
@@ -355,11 +378,40 @@ en:
         video_url: "Paste the URL from a <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a> video. We recommend Vimeo because it looks better and doesn't have ads. This way, your project will look better too! <strong>Produce your video the best you can and specifically for your campaign</strong>. If there is a single thing that differentiates the projects that reach the goal from the others is the video."
         more_links: "Which chanels will be used to spread the word about your project? List here your facebook/twitter/blog/site/ the more you have, the better."
         first_backers: "To reach your financial goal it’s essential to engage with the people who are close to you and the project. So if you can list here who would be your first 20 supporters it would be a great start :)"
+      financial_project:
+        benefited_count: ~
+        women_count: ~
+        department: ~
+        municipality: ~
+        zone: ~
       reward:
         description: "Describe your reward in a way that attracts people's interest to support the project. Don't be shy!"
         maximum_backers: "If your reward is limited, tell us the supporters maximum"
         minimum_value: "This is the minimum amount of support to choose this reward."
         days_to_delivery: "Total of days to deliver the reward."
+      iniciative:
+        name: ~
+        category: ~
+        description: ~
+        year: ~
+        activities: ~
+        department: ~
+        municipality: ~
+        other_municipality: ~
+        participants_count: ~
+        zone: ~
+        women_count: ~
+        average_age: ~
+        benefited_count: ~
+        web_url: ~
+        facebook_url: ~
+        blog_url: ~
+        video_url: ~
+        contact_name: ~
+        contact_email: ~
+        contact_phone: ~
+        state: ~
+        main_image: ~
     labels:
       backer:
         anonymous: "I want my support to be anonymous."
@@ -374,6 +426,7 @@ en:
         category: ~
         about: ~
         history: ~
+        financial_history: ~
         cause: ~
         description: ~
         impact: ~
@@ -396,12 +449,50 @@ en:
         more_links: "List of project related links"
         first_backers: "List of people who could be your first supporters"
         how_know: "How did you get to know LittleBigMoney?"
+      financial_project:
+        benefited_count: ~
+        women_count: ~
+        department: ~
+        municipality: ~
+        zone: ~
+      iniciative:
+        name: ~
+        plurality: ~
+        category: ~
+        description: ~
+        year: ~
+        activities: ~
+        department: ~
+        municipality: ~
+        other_municipality: ~
+        participants_count: ~
+        women_count: ~
+        ethnic_count: ~
+        zone: ~
+        average_age: ~
+        benefited_count: ~
+        web_url: ~
+        facebook_url: ~
+        blog_url: ~
+        video_url: ~
+        contact_name: ~
+        contact_email: ~
+        contact_phone: ~
+        state: ~
+        main_image: ~
       picture:
         picture: Picture
       reward:
         days_to_delivery: "Delivery days"
         maximum_backers: "Supporters maximum (optional)"
     optional: " (Optional)"
+    options:
+      iniciative:
+        rural: ~
+        urban: ~
+        rural_and_urban: ~
+        individual: ~
+        collective: ~
   found_plural: Found
   found_singular: Found
   here: here
@@ -504,6 +595,7 @@ en:
       slogan_invest: "Grow with new entrepreneurs (soon)"
     update:
       success: "Your project has been updated!"
+      success_reviewed: ~
     update_documents:
       success: "Documents have been updated!"
     box:
@@ -639,6 +731,7 @@ en:
         pay_with: "Pay with"
     create:
       success: "Your project was successfully created! We'll contact you soon. Thanks a lot!"
+      alert: ~
     form:
       permalink_hint: "Simplify the URL of your project. Your supporters need to remember the address to share your project."
       important_html: "Please notice that LittleBigMoney will charge a 13% fee if your project is successful."
@@ -784,6 +877,13 @@ en:
       update_documents: "Update documents"
       download_all_documents: "Download all documents"
       add_picture: "Add an image"
+      submit_finance: ~
+      goal_requested: ~
+      share_vote: ~
+      already_voted: ~
+      submit_vote: ~
+      i_just_voted: ~
+      reached_votes: ~
       pictures:
         delete: Delete
         error: "An error occurred while adding the image"
@@ -843,6 +943,11 @@ en:
       category: Category
       tags_hint: "Before submitting your project, explore and be inspired by others who have gone through the site."
       tags_important: "Check out other projects in your category <a href='%{href}' target='_blank'>here</a>."
+      benefited_count_important: ~
+      women_count_important: ~
+      department_important: ~
+      municipality_important: ~
+      zone_important: ~
       video: "Your project already has a video? Send the URL!"
       video_hint: "Vimeo link"
       video_important: "The video must be hosted by Vimeo. Paste the URL here!"
@@ -870,7 +975,7 @@ en:
       send_project: "I want to submit my project"
       legend_html: "After filling in the form below, you will receive a project page in draft mode. In this draft you can add the rewards for your supporters. You can also share the page with your friends to collect feedback and sharpen your project even more.<br><br>The information filled in below is not definitive, but remember that the more consistent you are in your project submission, the faster it will go live.<br><br><b>Very Important:</b> <i>LittleBigMoney is a platform with diverse levels of supervision, which means that our board will evaluate the focus, the feasibility and consistency of your project during the draft. We hope you understand that if your project does not comply with our selection criteria</a>, it may be refused by the team of curators.</i>"
       access_links: "Necesitas <a href='%{sign_in_link}'>iniciar sesión</a> o <a href='%{sign_up_link}'>registrarte</a> para enviar tu proyecto"
-      access_financial: "Necesitas iniciar sesión o registrarte para enviar tu proyecto. Recuerda ingresar con el mismo email con el cual enviaste tu iniciativa."
+      access_links_financial: ~
       step_1_title: "1. Registro"
       step_1_text: "Crear una cuenta es fácil y gratuito. Sólo necesitas nombre, mail y contraseña"
       step_2_title: "2. Proyecto"
@@ -889,6 +994,14 @@ en:
     start_project_email:
       subject: "Project sent by %{name}"
       subject_html: "Project sent by %{link}"
+  iniciatives:
+    create:
+      success: ~
+      fail:
+        contact_email_exists_applying: ~
+        contact_email_exists: ~
+    new:
+      email_exists: ~
   registrations:
     new:
       site_title: "Sign up"

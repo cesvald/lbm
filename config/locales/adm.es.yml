@@ -175,10 +175,6 @@ es:
         current_period: "Últimas 8 semanas"
         previous_period: "8 sem. anteriores"
         last_year: "El año pasado"
-    iniciatives:
-      index:
-        menu: Iniciativas
-        search: "Buscar"
   channels:
     adm:
       confirm_dialog: "¿Estás seguro?"
