@@ -75,7 +75,10 @@ es:
       header: "Tu proyecto fue recibido por el equipo del canal"
       text_html: |+
           Hola,<br/><br/>Muchas gracias por completar el formulario y enviar tu proyecto que pronto formará parte de este gran canal!.<br/><br/>Desde ahora deberás estar muy atento a tu correo pues será el medio que utilizaremos para comunicarte los pasos a seguir hasta el lanzamiento de tu proyecto.<br/><br/>Equipo LittleBigMoney
-          
+    project_reviewed_changes:
+      subject: "Actualización de proyecto después de revisión"
+      header: "El proyecto %{project_name} ha sido actualizado desde el momento que hiciste la revisión"
+      text_html: "Ya puedes entrar a %{project_link} para revisar las actualizaciones del proyecto después de la revisión que hiciste al respecto"
     project_visible:
       subject: "Tu proyecto ahora esta publicado en LittleBigMoney"
       header: "Ahora es una realidad"

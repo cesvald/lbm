@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
         #@channel_projects = @channel.projects.visible.order("random()").limit(3) if @channel
         
         @expiring = Project.expiring_for_home()
-        #@expiring = Project.successful_for_home() if @expiring.empty?
+        #@expiring = Project.successful_for_home() if @expiring.empty? 
         @recent = Project.recent_for_home()
         @thereAreRecent = true
         if @recent.empty?
@@ -71,8 +71,14 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    @project.updated_by = current_user
     update! do |success, failure|
       success.html{
+        if @project.reviewed?
+          flash[:notice] = I18n.t('projects.update.success_reviewed')
+        else
+          flash[:notice] = I18n.t('projects.update.success')
+        end
         return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
       }
       success.json{

@@ -595,6 +595,7 @@ es:
       slogan_invest: "(Próximamente) crece con nuevos emprendedores"
     update:
       success: "Tu proyecto fue actualizado exitosamente!"
+      success_reviewed: "Tu proyecto fue actualizado exitosamente! Nos contactaremos pronto contigo para informarte si el proyecto está listo para salir al aire."
     update_documents:
       success: "Los documentos fueron actualizados exitosamente!"
     box:

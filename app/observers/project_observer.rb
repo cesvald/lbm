@@ -32,6 +32,14 @@ class ProjectObserver < ActiveRecord::Observer
                                           {project: project, project_name: project.name})
   end
 
+  def after_update(project)
+    if not project.updated_by.nil? && project.updated_by == project.user && project.reviewed?
+      Notification.create_notification(:project_reviewed_changes,
+                                        User.where(email:Configuration[:email_projects]),
+                                        {project: project, project_name: project.name })
+    end
+  end
+  
   def notify_owner_that_project_is_waiting_funds(project)
     Notification.create_notification_once(:project_in_wainting_funds,
       project.user,

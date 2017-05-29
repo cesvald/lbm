@@ -120,7 +120,7 @@ class Project < ActiveRecord::Base
     where("id IN (SELECT project_id FROM backers b WHERE b.state = 'confirmed' AND b.user_id = ?)", user_id)
   }
   
-  attr_accessor :accepted_terms, :review_comments
+  attr_accessor :accepted_terms, :review_comments, :updated_by
 
   validates_acceptance_of :accepted_terms, on: :create
 
