@@ -35,7 +35,7 @@ class ProjectObserver < ActiveRecord::Observer
   def after_update(project)
     if not project.updated_by.nil? && project.updated_by == project.user && project.reviewed?
       Notification.create_notification(:project_reviewed_changes,
-                                        User.where(email:Configuration[:email_projects]),
+                                        User.where(email:Configuration[:email_projects]).first,
                                         {project: project, project_name: project.name })
     end
   end
