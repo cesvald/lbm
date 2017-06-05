@@ -56,6 +56,14 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    if params[:phone_number].empty?
+      flash[:alert] = I18n.t('projects.create.phone_number_alert')
+      render action: :new
+      return false
+    else
+      current_user.phone_number = params[:phone_number]
+      current_user.save
+    end
     @project = current_user.projects.new(params[:project])
     if(params[:iniciative_id].present?)
       @iniciative = Iniciative.find(params[:iniciative_id])
