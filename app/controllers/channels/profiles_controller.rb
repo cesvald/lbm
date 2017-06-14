@@ -35,6 +35,8 @@ class Channels::ProfilesController < Channels::BaseController
   
   
   def channel_permalink
+    redirect_to(protocol: 'http', host: ::Configuration[:base_domain]) if request.ssl?
+    
     if dev_environment?
       params[:id] = 'jovenesactivos'
     else
