@@ -54,7 +54,7 @@ CATARSE.channels = {
           summary = '<span class="iniciative-wrapper"><p class="summary">' +summary+ '</p><p class="know-more" data-id="' +iniciative.id+ '" data-toggle="modal" data-target="#iniciative-modal"> Saber más de nosotros</p></span>'
           iniciatives.push({lat: iniciative.lat, lng: iniciative.lng, name: iniciative.name, infowindow: summary});
         });
-        handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: true, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false, minZoom: 6}, internal: {id: 'channel-map'}}, function(){
+        handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: false, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false, minZoom: 6}, internal: {id: 'channel-map'}}, function(){
           var markers = handler.addMarkers(iniciatives)
           /*var markers = handler.addMarkers([
             { 
@@ -69,7 +69,7 @@ CATARSE.channels = {
               }
             },
           ]);*/
-          handler.map.centerOn({lat: 4.565016, lng: -74.301835});
+          handler.map.centerOn({lat: 4.165016, lng: -72.901835});
         });
         handler.getMap().setZoom(5);
       },
