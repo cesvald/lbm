@@ -10,7 +10,7 @@ class FinancialChannel < ActiveRecord::Base
 		state :selecting, value: 'selecting'
 		state :announced, value: 'announced'
 		
-		event :close_summoning do
+		event :open_applying do
 			transition :summoning => :applying
 		end
 

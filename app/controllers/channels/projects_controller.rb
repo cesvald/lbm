@@ -17,7 +17,7 @@ class Channels::ProjectsController < ProjectsController
     end
     
     if parent.financial? and !current_user
-      return redirect_to root_url, flash: { notice: t('projects.new.access_financial') }
+      return redirect_to root_url, flash: { notice: t('channels.projects.new.alert_access_financial') }
     elsif parent.financial? and current_user
       @iniciative = parent.financial_channel.iniciatives.where(contact_email: current_user.email).first
       @financial_project = FinancialProject.new

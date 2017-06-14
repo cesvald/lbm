@@ -10,6 +10,10 @@ es:
     deleted: "Ya no estas siguiendo este canal"
   channels:
     send_your_project: "Envía tu proyecto"
+    send_your_iniciative: "Envía tu iniciativa"
+    open_applying: "Iniciar campaña"
+    close_applying: "Cerrar aplicación"
+    announce: "Anunciar resultados"
     send_a_email: "Enviar un email"
     follow: "Sigue el canal"
     following: Siguiendo
@@ -77,6 +81,7 @@ es:
         submit: "Enviar proyecto"
         send_project: "Quiero enviar mi proyecto"
         how_know: "¿Cómo conociste el canal?"
+        alert_access_financial: "Debes ingresar con la cuenta desde la cual creaste la iniciativa, o enviar una nueva iniciativa"
     how_it_works:
       title: "¿Cómo funciona %{channel}?"
     footer:
@@ -91,3 +96,12 @@ es:
       link_to_twitter: "Enlace con el Twitter del canal"
       link_to_facebook: "Enlace con el Facebook del canal"
       link_to_website: "Enlace a la página web del canal"
+    iniciatives:
+      new:
+        title: 'ENVÍA TU INICIATIVA'
+        subtitle: '¡Es hora de hacerlo realidad! Queremos saber del potencial de tu iniciativa.'
+        urban: 'Urbana'
+        rural: 'Rural'
+        urban_and_rural: 'Ambas'
+      form:
+        submit: 'Enviar tu iniciativa!'

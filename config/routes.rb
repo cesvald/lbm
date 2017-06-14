@@ -68,7 +68,7 @@ Catarse::Application.routes.draw do
       end
       resources :financial_channels, only: :index do
         member do
-          put 'close_summoning'
+          put 'open_applying'
           put 'close_applying'
           put 'announce'
         end
