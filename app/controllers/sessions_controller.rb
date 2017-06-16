@@ -6,7 +6,7 @@ class SessionsController < Devise::SessionsController
     private
     
     def force_https
-        if action_name == 'new' && !test_environment?
+        if action_name == 'new' && !test_environment? && request.subdomain.nil?
             redirect_to request.url.sub!('http', 'https') if not request.ssl?
         end
     end
