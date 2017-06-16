@@ -81,7 +81,7 @@ es:
         submit: "Enviar proyecto"
         send_project: "Quiero enviar mi proyecto"
         how_know: "¿Cómo conociste el canal?"
-        alert_access_financial: "Debes ingresar con la cuenta desde la cual creaste la iniciativa, o enviar una nueva iniciativa"
+        alert_access_financial: "¿Tienes un proyecto? Genial!  Envíanos primero tu iniciativa para que te conozcamos y si ya lo hiciste, regístrate con el correo que ingresaste en el formulario anterior"
     how_it_works:
       title: "¿Cómo funciona %{channel}?"
     footer:
@@ -99,7 +99,7 @@ es:
     iniciatives:
       new:
         title: 'ENVÍA TU INICIATIVA'
-        subtitle: '¡Es hora de hacerlo realidad! Queremos saber del potencial de tu iniciativa.'
+        subtitle: '¡Es hora de hacerlo realidad! Queremos saber del potencial de tu iniciativa.<br><br>Los campos marcados con (*) son obligatorios'
         urban: 'Urbana'
         rural: 'Rural'
         urban_and_rural: 'Ambas'

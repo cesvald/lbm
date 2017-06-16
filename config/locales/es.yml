@@ -378,6 +378,7 @@ es:
         video_url: "Pega la URL de un video de Vimeo o Youtube. <strong>Realiza tu video lo mejor que puedas y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un proyecto de otro, es el video."
         more_links: "¿Qué canales usarás para promocionar la idea de tu proyecto? Puedes Nombralos aquí (facebook/twitter/blog/sitio web) entre más tengas, te puede ayudar más."
         first_backers: "Para que tu campaña tenga éxito, es fundamental que traigas a tus redes de contactos más cercanas. Por eso, cuéntanos quiénes crees que serán tus primeros 20 colaboradores"
+        phone_number: "Regálanos tu número para que nos podamos comunicar contigo"
       financial_project:
         benefited_count: "¿Cuántas personas se verán beneficidadas por el proyecto?"
         women_count: "¿Cuántas mujeres se verán beneficiadas por el proyecto?"
@@ -469,9 +470,9 @@ es:
         participants_count: "¿Cuántos participantes tiene la iniciativa?"
         women_count: "De los participantes de la iniciativa, ¿cuántas son mujeres?"
         ethnic_count: "De los participantes de la iniciativa, ¿cuántos pertenecen a grupos étnicos y/o afrocolombianos?"
-        zone: "Zona urbana o rural"
+        zone: "Zona urbana, rural o ambas"
         average_age: "¿Cuál es el promedio de edad de los participantes?"
-        benefited_count: "¿A cuántas personas benefician con su labor?"
+        benefited_count: "¿A cuántas personas impactan con su labor?"
         web_url: "Página web de la iniciativa"
         facebook_url: "Página de Facebook de la iniciativa"
         blog_url: "Blog de la iniciativa"
@@ -480,7 +481,7 @@ es:
         contact_email: "Correo electrónico de contacto"
         contact_phone: "Número de telefono"
         state: Estado
-        main_image: "Imagen representativa de la iniciativa"
+        main_image: "Imagen representativa de la iniciativa (Tamaño Máximo 1MB)"
       picture:
         picture: Imagen
       reward:
@@ -1003,6 +1004,7 @@ es:
       fail:
         contact_email_exists_applying: "Ya existe una iniciativa con tu email de contacto. Si desea puedes crear un proyecto a partir de esta iniciativa o ingresar otro email de contacto"
         contact_email_exists: "Ya existe una iniciativa con este email de contacto."
+      failure: "No fue posible crear la iniciativa. Por favor revisa los campos con una equis y vuelve a intentarlo"
     new:
       email_exists: "Ya existe una iniciativa creada con tu usuario, si deseas crea un proyecto a partir de esta iniciativa en el siguiente paso"
   registrations:

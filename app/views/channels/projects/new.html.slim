@@ -8,7 +8,7 @@
           h1= t('.title')
           = image_tag 'lbm/plain-icon.png'
         h2= t('.subtitle')
-        - if @project.financial?
+        - if not @iniciative.present?
           = render partial: 'channels/projects/banner'
           .legend-wrapper
             .legend-title-wrapper
@@ -150,15 +150,17 @@
   
               .input-container
                 .input
-                  .bootstrap-alert
-                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                    .alert
-                      .important= t('projects.new.important_html', minimum: number_to_currency(::Configuration[:partial_goal], unit: 'COP', precision: 0, delimiter: '.'))
+                  - if not @iniciative.present?
+                    .bootstrap-alert
+                      = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                      .alert
+                         .important= t('projects.new.important_html', minimum: number_to_currency(::Configuration[:partial_goal], unit: 'COP', precision: 0, delimiter: '.'))
                   - question_number = question_number + 1
                   = form.label :goal, "#{question_number}. #{t('formtastic.labels.project.goal')}".html_safe
                   .input-wrapper
                     = form.text_field :goal, class: "#{'error' if @project.errors[:goal].present?}"
-                    p.inline-hints= t('formtastic.hints.project.goal').html_safe
+                    - if not @iniciative.present?
+                      p.inline-hints= t('formtastic.hints.project.goal').html_safe
   
               .input-container
                 .input
@@ -171,18 +173,20 @@
                   .input-wrapper
                     = form.text_area :budget, class: "#{'error' if @project.errors[:budget].present?}"
                     p.inline-hints= t('formtastic.hints.project.budget')
-  
-              .input-container
-                .input
-                  .bootstrap-alert
-                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                    .alert
-                      .important= t('projects.new.implementation_important')
-                  - question_number = question_number + 1
-                  = form.label :implementation, "#{question_number}. #{t('formtastic.labels.project.implementation')} *"
-                  .input-wrapper
-                    = form.text_area :implementation, class: "#{'error' if @project.errors[:implementation].present?}"
-                    p.inline-hints= t('formtastic.hints.project.implementation')
+              - if not @iniciative.present?
+                .input-container
+                  .input
+                    .bootstrap-alert
+                      = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                      .alert
+                        .important= t('projects.new.implementation_important')
+                    - question_number = question_number + 1
+                    = form.label :implementation, "#{question_number}. #{t('formtastic.labels.project.implementation')} *"
+                    .input-wrapper
+                      = form.text_area :implementation, class: "#{'error' if @project.errors[:implementation].present?}"
+                      p.inline-hints= t('formtastic.hints.project.implementation')
+              - else
+                = form.hidden_field :implementation, value: 'na'
               - if not @iniciative.present?
                 .input-container
                   .input
@@ -332,23 +336,22 @@
                     p.inline-hints= t('formtastic.hints.project.first_backers')
               .input-container
                 .input
-                  .bootstrap-alert
-                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                    .alert
-                      .important= t('.phone_number_important')
-                  = label_tag :phone_number, "18. #{t('formtastic.labels.project.phone_number')}*"
-                  .input-wrapper
-                    = text_field_tag :phone_number, (params[:phone_number].nil? || params[:phone_number].empty? ? (current_user.phone_number.nil? || current_user.phone_number.empty? ? '' : current_user.phone_number) : params[:phone_number])
-              .input-container
-                .input
-                  .bootstrap-alert
-                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                    .alert
-                      .important= t('projects.new.how_know_important')
                   - question_number = question_number + 1
-                  = form.label :how_know, "#{question_number}. #{t('formtastic.labels.project.how_know')}"
+                  = label_tag :phone_number, "#{question_number}. #{t('formtastic.labels.project.phone_number')}*"
                   .input-wrapper
-                    = form.text_area :how_know, class: "#{'error' if @project.errors[:how_know].present?}"
+                    = text_field_tag :phone_number, (params[:phone_number].nil? || params[:phone_number].empty? ? (current_user.phone_number.nil? || current_user.phone_number.empty? ? (@iniciative.present? ? @iniciative.contact_phone : "") : current_user.phone_number) : params[:phone_number])
+                    p.inline-hints= t('formtastic.hints.project.phone_number')
+              - if not @iniciative.present?
+                .input-container
+                  .input
+                    .bootstrap-alert
+                      = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                      .alert
+                        .important= t('projects.new.how_know_important')
+                    - question_number = question_number + 1
+                    = form.label :how_know, "#{question_number}. #{t('formtastic.labels.project.how_know')}"
+                    .input-wrapper
+                      = form.text_area :how_know, class: "#{'error' if @project.errors[:how_know].present?}"
               - if @iniciative.present?
                 = hidden_field_tag :iniciative_id, @iniciative.id
               .input-container

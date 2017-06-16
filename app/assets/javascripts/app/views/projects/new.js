@@ -38,8 +38,8 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     });
     
     $('#project_goal').numeric(false)
-    
-    $('#project_goal').on('input', function(){
+    if(typeof gon.apply_discount === 'undefined') {
+      $('#project_goal').on('input', function(){
       var amount = this.value
       var discount = 0
       if(isNaN(amount) || amount == '') {
@@ -58,7 +58,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         }
       }
     })
-    
+    }
     $('input,textarea,select').on('focus', null, function(){
       $('p.inline-hints').hide()
       $(this).next('p.inline-hints').show()

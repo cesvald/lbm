@@ -76,7 +76,7 @@
           - unless @channel && @channel.show_drafts? && (@project.draft? || @project.reviewed?)
             #statistics
               .statistic-wrapper
-                - if @project.financial? && !@project.financial_channel.announced?
+                - if @project.financial? && !@project.financial_channel.announced? && !@project.financial_channel.selecting?
                   em.description
                     .finance-goal
                       = t('.goal_requested', total: @project.display_goal).html_safe  
@@ -109,19 +109,20 @@
                       .vote
                         span.number= "#{@project.iniciative.vote_count} "
                         = t(".reached_votes")
-                      - if not @project.iniciative.already_voted?(current_user)
-                        = form_tag(add_vote_channels_iniciative_path(@project.iniciative), method: :post, id: 'vote-form') do
-                          fieldset
-                            = button_tag do
-                              = 'Quiero votar por este proyecto!!'
-                      - else
-                        h3.description=t('.already_voted')
-                        #share
-                          h2= t('.share_vote')
-                          = link_to "http://twitter.com/?status=#{t('.i_just_voted', name: @project.name)} #{project_by_slug_url(permalink: @project.permalink)}", target: :_blank do
-                            = image_tag 'lbm/twitter-icon.png', title: 'Facebook'
-                          = link_to "http://www.facebook.com/share.php?u=#{project_by_slug_url(permalink: @project.permalink)}", target: :_blank do
-                            = image_tag 'lbm/facebook-icon.png', title: 'Twitter'
+                      - if @project.financial_channel.state == 'applying'
+                        - if not @project.iniciative.already_voted?(current_user)
+                          = form_tag(add_vote_channels_iniciative_path(@project.iniciative), method: :post, id: 'vote-form') do
+                            fieldset
+                              = button_tag do
+                                = 'Quiero votar por este proyecto!!'
+                        - else
+                          h3.description=t('.already_voted')
+                          #share
+                            h2= t('.share_vote')
+                            = link_to "http://twitter.com/?status=#{t('.i_just_voted', name: @project.name)} #{project_by_slug_url(permalink: @project.permalink)}", target: :_blank do
+                              = image_tag 'lbm/twitter-icon.png', title: 'Facebook'
+                            = link_to "http://www.facebook.com/share.php?u=#{project_by_slug_url(permalink: @project.permalink)}", target: :_blank do
+                              = image_tag 'lbm/facebook-icon.png', title: 'Twitter'
 
           - if @project.online? && @project.in_time? && !@project.financial?
             #pledge

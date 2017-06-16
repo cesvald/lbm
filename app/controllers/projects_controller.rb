@@ -114,11 +114,12 @@ class ProjectsController < ApplicationController
         return redirect_to project_by_slug_path(resource.permalink)
       end
       
-      if @project.financial?
-        #if !request.subdomain.present? || @project.financial_channel.channel.permalink != request.subdomain
-          #return redirect_to project_url(@project, subdomain: @project.financial_channel.channel.permalink, protocol: 'http')
-        #  return redirect_to project_url(@project, protocol: 'http')
-        #end
+      if not dev_environment?
+        if @project.financial?
+          if !request.subdomain.present? || @project.financial_channel.channel.permalink != request.subdomain
+            return redirect_to project_url(@project, subdomain: @project.financial_channel.channel.permalink, protocol: 'http')
+          end
+        end
       end
       
       show!{

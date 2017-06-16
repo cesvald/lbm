@@ -15,7 +15,7 @@ class Iniciative < ActiveRecord::Base
   attr_accessor :accepted_terms
   validates_acceptance_of :accepted_terms, on: :create
   
-  validates_presence_of :lat, :lng, :name, :description, :year, :activities, :department, :municipality, :participants_count, :zone, :women_count, :average_age, :benefited_count, :contact_name, :contact_email, :financial_channel_id
+  validates_presence_of :lat, :lng, :name, :description, :year, :activities, :department, :municipality, :participants_count, :zone, :women_count, :average_age, :benefited_count, :contact_name, :contact_email, :financial_channel_id, :contact_phone
   
   validates_uniqueness_of :contact_email
   

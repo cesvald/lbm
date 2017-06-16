@@ -31,10 +31,10 @@ class Channels::IniciativesController < Channels::BaseController
             end
             render :action => :new
         else
-            create!(notice: t('iniciatives.create.success')) do |success, failure|
+            create!(notice: t('iniciatives.create.success'), alert: t('iniciatives.create.failure')) do |success, failure|
               success.html{ return redirect_to root_url(subdomain: @financial_channel.channel.permalink) }
               #success.html{ return redirect_to root_url }
-              failure.html{ return nil }
+              failure.html{ return render :action => :new }
             end
         end
     end

@@ -19,10 +19,11 @@ class Channels::ProjectsController < ProjectsController
     if parent.financial? and !current_user
       return redirect_to root_url, flash: { notice: t('channels.projects.new.alert_access_financial') }
     elsif parent.financial? and current_user
+      gon.apply_discount = true
       @iniciative = parent.financial_channel.iniciatives.where(contact_email: current_user.email).first
       @financial_project = FinancialProject.new
       if not @iniciative.present?
-        return redirect_to root_url, flash: { notice: "No existe una iniciativa creada con tu usuario. Por favor envía una iniciativa antes de crear el proyecto."}
+        return redirect_to root_url, flash: { notice: "¿Tienes un proyecto? Genial! No existe una iniciativa creada con esta cuenta. Por favor envía una iniciativa antes de crear el proyecto."}
       elsif @iniciative.draft?
         return redirect_to root_url, flash: { notice: "Tu iniciativa no ha sido aprobada aún. Si deseas escríbenos a littlebigmoney@fundacioncapital.org y en breve te daremos una respuesta"}
       end

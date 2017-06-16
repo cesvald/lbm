@@ -22,11 +22,11 @@
       - if can? :update, @project, :uploaded_image
         = form.input :uploaded_image, as: :file, required: false,
           hint: (@project.uploaded_image.present? ? image_tag(@project.uploaded_image.project_thumb.url, size: '220x172') : t('formtastic.hints.project.uploaded_image') )
-      - if can? :update, @project, :online_days
+      - if (can? :update, @project, :online_days) and not @project.financial?
         = form.input :online_days, as: :number, required: false, input_html: {class: 'lbm-input'}
       - if can? :update, @project, :goal
         = form.input :goal, as: :number, required: false, label: "#{t('formtastic.labels.project.goal')}".html_safe, hint: t('formtastic.hints.project.goal').html_safe, input_html: {class: 'lbm-input'}
-      - if can? :update, @project, :about
+      - if (can? :update, @project, :about) and not @project.financial?
         = form.input :about, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :history
         = form.input :history, required: false, input_html: {class: 'lbm-textarea'}
@@ -38,13 +38,13 @@
         = form.input :impact, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :budget
         = form.input :budget, required: false, input_html: {class: 'lbm-textarea'}
-      - if can? :update, @project, :implementation
+      - if can?(:update, @project, :implementation) and not @project.financial?
         = form.input :implementation, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :more_links
         = form.input :more_links, required: false, input_html: {class: 'lbm-textarea'}
       - if can? :update, @project, :first_backers
         = form.input :first_backers, required: false, input_html: {class: 'lbm-textarea'}
-      - if can? :update, @project, :how_know
+      - if (can? :update, @project, :how_know) and not @project.financial?
         = form.input :how_know, required: false, input_html: {class: 'lbm-textarea'}
       - if current_user && current_user.admin?
         = form.input :platform_fee, required: false, input_html: {class: 'lbm-input'}
@@ -53,7 +53,7 @@
         .tips
           h3= t('projects.formatting_tips.title')
           = image_tag "catarse/icon_media.png"
-          p= t('projects.formatting_tips.media_html') 
+          p= t('projects.formatting_tips.media_html')
           = image_tag "catarse/icon_url.png"
           p= t('projects.formatting_tips.link_html')
           = image_tag "catarse/icon_linktext.png"
@@ -61,7 +61,7 @@
           = image_tag "catarse/icon_bold.png"
           p= t('projects.formatting_tips.bold_html')
           = image_tag "catarse/icon_italic.png"
-          p= t('projects.formatting_tips.italic_html')            
+          p= t('projects.formatting_tips.italic_html')
         .clearfix
       .form-actions.bootstrap-twitter
         = form.submit class: 'btn'

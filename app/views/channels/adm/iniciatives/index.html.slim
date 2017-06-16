@@ -1,25 +1,26 @@
 #page_content
 	.container
-		h1 Iniciativas
+		h1 Iniciativas del Canal
 			
 		.bootstrap-form
-			= form_tag adm_iniciatives_path, method: :get, class: 'form-horizontal' do |f|
+			= form_tag adm_iniciatives_path, method: :get do |f|
 				fieldset
 					.input
 						= label_tag :by_contact_email, t('activerecord.attributes.iniciative.contact_email')
 						= text_field_tag :by_contact_email, params[:by_contact_email], class: 'lbm-input'
-					
+					br
 					.input
 						= label_tag :by_name, t('activerecord.attributes.iniciative.name')
 						= text_field_tag :by_name, params[:by_name], class: 'lbm-input'
-					
+					br
 					.input
 						= label_tag :by_channel, t('by_channel')
 						= select_tag :by_channel, options_from_collection_for_select(@channels, 'id', 'name', params[:by_channel]), include_blank: true, class: "lbm-select"
 					
-					
-					.input.submit
-						= submit_tag 'Buscar', class: 'btn btn-success'
+					br
+					.bootstrap-twitter
+						.input.submit
+							= submit_tag 'Buscar', class: 'btn btn-success'
 
 		.data-table
 			= paginate @iniciatives
@@ -86,7 +87,7 @@
 																= link_to approve_adm_iniciative_path(iniciative), method: :put do
 																	i.icon-edit
 																	= t('.approve')
-																= link_to adm_iniciative_path(iniciative), method: :delete, data: {confirm: "Estás seguro de eliminar esta iniciativa?" } do
+																= link_to adm_iniciative_path(iniciative), method: :delete do
 																	i.icon-trash
 																	= t('.delete')
 															

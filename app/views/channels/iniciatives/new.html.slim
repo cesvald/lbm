@@ -3,6 +3,6 @@
         .main-title-wrapper
             h1= t('.title')
             = image_tag 'lbm/plain-icon.png'
-        h2= t('.subtitle')
+        h2= t('.subtitle').html_safe
         
     == render 'form'

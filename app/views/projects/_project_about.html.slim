@@ -92,7 +92,7 @@
     .information-wrapper
       h3= t('formtastic.labels.project.budget')
       p= @project.budget_html.html_safe
-  - if @project.implementation.present?
+  - if not @project.financial? and @project.implementation.present?
     .information-wrapper
       h3= t('formtastic.labels.project.implementation')
       p= @project.implementation_html.html_safe
