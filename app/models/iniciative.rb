@@ -37,6 +37,13 @@ class Iniciative < ActiveRecord::Base
 		event :confirm do
 			transition :approved => :confirmed
 		end
+		
+		after_transition draft: :approved, do: :after_transition_of_draft_to_approved
+		
+	end
+	
+	def after_transition_of_draft_to_approved
+	  notify_observers :notify_owner_that_iniciative_is_approved
 	end
 	
 	def add_vote
@@ -46,5 +53,11 @@ class Iniciative < ActiveRecord::Base
 	def already_voted?(user)
 	  users.exists?(user.id)
 	end
+	
+	def new_draft_recipient
+    email = ::Configuration[:email_projects]
+    User.where(email: email).first
+  end
+  
 #Iniciative.create(:lat => 1, :lng => 1, :name => "asdf", :description => "asdf", :year => 2010, :activities => "asdf", :department => "Bolivar", :municipality => "Cartagena", :participants_count => 2, :zone => "asdf", :women_count => "asdf", :average_age => 30, :benefited_count => 20, :contact_name => "Cesar", :contact_email => "valderramago@gmail.com", :financial_channel_id => 1, :category_id => 28)	
 end

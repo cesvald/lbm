@@ -439,7 +439,7 @@ es:
         video_url: "Link de tu Video"
         image: Imagen
         headline: "Frase de motivación"
-        uploaded_image: "thumbnail del proyecto"
+        uploaded_image: "Imagen miniatura del proyecto"
         picture: "Imágenes del proyecto"
         identification_file: Cédula
         rut_file: RUT
