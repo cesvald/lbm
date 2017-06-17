@@ -35,8 +35,17 @@ Catarse::Application.configure do
   config.assets.debug = true
 
   # mailcatcher configs
-  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.gmail.com",
+    :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
+    :user_name => "cesar@imiapps.com",
+    :password  => "c2a0v0o6l!", # SMTP password is any valid API key
+    :authentication => 'plain', # Mandrill supports 'plain' or 'login'
+  }
 
   config.action_mailer.asset_host = "http://localhost:3000"
+  
 end
 

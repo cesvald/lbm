@@ -1,6 +1,7 @@
 es:
   notifications:
     support_html: "Si tienes alguna otra duda, puedes consultar nuestras preguntas frecuentes o entra en contacto con nuestro equipo en nuestra central de soporte %{link}"
+    iniciative_support_html: "Si tienes alguna otra duda, puedes entrar en contacto con nuestro equipo en nuestra central de soporte %{link}"
     signature_html: "Un fuerte abrazo,<br/>Equipo de LittleBigMoney"
     reward_html: "Recompensa seleccionada:%{description}</strong>"
     no_reward_html: "<strong>Ninguna recompensa seleccionada</strong>"
@@ -125,3 +126,21 @@ es:
       subject: "Recordatorio de envío de recompensas y medición de impacto"
       header: "Monitoreo a envío de recompensas y medición de impacto"
       text_html: "Hola %{project_user},<br/><br/><center>Recibe un cordial saludo, actualmente estamos realizando un monitoreo de proyectos financiados de la plataforma, y nos gustaría contar con tu ayuda para analizar dos aspectos importantes:</center><br/><b>1. Recompensas:</b> Como bien sabes, nuestro sistema solicita a todos los emprendedores ofrecer y enviar recompensas a sus donantes. Por ello, te invitamos a que nos confirmes si éstas ya fueron enviadas completando el siguiente <a href='http://goo.gl/forms/EGfBNdgJuE'>“Formulario de Seguimiento a Recompensas”</a><br/><br/><b>2. Impacto:</b> Todos los proyectos subidos a la plataforma de LittleBigMoney tienen impacto social o ambiental, por ello quisiéramos tu ayuda para poder medir tus acciones. Te invitamos a que nos ayudes a diligenciar el siguiente <a href='http://goo.gl/forms/hLfIpxjfv1'>“Formulario de Impacto”</a><br/><br/>%{updates}<br/><br/>Nos interesará mucho saber de ti y tener noticias sobre el avance de tu proyecto. Así que comunícate con nosotros si tienes comentarios adicionales, dudas, preguntas que no quedaron claras o quizás si quieres subir un nuevo proyecto. Escríbenos a: <a href='mailto:littlebigmoney@fundacioncapital.org'> littlebigmoney@fundacioncapital.org</a><br/><br/>Esperamos que puedas apoyarnos con lo solicitado. Si ya has recibido estos formularios antes y completado tu información, ya no tienes que volver a hacerlo. Muchas gracias!<br/><br/>Saludos,<br/><br/>Equipo de LittleBigMoney"
+    adm_new_iniciative:
+      subject: "Hay una nueva iniciativa para revisión"
+      header: "Hay na nueva iniciativa para revisión"
+      text_html: "Se acaba de ingresar una nueva iniciativa con el nombre %{iniciative_name} con el email de contacto %{contact_email}"
+    owner_new_iniciative:
+      subject: "Tu iniciativa fue recibida por nuestro equipo"
+      header: "Tu iniciativa fue recibida por nuestro equipo"
+      text_html: "Hola, tu iniciativa fue recibida por el equipo de %{financial_channel_name}.<br/><br/>Muchas gracias por completar el formulario y enviar tu iniciativa que ahora será evaluada por nuestro equipo y, si cumple con los requisitos, aparecerá en el mapa de Colombia.<br/><br/>Desde ahora deberás estar muy atento a tu correo pues será el medio que utilizaremos para comunicarte los pasos a seguir."
+    owner_approved_iniciative:
+      subject: "Tu iniciativa ha sido aprobada"
+      header: "Tu iniciativa ha sido aprobada"
+      text_html: "Hola, tu iniciativa fue aprobada por el equipo de %{financial_channel_name}.<br/><br/>¡Felicitaciones!<br/><br/>Tu iniciativa %{iniciative_name} fue aceptada y desde este momento aparece en nuestro mapa y tendrás la posibilidad de dar a conocer su impacto en la comunidad.<br/><br/>Sigue estando  atento a tu correo pues es el medio que utilizaremos para comunicarte la posibilidad de participar a una convocatoria para proyectos que se destaquen en sus territorios."
+      
+      
+      
+      
+      
+      
