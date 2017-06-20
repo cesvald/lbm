@@ -2,7 +2,11 @@
 - project = backer.project
 - if backer.reward.present?
   - reward = t('notifications.reward_html', description: backer.reward.description)
--else
+- else
   - reward = t('notifications.no_reward_html')
-= t('notifications.project_owner_backer_confirmed.text_html', name: project.user.display_name, backer: link_to(backer.user.display_name, user_url(backer.user)), value: backer.display_value, reward: reward, email: backer.user.email, backers_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'backers'), project_by_slug_url(permalink: project.permalink, anchor: 'backers')), updates_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'updates'), project_by_slug_url(permalink: project.permalink, anchor: 'updates')), reports_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'reports'), project_by_slug_url(permalink: project.permalink, anchor: 'reports')))
-= render "email_footer"
+- if not project.financial?
+    = t('notifications.project_owner_backer_confirmed.text_html', name: project.user.display_name, backer: link_to(backer.user.display_name, user_url(backer.user)), value: backer.display_value, reward: reward, email: backer.user.email, backers_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'backers'), project_by_slug_url(permalink: project.permalink, anchor: 'backers')), updates_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'updates'), project_by_slug_url(permalink: project.permalink, anchor: 'updates')), reports_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'reports'), project_by_slug_url(permalink: project.permalink, anchor: 'reports')))
+    = render "email_footer"
+- else
+    = t('notifications.financial_project_owner_backer_confirmed.text_html', name: project.user.display_name, backer: link_to(backer.user.display_name, user_url(backer.user)), value: backer.display_value, reward: reward, email: backer.user.email, backers_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'backers'), project_by_slug_url(permalink: project.permalink, anchor: 'backers')), updates_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'updates'), project_by_slug_url(permalink: project.permalink, anchor: 'updates')), reports_link: link_to(project_by_slug_url(permalink: project.permalink, anchor: 'reports'), project_by_slug_url(permalink: project.permalink, anchor: 'reports')))
+    = render "email_iniciative_footer"

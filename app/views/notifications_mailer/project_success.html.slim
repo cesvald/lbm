@@ -1,5 +1,8 @@
 - project = @notification.project
 
-= t('notifications.project_success.text_html', project_user: project.user.display_name)
-
-= render "email_footer"
+- if not project.financial?
+    = t('notifications.project_success.text_html', project_user: project.user.display_name)
+    = render "email_footer"
+- else
+    = t('notifications.financial_project_success.text_html', project_user: project.user.display_name)
+    = render "email_iniciative_footer"
