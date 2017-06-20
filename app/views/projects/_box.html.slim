@@ -24,13 +24,15 @@
           = embedded_svg "lbm/#{project.category.icon_text}.svg"
           p.project_category = project.category
         .pledged_wrapper
-          span= "#{project.display_pledged}"
-          p= "#{t('projects.project.backed')}"
+          - if !project.financial? || (project.financial? && !project.draft? && !project.online?)
+            span= "#{project.display_pledged}"
+            p= "#{t('projects.project.backed')}"
         .time_wrapper
-          - if project.in_time?
+          - if project.in_time? and not project.financial?
             = image_tag "lbm/clock.png"
             span.time_number= "#{project.time_to_go[:time]}"
             p.time_text= "#{project.time_to_go[:unit].capitalize} #{project.remaining_text}"
           - else
-            h6= I18n.t("project.display_status.#{project.display_status}").capitalize
-            p= project.display_expires_at
+            - if !project.financial? || (project.financial? && !project.draft? && !project.online?)
+              h6= I18n.t("project.display_status.#{project.display_status}").capitalize
+              p= project.display_expires_at

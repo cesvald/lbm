@@ -561,6 +561,7 @@ es:
     video_regex_validation: "Solo URLs de Vimeo o Youtube son permitidas"
     name_regex_validation: "Solo caracteres alfanuméricos son permitidos"
     display_status:
+      draft: "En borrador"
       expired: Finalizado
       rejected: Rechazado
       failed: "Sin éxito"
