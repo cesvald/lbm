@@ -1,5 +1,9 @@
 ﻿- user = @notification.user
 - project = @notification.project
+- if not project.financial?
+    = t('notifications.project_received_channel.text_html', name: user.name, link: link_to(project_by_slug_url(project.permalink), project_by_slug_url(project.permalink)), facebook: link_to('Facebook', Configuration[:facebook_url]), twitter: link_to('Twitter', "http://twitter.com/#{Configuration[:twitter_username]}"), blog: link_to('blog', Configuration[:blog_url]))
+    = render "email_footer"
+- else
+    = t('notifications.financial_project_received_channel.text_html', financial_channel_name: project.financial_channel.channel.name, name: user.name, link: link_to(project_by_slug_url(project.permalink), project_by_slug_url(project.permalink)), facebook: link_to('Facebook', Configuration[:facebook_url]), twitter: link_to('Twitter', "http://twitter.com/#{Configuration[:twitter_username]}"), blog: link_to('blog', Configuration[:blog_url]))
+    = render "email_iniciative_footer"
 
-= t('notifications.project_received_channel.text_html', name: user.name, link: link_to(project_by_slug_url(project.permalink), project_by_slug_url(project.permalink)), facebook: link_to('Facebook', Configuration[:facebook_url]), twitter: link_to('Twitter', "http://twitter.com/#{Configuration[:twitter_username]}"), blog: link_to('blog', Configuration[:blog_url]))
-= render "email_footer"

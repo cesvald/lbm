@@ -38,7 +38,7 @@ class Channels::ProfilesController < Channels::BaseController
     redirect_to(protocol: 'http', host: ::Configuration[:base_domain], subdomain: request.subdomain) if request.ssl? if !dev_environment?
 
     if dev_environment?
-      params[:id] = 'micuento'
+      params[:id] = 'jovenesactivos'
     else
       params[:id] = request.subdomain
     end

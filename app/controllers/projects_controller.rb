@@ -69,6 +69,8 @@ class ProjectsController < ApplicationController
       @iniciative = Iniciative.find(params[:iniciative_id])
       @project.iniciative = @iniciative
     end
+    @project.attributes.merge(params[:project])
+    @project.save!
     create!(notice: t('projects.create.success')) do |success, failure|
       success.html{ return redirect_to project_by_slug_path(@project.permalink) }
       failure.html{
