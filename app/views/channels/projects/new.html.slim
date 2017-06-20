@@ -296,7 +296,7 @@
                   - question_number = question_number + 1
                   = form.label :video_url, "#{question_number}. #{t('formtastic.labels.project.video_url')}"
                   .input-wrapper
-                    = form.text_field :video_url, class: "#{'error' if @project.errors[:video_url].present?}", value: ( @iniciative.present? ? @iniciative.name : (params.has_key?(:project) ? params[:project][:video_url] : "") )
+                    = form.text_field :video_url, class: "#{'error' if @project.errors[:video_url].present?}", value: ( @iniciative.present? ? @iniciative.video_url : (params.has_key?(:project) ? params[:project][:video_url] : "") )
                     p.inline-hints= t('formtastic.hints.project.video_url').html_safe
   
               .input-container

@@ -5,7 +5,7 @@ class Iniciative < ActiveRecord::Base
   belongs_to :financial_channel
   belongs_to :project
   
-  has_many :votes
+  has_many :votes, dependent: :delete_all
   has_many :users, through: :votes
   has_many :notifications, dependent: :delete_all    
   mount_uploader :main_image, LogoUploader
