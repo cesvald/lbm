@@ -171,7 +171,7 @@ es:
         name: Nombre
         user_id: "Identificación de Usuario"
         video_url: "URL del vídeo"
-        permalink: "URL de tu proyecto"
+        permalink: "Completa la url que quieres para tu proyecto"
         more_links: "¿Dónde podemos conocer más sobre tu proyecto?"
         how_know: "¿Cómo conociste sobre LittleBigMoney?"
       reward:
@@ -239,7 +239,7 @@ es:
       iniciative:
         name: Nombre
         description: Descripción
-        year: "Año de creación"
+        year: "Año de creación de la iniciativa(escribir año ej. 2014)"
         activities: Actividades
         department: Departamento
         municipality: Municipio
@@ -247,7 +247,7 @@ es:
         participants_count: "Número de Participantes"
         zone: Zona
         women_count: "Número de Mujeres"
-        average_age: "Edad Promedio"
+        average_age: "Edad Promedio de los participantes (escribir solamente el número)"
         benefited_count: "Número de Beneficiados"
         web_url: "Web Url"
         facebook_url: "Facebook Url"
@@ -394,7 +394,7 @@ es:
         name: Nombre
         category: Category
         description: Descripción
-        year: "Año de creación"
+        year: "Año de creación de la iniciativa (escribir año ej. 2014)"
         activities: Actividades
         department: Departamento
         municipality: Municipio
@@ -471,7 +471,7 @@ es:
         women_count: "De los participantes de la iniciativa, ¿cuántas son mujeres?"
         ethnic_count: "De los participantes de la iniciativa, ¿cuántos pertenecen a grupos étnicos y/o afrocolombianos?"
         zone: "Zona urbana, rural o ambas"
-        average_age: "¿Cuál es el promedio de edad de los participantes?"
+        average_age: "¿Cuál es el promedio de edad de los participantes? (escribir solo el número)"
         benefited_count: "¿A cuántas personas impactan con su labor?"
         web_url: "Página web de la iniciativa"
         facebook_url: "Página de Facebook de la iniciativa"
