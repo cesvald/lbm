@@ -26,7 +26,7 @@ class Project < ActiveRecord::Base
   has_many :backers, dependent: :destroy
   has_many :rewards, dependent: :destroy
   has_many :updates, dependent: :destroy
-  has_many :notifications, dependent: :destroy
+  has_many :notifications, dependent: :delete_all
   has_many :pictures, dependent: :destroy
   has_and_belongs_to_many :channels
   
