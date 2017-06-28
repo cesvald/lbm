@@ -86,7 +86,8 @@
 
           #payment-method-wrapper
             - PaymentEngines.engines.each do |engine|
-              div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path].call(@backer)}" data-form=(engine[:form_path].present? ? "#{engine[:form_path].call(@backer)}" : "asd")]
+              - if engine[:name] != "paypal"
+                div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path].call(@backer)}" data-form=(engine[:form_path].present? ? "#{engine[:form_path].call(@backer)}" : "asd")]
             - if current_user.admin?
               - if @backer.project.financial?
                 .payment-form
