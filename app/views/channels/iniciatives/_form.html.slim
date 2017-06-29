@@ -65,58 +65,63 @@
             = form.number_field :ethnic_count, class: "#{'error' if @iniciative.errors[:ethnic_count].present?}"
       .input-container
         .input
-          = form.label :zone, "13. #{t('formtastic.labels.iniciative.zone')}*"
+          = form.label :ethnic_group, "13. #{t('formtastic.labels.iniciative.ethnic_group')}"
+          .input-wrapper
+            = form.text_field :ethnic_group, class: "#{'error' if @iniciative.errors[:ethnic_group].present?}"
+      .input-container
+        .input
+          = form.label :zone, "14. #{t('formtastic.labels.iniciative.zone')}*"
           .input-wrapper
             = form.select :zone, {"#{t('formtastic.options.iniciative.urban')}" => 'urban', "#{t('formtastic.options.iniciative.rural')}" => 'rural', "#{t('formtastic.options.iniciative.rural_and_urban')}" => 'both'}, class: "#{'error' if @iniciative.errors[:zone].present?}"
       .input-container
         .input
-          = form.label :average_age, "14. #{t('formtastic.labels.iniciative.average_age')}*"
+          = form.label :average_age, "15. #{t('formtastic.labels.iniciative.average_age')}*"
           .input-wrapper
             = form.number_field :average_age, class: "#{'error' if @iniciative.errors[:average_age].present?}"
       .input-container
         .input
-          = form.label :benefited_count, "15. #{t('formtastic.labels.iniciative.benefited_count')}*"
+          = form.label :benefited_count, "16. #{t('formtastic.labels.iniciative.benefited_count')}*"
           .input-wrapper
             = form.number_field :benefited_count, class: "#{'error' if @iniciative.errors[:benefited_count].present?}"
       .input-container
         .input
-          = form.label :web_url, "16. #{t('formtastic.labels.iniciative.web_url')}"
+          = form.label :web_url, "17. #{t('formtastic.labels.iniciative.web_url')}"
           .input-wrapper
             = form.text_field :web_url, class: "#{'error' if @iniciative.errors[:web_url].present?}"
       .input-container
         .input
-          = form.label :facebook_url, "17. #{t('formtastic.labels.iniciative.facebook_url')}"
+          = form.label :facebook_url, "18. #{t('formtastic.labels.iniciative.facebook_url')}"
           .input-wrapper
             = form.text_field :facebook_url, class: "#{'error' if @iniciative.errors[:facebook_url].present?}"
       .input-container
         .input
-          = form.label :blog_url, "18. #{t('formtastic.labels.iniciative.blog_url')}"
+          = form.label :blog_url, "19. #{t('formtastic.labels.iniciative.blog_url')}"
           .input-wrapper
             = form.text_field :blog_url, class: "#{'error' if @iniciative.errors[:blog_url].present?}"
       .input-container
         .input
-          = form.label :video_url, "19. #{t('formtastic.labels.iniciative.video_url')}"
+          = form.label :video_url, "20. #{t('formtastic.labels.iniciative.video_url')}"
           .input-wrapper
             = form.text_field :video_url, class: "#{'error' if @iniciative.errors[:video_url].present?}"
       .input-container
         .input
-          = form.label :main_image, "20. #{t('formtastic.labels.iniciative.main_image')}"
+          = form.label :main_image, "21. #{t('formtastic.labels.iniciative.main_image')}*"
           .input-wrapper
             = form.input :main_image, label: false, required: false,
           hint: (@iniciative.main_image.present? ? image_tag(@iniciative.main_image.url, size: '220x172') : t('formtastic.hints.iniciative.main_image') )
       .input-container
         .input
-          = form.label :contact_name, "21. #{t('formtastic.labels.iniciative.contact_name')}*"
+          = form.label :contact_name, "22. #{t('formtastic.labels.iniciative.contact_name')}*"
           .input-wrapper
             = form.text_field :contact_name, value:(current_user ? current_user.full_name : params[:contact_name]), class: "#{'error' if @iniciative.errors[:contact_name].present?}"
       .input-container
         .input
-          = form.label :contact_email, "22. #{t('formtastic.labels.iniciative.contact_email')}*"
+          = form.label :contact_email, "23. #{t('formtastic.labels.iniciative.contact_email')}*"
           .input-wrapper
             = form.text_field :contact_email, value:(current_user ? current_user.email : params[:contact_email]), class: "#{'error' if @iniciative.errors[:contact_email].present?}"
       .input-container
         .input
-          = form.label :contact_phone, "23. #{t('formtastic.labels.iniciative.contact_phone')}*"
+          = form.label :contact_phone, "24. #{t('formtastic.labels.iniciative.contact_phone')}*"
           .input-wrapper
             = form.text_field :contact_phone, class: "#{'error' if @iniciative.errors[:contact_phone].present?}"
       = form.hidden_field :financial_channel_id, value: @financial_channel.id

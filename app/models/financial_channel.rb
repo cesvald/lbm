@@ -4,6 +4,8 @@ class FinancialChannel < ActiveRecord::Base
 	has_many :phases
 	has_many :iniciatives
 	
+	
+	
 	state_machine :state, initial: :summoning do
 		state :summoning, value: 'summoning'
 		state :applying, value: 'applying'
@@ -21,7 +23,11 @@ class FinancialChannel < ActiveRecord::Base
 		event :announce do
 			transition :selecting => :announced
 		end
-
+		
+		event :restart do
+			transition :announced => :summoning
+		end
+		
 		after_transition :selecting => :announced, do: :after_selecting_to_announced
 	end
 	
