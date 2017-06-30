@@ -53,6 +53,7 @@ class Projects::BackersController < ApplicationController
       @backer.value = "%0.0f" % @reward.minimum_value
     end
     gon.paypal_conversion = ::Configuration[:paypal_conversion]
+    gon.minimum_amount = @project.currency.minimum_amount.to_i
   end
 
   def create

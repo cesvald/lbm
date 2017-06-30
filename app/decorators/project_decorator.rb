@@ -84,11 +84,11 @@ class ProjectDecorator < Draper::Decorator
   end
 
   def display_pledged
-    number_to_currency source.pledged, unit: 'COP', precision: 0, delimiter: '.'
+    number_to_currency source.pledged, unit: source.currency, precision: 0, delimiter: '.'
   end
 
   def display_goal
-    number_to_currency source.goal, unit: 'COP', precision: 0, delimiter: '.'
+    number_to_currency source.goal, unit: source.currency, precision: 0, delimiter: '.'
   end
   
   def progress_bar

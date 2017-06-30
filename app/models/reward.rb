@@ -8,7 +8,9 @@ class Reward < ActiveRecord::Base
 
   include ERB::Util
   schema_associations
-
+  
+  belongs_to :project
+  
   ranks :row_order, with_same: :project_id
   has_paper_trail
 
@@ -49,7 +51,7 @@ class Reward < ActiveRecord::Base
     "<div class='reward_minimum_value'>#{minimum_value > 0 ? display_minimum+'+' : I18n.t('reward.dont_want')}#{ I18n.t('reward.international', value: number_to_currency(converted_minimum, unit: Configuration[:paypal_currency], precision: 2, delimiter: '.')) unless I18n.locale == I18n.default_locale or minimum_value == 0}</div><div class='reward_description'>#{h description}</div>#{'<div class="sold_out">' + I18n.t('reward.sold_out') + '</div>' if sold_out?}<div class='clear'></div>".html_safe
   end
   def display_minimum
-    number_to_currency minimum_value, unit: 'COP', precision: 1, delimiter: '.'
+    number_to_currency minimum_value, unit: project.currency, precision: 1, delimiter: '.'
   end
   def short_description
     truncate description, length: 35

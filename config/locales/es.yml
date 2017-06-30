@@ -357,7 +357,8 @@ es:
     hints:
       backer:
         credits: "Tienes <strong>%{credits}</strong> en créditos y puedes apoyar hasta este valor sim necesitae realizar un nuevo pago."
-        value: "Tú escoges el valor, a partir de 25.000 COP ( %{minimum_usd} USD ) está genial!"
+        value_usd: "Tú escoges el valor, a partir de 25.000 COP ( %{minimum_usd} USD ) está genial!"
+        value: "Tú escoges el valor, a partir de %{minimum_amount} %{currency} está genial!"
       project:
         video_url_edit: "Pega aquí la URL de tu video de Vimeo o Youtube."
         image: "En caso de no tener un video puedes subir una imagen que represente tu proyecto"
@@ -712,8 +713,10 @@ es:
           important_html: "<p>PayPal esta destinado para pagos internacionales. Esto es porque tienes solo 60 días para recibir un eventual reembolso de PayPal sin pagar recargos.</p><p>En caso de que realices el pago por PayU, tu debes solicitar el reembolso.</p><p>Si esto no es posible, no te preocupes siempre vamos a devolver tu dinero. Si el reembolso de PayPal es hecho 60 días después, debes pagar un recargo a PayPal de aproximadamente 6% por transacción.</p>"
           submit: "Realizar el pago con PayPal"
           title: "¿Quieres realizar un pago internacional?"
-        review_with_reward_html: "Vas a aportar <strong>%{value} (%{conversion})</strong> y recibir la siguiente recompensa:"
-        review_without_reward_html: "Vas a aportar <strong>%{value} (%{conversion})</strong> pero no quieres ninguna recompensa por esto."
+        review_with_reward_usd_html: "Vas a aportar <strong>%{value} (%{conversion})</strong> y recibir la siguiente recompensa:"
+        review_with_reward_html: "Vas a aportar <strong>%{value}</strong> y recibir la siguiente recompensa:"
+        review_without_reward_usd_html: "Vas a aportar <strong>%{value} (%{conversion})</strong> pero no quieres ninguna recompensa por esto."
+        review_without_reward_html: "Vas a aportar <strong>%{value}</strong> pero no quieres ninguna recompensa por esto."
         submit:
           credits: "Confirmar apoyo con créditos"
           moip: "Realizar el pago por medio de PayU"

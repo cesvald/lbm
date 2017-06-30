@@ -27,10 +27,16 @@
               .clearfix
           #value-wrapper
             = embedded_svg "lbm/puzzle-icon.svg", class: "puzzle-icon"
-            = select_tag :currency, options_for_select(["COP", "USD"], "COP"), class: 'lbm-select'
+            - if @project.currency.code == "COP"
+              = select_tag :currency, options_for_select(["COP", "USD"], "COP"), class: 'lbm-select'
+            - else
+              = hidden_field_tag :currency, @project.currency.code
             = form.text_field :value, required: false, autocomplete: 'off', class: 'lbm-input'
-            span#value-hint = t('formtastic.hints.backer.value', minimum_usd: to_usd(25000))
-            p#converted-value
+            - if @project.currency.code == "COP"
+              span#value-hint = t('formtastic.hints.backer.value_usd', minimum_usd: to_usd(25000))
+              p#converted-value
+            - else
+              span#value-hint = t('formtastic.hints.backer.value', minimum_amount: @project.currency.minimum_amount, currency: @project.currency)
         #rewards-title= t('projects.form.rewards_title')
         #rewards.centered_page_width
           = render partial:'rewards/reward', collection: @rewards

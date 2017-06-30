@@ -171,7 +171,7 @@ pt:
         name: Nombre
         user_id: "Identificación de Usuario"
         video_url: "URL del vídeo"
-        permalink: "URL de tu proyecto"
+        permalink: "Completa la url que quieres para tu proyecto"
         more_links: "¿Dónde podemos conocer más sobre tu proyecto?"
         how_know: "¿Cómo conociste sobre LittleBigMoney?"
       reward:
@@ -239,25 +239,25 @@ pt:
       iniciative:
         name: Nombre
         description: Descripción
-        year: Año de creación
+        year: "Año de creación de la iniciativa(escribir año ej. 2014)"
         activities: Actividades
         department: Departamento
         municipality: Municipio
-        other_municipality: Otros Municipios
-        participants_count: Número de Participantes
+        other_municipality: "Otros Municipios"
+        participants_count: "Número de Participantes"
         zone: Zona
-        women_count: Número de Mujeres
-        average_age: Edad Promedio
-        benefited_count: Número de Beneficiados
-        web_url: Web Url
-        facebook_url: Facebook Url
-        blog_url: Blog Url
-        video_url: Video Url
-        contact_name: Nombre de Contacto
-        contact_email: Email de Contacto
-        contact_phone: Teléfono de Contacto
+        women_count: "Número de Mujeres"
+        average_age: "Edad Promedio de los participantes (escribir solamente el número)"
+        benefited_count: "Número de Beneficiados"
+        web_url: "Web Url"
+        facebook_url: "Facebook Url"
+        blog_url: "Blog Url"
+        video_url: "Video Url"
+        contact_name: "Nombre de Contacto"
+        contact_email: "Email de Contacto"
+        contact_phone: "Teléfono de Contacto"
         state: Estado
-        main_image: Imagen Princiapl
+        main_image: "Imagen Princiapl"
     models:
       backer: Colaborador
       category: Categoría
@@ -357,7 +357,8 @@ pt:
     hints:
       backer:
         credits: "Tienes <strong>%{credits}</strong> en créditos y puedes apoyar hasta este valor sim necesitae realizar un nuevo pago."
-        value: "Tú escoges el valor, a partir de 25.000 COP ( %{minimum_usd} USD ) está genial!"
+        value_usd: "Tú escoges el valor, a partir de 25.000 COP ( %{minimum_usd} USD ) está genial!"
+        value: "Tú escoges el valor, a partir de %{minimum_amount} %{currency} está genial!"
       project:
         video_url_edit: "Pega aquí la URL de tu video de Vimeo o Youtube."
         image: "En caso de no tener un video puedes subir una imagen que represente tu proyecto"
@@ -378,6 +379,7 @@ pt:
         video_url: "Pega la URL de un video de Vimeo o Youtube. <strong>Realiza tu video lo mejor que puedas y hazlo dirigido específicamente a tu campaña</strong>. Si existe algo que diferencia un proyecto de otro, es el video."
         more_links: "¿Qué canales usarás para promocionar la idea de tu proyecto? Puedes Nombralos aquí (facebook/twitter/blog/sitio web) entre más tengas, te puede ayudar más."
         first_backers: "Para que tu campaña tenga éxito, es fundamental que traigas a tus redes de contactos más cercanas. Por eso, cuéntanos quiénes crees que serán tus primeros 20 colaboradores"
+        phone_number: "Regálanos tu número para que nos podamos comunicar contigo"
       financial_project:
         benefited_count: "¿Cuántas personas se verán beneficidadas por el proyecto?"
         women_count: "¿Cuántas mujeres se verán beneficiadas por el proyecto?"
@@ -393,25 +395,25 @@ pt:
         name: Nombre
         category: Category
         description: Descripción
-        year: Año de creación
+        year: "Año de creación de la iniciativa (escribir año ej. 2014)"
         activities: Actividades
         department: Departamento
         municipality: Municipio
-        other_municipality: Otros Municipios
-        participants_count: Número de Participantes
+        other_municipality: "Otros Municipios"
+        participants_count: "Número de Participantes"
         zone: Zona
-        women_count: Número de Mujeres
-        average_age: Edad Promedio
-        benefited_count: Número de Beneficiados
-        web_url: Web Url
-        facebook_url: Facebook Url
-        blog_url: Blog Url
-        video_url: Video Url
-        contact_name: Nombre de Contacto
-        contact_email: Email de Contacto
-        contact_phone: Teléfono de Contacto
+        women_count: "Número de Mujeres"
+        average_age: "Edad Promedio"
+        benefited_count: "Número de Beneficiados"
+        web_url: "Web Url"
+        facebook_url: "Facebook Url"
+        blog_url: "Blog Url"
+        video_url: "Video Url"
+        contact_name: "Nombre de Contacto"
+        contact_email: "Email de Contacto"
+        contact_phone: "Teléfono de Contacto"
         state: Estado
-        main_image: Imagen Principal
+        main_image: "Imagen Principal"
     labels:
       backer:
         anonymous: "Quiero que mi colaboración sea anónima."
@@ -427,7 +429,7 @@ pt:
         about: "¿Quién eres, que haces y cual tu experiencia en el negocio?"
         history: "¿Cuál es la historia de tu emprendimiento?"
         financial_history: "¿De donde nace la idea de este proyecto?"
-        cause: "¿Cuál es la causa que mueve tu proyecto? ¿Cuál es el problema que busca resolver?"
+        cause: "¿Cuál es el objetivo del proyecto? ¿Qué quieres lograr con tu proyecto?"
         description: "¿En qué consiste tu Proyecto?"
         impact: "¿Qué impacto tendría tu proyecto en el desarrollo económico o social de tu comunidad o región?"
         budget: "¿Cómo gastarás el dinero que necesitas para tu proyecto?"
@@ -438,7 +440,7 @@ pt:
         video_url: "Link de tu Video"
         image: Imagen
         headline: "Frase de motivación"
-        uploaded_image: "thumbnail del proyecto"
+        uploaded_image: "Imagen miniatura del proyecto"
         picture: "Imágenes del proyecto"
         identification_file: Cédula
         rut_file: RUT
@@ -449,28 +451,30 @@ pt:
         more_links: "¿Tienes redes sociales? (facebook, twitter, blog) ¿Han publicado algo de tu proyecto en internet? Pega los Links."
         first_backers: "Identifica a tu público: Personas u organizaciones que podrían unirse a tu causa."
         how_know: "¿Cómo conociste LittleBigMoney?"
+        phone_number: "Teléfono de contacto"
       financial_project:
-        benefited_count: "¿Cuántas personas se verá beneficidadas por el proyecto?"
+        benefited_count: "¿Cuántas personas se verán impactadas?"
         women_count: "¿Cuántas mujeres se verán beneficiadas por el proyecto?"
         department: "¿En que Departamento se implementará el proyecto?"
         municipality: "¿En que municipio(s) se implementará?"
         zone: "¿Zona rural o urbana?"
       iniciative:
-        name: "Nombre de la iniciativa"
+        name: "Nombre de la iniciativa (si tu iniciativa no tiene un nombre aún, toma la oportunidad para ser creativo y darle uno)"
         plurality: "¿Iniciativa colectiva o individual?"
         category: "¿Qué tipo de iniciativa es?"
         description: "Realice una breve descripción de la iniciativa: ¿Cuál es su misión? ¿Con cuál propósito se creó? ¿Qué causa la mueve? "
-        year: "Año de creación de la iniciativa"
+        year: "¿Desde qué año están trabajando?"
         activities: "¿Qué actividades realizan?"
         department: "¿En qué departamento opera principalmente la iniciativa?"
-        municipality: "¿En qué municipio opera?"
-        other_municipality: "¿Opera en otros municipios? Especifique en cuales"
+        municipality: "¿En qué municipio o vereda opera?"
+        other_municipality: "¿Opera en otros municipios o veredas? Especifique en cuales"
         participants_count: "¿Cuántos participantes tiene la iniciativa?"
         women_count: "De los participantes de la iniciativa, ¿cuántas son mujeres?"
         ethnic_count: "De los participantes de la iniciativa, ¿cuántos pertenecen a grupos étnicos y/o afrocolombianos?"
-        zone: "Zona urbana o rural"
-        average_age: "¿Cuál es el promedio de edad de los participantes?"
-        benefited_count: "¿A cuántas personas benefician con su labor?"
+        ethnic_group: "¿Cuál es el grupo poblacional? (De los participantes de la pregunta anterior)"
+        zone: "Zona urbana, rural o ambas"
+        average_age: "¿Cuál es el promedio de edad de los participantes? (escribir solo el número)"
+        benefited_count: "¿A cuántas personas impactan con su labor?"
         web_url: "Página web de la iniciativa"
         facebook_url: "Página de Facebook de la iniciativa"
         blog_url: "Blog de la iniciativa"
@@ -479,7 +483,7 @@ pt:
         contact_email: "Correo electrónico de contacto"
         contact_phone: "Número de telefono"
         state: Estado
-        main_image: "Imagen representativa de la iniciativa"
+        main_image: "Imagen representativa de la iniciativa (Tamaño Máximo 1MB)"
       picture:
         picture: Imagen
       reward:
@@ -488,11 +492,11 @@ pt:
     optional: " (Opcional)"
     options:
       iniciative:
-        rural: 'Rural'
-        urban: 'Urbana'
-        rural_and_urban: 'Ambas'
-        individual: 'Individual'
-        collective: 'Colectiva'
+        rural: Rural
+        urban: Urbana
+        rural_and_urban: Ambas
+        individual: Individual
+        collective: Colectiva
   found_plural: Encontrados
   found_singular: Encontrado
   here: aquí
@@ -559,6 +563,7 @@ pt:
     video_regex_validation: "Solo URLs de Vimeo o Youtube son permitidas"
     name_regex_validation: "Solo caracteres alfanuméricos son permitidos"
     display_status:
+      draft: "En borrador"
       expired: Finalizado
       rejected: Rechazado
       failed: "Sin éxito"
@@ -708,8 +713,10 @@ pt:
           important_html: "<p>PayPal esta destinado para pagos internacionales. Esto es porque tienes solo 60 días para recibir un eventual reembolso de PayPal sin pagar recargos.</p><p>En caso de que realices el pago por PayU, tu debes solicitar el reembolso.</p><p>Si esto no es posible, no te preocupes siempre vamos a devolver tu dinero. Si el reembolso de PayPal es hecho 60 días después, debes pagar un recargo a PayPal de aproximadamente 6% por transacción.</p>"
           submit: "Realizar el pago con PayPal"
           title: "¿Quieres realizar un pago internacional?"
-        review_with_reward_html: "Vas a aportar <strong>%{value} (%{conversion})</strong> y recibir la siguiente recompensa:"
-        review_without_reward_html: "Vas a aportar <strong>%{value} (%{conversion})</strong> pero no quieres ninguna recompensa por esto."
+        review_with_reward_usd_html: "Vas a aportar <strong>%{value} (%{conversion})</strong> y recibir la siguiente recompensa:"
+        review_with_reward_html: "Vas a aportar <strong>%{value}</strong> y recibir la siguiente recompensa:"
+        review_without_reward_usd_html: "Vas a aportar <strong>%{value} (%{conversion})</strong> pero no quieres ninguna recompensa por esto."
+        review_without_reward_html: "Vas a aportar <strong>%{value}</strong> pero no quieres ninguna recompensa por esto."
         submit:
           credits: "Confirmar apoyo con créditos"
           moip: "Realizar el pago por medio de PayU"
@@ -732,6 +739,7 @@ pt:
     create:
       success: "Tu proyecto fue creado exitosamente! Te contactaremos próximamente. Muchas gracias!"
       alert: "No fue posible crear el proyecto, revisa los campos con una equis para hacer las correcciones"
+      phone_number_alert: "Es obligatorio el teléfono de contacto para enviar el formulario"
     form:
       permalink_hint: "Usa una URL simple. Tus colaboradores deben recordar esta dirección fácilmente para compartir tu proyecto."
       important_html: "Recuerda que la comisión de LittleBigMoney es del 10%, si el proyecto tiene éxito."
@@ -877,7 +885,7 @@ pt:
       update_documents: "Actualizar documentos"
       download_all_documents: "Descargar todos los documentos"
       add_picture: "Agregar imagen"
-      submit_finance: "Financiar"
+      submit_finance: Financiar
       goal_requested: "%{total} Solicitados"
       share_vote: "Comparte tu voto en"
       already_voted: "Ya realizaste este voto"
@@ -971,6 +979,7 @@ pt:
       rewards: "¿Qué tipo de recompensas quieres ofrecer?"
       rewards_hint: "Creemos que la mejor forma de inspirar a las personas para aportar a tu proyecto es ofreciendo recompensas muy buenas, creativas y sencillas. A los colaboradores les gustan las cosas exclusivas que les permiten conocer más sobre la vida y entorno tuyo. Tomate tu tiempo para ofrecer recompensas creativas para tus colaboradores."
       rewards_important: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
+      phone_number_important: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis partur"
       submit: "Enviar tu proyecto!"
       send_project: "Quiero enviar mi proyecto."
       legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"
@@ -1000,6 +1009,7 @@ pt:
       fail:
         contact_email_exists_applying: "Ya existe una iniciativa con tu email de contacto. Si desea puedes crear un proyecto a partir de esta iniciativa o ingresar otro email de contacto"
         contact_email_exists: "Ya existe una iniciativa con este email de contacto."
+      failure: "No fue posible crear la iniciativa. Por favor revisa los campos con una equis y vuelve a intentarlo"
     new:
       email_exists: "Ya existe una iniciativa creada con tu usuario, si deseas crea un proyecto a partir de esta iniciativa en el siguiente paso"
   registrations:

@@ -1,3 +1,6 @@
+/*gobal $*/
+/*gobal CATARSE*/
+/*gobal Backbone*/
 CATARSE.BackersNewView = Backbone.View.extend({
   rewards: [],
   initialize: function() {
@@ -46,7 +49,7 @@ CATARSE.BackersNewView = Backbone.View.extend({
     value_ok = function(){
       var value = $('#backer_value').val();
       var currency = $('#currency').val();
-      if(/^(\d+)$/.test(value) && ( (parseInt(value) >= 25000 && currency == 'COP') || (parseInt(value) >= (25000 / gon.paypal_conversion).toFixed(0) && currency == 'USD') )){
+      if(/^(\d+)$/.test(value) && ( (parseInt(value) >= parseInt(gon.minimum_amount) && currency != 'USD') || (parseInt(value) >= (parseInt(gon.minimum_amount) / gon.paypal_conversion).toFixed(0) && currency == 'USD') )){
         $('#backer_value').addClass("ok").removeClass("error")
         return true
       } else {
@@ -101,7 +104,7 @@ CATARSE.BackersNewView = Backbone.View.extend({
       var found = false;
       for(i = self.rewards.length - 1; i >= 0 && !found; i--){
         var reward = self.rewards[i]
-        if(value >= reward.value){
+        if(value >= reward.value) {
           $('.reward.selected').removeClass('selected')
           $('.reward[data-id="' +reward.id+ '"]').addClass('selected')
           $('#backer_reward_id').val(reward.id)

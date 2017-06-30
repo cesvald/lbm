@@ -12,7 +12,7 @@ class BackersController < ApplicationController
       format.html{ return render nothing: true, status: 404 }
     end
   end
-
+  
   def request_refund
     back = Backer.find(params[:id])
 
