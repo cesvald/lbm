@@ -1,0 +1,1 @@
+PaymentEngines.register({name: 'bancard', review_path: ->(backer){ Rails.application.routes.url_helpers.review_engines_bancard_path(backer) }, locale: 'es'})

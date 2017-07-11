@@ -37,7 +37,7 @@ class Projects::BackersController < ApplicationController
       flash[:failure] = t('projects.back.cannot_back')
       return redirect_to :root
     end
-
+    
     @create_url = ::Configuration[:secure_review_host] ?
       project_backers_url(@project, {host: ::Configuration[:secure_review_host], protocol: 'https'}) :
       project_backers_path(@project)

@@ -25,6 +25,21 @@ Catarse::Application.routes.draw do
   mount CatarseLbmGiftCards::Engine => "/", :as => :catarse_lbm_gift_cards
   # mount CatarsePayroll::Engine => "/", :as => :catarse_payroll
   
+  # ENGINES
+  namespace :engines do
+    resources :bancard, only: [] do
+      member do
+        get :review
+        match :respond
+        match :cancel
+        match :rollback
+      end
+      collection do
+        match :confirm
+      end
+    end
+  end
+  
   post '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
   get '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification
   get 'mercadopago/success', to: 'mercadopago#success', as: :mercadopago_success

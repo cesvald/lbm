@@ -112,6 +112,8 @@ GEM
     axlsx_rails (0.4.0)
       axlsx (>= 2.0.1)
       rails (>= 3.1)
+    bancard (0.0.3)
+      typhoeus
     bcrypt-ruby (3.1.1)
     best_in_place (2.1.0)
       jquery-rails
@@ -190,6 +192,8 @@ GEM
     enumerate_it (1.1.1)
       activesupport (>= 3.0.0)
     erubis (2.7.0)
+    ethon (0.10.1)
+      ffi (>= 1.3.0)
     excon (0.25.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -487,6 +491,8 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     trollop (2.0)
+    typhoeus (1.1.2)
+      ethon (>= 0.9.0)
     tzinfo (0.3.49)
     uglifier (2.1.2)
       execjs (>= 0.3.0)
@@ -518,6 +524,7 @@ DEPENDENCIES
   activemerchant (>= 1.17.0)
   auto_html (= 1.4.2)
   axlsx_rails (>= 0.4.0)
+  bancard
   best_in_place
   better_errors
   binding_of_caller
@@ -606,4 +613,4 @@ RUBY VERSION
    ruby 2.2.4p230
 
 BUNDLED WITH
-   1.13.6
+   1.14.4

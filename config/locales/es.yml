@@ -680,6 +680,7 @@ es:
         mercadopago_submit: "Ir a MercadoPago"
         mercadopago_description: "Colaboración para el proyecto %{project_name} con el valor de %{value}"
         mercadopago_error: "Oops! Algo sucedió con el envío de tu pago para MercadoPago. Por favor, intenta de nuevo."
+        bancard_description: "Colaboración para el proyecto %{project_name}"
         success: "Tu colaboración fue exitosa. Muchas gracias!"
       new:
         cannot_back: "No es posible aportar a este proyecto ahora. Qué tal si aportas a otros proyectos."

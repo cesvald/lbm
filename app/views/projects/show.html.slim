@@ -79,7 +79,7 @@
                 - if @project.financial? && !@project.financial_channel.announced? && !@project.financial_channel.selecting?
                   em.description
                     .finance-goal
-                      = t('.goal_requested', total: @project.display_goal).html_safe  
+                      = t('.goal_requested', total: @project.display_goal).html_safe
                 - else
                   em.description
                     .pledged= @project.display_pledged

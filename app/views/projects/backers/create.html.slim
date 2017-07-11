@@ -11,6 +11,7 @@
         | X
 
 #page_content
+  h3= "YES I AM HERE"
   .container
     #project_review data-thank-you-path=project_backer_path(project_id: @project.id, id: @backer.id)
       .welcome-message-wrapper
@@ -95,12 +96,14 @@
             - PaymentEngines.engines.each do |engine|
               - if engine[:name] != "paypal"
                 div[id="#{engine[:name]}_payment" class="payments_type" data-target="#{engine[:review_path].call(@backer)}" data-form=(engine[:form_path].present? ? "#{engine[:form_path].call(@backer)}" : "asd")]
+                
             - if current_user.admin?
               - if @backer.project.financial?
                 .payment-form
                   .submit-wrapper
                     = link_to confirm_adm_backer_path(@backer), method: :put do
                       = image_tag "lbm/financial-payment.png", class: "payment-icon", alt: "financial-icon"
+            
             /*
               .payment-form
                 = link_to @preference["response"]["init_point"], target:"_blank", class:"submit-wrapper" do

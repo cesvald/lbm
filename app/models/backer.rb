@@ -206,7 +206,8 @@ class Backer < ActiveRecord::Base
     state :requested_refund, value: 'requested_refund'
     state :refunded_and_canceled, value: 'refunded_and_canceled'
     state :deleted, value: 'deleted'
-
+    state :denied, value: 'denied'
+    
     event :push_to_trash do
       transition all => :deleted
     end
@@ -238,7 +239,11 @@ class Backer < ActiveRecord::Base
     event :hide do
       transition all => :refunded_and_canceled
     end
-
+  
+    event :deny do
+      transition pending: :denied
+    end
+    
     after_transition confirmed: :requested_refund, do: :after_transition_from_confirmed_to_requested_refund
     after_transition confirmed: :canceled, do: :after_transition_from_confirmed_to_canceled
     after_transition any => :confirmed, :do => :after_transition_to_confirmed
