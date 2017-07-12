@@ -33,6 +33,16 @@ class Engines::BancardController < Engines::BaseController
         @rollback_params = rollbackResponse.params
     end
     
+    def confirmation
+        Bancard.sandbox!
+        gateway = Bancard::Gateway.new(public_key: ::Configuration[:bancard_public], private_key: ::Configuration[:bancard_private])
+        confirmationResponse = gateway.confirmation({
+            shop_process_id: params[:id]
+        })
+        
+        @confirmation_params = confirmationResponse.params
+    end
+    
     def cancel
         backer = Backer.find params[:id]
         backer.update_attribute :payment_method, 'Bancard'

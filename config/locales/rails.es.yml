@@ -96,6 +96,8 @@ es:
       month: Mes
       second: Segundos
       year: Año
+    formats:
+      default: "%d/%m/%Y a las %H:%M"
   errors:
     format: "%{attribute} %{message}"
     messages:

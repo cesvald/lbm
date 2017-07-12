@@ -56,6 +56,14 @@ GIT
   specs:
     cancan (2.0.0.alpha)
 
+GIT
+  remote: https://github.com/cesvald/bancard.git
+  revision: bd4a5adaddba483b0c25b319c4f561b1e10614fd
+  branch: sb_confirmations
+  specs:
+    bancard (0.0.3)
+      typhoeus
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -112,8 +120,6 @@ GEM
     axlsx_rails (0.4.0)
       axlsx (>= 2.0.1)
       rails (>= 3.1)
-    bancard (0.0.3)
-      typhoeus
     bcrypt-ruby (3.1.1)
     best_in_place (2.1.0)
       jquery-rails
@@ -212,7 +218,7 @@ GEM
       loofah (>= 0.3.1)
       nokogiri (> 0.0.0)
       sax-machine (>= 0.0.12)
-    ffi (1.9.0)
+    ffi (1.9.18)
     fog (1.14.0)
       builder
       excon (~> 0.25.0)
@@ -524,7 +530,7 @@ DEPENDENCIES
   activemerchant (>= 1.17.0)
   auto_html (= 1.4.2)
   axlsx_rails (>= 0.4.0)
-  bancard
+  bancard!
   best_in_place
   better_errors
   binding_of_caller

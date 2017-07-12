@@ -45,7 +45,7 @@ gem 'catarse_payulatam', git: 'git://github.com/cesvald/catarse_payulatam.git', 
 # gem 'catarse_payulatam', path: '../catarse_payulatam'
 
 # Payment engine using Bancard
-gem 'bancard'
+gem 'bancard', git: 'https://github.com/cesvald/bancard.git', branch: 'sb_confirmations'
 
 # Payment engine using PayU Latam
 # gem 'catarse_payroll', git: 'git://github.com/danielweinmann/catarse_payroll.git',  ref: '90e0b1e01c7a3d2eff10a3c16286138e54397a1e'

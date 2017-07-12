@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg, :inside_channel?, :test_environment?, :dev_environment?, :to_usd, :to_cop, :departments
+  helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg, :inside_channel?, :test_environment?, :dev_environment?, :to_usd, :to_cop, :departments, :allowed_engine_by_currency
   
   before_filter :set_locale
   #before_filter :force_http
@@ -72,6 +72,16 @@ class ApplicationController < ActionController::Base
   def to_cop(amount)
     conversion = ::Configuration[:paypal_conversion].to_f
     ( amount * conversion ).round(0)
+  end
+  
+  def allowed_engine_by_currency(engine_name, currency)
+    if currency == "COP"
+      return ["paypal", "lbm_gift_cards", "payulatam"].include?(engine_name)
+    elsif currency == "PYG"
+      return ["bancard", "tigomoney"].include?(engine_name)
+    else
+      return false
+    end
   end
   
   private

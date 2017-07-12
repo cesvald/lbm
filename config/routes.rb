@@ -30,6 +30,7 @@ Catarse::Application.routes.draw do
     resources :bancard, only: [] do
       member do
         get :review
+        get :confirmation
         match :respond
         match :cancel
         match :rollback
