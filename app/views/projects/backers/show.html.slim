@@ -13,7 +13,7 @@
             = image_tag @project.display_image, id: 'project_image', alt: @project.name
           .text-wrapper
             h1= t('.text_title_html', link: link_to(@project.name, project_by_slug_path(permalink: @project.permalink)))
-      - if @backer.payment_method == 'Bancard' && @confirmation_params["status"] == 'success'
+      - if @backer.payment_method == 'Bancard'
         .bancard-wrapper
           br
           br
@@ -23,13 +23,13 @@
           = l DateTime.now, format: "%d/%m/%Y a las %Hh%Mmin"
           br
           b Número de pedido: 
-          = @confirmation_params["confirmation"]["shop_process_id"]
+          = @backer.id
           br
           b Importe: 
-          = @confirmation_params["confirmation"]["amount"]
+          = @backer.display_value
           br
           b Resultado de la transacción: 
-          = @confirmation_params["confirmation"]["response_description"]
+          = @backer.payment_choice
       .review-wrapper
         .review-info
           #review_text

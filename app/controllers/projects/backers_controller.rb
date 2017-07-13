@@ -29,14 +29,6 @@ class Projects::BackersController < ApplicationController
   def show
     @title = t('projects.backers.show.title')
     session[:thank_you_backer_id] = nil
-    if @backer.payment_method == "Bancard"
-      Bancard.sandbox!
-      gateway = Bancard::Gateway.new(public_key: ::Configuration[:bancard_public], private_key: ::Configuration[:bancard_private])
-      confirmationResponse = gateway.confirmation({
-          shop_process_id: @backer.id
-      })
-      @confirmation_params = confirmationResponse.params
-    end
   end
 
   def new

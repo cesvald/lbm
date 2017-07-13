@@ -60,8 +60,10 @@ class Engines::BancardController < Engines::BaseController
     def confirm
         puts "The backer id to process is " + params["operation"]["shop_process_id"].to_s
         backer = Backer.find params["operation"]["shop_process_id"]
-        backer.update_attribute :payment_id, params["operation"]["ticket_number"].to_s
-        backer.update_attribute :payment_method, 'Bancard'
+        backer.payment_id = params["operation"]["ticket_number"].to_s
+        backer.payment_method = 'Bancard'
+        backer.payment_choice = params["operation"]["response_description"]
+        backer.save
         puts "Bancard confirmation for backer " + backer.id.to_s
         puts "Bancard response_code = " + params["operation"]["response_code"]
         puts "Bancard response description = " + params["operation"]["response_description"]
