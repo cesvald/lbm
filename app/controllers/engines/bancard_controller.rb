@@ -7,7 +7,7 @@ class Engines::BancardController < Engines::BaseController
         backer = current_user.backs.not_confirmed.find params[:id]
         if backer
             backer.update_attribute :payment_method, 'Bancard'
-            Bancard.sandbox!
+            Bancard.sandbox! if dev_environment? || test_environment?
             gateway = Bancard::Gateway.new(public_key: ::Configuration[:bancard_public], private_key: ::Configuration[:bancard_private])
             buyResponse = gateway.single_buy({
                 shop_process_id: backer.id,
