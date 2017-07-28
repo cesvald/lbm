@@ -12,8 +12,12 @@ class Channels::Adm::ProjectsController < Adm::BaseController
 
 
   before_filter do
-    @channel        =  Channel.find_by_permalink!(request.subdomain.to_s)
-    @total_projects =  @channel.projects.size 
+    if dev_environment?
+      @channel =  Channel.find_by_permalink!('tonces')
+    else
+      @channel        =  Channel.find_by_permalink!(request.subdomain.to_s)
+    end
+    @total_projects =  @channel.projects.size
   end
 
   [:approve, :reject, :push_to_draft].each do |name|

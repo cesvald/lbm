@@ -111,16 +111,10 @@ class Ability
       can :manage, :iniciatives do |iniciative|
         current_user.channels.exists?(iniciative.financial_channel.channel)
       end
-    end
-
-    # A trustee cannot access the adm/ path
-    # He can only do this if he is an admin too.
-    case options[:namespace]
-      when "Adm"
-        if current_user.trustee? && !current_user.admin?
-          cannot :access, :all
-        end
-      else
+      
+      can :manage, :backers do |backer|
+        Backer.joins(project: [:channels]).where("coalesce(channels.id IN (?), true)", current_user.channels.map{|p| p.id })
+      end
     end
     
     # Financial Channel authorization

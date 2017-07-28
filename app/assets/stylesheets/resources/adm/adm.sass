@@ -1,4 +1,4 @@
-body[data-namespace="adm"]
+body[data-namespace="adm"], body[data-namespace="channels_adm"]
   width: auto
   overflow-x: scroll  
   [data-controller-class="adm::backerscontroller"][data-action="index"],
@@ -11,7 +11,9 @@ body[data-namespace="adm"]
   [data-controller-class="adm::channelscontroller"][data-action="new"],
   [data-controller-class="adm::channelscontroller"][data-action="edit"],
   [data-controller-class="adm::iniciativescontroller"][data-action="index"],
-  [data-controller-class="channels::adm::projectscontroller"][data-action="index"]
+  [data-controller-class="channels::adm::backerscontroller"][data-action="index"],
+  [data-controller-class="channels::adm::projectscontroller"][data-action="index"],
+  [data-controller-class="channels::adm::iniciativescontroller"][data-action="index"]
     .actions_menu
       float: left
       padding: 10px
