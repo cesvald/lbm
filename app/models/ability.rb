@@ -107,6 +107,10 @@ class Ability
 
       # Nobody can destroy projects.
       cannot :destroy, :projects
+      
+      can :manage, :iniciatives do |iniciative|
+        current_user.channels.exists?(iniciative.financial_channel.channel)
+      end
     end
 
     # A trustee cannot access the adm/ path

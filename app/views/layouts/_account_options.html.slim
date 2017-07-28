@@ -31,13 +31,15 @@
       - for menu, path in Adm::BaseController.menu do
         = link_to path do
           li= menu
-      = link_to  adm_iniciatives_path do
-        li.channel_trustee= "Administrar Iniciativas"
         
     - if current_user.trustee?
       - for menu, path in Channels::Adm::ProjectsController.menu do
         = link_to path do
           li.channel_trustee= menu
     
+    - if current_user.admin? or current_user.trustee?
+      = link_to  adm_iniciatives_path do
+        li.channel_trustee= "Administrar Iniciativas"
+        
     = link_to(destroy_user_session_path, method: :delete) do
       li= t('layouts.user.logout')

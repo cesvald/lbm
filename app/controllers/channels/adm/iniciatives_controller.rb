@@ -1,6 +1,15 @@
 class Channels::Adm::IniciativesController < Adm::BaseController
+    
     has_scope :by_channel, :by_name, :by_contact_email
-		
+	
+	before_filter do
+		if dev_environment?
+    		@channel =  Channel.find_by_permalink!('tonces')
+    	else
+    		@channel =  Channel.find_by_permalink!(request.subdomain.to_s)
+    	end
+    end
+    
 	[:approve].each do |name|
 			define_method name do
 					@iniciative = Iniciative.find params[:id]
@@ -20,7 +29,12 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 		end
 	end
 	
-	def collection
-			@iniciatives = end_of_association_chain.page(params[:page])
-	end
+	protected
+		def begin_of_association_chain
+	      @channel.financial_channel
+	    end
+	
+	    def collection
+	      @iniciatives = apply_scopes(@channel.financial_channel.iniciatives.page(params[:page]))
+	    end
 end

@@ -62,7 +62,7 @@ class Channels::IniciativesController < Channels::BaseController
 		
 		def find_financial_channel
 				if dev_environment?
-					@financial_channel = FinancialChannel.joins(:channel).where("channels.permalink": 'jovenesactivos').first
+					@financial_channel = FinancialChannel.joins(:channel).where("channels.permalink": 'tonces').first
 				else
 					@financial_channel = FinancialChannel.joins(:channel).where("channels.permalink": request.subdomain).first
 				end
