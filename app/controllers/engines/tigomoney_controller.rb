@@ -8,9 +8,9 @@ class Engines::TigomoneyController < Engines::BaseController
         if backer
             backer.update_attribute :payment_method, 'TigoMoney'
             if dev_environment? || test_environment?
-                url = "https://securesandbox.tigo.com/v1/oauth/mfs/payments/tokens"
-            else
                 url = "https://prod.api.tigo.com/v1/oauth/mfs/payments/tokens"
+            else
+                url = "https://securesandbox.tigo.com/v1/oauth/mfs/payments/tokens"
             end
             headers_params = {"Content-Type" => "application/x-www-form-urlencoded", Authorization => "Basic #{Base64.strict_encode64([::Configuration[:tigo_public], ::Configuration[:tigo_private]].join(":"))}"}
             
