@@ -1,6 +1,4 @@
 # -*- encoding : utf-8 -*-
-require 'uservoice_sso'
-
 class ApplicationController < ActionController::Base
   layout :use_catarse_boostrap
   protect_from_forgery
@@ -21,6 +19,8 @@ class ApplicationController < ActionController::Base
   helper_method :namespace, :fb_admins, :render_facebook_sdk, :render_facebook_like, :render_twitter, :display_uservoice_sso, :blog_posts, :embedded_svg, :inside_channel?, :test_environment?, :dev_environment?, :to_usd, :to_cop, :departments, :allowed_engine_by_currency
   
   before_filter :set_locale
+  before_filter :redirect_environment
+  
   #before_filter :force_http
 
   # TODO: Change this way to get the opendata
@@ -62,6 +62,10 @@ class ApplicationController < ActionController::Base
   
   def dev_environment?
     request.original_url.include?('lbm-cesvald')
+  end
+  
+  def redirect_environment
+    redirect_to "http://littlebigmoney.org/yodigosi" if request.original_url.include?('yodigosi.org')
   end
   
   def to_usd(amount)

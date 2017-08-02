@@ -358,7 +358,7 @@ es:
       backer:
         credits: "Tienes <strong>%{credits}</strong> en créditos y puedes apoyar hasta este valor sim necesitae realizar un nuevo pago."
         value_usd: "Tú escoges el valor, a partir de 25.000 COP ( %{minimum_usd} USD ) está genial!"
-        value: "Tú escoges el valor, a partir de %{minimum_amount} %{currency} está genial!"
+        value: "Tú escoges el valor, a partir de %{minimum_amount} está genial!"
       project:
         video_url_edit: "Pega aquí la URL de tu video de Vimeo o Youtube."
         image: "En caso de no tener un video puedes subir una imagen que represente tu proyecto"

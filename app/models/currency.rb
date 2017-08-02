@@ -4,7 +4,7 @@ class Currency < ActiveRecord::Base
 	attr_accessible :code, :minimum_amount
 	
 	def display_minimum_amount
-		number_to_currency minimum_amount, unit: code, precision: 1, delimiter: '.'
+		number_to_currency minimum_amount, unit: code, precision: 0, delimiter: '.'
 	end
 	
 	def to_s

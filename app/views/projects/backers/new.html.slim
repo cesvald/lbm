@@ -36,8 +36,9 @@
               span#value-hint = t('formtastic.hints.backer.value_usd', minimum_usd: to_usd(25000))
               p#converted-value
             - else
-              span#value-hint = t('formtastic.hints.backer.value', minimum_amount: @project.currency.minimum_amount, currency: @project.currency)
-        #rewards-title= t('projects.form.rewards_title')
-        #rewards.centered_page_width
+              span#value-hint = t('formtastic.hints.backer.value', minimum_amount: @project.currency.display_minimum_amount)
+        #rewards-title class=("invisible" if @rewards.count == 1)
+          = t('projects.form.rewards_title')
+        #rewards.centered_page_width class=("no-height invisible" if @rewards.count == 1)
           = render partial:'rewards/reward', collection: @rewards
         = form.submit t('projects.backers.new.continue'), class:'lbm-button', disabled: true, id: 'backer-submit'
