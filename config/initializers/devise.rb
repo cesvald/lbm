@@ -210,19 +210,15 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  if Rails.env.test?
-    # We depend on facebook provider for the test env
-    # As the test database is always empty in this stage we just create this fake provider
-    config.omniauth 'facebook', 'dummy_key', 'dummy_secret', scope: ''
-  else
-    begin
-      OauthProvider.all.each do |p|
-        config.omniauth p.name, p.key, p.secret, scope: p.scope
-      end 
-    rescue Exception => e
-      puts "problem while using OauthProvider model:\n '#{e.message}'"
-    end
+  
+  begin
+    OauthProvider.all.each do |p|
+      config.omniauth p.name, p.key, p.secret, scope: p.scope
+    end 
+  rescue Exception => e
+    puts "problem while using OauthProvider model:\n '#{e.message}'"
   end
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

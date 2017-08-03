@@ -71,7 +71,7 @@ gem 'initjs'
 # Authentication and Authorization
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'omniauth-facebook', '1.4.0'
+gem 'omniauth-facebook'
 gem 'devise'
 gem 'ezcrypto'
 
