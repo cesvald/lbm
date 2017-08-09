@@ -1,0 +1,5 @@
+- backer = @notification.backer
+
+= t('notifications.adm_deposit_payment.text_html', user_email:backer.user.email, user_name: backer.user.display_name, project_link: link_to(backer.project.name, project_by_slug_url(permalink: backer.project.permalink)), backer_value: backer.display_value, backer_id: backer.id)
+
+= render "email_footer"

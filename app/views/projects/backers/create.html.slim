@@ -9,7 +9,15 @@
     .bootstrap-twitter#close-dialog-wrapper
       span#close-giftcard-form.badge
         | X
-
+  #depositopyg-form.dialog-content
+    .bootstrap-twitter#close-dialog-wrapper
+      span#close-depositopyg-form.badge
+        | X
+    br
+    p.text= t('projects.backers.new.depositopyg.information', backer_id: @backer.id).html_safe
+    br
+    br
+    = link_to t('projects.backers.new.depositopyg.identification_code'), respond_engines_depositopyg_path(@backer), class: "lbm-button"
 #page_content
   .container
     #project_review data-thank-you-path=project_backer_path(project_id: @project.id, id: @backer.id)

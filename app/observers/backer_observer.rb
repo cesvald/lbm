@@ -39,6 +39,28 @@ class BackerObserver < ActiveRecord::Observer
       end
     end
 
+    if backer.payment_method == 'Depósito PYG' && backer.pending?
+      Notification.create_notification_once(:deposit_identification_code,
+        backer.user,
+        {backer_id: backer.id},
+        backer: backer,
+        project_name: backer.project.name)
+      
+      Notification.create_notification_once(:adm_deposit_payment,
+        User.where(email:Configuration[:email_projects]).first,
+        {backer_id: backer.id},
+        backer: backer,
+        project_name: backer.project.name)
+      
+      backer.project.channel_trustees.each do |trustee|
+        Notification.create_notification_once(:adm_deposit_payment,
+          trustee,
+          {backer_id: backer.id},
+          backer: backer,
+          project_name: backer.project.name)
+      end
+    end
+    
     unless backer.user.have_address?
       backer.user.address_street = backer.address_street
       backer.user.address_number = backer.address_number

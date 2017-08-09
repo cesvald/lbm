@@ -704,6 +704,9 @@ es:
           answer_3_html: "Si! recibirás de vuelta el 100% de lo que pagaste en forma de créditos para apoyar otros proyectos de LittleBigMoney."
           answer_4_html: "No hay problema! Solo tienes que entrar a la pestaña %{link}, dentro de los 60 días después de tu apoyo y solicitar una devolución de cargo. Si pagaste con tarjeta de crédito, se hará el reembolso en la próxima factura. El costo de esta transacción será cargado a tu tarjeta de crédito."
           answer_5_html: "Cuando tu recompensa este lista, %{link} vamos a contactarte para enviarla o entregarla."
+        depositopyg:
+          information: "También podés donar a los emprendimientos de estas 100 mujeres a través de un depósito en nuestra cuenta bancaria. Los datos son: <br><br><b>Razón Social: </b> Fundación Capital – Fundak <br><b>RUC: </b>80094789-4<br><b>Banco: </b>Visión Banco<br><b>Tipo de cuenta: </b>Caja de ahorro<br><b>Moneda: </b>Guaraníes<br><b>Número de cuenta: </b>6140358<br><br>Las donaciones hechas por este medio, se reflejarán en la plataforma LBM cada viernes antes de las 20.00 hs; siempre y cuando nuestro banco nos confirme el depósito.<br><br> Para pagar por este medio solicitá el código de identificación de la donación y envialo en el campo de notas al momento de hacer la donación. Así podremos reflejar la donación en tu cuenta de LBM."
+          identification_code: "Solicitar código de identificación"
       create:
         brazil_address_title: "Completa los espacios si la transacción fue realizada en Colombia"
         credits_notice_html: "Esta colaboración será pagada con tus créditos. Después de la confirmación recibirás <strong>%{credits}</strong> en créditos para apoyar otros proyectos."

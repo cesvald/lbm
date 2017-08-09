@@ -480,6 +480,10 @@ class Project < ActiveRecord::Base
     iniciative.present?
   end
   
+  def channel_trustees
+    User.joins(channels: :projects).where('projects.id = ?', id)
+  end
+  
   private
   def self.get_routes
     routes = Rails.application.routes.routes.map do |r|

@@ -69,8 +69,6 @@ class Engines::BancardController < Engines::BaseController
         puts "Bancard response description = " + params["operation"]["response_description"]
         if params["operation"]["response_code"] == "00"
             backer.confirm!
-        else
-            backer.deny!
         end
         render json: {success: true}
     rescue Exception => e

@@ -1,3 +1,6 @@
+/* global $ */
+/* global CATARSE */
+/* global Backbone */
 CATARSE.ReviewForm = Backbone.View.extend({
   el: '#review_form',
 
@@ -253,6 +256,8 @@ CATARSE.BackersCreateView = Backbone.View.extend({
   events:{
     'click #gift-card-btn' : 'openGiftCardForm',
     'click #close-giftcard-form' : 'closeGiftCardForm',
+    'click #depositopyg-btn' : 'openDepositopygForm',
+    'click #close-depositopyg-form' : 'closeDepositopygForm',
     'click #catarse_lbm_gift_cards_form #accept_terms' : 'changeSubmitAvailability',
     'click #close-anonymous-warning': 'closeAnonymousWarning',
     'click #accept-anonymous-warning' : 'acceptAnonymousWarning',
@@ -281,6 +286,17 @@ CATARSE.BackersCreateView = Backbone.View.extend({
     });
   },
 
+  openDepositopygForm: function() {
+    $('#depositopyg-form').show();
+    $('#lbm-dialog-transparency').fadeIn();
+  },
+  
+  closeDepositopygForm: function(){
+    $('#lbm-dialog-transparency').fadeOut(function(){
+      $('#depositopyg-form').hide();
+    });
+  },
+  
   closeAnonymousWarning: function(){
     $('#lbm-dialog-transparency').fadeOut(function(){
       $('#anonymous-warning').hide();
@@ -330,4 +346,4 @@ CATARSE.BackersCreateView = Backbone.View.extend({
       });
     });
   }
-})
+}) 

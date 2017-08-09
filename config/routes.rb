@@ -49,6 +49,13 @@ Catarse::Application.routes.draw do
         match :respond
       end
     end
+    
+    resources :depositopyg, only: [] do
+      member do
+        get :review
+        get :respond
+      end
+    end
   end
   
   post '/mercadopago/notification', to: 'mercadopago#notification', as: :mercadopago_notification

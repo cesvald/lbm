@@ -82,7 +82,7 @@ class ApplicationController < ActionController::Base
     if currency == "COP"
       return ["paypal", "lbm_gift_cards", "payulatam"].include?(engine_name)
     elsif currency == "PYG"
-      return ["bancard", "tigomoney"].include?(engine_name)
+      return ["bancard", "tigomoney", "depositopyg"].include?(engine_name)
     else
       return false
     end
