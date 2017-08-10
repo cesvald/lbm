@@ -65,7 +65,7 @@ class ApplicationController < ActionController::Base
   end
   
   def redirect_environment
-    redirect_to "http://littlebigmoney.org/yodigosi" if request.original_url.include?('yodigosi.org')
+    redirect_to "http://yodigosi.littlebigmoney.org/yodigosi" if request.original_url.include?('yodigosi.org')
   end
   
   def to_usd(amount)

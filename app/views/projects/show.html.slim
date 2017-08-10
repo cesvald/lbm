@@ -188,4 +188,9 @@
       .clearfix
 
     .clearfix
+  
+    - if !@channel.nil? && @channel.banner_bottom_url.present?
+      .banner
+        = image_tag @channel.banner_bottom_url
+      
 = render 'show_embed'
