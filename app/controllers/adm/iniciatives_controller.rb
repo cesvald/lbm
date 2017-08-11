@@ -2,7 +2,7 @@ class Adm::IniciativesController < Adm::BaseController
 		
 		has_scope :by_channel, :by_name, :by_contact_email
 		
-		[:approve].each do |name|
+		[:approve, :reject].each do |name|
 				define_method name do
 						@iniciative = Iniciative.find params[:id]
 						@iniciative.send("#{name.to_s}!")
@@ -22,6 +22,6 @@ class Adm::IniciativesController < Adm::BaseController
 		end
 		
 		def collection
-				@iniciatives = end_of_association_chain.page(params[:page])
+				@iniciatives = end_of_association_chain.order("iniciatives.created_at DESC").page(params[:page])
 		end
 end

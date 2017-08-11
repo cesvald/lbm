@@ -1,0 +1,51 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Iniciativas") do |sheet|
+  sheet.add_row([
+    "ID",
+    "Nombre",
+    "Descripción",
+    "Año de creación de la iniciativa",
+    "Actividades",
+    "Departamento",
+    "Municipio",
+    "Otros Municipios",
+    "Número de Participantes",
+    "Zona",
+    "Número de Mujeres",
+    "Edad Promedio de los participantes",
+    "Número de Beneficiados",
+    "Web Url",
+    "Facebook Url",
+    "Blog Url",
+    "Video Url",
+    "Nombre de Contacto",
+    "Email de Contacto",
+    "Teléfono de Contacto",
+    "Estado"
+  ])
+  @iniciatives.each do |iniciative|
+    sheet.add_row([
+      iniciative.id,
+      iniciative.name,
+      iniciative.description,
+      iniciative.year,
+      iniciative.activities,
+      iniciative.department,
+      iniciative.municipality,
+      iniciative.other_municipality,
+      iniciative.participants_count,
+      iniciative.zone,
+      iniciative.women_count,
+      iniciative.average_age,
+      iniciative.benefited_count,
+      iniciative.web_url,
+      iniciative.facebook_url,
+      iniciative.blog_url,
+      iniciative.video_url,
+      iniciative.contact_name,
+      iniciative.contact_email,
+      iniciative.contact_phone,
+      iniciative.state,
+    ])
+  end
+end

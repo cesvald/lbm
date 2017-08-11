@@ -10,7 +10,7 @@ class Channels::Adm::IniciativesController < Adm::BaseController
     	end
     end
     
-	[:approve].each do |name|
+	[:approve, :reject].each do |name|
 			define_method name do
 					@iniciative = Iniciative.find params[:id]
 					@iniciative.send("#{name.to_s}!")
@@ -35,6 +35,6 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 	    end
 	
 	    def collection
-	      @iniciatives = apply_scopes(@channel.financial_channel.iniciatives.page(params[:page]))
+	      @iniciatives = apply_scopes(@channel.financial_channel.iniciatives.order("iniciatives.created_at DESC").page(params[:page]))
 	    end
 end

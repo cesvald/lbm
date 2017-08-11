@@ -29,12 +29,17 @@ class Iniciative < ActiveRecord::Base
   state_machine :state, initial: :draft do
     state :draft, value: 'draft'
 		state :approved, value: 'approved'
+		state :rejected, value: 'rejected'
 		state :confirmed, value: 'confirmed'
 		
 		event :approve do
 			transition :draft => :approved
 		end
 
+    event :reject do
+      transition :draft => :rejected
+    end
+    
 		event :confirm do
 			transition :approved => :confirmed
 		end

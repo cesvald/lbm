@@ -69,7 +69,7 @@ Catarse::Application.routes.draw do
   end
 
   # Channels
-  constraints subdomain: /^(?!lbm-cesvald|www|secure|test|local)(\w+)/ do
+  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
     namespace :channels, path: '' do
       namespace :adm do
         resources :projects, only: [ :index, :update] do
@@ -79,7 +79,13 @@ Catarse::Application.routes.draw do
             put 'push_to_draft'
           end
         end
-        resources :iniciatives
+        resources :iniciatives do
+          member do
+            put 'approve'
+            put 'reject'
+          end
+        end
+        
         resources :backers
       end
       get '/', to: 'profiles#show', as: :profile
@@ -226,6 +232,7 @@ Catarse::Application.routes.draw do
     resources :iniciatives do
       member do
         put 'approve'
+        put 'reject'
       end
     end
     resources :channels, except: [ :show ] do

@@ -1,0 +1,83 @@
+.container
+    .row
+        .col-md-8.col-md-offset-2
+        	h4
+        		= @iniciative.name
+        		span.subtitle= ", un proyecto en"
+        		span.category= @iniciative.category
+    		.main-image
+    			.row
+    				.col-md-6
+    					= image_tag @iniciative.main_image, class: "main-image"
+    		.section
+    			p
+    				span.modal-label Año de creación:
+    				span.answer
+    					= @iniciative.year
+    			p
+    				span.modal-label Ubicación:
+    				span.answer
+    					= "#{@iniciative.municipality} - #{@iniciative.department}"
+    			p
+    				span.modal-label Opera en otros municipios como:
+    				span.answer
+    					= @iniciative.other_municipality
+    			p
+    				span.modal-label ¿Zona urbana o rural?
+    				span.answer
+    					= @iniciative.zone
+    			p
+    				span.modal-label ¿Cuántos participantes tiene la iniciativa?:
+    				span.answer
+    					= @iniciative.participants_count
+    			p
+    				span.modal-label De los participantes de la iniciativa, ¿cuántas mujeres participan?
+    				span.answer
+    					= @iniciative.women_count
+    			p
+    				span.modal-label De los participantes de la iniciativa, ¿cuántos pertenecen a grupos étnicos y/o afrocolombianos?
+    				span.answer
+    					= @iniciative.ethnic_count
+    			p
+    				span.modal-label ¿Cuál es el promedio de edad de los participantes?
+    				span.answer
+    					= @iniciative.participants_count
+    			p
+    				span.modal-label ¿A cuántas personas benefician con su labor?
+    				span.answer
+    					= @iniciative.benefited_count
+    		.section
+    			h3 Descripción
+    			p
+    				= @iniciative.description
+    		.section
+    			h3 Actividades que realiza
+    			p
+    				= @iniciative.activities
+    		.section
+    			p
+    				span.modal-label Página Web
+    				span.answer
+    					= @iniciative.web_url
+    			p
+    				span.modal-label Blog
+    				span.answer
+    					= @iniciative.blog_url
+    			p
+    				span.modal-label Facebook
+    				span.answer
+    					= @iniciative.facebook_url
+    	
+    		.section
+    			p
+    				span.modal-label Nombre de Contacto
+    				span.answer
+    					= @iniciative.contact_name
+    			p
+    				span.modal-label Email de Contacto
+    				span.answer
+    					= @iniciative.contact_email
+    			p
+    				span.modal-label Teléfono de Contacto
+    				span.answer
+    					= @iniciative.contact_phone
