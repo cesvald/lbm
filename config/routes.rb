@@ -69,7 +69,7 @@ Catarse::Application.routes.draw do
   end
 
   # Channels
-  constraints subdomain: /^(?!lbm-cesvald|www|secure|test|local)(\w+)/ do
+  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
     namespace :channels, path: '' do
       namespace :adm do
         resources :projects, only: [ :index, :update] do
@@ -83,6 +83,9 @@ Catarse::Application.routes.draw do
           member do
             put 'approve'
             put 'reject'
+          end
+          collection do
+            post 'upload'
           end
         end
         

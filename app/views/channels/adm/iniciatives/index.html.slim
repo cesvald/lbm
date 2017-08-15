@@ -26,7 +26,18 @@
 					.bootstrap-twitter.input
 						.submit
 						  = link_to "Descargar Excel", adm_iniciatives_path({format: "xlsx"}.merge(params))
-
+		
+		
+		br
+		br
+		
+		- if current_user.admin?
+			h3 Subir Iniciativas
+			= form_tag upload_channels_adm_iniciatives_path, method: :post, multipart: true do
+				= file_field_tag :file
+				= submit_tag "Subir Iniciativas"
+		
+		
 		.data-table
 			= paginate @iniciatives
 			br

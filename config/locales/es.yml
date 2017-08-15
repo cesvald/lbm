@@ -497,6 +497,7 @@ es:
         rural: Rural
         urban: Urbana
         rural_and_urban: Ambas
+        both: Ambas
         individual: Individual
         collective: Colectiva
   found_plural: Encontrados
