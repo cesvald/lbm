@@ -31,10 +31,9 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 	
 	def upload
 		require 'csv'
-		require 'open-uri'
 		excel = params[:file]
 			puts 'INICIO ------------------------:   '
-			CSV.foreach(excel.path, :headers => true, :col_sep => ';', encoding:'iso-8859-1:utf-8') do |row|
+			CSV.foreach(excel.path, :headers => true, :col_sep => ';', encoding:'ISO-8859-1') do |row|
 			@iniciative = Iniciative.new()
 			@iniciative.name = row[0]
 			puts 'Iniciativa con nombre: ' + row[0]
@@ -68,11 +67,11 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 				@iniciative.contact_phone = row["TelefonoContacto"]
 				@iniciative.state = (row["Estado"] == "Aprobada" ? "approved" : "rejected")
 				@iniciative.financial_channel_id = @channel.financial_channel.id
+				@iniciative.imported = true
 				if @iniciative.save
 					puts "Iniciativa Guardada exitosamente"
 				else
 					puts "Hubo un problema con esta iniciativa: " + @iniciative.errors.full_messages.inspect
-					return false
 				end
 				puts "Fin de iniciativa -----------------------"
 			end

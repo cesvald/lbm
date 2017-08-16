@@ -40,7 +40,7 @@ CATARSE.channels = {
         
         this.setupPhasesSwiper()
         
-        var handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 6, gridSize: 50} } });
+        var handler = Gmaps.build('Google', { markers: { clusterer: { maxZoom: 12, gridSize: 10} } });
         var iniciatives = []
         _.each(gon.iniciatives, function(iniciative){
           var summary = "En <span class='iniciative-name'>" + iniciative.name + "</span> somos " + iniciative.participants_count + " emprendedores";
@@ -54,7 +54,7 @@ CATARSE.channels = {
           summary = '<span class="iniciative-wrapper"><p class="summary">' +summary+ '</p><p class="know-more" data-id="' +iniciative.id+ '" data-toggle="modal" data-target="#iniciative-modal"> Saber más de nosotros</p></span>'
           iniciatives.push({lat: iniciative.lat, lng: iniciative.lng, name: iniciative.name, infowindow: summary});
         });
-        handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: false, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false, minZoom: 6}, internal: {id: 'channel-map'}}, function(){
+        handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: false, draggable: true, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false, minZoom: 5}, internal: {id: 'channel-map'}}, function(){
           var markers = handler.addMarkers(iniciatives)
           /*var markers = handler.addMarkers([
             { 
@@ -71,7 +71,7 @@ CATARSE.channels = {
           ]);*/
           handler.map.centerOn({lat: 4.165016, lng: -72.901835});
         });
-        handler.getMap().setZoom(5);
+        handler.getMap().setZoom(6);
       },
 
       openIniciative: function(event){
