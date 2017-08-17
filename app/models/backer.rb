@@ -499,5 +499,9 @@ class Backer < ActiveRecord::Base
   def payer_email
     self.user.email
   end
-
+  
+  def terms_link
+    project.channels.empty? ? I18n.t('footer.links.terms_link') : project.channels.first.default_terms_link
+  end
+  
 end

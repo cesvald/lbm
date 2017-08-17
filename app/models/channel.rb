@@ -74,4 +74,8 @@ class Channel < ActiveRecord::Base
   def financial?
     financial_channel.present?
   end
+  
+  def default_terms_link
+    terms_link.nil? ? I18n.t('footer.links.terms_link') : terms_link
+  end
 end

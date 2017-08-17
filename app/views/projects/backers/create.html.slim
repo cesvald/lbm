@@ -85,7 +85,7 @@
               = label_tag 'anonymous', t('formtastic.labels.backer.anonymous'), class: 'inline'
             .fieldset.accept_terms
               = check_box_tag 'accept'
-              = label_tag 'accept', t('accept_terms_html', link: link_to(t('terms'), t('footer.links.terms_link'), target: :_blank)), class: 'inline'
+              = label_tag 'accept', t('accept_terms_html', link: link_to(t('terms'), @backer.terms_link, target: :_blank)), class: 'inline'
             - if @backer.credits
               = form.actions do
                 .bootstrap-twitter
