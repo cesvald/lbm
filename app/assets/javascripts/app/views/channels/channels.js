@@ -52,7 +52,7 @@ CATARSE.channels = {
           }
           summary += " Estamos ubicados en " + iniciative.municipality + ", " + iniciative.department + " y beneficiamos a más de " + iniciative.benefited_count + " personas de la localidad";
           summary = '<span class="iniciative-wrapper"><p class="summary">' +summary+ '</p><p class="know-more" data-id="' +iniciative.id+ '" data-toggle="modal" data-target="#iniciative-modal"> Saber más de nosotros</p></span>'
-          iniciatives.push({lat: iniciative.lat, lng: iniciative.lng, name: iniciative.name, infowindow: summary});
+          iniciatives.push({lat: iniciative.lat, lng: iniciative.lng, name: iniciative.name, infowindow: summary, picture:{url:iniciative.image, width: 29, height: 35}});
         });
         handler.buildMap({ provider: {scrollwheel: false, navigationControl: false, mapTypeControl: false, scaleControl: true, draggable: true, streetViewControl: false, scrollwheel: false, zoomControl: true, disableDoubleClickZoom: true, overviewMapControl: false, minZoom: 5}, internal: {id: 'channel-map'}}, function(){
           var markers = handler.addMarkers(iniciatives)
