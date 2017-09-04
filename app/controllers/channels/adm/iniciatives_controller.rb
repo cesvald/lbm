@@ -78,6 +78,50 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 		end
 	end
 	
+	def update_upload
+		require 'csv'
+		excel = params[:file]
+			puts 'INICIO ------------------------:   '
+			CSV.foreach(excel.path, :headers => true, :col_sep => ';', encoding:'ISO-8859-1') do |row|
+			@iniciative = Iniciative.where(name: row[0]).first
+			if @iniciative
+				puts 'Iniciativa con nombre: ' + row[0] + ' encontrada'
+				
+				@iniciative.ethnic_count = row["NumEtnicos"] if row["NumEtnicos"]
+				@iniciative.ethnic_group = row["GrupoPoblacional"] if row["NumEtnicos"]
+				@iniciative.description = row["Descripcion"]
+				@iniciative.year = row["Anio"]
+				@iniciative.activities = row["Actividades"]
+				@iniciative.department = row["Departamento"]
+				@iniciative.municipality = row["Municipio"]
+				@iniciative.other_municipality = row["OtroMunicipio"]
+				@iniciative.participants_count = row["NumParticipantes"]
+				@iniciative.zone = (row["RuralOUrbana"] == "Ambas" ? "both" : (row["RuralOUrbana"] == "Rural" ? "rural" : "urban"))
+				@iniciative.women_count = row["NumMujeres"]
+				@iniciative.average_age = row["PromedioEdad"]
+				@iniciative.benefited_count = row["PersonasImpacto"]
+				@iniciative.web_url = row["PaginaWeb"]
+				@iniciative.facebook_url = row["Facebook"]
+				@iniciative.blog_url = row["Blog"]
+				@iniciative.video_url = row["URLVideo"]
+				@iniciative.contact_name = row["NombreContacto"]
+				@iniciative.contact_email = row["CorreoContacto"]
+				@iniciative.contact_phone = row["TelefonoContacto"]
+				@iniciative.state = (row["Estado"] == "Aprobada" ? "approved" : "rejected")
+				@iniciative.financial_channel_id = @channel.financial_channel.id
+				@iniciative.imported = true
+				if @iniciative.save
+					puts "Iniciativa Actualizada exitosamente"
+				else
+					puts "Hubo un problema con esta iniciativa: " + @iniciative.errors.full_messages.inspect
+				end
+			else
+				puts "Iniciaiva con nombre " + row[0] + " no existe"
+			end
+			puts "Fin de iniciativa -----------------------"
+		end
+	end
+	
 	protected
 	def begin_of_association_chain
 		@channel.financial_channel

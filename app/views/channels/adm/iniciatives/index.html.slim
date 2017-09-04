@@ -36,7 +36,11 @@
 			= form_tag upload_channels_adm_iniciatives_path, method: :post, multipart: true do
 				= file_field_tag :file
 				= submit_tag "Subir Iniciativas"
-		
+			
+			h3 Actualizar Iniciativas
+			= form_tag update_upload_channels_adm_iniciatives_path, method: :post, multipart: true do
+				= file_field_tag :file
+				= submit_tag "Subir Iniciativas"
 		
 		.data-table
 			= paginate @iniciatives

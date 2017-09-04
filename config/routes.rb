@@ -86,6 +86,7 @@ Catarse::Application.routes.draw do
           end
           collection do
             post 'upload'
+            post 'update_upload'
           end
         end
         
