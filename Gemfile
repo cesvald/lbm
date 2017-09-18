@@ -103,10 +103,16 @@ gem 'video_info', '>= 1.1.1'
 gem 'enumerate_it'
 gem 'httparty', '~> 0.6.1' # this version is required by moip gem, otherwise payment confirmation will break
 gem 'nokogiri'
-gem 'axlsx_rails', '>= 0.4.0'
+
 gem 'test-unit'
 gem 'jbuilder'
 gem 'gon' # from controller to js
+# docx replace template
+gem 'rubyzip' # will load new rubyzip version
+gem 'axlsx_rails', '>= 0.4.0'
+gem 'docx_replace', git: 'git://github.com/cesvald/replace.git'
+gem 'zip-zip' # will load compatibility for old rubyzip API.
+
 
 # apis
 gem 'gmaps4rails'

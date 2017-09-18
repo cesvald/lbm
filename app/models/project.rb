@@ -18,7 +18,7 @@ class Project < ActiveRecord::Base
   mount_uploader :banking_data_file, DocumentUploader
 
   delegate :display_status, :display_progress, :display_image, :display_icon_category, :display_expires_at,
-    :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :display_mark, :progress_bar, :successful_flag,
+    :display_pledged, :display_goal, :remaining_days, :display_video_embed_url, :display_video_thumbnail, :display_mark, :progress_bar, :successful_flag, :display_earnings, :display_pledged_platform_discount,
     to: :decorator
 
   schema_associations
@@ -482,6 +482,17 @@ class Project < ActiveRecord::Base
   
   def channel_trustees
     User.joins(channels: :projects).where('projects.id = ?', id)
+  end
+  
+  def final_pledge
+  end
+  
+  def pledged_platform_discount
+    pledged * actual_platform_fee
+  end
+  
+  def earnings
+    pledged - (pledged_platform_discount)
   end
   
   private

@@ -60,6 +60,32 @@ class Adm::ProjectsController < Adm::BaseController
     redirect_to adm_projects_path
   end
 
+  def generate_agreement
+    @project = Project.find params[:id]
+    respond_to do |format|
+      format.docx do
+        # Initialize DocxReplace with your template
+        doc = DocxReplace::Doc.new("#{Rails.root}/lib/docx_templates/acuerdo_template.docx", "#{Rails.root}/tmp")
+  
+        # Replace some variables. $var$ convention is used here, but not required.
+        doc.replace("FULLNAME", @project.user.allowed_name, true)
+        doc.replace("CEDULA", @project.user.cpf, true)
+        doc.replace("project", @project.name, true)
+        doc.replace("AMOUNT", @project.display_pledged, true)
+        doc.replace("PERCENT", @project.progress, true)
+        doc.replace("FINALPLEDGE", @project.display_earnings, true)
+        doc.replace("DISCOUNT", @project.display_pledged_platform_discount, true)
+        
+        # Write the document back to a temporary file
+        tmp_file = Tempfile.new('word_tempate', "#{Rails.root}/tmp")
+        doc.commit(tmp_file.path)
+  
+        # Respond to the request by sending the temp file
+        send_file tmp_file.path, filename: "Acuerdo #{@project.name}.docx", disposition: 'attachment'
+      end
+    end
+  end
+  
   def collection
     @projects = end_of_association_chain.not_deleted_projects.page(params[:page])
   end

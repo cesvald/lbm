@@ -288,7 +288,10 @@ class User < ActiveRecord::Base
   def fix_twitter_user
     self.twitter.gsub!(/@/, '') if self.twitter
   end
-
+  
+  def allowed_name
+    self.full_name.blank?  ? self.name : self.full_name
+  end
   # Returns a Gravatar URL associated with the email parameter, uses local avatar if available
   def gravatar_url
     return unless email

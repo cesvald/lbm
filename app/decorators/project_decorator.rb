@@ -87,6 +87,14 @@ class ProjectDecorator < Draper::Decorator
     number_to_currency source.pledged, unit: source.currency, precision: 0, delimiter: '.'
   end
 
+  def display_pledged_platform_discount
+    number_to_currency source.pledged_platform_discount, unit: source.currency, precision: 0, delimiter: '.'
+  end
+  
+  def display_earnings
+    number_to_currency source.earnings, unit: source.currency, precision: 0, delimiter: '.'
+  end
+  
   def display_goal
     number_to_currency source.goal, unit: source.currency, precision: 0, delimiter: '.'
   end

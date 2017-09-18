@@ -43,6 +43,12 @@ GIT
       hashie
 
 GIT
+  remote: git://github.com/cesvald/replace.git
+  revision: 7ce45317b5024ab29a6ac44a96fdac2c5f10fdc7
+  specs:
+    docx_replace (1.2.0)
+
+GIT
   remote: git://github.com/ncri/validation_reflection.git
   revision: 60320e6beb088808fd625a8d958dbd0d2661d494
   specs:
@@ -520,6 +526,8 @@ GEM
     weekdays (1.0.2)
     xpath (1.0.0)
       nokogiri (~> 1.3)
+    zip-zip (0.3)
+      rubyzip (>= 1.0.0)
 
 PLATFORMS
   ruby
@@ -548,6 +556,7 @@ DEPENDENCIES
   curb (= 0.9.1)
   database_cleaner
   devise
+  docx_replace!
   draper
   enumerate_it
   ezcrypto
@@ -595,6 +604,7 @@ DEPENDENCIES
   rmagick
   routing-filter
   rspec-rails
+  rubyzip
   sass-rails
   schema_associations
   schema_plus
@@ -613,6 +623,7 @@ DEPENDENCIES
   video_info (>= 1.1.1)
   web_translate_it
   weekdays
+  zip-zip
 
 RUBY VERSION
    ruby 2.2.4p230

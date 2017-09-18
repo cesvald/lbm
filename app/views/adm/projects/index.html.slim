@@ -128,8 +128,11 @@
                         - if project.successful? || project.online? || project.partial_successful?
                           li
                             = link_to documents_project_path(project), target: :_blank do
-                                i.icon-ok
-                                = t("projects.show.download_all_documents")
+                              i.icon-ok
+                              = t("projects.show.download_all_documents")
+                            = link_to generate_agreement_adm_project_path({format: "docx", id: project.id}) do
+                              i.icon-ok
+                              = "Generar Doc. Acuerdo Emprendedor"
                         - if project.online? && (project.reached_goal? || project.reached_partial_goal?)
                           li
                             = link_to finish_adm_project_path(project), method: :put  do
