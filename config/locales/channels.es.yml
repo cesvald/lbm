@@ -24,6 +24,9 @@ es:
     back_to_channel: "Regresar al Canal"
     adm:
       menu: "Moderación de Canal"
+      iniciatives:
+        form:
+          submit: "Actualizar Iniciativa"
     projects:
       send: "Envía tu proyecto"
       see_how_it_works: "Revisa cómo funciona y envía tu proyecto"

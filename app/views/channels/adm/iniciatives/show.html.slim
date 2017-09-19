@@ -1,7 +1,10 @@
 .container
+	br
+	br
+	= link_to "Ver iniciativas", adm_iniciatives_path, class: "btn btn-primary"
     .row
         .col-md-8.col-md-offset-2
-        	h4
+        	h3
         		= @iniciative.name
         		span.subtitle= ", un proyecto en"
         		span.category= @iniciative.category

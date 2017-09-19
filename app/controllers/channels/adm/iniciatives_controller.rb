@@ -29,6 +29,14 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 		end
 	end
 	
+	def edit
+		edit! do |format|
+			format.html do
+				@financial_channel = @channel.financial_channel
+			end
+		end
+	end
+	
 	def upload
 		require 'csv'
 		excel = params[:file]
