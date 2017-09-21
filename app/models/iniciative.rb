@@ -49,6 +49,10 @@ class Iniciative < ActiveRecord::Base
 			transition :approved => :confirmed
 		end
 		
+		event :push_to_draft do
+      transition all => :draft #NOTE: when use 'all' we can't use new hash style ;(
+    end
+    
 		after_transition draft: :approved, do: :after_transition_of_draft_to_approved
 		
 	end

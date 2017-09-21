@@ -83,6 +83,7 @@ Catarse::Application.routes.draw do
           member do
             put 'approve'
             put 'reject'
+            put 'push_to_draft'
           end
           collection do
             post 'upload'

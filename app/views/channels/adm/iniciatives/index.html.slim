@@ -114,6 +114,9 @@
 															= link_to reject_adm_iniciative_path(iniciative), method: :put do
 																i.icon-edit
 																= t('.reject')
+														= link_to push_to_draft_channels_adm_iniciative_path(iniciative), method: :put do
+															i.icon-edit
+															= "Volver a Borrador"
 														= link_to edit_adm_iniciative_path(iniciative), method: :get do
 															i.icon-edit
 															= "Editar"
