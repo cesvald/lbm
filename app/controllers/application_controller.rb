@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
   end
 
   def inside_channel?
-    not (request.subdomain.blank? || request.subdomain == 'lbm-cesvald')
+    not (request.subdomain.blank? || request.subdomain == 'lbm-cesvald' || request.subdomain == 'www' || request.subdomain == 'secure' || request.subdomain == 'test' || request.subdomain == 'local')
     #not (request.subdomain.blank?)
   end
   
