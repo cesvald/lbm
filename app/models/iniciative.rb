@@ -18,7 +18,7 @@ class Iniciative < ActiveRecord::Base
   
   validates_presence_of :name, :description, :year, :activities, :department, :municipality, :participants_count, :zone, :women_count, :average_age, :benefited_count, :contact_name, :contact_email, :financial_channel_id, :contact_phone, :main_image
   
-  validates_uniqueness_of :contact_email
+  validates_uniqueness_of :contact_email, :name
   
   validates_format_of :contact_email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
   

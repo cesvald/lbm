@@ -8,11 +8,9 @@
 					.input
 						= label_tag :by_contact_email, t('activerecord.attributes.iniciative.contact_email')
 						= text_field_tag :by_contact_email, params[:by_contact_email], class: 'lbm-input'
-					br
 					.input
 						= label_tag :by_name, t('activerecord.attributes.iniciative.name')
 						= text_field_tag :by_name, params[:by_name], class: 'lbm-input'
-					br
 					.input
 						= label_tag :by_channel, t('by_channel')
 						= select_tag :by_channel, options_from_collection_for_select(@channels, 'id', 'name', params[:by_channel]), include_blank: true, class: "lbm-select"
@@ -25,22 +23,20 @@
 					br
 					.bootstrap-twitter.input
 						.submit
-						  = link_to "Descargar Excel", adm_iniciatives_path({format: "xlsx"}.merge(params))
+						  = link_to "Descargar Excel", adm_iniciatives_path({format: "xlsx"}.merge(params)), class: "btn btn-primary"
+						  br
+						  br
+						  br
 		
 		
-		br
-		br
-		
-		- if current_user.admin?
-			h3 Subir Iniciativas
+		- if current_user.trustee? || current_user.admin?
+			br
+			br
+			h2 Subir Iniciativas:
 			= form_tag upload_channels_adm_iniciatives_path, method: :post, multipart: true do
 				= file_field_tag :file
-				= submit_tag "Subir Iniciativas"
-			
-			h3 Actualizar Iniciativas
-			= form_tag update_upload_channels_adm_iniciatives_path, method: :post, multipart: true do
-				= file_field_tag :file
-				= submit_tag "Subir Iniciativas"
+				br
+				= submit_tag "Subir Iniciativas", class: "btn btn-primary"
 		
 		.data-table
 			= paginate @iniciatives

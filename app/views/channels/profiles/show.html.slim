@@ -59,28 +59,29 @@
       #channel-map-wrapper
         #channel-map
       = image_tag 'lbm/maps-blue-marker.png', id: "hidden-marker"
-      = render "channels/phases/form"
-      #phases-swiper-supercontainer
-        #phases-swiper-container
-          - there_are_phases = false
-          #phases-swiper.swiper-container
-            .swiper-wrapper
-              - @profile.phases.each do |phase|
-                - there_are_phases = true
-                .swiper-slide.channel-slide
-                  - if can? :update, @profile.financial_channel
-                    = link_to 'X', [:channels, phase], :confirm => 'Estas seguro?', :method => :delete, class: 'delete-action'
-                  p.month-date
-                    = l(phase.started_at, format: "%d")
-                  p.month-year
-                    = l(phase.started_at, format: "%B %Y").titleize
-                  .point-wrapper
-                    .history-point
-                  p.phase-title= phase.title
-                  p.phase-description= phase.description
-          - if there_are_phases 
-            #phases-swiper-button-prev.swiper-button-prev
-            #phases-swiper-button-next.swiper-button-next
+      /
+        = render "channels/phases/form"
+        #phases-swiper-supercontainer
+          #phases-swiper-container
+            - there_are_phases = false
+            #phases-swiper.swiper-container
+              .swiper-wrapper
+                - @profile.phases.each do |phase|
+                  - there_are_phases = true
+                  .swiper-slide.channel-slide
+                    - if can? :update, @profile.financial_channel
+                      = link_to 'X', [:channels, phase], :confirm => 'Estas seguro?', :method => :delete, class: 'delete-action'
+                    p.month-date
+                      = l(phase.started_at, format: "%d")
+                    p.month-year
+                      = l(phase.started_at, format: "%B %Y").titleize
+                    .point-wrapper
+                      .history-point
+                    p.phase-title= phase.title
+                    p.phase-description= phase.description
+            - if there_are_phases 
+              #phases-swiper-button-prev.swiper-button-prev
+              #phases-swiper-button-next.swiper-button-next
     
   - if @profile.group_channels.present?
     .group-channels

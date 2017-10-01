@@ -1,1 +1,11 @@
-= @response
+#page_content
+	.container
+        h1 Resultado de importación
+        .phrase
+            = @user_response.html_safe
+        
+        br
+        =link_to "Volver", adm_iniciatives_path(), class: "lbm-button"
+        br
+        br
+        br

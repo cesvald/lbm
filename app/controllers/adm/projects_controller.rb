@@ -69,12 +69,19 @@ class Adm::ProjectsController < Adm::BaseController
   
         # Replace some variables. $var$ convention is used here, but not required.
         doc.replace("FULLNAME", @project.user.allowed_name, true)
-        doc.replace("CEDULA", @project.user.cpf, true)
+        doc.replace("USERCC", @project.user.cpf, true)
         doc.replace("project", @project.name, true)
         doc.replace("AMOUNT", @project.display_pledged, true)
         doc.replace("PERCENT", @project.progress, true)
         doc.replace("FINALPLEDGE", @project.display_earnings, true)
         doc.replace("DISCOUNT", @project.display_pledged_platform_discount, true)
+        doc.replace("PROJECTSTATE", (@project.successful? ? "totalmente exitoso" : "parcialmente exitoso"))
+        doc.replace("SIGNDATE", l(Date.today, format: "%d días del mes de %B del %Y"))
+        
+        doc.replace("SUBMITDATE", l(Date.today, format: "%d de %B de %Y"), true)
+        doc.replace("PROJECTID", @project.id, true)
+        doc.replace("NUMBACKERS", @project.total_backers, true)
+        doc.replace("CITY", "#{@project.user.address_city.camelcase unless @project.user.address_city.nil?}", true)
         
         # Write the document back to a temporary file
         tmp_file = Tempfile.new('word_tempate', "#{Rails.root}/tmp")
