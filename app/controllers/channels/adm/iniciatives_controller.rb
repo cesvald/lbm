@@ -41,8 +41,8 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 		require 'csv'
 		@user_response = ""
 		excel = params[:file]
-			puts 'INICIO ------------------------:   '
-			CSV.foreach(excel.path, :headers => true, :col_sep => ';', encoding:'ISO-8859-1') do |row|
+		puts 'INICIO ------------------------:   '
+		CSV.foreach(excel.path, :headers => true, :col_sep => ';', encoding:'ISO-8859-1') do |row|
 			iniciative = Iniciative.new()
 			iniciative.name = row[0]
 			if not row[0].nil?

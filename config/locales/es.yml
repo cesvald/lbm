@@ -614,6 +614,7 @@ es:
       display_status:
         reached_goal: "Este proyecto tendrá éxito y recibirá el dinero el %{date}"
         not_reached_goal: "Este proyecto sólo tendrá éxito si se recaudan al menos %{goal} hasta el %{date}"
+        reached_partial_goal: "Este proyecto está siendo financiado parcialmente con éxito y recibirá el dinero el %{date}"
         failed: "No alcanzo la meta de %{goal} antes del %{date} y por lo tanto no fue financiado"
         rejected: "Este proyecto no fue aceptado"
         partial_successful: "Este proyecto fue financiado parcialmente con éxito el %{date}"
