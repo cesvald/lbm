@@ -24,9 +24,9 @@ class Iniciative < ActiveRecord::Base
   
   after_validation :geocode
   
-  scope :by_name, ->(name) { where(name: name) }
+  scope :by_name, ->(name) { where("lower(name) LIKE ?", "%#{name.downcase}%") }
+  scope :by_contact_email, ->(email) { where("lower(contact_email) LIKE ?", "%#{email.downcase}%")  }
   scope :by_channel, ->(channel_id) { joins(:financial_channel).where("financial_channels.channel_id": channel_id) }
-  scope :by_contact_email, ->(email) { where(contact_email: email) }
   scope :approved, -> { where(state: 'approved') }
   
   
