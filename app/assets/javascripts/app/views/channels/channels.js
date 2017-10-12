@@ -170,6 +170,49 @@ CATARSE.channels = {
         }
       }
     }),
+    edit: Backbone.View.extend({
+      el: 'body',
+      events: {
+        'blur #iniciative_municipality': 'findLocation'
+      },
+      findLocation: function(event){
+        var self = this;
+        var address = event.target.value
+        var geocoder = new google.maps.Geocoder();
+        console.log(address + ", " + $('#iniciative_department').val() +  ", Colombia")
+        geocoder.geocode({'address': address + ", " + $('#iniciative_department').val() + ", Colombia"}, function(results, status){
+          if(status == 'ZERO_RESULTS'){
+            geocoder.geocode({'address': $('#iniciative_department').val() + ", Colombia"}, function(results, status){
+              if(status == 'OK'){
+                $('#iniciative_lng').val(self.randomNumber(results[0].geometry.viewport.b.b, results[0].geometry.viewport.b.f))
+                $('#iniciative_lat').val(self.randomNumber(results[0].geometry.viewport.f.b, results[0].geometry.viewport.f.f))
+              }
+            });
+          }
+          else if(status == 'OK'){
+            $('#iniciative_lng').val(self.randomNumber(results[0].geometry.viewport.b.b, results[0].geometry.viewport.b.f))
+            $('#iniciative_lat').val(self.randomNumber(results[0].geometry.viewport.f.b, results[0].geometry.viewport.f.f))
+          }
+        })
+      },
+      randomNumber: function(start, end){
+        if(start < 0 && end < 0){
+          start *= -1
+          end *= -1
+          return -1 * (Math.random() * (start - end) + end)
+        }
+        if(end > 0){
+          return Math.random() * (start - end) + end
+        }
+        else {
+          var random = Math.random() + start
+          if(random < (end * -1)) {
+            random *= Math.floor(Math.random()*2) == 1 ? 1 : -1
+          }
+          return random
+        }
+      }
+    }),
     create: Backbone.View.extend({
       el: 'body',
       events: {
@@ -213,6 +256,7 @@ CATARSE.channels = {
         }
       }
     })
+    
   }
 }
 

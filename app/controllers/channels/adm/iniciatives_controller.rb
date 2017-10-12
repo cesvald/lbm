@@ -17,7 +17,15 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 					redirect_to :back
 			end
 	end
-
+	
+	def update
+		if resource.municipality != params[:iniciative][:municipality] || resource.department != params[:iniciative][:department]
+			params[:iniciative][:lat] = nil
+			params[:iniciative][:lng] = nil
+		end
+		update!
+	end
+	
 	def index
 		index! do |format|
 			format.html do

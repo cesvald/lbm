@@ -125,8 +125,6 @@
           .input-wrapper
             = form.text_field :contact_phone, class: "#{'error' if @iniciative.errors[:contact_phone].present?}"
       = form.hidden_field :financial_channel_id, value: @financial_channel.id
-      = form.hidden_field :lat
-      = form.hidden_field :lng
       
       .clearfix
       .submit
