@@ -55,36 +55,36 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 			iniciative.name = row[0]
 			if not row[0].nil?
 				puts "Iniciativa con nombre: #{row[0]}"
-				@user_response += "<b>#{row[0]}: </b>"
-				iniciative.remote_main_image_url = row["URLImagen"]
-				category_id = Category.where("lower(name_es) = ?", "#{row['Tipo'].downcase unless row['Tipo'].nil?}").pluck("id")
+				@user_response += "<b>#{row[0].rstrip}: </b>"
+				iniciative.remote_main_image_url = row["URLImagen"].rstrip
+				category_id = Category.where("lower(name_es) = ?", "#{row['Tipo'].downcase.rstrip unless row['Tipo'].nil?}").pluck("id")
 				if not category_id.any?
 					puts "La categoría no existe"
 					@user_response += "La categoría #{row["Tipo"]} no existe <br><br>"
 				else
 					puts "La categoría tiene el id " + category_id[0].to_s
 					iniciative.category_id = category_id[0]
-					iniciative.ethnic_count = row["NumEtnicos"]
+					iniciative.ethnic_count = row["NumEtnicos"].rstrip
 					iniciative.plurality = (row["Pluralidad"] == "Colectiva" ? "collective" : "individual")
-					iniciative.ethnic_group = row["GrupoPoblacional"]
+					iniciative.ethnic_group = row["GrupoPoblacional"].rstrip
 					iniciative.description = row["Descripcion"]
-					iniciative.year = row["Anio"]
+					iniciative.year = row["Anio"].rstrip
 					iniciative.activities = row["Actividades"]
-					iniciative.department = row["Departamento"]
-					iniciative.municipality = row["Municipio"]
-					iniciative.other_municipality = row["OtroMunicipio"]
-					iniciative.participants_count = row["NumParticipantes"]
+					iniciative.department = row["Departamento"].rstrip
+					iniciative.municipality = row["Municipio"].rstrip
+					iniciative.other_municipality = row["OtroMunicipio"].rstrip
+					iniciative.participants_count = row["NumParticipantes"].rstrip
 					iniciative.zone = (row["RuralOUrbana"] == "Ambas" ? "both" : (row["RuralOUrbana"] == "Rural" ? "rural" : "urban"))
-					iniciative.women_count = row["NumMujeres"]
-					iniciative.average_age = row["PromedioEdad"]
-					iniciative.benefited_count = row["PersonasImpacto"]
-					iniciative.web_url = row["PaginaWeb"]
-					iniciative.facebook_url = row["Facebook"]
-					iniciative.blog_url = row["Blog"]
-					iniciative.video_url = row["URLVideo"]
-					iniciative.contact_name = row["NombreContacto"]
-					iniciative.contact_email = row["CorreoContacto"]
-					iniciative.contact_phone = row["TelefonoContacto"]
+					iniciative.women_count = row["NumMujeres"].rstrip
+					iniciative.average_age = row["PromedioEdad"].rstrip
+					iniciative.benefited_count = row["PersonasImpacto"].rstrip
+					iniciative.web_url = row["PaginaWeb"].rstrip
+					iniciative.facebook_url = row["Facebook"].rstrip
+					iniciative.blog_url = row["Blog"].rstrip
+					iniciative.video_url = row["URLVideo"].rstrip
+					iniciative.contact_name = row["NombreContacto"].rstrip
+					iniciative.contact_email = row["CorreoContacto"].rstrip
+					iniciative.contact_phone = row["TelefonoContacto"].rstrip
 					iniciative.state = (row["Estado"] == "Aprobada" ? "approved" : "rejected")
 					iniciative.financial_channel_id = @channel.financial_channel.id
 					iniciative.imported = true
