@@ -60,6 +60,7 @@ class Project < ActiveRecord::Base
   scope :not_deleted_projects, ->() { where("projects.state <> 'deleted'") }
   scope :by_progress, ->(progress) { joins(:project_total).where("project_totals.pledged >= projects.goal*?", progress.to_i/100.to_f) }
   scope :by_state, ->(state) { where(state: state) }
+  scope :by_not_state, ->(state) { where('state IS NOT ?', state)  }
   scope :by_channel, ->(channel_id) { where("id IN (SELECT DISTINCT project_id FROM channels_projects WHERE channel_id = #{channel_id})") }
   scope :by_id, ->(id) { where(id: id) }
   scope :by_permalink, ->(p) { where("lower(permalink) = lower(?)", p) }
@@ -76,7 +77,7 @@ class Project < ActiveRecord::Base
       order('projects.created_at desc')
     end
   }
-
+  
   scope :near_of, ->(address_state) { joins(:user).where("lower(users.address_state) = lower(?)", address_state) }
   scope :visible, where("projects.state NOT IN ('draft', 'rejected', 'deleted')")
   scope :visible_or_draft, where("projects.state NOT IN ('rejected', 'deleted')")
@@ -89,6 +90,7 @@ class Project < ActiveRecord::Base
   scope :recent, where("current_timestamp - projects.online_date <= '30 days'::interval")
   scope :successful, where(state: 'successful')
   scope :online, where(state: 'online')
+  scope :launched, where('state <> ? AND state <> ? AND state <> ? AND state <> ?', :draft, :reviewed, :rejected, :deleted)
   scope :partial_successful, where(state: 'partial_successful')
   scope :recommended_for_home, ->{
     includes(:user, :category, :project_total).
@@ -121,6 +123,8 @@ class Project < ActiveRecord::Base
   scope :backed_by, ->(user_id){
     where("id IN (SELECT project_id FROM backers b WHERE b.state = 'confirmed' AND b.user_id = ?)", user_id)
   }
+  
+  scope :created_on_year, ->(year) {  where("EXTRACT(year FROM 'created_at') = ?", year)  }
   
   attr_accessor :accepted_terms, :review_comments, :updated_by
 

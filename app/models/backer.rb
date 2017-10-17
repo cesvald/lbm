@@ -504,4 +504,15 @@ class Backer < ActiveRecord::Base
     project.channels.empty? ? I18n.t('footer.links.terms_link') : project.channels.first.default_terms_link
   end
   
+  def self.total_backers
+    Backer.pluck("COUNT(DISTINCT user_id)")[0]
+  end
+  
+  def self.total_backs_value
+    Backer.pluck("SUM(value)")[0]
+  end
+  
+  def self.average_back
+    Backer.pluck("AVG(value)")[0]
+  end
 end
