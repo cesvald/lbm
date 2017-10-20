@@ -9,7 +9,7 @@
         .col-md-3.col-xs-6
           = form_tag adm_statistics_path, method: :get do
             
-          	= select_tag :year, options_for_select(2013..Date.today.year, params[:year]), class: "form-control"
+          	= select_tag :year, options_for_select(2013..Date.today.year, params[:year]), include_blank: true, class: "form-control"
           	br
           	= submit_tag "Generar Estadísticas", class: "btn btn-primary"
     br
