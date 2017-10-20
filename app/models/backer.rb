@@ -34,7 +34,9 @@ class Backer < ActiveRecord::Base
   scope :not_confirmed, where("backers.state <> 'confirmed'") # used in payment engines
   scope :in_time_to_confirm, ->() { where(state: 'waiting_confirmation') }
   scope :pending_to_refund, ->() { where(state: 'requested_refund') }
-
+  
+  scope :confirmed_on_year, ->(year) {  where("EXTRACT(year FROM confirmed_at) = ?", year)  }
+  
   scope :available_to_count, ->() { where("state in ('confirmed', 'requested_refund', 'refunded')") }
 
   scope :can_cancel, ->() {

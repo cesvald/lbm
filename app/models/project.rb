@@ -124,7 +124,7 @@ class Project < ActiveRecord::Base
     where("id IN (SELECT project_id FROM backers b WHERE b.state = 'confirmed' AND b.user_id = ?)", user_id)
   }
   
-  scope :created_on_year, ->(year) {  where("EXTRACT(year FROM 'created_at') = ?", year)  }
+  scope :created_on_year, ->(year) {  where("EXTRACT(year FROM created_at) = ?", year)  }
   
   attr_accessor :accepted_terms, :review_comments, :updated_by
 

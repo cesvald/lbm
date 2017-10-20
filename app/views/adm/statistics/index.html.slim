@@ -2,73 +2,85 @@
 #page_content
   .container
     
-    h1= t('.title')
-    .data-table
-      .bootstrap-twitter
-        br
-        h1= "Proyectos"
-        table.table.table-striped
-          thead
-            tr
-              th Recibidos
-              th Lanzados
-              th Al Aire
-              th Exitosos
-              th Parcialmente Exitosos
-              th Financiados
-              th No exitosos
-              th Se quedaron en 0
-          tbody
-            tr
-              - projects_count = @projects.count
-              td= projects_count
-              - launched_count = @projects.launched.count
-              td= launched_count
-              - on_air_count = @projects.by_state(:waiting_funds).count + @projects.by_state(:online).count
-              td= on_air_count
-              - successful_count = @projects.successful.count
-              td= successful_count
-              - partial_count = @projects.by_state(:partial_successful).count
-              td= partial_count
-              td= successful_count + partial_count
-              - failed = @projects.by_state(:failed)
-              - failed_count = failed.count
-              td= failed_count
-              - failed_cero_count = failed_count - failed.joins(:project_total).count
-              td= failed_cero_count
-            tr
-              td 100%
-              td= "#{(launched_count.to_f / projects_count * 100).round(2)}%"
-              td= "#{(on_air_count.to_f / launched_count * 100).round(2)}% vs lanzados"
-              td= "#{(successful_count.to_f / launched_count * 100).round(2)}% vs lanzados"
-              td= "#{(partial_count.to_f / launched_count * 100).round(2)}% vs lanzados"
-              td= "#{((successful_count.to_f + partial_count) / launched_count * 100).round(2)}% vs lanzados"
-              td= "#{(failed_count.to_f / launched_count * 100).round(2)}% vs lanzados"
-              td= "#{(failed_cero_count.to_f / launched_count * 100).round(2)}% vs lanzados"
+    h1= "Estadísticas #{params[:year] if params[:year].present? and not params[:year].blank?}"
+    h1 Buscar por año
+    .bootstrap-twitter
+      .row
+        .col-md-3.col-xs-6
+          = form_tag adm_statistics_path, method: :get do
+            
+          	= select_tag :year, options_for_select(2013..Date.today.year, params[:year]), class: "form-control"
+          	br
+          	= submit_tag "Generar Estadísticas", class: "btn btn-primary"
+    br
+    - if @backs.any?
+      .data-table
+        .bootstrap-twitter
+          br
+          h1= "Proyectos"
+          table.table.table-striped
+            thead
+              tr
+                th Recibidos
+                th Lanzados
+                th Al Aire
+                th Exitosos
+                th Parcialmente Exitosos
+                th Financiados
+                th No exitosos
+                th Se quedaron en 0
+            tbody
+              tr
+                - projects_count = @projects.count
+                td= projects_count
+                - launched_count = @projects.launched.count
+                td= launched_count
+                - on_air_count = @projects.by_state(:waiting_funds).count + @projects.by_state(:online).count
+                td= on_air_count
+                - successful_count = @projects.successful.count
+                td= successful_count
+                - partial_count = @projects.by_state(:partial_successful).count
+                td= partial_count
+                td= successful_count + partial_count
+                - failed = @projects.by_state(:failed)
+                - failed_count = failed.count
+                td= failed_count
+                - failed_cero_count = failed_count - failed.joins(:project_total).count
+                td= failed_cero_count
+              tr
+                td 100%
+                td= "#{(launched_count.to_f / projects_count * 100).round(2)}%"
+                td= "#{(on_air_count.to_f / launched_count * 100).round(2)}% vs lanzados"
+                td= "#{(successful_count.to_f / launched_count * 100).round(2)}% vs lanzados"
+                td= "#{(partial_count.to_f / launched_count * 100).round(2)}% vs lanzados"
+                td= "#{((successful_count.to_f + partial_count) / launched_count * 100).round(2)}% vs lanzados"
+                td= "#{(failed_count.to_f / launched_count * 100).round(2)}% vs lanzados"
+                td= "#{(failed_cero_count.to_f / launched_count * 100).round(2)}% vs lanzados"
+      
+      br
+      br
+      .data-table
+        .bootstrap-twitter
+          h1= "Mobilización de Recursos"
+          table.table.table-striped
+            thead
+              tr
+                th Colaboraciones
+                th Colaboradores
+                th Total de colaboraciones
+                th Donación promedio
+                th Promedio recaudo
+            tbody
+              tr
+                td= @backs.count
+                td= @backs.total_backers
+                - total_backs = @backs.total_backs_value
+                td= number_to_currency total_backs, unit: @backs.first.project.currency, precision: 0, delimiter: '.'
+                td= number_to_currency @backs.average_back, unit: @backs.first.project.currency, precision: 0, delimiter: '.'
+                td= number_to_currency (total_backs.to_f / (successful_count + partial_count)).round(2), unit: @backs.first.project.currency, precision: 0, delimiter: '.'
     
-
-    br
-    br
-    .data-table
-      .bootstrap-twitter
-        h1= "Mobilización de Recursos"
-        table.table.table-striped
-          thead
-            tr
-              th Colaboraciones
-              th Colaboradores
-              th Total de colaboraciones
-              th Donación promedio
-              th Promedio recaudo
-          tbody
-            tr
-              td= @backs.count
-              td= @backs.total_backers
-              - total_backs = @backs.total_backs_value
-              td= number_to_currency total_backs, unit: @backs.first.project.currency, precision: 0, delimiter: '.'
-              td= number_to_currency @backs.average_back, unit: @backs.first.project.currency, precision: 0, delimiter: '.'
-              td= number_to_currency (total_backs.to_f / (successful_count + partial_count)).round(2), unit: @backs.first.project.currency, precision: 0, delimiter: '.'
-              
+    - else
+      h3 No hay datos para este año
 
 /*
     .filters

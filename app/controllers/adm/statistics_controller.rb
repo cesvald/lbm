@@ -6,7 +6,7 @@ class Adm::StatisticsController < Adm::BaseController
   actions :index
   
   def index
-    @projects = Project
-    @backs = Backer.confirmed
+    @projects = params[:year].present? ? Project.created_on_year(params[:year]) : Project
+    @backs = params[:year].present? ? Backer.confirmed.confirmed_on_year(params[:year]) : Backer.confirmed
   end
 end
