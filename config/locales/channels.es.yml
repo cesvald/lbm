@@ -9,6 +9,8 @@ es:
     created: "Ahora estas siguiendo el canal"
     deleted: "Ya no estas siguiendo este canal"
   channels:
+    share_channel: "Cuéntale a todos sobre este canal!"
+    i_share_channel: "Acabo de ver el canal %{name} en @LbigMoney."
     send_your_project: "Envía tu proyecto"
     send_your_iniciative: "Envía tu iniciativa"
     open_applying: "Iniciar campaña"
@@ -100,6 +102,8 @@ es:
       link_to_facebook: "Enlace con el Facebook del canal"
       link_to_website: "Enlace a la página web del canal"
     iniciatives:
+      share: "Cuéntale a todos sobre esta iniciativa!"
+      i_share_iniciative: "Acabo de ver la iniciativa %{name} del canal %{channel} en @LbigMoney"
       new:
         title: 'ENVÍA TU INICIATIVA'
         subtitle: '¡Es hora de hacerlo realidad! Queremos saber del potencial de tu iniciativa.<br><br>Los campos marcados con (*) son obligatorios'

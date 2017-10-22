@@ -9,6 +9,7 @@ en:
     created: "You're following the channel now"
     deleted: "You're no longer following this channel"
   channels:
+    share_channel: "Cuéntale a todos sobre este canal!"
     send_your_project: "Submit your project"
     send_a_email: "Send an email"
     follow: "Follow the channel"
@@ -91,3 +92,13 @@ en:
       link_to_twitter: "Link to the channel's Twitter"
       link_to_facebook: "Link to the channel's Facebook"
       link_to_website: "Link to the channel's website"
+    iniciatives:
+      share: "Cuéntale a todos sobre esta iniciativa!"
+      new:
+        title: 'ENVÍA TU INICIATIVA'
+        subtitle: '¡Es hora de hacerlo realidad! Queremos saber del potencial de tu iniciativa.<br><br>Los campos marcados con (*) son obligatorios'
+        urban: 'Urbana'
+        rural: 'Rural'
+        urban_and_rural: 'Ambas'
+      form:
+        submit: 'Enviar tu iniciativa!'

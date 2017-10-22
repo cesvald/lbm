@@ -5,4 +5,6 @@ json.iniciatives @iniciatives do |iniciative|
     json.category iniciative.category.to_s
     json.image "/" + iniciative.category.name_es.downcase + ".png"
     json.main_image iniciative.main_image.url
+    json.share_twitter "http://twitter.com/?status=#{t('channels.iniciatives.i_share_iniciative', name: iniciative.name, channel: iniciative.financial_channel.channel.name)} #{controller.view_context.root_url(subdomain: iniciative.financial_channel.channel.permalink)}"
+    json.share_facebook "http://www.facebook.com/share.php?u=#{controller.view_context.root_url(subdomain: iniciative.financial_channel.channel.permalink)}"
 end

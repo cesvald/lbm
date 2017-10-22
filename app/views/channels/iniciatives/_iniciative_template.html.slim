@@ -12,6 +12,14 @@ script type="text/template" id="iniciative-view"
 	.modal-body
 		.main-image
 			img src="<%= main_image %>"
+			#share-wrapper
+				.share
+					h2= t('channels.iniciatives.share')
+	                a href="<%= share_twitter %>" target="_blank"
+	                  = image_tag 'lbm/twitter-icon.png', title: 'Twitter'
+	                a href="<%= share_facebook %>" target="_blank"
+	                  = image_tag 'lbm/facebook-icon.png', title: 'Facebook'
+		br
 		.section
 			p
 				span.modal-label Año de creación:
