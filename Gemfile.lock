@@ -16,16 +16,6 @@ GIT
       supermodel
 
 GIT
-  remote: git://github.com/cesvald/catarse_paypal_express.git
-  revision: c856e4e3d1ec29d2a8c3e2898954dcf5306dd63a
-  branch: test
-  specs:
-    catarse_paypal_express (0.1.0)
-      activemerchant (>= 1.17.0)
-      rails (~> 3.2.6)
-      slim-rails
-
-GIT
   remote: git://github.com/cesvald/catarse_payulatam.git
   revision: 1698b62abc627b8778f2c0fe0c8befe8db93e0e4
   branch: test
@@ -308,8 +298,6 @@ GEM
       treetop (~> 1.4.8)
     mailchimp (0.0.9)
       httparty
-    mercadopago-sdk (0.3.4)
-      json
     mime-types (1.25.1)
     money (5.1.1)
       i18n (~> 0.6.0)
@@ -546,7 +534,6 @@ DEPENDENCIES
   carrierwave (~> 0.8.0)
   catarse_lbm_gift_cards!
   catarse_mailchimp!
-  catarse_paypal_express!
   catarse_payulatam!
   chartkick
   coffee-rails
@@ -584,7 +571,6 @@ DEPENDENCIES
   letter_opener
   lograge
   magic_encoding
-  mercadopago-sdk
   newrelic_rpm
   nokogiri
   omniauth

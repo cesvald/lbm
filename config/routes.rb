@@ -19,7 +19,7 @@ Catarse::Application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  mount CatarsePaypalExpress::Engine => "/", as: :catarse_paypal_express
+  #mount CatarsePaypalExpress::Engine => "/", as: :catarse_paypal_express
   mount CatarsePayulatam::Engine => "/", :as => :catarse_payulatam
   #mount CatarseMercadopago::Engine => "/", :as => :catarse_mercadopago
   mount CatarseLbmGiftCards::Engine => "/", :as => :catarse_lbm_gift_cards
@@ -69,7 +69,7 @@ Catarse::Application.routes.draw do
   end
 
   # Channels
-  constraints subdomain: /^(?!www|secure|test|local)(\w+)/ do
+  constraints subdomain: /^(?!lbm-cesvald|www|secure|test|local)(\w+)/ do
     namespace :channels, path: '' do
       namespace :adm do
         resources :projects, only: [ :index, :update] do
