@@ -37,6 +37,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
     };
 
     var phone_number_ok = function(){
+      
       var value = $('#user_phone_number').val()
       var re = /^\([0-9]{2}\)[0-9]{4}-[0-9]{4}[0-9_ ]?$/
       if(value.match(re)){
@@ -49,6 +50,11 @@ CATARSE.ReviewForm = Backbone.View.extend({
     };
 
     var zip_code_ok = function(){
+      
+      
+      return true;
+      
+      
       if(zip_code_valid){
         $('#user_address_zip_code').addClass("ok").removeClass("error")
         return true
@@ -69,20 +75,26 @@ CATARSE.ReviewForm = Backbone.View.extend({
         all_ok = false
       if(!email_ok())
         all_ok = false
-      if(this.liveInBrazil()){
-        if(!phone_number_ok())
-          all_ok = false
-        if(!ok('#user_address_street'))
-          all_ok = false
-        if(!ok('#user_address_number'))
-          all_ok = false
-        if(!ok('#user_address_neighbourhood'))
-          all_ok = false
-        if(!ok('#user_address_city'))
-          all_ok = false
-      }
+      //if(!phone_number_ok())
+      //  all_ok = false
+      if(!ok('#user_address_street'))
+        all_ok = false
+      if(!ok('#user_address_number'))
+        all_ok = false
+      //if(!ok('#user_address_neighbourhood'))
+      //  all_ok = false
+      if(!ok('#user_address_city'))
+        all_ok = false
+      if(!ok('#user_cpf'))
+        all_ok = false
+      if(!ok('#user_address_zip_code'))
+        all_ok = false
+      if(!ok('#user_phone_number'))
+        all_ok = false
+      if(!ok('#user_address_state'))
+        all_ok = false
+        
     }
-
     if(!this.accepted_terms()){
       all_ok = false;
     }
@@ -105,6 +117,7 @@ CATARSE.ReviewForm = Backbone.View.extend({
               $('.tab_container #payment_menu a.enabled:first').trigger('click')
             }
             $('#payment').show();
+            
           }
         }
         else{
@@ -187,16 +200,13 @@ CATARSE.ReviewForm = Backbone.View.extend({
     var zip_code_valid = null
     var _this = this;
 
-    $('#user_address_zip_code').mask("99999-999")
-    $('#user_phone_number').mask("(99)9999-9999?9")
-
     if(this.accepted_terms()){
       this.everything_ok();
     }
 
-    if(!this.liveInBrazil()) {
-      $('fieldset.address_data').hide();
-    }
+    //if(!this.liveInBrazil()) {
+    //  $('fieldset.address_data').hide();
+    //}
 
     var can_submit_to_moip = true;
 

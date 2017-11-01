@@ -4,7 +4,8 @@
       span#close-anonymous-warning.badge
         | X
     p.anonymous-text= t('projects.backers.new.anonymous_warning_html')
-    #accept-anonymous-warning.lbm-button = t('projects.backers.new.continue')
+    #accept-anonymous-warning.lbm-button data-toggle="modal" data-target="#user-payment-details-view"
+      = t('projects.backers.new.continue')
   #giftcard-form.dialog-content
     .bootstrap-twitter#close-dialog-wrapper
       span#close-giftcard-form.badge
@@ -66,19 +67,16 @@
                 = check_box_tag 'live_in_brazil', 'live', false
                 = label_tag 'live_in_brazil', t('.live_in_brazil'), class: 'inline'
               = form.input :full_name, required: true, as: :string, input_html: {class: 'lbm-input'}
+              = form.input :cpf, required: true, as: :string, input_html: {class: 'lbm-input'}
               /= form.input :cpf, as: :string, input_html: {autocomplete: 'off'}
               = form.input :email, required: true, as: :string, input_html: {class: 'lbm-input'}
-              fieldset.address_data
-                .title
-                  h2
-                = form.input :address_street, as: :string, required: true
-                = form.input :address_number, as: :string, required: true
-                = form.input :address_complement, required: false, as: :string
-                = form.input :address_neighbourhood, as: :string, required: true
-                = form.input :address_zip_code, as: :string, input_html: {autocomplete: 'off'}, required: true
-                = form.input :address_city, as: :string, required: true
-                = form.input :address_state, as: :select, collection: State.array, required: true
-                = form.input :phone_number, as: :string, input_html: {autocomplete: 'off'}, required: true
+              = form.input :address_zip_code, as: :string, required: true, input_html: {class: 'lbm-input'}
+              = form.input :address_state, as: :string, required: true, input_html: {class: 'lbm-input'}
+              = form.input :address_city, as: :string, required: true, input_html: {class: 'lbm-input'}
+              = form.input :address_street, as: :string, required: true, input_html: {class: 'lbm-input'}
+              = form.input :address_number, as: :string, required: true, input_html: {class: 'lbm-input'}
+              = form.input :address_complement, required: false, as: :string, input_html: {class: 'lbm-input'}
+              = form.input :phone_number, as: :string, input_html: {autocomplete: 'off'}, required: true, input_html: {class: 'lbm-input'}
           .submit
             fieldset.anonymous-wrapper
               = check_box_tag 'anonymous'

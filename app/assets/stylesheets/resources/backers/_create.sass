@@ -315,12 +315,14 @@
       #review_form
         display: inline-block
         margin-top: 20px
+        width: 740px
         &.dont_align
           margin: 0 !important
         li
           float: left
           margin-right: 20px
           margin-bottom: 10px
+          text-align: left
           input, select#user_address_state
             //@include background(linear-gradient(top bottom, #F3F3F3, #FFF))
           .label
@@ -330,7 +332,7 @@
             color: $darkblue
             text-align: left
           &#user_full_name_input
-            width: 425px
+            width: 362px
             input[type="text"]
               width: 99%
           &#user_phone_number_input
@@ -339,26 +341,31 @@
               width: 100%
           &#user_email_input
             //clear: both
-            width: 490px
+            width: 220px
             input[type="text"]
               width: 100%
+          &#user_cpf_input
+            width: 307px
+          &#user_address_city_input
+            width: 180px
           &#user_address_street_input
-            width: 410px
+            width: 300px
             input[type="text"]
               width: 99%
           &#user_address_zip_code_input
-            clear: left
-            width: 200px
+            width: 178px
             input[type="text"]
               width: 100%
           &#user_address_number_input
-            width: 90px
+            width: 200px
             input[type="text"]
               width: 99%
           &#user_address_complement_input
-            width: 110px
+            width: 210px
             input[type="text"]
               width: 91%
+          &#user_address_state_input
+            width: 250px
           &#user_address_neighbourhood_input
             width: 250px
             input[type="text"]
