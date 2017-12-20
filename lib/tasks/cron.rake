@@ -1,6 +1,6 @@
 desc "This task is called by the Heroku cron add-on"
 task :cron => :environment do
-  Configuration.update_configurations!
+  #Configuration.update_configurations!
   Project.finish_projects!
   Project.send_reminders!
 end
