@@ -900,7 +900,7 @@ es:
       submit_vote: "Quiero votar por este proyecto!!"
       i_just_voted: "Acabo de votar por el proyecto %{name} en @LbigMoney"
       reached_votes: "Votos Alcanzados"
-      pictures:
+      pictures: 
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"
         save_changes: "Guardar Cambios"
@@ -1325,6 +1325,11 @@ es:
           question: "¿En qué consisten las recompensas?"
           answer: "Las recompensas son agradecimientos simbólicos para los colaboradores que crean en tu proyecto. Recomendamos hacer volar la imaginación para que sean reconocimientos originales y únicos, que motiven a la gente a apoyarte pero a la vez que no representen mayores costos en tu presupuesto, que de seguro será destinado a la implementación de tu proyecto.<br/>Ejemplos para incentivar tu creatividad:<br/>1. Envía fotos en las que se vea claramente el avance de tu proyecto.<br/>2. Envía cartas escritas con tu puño y letra para crear una relación más cercana con tus colaboradores.<br/>3. Invita a quienes se interesaron por tu proyecto a que lo conozcan directamente.<br/>4. Ofrece talleres de área de tu conocimiento que puedan ser interesantes."
           image: ~
+        tool_11:
+          title: ~
+          link: ~
+          question: "¿Si no se alcanza la meta de donaciones se regresa el dinero a las personas?"
+          answer: "Un proyecto puede alcanzar dos escalas de financiamiento: parcial o total. Para que un proyecto obtenga el financiamiento parcial (parcialmente exitoso) hace falta superar el monto mínimo de recaudo de $500.000 COP, monto desde el cual podremos hablar de un desembolso. Cuando un proyecto no alcance dicho monto mínimo, las donaciones recibidas serán regresadas a los colaboradores a modo de créditos en la plataforma para ser utilizados en algún otro proyecto al aire, y no habrá desembolso."
       after_project:
         description: "Descripción de las herramientas después de tu campaña"
         tool_1:

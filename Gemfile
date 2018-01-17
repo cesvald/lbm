@@ -29,6 +29,9 @@ gem 'schema_plus'
 gem 'schema_associations'
 gem 'chartkick'
 
+#recaptcha API
+gem "recaptcha", require: "recaptcha/rails"
+
 # Payment engine using Paypal
 # gem 'catarse_paypal_express', git: 'git://github.com/cesvald/catarse_paypal_express.git',  ref: 'e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff'
 # gem 'catarse_paypal_express', git: 'git://github.com/cesvald/catarse_paypal_express.git',  branch: 'test'

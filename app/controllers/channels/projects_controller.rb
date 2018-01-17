@@ -46,7 +46,7 @@ class Channels::ProjectsController < ProjectsController
     
     def channel_permalink
       if dev_environment? 
-        params[:profile_id] = 'jovenesactivos'
+        params[:profile_id] = 'tonces'
       else
         params[:profile_id] = request.subdomain
       end
