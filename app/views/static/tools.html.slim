@@ -111,7 +111,9 @@
 							= text_field_tag :subject, nil, class: 'lbm-input form-control', placeholder: t('users.contact_message.subject'), required: true
 						.col-md-4.col-xs-12
 							= text_area_tag :message, nil, class: 'lbm-textarea form-control', placeholder: t('users.contact_message.message'), required: true
+							= recaptcha_tags hl: I18n.locale
 					.row
 						.col-md-10.submit-wrapper
+							
 							= submit_tag t('users.contact_message.send_message'), class: 'btn btn-primary'
 	= render 'layouts/allies'

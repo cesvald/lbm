@@ -13,8 +13,12 @@ class UsersController < ApplicationController
   end
   
   def contact_and_support
-    ContactMailer.contact(params).deliver
-    flash[:success] = I18n.t('users.contact_message.success')
+    if verify_recaptcha()
+      ContactMailer.contact(params).deliver
+      flash[:success] = I18n.t('users.contact_message.success')
+    else
+      flash[:error] = I18n.t('users.contact_message.error_captcha')
+    end
     redirect_to :back
   end
   

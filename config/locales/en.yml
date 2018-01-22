@@ -1684,6 +1684,7 @@ en:
       mail_subject: "Mensaje de contacto enviado desde la plataforma"
       mail_body: "%{name} ha enviado el siguiente mensaje desde el formulario de contacto: "
       success: "Thank you for your message. We will get in touch with you soon. "
+      error_captcha: "Please check the verification 'I am not a robot'"
       message: Message
       send_message: "Send Message"
     backs:
