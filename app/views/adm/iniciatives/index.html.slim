@@ -14,6 +14,14 @@
 						= text_field_tag :by_name, params[:by_name], class: 'lbm-input'
 					
 					.input
+						= label_tag :by_department, t('activerecord.attributes.iniciative.department')
+						= select_tag :by_department, departments.keys, params[:by_department]
+						
+					.input
+						= label_tag :by_municipality, t('activerecord.attributes.iniciative.municipality')
+						= text_field_tag :by_email, params[:by_email], class: 'lbm-input'
+					
+					.input
 						= label_tag :by_channel, t('by_channel')
 						= select_tag :by_channel, options_from_collection_for_select(@channels, 'id', 'name', params[:by_channel]), include_blank: true, class: "lbm-select"
 					

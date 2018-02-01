@@ -28,7 +28,8 @@ class Iniciative < ActiveRecord::Base
   scope :by_contact_email, ->(email) { where("lower(contact_email) LIKE ?", "%#{email.downcase}%")  }
   scope :by_channel, ->(channel_id) { joins(:financial_channel).where("financial_channels.channel_id": channel_id) }
   scope :approved, -> { where(state: 'approved') }
-  
+  scope :by_department, ->(department) { where("lower(department) LIKE ?", "%#{department.downcase}%") }
+  scope :by_municipality, ->(municipality) { where("lower(municipality) LIKE ?", "%#{municipality.downcase}%") }
   
   
   state_machine :state, initial: :draft do

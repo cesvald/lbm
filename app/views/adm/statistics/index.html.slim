@@ -2,15 +2,16 @@
 #page_content
   .container
     
-    h1= "Estadísticas #{params[:year] if params[:year].present? and not params[:year].blank?}"
+    h1= "Estadísticas #{params[:year] if params[:year].present? and not params[:year].blank?} (#{@currency_code})"
     h1 Buscar por año
     .bootstrap-twitter
-      .row
-        .col-md-3.col-xs-6
-          = form_tag adm_statistics_path, method: :get do
-            
+      .row  
+        = form_tag adm_statistics_path, method: :get do
+          .col-md-2.col-xs-4    
           	= select_tag :year, options_for_select(2013..Date.today.year, params[:year]), include_blank: true, class: "form-control"
-          	br
+          .col-md-2.col-xs-4	
+          	= select_tag :currency_id, options_from_collection_for_select(Currency.all, 'id', 'code', params[:currency_id]), class: "form-control"
+          .col-md-2.col-xs-4
           	= submit_tag "Generar Estadísticas", class: "btn btn-primary"
     br
     - if @backs.any?
@@ -75,9 +76,9 @@
                 td= @backs.count
                 td= @backs.total_backers
                 - total_backs = @backs.total_backs_value
-                td= number_to_currency total_backs, unit: @backs.first.project.currency, precision: 0, delimiter: '.'
-                td= number_to_currency @backs.average_back, unit: @backs.first.project.currency, precision: 0, delimiter: '.'
-                td= number_to_currency (total_backs.to_f / (successful_count + partial_count)).round(2), unit: @backs.first.project.currency, precision: 0, delimiter: '.'
+                td= number_to_currency total_backs, unit: @currency_code, precision: 0, delimiter: '.'
+                td= number_to_currency @backs.average_back, unit: @currency_code, precision: 0, delimiter: '.'
+                td= number_to_currency (total_backs.to_f / (successful_count + partial_count)).round(2), unit: @currency_code, precision: 0, delimiter: '.'
     
     - else
       h3 No hay datos para este año

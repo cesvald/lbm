@@ -6,7 +6,11 @@ class Adm::StatisticsController < Adm::BaseController
   actions :index
   
   def index
-    @projects = params[:year].present? ? Project.created_on_year(params[:year]) : Project
-    @backs = params[:year].present? ? Backer.confirmed.confirmed_on_year(params[:year]) : Backer.confirmed
+    params[:currency_id] = 1 if params[:currency_id].nil?
+    @currency_code = Currency.find(params[:currency_id]).code
+    @projects = Project.by_currency_id(params[:currency_id])
+    @projects = @projects.created_on_year(params[:year]) if params[:year].present?
+    @backs = Backer.confirmed.by_currency_id(params[:currency_id])
+    @backs =  @backs.confirmed_on_year(params[:year]) if params[:year].present?
   end
 end

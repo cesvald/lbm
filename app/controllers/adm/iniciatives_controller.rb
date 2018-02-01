@@ -1,6 +1,6 @@
 class Adm::IniciativesController < Adm::BaseController
 		
-		has_scope :by_channel, :by_name, :by_contact_email
+		has_scope :by_channel, :by_name, :by_contact_email, :by_department, :by_municipality
 		
 		[:approve, :reject].each do |name|
 				define_method name do

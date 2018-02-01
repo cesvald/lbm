@@ -19,6 +19,7 @@ class Backer < ActiveRecord::Base
   scope :by_payment_method, ->(payment_method) { where(payment_method: payment_method) }
   scope :by_key, ->(key) { where(key: key) }
   scope :by_user_id, ->(user_id) { where(user_id: user_id) }
+  scope :by_currency_id, ->(currency_id) { joins(:project).where('projects.currency_id = ?', currency_id) }
   scope :by_project_state, ->(state) { joins(:project).where("projects.state = ?", state)}
   scope :user_name_contains, ->(term) { joins(:user).where("unaccent(upper(users.name)) LIKE ('%'||unaccent(upper(?))||'%')", term) }
   scope :project_name_contains, ->(term) { joins(:project).where("unaccent(upper(projects.name)) LIKE ('%'||unaccent(upper(?))||'%')", term) }
@@ -507,7 +508,7 @@ class Backer < ActiveRecord::Base
   end
   
   def self.total_backers
-    Backer.pluck("COUNT(DISTINCT user_id)")[0]
+    Backer.pluck("COUNT(DISTINCT backers.user_id)")[0]
   end
   
   def self.total_backs_value

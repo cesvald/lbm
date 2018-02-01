@@ -954,7 +954,7 @@ en:
       video: "Your project already has a video? Send the URL!"
       video_hint: "Vimeo link"
       video_important: "The video must be hosted by Vimeo. Paste the URL here!"
-      image_important: "Upload an image that represents your project"
+      image_important: "Upload an image that represents your project. The maximum file size is 1 MB and format JPG or PNG"
       how_know_important: "Yay! We reached  the final question."
       more_links_important: "It's very important to use social media to spread the word about your project and engage your network into making it a success"
       first_backers_important: "These people are fundamental to the success of your project."

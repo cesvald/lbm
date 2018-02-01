@@ -967,7 +967,7 @@ es:
       video: "¿Ya tienes un video? envía la URL!"
       video_hint: "enlace de Vimeo o Youtube"
       video_important: "Pega aquí la URL de tu video de Vimeo o Youtube!"
-      image_important: "Sube una imagen que represente tu proyecto"
+      image_important: "Sube una imagen que represente tu proyecto. El tamaño máximo de la imagen es de 1 MB y el formato JPG o PNG"
       how_know_important: "Súper! Haz terminado el formulario."
       more_links_important: "Los medios sociales ayudan a que se difunda tu causa! Si tienes una comunidad online, es hora de juntarla para que ayude en tu proyecto."
       first_backers_important: "Saber quiénes son, qué les gusta y cómo te pueden ayudar, facilitará las acciones que hagas para tu campaña."
