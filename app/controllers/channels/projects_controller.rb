@@ -20,7 +20,7 @@ class Channels::ProjectsController < ProjectsController
         if User.where(email: params[:user][:email]).first
           redirect_to new_user_session_path, flash: { notice: 'Inicia sesión para poder enviar tu proyecto' }
         elsif (iniciative = Iniciative.where(contact_email: params[:user][:email]).first)
-          redirect_to new_user_registration_path("user[email]": params[:user][:email], "user[name]": iniciative.contact_name), flash: { notice: 'Registrate para poder enviar tu proyecto' }
+          redirect_to new_user_registration_path("user[email]": params[:user][:email], "user[name]": iniciative.contact_name), flash: { notice: 'Regístrate para poder enviar tu proyecto' }
         else
           return redirect_to root_url, flash: { notice: t('channels.projects.new.alert_access_financial') }
         end
