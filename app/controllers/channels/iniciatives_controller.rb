@@ -32,7 +32,7 @@ class Channels::IniciativesController < Channels::BaseController
 						render :action => :new
 				else
 						create!(notice: t('iniciatives.create.success'), alert: t('iniciatives.create.failure')) do |success, failure|
-							success.html{ 
+							success.html{
 								if dev_environment?
 									return redirect_to root_url
 								else
