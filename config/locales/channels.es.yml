@@ -86,7 +86,13 @@ es:
         submit: "Enviar proyecto"
         send_project: "Quiero enviar mi proyecto"
         how_know: "¿Cómo conociste el canal?"
-        alert_access_financial: "¿Tienes un proyecto? Genial!  Envíanos primero tu iniciativa para que te conozcamos y si ya lo hiciste, regístrate con el correo que ingresaste en el formulario anterior"
+        alert_access_financial: "¿Tienes un proyecto? Genial!  Envíanos primero tu iniciativa para que te conozcamos y si ya lo hiciste, regístrate con el email de contacto que usaste para tu iniciativa"
+      financial_new:
+        title: "Súper! Envía tu proyecto a la convocatoria de %{channel}"
+        subtitle: "¡Es hora de hacerlo realidad! Queremos saber del potencial de tu proyecto. <br><br>Los campos marcados con (*) son obligatorios"
+      financial_edit:
+        title: "Actualiza la información de tu proyecto"
+        subtitle: "Las actualizaciones serán notificadas a nuestro equipo para evaluarlas"
     how_it_works:
       title: "¿Cómo funciona %{channel}?"
     footer:

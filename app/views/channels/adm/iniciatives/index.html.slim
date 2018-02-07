@@ -110,24 +110,28 @@
 											= link_to 'javascript:void(0);', class: 'btn btn-mini dropdown-toggle', data: {toggle: "dropdown"} do
 												b.caret
 											ul.dropdown-menu
-													li
-														- if iniciative.can_approve?
-															= link_to approve_adm_iniciative_path(iniciative), method: :put do
-																i.icon-edit
-																= t('.approve')
-														- if iniciative.can_reject?
-															= link_to reject_adm_iniciative_path(iniciative), method: :put do
-																i.icon-edit
-																= t('.reject')
-														= link_to push_to_draft_channels_adm_iniciative_path(iniciative), method: :put do
+												li
+													- if iniciative.can_approve?
+														= link_to approve_adm_iniciative_path(iniciative), method: :put do
 															i.icon-edit
-															= "Volver a Borrador"
-														= link_to edit_adm_iniciative_path(iniciative), method: :get do
+															= t('.approve')
+													- if iniciative.can_confirm?
+														= link_to confirm_adm_iniciative_path(iniciative), method: :put do
 															i.icon-edit
-															= "Editar"
-														= link_to adm_iniciative_path(iniciative), method: :delete, data: {confirm: "Estás seguro de eliminar esta iniciativa?" } do
-															i.icon-trash
-															= t('.delete')
+															= t('.confirm')
+													- if iniciative.can_reject?
+														= link_to reject_adm_iniciative_path(iniciative), method: :put do
+															i.icon-edit
+															= t('.reject')
+													= link_to push_to_draft_channels_adm_iniciative_path(iniciative), method: :put do
+														i.icon-edit
+														= "Volver a Borrador"
+													= link_to edit_adm_iniciative_path(iniciative), method: :get do
+														i.icon-edit
+														= "Editar"
+													= link_to adm_iniciative_path(iniciative), method: :delete, data: {confirm: "Estás seguro de eliminar esta iniciativa?" } do
+														i.icon-trash
+														= t('.delete')
 														
 			= paginate @iniciatives
 

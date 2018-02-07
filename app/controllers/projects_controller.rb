@@ -70,13 +70,10 @@ class ProjectsController < ApplicationController
       @project.iniciative = @iniciative
     end
     @project.attributes.merge(params[:project])
-    @project.save
-    create!(notice: t('projects.create.success')) do |success, failure|
-      success.html{ return redirect_to project_by_slug_path(@project.permalink) }
-      failure.html{
-        flash[:alert] = I18n.t('projects.create.alert')
-        render new_project_path
-      }
+    if @project.save!
+      redirect_to project_by_slug_path(@project.permalink)
+    else
+      params[:financial_project].present? ? render(action: :financial_new, namespace: :channels) : render(new_project_path)
     end
   end
 
@@ -89,7 +86,7 @@ class ProjectsController < ApplicationController
         else
           flash[:notice] = I18n.t('projects.update.success')
         end
-        return redirect_to project_by_slug_path(@project.permalink, anchor: 'edit')
+        return redirect_to project_by_slug_path(@project.permalink)
       }
       success.json{
         if @project.identification_file.present? && @project.rut_file.present? && @project.comercial_file.present? && @project.bank_certificate_file.present? && @project.banking_data_file.present?
@@ -138,6 +135,12 @@ class ProjectsController < ApplicationController
         @channel = Channel.find_by_permalink(request.subdomain) if request.subdomain.present?
         @pictures = @project.pictures
         @reward = params[:update_reward].present? ? Reward.find(params[:update_reward]) : nil
+        if @project.financial?
+          gon.is_financial_project = true
+          gon.financial_project_edit_url = financial_edit_channels_project_url(@project)
+        else
+          gon.is_financial_project = false
+        end
       }
     rescue ActiveRecord::RecordNotFound
       return render_404

@@ -1,0 +1,12 @@
+#page_content
+	#discount-hidden-text
+		= t('projects.new.discount_hidden_text').html_safe
+	.container
+		.start_content
+			.title
+				.main-title-wrapper
+					h1= t('.title')
+					= image_tag 'lbm/plain-icon.png'
+				h2= t('.subtitle').html_safe
+			
+			== render "financial_form"

@@ -8,47 +8,46 @@
           h1= t('.title')
           = image_tag 'lbm/plain-icon.png'
         h2= t('.subtitle')
-        - if not @iniciative.present?
-          = render partial: 'channels/projects/banner'
-          .legend-wrapper
-            .legend-title-wrapper
-              = image_tag "lbm/lbm-logo.png", class: "legend-icon"
-              h2.legend-title= t('projects.new.legend_title')
-            .legend-text= t('.legend_html')
-          .bootstrap-twitter
-            #send-project-steps.row
-              .col-xs-10.col-xs-offset-1
-                .row
-                  .col-xs-3.col
-                    /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
-                    .step-title= t('projects.new.step_1_title')
-                    .step-text= t('projects.new.step_1_text')
-                  .col-xs-3.col
-                    /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
-                    .step-title= t('projects.new.step_2_title')
-                    .step-text= t('projects.new.step_2_text')
-                  .col-xs-3.col
-                    /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
-                    .step-title= t('projects.new.step_3_title')
-                    .step-text= t('projects.new.step_3_text')
-                  .col-xs-3.col
-                    /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
-                    .step-title= t('projects.new.step_4_title')
-                    .step-text= t('projects.new.step_4_text')
-                  .step-footer= t('projects.new.step_footer')
-            #send-project-container.row
-              .col-xs-12.adjust-margin
-                .row
-                  .col-xs-12
-                    = image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
-                    p.send-project-title= t('static.guidelines.send_project_title')
-                    = image_tag 'lbm/plain-icon.png', class: "plain-icon"
-                    .send-project-points
-                      .project-point= t('static.guidelines.project_send.phrase_1')
-                      .project-point= t('static.guidelines.project_send.phrase_2')
-                      .project-point= t('static.guidelines.project_send.phrase_3')
-                      .project-point= t('static.guidelines.project_send.phrase_4')
-                      .project-point= t('static.guidelines.project_send.phrase_5')
+        = render partial: 'channels/projects/banner'
+        .legend-wrapper
+          .legend-title-wrapper
+            = image_tag "lbm/lbm-logo.png", class: "legend-icon"
+            h2.legend-title= t('projects.new.legend_title')
+          .legend-text= t('.legend_html')
+        .bootstrap-twitter
+          #send-project-steps.row
+            .col-xs-10.col-xs-offset-1
+              .row
+                .col-xs-3.col
+                  /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_1_title')
+                  .step-text= t('projects.new.step_1_text')
+                .col-xs-3.col
+                  /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_2_title')
+                  .step-text= t('projects.new.step_2_text')
+                .col-xs-3.col
+                  /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_3_title')
+                  .step-text= t('projects.new.step_3_text')
+                .col-xs-3.col
+                  /= embedded_svg 'lbm/chat-icon.svg', class: "step-icon"
+                  .step-title= t('projects.new.step_4_title')
+                  .step-text= t('projects.new.step_4_text')
+                .step-footer= t('projects.new.step_footer')
+          #send-project-container.row
+            .col-xs-12.adjust-margin
+              .row
+                .col-xs-12
+                  = image_tag 'lbm/megaphone-icon.png', class: "megaphone-icon"
+                  p.send-project-title= t('static.guidelines.send_project_title')
+                  = image_tag 'lbm/plain-icon.png', class: "plain-icon"
+                  .send-project-points
+                    .project-point= t('static.guidelines.project_send.phrase_1')
+                    .project-point= t('static.guidelines.project_send.phrase_2')
+                    .project-point= t('static.guidelines.project_send.phrase_3')
+                    .project-point= t('static.guidelines.project_send.phrase_4')
+                    .project-point= t('static.guidelines.project_send.phrase_5')
       - if !current_user
         .acess_links
             = t('projects.new.access_links', sign_in_link: new_user_session_path, sign_up_link: new_user_registration_path).html_safe
@@ -83,20 +82,17 @@
                     = form.text_field :permalink, class: "permalink #{'error' if @project.errors[:permalink].present?}"
                     p.inline-hints
                       = t('.permalink_hint')
-              - if not @iniciative.present?
-                .input-container
-                  .input
-                    .bootstrap-alert
-                      = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                      .alert
-                        .important= t('projects.new.about_important')
-                    - question_number = question_number + 1
-                    = form.label :about, "#{question_number}. #{t('formtastic.labels.project.about')} *"
-                    .input-wrapper
-                      = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}"
-                      p.inline-hints= t('formtastic.hints.project.about')
-              - else
-                = form.hidden_field :about, value: "na"
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.about_important')
+                  - question_number = question_number + 1
+                  = form.label :about, "#{question_number}. #{t('formtastic.labels.project.about')} *"
+                  .input-wrapper
+                    = form.text_area :about, class: "#{'error' if @project.errors[:about].present?}"
+                    p.inline-hints= t('formtastic.hints.project.about')
               .input-container
                 .input
                   .bootstrap-alert
@@ -104,10 +100,9 @@
                     .alert
                       .important= t('projects.new.history_important')
                   - question_number = question_number + 1
-                  - if not @iniciative.present?
-                    = form.label :history, "#{question_number}. #{t('formtastic.labels.project.history')} *"
-                  - else
-                    = form.label :history, "#{question_number}. #{t('formtastic.labels.project.financial_history')} *"
+                  
+                  = form.label :history, "#{question_number}. #{t('formtastic.labels.project.history')} *"
+                  
                   .input-wrapper
                     = form.text_area :history, class: "#{'error' if @project.errors[:history].present?}"
                     p.inline-hints= t('formtastic.hints.project.history')
@@ -150,17 +145,15 @@
   
               .input-container
                 .input
-                  - if not @iniciative.present?
-                    .bootstrap-alert
-                      = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                      .alert
-                         .important= t('projects.new.important_html', minimum: number_to_currency(::Configuration[:partial_goal], unit: 'COP', precision: 0, delimiter: '.'))
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                       .important= t('projects.new.important_html', minimum: number_to_currency(::Configuration[:partial_goal], unit: 'COP', precision: 0, delimiter: '.'))
                   - question_number = question_number + 1
                   = form.label :goal, "#{question_number}. #{t('formtastic.labels.project.goal')}".html_safe
                   .input-wrapper
                     = form.text_field :goal, class: "#{'error' if @project.errors[:goal].present?}"
-                    - if not @iniciative.present?
-                      p.inline-hints= t('formtastic.hints.project.goal').html_safe
+                    p.inline-hints= t('formtastic.hints.project.goal').html_safe
   
               .input-container
                 .input
@@ -173,34 +166,30 @@
                   .input-wrapper
                     = form.text_area :budget, class: "#{'error' if @project.errors[:budget].present?}"
                     p.inline-hints= t('formtastic.hints.project.budget')
-              - if not @iniciative.present?
-                .input-container
-                  .input
-                    .bootstrap-alert
-                      = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                      .alert
-                        .important= t('projects.new.implementation_important')
-                    - question_number = question_number + 1
-                    = form.label :implementation, "#{question_number}. #{t('formtastic.labels.project.implementation')} *"
-                    .input-wrapper
-                      = form.text_area :implementation, class: "#{'error' if @project.errors[:implementation].present?}"
-                      p.inline-hints= t('formtastic.hints.project.implementation')
-              - else
-                = form.hidden_field :implementation, value: 'na'
-              - if not @iniciative.present?
-                .input-container
-                  .input
-                    .bootstrap-alert
-                      = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                      .alert
-                        .important= t('projects.new.online_days_important')
-                    - question_number = question_number + 1
-                    = form.label :online_days, "#{question_number}. #{t('formtastic.labels.project.expires_at')} *"
-                    .input-wrapper
-                      .input-append
-                        = form.text_field :online_days, class: "#{'error' if @project.errors[:online_days].present?}, days-input"
-                        span.add-on= t('days')
-                      p.inline-hints= t('formtastic.hints.project.online_days')
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.implementation_important')
+                  - question_number = question_number + 1
+                  = form.label :implementation, "#{question_number}. #{t('formtastic.labels.project.implementation')} *"
+                  .input-wrapper
+                    = form.text_area :implementation, class: "#{'error' if @project.errors[:implementation].present?}"
+                    p.inline-hints= t('formtastic.hints.project.implementation')
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.online_days_important')
+                  - question_number = question_number + 1
+                  = form.label :online_days, "#{question_number}. #{t('formtastic.labels.project.expires_at')} *"
+                  .input-wrapper
+                    .input-append
+                      = form.text_field :online_days, class: "#{'error' if @project.errors[:online_days].present?}, days-input"
+                      span.add-on= t('days')
+                    p.inline-hints= t('formtastic.hints.project.online_days')
   
               .input-container
                 .input
@@ -213,68 +202,7 @@
                   .input-wrapper
                     = form.select :category_id, options_for_select(Category.array, (@iniciative.present? ? @iniciative.category_id : (params.has_key?(:project) ? params[:project][:category_id] : nil))), class: "#{'error' if @project.errors[:category].present?}"
                     p.inline-hints= t('formtastic.hints.project.category')
-              - if @iniciative.present?
-                = form.semantic_fields_for :financial_project, @project.build_financial_project do |fp_form|
-                  .input-container
-                    .input
-                      .bootstrap-alert
-                        = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                        .alert
-                          .important= t('projects.new.benefited_count_important')
-                      - question_number = question_number + 1
-                      = fp_form.label :benefited_count, "#{question_number}. #{t('formtastic.labels.financial_project.benefited_count')} *"
-                      .input-wrapper
-                        =  fp_form.number_field :benefited_count
-                        p.inline-hints= t('formtastic.hints.financial_project.benefited_count')
-                  
-                  .input-container
-                    .input
-                      .bootstrap-alert
-                        = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                        .alert
-                          .important= t('projects.new.women_count_important')
-                      - question_number = question_number + 1
-                      = fp_form.label :women_count, "#{question_number}. #{t('formtastic.labels.financial_project.women_count')} *"
-                      .input-wrapper
-                        =  fp_form.number_field :women_count
-                        p.inline-hints= t('formtastic.hints.financial_project.women_count')
-                        
-                  .input-container
-                    .input
-                      .bootstrap-alert
-                        = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                        .alert
-                          .important= t('projects.new.department_important')
-                      - question_number = question_number + 1
-                      = fp_form.label :department, "#{question_number}. #{t('formtastic.labels.financial_project.department')} *"
-                      .input-wrapper
-                        = fp_form.select :department, departments.keys, class: "#{'error' if @financial_project && @financial_project.errors[:department].present?}"
-                        p.inline-hints= t('formtastic.hints.financial_project.department')
-                        
-                  .input-container
-                    .input
-                      .bootstrap-alert
-                        = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                        .alert
-                          .important= t('projects.new.municipality_important')
-                      - question_number = question_number + 1
-                      = fp_form.label :municipality, "#{question_number}. #{t('formtastic.labels.financial_project.municipality')} *"
-                      .input-wrapper
-                        =  fp_form.text_field :municipality
-                        p.inline-hints= t('formtastic.hints.financial_project.municipality')
-                  
-                  .input-container
-                    .input
-                      .bootstrap-alert
-                        = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                        .alert
-                          .important= t('projects.new.zone_important')
-                      - question_number = question_number + 1
-                      = fp_form.label :zone, "#{question_number}. #{t('formtastic.labels.financial_project.zone')} *"
-                      .input-wrapper
-                        =  fp_form.select :zone, {"#{t('formtastic.options.iniciative.urban')}" => 'urban', "#{t('formtastic.options.iniciative.rural')}" => 'rural', "#{t('formtastic.options.iniciative.rural_and_urban')}" => 'both'}, class: "#{'error' if @iniciative.errors[:zone].present?}"
-                        p.inline-hints= t('formtastic.hints.financial_project.zone')
-                      
+              
               .input-container
                 .input
                   .bootstrap-alert
@@ -341,19 +269,16 @@
                   .input-wrapper
                     = text_field_tag :phone_number, (params[:phone_number].nil? || params[:phone_number].empty? ? (current_user.phone_number.nil? || current_user.phone_number.empty? ? (@iniciative.present? ? @iniciative.contact_phone : "") : current_user.phone_number) : params[:phone_number])
                     p.inline-hints= t('formtastic.hints.project.phone_number')
-              - if not @iniciative.present?
-                .input-container
-                  .input
-                    .bootstrap-alert
-                      = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-                      .alert
-                        .important= t('projects.new.how_know_important')
-                    - question_number = question_number + 1
-                    = form.label :how_know, "#{question_number}. #{t('formtastic.labels.project.how_know')}"
-                    .input-wrapper
-                      = form.text_area :how_know, class: "#{'error' if @project.errors[:how_know].present?}"
-              - if @iniciative.present?
-                = hidden_field_tag :iniciative_id, @iniciative.id
+              .input-container
+                .input
+                  .bootstrap-alert
+                    = image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+                    .alert
+                      .important= t('projects.new.how_know_important')
+                  - question_number = question_number + 1
+                  = form.label :how_know, "#{question_number}. #{t('formtastic.labels.project.how_know')}"
+                  .input-wrapper
+                    = form.text_area :how_know, class: "#{'error' if @project.errors[:how_know].present?}"
               .input-container
                 .input
                   = image_tag 'lbm/tips-writting.jpg', class: 'tips-writting'

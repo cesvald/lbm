@@ -2,7 +2,7 @@ class Adm::IniciativesController < Adm::BaseController
 		
 		has_scope :by_channel, :by_name, :by_contact_email, :by_department, :by_municipality
 		
-		[:approve, :reject].each do |name|
+		[:approve, :reject, :confirm].each do |name|
 				define_method name do
 						@iniciative = Iniciative.find params[:id]
 						@iniciative.send("#{name.to_s}!")

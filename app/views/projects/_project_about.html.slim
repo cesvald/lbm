@@ -68,37 +68,70 @@
       .clear
       
 #information-container
+  - if @project.cause.present?
+    .information-wrapper
+      h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.cause")
+      p= @project.cause_html.html_safe
   - if not @project.financial? and @project.about.present?
     .information-wrapper
-      h3= t('formtastic.labels.project.about')
+      h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.about")
       p= @project.about_html.html_safe
   - if @project.history.present?
     .information-wrapper
-      h3= t('formtastic.labels.project.history')
+      h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.history")
       p= @project.history_html.html_safe
-  - if @project.cause.present?
+  - if @project.financial? and @project.financial_project.hope_transform.present?
     .information-wrapper
-      h3= t('formtastic.labels.project.cause')
-      p= @project.cause_html.html_safe
+      h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.hope_transform")
+      p= @project.financial_project.hope_transform.html_safe
   - if @project.description.present?
     .information-wrapper
-      h3= t('formtastic.labels.project.description')
+      h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.description")
       p= @project.description_html.html_safe
+  - if @project.financial? and @project.financial_project.department.present?
+    .information-wrapper
+      h3 ¿En qué lugares desarrollaran las actividades? (municipios, corregimientos, veredas, barrios, etc.)
+      p= "En el municipio de #{@project.financial_project.municipality} del departamento #{@project.financial_project.department}"
+      - if @project.financial_project.other_municipality.present?
+        p= "También opera en los municipios de #{@project.financial_project.other_municipality}"
+  - if @project.financial? and @project.financial_project.activities.present?
+    .information-wrapper
+      h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.activities")
+      p= @project.financial_project.activities
+  - if @project.financial? and @project.financial_project.benefited_count.present?
+    .information-wrapper
+      h3= t('formtastic.labels.financial_project.benefited_count')
+      p= "#{@project.financial_project.benefited_count} beneficiadas de las cuales #{@project.financial_project.women_count} son mujeres."
+      p= "#{@project.financial_project.benefited_indirect_count} beneficiados indirectos."
+  - if not @project.financial? and @project.budget.present?
+    .information-wrapper
+      h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.budget")
+      p= @project.budget_html.html_safe
+  - if @project.financial_project.present? and @project.financial_project.convocation_description.present?
+    .information-wrapper
+      h3= t('formtastic.labels.financial_project.convocation_description')
+      p= @project.financial_project.convocation_description
+  - if @project.financial_project.present? and @project.online_days.present?
+    .information-wrapper
+      h3= t('formtastic.labels.financial_project.time')
+      p= "#{@project.online_days} días"
+  - if @project.financial_project.present? and @project.financial_project.results_description.present?
+    .information-wrapper
+      h3= t('formtastic.labels.financial_project.results')
+      p= @project.financial_project.results_description
+  - if @project.financial? and @project.financial_project.budget.present?
+    .information-wrapper
+      h3= t('formtastic.labels.financial_project.budget')
+      p= "Descarga <a href='#{@project.financial_project.budget.url}' target='_blank'> Aquí </a> el presupuesto de inversión de este proyecto".html_safe
+  - if @project.financial_project.present? and @project.financial_project.counterpart_contributions.present?
+    .information-wrapper
+      h3= t('formtastic.labels.financial_project.counterpart_contributions')
+      p= @project.financial_project.counterpart_contributions
   - if @project.impact.present?
     .information-wrapper
-      h3= t('formtastic.labels.project.impact')
+      h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.impact")
       p= @project.impact_html.html_safe
-  - if @project.budget.present?
+  - if @project.financial? and @project.financial_project.organization_support.present?
     .information-wrapper
-      h3= t('formtastic.labels.project.budget')
-      p= @project.budget_html.html_safe
-  - if not @project.financial? and @project.implementation.present?
-    .information-wrapper
-      h3= t('formtastic.labels.project.implementation')
-      p= @project.implementation_html.html_safe
-  - if @project.financial_project.present?
-    - if @project.financial_project.benefited_count.present?
-      .information-wrapper
-        h3= t('formtastic.labels.financial_project.benefited_count')
-        p= "#{@project.financial_project.benefited_count} beneficiados"
-        p= "#{@project.financial_project.women_count} son mujeres"
+      h3= t('formtastic.labels.financial_project.organization_support')
+      p= @project.financial_project.organization_support

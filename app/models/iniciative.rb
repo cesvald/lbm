@@ -55,11 +55,15 @@ class Iniciative < ActiveRecord::Base
     end
     
 		after_transition draft: :approved, do: :after_transition_of_draft_to_approved
-		
+		after_transition approved: :confirmed, do: :after_transition_of_approved_to_confirmed
 	end
 	
 	def after_transition_of_draft_to_approved
 	  notify_observers :notify_owner_that_iniciative_is_approved
+	end
+	
+	def after_transition_of_approved_to_confirmed
+	  notify_observers :notify_owner_iniciative_is_confirmed
 	end
 	
 	def add_vote

@@ -38,27 +38,6 @@
     - if !@channel.nil? && @channel.banner_top_url.present?
       .banner
         = image_tag @channel.banner_top_url
-    /*
-      - if @project.draft? || @project.reviewed?
-        = render "draft_warning"
-
-      - if @project.rejected?
-        = render "rejected_warning"
-
-      - if @project.online? && can?(:update, @project)
-        = render "online_warning"
-
-      - if @project.waiting_funds? && can?(:update, @project)
-        = render "waiting_funds_warning"
-      
-      - if @project.partial_successful? && can?(:update, @project)
-        = render "partial_successful_warning"
-        
-      - if @project.successful? && can?(:update, @project)
-        = render "successful_warning"
-
-      - if @project.failed? && can?(:update, @project)
-        = render "failed_warning"
     
     #project_description[data-project=@project.to_json]
     /.project_image
@@ -68,8 +47,8 @@
         h1
           b
             = "#{@project.name}, "
-          = t('projects.project_header.without_city', category_name: link_to(@project.category, explore_path(anchor: @project.category.to_s.parameterize)), author: link_to(@project.user.display_name, user_path(@project.user))).html_safe
-          = " que opera en el municipio de #{@project.financial_project.municipality} y beneficia a más de #{@project.financial_project.benefited_count} personas"
+          = t('projects.project_header.without_city', category_name: link_to(@project.category, explore_path(anchor: @project.category.to_s.parameterize)), postulation_category: link_to(@project.financial_project.postulation_category.name_es, @project), author: link_to(@project.financial_project.organization_name, user_path(@project.user))).html_safe
+          = " que opera en el municipio de #{@project.financial_project.municipality}"
     .main_info_wrapper.centered_page_width
       .sidebar
         .info
@@ -142,7 +121,6 @@
         - elsif @project.image.present?
           = image_tag @project.image.url
         
-
     .tab_container
       nav#project_menu
         = link_to '#about', id: 'about_link', class: 'selected' do

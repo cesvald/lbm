@@ -939,6 +939,11 @@ en:
       impact_important: ~
       budget_important: ~
       implementation_important: ~
+      organization_name_important: "No more than 50 alphanumeric caracteres"
+      category_financial_important: "Selecciona la categoría en la cual se enmarca tu poryecto"
+      postulation_category_important: "Seleccione la categoría en la cual considere pertinente inscribir su iniciativa para concursar"
+      hope_transform_important: "Esta información te servirá después para el perfil en linea. ¡Úsala! :D"
+      financial_description_important: "Describa brevemente la iniciativa."
       contact: "Leave us your email address so we can contact you"
       links: "Where can we find more about you and your project?"
       links_important: "These links help us know more about you"

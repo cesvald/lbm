@@ -4,8 +4,6 @@ class FinancialChannel < ActiveRecord::Base
 	has_many :phases
 	has_many :iniciatives
 	
-	
-	
 	state_machine :state, initial: :summoning do
 		state :summoning, value: 'summoning'
 		state :applying, value: 'applying'
@@ -37,8 +35,7 @@ class FinancialChannel < ActiveRecord::Base
 	
 	def after_selecting_to_announced
 		channel.projects.each do |project|
-			project.online_days = 0
-			project.online_date = DateTime.now - 1.day
+			project.online_date = DateTime.now - 1.day - (project.online_days).day
 			project.save
 			project.finish
 		end

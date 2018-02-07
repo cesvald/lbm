@@ -152,6 +152,8 @@ es:
       subject: "Tu iniciativa ha sido aprobada"
       header: "Tu iniciativa ha sido aprobada"
       text_html: "Hola, tu iniciativa fue aprobada por el equipo de %{financial_channel_name}.<br/><br/>¡Felicitaciones!<br/><br/>Tu iniciativa %{iniciative_name} fue aceptada y desde este momento aparece en nuestro mapa y tendrás la posibilidad de dar a conocer su impacto en la comunidad.<br/><br/>Sigue estando  atento a tu correo pues es el medio que utilizaremos para comunicarte la posibilidad de participar a una convocatoria para proyectos que se destaquen en sus territorios."
+    owner_confirmed_iniciative:
+      subject: "Invitación premio jóvenes activos"
     deposit_identification_code:
       subject: "Pasos para donación por depósito bancario"
       header: "Donación por depósito bancario"

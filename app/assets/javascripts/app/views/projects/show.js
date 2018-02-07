@@ -222,7 +222,12 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
   },
 
   edit: function() {
-    this.selectItem("edit")
+    if(gon.is_financial_project == true){
+      window.location.replace(gon.financial_project_edit_url);
+    }
+    else {
+      this.selectItem("edit");
+    }
   },
 
   reports: function() {

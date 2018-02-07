@@ -99,9 +99,11 @@ Catarse::Application.routes.draw do
         collection do
           get 'video'
           get 'check_slug'
+          get 'financial_new'
         end
         member do
           post 'finance'
+          get 'financial_edit'
         end
       end
       resources :channels_subscribers, only: [:index, :create, :destroy]
@@ -239,6 +241,7 @@ Catarse::Application.routes.draw do
       member do
         put 'approve'
         put 'reject'
+        put 'confirm'
       end
     end
     resources :channels, except: [ :show ] do

@@ -7,18 +7,18 @@
           h2= t 'registrations.new.title'
         .form-container
           = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-          
-            = link_to user_omniauth_authorize_path(provider: :facebook, locale: nil), class: [:facebook] do
-              = image_tag ('/assets/lbm/facebook-icon.png'), class: "facebook-icon"
-              = t('login.submit_facebook')
-            = render 'devise/shared/alert'
-            br
-            br
-            .separator
+            - if params[:user].nil?
+              = link_to user_omniauth_authorize_path(provider: :facebook, locale: nil), class: [:facebook] do
+                = image_tag ('/assets/lbm/facebook-icon.png'), class: "facebook-icon"
+                = t('login.submit_facebook')
+              = render 'devise/shared/alert'
+              br
+              br
+              .separator
             .form-group
-              = f.text_field :name, class: "form-control", required: true, placeholder: t('registrations.new.placeholder.name')
+              = f.text_field :name, class: "form-control", required: true, placeholder: t('registrations.new.placeholder.name'), value: ((params[:user].present? and params[:user][:name].present?) ? params[:user][:name] : nil)
             .form-group
-              = f.text_field :email, class: "form-control", required: true, placeholder: t('login.placeholder.email')
+              = f.text_field :email, class: "form-control", required: true, placeholder: t('login.placeholder.email'), value: ((params[:user].present? and params[:user][:email].present?) ? params[:user][:email] : nil)
             .form-group
               = f.password_field :password, class: "form-control", required: true, placeholder: t('login.placeholder.password')
             .form-group

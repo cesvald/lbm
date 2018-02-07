@@ -42,12 +42,14 @@
           - else
             p.description   = truncate(@profile.description, length: 210)
           - if @profile.financial?
-            = link_to t('channels.send_your_iniciative'), new_channels_iniciative_path, class: 'lbm-button', title: t('channels.send_your_iniciative')
+            - if current_user and Iniciative.where(contact_email: current_user.email).first.nil?
+              = link_to t('channels.send_your_iniciative'), new_channels_iniciative_path, class: 'lbm-button', title: t('channels.send_your_iniciative')
             - if @profile.financial_channel.state == 'summoning'
               - if can? :update, @profile.financial_channel
                 = link_to t('channels.open_applying'), open_applying_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.open_applying')
             - if @profile.financial_channel.state == 'applying'
-              = link_to t('channels.projects.how_it_works'), new_project_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
+              - if current_user and Iniciative.where(contact_email: current_user.email, state: :confirmed).first
+                = link_to t('channels.projects.how_it_works'), financial_new_channels_projects_path, class: 'lbm-button', title: t('channels.accessibility.how_it_works')
               - if can? :update, @profile.financial_channel
                 = link_to t('channels.close_applying'), close_applying_channels_financial_channel_path(@profile.financial_channel), method: :put, class: 'lbm-button', title: t('channels.close_applying')
             - if @profile.financial_channel.state == 'selecting'

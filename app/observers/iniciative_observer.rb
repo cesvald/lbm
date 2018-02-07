@@ -41,4 +41,15 @@ class IniciativeObserver < ActiveRecord::Observer
 			)
 		end
 	end
+	
+	def notify_owner_iniciative_is_confirmed(iniciative)
+		if iniciative.imported != true
+			Notification.create_notification_once(
+				:owner_confirmed_iniciative,
+				Iniciative.new_draft_recipient,
+				{iniciative_id: iniciative.id},
+				{iniciative: iniciative, to: iniciative.contact_email}
+			)
+		end
+	end
 end
