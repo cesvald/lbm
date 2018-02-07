@@ -33,7 +33,6 @@ class Project < ActiveRecord::Base
   has_and_belongs_to_many :channels
   
   has_one :project_total
-  has_one :iniciative
   has_one :financial_project
   
   accepts_nested_attributes_for :financial_project
@@ -481,7 +480,7 @@ class Project < ActiveRecord::Base
   end
   
   def financial?
-    iniciative.present?
+    financial_project.present?
   end
   
   def channel_trustees

@@ -18,7 +18,7 @@ class Channels::ProfilesController < Channels::BaseController
       @projects = @projects.visible unless @profile.show_drafts?
       @phase = Phase.new
       if @profile.financial?
-        @iniciatives = @profile.financial_channel.iniciatives.approved
+        @iniciatives = @profile.financial_channel.iniciatives.approved_or_confirmed
         gon.jbuilder template: 'app/views/channels/iniciatives/index.json'
       end
       

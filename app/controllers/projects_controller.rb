@@ -65,12 +65,7 @@ class ProjectsController < ApplicationController
       current_user.save
     end
     @project = current_user.projects.new(params[:project])
-    if(params[:iniciative_id].present?)
-      @iniciative = Iniciative.find(params[:iniciative_id])
-      @project.iniciative = @iniciative
-    end
-    @project.attributes.merge(params[:project])
-    if @project.save!
+    if @project.save
       redirect_to project_by_slug_path(@project.permalink)
     else
       params[:financial_project].present? ? render(action: :financial_new, namespace: :channels) : render(new_project_path)

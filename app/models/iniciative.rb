@@ -3,10 +3,9 @@ class Iniciative < ActiveRecord::Base
   
   belongs_to :category
   belongs_to :financial_channel
-  belongs_to :project
   
-  has_many :votes, dependent: :delete_all
-  has_many :users, through: :votes
+  has_one :financial_project
+  
   has_many :notifications, dependent: :delete_all
   mount_uploader :main_image, LogoUploader
   
@@ -28,6 +27,7 @@ class Iniciative < ActiveRecord::Base
   scope :by_contact_email, ->(email) { where("lower(contact_email) LIKE ?", "%#{email.downcase}%")  }
   scope :by_channel, ->(channel_id) { joins(:financial_channel).where("financial_channels.channel_id": channel_id) }
   scope :approved, -> { where(state: 'approved') }
+  scope :approved_or_confirmed, -> { where("state = ? OR state = ?", "approved", "confirmed") }
   scope :by_department, ->(department) { where("lower(department) LIKE ?", "%#{department.downcase}%") }
   scope :by_municipality, ->(municipality) { where("lower(municipality) LIKE ?", "%#{municipality.downcase}%") }
   
@@ -64,14 +64,6 @@ class Iniciative < ActiveRecord::Base
 	
 	def after_transition_of_approved_to_confirmed
 	  notify_observers :notify_owner_iniciative_is_confirmed
-	end
-	
-	def add_vote
-	  self.vote_count = self.vote_count + 1
-	end
-	
-	def already_voted?(user)
-	  users.exists?(user.id)
 	end
 	
 	def self.new_draft_recipient

@@ -108,7 +108,8 @@ Catarse::Application.routes.draw do
       end
       resources :channels_subscribers, only: [:index, :create, :destroy]
       resources :phases
-      resources :iniciatives do
+      resources :iniciatives
+      resources :financial_projects, only: [] do
         member do
           post 'add_vote'
         end

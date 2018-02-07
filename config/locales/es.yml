@@ -923,6 +923,7 @@ es:
       submit_vote: "Quiero votar por este proyecto!!"
       i_just_voted: "Acabo de votar por el proyecto %{name} en @LbigMoney"
       reached_votes: "Votos Alcanzados"
+      vote_no_user: "<a href='%{link}'>Inicia sesión</a> para poder votar por este proyecto"
       pictures: 
         delete: Eliminar
         error: "Hubo un error adicionando la imagen"

@@ -26,7 +26,7 @@ class Channels::ProjectsController < ProjectsController
         end
       end
     else
-      @iniciative = parent.financial_channel.iniciatives.where(contact_email: current_user.email).first
+      @iniciative = Iniciative.where(contact_email: current_user.email).first
       @project = Project.new
       @project.build_financial_project
     end

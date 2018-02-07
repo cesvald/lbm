@@ -272,6 +272,7 @@
 						= fp_form.label :organization_support, "#{question_number}. #{t('formtastic.labels.financial_project.organization_support')}"
 						.input-wrapper
 							=  fp_form.text_area :organization_support, class: "#{'error' if @project.errors['financial_project.organization_support'].present?}"
+				= fp_form.input :iniciative_id, as: :hidden, value: (@iniciative.present? ? @iniciative.id : nil)
 			
 			.input-container
 				.input
@@ -342,8 +343,6 @@
 					.input-wrapper
 						= text_field_tag :phone_number, ( params[:phone_number].present?  ? params[:phone_number] : (@current_user.phone_number.present? ? current_user.phone_number : (@iniciative.present? ?  @iniciative.contact_phone : '')) )
 							
-							
-			= hidden_field_tag :iniciative_id, (@iniciative.present? ? @iniciative.id : nil)
 			= hidden_field_tag :financial_project, true
 			= form.input :about, as: :hidden, label: false, hint: false, value: '_'
 			.clearfix

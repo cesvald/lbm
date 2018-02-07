@@ -55,7 +55,7 @@
           - unless @channel && @channel.show_drafts? && (@project.draft? || @project.reviewed?)
             #statistics
               .statistic-wrapper
-                - if @project.financial? && !@project.financial_channel.announced? && !@project.financial_channel.selecting?
+                - if @project.financial? && (not @project.financial_channel.announced?) && (not @project.financial_channel.selecting?)
                   em.description
                     .finance-goal
                       = t('.goal_requested', total: @project.display_goal).html_safe
@@ -83,14 +83,16 @@
                       br
                       br
                       = submit_tag t('.submit_finance'), class: 'finance-btn btn btn-success'
-                  - if @project.online? && @project.financial? && current_user
+                  - if @project.online? && @project.financial?
                     .voting
                       .vote
-                        span.number= "#{@project.iniciative.vote_count} "
+                        span.number= "#{@project.financial_project.vote_count} "
                         = t(".reached_votes")
                       - if @project.financial_channel.state == 'applying'
-                        - if not @project.iniciative.already_voted?(current_user)
-                          = form_tag(add_vote_channels_iniciative_path(@project.iniciative), method: :post, id: 'vote-form') do
+                        - if not current_user
+                          h3.description= t('.vote_no_user', link: new_user_session_path).html_safe
+                        - elsif not @project.financial_project.already_voted?(current_user)
+                          = form_tag(add_vote_channels_financial_project_path(@project.financial_project), method: :post, id: 'vote-form') do
                             fieldset
                               = button_tag do
                                 = 'Quiero votar por este proyecto!!'
