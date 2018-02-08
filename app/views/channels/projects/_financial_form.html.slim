@@ -1,6 +1,6 @@
 .bootstrap-form
 	.clearfix
-	= semantic_form_for @project, html: { id: 'project_form', class: 'lbm-form' } do |form|
+	= semantic_form_for @project, url: (action == 'post' ? financial_create_channels_projects_path : financial_update_channels_projects_path), action: action, html: { id: 'project_form', class: 'lbm-form' } do |form|
 		= form.inputs do
 			.input.control-group.error
 			.input-container
@@ -200,7 +200,7 @@
 						= fp_form.label :convocation_description, "#{question_number}. #{t('formtastic.labels.financial_project.convocation_description')} *"
 						.input-wrapper
 							=  fp_form.text_area :convocation_description, class: "#{'error' if @project.errors['financial_project.convocation_description'].present?}"
-							
+			
 			
 			.input-container
 					.input
@@ -225,7 +225,7 @@
 					= form.label :time, "#{question_number}. #{t('formtastic.labels.financial_project.goal')} *"
 					.input-wrapper
 						.input-append
-							= form.text_field :goal, class: "#{'error' if @project.errors[:goal].present?}"
+							= form.number_field :goal, class: "#{'error' if @project.errors[:goal].present?}"
 			
 			
 			= form.semantic_fields_for :financial_project, @project.financial_project do |fp_form|
@@ -258,7 +258,7 @@
 							.alert
 								.important= t('projects.new.results_description_important')
 						- question_number = question_number + 1
-						= fp_form.label :results_description, "#{question_number}. #{t('formtastic.labels.financial_project.impact')} *"
+						= fp_form.label :results_description, "#{question_number}. #{t('formtastic.labels.financial_project.impact')}"
 						.input-wrapper
 							=  fp_form.text_area :results_description, class: "#{'error' if @project.errors['financial_project.results_description'].present?}"
 							
@@ -285,18 +285,6 @@
 					.input-wrapper
 						= form.text_field :headline, { maxlength: 140, class: "#{'error' if @project.errors[:headline].present?}" }
 						p.inline-hints= t('formtastic.hints.project.headline')
-
-			.input-container
-				.input
-					.bootstrap-alert
-						= image_tag 'lbm/alert-icon.png', class: 'alert-icon'
-						.alert
-							.important= t('projects.new.video_important')
-						- question_number = question_number + 1
-					= form.label :video_url, "#{question_number}. #{t('formtastic.labels.project.video_url')}"
-					.input-wrapper
-						= form.text_field :video_url, class: "#{'error' if @project.errors[:video_url].present?}"
-						p.inline-hints= t('formtastic.hints.project.video_url').html_safe
 			
 			.input-container
 				.input
@@ -307,7 +295,7 @@
 						- question_number = question_number + 1
 					= form.label :image, "#{question_number}. #{t('formtastic.labels.project.image')}"
 					.input-wrapper
-						= form.input :image, as: :file, label: false,  class: "#{'error' if @project.errors[:image].present?}"
+						= form.input :image, as: :file, label: false, hint: false, class: "#{'error' if @project.errors[:image].present?}"
 						
 			.input-container
 				.input
@@ -330,7 +318,7 @@
 					- question_number = question_number + 1
 					= label_tag :contact_name, "#{question_number}. #{t('formtastic.labels.financial_project.contact_name')}*"
 					.input-wrapper
-						= text_field_tag :contact_name, ( params[:contact_name].present? ? params[:contact_name] : (current_user.full_name.present? ? current_user.full_name : (@iniciative.present? ? @iniciative.contact_name : "")) )
+						= text_field_tag :contact_name, ( params[:contact_name].present? ? params[:contact_name] : ((current_user and current_user.full_name.present?) ? current_user.full_name : (@iniciative.present? ? @iniciative.contact_name : "")) )
 						
 			.input-container
 				.input
@@ -341,10 +329,18 @@
 					- question_number = question_number + 1
 					= label_tag :phone_number, "#{question_number}. #{t('formtastic.labels.financial_project.phone_number')}*"
 					.input-wrapper
-						= text_field_tag :phone_number, ( params[:phone_number].present?  ? params[:phone_number] : (@current_user.phone_number.present? ? current_user.phone_number : (@iniciative.present? ?  @iniciative.contact_phone : '')) )
+						= text_field_tag :phone_number, ( params[:phone_number].present?  ? params[:phone_number] : ((current_user.present? and current_user.phone_number.present?) ? current_user.phone_number : (@iniciative.present? ?  @iniciative.contact_phone : '')) )
 							
 			= hidden_field_tag :financial_project, true
+			- if params[:iniciative_token].present?
+				= hidden_field_tag :iniciative_token, params[:iniciative_token]
+				= hidden_field_tag :contact_email, params[:contact_email]
+			
 			= form.input :about, as: :hidden, label: false, hint: false, value: '_'
+			= form.input :impact, as: :hidden, label: false, hint: false, value: '_'
+			= form.input :budget, as: :hidden, label: false, hint: false, value: '_'
+			= form.input :implementation, as: :hidden, label: false, hint: false, value: '_'
+			
 			.clearfix
 			.submit
 				fieldset.accept
@@ -360,3 +356,4 @@
 							
 							= submit_tag t("projects.#{action_name}.submit"), id: 'project_submit', class: 'btn_send'
 							= image_tag 'lbm/plain-icon.png', class: "plain-icon"
+							

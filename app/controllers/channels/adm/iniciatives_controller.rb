@@ -10,7 +10,7 @@ class Channels::Adm::IniciativesController < Adm::BaseController
 		end
 	end
 		
-	[:approve, :reject, :push_to_draft].each do |name|
+	[:approve, :reject, :push_to_draft, :confirm].each do |name|
 			define_method name do
 					@iniciative = Iniciative.find params[:id]
 					@iniciative.send("#{name.to_s}!")

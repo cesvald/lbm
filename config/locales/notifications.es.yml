@@ -82,7 +82,7 @@ es:
       header: "Tu proyecto fue recibido por el equipo del canal"
       text_html: "Hola,<br/><br/>Muchas gracias por completar el formulario y enviar tu proyecto que pronto formará parte de este gran canal!.<br/><br/>Desde ahora deberás estar muy atento a tu correo pues será el medio que utilizaremos para comunicarte los pasos a seguir hasta el lanzamiento de tu proyecto.<br/><br/>Equipo LittleBigMoney\n"
     financial_project_received_channel:
-      text_html: "Hola, tu proyecto fue recibido por el equipo de %{financial_channel_name}.<br/><br/>Muchas gracias por completar el formulario y enviar tu proyecto que ahora será evaluada por nuestro equipo y, si cumple con los requisitos, estará disponible para votación.<br/><br/>Desde ahora deberás estar muy atento a tu correo pues será el medio que utilizaremos para comunicarte los pasos a seguir."
+      text_html: "Hola, tu proyecto fue recibido por el equipo de %{financial_channel_name}.<br/><br/>Muchas gracias por completar el formulario y enviar tu proyecto que ahora será evaluada por nuestro equipo.<br/><br/>Desde ahora deberás estar muy atento a tu correo pues será el medio que utilizaremos para comunicarte los pasos a seguir."
     project_visible:
       subject: "Tu proyecto ahora esta publicado en LittleBigMoney"
       header: "Ahora es una realidad"

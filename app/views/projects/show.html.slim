@@ -33,6 +33,7 @@
         span#close-anonymous-warning.badge.close-dialog
           | X
       = render partial: 'projects/backers/form', locals: {reward: @reward, update: true}
+
 #page_content
   .container
     - if !@channel.nil? && @channel.banner_top_url.present?

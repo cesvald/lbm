@@ -87,6 +87,7 @@ es:
         send_project: "Quiero enviar mi proyecto"
         how_know: "¿Cómo conociste el canal?"
         alert_access_financial: "¿Tienes un proyecto? Genial!  Envíanos primero tu iniciativa para que te conozcamos y si ya lo hiciste, regístrate con el email de contacto que usaste para tu iniciativa"
+        alert_rights_financial: "No tienes permisos para poder enviar un proyecto. Contáctanos a info@littlebigmoney.org si deseas más información"
       financial_new:
         title: "Súper! Envía tu proyecto a la convocatoria de %{channel}"
         subtitle: "¡Es hora de hacerlo realidad! Queremos saber del potencial de tu proyecto. <br><br>Los campos marcados con (*) son obligatorios"

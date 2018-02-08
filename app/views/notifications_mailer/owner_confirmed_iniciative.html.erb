@@ -190,15 +190,15 @@ Se premiaran 30 organizaciones, aquellas que resulten ganadoras recibirán como 
                         <td valign="top" class="m_-3530907776467308058mcnTextContent" style="padding-top:0;padding-right:18px;padding-bottom:9px;padding-left:18px;word-break:break-word;color:#202020;font-family:Helvetica;font-size:16px;line-height:150%;text-align:left">
 
                             <div style="text-align:left"><strong><em>Fechas claves: </em></strong><br>
-<strong>Postulación de iniciativas</strong>: Del 7 al 19 de febrero de 2018<br>
+<strong>Postulación de iniciativas</strong>: Del 8 al 19 de febrero de 2018<br>
 <strong>Pre-selección de organizaciones al CLE: </strong>23 febrero de marzo de 2018<br>
-<strong>Comités Locales de Evaluación –CLE: </strong>9 de marzo<br>
-<strong>Visitas de reconocimiento: </strong>10 al 15 de marzo de 2018<br>
-<strong>Resultados finales: organizaciones ganadoras: </strong>20 de marzo de 2018<br>
+<strong>Comités Locales de Evaluación –CLE: </strong>20 de marzo<br>
+<strong>Visitas de reconocimiento: </strong>24 al 26 de marzo de 2018<br>
+<strong>Resultados finales: organizaciones ganadoras: </strong>12 de abril de 2018<br>
 &nbsp;<br>
-Si a tu organización le interesa participar, pueden ampliar la información&nbsp;consultando los&nbsp;<a href="https://drive.google.com/file/d/107lcZvjE4V6AW262QNQoyBWmByNz1wl0/view?usp=sharing" style="color:#2baadf;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://drive.google.com/file/d/107lcZvjE4V6AW262QNQoyBWmByNz1wl0/view?usp%3Dsharing&amp;source=gmail&amp;ust=1518126629612000&amp;usg=AFQjCNE2tXXT1cdw4HFLui9b7wLz0Lj01g">Términos de Referencia</a>.<br>
+Si a tu organización le interesa participar, pueden ampliar la información&nbsp;consultando los&nbsp;<a href="https://drive.google.com/open?id=1C6txz4ftJpIhDYM5aLpyXPySiJN9M03r" style="color:#2baadf;font-weight:normal;text-decoration:underline" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://drive.google.com/open?id=1C6txz4ftJpIhDYM5aLpyXPySiJN9M03r&amp;source=gmail&amp;ust=1518126629612000&amp;usg=AFQjCNE2tXXT1cdw4HFLui9b7wLz0Lj01g">Términos de Referencia</a>.<br>
 <br>
-<%= "Para hacer la postulación primero debes <a href=\"#{new_user_session_url(subdomain: @notification.iniciative.financial_channel.channel.permalink)}\" style=\"color:#2baadf;font-weight:normal;text-decoration:underline\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=#{new_user_session_url(subdomain: @notification.iniciative.financial_channel.channel.permalink)}&amp;source=gmail&amp;ust=1518082052296000&amp;usg=AFQjCNHGVEx27VEmYs93VfEprcEAvuy6nQ\">iniciar sesión</a> o <a href=\"#{new_user_registration_url(subdomain: @notification.iniciative.financial_channel.channel.permalink, 'user[email]': @notification.iniciative.contact_email, 'user[name]': @notification.iniciative.contact_name)}\" style=\"color:#2baadf;font-weight:normal;text-decoration:underline\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=#{new_user_registration_url(subdomain: @notification.iniciative.financial_channel.channel.permalink, 'user[email]': @notification.iniciative.contact_email, 'user[name]': @notification.iniciative.contact_name)}&amp;source=gmail&amp;ust=1518082052296000&amp;usg=AFQjCNGBqZSfP2Mdp35mC3VvI4tBRXMYmQ\">registrarte</a> en LittleBigMoney. Una vez hallas ingresado puedes enviar tu proyecto a través del siguiente botón:".html_safe %></div>
+Si lo deseas envía tu proyecto a través del siguiente botón</div>
 
                         </td>
                     </tr>
@@ -217,7 +217,7 @@ Si a tu organización le interesa participar, pueden ampliar la información&nbs
                     <tbody>
                         <tr>
                             <td align="center" valign="middle" class="m_-3530907776467308058mcnButtonContent" style="font-family:Arial;font-size:16px;padding:15px">
-                                <%= "<a class=\"m_-6781611355025509337mcnButton\" title=\"Formulario de postulación\" href=\"#{new_user_registration_url(subdomain: @notification.iniciative.financial_channel.channel.permalink, 'user[email]': @notification.iniciative.contact_email, 'user[name]': @notification.iniciative.contact_name)}\" style=\"font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#ffffff;display:block\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=#{new_user_registration_url(subdomain: @notification.iniciative.financial_channel.channel.permalink, 'user[email]': @notification.iniciative.contact_email, 'user[name]': @notification.iniciative.contact_name)}\m&amp;source=gmail&amp;ust=1518082052296000&amp;usg=AFQjCNE6LkNSTqe6HXeP8_Ksc1h92VONUQ\">Formulario de postulación</a>".html_safe %>
+                                <%= "<a class=\"m_-6781611355025509337mcnButton\" title=\"Formulario de postulación\" href=\"#{financial_new_channels_projects_url(subdomain: @notification.iniciative.financial_channel.channel.permalink, 'contact_email': @notification.iniciative.contact_email, 'iniciative_token': @notification.iniciative.find_token_by_name(:postulation).to_s)}\" style=\"font-weight:bold;letter-spacing:normal;line-height:100%;text-align:center;text-decoration:none;color:#ffffff;display:block\" target=\"_blank\" data-saferedirecturl=\"https://www.google.com/url?hl=en&amp;q=#{new_user_registration_url(subdomain: @notification.iniciative.financial_channel.channel.permalink, 'user[email]': @notification.iniciative.contact_email, 'user[name]': @notification.iniciative.contact_name)}\">Formulario de postulación</a>".html_safe %>
                             </td>
                         </tr>
                     </tbody>

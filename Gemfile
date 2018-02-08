@@ -17,6 +17,8 @@ gem 'state_machine', require: 'state_machine/core'
 # paranoid stuff
 gem 'paper_trail', '~> 2.7.1'
 
+gem 'tokens'
+
 # Better logs
 gem "lograge"
 gem 'quiet_assets'

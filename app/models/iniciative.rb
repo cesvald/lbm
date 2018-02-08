@@ -1,6 +1,9 @@
 require 'state_machine'
 class Iniciative < ActiveRecord::Base
   
+  # Comes from tokens gem
+  tokenizable
+  
   belongs_to :category
   belongs_to :financial_channel
   
@@ -63,6 +66,7 @@ class Iniciative < ActiveRecord::Base
 	end
 	
 	def after_transition_of_approved_to_confirmed
+	  self.add_token(:postulation)
 	  notify_observers :notify_owner_iniciative_is_confirmed
 	end
 	

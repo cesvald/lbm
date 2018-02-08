@@ -131,7 +131,7 @@ class Project < ActiveRecord::Base
   validates_acceptance_of :accepted_terms, on: :create
 
   validates :video_url, presence: true, if: ->(p) { p.state_name == 'online' }
-  validates_presence_of :name, :user, :category, :about, :headline, :goal, :permalink
+  validates_presence_of :name, :user, :category, :about, :headline, :goal, :permalink, :cause, :history, :description, :impact, :budget, :implementation, :online_days
   validates_length_of :headline, maximum: 140
   validates_uniqueness_of :permalink, allow_blank: true, allow_nil: true, case_sensitive: false
   validates_format_of :permalink, with: /^(\w|-)*$/, allow_blank: true, allow_nil: true

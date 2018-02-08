@@ -58,17 +58,17 @@ class ProjectsController < ApplicationController
   def create
     if params[:phone_number].empty?
       flash[:alert] = I18n.t('projects.create.phone_number_alert')
-      render action: :new
-      return false
     else
       current_user.phone_number = params[:phone_number]
       current_user.save
     end
     @project = current_user.projects.new(params[:project])
     if @project.save
+      flash[:notice] = t('projects.create.success')
       redirect_to project_by_slug_path(@project.permalink)
     else
-      params[:financial_project].present? ? render(action: :financial_new, namespace: :channels) : render(new_project_path)
+      flash[:alert] = t('projects.create.alert')
+      render action: :new, controller: :projects
     end
   end
 

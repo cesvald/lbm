@@ -8,7 +8,7 @@ class FinancialProject < ActiveRecord::Base
     has_many :votes, dependent: :delete_all
     has_many :users, through: :votes
   
-    validates_presence_of :benefited_count, :women_count, :department, :municipality, :organization_name, :hope_transform, :activities, :benefited_indirect_count, :convocation_description, :results_description, :budget
+    validates_presence_of :benefited_count, :women_count, :department, :municipality, :organization_name, :hope_transform, :activities, :benefited_indirect_count, :convocation_description, :budget
     
     mount_uploader :budget, DocumentUploader
     

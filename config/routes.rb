@@ -100,10 +100,12 @@ Catarse::Application.routes.draw do
           get 'video'
           get 'check_slug'
           get 'financial_new'
+          post 'financial_create'
         end
         member do
           post 'finance'
           get 'financial_edit'
+          put 'financial_update'
         end
       end
       resources :channels_subscribers, only: [:index, :create, :destroy]
