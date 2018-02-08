@@ -127,7 +127,7 @@
     .information-wrapper
       h3= t('formtastic.labels.financial_project.counterpart_contributions')
       p= @project.financial_project.counterpart_contributions
-  - if @project.impact.present?
+  - if @project.impact.present? and not @project.financial_project.present?
     .information-wrapper
       h3= t("formtastic.labels.#{@project.financial? ? 'financial_project' : 'project'}.impact")
       p= @project.impact_html.html_safe
