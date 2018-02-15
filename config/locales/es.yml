@@ -102,7 +102,7 @@ es:
       legal_concept: "Concepto legal"
       terms: "Términos de uso"
       policy: "Políticas de privacidad"
-      legal_concept_link: "https://drive.google.com/file/d/107lcZvjE4V6AW262QNQoyBWmByNz1wl0/view?usp=sharing"
+      legal_concept_link: "https://drive.google.com/file/d/107nolcZvjE4V6AW262QNQoyBWmByNz1wl0/view?usp=sharing"
       policy_link: "https://drive.google.com/file/d/0Byoqa61VzXlOdHZoLWloSmM5UHM/view?usp=sharing"
       terms_link: "https://drive.google.com/a/fundacioncapital.org/file/d/0B9aoGFLdMpHNNVdmdW1RaHNFMlU/view?usp=sharing"
       financial_terms_link: "https://drive.google.com/open?id=1s6j3IzMfRociPu-qUqNpgNL1O8L-ilVy"
@@ -392,6 +392,7 @@ es:
         zone: "¿Zona rural o urbana?"
         description: "De qué se trata? Cuáles son los beneficios que obtiene la organización, la comunidad y los jóvenes con el desarrrollo de la misma? Cuál es el estado actual del proyecto?"
         counterpart_contributions: "Ejemplo: maquinaria de propiedad de la organización: $10.000.000; mano de obra: $1.200.000; Financiamiento de otras entidades: $1.000.000"
+        
       reward:
         description: "Describe tu recompensa de una forma que despierte el interés de las personas para aportar a tu proyecto. No te de miedo pedir!"
         maximum_backers: "Si tu recompensa es limitada, cuéntanos el máximo de colaboradores."
@@ -483,6 +484,7 @@ es:
         hope_transform: "¿Qué esperan transformar?"
         cause: "¿Cuál es el objetivo del proyecto?"
         description: "Descripción breve del proyecto"
+        email: "Email de la persona de contacto de la organización"
       iniciative:
         name: "Nombre de la iniciativa (si tu iniciativa no tiene un nombre aún, toma la oportunidad para ser creativo y darle uno)"
         plurality: "¿Iniciativa colectiva o individual?"
@@ -768,10 +770,11 @@ es:
         you_are_about_html: "Estás muy cerca de ser parte del grupo que hace todo lo posible para que %{link} tenga éxito."
         pay_with: "Pagar con"
     create:
-      success: "Tu proyecto fue creado exitosamente! pronto te contactaremos via email, mantente atento"
+      success: "Tu proyecto fue creado exitosamente!"
       alert: "No fue posible crear el proyecto, revisa los campos con una equis para hacer las correcciones"
       phone_number_alert: "Es obligatorio el teléfono de contacto para enviar el formulario"
       contact_name_alert: "Es obligatorio el nombre de contacto para enviar el formulario"
+      contact_email_alert: "Es obligatorio el email de contacto para enviar el formulario"
     financial_create:
       submit: "Enviar Proyecto"
     financial_update:
@@ -1035,6 +1038,7 @@ es:
       rewards_important: "No te compliques! Planea la forma en que la vas a entregar tus recompensas (digital) e incluye los costos en tu presupuesto. Las personas están confiando en ti, esto es muy serio!"
       phone_number_important: "Seguimos de cerca cada propuesta de proyecto para asegurarte las mejores posibilidades de éxito. Indica un número de teléfono donde podamos contactarte en caso de requerirlo"
       financial_phone_number_important: "Indica el número de teléfono de la persona de contacto"
+      financial_email_important: "Indica el email de la persona de contacto"
       submit: "Enviar tu proyecto!"
       send_project: "Quiero enviar mi proyecto."
       legend_html: "<p>Después de llenar el formato recibirás un borrador de la página del proyecto. En este borrador podrás agregar las recompensas para tus colaboradores. También podrás compartir esta página con tus amigos para  obtener comentarios y mejorar tu proyecto aún más.</p><p>La información de este borrador no es la definitiva, pero recuerda que entre más consciente y coherente seas cuando envíes el proyecto, más rápido irás al aire.</p><p>LittleBigMoney es una plataforma con diversos niveles de supervisión, es decir que nuestro equipo evalúa, el foco, la viabilidad e impacto de todos los proyectos promovidos. <span class='important'>Esperamos entiendas que si tu proyecto no cumple con el perfil, podrá ser no aprobado por nuestro equipo.</span></p>"

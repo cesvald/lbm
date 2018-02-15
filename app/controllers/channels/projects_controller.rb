@@ -3,8 +3,6 @@ class Channels::ProjectsController < ProjectsController
   
   belongs_to :channel, parent_class: Channel, finder: :find_by_permalink!, param: :profile_id
   
-  custom_actions :resource => :delete, :collection => :search
-  
   # Inheriting from the original Projects controller
   # With one addition: we include the project into the current channel
   before_filter only: [:create, :financial_create] {
@@ -17,23 +15,9 @@ class Channels::ProjectsController < ProjectsController
   prepend_before_filter{ channel_permalink }
   
   def financial_new
-    if parent.financial_channel.state != 'applying'
-      return redirect_to root_url
-    elsif !current_user and params[:iniciative_token].nil?
-      @iniciative = nil
-    else
-      if current_user
-        @iniciative = Iniciative.where(contact_email: current_user.email).first
-      else
-        @iniciative = Iniciative.find_by_token(:postulation, params[:iniciative_token])
-      end
-    end
-    if @iniciative
-      @project = Project.new
-      @project.build_financial_project
-    else
-      redirect_to root_url, flash: { alert: I18n.t('channels.projects.new.alert_rights_financial') }
-    end
+    @channel = parent
+    @project = Project.new
+    @project.build_financial_project
   end
   
   def financial_create
@@ -47,27 +31,39 @@ class Channels::ProjectsController < ProjectsController
       @project = Project.new(params[:project])
       error = true
     end
-    if not error and (not current_user) and params[:iniciative_token].present?
+    if params[:contact_email].empty?
+      flash[:alert] = t('projects.create.contact_email_alert')
+      @project = Project.new(params[:project])
+      error = true
+    end
+    if not error
       user = User.where(email: params[:contact_email]).first
-      unless user and Iniciative.find_by_token(:postulation, params[:iniciative_token]).present?
+      unless user
         temp_pass = Iniciative.generate_token(8)
         user = User.create(locale: I18n.locale, name: params[:contact_name], full_name: params[:contact_name], password: temp_pass, email: params[:contact_email], phone_number: params[:phone_number])
       end
-    elsif not error and current_user
-      current_user.phone_number = params[:phone_number]
-      current_user.full_name = params[:contact_name]
-      current_user.name = params[:contact_name]
-      current_user.save
-      user = current_user
+      user.phone_number = params[:phone_number]
+      user.full_name = params[:contact_name]
+      user.name = params[:contact_name]
+      user.save
     end
     if not error
-      @project = user.projects.new(params[:project])
-      error = (@project.save == false ? true : false)
-      flash[:alert] = t('projects.create.alert') if error == true
+      iniciative = Iniciative.where(contact_email: user.email).first
+      if iniciative.nil?
+        flash[:alert] = "No existe ninguna iniciativa con el email #{params[:contact_email]}"
+        @project = Project.new(params[:project])
+        error = true
+      else
+        @project = user.projects.new(params[:project])
+        @project.financial_project.iniciative = iniciative
+        error = (@project.save == false ? true : false)
+        flash[:alert] = t('projects.create.alert') if error == true
+      end
     end
     if error
       render(action: :financial_new, namespace: :channels)
     else
+      flash[:notice] = t('projects.create.success')
       redirect_to project_by_slug_path(@project.permalink)
     end
   end

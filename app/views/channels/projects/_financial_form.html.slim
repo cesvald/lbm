@@ -1,5 +1,6 @@
 .bootstrap-form
 	.clearfix
+	= @project.errors.inspect
 	= semantic_form_for @project, url: (action == 'post' ? financial_create_channels_projects_path : financial_update_channels_projects_path), action: action, html: { id: 'project_form', class: 'lbm-form' } do |form|
 		= form.inputs do
 			.input.control-group.error
@@ -330,7 +331,18 @@
 					= label_tag :phone_number, "#{question_number}. #{t('formtastic.labels.financial_project.phone_number')}*"
 					.input-wrapper
 						= text_field_tag :phone_number, ( params[:phone_number].present?  ? params[:phone_number] : ((current_user.present? and current_user.phone_number.present?) ? current_user.phone_number : (@iniciative.present? ?  @iniciative.contact_phone : '')) )
-							
+			
+			.input-container
+				.input
+					.bootstrap-alert
+						= image_tag 'lbm/alert-icon.png', class: 'alert-icon'
+						.alert
+							.important= t('projects.new.financial_email_important')
+					- question_number = question_number + 1
+					= label_tag :phone_number, "#{question_number}. #{t('formtastic.labels.financial_project.email')}*"
+					.input-wrapper
+						= text_field_tag :contact_email, ( params[:contact_email].present?  ? params[:contact_email] : ((current_user.present? and current_user.email.present?) ? current_user.email : (@iniciative.present? ?  @iniciative.contact_email : '')) )
+						
 			= hidden_field_tag :financial_project, true
 			- if params[:iniciative_token].present?
 				= hidden_field_tag :iniciative_token, params[:iniciative_token]
