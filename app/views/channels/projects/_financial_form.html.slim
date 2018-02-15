@@ -1,6 +1,5 @@
 .bootstrap-form
 	.clearfix
-	= @project.errors.inspect
 	= semantic_form_for @project, url: (action == 'post' ? financial_create_channels_projects_path : financial_update_channels_projects_path), action: action, html: { id: 'project_form', class: 'lbm-form' } do |form|
 		= form.inputs do
 			.input.control-group.error
