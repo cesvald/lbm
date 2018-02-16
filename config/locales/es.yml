@@ -629,6 +629,7 @@ es:
     update:
       success: "Tu proyecto fue actualizado exitosamente!"
       success_reviewed: "Tu proyecto fue actualizado exitosamente! Nos contactaremos pronto contigo para informarte si el proyecto está listo para salir al aire."
+      alert: "No fue posible actualizar el proyecto, revisa los campos con una equis para hacer las correcciones"
     update_documents:
       success: "Los documentos fueron actualizados exitosamente!"
     box:

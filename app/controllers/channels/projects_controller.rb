@@ -69,6 +69,7 @@ class Channels::ProjectsController < ProjectsController
   end
   
   def financial_update
+    @project = resource
     @project.updated_by = current_user
     update! do |success, failure|
       success.html{
@@ -80,6 +81,7 @@ class Channels::ProjectsController < ProjectsController
         return redirect_to project_by_slug_path(@project.permalink)
       }
       failure.html{
+        flash[:alert] = t('projects.update.alert')
         render action: :financial_edit, namespace: :channels, flash: {alert: t('projects.update.error_alert')}
       }
     end
