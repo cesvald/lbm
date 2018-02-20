@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   inherit_resources
   actions :show, :create, :update, :unsubscribe_update, :request_refund, :set_email, :update_email, :uservoice_gadget, :authenticate_user, :change_user
   respond_to :json, only: [:backs, :projects, :request_refund, :authenticate_user]
-
+  invisible_captcha only: :contact_and_support
+  
   def uservoice_gadget
     if params[:secret] == ::Configuration[:uservoice_secret_gadget]
       @user = User.find_by_email params[:email]

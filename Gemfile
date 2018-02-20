@@ -33,6 +33,8 @@ gem 'chartkick'
 
 #recaptcha API
 gem "recaptcha", require: "recaptcha/rails"
+#Invisible captcha for spam bots
+gem 'invisible_captcha'
 
 # Payment engine using Paypal
 # gem 'catarse_paypal_express', git: 'git://github.com/cesvald/catarse_paypal_express.git',  ref: 'e4f4113be9cb9f684a272e5d04a2dd4f808bb6ff'
