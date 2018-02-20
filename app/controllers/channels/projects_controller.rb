@@ -12,6 +12,13 @@ class Channels::ProjectsController < ProjectsController
   }
   after_filter only: [:create, :financial_create] { notify_trustees }
   
+  before_filter only: [:financial_new, :financial_edit, :financial_create, :financial_update] {
+    if not parent.financial_channel.applying?
+      flash[:alert] = t('financial_projects.closed')
+      return redirect_to root_url
+    end
+  }
+  
   prepend_before_filter{ channel_permalink }
   
   def financial_new

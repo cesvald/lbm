@@ -8,8 +8,8 @@ es:
   site:
     title: "Primera plataforma en la región de crowdfunding para el desarrollo de proyectos con impacto social y ambiental"
     meta_title: "%{title} · %{company_name}"
-    description: "LittleBigMoney es una herramienta diferente – y colaborativa – para que tu proyecto salga del papel!"
-    keywords: "littlebigmoney, crowdfunding, project, community, open source, financiación colectiva, donar, ayudar, colaborar, apoyar"
+    description: "LittleBigMoney es la plataforma de crowdfunding para proyectos con impacto social y ambiental. Un lugar hecho para ti, donde con pequeños aportes podrás lograr GRANDES resultados. <br> LittleBigMoney es una plataforma de colaboración entre individuos de diferentes regiones del país, que juntos alcanzan la realización de proyectos con impacto social o ambiental en pro del fortalecimiento económico y la realización de metas de diversas comunidades."
+    keywords: "littlebigmoney, crowdfunding, project, community, crowdfunding, financiación colectiva, financiación de proyectos, donaciones, proyectos con impacto social, donar a proyectos"
   login:
     forgot_password:
       welcome: "Restablecer Contraseña"
@@ -1063,6 +1063,8 @@ es:
       take_a_look: "Echale un vistazo al proyecto %{name} en @LBigMoney"
     video_embed:
       a_project_by_html: "Un proyecto de %{link} en"
+  financial_projects:
+    closed: "La convocatoria de proyectos está cerrada"
   projects_mailer:
     start_project_email:
       subject: "Enviado por %{name}"
